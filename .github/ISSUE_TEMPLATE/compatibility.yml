@@ -1,0 +1,98 @@
+name: Compatibility problem
+description: A Convergence mod does not work well together with another mod
+title: "[Compat] "
+labels: ["compatibility"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Convergence only requires Harmony, and every DLC feature is optional, so most other mods should work. If something clashes, tell us here.
+        If the problem also happens without any other mod, open a **Bug report** instead.
+  - type: input
+    id: other_mod
+    attributes:
+      label: The other mod
+      description: Name and link (Steam Workshop or GitHub), and its version if you know it.
+      placeholder: "Mod name - https://steamcommunity.com/sharedfiles/filedetails/?id=..."
+    validations:
+      required: true
+  - type: dropdown
+    id: mods
+    attributes:
+      label: Which Convergence mod(s) are involved?
+      multiple: true
+      options:
+        - Core (Convergence - Era of Cultivation)
+        - Resources
+        - Formations
+        - Races
+        - Traits & Destinies
+        - Sects
+        - Alchemy & Artifacts
+        - Apparel
+        - Fauna & Flora
+        - Stories & Scenarios
+        - Grafts
+        - Qi-Tech
+        - Furniture
+        - Biotech Wuxia
+        - Flying Sect
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Convergence version and RimWorld version
+      placeholder: "Convergence 0.1.0, RimWorld 1.6.4871"
+    validations:
+      required: true
+  - type: dropdown
+    id: symptom
+    attributes:
+      label: What goes wrong?
+      options:
+        - Red errors in the log
+        - Crash or freeze
+        - Content missing or duplicated
+        - Interface conflict
+        - Balance or behavior is wrong
+        - Textures or text look wrong
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What you see, what you expected and how to reproduce it.
+    validations:
+      required: true
+  - type: textarea
+    id: load_order
+    attributes:
+      label: Load order
+      description: "Your mod list in load order (copy it from the Mods screen, or from `ModsConfig.xml`). The shorter the better - ideally only Harmony, the DLCs, Convergence and the other mod."
+      render: text
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: |
+        The relevant lines of `Player.log` (red errors and the lines around them). Remove anything private first (your user name in paths).
+      render: text
+  - type: dropdown
+    id: without
+    attributes:
+      label: Does it work if you remove the other mod?
+      options:
+        - "Yes, the problem disappears"
+        - "No, it still happens"
+        - "I have not tested it"
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Ideas for a fix (optional)
+      description: If you already know a patch, a load order change or a setting that helps, tell us. Would you like to help test a fix?

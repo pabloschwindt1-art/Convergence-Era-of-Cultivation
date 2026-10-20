@@ -67,7 +67,16 @@ game with `tools/link-mods.ps1` (junctions) or copy the folders into `<RimWorld>
 ## Documentation
 
 Spanish documentation in [`docs/`](docs/): [lore](docs/LORE.md), [design](docs/DISENO.md), [Core technical design](docs/DISENO_CORE.md),
-[vanilla/DLC integration](docs/INTEGRACION.md) and the [technical documentation and publication guide](docs/WORKSHOP.md). Contributors: see [CLAUDE.md](CLAUDE.md).
+[vanilla/DLC integration](docs/INTEGRACION.md) and the [technical documentation and publication guide](docs/WORKSHOP.md). Contributors: see [CONTRIBUTING.md](CONTRIBUTING.md) (and [CLAUDE.md](CLAUDE.md) for AI assistants).
+
+## Contributing and bug reports
+
+Players, translators, artists and modders are welcome.
+
+- **Found a bug or a conflict with another mod?** [Open an issue](https://github.com/pabloschwindt1-art/Convergence-Era-of-Cultivation/issues/new/choose) and pick the bug report or the compatibility template. It helps a lot to say whether it still happens with only Harmony, your DLCs and the Convergence mods, and to attach the relevant lines of `Player.log`.
+- **Have an idea?** [Open a suggestion](https://github.com/pabloschwindt1-art/Convergence-Era-of-Cultivation/issues/new/choose).
+- **Want to help with code, translations, art or your own addon?** Read [CONTRIBUTING.md](CONTRIBUTING.md): it explains the project principles, how to build and test, and how contributions are licensed.
+- Art contributions are welcome, including AI-assisted art; please say which tool you used. The project's own art was created with the assistance of AI.
 
 ## License
 
@@ -95,5 +104,6 @@ electricidad ni investigación industrial. Son **15 mods** (un Core y 14 módulo
 - **Compilar:** los 5 comandos `dotnet build` de arriba (el Core primero). Los DLL salen en `Mods/<Mod>/1.6/Assemblies/`.
 - **Probar:** `tools/run-test.ps1` (instancia aislada del juego) y `tools/check-workshop.py` (revisión previa a publicar).
 - **Documentación:** carpeta [`docs/`](docs/) (lore, diseño, integración con el juego base y las DLC, guía de publicación). Para colaborar, leé [CLAUDE.md](CLAUDE.md).
+- **Colaborar y reportar problemas:** abrí un [issue](https://github.com/pabloschwindt1-art/Convergence-Era-of-Cultivation/issues/new/choose) (plantillas de bug, compatibilidad con otros mods y sugerencias) y leé [CONTRIBUTING.md](CONTRIBUTING.md) para código, traducciones, arte y addons propios. Para colaborar con un asistente de IA, también está [CLAUDE.md](CLAUDE.md).
 - **Licencias:** código, scripts y contenido técnico **MIT**; arte original, lore y textos narrativos **CC BY-NC-SA 4.0**; lo derivado de RimWorld y de terceros no lo licencia el autor
   ([LICENSES.md](LICENSES.md), [LICENSE-THIRD-PARTY.md](LICENSE-THIRD-PARTY.md)). El arte se hizo con asistencia de IA.

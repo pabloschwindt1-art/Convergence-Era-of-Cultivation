@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: How to contribute and where to ask
+    url: https://github.com/pabloschwindt1-art/Convergence-Era-of-Cultivation/blob/main/CONTRIBUTING.md
+    about: Read this first if you want to help with code, translations, art or a new addon.

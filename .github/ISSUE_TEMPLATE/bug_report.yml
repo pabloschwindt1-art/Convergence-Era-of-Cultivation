@@ -1,0 +1,124 @@
+name: Bug report
+description: Something in a Convergence mod does not work as expected
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. Please search the existing issues first.
+        Problems that involve another mod belong in **Compatibility problem**; ideas belong in **Suggestion**.
+        You can write in English or Spanish.
+  - type: dropdown
+    id: mods
+    attributes:
+      label: Which Convergence mod(s) are involved?
+      description: Pick all that apply. If you are not sure, pick "Not sure".
+      multiple: true
+      options:
+        - Core (Convergence - Era of Cultivation)
+        - Resources
+        - Formations
+        - Races
+        - Traits & Destinies
+        - Sects
+        - Alchemy & Artifacts
+        - Apparel
+        - Fauna & Flora
+        - Stories & Scenarios
+        - Grafts
+        - Qi-Tech
+        - Furniture
+        - Biotech Wuxia
+        - Flying Sect
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Convergence version
+      description: The version of the mod (for example 0.1.0, shown in the mod list) or the Release tag / commit if you built it from source.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: rimworld
+    attributes:
+      label: RimWorld version
+      description: Shown at the bottom left of the main menu.
+      placeholder: "1.6.4871"
+    validations:
+      required: true
+  - type: checkboxes
+    id: dlc
+    attributes:
+      label: DLCs enabled
+      options:
+        - label: Royalty
+        - label: Ideology
+        - label: Biotech
+        - label: Anomaly
+        - label: Odyssey
+  - type: dropdown
+    id: source
+    attributes:
+      label: Where did you get the mod?
+      options:
+        - Steam Workshop
+        - GitHub Release (zip)
+        - Built from source
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Describe the problem. Screenshots are welcome (drag them into this box).
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The shortest list of steps that makes it happen. Say at which point of the game you were (before or after the Convergence, cultivator realm, etc.).
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: clean
+    attributes:
+      label: Does it still happen with only Harmony, your DLCs and the Convergence mods?
+      description: Other mods are the most common cause of strange behavior. Testing without them is the fastest way to a fix.
+      options:
+        - "Yes, it still happens"
+        - "No, it only happens with other mods (please also open a Compatibility problem)"
+        - "I have not tested it"
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: |
+        Paste the relevant lines of `Player.log` (red errors and the lines around them), or attach the file. It is in
+        `%USERPROFILE%/AppData/LocalLow/Ludeon Studios/RimWorld by Ludeon Studios/`. Remove anything private first (your user name in paths).
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before sending
+      options:
+        - label: I searched the existing issues and this one is not reported yet.
+          required: true
+        - label: I am using the latest release of the mod, or I say below why not.
+          required: true

@@ -1,0 +1,73 @@
+name: Suggestion
+description: Suggest new content, an improvement, a translation or an addon idea
+title: "[Suggestion] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are welcome. The project follows two principles: **everything has lore**, and **every system is the wuxia version of something that already exists in RimWorld or its DLCs**
+        (see [CONTRIBUTING.md](https://github.com/pabloschwindt1-art/Convergence-Era-of-Cultivation/blob/main/CONTRIBUTING.md)).
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of suggestion is it?
+      options:
+        - New content (item, building, beast, technique, trait, event...)
+        - Improvement to something that exists
+        - Quality of life or settings
+        - Translation into another language
+        - Art
+        - Idea for an addon
+        - Something else
+    validations:
+      required: true
+  - type: dropdown
+    id: mods
+    attributes:
+      label: Which mod would it belong to?
+      multiple: true
+      options:
+        - Core (Convergence - Era of Cultivation)
+        - Resources
+        - Formations
+        - Races
+        - Traits & Destinies
+        - Sects
+        - Alchemy & Artifacts
+        - Apparel
+        - Fauna & Flora
+        - Stories & Scenarios
+        - Grafts
+        - Qi-Tech
+        - Furniture
+        - Biotech Wuxia
+        - Flying Sect
+        - A new module
+        - Not sure
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: What would you like to see, and what problem or wish does it solve?
+    validations:
+      required: true
+  - type: textarea
+    id: wuxia
+    attributes:
+      label: Wuxia angle
+      description: Which vanilla or DLC system is it the wuxia version of, and which legend, sect or myth does it connect to? (Optional but very helpful.)
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+  - type: dropdown
+    id: help
+    attributes:
+      label: Would you like to help build it?
+      options:
+        - "No, I only wanted to suggest it"
+        - "Yes, with code or XML"
+        - "Yes, with art"
+        - "Yes, with translations"
+        - "Yes, I could try an addon of my own"
