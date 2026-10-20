@@ -27,7 +27,8 @@ License: code, scripts and technical data are MIT; original art, lore and narrat
     <li>
       <packageId>prospero1088.convergence.core</packageId>
       <displayName>Convergence: Era of Cultivation</displayName>
-      <downloadUrl>https://steamcommunity.com/app/294100/workshop/</downloadUrl>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/3823671989</steamWorkshopUrl>
+      <downloadUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3823671989</downloadUrl>
     </li>
   </modDependencies>
   <loadAfter>
