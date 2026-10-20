@@ -1,5 +1,7 @@
 # Convergence: Era of Cultivation
 
+[![CI](https://github.com/pabloschwindt1-art/Convergence-Era-of-Cultivation/actions/workflows/ci.yml/badge.svg)](https://github.com/pabloschwindt1-art/Convergence-Era-of-Cultivation/actions/workflows/ci.yml)
+
 *A fragment of the Nine Heavens collides with your rimworld. Qi begins to flow, and the Era of Cultivation begins.*
 
 A xianxia / wuxia cultivation mod for **RimWorld 1.6**, inspired by *Tale of Immortal*: spirit roots, cultivation realms, heavenly tribulations,

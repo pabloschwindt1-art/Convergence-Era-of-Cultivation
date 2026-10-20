@@ -117,7 +117,7 @@ The extension points are listed in [`docs/WORKSHOP.md`](docs/WORKSHOP.md) (secti
 
 1. Open (or comment on) an issue for anything bigger than a small fix, so we can agree on the approach.
 2. Fork, create a branch, and keep the pull request about one thing. Small commits with short imperative English messages (`Fix ...`, `Add ...`).
-3. Fill in the pull request template: what changed, how you tested it, and the licensing and AI-assistance notes.
+3. Fill in the pull request template: what changed, how you tested it, and the licensing and AI-assistance notes. Every pull request runs an automatic check on GitHub (it builds the five C# projects and runs `check-workshop.py`, `make-licenses.py --check` and an XML well-formedness check); it must pass.
 4. Do not commit build output (`obj/`, `bin/`, DLLs), working art files, screenshots of the game, or other authors' mods; `.gitignore` already excludes most of it.
 5. The maintainer reviews pull requests when there is time; please be patient.
 

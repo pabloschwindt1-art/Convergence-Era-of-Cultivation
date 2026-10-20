@@ -1,0 +1,70 @@
+name: CI
+
+# Builds the five C# projects and runs the project's own checks on every pull request and on every push to main.
+# It does not need RimWorld installed: the game references come from the Krafs.Rimworld.Ref NuGet package.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-validate:
+    runs-on: windows-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # The Core first: the other projects reference its DLL.
+      - name: Build Convergence.Core
+        run: dotnet build Source/Convergence.Core/Convergence.Core.csproj -c Release
+      - name: Build Convergence.Formations
+        run: dotnet build Source/Convergence.Formations/Convergence.Formations.csproj -c Release
+      - name: Build Convergence.Grafts
+        run: dotnet build Source/Convergence.Grafts/Convergence.Grafts.csproj -c Release
+      - name: Build Convergence.QiTech
+        run: dotnet build Source/Convergence.QiTech/Convergence.QiTech.csproj -c Release
+      - name: Build Convergence.Stories
+        run: dotnet build Source/Convergence.Stories/Convergence.Stories.csproj -c Release
+
+      - name: Check that every XML file is well formed
+        shell: python
+        run: |
+          import glob, sys
+          import xml.etree.ElementTree as ET
+          bad = 0
+          files = glob.glob("Mods/**/*.xml", recursive=True)
+          for f in files:
+              try:
+                  ET.parse(f)
+              except ET.ParseError as e:
+                  print(f"ERROR {f}: {e}")
+                  bad += 1
+          print(f"{len(files)} XML files checked, {bad} with errors")
+          sys.exit(1 if bad else 0)
+
+      - name: Check the 15 mods (About, LoadFolders, dependencies, previews, translations, licenses)
+        run: python -I tools/check-workshop.py
+
+      - name: Check that the license files are up to date
+        run: python -I tools/make-licenses.py --check
+
+      - name: Check the release packaging
+        run: python -I tools/package-release.py --no-build

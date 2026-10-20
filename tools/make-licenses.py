@@ -214,7 +214,7 @@ def main():
     bad = 0
     for path, text in expected_files().items():
         cur = open(path, encoding='utf-8', newline='').read() if os.path.exists(path) else None
-        if cur == text:
+        if cur is not None and cur.replace(chr(13) + chr(10), chr(10)) == text.replace(chr(13) + chr(10), chr(10)):
             continue
         bad += 1
         if check:
