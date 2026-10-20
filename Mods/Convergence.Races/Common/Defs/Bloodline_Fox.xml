@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Fox bloodline. Design and values: docs/modulos/razas/ZORRO.md -->
+
+  <Convergence.BloodlineDef>
+    <defName>CVG_Bloodline_Fox</defName>
+    <label>fox</label>
+    <description>The blood of Qingqiu, the guest at the table of the Four: charm, illusions and a mind as quick as fire. Its tails count its purity.\n\nBest as: negotiator and artist. Trade, diplomacy and art; keep it far from the mines.</description>
+    <commonality>1.2</commonality>
+    <color>(1, 0.6, 0.35)</color>
+    <xenotypeIcon>Ears</xenotypeIcon>
+    <affinities>
+      <li>CVG_Element_Fire</li>
+    </affinities>
+    <purities>
+      <li>
+        <purity>CVG_Purity_Trace</purity>
+        <gene>CVG_Blood_Fox_Trace</gene>
+        <hediff>CVG_Bloodline_Fox</hediff>
+        <affinityCultivationFactor>1.05</affinityCultivationFactor>
+        <aspectGenes>
+          <li>CVG_Fox_Ears</li>
+          <li>CVG_Fox_Eyes</li>
+          <li>CVG_Fox_Mane</li>
+          <li>CVG_Fox_Tail1</li>
+        </aspectGenes>
+      </li>
+      <li>
+        <purity>CVG_Purity_Diluted</purity>
+        <gene>CVG_Blood_Fox_Diluted</gene>
+        <hediff>CVG_Bloodline_Fox</hediff>
+        <affinityCultivationFactor>1.1</affinityCultivationFactor>
+        <abilities>
+          <li>CVG_Ability_FoxCharm</li>
+        </abilities>
+        <aspectGenes>
+          <li>CVG_Fox_Tail3</li>
+        </aspectGenes>
+      </li>
+      <li>
+        <purity>CVG_Purity_Pure</purity>
+        <gene>CVG_Blood_Fox_Pure</gene>
+        <passion>Minor</passion>
+        <xenotype>CVG_Xeno_Fox</xenotype>
+        <hediff>CVG_Bloodline_Fox</hediff>
+        <affinityCultivationFactor>1.2</affinityCultivationFactor>
+        <!-- TODO (M5 techniques): Illusion (radius 6 cloud: enemies -50% accuracy) -->
+        <aspectGenes>
+          <li>CVG_Fox_Tail6</li>
+        </aspectGenes>
+      </li>
+      <li>
+        <purity>CVG_Purity_Ancestral</purity>
+        <gene>CVG_Blood_Fox_Ancestral</gene>
+        <passion>Major</passion>
+        <xenotype>CVG_Xeno_Fox</xenotype>
+        <hediff>CVG_Bloodline_Fox</hediff>
+        <affinityCultivationFactor>1.35</affinityCultivationFactor>
+        <!-- TODO (M5 techniques): Nine-Tailed Form (8 h, nine fox-fires) -->
+        <aspectGenes>
+          <li>CVG_Fox_Tail9</li>
+          <li>CVG_Fox_ManeAncestral</li>
+        </aspectGenes>
+      </li>
+    </purities>
+  </Convergence.BloodlineDef>
+
+  <!-- Metabolism of the purity genes: total Trace -1, Diluted -2 (a flaw; beast vitality I/II costs -1 of it); Pure and Ancestral compensate the vanilla genes of the
+       bloodline xenotype (added on reaching Pure, -3 metabolism) so the total is 0 (Pure) and +1 (Ancestral). -->
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Fox_Trace</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+    </suppressedTraits>
+    <socialFightChanceFactor>2</socialFightChanceFactor>
+    <label>trace of fox blood</label>
+    <description>A single tail, hidden for now. People simply find themselves liking you. An ancestor slipped through the small rift of the fox's wedding, the rain under sunshine, posing as a merchant or a bard; the mischief came with the charm, and pranks often end in fists.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Fire</iconPath>
+    <iconColor>(0.7, 0.7, 0.7)</iconColor>
+    <displayOrderInCategory>50</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <aptitudes>
+      <Social>1</Social>
+      <Artistic>1</Artistic>
+      <Mining>-2</Mining>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Fox</bloodline>
+        <purity>CVG_Purity_Trace</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Fox_Diluted</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+    </suppressedTraits>
+    <socialFightChanceFactor>1.6</socialFightChanceFactor>
+    <label>diluted fox blood</label>
+    <description>Three tails sway at the edge of vision. Few can tell you apart from a smile. The Court of Qingqiu deceived the Iron Calamity with mirages while selling it plans, and people still cannot decide whether to thank a fox or punch it.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Fire</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>51</displayOrderInCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <aptitudes>
+      <Social>2</Social>
+      <Artistic>2</Artistic>
+      <Mining>-2</Mining>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Fox</bloodline>
+        <purity>CVG_Purity_Diluted</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Fox_Pure</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+    </suppressedTraits>
+    <socialFightChanceFactor>1.3</socialFightChanceFactor>
+    <label>pure fox blood</label>
+    <description>Six tails, a thousand faces. You lie so well that you never have to. Pure foxes serve tribes, corporations and imperial houses as go-betweens, keeping the letter of every deal and walking around its spirit.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Fire</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>52</displayOrderInCategory>
+    <biostatCpx>3</biostatCpx>
+    <biostatMet>3</biostatMet>
+    <aptitudes>
+      <Social>3</Social>
+      <Artistic>3</Artistic>
+      <Mining>-1</Mining>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Fox</bloodline>
+        <purity>CVG_Purity_Pure</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Fox_Ancestral</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+    </suppressedTraits>
+    <socialFightChanceFactor>1.1</socialFightChanceFactor>
+    <label>ancestral fox blood</label>
+    <description>Nine tails and the fox pearl. The Heavens themselves do not know if you are bowing or laughing. Hu Jiuyao, Queen of Qingqiu, reached nine tails and refused to ascend so that someone would keep the secrets; at this purity the pranks have become diplomacy.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Fire</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>53</displayOrderInCategory>
+    <biostatCpx>4</biostatCpx>
+    <biostatMet>4</biostatMet>
+    <aptitudes>
+      <Social>4</Social>
+      <Artistic>4</Artistic>
+      <Mining>-1</Mining>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Fox</bloodline>
+        <purity>CVG_Purity_Ancestral</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Fox_Ears</defName>
+    <label>fox ears</label>
+    <description>Pointed fox ears, the color of the hair. In the Court of Qingqiu they were the spies' best tool: they catch a whisper at the far end of a banquet.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Fox_Ears</iconPath>
+    <iconColor>(225, 110, 45)</iconColor>
+    <displayOrderInCategory>55</displayOrderInCategory>
+    <exclusionTags>
+      <li>Ears</li>
+    </exclusionTags>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/CVG_FoxEars/FoxEars</texPath>
+        <colorType>Hair</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>70</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Fox_Eyes</defName>
+    <label>amber eyes</label>
+    <description>Bright amber eyes that catch the light like fox-fire over a graveyard at night. Even the Empire, which reads minds, finds nothing behind them.</description>
+    <iconPath>UI/Icons/Genes/Gene_GrayEyes</iconPath>
+    <iconColor>(255, 150, 40)</iconColor>
+    <displayOrderInCategory>56</displayOrderInCategory>
+    <exclusionTags>
+      <li>EyeColor</li>
+    </exclusionTags>
+    <!-- Own art: Things/Pawn/Humanlike/CVG/Fox/Eyes (provisional: vanilla Biotech texture). See docs/modulos/razas/README.md. -->
+    <renderNodeProperties>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Male/GrayEyes_Male</texPath>
+        <texPathFemale>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Female/GrayEyes_Female</texPathFemale>
+        <color>(255, 150, 40)</color>
+        <anchorTag>RightEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.2</drawSize>
+        <side>Right</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+          </defaultData>
+        </drawData>
+      </li>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Male/GrayEyes_Male</texPath>
+        <texPathFemale>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Female/GrayEyes_Female</texPathFemale>
+        <color>(255, 150, 40)</color>
+        <anchorTag>LeftEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.2</drawSize>
+        <side>Left</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+            <flip>true</flip>
+          </defaultData>
+          <dataWest>
+            <flip>false</flip>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Fox_Mane</defName>
+    <label>fox coat</label>
+    <description>Red-orange hair, like a fox in autumn. The courtiers of Qingqiu wear it perfumed and adorned, for the fox values beauty above raw power.</description>
+    <iconPath>UI/Icons/Genes/Gene_HairColor</iconPath>
+    <iconColor>(225, 110, 45)</iconColor>
+    <displayOrderInCategory>57</displayOrderInCategory>
+    <hairColorOverride>(225, 110, 45)</hairColorOverride>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Fox_ManeAncestral</defName>
+    <label>silver fox coat</label>
+    <description>Silver-white hair, the coat of the nine-tailed fox. Great Yu saw a white fox with nine tails at Tushan and took it as an omen of good rule.</description>
+    <iconPath>UI/Icons/Genes/Gene_HairColor</iconPath>
+    <iconColor>(235, 235, 245)</iconColor>
+    <displayOrderInCategory>58</displayOrderInCategory>
+    <hairColorOverride>(235, 235, 245)</hairColorOverride>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Fox_Tail1</defName>
+    <label>one fox tail</label>
+    <description>One fluffy fox tail. Tails count the age of the soul, not of the body, and each new one is celebrated with a feast and a public lie.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Fox_Tail1</iconPath>
+    <iconColor>(225, 110, 45)</iconColor>
+    <displayOrderInCategory>59</displayOrderInCategory>
+    <exclusionTags>
+      <li>Tail</li>
+    </exclusionTags>
+    <renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/CVG_FoxTail1/FoxTail1</texPath>
+        <colorType>Hair</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <drawSize>(1.4, 1.4)</drawSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.12)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.12)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.12, 0, -0.10)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.12, 0, -0.10)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Fox_Tail3</defName>
+    <label>three fox tails</label>
+    <description>Three fluffy fox tails, fanned out. At three tails a fox takes a social name of its own and hides the true one from all but its intimates.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Fox_Tail3</iconPath>
+    <iconColor>(225, 110, 45)</iconColor>
+    <displayOrderInCategory>60</displayOrderInCategory>
+    <exclusionTags>
+      <li>Tail</li>
+    </exclusionTags>
+    <renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/CVG_FoxTail3/FoxTail3</texPath>
+        <colorType>Hair</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <drawSize>(1.6, 1.6)</drawSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.12)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.12)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.12, 0, -0.10)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.12, 0, -0.10)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Fox_Tail6</defName>
+    <label>six fox tails</label>
+    <description>Six fluffy fox tails, fanned out. Six tails is the rank of the go-betweens of Qingqiu, who tilt one tail when they bow.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Fox_Tail6</iconPath>
+    <iconColor>(225, 110, 45)</iconColor>
+    <displayOrderInCategory>61</displayOrderInCategory>
+    <exclusionTags>
+      <li>Tail</li>
+    </exclusionTags>
+    <renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/CVG_FoxTail6/FoxTail6</texPath>
+        <colorType>Hair</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <drawSize>(1.75, 1.75)</drawSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.12)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.12)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.12, 0, -0.10)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.12, 0, -0.10)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Fox_Tail9</defName>
+    <label>nine fox tails</label>
+    <description>Nine fluffy fox tails, fanned out. In living memory only Hu Jiuyao, Queen of Qingqiu, reached nine, and she refused to ascend so that the court's secrets would have a keeper.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Fox_Tail9</iconPath>
+    <iconColor>(225, 110, 45)</iconColor>
+    <displayOrderInCategory>62</displayOrderInCategory>
+    <exclusionTags>
+      <li>Tail</li>
+    </exclusionTags>
+    <renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/CVG_FoxTail9/FoxTail9</texPath>
+        <colorType>Hair</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <drawSize>(1.9, 1.9)</drawSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.12)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.12)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.12, 0, -0.10)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.12, 0, -0.10)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <HediffDef ParentName="CVG_BloodlineHediffBase">
+    <defName>CVG_Bloodline_Fox</defName>
+    <label>fox blood</label>
+    <description>Awakened fox blood: beauty, charm and a sharp psychic mind. The body is frail at low purity, and people never fully trust a fox.</description>
+    <defaultLabelColor>(1, 0.6, 0.35)</defaultLabelColor>
+    <!-- Done in XML: mischief as socialFightChanceFactor 2/1.6/1.3/1.1 on the identity genes. TODO (needs code; see docs/modulos/razas/ZORRO.md): social mistrust (opinion of others), mischief (insult chance), fire/mind technique damage -->
+    <stages>
+      <li>
+        <minSeverity>1</minSeverity>
+        <label>trace</label>
+        <statOffsets>
+          <PawnBeauty>1</PawnBeauty>
+          <SocialImpact>0.1</SocialImpact>
+          <PsychicSensitivity>0.1</PsychicSensitivity>
+          <MeditationFocusGain>0.05</MeditationFocusGain>
+          <MeleeDodgeChance>5</MeleeDodgeChance>
+          <PainShockThreshold>-0.05</PainShockThreshold>
+          <NegotiationAbility>0.15</NegotiationAbility>
+          <TradePriceImprovement>0.05</TradePriceImprovement>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>1.05</IncomingDamageFactor>
+          <LifespanFactor>1.5</LifespanFactor>
+          <CVG_QiMax>1.05</CVG_QiMax>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <label>diluted</label>
+        <statOffsets>
+          <PawnBeauty>2</PawnBeauty>
+          <SocialImpact>0.25</SocialImpact>
+          <PsychicSensitivity>0.25</PsychicSensitivity>
+          <MeditationFocusGain>0.1</MeditationFocusGain>
+          <MeleeDodgeChance>10</MeleeDodgeChance>
+          <PainShockThreshold>-0.1</PainShockThreshold>
+          <NegotiationAbility>0.3</NegotiationAbility>
+          <TradePriceImprovement>0.1</TradePriceImprovement>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>1.15</IncomingDamageFactor>
+          <MeleeDamageFactor>0.9</MeleeDamageFactor>
+          <MoveSpeed>1.03</MoveSpeed>
+          <LifespanFactor>2.0</LifespanFactor>
+          <CVG_QiMax>1.1</CVG_QiMax>
+          <CVG_QiRegen>1.05</CVG_QiRegen>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <label>pure</label>
+        <statOffsets>
+          <PawnBeauty>3</PawnBeauty>
+          <SocialImpact>0.5</SocialImpact>
+          <PsychicSensitivity>0.5</PsychicSensitivity>
+          <MeditationFocusGain>0.2</MeditationFocusGain>
+          <MeleeDodgeChance>15</MeleeDodgeChance>
+          <PainShockThreshold>-0.05</PainShockThreshold>
+          <NegotiationAbility>0.5</NegotiationAbility>
+          <TradePriceImprovement>0.15</TradePriceImprovement>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>1.1</IncomingDamageFactor>
+          <MeleeDamageFactor>0.95</MeleeDamageFactor>
+          <MoveSpeed>1.06</MoveSpeed>
+          <LifespanFactor>3.0</LifespanFactor>
+          <CVG_QiMax>1.2</CVG_QiMax>
+          <CVG_QiRegen>1.15</CVG_QiRegen>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>4</minSeverity>
+        <label>ancestral</label>
+        <statOffsets>
+          <PawnBeauty>4</PawnBeauty>
+          <SocialImpact>1.0</SocialImpact>
+          <PsychicSensitivity>0.8</PsychicSensitivity>
+          <MeditationFocusGain>0.3</MeditationFocusGain>
+          <MeleeDodgeChance>25</MeleeDodgeChance>
+          <NegotiationAbility>0.8</NegotiationAbility>
+          <TradePriceImprovement>0.2</TradePriceImprovement>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>1.1</MoveSpeed>
+          <LifespanFactor>4.0</LifespanFactor>
+          <CVG_QiMax>1.3</CVG_QiMax>
+          <CVG_QiRegen>1.3</CVG_QiRegen>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <AbilityDef ParentName="CVG_InnateAbilityBase">
+    <defName>CVG_Ability_FoxCharm</defName>
+    <label>charm</label>
+    <description>One glance, and the other decides it was their own idea.\n\nA hostile person within 10 cells is entranced for 15 seconds: they stand still and do not attack. Costs qi if the user cultivates.</description>
+    <iconPath>UI/Abilities/CVG_FoxCharm</iconPath>
+    <cooldownTicksRange>15000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>9.9</range>
+      <warmupTime>0.5</warmupTime>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetMechs>false</canTargetMechs>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityQiCost">
+        <qiCost>30</qiCost>
+      </li>
+      <li Class="CompProperties_AbilityEffect">
+        <compClass>CompAbilityEffect_OnlyTargetHostiles</compClass>
+      </li>
+      <li Class="CompProperties_AbilityEffectWithDuration">
+        <compClass>CompAbilityEffect_Stun</compClass>
+        <durationSecondsOverride>15~15</durationSecondsOverride>
+      </li>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>CVG_FoxCharmed</hediffDef>
+      </li>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>Heart</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <HediffDef>
+    <defName>CVG_FoxCharmed</defName>
+    <label>charmed</label>
+    <description>Entranced by a fox's glance.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <defaultLabelColor>(1, 0.6, 0.35)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <XenotypeDef>
+    <defName>CVG_Xeno_Fox</defName>
+    <label>qingqiu courtier</label>
+    <description>Courtiers of Qingqiu: pure fox blood, fox ears, amber eyes and six fanned tails. Beautiful, persuasive and psychically gifted, but frail and never fully trusted.</description>
+    <descriptionShort>Pure fox blood: fox ears and six tails. Charming and psychic, but frail.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Highmate</iconPath>
+    <inheritable>true</inheritable>
+    <nameMaker>CVG_NamerPerson_Fox</nameMaker>
+    <nameMakerFemale>CVG_NamerPerson_Fox_Female</nameMakerFemale>
+    <chanceToUseNameMaker>0.8</chanceToUseNameMaker>
+    <genes>
+      <li>CVG_Blood_Fox_Pure</li>
+      <li>CVG_Fox_Ears</li>
+      <li>CVG_Fox_Eyes</li>
+      <li>CVG_Fox_Mane</li>
+      <li>CVG_Fox_Tail6</li>
+      <li>Beauty_Pretty</li>
+      <li>Learning_Fast</li>
+      <li>Delicate</li>
+      <li>PsychicAbility_Enhanced</li>
+      <li>CVG_BloodGene_BeastVitality_III</li>
+      <li>CVG_BloodGene_KeenSenses_III</li>
+      <li>CVG_BloodGene_BloodLongevity_III</li>
+      <li>CVG_BloodGene_BeastInstinct_III</li>
+      <li>CVG_BloodGene_QiResonance_III</li>
+      <li>CVG_BloodGene_FoxFire_III</li>
+      <li>CVG_BloodGene_IllusionVeil_III</li>
+      <li>CVG_BloodGene_NineLives_III</li>
+    </genes>
+  </XenotypeDef>
+
+  <!-- Pawn kind for the vanilla "Spawn pawn" debug action and future factions/scenarios. -->
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>CVG_Kind_Fox</defName>
+    <initialResistanceRange>13~20</initialResistanceRange>
+    <initialWillRange>1~3</initialWillRange>
+    <label>qingqiu courtier</label>
+    <defaultFactionDef>PlayerColony</defaultFactionDef>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelMoney>350~600</apparelMoney>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>CVG_Bloodline_Fox</li>
+        </categories>
+        <commonality>0.7</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+        <commonality>0.3</commonality>
+      </li>
+    </backstoryFiltersOverride>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <xenotypeSet>
+      <xenotypeChances>
+        <CVG_Xeno_Fox>1</CVG_Xeno_Fox>
+      </xenotypeChances>
+    </xenotypeSet>
+  </PawnKindDef>
+
+</Defs>

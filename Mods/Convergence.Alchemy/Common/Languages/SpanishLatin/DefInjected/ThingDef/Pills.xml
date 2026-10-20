@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_TemperingPill.label>píldora de templado</CVG_TemperingPill.label>
+  <CVG_TemperingPill.description>Sangre de bestia e hierbas espirituales reducidas a una píldora roja. Los cultivadores del cuerpo del Templo del Loto Silencioso tragan una antes de golpear su carne contra la piedra, y dicen que la sangre recuerda lo que los huesos olvidan. Repone sangre-qi para el camino del cuerpo (más cuanto mejor la calidad). Toda píldora deja algo de toxicidad.</CVG_TemperingPill.description>
+  <CVG_QiRecoveryPill.label>píldora de recuperación de qi</CVG_QiRecoveryPill.label>
+  <CVG_QiRecoveryPill.description>Una píldora pálida que rellena el dantian rápido (más cuanto mejor la calidad). Es la receta más humilde del Pabellón del Caldero Celestial, y todo aprendiz debe refinarla cien veces antes de que le dejen tocar una hierba más rara. Toda píldora deja algo de toxicidad.</CVG_QiRecoveryPill.description>
+  <CVG_PurificationPill.label>píldora de purificación de sangre</CVG_PurificationPill.label>
+  <CVG_PurificationPill.description>Una píldora de núcleo de bestia y jade espiritual que quema las impurezas de la sangre. El Clan del Dragón Antiguo afirma que la fórmula se robó de sus archivos, y el Culto de la Luna Sangrienta prepara una versión más oscura con sangre humana. Probabilidad de subir un nivel la pureza del linaje (mayor con la calidad); si falla, o no hay linaje, envenena. Necesita un horno de alquimia de nivel 2.</CVG_PurificationPill.description>
+  <CVG_NineTurnsPill.label>píldora de las nueve vueltas</CVG_NineTurnsPill.label>
+  <CVG_NineTurnsPill.description>Una píldora dorada que da nueve vueltas en el horno durante nueve días. La leyenda dice que el último discípulo de Shennong refinó la primera, y que la novena vuelta convoca una pequeña tribulación que solo resiste un horno de alquimia de nivel 3. Hecha con raíz de ginseng espiritual, pétalos de loto de nieve y un cristal espiritual, inunda el dantian de qi (mucho más cuanto mejor la calidad) y deja mucha toxicidad.</CVG_NineTurnsPill.description>
+</LanguageData>

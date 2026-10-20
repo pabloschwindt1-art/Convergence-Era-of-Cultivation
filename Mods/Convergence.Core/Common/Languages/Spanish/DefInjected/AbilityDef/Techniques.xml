@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Tech_MetalNeedle.label>aguja dorada</CVG_Tech_MetalNeedle.label>
+  <CVG_Tech_MetalNeedle.description>Comprime el qi de metal en una aguja y dispárala. Atraviesa bien la armadura.\n\nProyectil: 11 de daño perforante (penetración de armadura 45%), escalado por reino y maestría.</CVG_Tech_MetalNeedle.description>
+  <CVG_Tech_QiShield.label>escudo de la campana dorada</CVG_Tech_QiShield.label>
+  <CVG_Tech_QiShield.description>Extiende el qi alrededor del cuerpo como una campana de bronce. Absorbe daño hasta romperse o desvanecerse.\n\nEscudo de qi: absorbe 40 de daño (escalado por reino y maestría) durante unos 30 segundos. Detiene los golpes antes que la armadura.</CVG_Tech_QiShield.description>
+  <CVG_Tech_SwordQiSweep.label>barrido de qi de espada</CVG_Tech_SwordQiSweep.label>
+  <CVG_Tech_SwordQiSweep.description>Libera una media luna de qi de espada que corta todo lo que tiene delante.\n\nCono de 10 casillas: 18 de daño cortante, escalado por reino y maestría. Requiere Establecimiento de Fundación y una raíz de metal.</CVG_Tech_SwordQiSweep.description>
+  <CVG_Tech_ThornBolt.label>espina venenosa</CVG_Tech_ThornBolt.label>
+  <CVG_Tech_ThornBolt.description>Haz crecer una espina de qi de madera y lánzala. Su savia es tóxica.\n\nProyectil: 9 de daño más una picadura tóxica, escalado por reino y maestría.</CVG_Tech_ThornBolt.description>
+  <CVG_Tech_SpringRejuvenation.label>rejuvenecimiento primaveral</CVG_Tech_SpringRejuvenation.label>
+  <CVG_Tech_ThornStorm.label>tormenta de espinas</CVG_Tech_ThornStorm.label>
+  <CVG_Tech_ThornStorm.description>Una ráfaga de espinas envenenadas que barre la zona de enfrente.\n\nCono de 10 casillas: 10 de daño más una picadura tóxica, escalado por reino y maestría. Requiere Establecimiento de Fundación y una raíz de madera.</CVG_Tech_ThornStorm.description>
+  <CVG_Tech_FrostShard.label>esquirla de escarcha</CVG_Tech_FrostShard.label>
+  <CVG_Tech_FrostShard.description>Congela el qi de agua en una esquirla de hielo. Hiela la carne hasta el hueso.\n\nProyectil: 8 de congelación más 4 contundente, escalado por reino y maestría.</CVG_Tech_FrostShard.description>
+  <CVG_Tech_SwiftStep.label>paso de la nube veloz</CVG_Tech_SwiftStep.label>
+  <CVG_Tech_SwiftStep.description>Monta una brizna de qi y aterriza hasta 12 casillas más allá en un latido. La Senda Errante la enseña primero, porque un cultivador que no puede salir de una pelea nunca vive para elegir otra.</CVG_Tech_SwiftStep.description>
+  <CVG_Tech_SwiftStep.verbProperties.label>paso veloz</CVG_Tech_SwiftStep.verbProperties.label>
+  <CVG_Tech_FrostBreath.label>aliento helado</CVG_Tech_FrostBreath.label>
+  <CVG_Tech_FrostBreath.description>Exhala una niebla helada. Quien quede atrapado puede congelarse en el sitio, y los fuegos se apagan.\n\nCono de 10 casillas: 12 de congelación y 40% de aturdir, escalado por reino y maestría. Requiere Establecimiento de Fundación y una raíz de agua.</CVG_Tech_FrostBreath.description>
+  <CVG_Tech_Fireball.label>bola de fuego</CVG_Tech_Fireball.label>
+  <CVG_Tech_Fireball.description>Condensa el qi de fuego en una bola que estalla al impactar y prende fuego.\n\nExplosión de radio 1.5: 10 de daño por quemadura, escalado por reino y maestría. La primera lección de todo discípulo del fuego, y la razón por la que el Pico Azur tiene sus patios de práctica lejos de la biblioteca.</CVG_Tech_Fireball.description>
+  <CVG_Tech_BlazingMeridians.label>meridianos ardientes</CVG_Tech_BlazingMeridians.label>
+  <CVG_Tech_SeaOfFlames.label>mar de llamas</CVG_Tech_SeaOfFlames.label>
+  <CVG_Tech_SeaOfFlames.description>Abre el dantian y deja salir el fuego. Una ola de llamas arrasa todo lo que tienes delante.\n\nCono de 10 casillas: 16 de daño por quemadura, escalado por reino y maestría. Requiere Establecimiento de Fundación y una raíz de fuego.</CVG_Tech_SeaOfFlames.description>
+  <CVG_Tech_StoneBullet.label>bala de piedra</CVG_Tech_StoneBullet.label>
+  <CVG_Tech_StoneBullet.description>Arranca una piedra del suelo con qi de tierra y arrójala. Un buen impacto deja aturdido al enemigo.\n\nProyectil: 13 de daño contundente y 50% de aturdir, escalado por reino y maestría.</CVG_Tech_StoneBullet.description>
+  <CVG_Tech_MountainBody.label>cuerpo de montaña</CVG_Tech_MountainBody.label>
+  <CVG_Tech_EarthTremor.label>temblor de tierra</CVG_Tech_EarthTremor.label>
+  <CVG_Tech_EarthTremor.description>Pisa fuerte y manda una onda por el suelo. Los que están delante quedan golpeados y aturdidos.\n\nCono de 10 casillas: 12 de daño contundente y 60% de aturdir, escalado por reino y maestría. Requiere Establecimiento de Fundación y una raíz de tierra.</CVG_Tech_EarthTremor.description>
+</LanguageData>

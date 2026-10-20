@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Install_SpiritWoodLeg.label>instalar pierna de madera espiritual</CVG_Install_SpiritWoodLeg.label>
+  <CVG_Install_SpiritWoodLeg.description>Instala una pierna de madera espiritual. No necesita altar.</CVG_Install_SpiritWoodLeg.description>
+  <CVG_Install_SpiritWoodLeg.jobString>Instalando pierna de madera espiritual.</CVG_Install_SpiritWoodLeg.jobString>
+  <CVG_Install_SpiritWoodArm.label>instalar brazo de madera espiritual</CVG_Install_SpiritWoodArm.label>
+  <CVG_Install_SpiritWoodArm.description>Instala un brazo de madera espiritual. No necesita altar.</CVG_Install_SpiritWoodArm.description>
+  <CVG_Install_SpiritWoodArm.jobString>Instalando brazo de madera espiritual.</CVG_Install_SpiritWoodArm.jobString>
+  <CVG_Install_SpiritWoodHand.label>instalar mano de madera espiritual</CVG_Install_SpiritWoodHand.label>
+  <CVG_Install_SpiritWoodHand.description>Instala una mano de madera espiritual. No necesita altar.</CVG_Install_SpiritWoodHand.description>
+  <CVG_Install_SpiritWoodHand.jobString>Instalando mano de madera espiritual.</CVG_Install_SpiritWoodHand.jobString>
+  <CVG_Install_SpiritWoodFoot.label>instalar pie de madera espiritual</CVG_Install_SpiritWoodFoot.label>
+  <CVG_Install_SpiritWoodFoot.description>Instala un pie de madera espiritual. No necesita altar.</CVG_Install_SpiritWoodFoot.description>
+  <CVG_Install_SpiritWoodFoot.jobString>Instalando pie de madera espiritual.</CVG_Install_SpiritWoodFoot.jobString>
+  <CVG_Install_JadeDenture.label>instalar dentadura de jade</CVG_Install_JadeDenture.label>
+  <CVG_Install_JadeDenture.description>Instala una dentadura de jade. No necesita altar.</CVG_Install_JadeDenture.description>
+  <CVG_Install_JadeDenture.jobString>Instalando dentadura de jade.</CVG_Install_JadeDenture.jobString>
+</LanguageData>

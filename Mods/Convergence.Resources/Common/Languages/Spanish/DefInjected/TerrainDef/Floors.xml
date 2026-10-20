@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_JadeTiles.label>baldosas de jade</CVG_JadeTiles.label>
+  <CVG_JadeTiles.description>Baldosas de jade pulido. Hermosas, y al qi le gusta asentarse sobre ellas (+0,02 de qi por casilla).</CVG_JadeTiles.description>
+  <CVG_SpiritStoneFloor.label>piso de piedra espiritual</CVG_SpiritStoneFloor.label>
+  <CVG_SpiritStoneFloor.description>Losas engastadas con piedras espirituales que exhalan qi despacio en la habitación (+0,05 de qi por casilla). Los salones de las sectas ponían estos suelos para que hasta un discípulo dormido siguiera cultivando.</CVG_SpiritStoneFloor.description>
+  <CVG_SpiritWoodFloor.label>piso de madera espiritual</CVG_SpiritWoodFloor.label>
+  <CVG_SpiritWoodFloor.description>Tablones de madera empapados en polvo de piedra espiritual (+0,03 de qi por casilla). Inflamable.</CVG_SpiritWoodFloor.description>
+  <CVG_FiveElementMosaic.label>mosaico de cinco elementos</CVG_FiveElementMosaic.label>
+  <CVG_FiveElementMosaic.description>Un mosaico de metal, madera, agua, fuego y tierra en el ciclo generativo. El mejor suelo para cultivar (+0,1 de qi por casilla).</CVG_FiveElementMosaic.description>
+  <CVG_BambooFloor.label>suelo de bambú</CVG_BambooFloor.label>
+  <CVG_BambooFloor.description>Tablillas de bambú partido colocadas lado a lado, frescas en verano y tibias en invierno. Las aldeas del Mar de Bambú cubren con ellas todas sus salas, y dicen que una casa de bambú nunca guarda rencor: cruje una vez y después olvida. Se coloca rápido, pero arde como cualquier madera.</CVG_BambooFloor.description>
+</LanguageData>

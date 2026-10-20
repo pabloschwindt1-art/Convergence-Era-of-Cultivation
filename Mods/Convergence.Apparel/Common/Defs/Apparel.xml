@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Final-art paths are listed in docs/modulos/ROPA.md. Textures here are tinted vanilla Core apparel. -->
+  <!-- apparel.tags: CVG_Cultivator on everything (modules ask for it with apparelTags); CVG_SectOuter/Inner/Elder mark the sect rank robes
+       (Sects can require them by tag). canBeDesiredForIdeo is left at true (vanilla default, as Apparel_Robe) on robes and hanfu. -->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>CVG_Apparel_RobeOuter</defName>
+    <label>outer disciple robe</label>
+    <description>A plain wide-sleeved robe dyed in the color of the sect, handed to every new disciple on the day they pass the gate trial. The custom comes from the Azure Peak, whose founder Qing Feng wore one patched robe for forty years to remember that the sword, not the cloth, makes the cultivator. Its loose weave lets the qi of the air seep a little faster into the body.</description>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <recipeUsers><li>CVG_SpiritLoom</li><li>HandTailoringBench</li></recipeUsers>
+      <displayPriority>300</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <!-- Final art: Things/Pawn/Humanlike/Apparel/CVG/RobeOuter (see docs/modulos/ROPA.md) -->
+      <texPath>Things/Pawn/Humanlike/Apparel/CVG/RobeOuter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.05</drawSize>
+    </graphicData>
+    <costStuffCount>55</costStuffCount>
+    <stuffCategories><li>Fabric</li><li>Leathery</li></stuffCategories>
+    <thingCategories><li>ApparelMisc</li></thingCategories>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <WorkToMake>6000</WorkToMake>
+      <Mass>1.0</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.6</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets><CVG_QiRegen>0.3</CVG_QiRegen></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>Torso</li><li>Neck</li><li>Shoulders</li><li>Arms</li><li>Legs</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/RobeOuter</wornGraphicPath>
+      <layers><li>Shell</li></layers>
+      <defaultOutfitTags><li>Worker</li></defaultOutfitTags>
+      <tags>
+        <li>CVG_Cultivator</li>
+        <li>CVG_SectOuter</li>
+        <li>Robe</li>
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+    </apparel>
+    <tradeTags><li>BasicClothing</li></tradeTags>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options><li><weight>10</weight><only>(0.55,0.65,0.8)</only></li></options>
+    </colorGenerator>
+  </ThingDef>
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>CVG_Apparel_RobeInner</defName>
+    <label>inner disciple robe</label>
+    <description>A finely cut robe with embroidered hems, given only to disciples admitted to the inner courtyards of a sect. The cloud patterns on the cuffs are not decoration: they trace the twelve main meridians, so that the qi the wearer gathers flows along the right paths. In Jiuxiao it was said that an inner disciple could be recognised from a hundred steps by sleeves that move without wind.</description>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <recipeUsers><li>CVG_SpiritLoom</li><li>HandTailoringBench</li></recipeUsers>
+      <displayPriority>300</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <!-- Final art: Things/Pawn/Humanlike/Apparel/CVG/RobeInner (see docs/modulos/ROPA.md) -->
+      <texPath>Things/Pawn/Humanlike/Apparel/CVG/RobeInner</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.05</drawSize>
+    </graphicData>
+    <costStuffCount>70</costStuffCount>
+    <stuffCategories><li>Fabric</li><li>Leathery</li></stuffCategories>
+    <thingCategories><li>ApparelMisc</li></thingCategories>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>1.2</Mass>
+      <StuffEffectMultiplierArmor>0.35</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.6</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets><CVG_QiRegen>0.6</CVG_QiRegen><CVG_CultivationSpeed>0.05</CVG_CultivationSpeed></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>Torso</li><li>Neck</li><li>Shoulders</li><li>Arms</li><li>Legs</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/RobeInner</wornGraphicPath>
+      <layers><li>Shell</li></layers>
+      <defaultOutfitTags><li>Worker</li></defaultOutfitTags>
+      <tags>
+        <li>CVG_Cultivator</li>
+        <li>CVG_SectInner</li>
+        <li>Robe</li>
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+    </apparel>
+    <tradeTags><li>BasicClothing</li></tradeTags>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options><li><weight>10</weight><only>(0.35,0.55,0.8)</only></li></options>
+    </colorGenerator>
+  </ThingDef>
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>CVG_Apparel_RobeElder</defName>
+    <label>elder robe</label>
+    <description>A heavy ceremonial robe with the emblem of the sect stitched on the back in thread soaked in spirit stone dust. The elders of the Nine Heavens wore them through the Iron Calamity, and many sects still keep the scorched robes of their fallen as relics. The stones widen the qi pool of the wearer, and its weight alone commands respect in any hall.</description>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <recipeUsers><li>CVG_SpiritLoom</li><li>HandTailoringBench</li></recipeUsers>
+      <skillRequirements><Crafting>5</Crafting></skillRequirements>
+      <displayPriority>300</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <!-- Final art: Things/Pawn/Humanlike/Apparel/CVG/RobeElder (see docs/modulos/ROPA.md) -->
+      <texPath>Things/Pawn/Humanlike/Apparel/CVG/RobeElder</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.05</drawSize>
+    </graphicData>
+    <costStuffCount>90</costStuffCount>
+    <stuffCategories><li>Fabric</li><li>Leathery</li></stuffCategories>
+    <costList><CVG_SpiritStone>2</CVG_SpiritStone></costList>
+    <thingCategories><li>ApparelMisc</li></thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>14000</WorkToMake>
+      <Mass>1.5</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.6</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets><CVG_QiMax>20</CVG_QiMax><CVG_QiRegen>0.8</CVG_QiRegen><SocialImpact>0.10</SocialImpact></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>Torso</li><li>Neck</li><li>Shoulders</li><li>Arms</li><li>Legs</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/RobeElder</wornGraphicPath>
+      <layers><li>Shell</li></layers>
+      <defaultOutfitTags><li>Worker</li></defaultOutfitTags>
+      <tags>
+        <li>CVG_Cultivator</li>
+        <li>CVG_SectElder</li>
+        <li>Robe</li>
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+    </apparel>
+    <tradeTags><li>BasicClothing</li></tradeTags>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options><li><weight>10</weight><only>(0.2,0.3,0.6)</only></li></options>
+    </colorGenerator>
+  </ThingDef>
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>CVG_Apparel_Hanfu</defName>
+    <label>hanfu</label>
+    <description>A layered under-robe of soft cloth with a crossed collar, closed left over right as the living wear it; only the dead are dressed right over left. It is the daily garment of every village of Jiuxiao, from rice farmers to sect clerks, worn alone in summer or under an outer robe. A well-kept hanfu is taken as a sign of good manners.</description>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <recipeUsers><li>CVG_SpiritLoom</li><li>HandTailoringBench</li></recipeUsers>
+      <displayPriority>300</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <!-- Final art: Things/Pawn/Humanlike/Apparel/CVG/Hanfu (see docs/modulos/ROPA.md) -->
+      <texPath>Things/Pawn/Humanlike/Apparel/CVG/Hanfu</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>45</costStuffCount>
+    <stuffCategories><li>Fabric</li><li>Leathery</li></stuffCategories>
+    <thingCategories><li>ApparelMisc</li></thingCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>4000</WorkToMake>
+      <Mass>0.5</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.3</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets><SocialImpact>0.05</SocialImpact></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>Torso</li><li>Shoulders</li><li>Arms</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/Hanfu</wornGraphicPath>
+      <layers><li>OnSkin</li></layers>
+      <defaultOutfitTags><li>Worker</li></defaultOutfitTags>
+      <tags>
+        <li>CVG_Cultivator</li>
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+    </apparel>
+    <tradeTags><li>BasicClothing</li></tradeTags>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options><li><weight>10</weight><only>(0.95,0.9,0.8)</only></li></options>
+    </colorGenerator>
+  </ThingDef>
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>CVG_Apparel_BambooHat</defName>
+    <label>bamboo hat</label>
+    <description>A wide conical hat of woven bamboo, the mark of rogue cultivators and wandering swordsmen who own little else. Legend says the first one was woven by a monk of the Silent Lotus to shade a dying stranger, who later became a saint and never wore anything else on his head. It keeps off sun and rain, and hides the eyes of anyone who would rather not be recognised.</description>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <recipeUsers><li>CVG_SpiritLoom</li><li>HandTailoringBench</li></recipeUsers>
+      <displayPriority>300</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <!-- Final art: Things/Pawn/Humanlike/Apparel/CVG/BambooHat (see docs/modulos/ROPA.md) -->
+      <texPath>Things/Pawn/Humanlike/Apparel/CVG/BambooHat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9,0.9)</drawSize>
+    </graphicData>
+    <costList><WoodLog>15</WoodLog></costList>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <WorkToMake>1500</WorkToMake>
+      <Mass>0.15</Mass>
+      <EquipDelay>2</EquipDelay>
+      <Insulation_Heat>6</Insulation_Heat>
+    </statBases>
+    <equippedStatOffsets><SocialImpact>0.05</SocialImpact></equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups><li>UpperHead</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/BambooHat</wornGraphicPath>
+      <layers><li>Overhead</li></layers>
+      <defaultOutfitTags><li>Worker</li></defaultOutfitTags>
+      <tags>
+        <li>CVG_Cultivator</li>
+        <li>Neolithic</li>
+        <li>MedievalBasic</li>
+      </tags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+    </apparel>
+    <tradeTags><li>BasicClothing</li></tradeTags>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options><li><weight>10</weight><only>(0.85,0.75,0.45)</only></li></options>
+    </colorGenerator>
+  </ThingDef>
+  <ThingDef ParentName="NobleHatMakeableBase">
+    <defName>CVG_Apparel_JadeCrown</defName>
+    <label>jade crown</label>
+    <description>A small hairpin crown of carved jade and silver, the guan worn by those who have faced their inner demon and not looked away. Jade is said to remember calm the way a pond remembers the moon, and the Heavenly Cauldron Pavilion sells these as "heart-steadying crowns" at every auction. A steady Dao heart makes a breakthrough a little more likely.</description>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <recipeUsers><li>CVG_SpiritLoom</li><li>HandTailoringBench</li></recipeUsers>
+      <skillRequirements><Crafting>6</Crafting></skillRequirements>
+      <displayPriority>300</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <!-- Final art: Things/Pawn/Humanlike/Apparel/CVG/JadeCrown (see docs/modulos/ROPA.md) -->
+      <texPath>Things/Pawn/Humanlike/Apparel/CVG/JadeCrown_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <costList><Jade>8</Jade><Silver>15</Silver></costList>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <WorkToMake>4000</WorkToMake>
+      <Mass>0.2</Mass>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets><CVG_BreakthroughChance>0.03</CVG_BreakthroughChance><SocialImpact>0.10</SocialImpact></equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups><li>UpperHead</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/JadeCrown</wornGraphicPath>
+      <layers><li>Overhead</li></layers>
+      <defaultOutfitTags><li>Worker</li></defaultOutfitTags>
+      <tags>
+        <li>CVG_Cultivator</li>
+      </tags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options><li><weight>10</weight><only>(0.55,0.85,0.65)</only></li></options>
+    </colorGenerator>
+  </ThingDef>
+  <ThingDef ParentName="ArmorSmithableBase">
+    <defName>CVG_Apparel_ScaleArmor</defName>
+    <label>spirit scale armor</label>
+    <description>Overlapping scales of spirit metal or spirit leather sewn onto a quilted robe, the standard armor of the Azure Peak sword patrols. During the Iron Calamity its smiths learned to hammer scales from the husks of fallen machines, and the shape has not changed since. Medium protection that slows a cultivator less than plate. It has spirit grade 1.</description>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <recipeUsers><li MayRequire="prospero1088.convergence.alchemy">CVG_SpiritForge</li></recipeUsers>
+      <skillRequirements><Crafting>6</Crafting></skillRequirements>
+      <displayPriority>300</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <!-- Final art: Things/Pawn/Humanlike/Apparel/CVG/ScaleArmor (see docs/modulos/ROPA.md) -->
+      <texPath>Things/Pawn/Humanlike/Apparel/CVG/ScaleArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>120</costStuffCount>
+    <stuffCategories><li>Metallic</li><li>Leathery</li></stuffCategories>
+    <thingCategories><li>ApparelArmor</li></thingCategories>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToMake>30000</WorkToMake>
+      <Mass>6</Mass>
+      <StuffEffectMultiplierArmor>0.75</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>1.0</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>8</EquipDelay>
+    </statBases>
+    <equippedStatOffsets><MoveSpeed>-0.4</MoveSpeed></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>Torso</li><li>Shoulders</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/ScaleArmor</wornGraphicPath>
+      <layers><li>Middle</li></layers>
+      <defaultOutfitTags><li>Soldier</li></defaultOutfitTags>
+      <tags>
+        <li>MedievalMilitary</li>
+        <li>CVG_Cultivator</li>
+      </tags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+    </apparel>
+    <tradeTags>
+      <li>Clothing</li>
+      <li>Armor</li>
+    </tradeTags>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options><li><weight>10</weight><only>(0.55,0.7,0.8)</only></li></options>
+    </colorGenerator>
+    <comps><li Class="Convergence.CompProperties_SpiritGrade"><grade>1</grade></li></comps>
+  </ThingDef>
+  <ThingDef ParentName="ArmorSmithableBase">
+    <defName>CVG_Apparel_ScaleHelmet</defName>
+    <label>spirit scale helmet</label>
+    <description>A rounded helmet of overlapping spirit-metal scales with a hanging neck guard, the doumou made to complete the scale armor of the Azure Peak patrols. A red tassel rises from its crest ring: in Jiuxiao it marks a soldier sworn to guard the gate of a sect until death. It gives moderate protection to the head. It has spirit grade 1.</description>
+    <possessionCount>1</possessionCount>
+    <techLevel>Medieval</techLevel>
+    <recipeMaker>
+      <recipeUsers><li MayRequire="prospero1088.convergence.alchemy">CVG_SpiritForge</li></recipeUsers>
+      <skillRequirements><Crafting>5</Crafting></skillRequirements>
+      <displayPriority>301</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <!-- Final art: Things/Pawn/Humanlike/Apparel/CVG/ScaleHelmet -->
+      <texPath>Things/Pawn/Humanlike/Apparel/CVG/ScaleHelmet_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.4</uiIconScale>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories><li>Metallic</li><li>Leathery</li></stuffCategories>
+    <thingCategories><li>ArmorHeadgear</li></thingCategories>
+    <statBases>
+      <WorkToMake>3600</WorkToMake>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.5</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups><li>UpperHead</li></bodyPartGroups>
+      <parentTagDef>ApparelHead</parentTagDef>
+      <!-- Final art: Things/Pawn/Humanlike/Apparel/CVG/ScaleHelmet -->
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/ScaleHelmet</wornGraphicPath>
+      <layers><li>Overhead</li></layers>
+      <tags>
+        <li>MedievalMilitary</li>
+        <li>CVG_Cultivator</li>
+      </tags>
+      <defaultOutfitTags><li>Soldier</li></defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+    </apparel>
+    <tradeTags>
+      <li>Clothing</li>
+      <li>Armor</li>
+    </tradeTags>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options><li><weight>10</weight><only>(0.55,0.7,0.8)</only></li></options>
+    </colorGenerator>
+    <comps><li Class="Convergence.CompProperties_SpiritGrade"><grade>1</grade></li></comps>
+  </ThingDef>
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>CVG_Apparel_RuneBattleRobe</defName>
+    <label>runic battle robe</label>
+    <description>A robe woven with silk and rune thread, its lining stitched with the protective formations of the battle arrays that held the line during the Iron Calamity. Each rune spreads a blow across the whole cloth, so it guards like mail while weighing no more than a normal robe. No movement penalty. It has spirit grade 1.</description>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <recipeUsers><li>CVG_SpiritLoom</li><li>HandTailoringBench</li></recipeUsers>
+      <skillRequirements><Crafting>7</Crafting></skillRequirements>
+      <displayPriority>300</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <!-- Final art: Things/Pawn/Humanlike/Apparel/CVG/RuneBattleRobe (see docs/modulos/ROPA.md) -->
+      <texPath>Things/Pawn/Humanlike/Apparel/CVG/RuneBattleRobe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.05</drawSize>
+    </graphicData>
+    <costStuffCount>100</costStuffCount>
+    <stuffCategories><li>Fabric</li><li>Leathery</li></stuffCategories>
+    <costList><CVG_SpiritStone>6</CVG_SpiritStone></costList>
+    <thingCategories><li>ApparelMisc</li></thingCategories>
+    <statBases>
+      <MaxHitPoints>220</MaxHitPoints>
+      <WorkToMake>22000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.5</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.7</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.9</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets><CVG_QiRegen>0.4</CVG_QiRegen></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>Torso</li><li>Neck</li><li>Shoulders</li><li>Arms</li><li>Legs</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/RuneBattleRobe</wornGraphicPath>
+      <layers><li>Shell</li></layers>
+      <defaultOutfitTags><li>Worker</li></defaultOutfitTags>
+      <tags>
+        <li>CVG_Cultivator</li>
+        <li>Robe</li>
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options><li><weight>10</weight><only>(0.6,0.5,0.85)</only></li></options>
+    </colorGenerator>
+    <comps><li Class="Convergence.CompProperties_SpiritGrade"><grade>1</grade></li></comps>
+  </ThingDef>
+</Defs>

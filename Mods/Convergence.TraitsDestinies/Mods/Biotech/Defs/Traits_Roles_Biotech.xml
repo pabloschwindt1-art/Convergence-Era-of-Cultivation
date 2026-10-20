@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Biotech role traits (loaded only with Biotech). Puppet master evolves with the mechs overseen ("Puppetry", mech-days). -->
+  <TraitDef>
+    <defName>CVG_Role_PuppetMaster</defName>
+    <commonality>0.04</commonality>
+    <exclusionTags>
+      <li>CVG_Role</li>
+    </exclusionTags>
+    <forcedPassions>
+      <li>Crafting</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <degree>0</degree>
+        <label>apprentice puppet master</label>
+        <description>Bonds with puppets of metal and qi come naturally: if {PAWN_nameDef} is a mechanitor, {PAWN_pronoun} gains extra bandwidth. Improves by overseeing mechs. The puppeteers of Jiuxiao carved wooden warriors long before the Iron Calamity showed them what metal could do.</description>
+        <commonality>1</commonality>
+        <skillGains>
+          <Crafting>3</Crafting>
+        </skillGains>
+        <statOffsets>
+          <MechBandwidth>1</MechBandwidth>
+        </statOffsets>
+      </li>
+      <li>
+        <degree>1</degree>
+        <label>puppet master</label>
+        <labelFemale>puppet master</labelFemale>
+        <description>Commands puppets of metal and qi with ease: as a mechanitor, {PAWN_nameDef} gains more bandwidth and an extra control group. Improves by overseeing mechs. After the Calamity some sects swore never to animate metal again; only the puppeteers kept the art alive.</description>
+        <commonality>0.15</commonality>
+        <skillGains>
+          <Crafting>5</Crafting>
+        </skillGains>
+        <statOffsets>
+          <MechBandwidth>2</MechBandwidth>
+          <MechControlGroups>1</MechControlGroups>
+        </statOffsets>
+      </li>
+      <li>
+        <degree>2</degree>
+        <label>grandmaster of puppets</label>
+        <labelFemale>grandmaster of puppets</labelFemale>
+        <description>A whole army of puppets moves as one body: as a mechanitor, {PAWN_nameDef} has the widest bandwidth and an extra control group. Legend says the last puppet grandmaster of Jiuxiao turned the Iron Calamity's own husks against it.</description>
+        <commonality>0.02</commonality>
+        <skillGains>
+          <Crafting>7</Crafting>
+        </skillGains>
+        <statOffsets>
+          <MechBandwidth>3</MechBandwidth>
+          <MechControlGroups>1</MechControlGroups>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_TraitProgression">
+        <counter>Puppetry</counter>
+        <steps>
+          <li>
+            <degree>1</degree>
+            <threshold>30</threshold>
+          </li>
+          <li>
+            <degree>2</degree>
+            <threshold>120</threshold>
+          </li>
+        </steps>
+      </li>
+    </modExtensions>
+  </TraitDef>
+  <TraitDef>
+    <defName>CVG_Role_BloodChild</defName>
+    <commonality>0.03</commonality>
+    <exclusionTags>
+      <li>CVG_Role</li>
+    </exclusionTags>
+    <conflictingTraits>
+      <li>CVG_Heart_Buddha</li>
+    </conflictingTraits>
+    <degreeDatas>
+      <li>
+        <degree>0</degree>
+        <label>child of blood</label>
+        <labelFemale>child of blood</labelFemale>
+        <description>Blood calls to {PAWN_nameDef}: hemogen comes easily and wounds close fast. The blood path was opened by Chiyou's war-shamans long before the Blood Moon Cult claimed it, and its echo has beaten in these veins since birth.</description>
+        <skillGains>
+          <Melee>2</Melee>
+        </skillGains>
+        <statFactors>
+          <HemogenGainFactor>1.25</HemogenGainFactor>
+          <InjuryHealingFactor>1.15</InjuryHealingFactor>
+        </statFactors>
+      </li>
+    </degreeDatas>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_TraitConflicts">
+        <conflicts>
+          <li><trait>Immunity</trait><degree>-1</degree></li>
+          <li><trait>Delicate</trait></li>
+          <li><trait>Wimp</trait></li>
+        </conflicts>
+      </li>
+    </modExtensions>
+  </TraitDef>
+</Defs>

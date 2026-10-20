@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Sect treasures: ideoligion relics (vanilla RelicInertBase). They show up as relics for any ideoligion; art is provisional (vanilla relic sprites tinted). Final art: Things/Item/Relic/CVG/<Name> -->
+  <ThingDef ParentName="RelicInertBase">
+    <defName>CVG_Relic_FounderSword</defName>
+    <label>founder's sword</label>
+    <description>The sword the founder carried down the mountain. It has never cut anything that was not asked of it, and the edge has been sharpened every year by someone who never held it in anger.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/Relic_FounderSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories><li>Metallic</li></stuffCategories>
+    <costStuffCount>100</costStuffCount>
+    <relicChance>3</relicChance>
+  </ThingDef>
+  <ThingDef ParentName="RelicInertBase">
+    <defName>CVG_Relic_FounderJade</defName>
+    <label>founder's jade</label>
+    <description>A pendant of green jade that the founder wore at his tribulation. They say it still hums when a disciple stands under the lightning.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/Relic_FounderJade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories><li>Stony</li><li>Metallic</li></stuffCategories>
+    <costStuffCount>100</costStuffCount>
+    <relicChance>3</relicChance>
+  </ThingDef>
+  <ThingDef ParentName="RelicInertBase">
+    <defName>CVG_Relic_SectSeal</defName>
+    <label>sect seal</label>
+    <description>The seal that closes every decree of the sect. Whoever holds it can speak in the master's name; no one has dared to try it without him.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/Relic_SectSeal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories><li>Stony</li><li>Metallic</li><li>Woody</li></stuffCategories>
+    <costStuffCount>100</costStuffCount>
+    <relicChance>3</relicChance>
+  </ThingDef>
+</Defs>

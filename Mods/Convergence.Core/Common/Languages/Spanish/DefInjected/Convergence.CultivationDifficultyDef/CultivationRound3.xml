@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Difficulty_Easy.label>fácil</CVG_Difficulty_Easy.label>
+  <CVG_Difficulty_Easy.description>El camino de los inmortales está abierto a todos. El cultivo es rápido, la tribulación celestial perdona y pocas sectas salen a cazar tesoros. Para quien quiere ver subir los reinos sin perder colonos.</CVG_Difficulty_Easy.description>
+  <CVG_Difficulty_Hard.label>difícil</CVG_Difficulty_Hard.label>
+  <CVG_Difficulty_Hard.description>El equilibrio para el que se diseñó el mod. Cada reino cuesta años, el cielo pone a prueba cada avance con rayos que pueden matar y las sectas se fijan cuando una colonia se hace fuerte.</CVG_Difficulty_Hard.description>
+  <CVG_Difficulty_Nightmare.label>pesadilla</CVG_Difficulty_Nightmare.label>
+  <CVG_Difficulty_Nightmare.description>El cielo es celoso y el mundo tiene hambre. El cultivo se arrastra, la tribulación golpea fuerte, la supresión de reino apenas protege y los cultivadores enemigos pueden estar dos reinos por encima de tu mejor discípulo. En las historias antiguas, así solo uno de cada mil discípulos llegaba a la Fundación.</CVG_Difficulty_Nightmare.description>
+</LanguageData>

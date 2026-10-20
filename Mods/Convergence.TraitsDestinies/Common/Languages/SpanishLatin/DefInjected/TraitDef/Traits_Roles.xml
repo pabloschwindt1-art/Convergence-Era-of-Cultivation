@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Role_SectDisciple.degreeDatas.0.label>discípulo de secta</CVG_Role_SectDisciple.degreeDatas.0.label>
+  <CVG_Role_SectDisciple.degreeDatas.0.labelFemale>discípula de secta</CVG_Role_SectDisciple.degreeDatas.0.labelFemale>
+  <CVG_Role_SectDisciple.degreeDatas.0.description>Se crió en una secta de los Nueve Cielos, donde {PAWN_nameDef} aprendió pronto a respirar, inclinarse y luchar. Aprende rápido y cultiva un poco más rápido.</CVG_Role_SectDisciple.degreeDatas.0.description>
+  <CVG_Role_LineageHeir.degreeDatas.0.label>heredero de linaje</CVG_Role_LineageHeir.degreeDatas.0.label>
+  <CVG_Role_LineageHeir.degreeDatas.0.labelFemale>heredera de linaje</CVG_Role_LineageHeir.degreeDatas.0.labelFemale>
+  <CVG_Role_LineageHeir.degreeDatas.0.description>Lleva la herencia de un linaje antiguo: la sangre de bestia responde con facilidad, y purificar un linaje da mucho mejor resultado. Desde que el Pacto de los Cuatro Puntos de los dragones selló los grandes linajes, quien hereda carga una astilla de ese juramento junto con la sangre.</CVG_Role_LineageHeir.degreeDatas.0.description>
+  <CVG_Role_SpiritTailor.degreeDatas.0.label>sastre espiritual</CVG_Role_SpiritTailor.degreeDatas.0.label>
+  <CVG_Role_SpiritTailor.degreeDatas.0.description>El hilo y la aguja obedecen a sus manos, también la seda espiritual y el cuero de bestia, y esa misma destreza acelera cualquier trabajo manual. Las túnicas de los ancianos del Pico Azur están cosidas con qi para que nunca se rasguen en un duelo, un oficio con el que sueña todo sastre espiritual.</CVG_Role_SpiritTailor.degreeDatas.0.description>
+  <CVG_Role_FengShuiMaster.degreeDatas.0.label>maestro de feng shui</CVG_Role_FengShuiMaster.degreeDatas.0.label>
+  <CVG_Role_FengShuiMaster.degreeDatas.0.labelFemale>maestra de feng shui</CVG_Role_FengShuiMaster.degreeDatas.0.labelFemale>
+  <CVG_Role_FengShuiMaster.degreeDatas.0.description>Sabe dónde se reúne el qi y por dónde se escapa: construye bien y avanza de reino con más seguridad. Los geomantes dicen que la Cordillera del Dragón Enroscado del Clan del Dragón Antiguo ya era un fragmento propio antes de la Ruptura porque maestros así ubicaron sus primeras salas.</CVG_Role_FengShuiMaster.degreeDatas.0.description>
+</LanguageData>

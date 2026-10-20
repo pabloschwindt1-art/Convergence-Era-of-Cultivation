@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Path of Nine Heavens Thunder (opened by a thunder root). Balance from VPE's Staticlord: power leap 0.02/8 heat,
+    chain bolt 0.06/24 heat and 22.9 range, static pulse 0.1/40 heat (psyfocus 1 = 400 qi, heat / 0.54 per second).
+  -->
+  <Convergence.TechniqueManualDef>
+    <defName>CVG_Manual_NineHeavensThunder</defName>
+    <label>Nine Heavens Thunder Scripture</label>
+    <description>Jiuxiao means the Nine Heavens, and in the highest of them the thunder gods keep the drums of tribulation. This scripture was stolen from them, the legends say, by a cultivator who survived nine strikes in a row. Only a root of thunder can read it.</description>
+    <path>CVG_Path_Qi</path>
+    <element>CVG_Element_Thunder</element>
+    <order>9</order>
+    <openedByRoot>true</openedByRoot>
+    <fromJadeSlips>false</fromJadeSlips>
+    <cardTexPath>UI/Paths/CVG_Path_Thunder</cardTexPath>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Thunder</iconPath>
+  </Convergence.TechniqueManualDef>
+
+  <AbilityDef ParentName="CVG_TechniqueBase">
+    <defName>CVG_Tech_LightningStep</defName>
+    <label>lightning step</label>
+    <description>Become a flash of lightning and reappear up to 15 cells away. Thunder cultivators do not walk into a fight; they are simply there.\n\nShort jump to a visible cell (VPE power leap balance).</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Thunder</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <jobDef>CastJump</jobDef>
+    <verbProperties>
+      <soundCast>Longjump_Jump</soundCast>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>lightning step</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>0.15</warmupTime>
+      <range>14.9</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityResourceCost">
+        <cost>8</cost>
+      </li>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>LightningGlow</fleckDef>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_NineHeavensThunder</manual>
+        <tier>1</tier>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <AbilityDef ParentName="CVG_TechniqueBoltBase">
+    <defName>CVG_Tech_ChainLightning</defName>
+    <label>chain lightning</label>
+    <description>Call a bolt from the Nine Heavens onto an enemy and let it leap from body to body. Each jump stuns for a moment and loses a little strength.\n\n12 burn damage, jumps to 3 more enemies within 6 cells (x0.8 each), 1 second stun, scaled by realm and mastery.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Thunder</iconPath>
+    <cooldownTicksRange>2670</cooldownTicksRange>
+    <verbProperties>
+      <soundCast>Thunder_OnMap</soundCast>
+      <targetParams>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityResourceCost">
+        <cost>24</cost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityChainLightning">
+        <damage>12</damage>
+        <jumps>3</jumps>
+        <jumpRadius>5.9</jumpRadius>
+        <stunTicks>60</stunTicks>
+        <fleck>LightningGlow</fleck>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_NineHeavensThunder</manual>
+        <tier>2</tier>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_LightningStep</li>
+          <li>CVG_Tech_LightningReflexes</li>
+        </prerequisites>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <AbilityDef ParentName="CVG_TechniqueConeBase">
+    <defName>CVG_Tech_ThunderRoar</defName>
+    <label>thunder roar</label>
+    <description>Release the thunder held in the dantian in a single roar. Those in front of you are seared and left stunned, ears ringing like a struck bell.\n\nCone of 10 cells: 8 burn damage and a sure stun of 2.5 seconds, scaled by realm and mastery. Requires Foundation and a thunder root.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Thunder</iconPath>
+    <cooldownTicksRange>4440</cooldownTicksRange>
+    <verbProperties>
+      <soundCast>Thunder_OnMap</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityResourceCost">
+        <cost>40</cost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityCone">
+        <range>9.9</range>
+        <lineWidthEnd>7</lineWidthEnd>
+        <damageDef>Burn</damageDef>
+        <damAmount>8</damAmount>
+        <stunChance>1</stunChance>
+        <stunTicks>150</stunTicks>
+        <fleckDef>LightningGlow</fleckDef>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_NineHeavensThunder</manual>
+        <tier>3</tier>
+        <minRealm>CVG_Realm_Foundation</minRealm>
+        <requiresElement>true</requiresElement>
+        <unlockCost>2</unlockCost>
+        <prerequisites>
+          <li>CVG_Tech_ChainLightning</li>
+        </prerequisites>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_LightningReflexes</defName>
+    <label>lightning reflexes</label>
+    <description>Thunder qi runs along the nerves faster than thought: the body moves before the eye has finished seeing. Thunder cultivators of Jiuxiao were said to catch arrows out of the air.\n\nPassive: melee dodge +3 and aiming time -5% (more with realm and mastery).</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Thunder</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_NineHeavensThunder</manual>
+        <tier>1</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+        <passiveHediff>CVG_Passive_LightningReflexes</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_LightningReflexes</defName>
+    <label>lightning reflexes</label>
+    <description>Thunder qi runs along the nerves faster than thought.</description>
+    <defaultLabelColor>(0.65,0.45,1)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeDodgeChance>3</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <AimingDelayFactor>0.95</AimingDelayFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>4.5</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <AimingDelayFactor>0.925</AimingDelayFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>6</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <AimingDelayFactor>0.9</AimingDelayFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>8.4</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <AimingDelayFactor>0.86</AimingDelayFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>10.8</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <AimingDelayFactor>0.82</AimingDelayFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_StormHeart</defName>
+    <label>heart of the storm</label>
+    <description>In the eye of the storm there is a stillness that sees everything. The cultivator fights from that stillness, and every blow and every shot lands where it was meant to.\n\nPassive: melee hit chance +2 and shooting accuracy +2 (more with realm and mastery).</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Thunder</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_NineHeavensThunder</manual>
+        <tier>2</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_LightningReflexes</li>
+          <li>CVG_Tech_LightningStep</li>
+        </prerequisites>
+        <passiveHediff>CVG_Passive_StormHeart</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_StormHeart</defName>
+    <label>heart of the storm</label>
+    <description>A still eye of the storm beats in the chest.</description>
+    <defaultLabelColor>(0.65,0.45,1)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeHitChance>2</MeleeHitChance>
+          <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>3</MeleeHitChance>
+          <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>4</MeleeHitChance>
+          <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>5.6</MeleeHitChance>
+          <ShootingAccuracyPawn>5.6</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>7.2</MeleeHitChance>
+          <ShootingAccuracyPawn>7.2</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_LightningBody</defName>
+    <label>body of lightning</label>
+    <description>At Foundation the body itself remembers the lightning. The cultivator crosses a courtyard in the time a mortal takes to blink, and the air smells of a storm behind them.\n\nPassive: move speed +6% (more with realm and mastery).</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Thunder</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_NineHeavensThunder</manual>
+        <tier>3</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_Foundation</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_StormHeart</li>
+        </prerequisites>
+        <unlockCost>2</unlockCost>
+        <passiveHediff>CVG_Passive_LightningBody</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_LightningBody</defName>
+    <label>body of lightning</label>
+    <description>The body remembers the lightning.</description>
+    <defaultLabelColor>(0.65,0.45,1)</defaultLabelColor>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>1.06</MoveSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statFactors>
+          <MoveSpeed>1.09</MoveSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statFactors>
+          <MoveSpeed>1.12</MoveSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statFactors>
+          <MoveSpeed>1.168</MoveSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statFactors>
+          <MoveSpeed>1.216</MoveSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_TribulationBorn</defName>
+    <label>tribulation-born</label>
+    <description>A Golden Core of thunder was forged by the same heaven that sends the tribulation. Lightning recognizes its own: it burns less, hurts less, and the cultivator stands up where others fall.\n\nPassive: heat armor +8% and pain shock threshold +5% (more with realm and mastery).</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Thunder</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_NineHeavensThunder</manual>
+        <tier>4</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_GoldenCore</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_ThunderRoar</li>
+          <li>CVG_Tech_LightningBody</li>
+        </prerequisites>
+        <unlockCost>2</unlockCost>
+        <passiveHediff>CVG_Passive_TribulationBorn</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_TribulationBorn</defName>
+    <label>tribulation-born</label>
+    <description>Lightning recognizes its own.</description>
+    <defaultLabelColor>(0.65,0.45,1)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Heat>0.08</ArmorRating_Heat>
+          <PainShockThreshold>0.05</PainShockThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <ArmorRating_Heat>0.12</ArmorRating_Heat>
+          <PainShockThreshold>0.075</PainShockThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <ArmorRating_Heat>0.16</ArmorRating_Heat>
+          <PainShockThreshold>0.1</PainShockThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <ArmorRating_Heat>0.224</ArmorRating_Heat>
+          <PainShockThreshold>0.14</PainShockThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <ArmorRating_Heat>0.288</ArmorRating_Heat>
+          <PainShockThreshold>0.18</PainShockThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

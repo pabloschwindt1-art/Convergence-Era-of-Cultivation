@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef>
+    <defName>CVG_SpinSpiritSilk</defName>
+    <label>spin spirit silk</label>
+    <description>Spin jade spider cocoons into spirit silk.</description>
+    <jobString>Spinning spirit silk.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>800</workAmount>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_SpiderCocoon</li></thingDefs></filter>
+        <count>12</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs><li>CVG_SpiderCocoon</li></thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_SpiritSilk>8</CVG_SpiritSilk>
+    </products>
+    <recipeUsers>
+      <li>CVG_SpiritLoom</li>
+    </recipeUsers>
+  </RecipeDef>
+  <!-- Cría de gusanos de seda: hojas de morera -> seda espiritual (con Convergence: Apparel). -->
+  <RecipeDef>
+    <defName>CVG_RaiseSilkworms</defName>
+    <label>raise silkworms</label>
+    <description>Feed mulberry leaves to a tray of sect silkworms until they spin spirit silk.</description>
+    <jobString>Raising silkworms.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1800</workAmount>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+      <li>CVG_SpiritLoom</li>
+    </recipeUsers>
+    <ingredients>
+      <li><filter><thingDefs><li>CVG_MulberryLeaf</li></thingDefs></filter><count>20</count></li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs><li>CVG_MulberryLeaf</li></thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_SpiritSilk>5</CVG_SpiritSilk>
+    </products>
+  </RecipeDef>
+</Defs>

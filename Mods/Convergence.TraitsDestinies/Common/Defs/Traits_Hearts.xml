@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Dao hearts: one per pawn (exclusionTag CVG_Heart). -->
+
+  <TraitDef>
+    <defName>CVG_Heart_Sword</defName>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
+    <commonality>0.04</commonality>
+    <exclusionTags>
+      <li>CVG_Heart</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>sword heart</label>
+        <description>{PAWN_nameDef} understands the sword: blades land more often and techniques cost less. "The sword is neither good nor evil; the hand is," reads the gate of Azure Peak, and this heart already knows it.</description>
+        <statOffsets>
+          <MeleeHitChance>4</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+          <CVG_TechniqueCost>0.85</CVG_TechniqueCost>
+        </statFactors>
+        <skillGains>
+          <Melee>3</Melee>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Heart_SaberIntent</defName>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
+    <commonality>0.04</commonality>
+    <exclusionTags>
+      <li>CVG_Heart</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>saber intent</label>
+        <description>The intent behind {PAWN_nameDef}'s strikes puts weight into every cut. The sabers of Jiuxiao belonged to its border guards, who taught that a saber is swung by will before it is swung by the arm.</description>
+        <statFactors>
+          <MeleeDamageFactor>1.1</MeleeDamageFactor>
+        </statFactors>
+        <skillGains>
+          <Melee>2</Melee>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Heart_Buddha</defName>
+    <forcedPassions>
+      <li>Social</li>
+    </forcedPassions>
+    <commonality>0.04</commonality>
+    <exclusionTags>
+      <li>CVG_Heart</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>buddha heart</label>
+        <description>A Dao heart as still as a lake: {PAWN_nameDef} rarely breaks, never falls into a killing rage, and breaks through more surely. Abbess Miao Yin of the Silent Lotus has never been seen angry, and says she owes it to this heart, not to training.</description>
+        <statOffsets>
+          <MentalBreakThreshold>-0.08</MentalBreakThreshold>
+          <CVG_BreakthroughChance>0.05</CVG_BreakthroughChance>
+        </statOffsets>
+        <skillGains>
+          <Social>2</Social>
+          <Medicine>2</Medicine>
+        </skillGains>
+        <!-- A still heart does not fall into rage. -->
+        <disallowedMentalStates>
+          <li>Berserk</li>
+          <li>MurderousRage</li>
+        </disallowedMentalStates>
+      </li>
+    </degreeDatas>
+      <modExtensions>
+      <li Class="Convergence.DefModExtension_TraitConflicts">
+        <conflicts>
+          <li><trait>Bloodlust</trait></li>
+          <li><trait>Psychopath</trait></li>
+          <li><trait>Cannibal</trait></li>
+          <li><trait>Pyromaniac</trait></li>
+        </conflicts>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Heart_Demonic</defName>
+    <commonality>0.03</commonality>
+    <exclusionTags>
+      <li>CVG_Heart</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>demonic heart</label>
+        <description>Darkness feeds {PAWN_nameDef}'s cultivation, and frays the mind. The Blood Moon Cult calls it "the open door", and many of its elders were born with it.</description>
+        <statOffsets>
+          <MentalBreakThreshold>0.04</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+          <CVG_CultivationSpeed>1.15</CVG_CultivationSpeed>
+        </statFactors>
+        <skillGains>
+          <Melee>2</Melee>
+          <Shooting>2</Shooting>
+        </skillGains>
+      </li>
+    </degreeDatas>
+      <modExtensions>
+      <li Class="Convergence.DefModExtension_TraitConflicts">
+        <conflicts>
+          <li><trait>Kind</trait></li>
+        </conflicts>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Heart_Child</defName>
+    <forcedPassions>
+      <li>Artistic</li>
+    </forcedPassions>
+    <commonality>0.02</commonality>
+    <exclusionTags>
+      <li>CVG_Heart</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>child's heart</label>
+        <description>A heart of a newborn: inner demons find nothing to hold on to, but merchants find a lot. The sutras of the Silent Lotus call it the uncarved block, the heart every monk spends a lifetime trying to recover.</description>
+        <statOffsets>
+          <MentalBreakThreshold>-0.1</MentalBreakThreshold>
+          <TradePriceImprovement>-0.1</TradePriceImprovement>
+          <NegotiationAbility>-0.15</NegotiationAbility>
+        </statOffsets>
+        <skillGains>
+          <Artistic>3</Artistic>
+        </skillGains>
+        <!-- Inner demons find nothing to hold on to. -->
+        <disallowedMentalStates>
+          <li>CVG_InnerDemon</li>
+        </disallowedMentalStates>
+      </li>
+    </degreeDatas>
+      <modExtensions>
+      <li Class="Convergence.DefModExtension_TraitConflicts">
+        <conflicts>
+          <li><trait>Psychopath</trait></li>
+          <li><trait>Abrasive</trait></li>
+          <li><trait>Bloodlust</trait></li>
+          <li><trait>Cannibal</trait></li>
+        </conflicts>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Heart_Stone</defName>
+    <commonality>0.06</commonality>
+    <exclusionTags>
+      <li>CVG_Heart</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>stone heart</label>
+        <description>A heart firm as rock and as warm: {PAWN_nameDef} does not waver, nor connect, and corpses on the floor do not move it. Old miners of Jiuxiao say such hearts are born when a mountain spirit claims a human child as its own.</description>
+        <statOffsets>
+          <MentalBreakThreshold>-0.05</MentalBreakThreshold>
+          <SocialImpact>-0.2</SocialImpact>
+        </statOffsets>
+        <skillGains>
+          <Mining>2</Mining>
+          <Construction>2</Construction>
+        </skillGains>
+        <!-- Firm as rock: corpses on the floor do not move it. -->
+        <disallowedThoughts>
+          <li>ObservedLayingCorpse</li>
+          <li>ObservedLayingRottingCorpse</li>
+        </disallowedThoughts>
+      </li>
+    </degreeDatas>
+      <modExtensions>
+      <li Class="Convergence.DefModExtension_TraitConflicts">
+        <conflicts>
+          <li><trait>Kind</trait></li>
+          <li><trait>Nerves</trait><degree>-1</degree></li>
+          <li><trait>Nerves</trait><degree>-2</degree></li>
+        </conflicts>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Heart_Restless</defName>
+    <commonality>0.06</commonality>
+    <exclusionTags>
+      <li>CVG_Heart</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>restless heart</label>
+        <description>A restless heart learns fast and listens to its inner demon too much; out of its breakdowns, a sudden insight sometimes comes. Rogue cultivators say the best wandering swordsmen all had this heart, and the worst ones too.</description>
+        <statOffsets>
+          <MentalBreakThreshold>0.05</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+          <GlobalLearningFactor>1.2</GlobalLearningFactor>
+        </statFactors>
+        <skillGains>
+          <Shooting>2</Shooting>
+        </skillGains>
+        <!-- After a breakdown, sometimes a sudden enlightenment. -->
+        <mentalBreakInspirationGainSet>
+          <li>CVG_Inspired_Enlightenment</li>
+          <li>CVG_Inspired_SwordIntent</li>
+          <li>Inspired_Creativity</li>
+        </mentalBreakInspirationGainSet>
+        <mentalBreakInspirationGainReasonText>Out of the storm in [PAWN_possessive] heart, [PAWN_nameIndef] has seen something clearly.</mentalBreakInspirationGainReasonText>
+        <mentalBreakInspirationGainChance>0.5</mentalBreakInspirationGainChance>
+      </li>
+    </degreeDatas>
+      <modExtensions>
+      <li Class="Convergence.DefModExtension_TraitConflicts">
+        <conflicts>
+          <li><trait>Nerves</trait><degree>1</degree></li>
+          <li><trait>Nerves</trait><degree>2</degree></li>
+        </conflicts>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+</Defs>

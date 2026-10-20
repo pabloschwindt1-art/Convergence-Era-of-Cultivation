@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_PuppetHeartThread.label>hilo del corazón de marioneta</CVG_PuppetHeartThread.label>
+  <CVG_PuppetHeartThread.description>Una madeja de seda espiritual brillante sacada de la cripta de un maestro del Valle de los Mil Hilos, un linaje que huyó de Jiuxiao cuando la Gran Ruptura cortó sus hilos. Enrollada en el corazón, permite dirigir y construir marionetas (como un mecanitor: ancho de banda, grupos de control, taller de marionetas).
+
+Una vez tejido, solo se recupera tras la muerte.</CVG_PuppetHeartThread.description>
+  <CVG_PuppetHeartThread.comps.CompUsableImplant.useLabel>Tejer {0_label} en el corazón</CVG_PuppetHeartThread.comps.CompUsableImplant.useLabel>
+  <CVG_SpiritThread.label>hilo espiritual</CVG_SpiritThread.label>
+  <CVG_SpiritThread.description>Los maestros de marionetas dicen que un hilo común transmite un tirón, pero un hilo espiritual transmite una intención. Hilado tan fino que conduce el qi, ata una marioneta a la voluntad de su maestro; las arañas tejedoras de jade de Jiuxiao dan el mejor.</CVG_SpiritThread.description>
+  <CVG_PuppetBlueprint.label>plano de marioneta</CVG_PuppetBlueprint.label>
+  <CVG_PuppetBlueprint.description>El Valle de los Mil Hilos nunca escribió sus secretos en libros, solo en pergaminos de diagramas de articulaciones y sellos de atadura que arden si un ladrón los desenrolla al revés. Cada marioneta necesita uno; los maestros los venden, las criptas los esconden y un estudioso paciente puede dibujarlos.</CVG_PuppetBlueprint.description>
+  <CVG_Puppet_Wood.label>marioneta de madera</CVG_Puppet_Wood.label>
+  <CVG_Puppet_Wood.description>Los titiriteros de aldea de los viejos teatros de sombras aprendieron que un sirviente de madera nunca se cansa ni chusmea. Esta marioneta articulada de madera espiritual carga y limpia sin descanso para su maestro y se fortalece a medida que sube su reino.
+
+Marioneta de trabajo (escalón 1): acarrear, limpiar, sembrar, cortar plantas y curar. Casi no pelea. Débil al fuego (cuerpo de madera). 1 hilo. Se hace con 40 de madera espiritual, 10 de hilo espiritual y 1 plano.</CVG_Puppet_Wood.description>
+  <CVG_Puppet_Bronze.label>marioneta guardiana de bronce</CVG_Puppet_Bronze.label>
+  <CVG_Puppet_Bronze.description>Los bueyes de madera de Zhuge Liang llevaban grano por las montañas; el Valle, en cambio, fundió en bronce a los guardianes de sus puertas, a semejanza de los soldados de arcilla enterrados con el primer emperador, y les dio puños en vez de armas. Pesada y paciente, esta marioneta sostiene la línea por su titiritero y se fortalece a medida que sube su reino.
+
+Marioneta de guerra (escalón 2): primera línea cuerpo a cuerpo, con puños de bronce pesados y placas gruesas; más lenta que la de filo. Pelea con la fuerza del reino de su titiritero, hasta Establecimiento de Fundación. Se entumece con el frío. 1 hilo. Pide la investigación Hilos de guerra y un titiritero en Fundación. Se hace con 40 de acero espiritual, 15 de hilo espiritual y 1 plano.</CVG_Puppet_Bronze.description>
+  <CVG_Puppet_Bronze.tools.0.label>puños de bronce</CVG_Puppet_Bronze.tools.0.label>
+  <CVG_Puppet_Jade.label>marioneta guardiana de jade</CVG_Puppet_Jade.label>
+  <CVG_Puppet_Jade.description>Solo un gran maestro se atreve a tallar jade alrededor de un núcleo de bestia: el núcleo recuerda haber estado vivo y hay que convencerlo cada día de que obedezca. Rápida, dura y letal, la guardiana de jade es el orgullo de un titiritero y la envidia de las sectas; el núcleo vivo tira el doble de los hilos del maestro (2 de ancho de banda).
+
+Marioneta de guerra (escalón 4): la más fuerte, con agujas de jade a distancia; también caza. Pelea con la fuerza del reino de su titiritero, hasta Ascensión. Casi sin debilidades. 3 hilos. Pide la investigación Hilos de jade y un titiritero en la cima del Núcleo Dorado. Se hace con 50 de jade espiritual, 25 de hilo espiritual, 2 planos y 1 núcleo de bestia.</CVG_Puppet_Jade.description>
+  <CVG_PuppetWorkshop.label>taller de marionetas</CVG_PuppetWorkshop.label>
+  <CVG_PuppetWorkshop.description>Los talleres del Valle de los Mil Hilos zumbaban día y noche, con sus telares alimentados por el qi de la propia montaña. En este bastidor de talla con telar de hilo espiritual un titiritero construye sus marionetas (como un gestador de mecanoides). No necesita electricidad.</CVG_PuppetWorkshop.description>
+  <CVG_SpiritCharger.label>recargador espiritual</CVG_SpiritCharger.label>
+  <CVG_SpiritCharger.description>Las marionetas no comen, pero tienen sed: los maestros del Valle las dejaban beber de noche en pilas de piedras espirituales molidas, como caballos en un abrevadero. Esta pila bebe de la red de qi en lugar de electricidad y, a diferencia de un recargador de mecanoides, no deja desechos tóxicos; las marionetas también toman qi de su maestro cuando les falta.</CVG_SpiritCharger.description>
+</LanguageData>

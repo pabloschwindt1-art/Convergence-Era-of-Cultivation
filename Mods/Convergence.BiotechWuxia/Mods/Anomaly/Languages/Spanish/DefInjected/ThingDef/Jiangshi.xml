@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_PeachWood.label>madera de melocotonero</CVG_PeachWood.label>
+  <CVG_PeachWood.description>Tablas de melocotonero empapadas en ceniza de talismán y curadas sobre una piedra espiritual. Desde los tiempos del Emperador Amarillo el melocotonero está en la puerta entre los vivos y los muertos: Shentu y Yulei, los dioses de las puertas, ataban a los espíritus malignos con juncos bajo un gran melocotonero. Las armas de esta madera hacen el triple de daño a los jiangshi y a otros muertos inquietos.</CVG_PeachWood.description>
+  <CVG_PeachWood.stuffProps.stuffAdjective>de melocotonero</CVG_PeachWood.stuffProps.stuffAdjective>
+  <CVG_PeachWoodSword.label>espada de madera de melocotonero</CVG_PeachWoodSword.label>
+  <CVG_PeachWoodSword.description>Una espada taoísta de madera de melocotonero con una hilera de monedas de cobre en el lomo. Es mala contra los vivos, pero todo exorcista, de Maoshan a Xiangxi, lleva una: corta el yin de los jiangshi y de los muertos inquietos tres veces más hondo que el acero.</CVG_PeachWoodSword.description>
+  <CVG_PeachWoodSword.tools.point.label>punta</CVG_PeachWoodSword.tools.point.label>
+  <CVG_PeachWoodSword.tools.edge.label>filo</CVG_PeachWoodSword.tools.edge.label>
+  <CVG_BaguaMirror.label>espejo bagua</CVG_BaguaMirror.label>
+  <CVG_BaguaMirror.description>Un espejo redondo de plata pulida en un marco de los ocho trigramas. Colgado sobre las puertas desde la dinastía Han, muestra a los espíritus malignos su verdadero rostro. Los jiangshi y otros muertos inquietos a la vista quedan deslumbrados y se queman un poco cada pocos segundos.</CVG_BaguaMirror.description>
+  <CVG_GlutinousRicePoultice.label>cataplasma de arroz glutinoso</CVG_GlutinousRicePoultice.label>
+  <CVG_GlutinousRicePoultice.description>Arroz glutinoso cocido al vapor y prensado en un paño. Puesto sobre una herida de jiangshi se vuelve negro al sacar el qi cadavérico, y el exorcista lo cambia hasta que queda blanco. Las ancianas de Guangdong todavía guardan un saco de arroz glutinoso detrás de la puerta, por si acaso.</CVG_GlutinousRicePoultice.description>
+</LanguageData>

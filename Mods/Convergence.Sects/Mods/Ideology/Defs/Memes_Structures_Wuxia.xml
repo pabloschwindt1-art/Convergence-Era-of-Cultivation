@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Structures ("beliefs") of Jiuxiao, user request 2026-10-17: the vanilla list had Christian, Buddhist, technological... and
+    nothing of ours. Same build as the vanilla religious origins (Memes_Structures_OriginsReligious.xml):
+      Dao origin       = like the Buddhist origin (no deities, ideological founder)
+      Mandate of Heaven = like the Christian origin (one deity: Heaven, which judges with the tribulation)
+      Ancestral cult    = like the embodied theist (deities are the founders of the clan)
+    Names: like vanilla, the structure pack names the ideoligion only part of the time (NamerIdeoGlobal: [hyphenPrefix]-[packIdeoNameStructure],
+    creed of [packTheme]); prefix false or vanilla skips the structure name.
+    No required ritual seat: vanilla only accepts the seats listed in the RitualSeat precept.
+  -->
+  <MemeDef ParentName="StructureOriginBase">
+    <defName>CVG_Structure_DaoOrigin</defName>
+    <label>Dao origin</label>
+    <description>This ideoligion descends from the Daoist schools of Jiuxiao, which followed the Dao long before anyone could cultivate it. There are no gods to pray to, only a Way to walk: the masters say the Dao that can be named is not the true Dao, and then spend nine hundred years naming it anyway.</description>
+    <iconPath>UI/Structures/CVG/DaoOrigin</iconPath>
+    <deityCount>0</deityCount>
+    <allowSymbolsFromDeity>false</allowSymbolsFromDeity>
+    <symbolPackOverride>true</symbolPackOverride>
+    <worshipRoomLabel>Dao temple</worshipRoomLabel>
+    <generalRules>
+      <rulesStrings>
+        <li>memeLeaderNoun->celestial master</li>
+        <li>memeLeaderNoun->patriarch</li>
+        <li>memeLeaderNoun->sage</li>
+        <li>memeLeaderAdjective->true</li>
+        <li>memeLeaderAdjective->immortal</li>
+        <li>memeLeaderAdjective->still</li>
+        <li>memeMoralist->Daoist priest</li>
+        <li>memeMoralist->hermit</li>
+        <li>memeConcept->way</li>
+        <li>memeConcept->stillness</li>
+        <li>memeConcept->the Dao</li>
+        <li>memeConcept->the uncarved block</li>
+        <li>memeCreed->school</li>
+        <li>memeCreed->way</li>
+        <li>memeCreed->temple</li>
+        <li>memeCreed->hermitage</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <patterns>
+        <li><def>IdeologicalFounder</def></li>
+      </patterns>
+      <constants>
+        <li><key>structure_ideological</key><value>true</value></li>
+      </constants>
+    </descriptionMaker>
+    <symbolPacks>
+      <li><theme>the Dao</theme><ideoName>Daoism</ideoName><adjective>Daoist</adjective><member>Daoist</member><prefix>false</prefix></li>
+      <li><theme>the Dao</theme><ideoName>Way of the Nine Heavens</ideoName><adjective>Nine-Heaven</adjective><member>Nine-Heaven Daoist</member><prefix>false</prefix></li>
+      <li><theme>the Dao</theme><ideoName>Way of Stillness</ideoName><adjective>Still</adjective><member>Stillwalker</member><prefix>false</prefix></li>
+      <li><theme>the Dao</theme><ideoName>Way of the Elixir</ideoName><adjective>Elixirist</adjective><member>Elixirist</member><prefix>false</prefix></li>
+      <li><theme>the Dao</theme><ideoName>Way of the Talisman</ideoName><adjective>Talismanic</adjective><member>Talismanist</member><prefix>false</prefix></li>
+    </symbolPacks>
+  </MemeDef>
+
+  <MemeDef ParentName="StructureOriginBase">
+    <defName>CVG_Structure_HeavenMandate</defName>
+    <label>Mandate of Heaven</label>
+    <description>This ideoligion holds that Heaven is a single will that watches every cultivator. It grants the Mandate to the worthy and sends the tribulation to test those who climb too high. The faithful do not curse the lightning: they thank it, because Heaven only strikes what it takes seriously.</description>
+    <iconPath>UI/Structures/CVG/HeavenMandate</iconPath>
+    <deityCount>1</deityCount>
+    <allowSymbolsFromDeity>false</allowSymbolsFromDeity>
+    <symbolPackOverride>true</symbolPackOverride>
+    <worshipRoomLabel>altar of Heaven</worshipRoomLabel>
+    <groupDef>Theist_Abstract</groupDef>
+    <generalRules>
+      <rulesStrings>
+        <li>memeLeaderNoun->Son of Heaven</li>
+        <li>memeLeaderNoun->heavenly envoy</li>
+        <li>memeLeaderNoun->mandate bearer</li>
+        <li>memeLeaderAdjective->heaven-sent</li>
+        <li>memeLeaderAdjective->celestial</li>
+        <li>memeMoralist->tribulation priest</li>
+        <li>memeMoralist->court astrologer</li>
+        <li>memeConcept->Heaven</li>
+        <li>memeConcept->the Mandate</li>
+        <li>memeConcept->tribulation</li>
+        <li>memeConcept->judgement</li>
+        <li>memeCreed->court</li>
+        <li>memeCreed->mandate</li>
+        <li>memeCreed->faith</li>
+        <li>memeCreed->altar</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <patterns>
+        <li><def>TheistMyth</def></li>
+        <li><def>TheistFounder</def></li>
+      </patterns>
+      <constants>
+        <li><key>structure_theist</key><value>true</value></li>
+      </constants>
+    </descriptionMaker>
+    <symbolPacks>
+      <li><theme>Heaven</theme><ideoName>Mandate of Heaven</ideoName><adjective>Heaven-Mandated</adjective><member>Mandatist</member><prefix>false</prefix></li>
+      <li><theme>Heaven</theme><ideoName>Celestial Court</ideoName><adjective>Celestial</adjective><member>Courtier of Heaven</member><prefix>false</prefix></li>
+      <li><theme>Heaven</theme><ideoName>Way of Tribulation</ideoName><adjective>Tribulant</adjective><member>Tribulant</member><prefix>false</prefix></li>
+      <li><theme>Heaven</theme><ideoName>Heavenly Dao</ideoName><adjective>Heavenly</adjective><member>Heaven-follower</member><prefix>false</prefix></li>
+    </symbolPacks>
+  </MemeDef>
+
+  <MemeDef ParentName="StructureOriginBase">
+    <defName>CVG_Structure_Ancestors</defName>
+    <label>ancestral cult</label>
+    <description>This ideoligion worships the founders of the clan, the cultivators whose names are carved on the tablets of the ancestral hall. They are not distant gods: they were people, they still watch, and they are ashamed of descendants who stop climbing. Every breakthrough is reported to them with incense.</description>
+    <iconPath>UI/Structures/CVG/Ancestors</iconPath>
+    <deityCount>2~3</deityCount>
+    <allowSymbolsFromDeity>false</allowSymbolsFromDeity>
+    <symbolPackOverride>true</symbolPackOverride>
+    <worshipRoomLabel>ancestral hall</worshipRoomLabel>
+    <groupDef>Theist_Embodied</groupDef>
+    <generalRules>
+      <rulesStrings>
+        <li>memeLeaderNoun->clan head</li>
+        <li>memeLeaderNoun->patriarch</li>
+        <li>memeLeaderNoun->matriarch</li>
+        <li>memeLeaderAdjective->eldest</li>
+        <li>memeLeaderAdjective->ancestral</li>
+        <li>memeMoralist->keeper of the tablets</li>
+        <li>memeMoralist->clan elder</li>
+        <li>memeConcept->the ancestors</li>
+        <li>memeConcept->the lineage</li>
+        <li>memeConcept->the clan</li>
+        <li>memeConcept->the tablets</li>
+        <li>memeCreed->clan</li>
+        <li>memeCreed->hall</li>
+        <li>memeCreed->lineage</li>
+        <li>memeCreed->rite</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <patterns>
+        <li><def>TheistMyth</def></li>
+        <li><def>TheistFounder</def></li>
+      </patterns>
+      <constants>
+        <li><key>structure_theist</key><value>true</value></li>
+      </constants>
+    </descriptionMaker>
+    <symbolPacks>
+      <li><theme>the ancestors</theme><ideoName>Ancestral Way</ideoName><adjective>Ancestral</adjective><member>Descendant</member><prefix>false</prefix></li>
+      <li><theme>the ancestors</theme><ideoName>Hall of Forebears</ideoName><adjective>Forebear</adjective><member>Forebear-keeper</member><prefix>false</prefix></li>
+      <li><theme>the ancestors</theme><ideoName>Way of the Clan</ideoName><adjective>Clan</adjective><member>Clansman</member><prefix>false</prefix></li>
+      <li><theme>the ancestors</theme><ideoName>Rite of the Lineage</ideoName><adjective>Lineal</adjective><member>Lineage-bearer</member><prefix>false</prefix></li>
+    </symbolPacks>
+  </MemeDef>
+</Defs>

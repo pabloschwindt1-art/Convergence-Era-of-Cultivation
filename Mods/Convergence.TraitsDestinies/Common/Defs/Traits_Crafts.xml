@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Spirit crafts with degrees that evolve with use (Core: DefModExtension_TraitProgression): apprentice (0, old saves)
+    -> master (1) -> grandmaster (2) when the counter of the craft crosses the thresholds (products made at the
+    workbench, herbs harvested, feng shui pieces built, animals tamed). Skill gains and passions by craft.
+  -->
+  <TraitDef>
+    <defName>CVG_Craft_SpiritFarmer</defName>
+    <commonality>0.06</commonality>
+    <forcedPassions>
+      <li>Plants</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <degree>0</degree>
+        <label>apprentice spirit farmer</label>
+        <labelFemale>apprentice spirit farmer</labelFemale>
+        <description>Plants grow for {PAWN_nameDef} as if they loved the hand that tends them, and spirit herbs will too. Field monks of the Silent Lotus sing to their rice before cutting it; this one hardly needs to. (Apprentice: it improves by harvesting spirit herbs.)</description>
+        <commonality>1</commonality>
+        <skillGains>
+          <Plants>3</Plants>
+        </skillGains>
+        <statFactors>
+          <PlantWorkSpeed>1.25</PlantWorkSpeed>
+          <PlantHarvestYield>1.15</PlantHarvestYield>
+        </statFactors>
+      </li>
+      <li>
+        <degree>1</degree>
+        <label>master spirit farmer</label>
+        <labelFemale>master spirit farmer</labelFemale>
+        <description>Fields ripen faster and heavier under {PAWN_nameDef}'s care, spirit herbs among them. The Heavenly Cauldron Pavilion pays its master farmers in spirit stones and never quite lets them leave. (Master: it improves by harvesting spirit herbs.)</description>
+        <commonality>0.15</commonality>
+        <skillGains>
+          <Plants>5</Plants>
+        </skillGains>
+        <statFactors>
+          <PlantWorkSpeed>1.425</PlantWorkSpeed>
+          <PlantHarvestYield>1.255</PlantHarvestYield>
+        </statFactors>
+      </li>
+      <li>
+        <degree>2</degree>
+        <label>grandmaster spirit farmer</label>
+        <labelFemale>grandmaster spirit farmer</labelFemale>
+        <description>Even thousand-year spirit herbs take root where {PAWN_nameDef} walks, and fields give back far more than was sown. Legend says Shennong, who tasted a hundred herbs in a day, kept a gardener like this and never revealed the gardener's name.</description>
+        <commonality>0.02</commonality>
+        <skillGains>
+          <Plants>7</Plants>
+        </skillGains>
+        <statFactors>
+          <PlantWorkSpeed>1.625</PlantWorkSpeed>
+          <PlantHarvestYield>1.375</PlantHarvestYield>
+        </statFactors>
+      </li>
+    </degreeDatas>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritCraft">
+        <craft>SpiritFarming</craft>
+      </li>
+      <li Class="Convergence.DefModExtension_TraitProgression">
+        <counter>SpiritFarming</counter>
+        <steps>
+          <li>
+            <degree>1</degree>
+            <threshold>30</threshold>
+          </li>
+          <li>
+            <degree>2</degree>
+            <threshold>120</threshold>
+          </li>
+        </steps>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Craft_InnateAlchemist</defName>
+    <commonality>0.05</commonality>
+    <forcedPassions>
+      <li>Intellectual</li>
+      <li>Medicine</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <degree>0</degree>
+        <label>apprentice alchemist</label>
+        <description>A nose for medicine and a hand for the cauldron: drugs and pills come faster and wounds are tended better. Apprentices of the Heavenly Cauldron Pavilion crack a hundred furnaces before they may give a pill its name. (Apprentice: it improves by refining pills at the alchemy furnace.)</description>
+        <commonality>1</commonality>
+        <skillGains>
+          <Intellectual>3</Intellectual>
+          <Medicine>3</Medicine>
+        </skillGains>
+        <statOffsets>
+          <MedicalTendQuality>0.1</MedicalTendQuality>
+        </statOffsets>
+        <statFactors>
+          <DrugSynthesisSpeed>1.3</DrugSynthesisSpeed>
+          <DrugCookingSpeed>1.3</DrugCookingSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <degree>1</degree>
+        <label>master alchemist</label>
+        <labelFemale>master alchemist</labelFemale>
+        <description>The cauldron fire answers {PAWN_nameDef}'s breath: drugs, pills and dressings come quick and clean. The Pavilion's records say the Phoenix taught its alchemical fire only to those who could hear it crackle in tune. (Master: it improves by refining pills at the alchemy furnace.)</description>
+        <commonality>0.15</commonality>
+        <skillGains>
+          <Intellectual>5</Intellectual>
+          <Medicine>5</Medicine>
+        </skillGains>
+        <statOffsets>
+          <MedicalTendQuality>0.17</MedicalTendQuality>
+        </statOffsets>
+        <statFactors>
+          <DrugSynthesisSpeed>1.51</DrugSynthesisSpeed>
+          <DrugCookingSpeed>1.51</DrugCookingSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <degree>2</degree>
+        <label>grandmaster alchemist</label>
+        <labelFemale>grandmaster alchemist</labelFemale>
+        <description>Pills from these hands carry almost none of the poison every elixir hides, and wounds close under them. Only Mo Qinghua, Grand Alchemist of the Heavenly Cauldron Pavilion, is said to refine better, and has not left the cauldron in ninety years.</description>
+        <commonality>0.02</commonality>
+        <skillGains>
+          <Intellectual>7</Intellectual>
+          <Medicine>7</Medicine>
+        </skillGains>
+        <statOffsets>
+          <MedicalTendQuality>0.25</MedicalTendQuality>
+        </statOffsets>
+        <statFactors>
+          <DrugSynthesisSpeed>1.75</DrugSynthesisSpeed>
+          <DrugCookingSpeed>1.75</DrugCookingSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritCraft">
+        <craft>Alchemy</craft>
+      </li>
+      <li Class="Convergence.DefModExtension_TraitProgression">
+        <counter>Alchemy</counter>
+        <steps>
+          <li>
+            <degree>1</degree>
+            <threshold>25</threshold>
+          </li>
+          <li>
+            <degree>2</degree>
+            <threshold>100</threshold>
+          </li>
+        </steps>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Craft_ArtifactForger</defName>
+    <commonality>0.05</commonality>
+    <forcedPassions>
+      <li>Crafting</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <degree>0</degree>
+        <label>apprentice artifact forger</label>
+        <labelFemale>apprentice artifact forger</labelFemale>
+        <description>Metal listens to {PAWN_nameDef} at the forge: spirit forging goes faster and turns out better. Azure Peak apprentices fold their first blade a thousand times, and bury it in the Sword Tomb if it breaks. (Apprentice: it improves by forging at the spirit forge.)</description>
+        <commonality>1</commonality>
+        <skillGains>
+          <Crafting>3</Crafting>
+        </skillGains>
+        <statOffsets>
+          <CVG_ForgeQuality>0.5</CVG_ForgeQuality>
+        </statOffsets>
+        <statFactors>
+          <CVG_ForgeSpeed>1.3</CVG_ForgeSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <degree>1</degree>
+        <label>master artifact forger</label>
+        <labelFemale>master artifact forger</labelFemale>
+        <description>Steel, spirit metal and scrap from the Rim all take the shape {PAWN_nameDef} asks of them. Azure Peak's smiths learned that art from the Heaven-Breaking Swords, forged out of the husks of the Iron Calamity. (Master: it improves by forging at the spirit forge.)</description>
+        <commonality>0.15</commonality>
+        <skillGains>
+          <Crafting>5</Crafting>
+        </skillGains>
+        <statOffsets>
+          <CVG_ForgeQuality>0.85</CVG_ForgeQuality>
+        </statOffsets>
+        <statFactors>
+          <CVG_ForgeSpeed>1.51</CVG_ForgeSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <degree>2</degree>
+        <label>grandmaster artifact forger</label>
+        <labelFemale>grandmaster artifact forger</labelFemale>
+        <description>Metal no longer just listens to {PAWN_nameDef}: it waits, and every spirit forging comes out fast and fine. Weapons from such a forge earn a place in Azure Peak's Sword Tomb, where the blades of every elder sleep.</description>
+        <commonality>0.02</commonality>
+        <skillGains>
+          <Crafting>7</Crafting>
+        </skillGains>
+        <statOffsets>
+          <CVG_ForgeQuality>1.25</CVG_ForgeQuality>
+        </statOffsets>
+        <statFactors>
+          <CVG_ForgeSpeed>1.75</CVG_ForgeSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritCraft">
+        <craft>ArtifactForging</craft>
+      </li>
+      <li Class="Convergence.DefModExtension_TraitProgression">
+        <counter>Forging</counter>
+        <steps>
+          <li>
+            <degree>1</degree>
+            <threshold>25</threshold>
+          </li>
+          <li>
+            <degree>2</degree>
+            <threshold>100</threshold>
+          </li>
+        </steps>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Craft_FormationMaster</defName>
+    <commonality>0.05</commonality>
+    <forcedPassions>
+      <li>Construction</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <degree>0</degree>
+        <label>apprentice formation adept</label>
+        <labelFemale>apprentice formation adept</labelFemale>
+        <description>Sees the lines of qi in the ground and builds along them: constructions go up faster and fail less. Every formation in Jiuxiao began as a chalk line drawn by someone who saw what others did not. (Apprentice: it improves by building pieces that guide qi (feng shui).)</description>
+        <commonality>1</commonality>
+        <skillGains>
+          <Construction>3</Construction>
+          <Intellectual>3</Intellectual>
+        </skillGains>
+        <statOffsets>
+          <ConstructSuccessChance>0.1</ConstructSuccessChance>
+        </statOffsets>
+        <statFactors>
+          <ConstructionSpeed>1.2</ConstructionSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <degree>1</degree>
+        <label>master formation adept</label>
+        <labelFemale>master formation adept</labelFemale>
+        <description>Walls and floors laid by {PAWN_nameDef} rarely crack, because they follow the grain of the earth's qi. When the Great Rupture split Jiuxiao, formation adepts stitched the fragments together with arrays like these. (Master: it improves by building pieces that guide qi (feng shui).)</description>
+        <commonality>0.15</commonality>
+        <skillGains>
+          <Construction>5</Construction>
+          <Intellectual>5</Intellectual>
+        </skillGains>
+        <statOffsets>
+          <ConstructSuccessChance>0.17</ConstructSuccessChance>
+        </statOffsets>
+        <statFactors>
+          <ConstructionSpeed>1.34</ConstructionSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <degree>2</degree>
+        <label>grandmaster formation adept</label>
+        <labelFemale>grandmaster formation adept</labelFemale>
+        <description>Builds as if reading a map only {PAWN_nameDef} can see: fast, sure, and in step with every vein of qi. The great array that holds the Coiled Dragon Range together was raised by hands like these.</description>
+        <commonality>0.02</commonality>
+        <skillGains>
+          <Construction>7</Construction>
+          <Intellectual>7</Intellectual>
+        </skillGains>
+        <statOffsets>
+          <ConstructSuccessChance>0.25</ConstructSuccessChance>
+        </statOffsets>
+        <statFactors>
+          <ConstructionSpeed>1.5</ConstructionSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritCraft">
+        <craft>Formations</craft>
+      </li>
+      <li Class="Convergence.DefModExtension_TraitProgression">
+        <counter>Formations</counter>
+        <steps>
+          <li>
+            <degree>1</degree>
+            <threshold>15</threshold>
+          </li>
+          <li>
+            <degree>2</degree>
+            <threshold>60</threshold>
+          </li>
+        </steps>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Craft_BeastTamer</defName>
+    <commonality>0.05</commonality>
+    <forcedPassions>
+      <li>Animals</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <degree>0</degree>
+        <label>apprentice beast tamer</label>
+        <labelFemale>apprentice beast tamer</labelFemale>
+        <description>Beasts, spiritual or not, accept {PAWN_nameDef} as one of their own: taming and training come easier. Silent Lotus novices begin by feeding the temple's qilin, and it is the qilin who decide who stays. (Apprentice: it improves by taming animals (spirit beasts count triple).)</description>
+        <commonality>1</commonality>
+        <skillGains>
+          <Animals>3</Animals>
+        </skillGains>
+        <statOffsets>
+          <TameAnimalChance>0.3</TameAnimalChance>
+          <TrainAnimalChance>0.3</TrainAnimalChance>
+        </statOffsets>
+      </li>
+      <li>
+        <degree>1</degree>
+        <label>master beast tamer</label>
+        <labelFemale>master beast tamer</labelFemale>
+        <description>Wild animals lower their heads before {PAWN_nameDef}, and trained ones learn twice as eagerly. The Ancient Dragon Clan has been known to offer such tamers a post guarding its eggs, a rare honor for an outsider. (Master: it improves by taming animals (spirit beasts count triple).)</description>
+        <commonality>0.15</commonality>
+        <skillGains>
+          <Animals>5</Animals>
+        </skillGains>
+        <statOffsets>
+          <TameAnimalChance>0.51</TameAnimalChance>
+          <TrainAnimalChance>0.51</TrainAnimalChance>
+        </statOffsets>
+      </li>
+      <li>
+        <degree>2</degree>
+        <label>grandmaster beast tamer</label>
+        <labelFemale>grandmaster beast tamer</labelFemale>
+        <description>Even beasts that remember the age before the Great Rupture follow {PAWN_nameDef} like hatchlings. The tales of Jiuxiao speak of a herder who led a whole beast tide out of a burning valley, every animal in step.</description>
+        <commonality>0.02</commonality>
+        <skillGains>
+          <Animals>7</Animals>
+        </skillGains>
+        <statOffsets>
+          <TameAnimalChance>0.75</TameAnimalChance>
+          <TrainAnimalChance>0.75</TrainAnimalChance>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritCraft">
+        <craft>BeastTaming</craft>
+      </li>
+      <li Class="Convergence.DefModExtension_TraitProgression">
+        <counter>BeastTaming</counter>
+        <steps>
+          <li>
+            <degree>1</degree>
+            <threshold>6</threshold>
+          </li>
+          <li>
+            <degree>2</degree>
+            <threshold>20</threshold>
+          </li>
+        </steps>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Craft_TalismanMaster</defName>
+    <commonality>0.04</commonality>
+    <forcedPassions>
+      <li>Artistic</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <degree>0</degree>
+        <label>apprentice talisman scribe</label>
+        <description>A brush that writes with qi: talismans flow from it, the mind tunes to psychic currents, and the same steady hand speeds up all manual work. Rogue cultivators sell crude talismans in every night market; this hand was made for better. (Apprentice: it improves by drawing talismans at the talisman table.)</description>
+        <commonality>1</commonality>
+        <skillGains>
+          <Intellectual>3</Intellectual>
+          <Artistic>3</Artistic>
+        </skillGains>
+        <statOffsets>
+          <PsychicSensitivity>0.2</PsychicSensitivity>
+        </statOffsets>
+        <statFactors>
+          <GeneralLaborSpeed>1.15</GeneralLaborSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <degree>1</degree>
+        <label>master talisman scribe</label>
+        <labelFemale>master talisman scribe</labelFemale>
+        <description>{PAWN_nameDef}'s strokes hold qi the way paper holds ink: psychic currents are felt sharply and every manual task goes faster. Talismans dug out of the ruins of Jiuxiao still glow because scribes of this level drew them before the Great Rupture. (Master: it improves by drawing talismans at the talisman table.)</description>
+        <commonality>0.15</commonality>
+        <skillGains>
+          <Intellectual>5</Intellectual>
+          <Artistic>5</Artistic>
+        </skillGains>
+        <statOffsets>
+          <PsychicSensitivity>0.34</PsychicSensitivity>
+        </statOffsets>
+        <statFactors>
+          <GeneralLaborSpeed>1.255</GeneralLaborSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <degree>2</degree>
+        <label>grandmaster talisman scribe</label>
+        <labelFemale>grandmaster talisman scribe</labelFemale>
+        <description>Each talisman from this brush is a small formation, drawn in one breath without lifting the tip; psychic tides are felt from afar and every manual task flies. The Heavenly Cauldron Pavilion auctions such papers as treasures in their own right.</description>
+        <commonality>0.02</commonality>
+        <skillGains>
+          <Intellectual>7</Intellectual>
+          <Artistic>7</Artistic>
+        </skillGains>
+        <statOffsets>
+          <PsychicSensitivity>0.5</PsychicSensitivity>
+        </statOffsets>
+        <statFactors>
+          <GeneralLaborSpeed>1.375</GeneralLaborSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritCraft">
+        <craft>Talismans</craft>
+      </li>
+      <li Class="Convergence.DefModExtension_TraitProgression">
+        <counter>Talismans</counter>
+        <steps>
+          <li>
+            <degree>1</degree>
+            <threshold>25</threshold>
+          </li>
+          <li>
+            <degree>2</degree>
+            <threshold>100</threshold>
+          </li>
+        </steps>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+</Defs>

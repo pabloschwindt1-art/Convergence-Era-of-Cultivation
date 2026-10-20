@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Gene_RootGrade_Inferior.label>raíz inferior</CVG_Gene_RootGrade_Inferior.label>
+  <CVG_Gene_RootGrade_Inferior.description>Una raíz espiritual débil y turbia, llevada en la sangre. Dormida hasta que fluya el qi.</CVG_Gene_RootGrade_Inferior.description>
+  <CVG_Gene_RootGrade_Common.label>raíz común</CVG_Gene_RootGrade_Common.label>
+  <CVG_Gene_RootGrade_Common.description>Una raíz espiritual corriente, llevada en la sangre. Dormida hasta que fluya el qi.</CVG_Gene_RootGrade_Common.description>
+  <CVG_Gene_RootGrade_Superior.label>raíz superior</CVG_Gene_RootGrade_Superior.label>
+  <CVG_Gene_RootGrade_Superior.description>Una raíz espiritual brillante y clara, llevada en la sangre. Dormida hasta que fluya el qi.</CVG_Gene_RootGrade_Superior.description>
+  <CVG_Gene_RootGrade_Heavenly.label>raíz celestial</CVG_Gene_RootGrade_Heavenly.label>
+  <CVG_Gene_RootGrade_Heavenly.description>Una raíz espiritual que se ve una vez por generación, llevada en la sangre. Dormida hasta que fluya el qi.</CVG_Gene_RootGrade_Heavenly.description>
+  <CVG_Gene_RootElement_Metal.label>raíz de metal</CVG_Gene_RootElement_Metal.label>
+  <CVG_Gene_RootElement_Metal.description>La raíz espiritual lleva el elemento metal. Dormida hasta que fluya el qi.</CVG_Gene_RootElement_Metal.description>
+  <CVG_Gene_RootElement_Wood.label>raíz de madera</CVG_Gene_RootElement_Wood.label>
+  <CVG_Gene_RootElement_Wood.description>La raíz espiritual lleva el elemento madera. Dormida hasta que fluya el qi.</CVG_Gene_RootElement_Wood.description>
+  <CVG_Gene_RootElement_Water.label>raíz de agua</CVG_Gene_RootElement_Water.label>
+  <CVG_Gene_RootElement_Water.description>La raíz espiritual lleva el elemento agua. Dormida hasta que fluya el qi.</CVG_Gene_RootElement_Water.description>
+  <CVG_Gene_RootElement_Fire.label>raíz de fuego</CVG_Gene_RootElement_Fire.label>
+  <CVG_Gene_RootElement_Fire.description>La raíz espiritual lleva el elemento fuego. Dormida hasta que fluya el qi.</CVG_Gene_RootElement_Fire.description>
+  <CVG_Gene_RootElement_Earth.label>raíz de tierra</CVG_Gene_RootElement_Earth.label>
+  <CVG_Gene_RootElement_Earth.description>La raíz espiritual lleva el elemento tierra. Dormida hasta que fluya el qi.</CVG_Gene_RootElement_Earth.description>
+</LanguageData>

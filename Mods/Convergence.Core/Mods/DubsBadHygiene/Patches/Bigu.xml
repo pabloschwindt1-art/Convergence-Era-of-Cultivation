@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Dubs Bad Hygiene: Bigu (辟谷). A cultivator who feeds on qi drinks less, needs the latrine less and stays cleaner:
+       qi burns away the impurities that mortals sweat out. Same factors as hunger. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_Foundation"]/stages/li[1]/statFactors</xpath>
+    <nomatch Class="PatchOperationAdd"><xpath>Defs/HediffDef[defName="CVG_Hediff_Foundation"]/stages/li[1]</xpath><value><statFactors /></value></nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_Foundation"]/stages/li[1]/statFactors</xpath>
+    <value><ThirstRateMultiplier>0.9</ThirstRateMultiplier><BladderRateMultiplier>0.9</BladderRateMultiplier><HygieneRateMultiplier>0.9</HygieneRateMultiplier></value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_Foundation"]/stages/li[2]/statFactors</xpath>
+    <nomatch Class="PatchOperationAdd"><xpath>Defs/HediffDef[defName="CVG_Hediff_Foundation"]/stages/li[2]</xpath><value><statFactors /></value></nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_Foundation"]/stages/li[2]/statFactors</xpath>
+    <value><ThirstRateMultiplier>0.85</ThirstRateMultiplier><BladderRateMultiplier>0.85</BladderRateMultiplier><HygieneRateMultiplier>0.85</HygieneRateMultiplier></value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_Foundation"]/stages/li[3]/statFactors</xpath>
+    <nomatch Class="PatchOperationAdd"><xpath>Defs/HediffDef[defName="CVG_Hediff_Foundation"]/stages/li[3]</xpath><value><statFactors /></value></nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_Foundation"]/stages/li[3]/statFactors</xpath>
+    <value><ThirstRateMultiplier>0.8</ThirstRateMultiplier><BladderRateMultiplier>0.8</BladderRateMultiplier><HygieneRateMultiplier>0.8</HygieneRateMultiplier></value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_Foundation"]/stages/li[4]/statFactors</xpath>
+    <nomatch Class="PatchOperationAdd"><xpath>Defs/HediffDef[defName="CVG_Hediff_Foundation"]/stages/li[4]</xpath><value><statFactors /></value></nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_Foundation"]/stages/li[4]/statFactors</xpath>
+    <value><ThirstRateMultiplier>0.75</ThirstRateMultiplier><BladderRateMultiplier>0.75</BladderRateMultiplier><HygieneRateMultiplier>0.75</HygieneRateMultiplier></value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenCore"]/stages/li[1]/statFactors</xpath>
+    <nomatch Class="PatchOperationAdd"><xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenCore"]/stages/li[1]</xpath><value><statFactors /></value></nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenCore"]/stages/li[1]/statFactors</xpath>
+    <value><ThirstRateMultiplier>0.6</ThirstRateMultiplier><BladderRateMultiplier>0.6</BladderRateMultiplier><HygieneRateMultiplier>0.6</HygieneRateMultiplier></value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenCore"]/stages/li[2]/statFactors</xpath>
+    <nomatch Class="PatchOperationAdd"><xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenCore"]/stages/li[2]</xpath><value><statFactors /></value></nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenCore"]/stages/li[2]/statFactors</xpath>
+    <value><ThirstRateMultiplier>0.55</ThirstRateMultiplier><BladderRateMultiplier>0.55</BladderRateMultiplier><HygieneRateMultiplier>0.55</HygieneRateMultiplier></value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenCore"]/stages/li[3]/statFactors</xpath>
+    <nomatch Class="PatchOperationAdd"><xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenCore"]/stages/li[3]</xpath><value><statFactors /></value></nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenCore"]/stages/li[3]/statFactors</xpath>
+    <value><ThirstRateMultiplier>0.5</ThirstRateMultiplier><BladderRateMultiplier>0.5</BladderRateMultiplier><HygieneRateMultiplier>0.5</HygieneRateMultiplier></value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenCore"]/stages/li[4]/statFactors</xpath>
+    <nomatch Class="PatchOperationAdd"><xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenCore"]/stages/li[4]</xpath><value><statFactors /></value></nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenCore"]/stages/li[4]/statFactors</xpath>
+    <value><ThirstRateMultiplier>0.4</ThirstRateMultiplier><BladderRateMultiplier>0.4</BladderRateMultiplier><HygieneRateMultiplier>0.4</HygieneRateMultiplier></value>
+  </Operation>
+</Patch>

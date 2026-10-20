@@ -1,0 +1,33 @@
+# Local
+.claude/
+.vs/
+.idea/
+tools/.pausa-rimworld
+tools/.rimworld-lock
+# Compilacion (se regenera con dotnet build)
+obj/
+bin/
+*.pdb
+Mods/*/1.*/Assemblies/
+# Paquetes de release (salida de tools/package-release.py)
+dist/
+# Python y temporales
+__pycache__/
+*.pyc
+*.bak
+*.tmp
+*.log
+Thumbs.db
+desktop.ini
+.DS_Store
+# Material de trabajo y de terceros: no se publica
+/art/
+/referencias/
+*.zip
+*.7z
+*.psd
+*.kra
+# Secretos
+.env
+*.pem
+*.key

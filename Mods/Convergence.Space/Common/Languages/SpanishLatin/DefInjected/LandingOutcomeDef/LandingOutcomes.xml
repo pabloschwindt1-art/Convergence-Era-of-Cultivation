@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <MinorGravshipCrash.letterLabel>atraque brusco</MinorGravshipCrash.letterLabel>
+  <MinorGravshipCrash.letterText>Al atracar {GRAVSHIP}, {PILOT_nameDef} soltó el corazón de la isla demasiado pronto y la isla cayó unos metros. Algunos edificios sufrieron daños leves con el golpe.</MinorGravshipCrash.letterText>
+  <ThrusterBreakdown.letterLabel>propulsores chamuscados</ThrusterBreakdown.letterLabel>
+  <ThrusterBreakdown.letterText>Al atracar {GRAVSHIP}, {PILOT_nameDef} forzó demasiado los propulsores y chamuscó su jade. Habrá que repararlos antes de volver a usarlos.</ThrusterBreakdown.letterText>
+  <OverheatedGravEngine.letterLabel>corazón de la isla sobrecalentado</OverheatedGravEngine.letterLabel>
+  <OverheatedGravEngine.letterText>Al atracar {GRAVSHIP}, {PILOT_nameDef} metió demasiado qi en el corazón de la isla y se sobrecalentó. Tardará más de lo normal en asentarse y, hasta entonces, la isla no puede zarpar.</OverheatedGravEngine.letterText>
+  <GravNausea.letterLabel>mareo de isla</GravNausea.letterLabel>
+  <GravNausea.letterText>Al atracar {GRAVSHIP}, {PILOT_nameDef} tuvo que girar con brusquedad y la isla frenó fuerte y por mucho rato. Todos a bordo se sienten muy mal. Pasará pronto.</GravNausea.letterText>
+</LanguageData>

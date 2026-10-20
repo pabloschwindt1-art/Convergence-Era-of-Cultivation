@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Wuxia art (docs/modulos/DIA_A_DIA.md, part 3b): names and descriptions for jade sculptures, scrolls and ink
+    paintings, on top of the vanilla art system (CompArt keeps using the colony tales for [image]).
+  -->
+  <RulePackDef>
+    <defName>CVG_NamerArtWuxia</defName>
+    <include>
+      <li>ArtNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_art_name(p=3)-&gt;[wx_subject] [wx_trans] [wx_place]</li>
+        <li>r_art_name(p=2)-&gt;[wx_subject]</li>
+        <li>r_art_name-&gt;[wx_place]</li>
+        <li>wx_subject-&gt;The Immortal Crossing the Clouds</li>
+        <li>wx_subject-&gt;The Azure Dragon</li>
+        <li>wx_subject-&gt;The Founder's Last Lesson</li>
+        <li>wx_subject-&gt;Nine Strikes of Tribulation</li>
+        <li>wx_subject-&gt;The Qilin Beneath the Peach Tree</li>
+        <li>wx_subject-&gt;The Crane and the Pine</li>
+        <li>wx_subject-&gt;The White Tiger's Vigil</li>
+        <li>wx_subject-&gt;The Vermilion Bird</li>
+        <li>wx_subject-&gt;The Black Tortoise</li>
+        <li>wx_subject-&gt;The Jade Emperor's Court</li>
+        <li>wx_subject-&gt;The Monkey King's Defiance</li>
+        <li>wx_subject-&gt;Chang'e on the Moon</li>
+        <li>wx_subject-&gt;The Eight Immortals</li>
+        <li>wx_subject-&gt;The Sword Saint's Farewell</li>
+        <li>wx_subject-&gt;The Thousand-Year Lotus</li>
+        <li>wx_subject-&gt;The Convergence</li>
+        <li>wx_trans-&gt;of</li>
+        <li>wx_trans-&gt;above</li>
+        <li>wx_trans-&gt;beneath</li>
+        <li>wx_trans-&gt;at</li>
+        <li>wx_place-&gt;Mount Kunlun</li>
+        <li>wx_place-&gt;the Nine Heavens</li>
+        <li>wx_place-&gt;Jiuxiao</li>
+        <li>wx_place-&gt;the Eastern Sea</li>
+        <li>wx_place-&gt;Penglai</li>
+        <li>wx_place-&gt;the Silent Lotus Temple</li>
+        <li>wx_place-&gt;the Azure Peak</li>
+        <li>wx_place-&gt;Mount Tai</li>
+        <li>wx_place-&gt;the Yellow Springs</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>CVG_ArtDescription_JadeSculpture</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>physical_description_root-&gt;This jade [carving] [depicts] [image]. [wx_motif] [desc_sentence_group]</li>
+        <li>physical_description_root-&gt;This jade [carving] bears a [depiction] of [image]. [wx_motif] [desc_sentence_group]</li>
+        <li>carving-&gt;carving</li>
+        <li>carving-&gt;figure</li>
+        <li>carving-&gt;piece</li>
+        <li>wx_motif-&gt;Around the base, cranes circle a pine of longevity.</li>
+        <li>wx_motif-&gt;A small qilin peers out from behind the main figure.</li>
+        <li>wx_motif-&gt;The stone has been left rough where the clouds of a tribulation gather.</li>
+        <li>wx_motif-&gt;Tiny characters on the back read: "The Dao that can be told is not the eternal Dao."</li>
+        <li>wx_motif-&gt;The artist hid a sword in the folds of a robe, as the sword sects like to do.</li>
+        <li>wx_motif-&gt;The five elements turn in a wheel around the figure.</li>
+        <li>wx_motif-&gt;In one corner, the founder of a sect raises a hand in a final lesson.</li>
+        <li>wx_motif-&gt;Nine thin lines of lightning are cut into the sky above.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>CVG_ArtDescription_Scroll</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>physical_description_root-&gt;This [scroll] [depicts] [image] in [ink_style]. [wx_motif] [desc_sentence_group]</li>
+        <li>scroll-&gt;scroll</li>
+        <li>scroll-&gt;hanging scroll</li>
+        <li>scroll-&gt;ink work</li>
+        <li>ink_style-&gt;a few fierce strokes of black ink</li>
+        <li>ink_style-&gt;pale washes of grey ink</li>
+        <li>ink_style-&gt;running script that trembles like water</li>
+        <li>ink_style-&gt;seal script as rigid as a stele</li>
+        <li>ink_style-&gt;ink so thin it seems to be mist</li>
+        <li>wx_motif-&gt;Around the base, cranes circle a pine of longevity.</li>
+        <li>wx_motif-&gt;A small qilin peers out from behind the main figure.</li>
+        <li>wx_motif-&gt;The stone has been left rough where the clouds of a tribulation gather.</li>
+        <li>wx_motif-&gt;Tiny characters on the back read: "The Dao that can be told is not the eternal Dao."</li>
+        <li>wx_motif-&gt;The artist hid a sword in the folds of a robe, as the sword sects like to do.</li>
+        <li>wx_motif-&gt;The five elements turn in a wheel around the figure.</li>
+        <li>wx_motif-&gt;In one corner, the founder of a sect raises a hand in a final lesson.</li>
+        <li>wx_motif-&gt;Nine thin lines of lightning are cut into the sky above.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

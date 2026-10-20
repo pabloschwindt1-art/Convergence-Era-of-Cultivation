@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_RefiningFurnace.label>horno de refinado</CVG_RefiningFurnace.label>
+  <CVG_RefiningFurnace.description>Un horno de piedra y arcilla donde se templan metales con el qi de las piedras espirituales. No necesita electricidad: quema madera, y las piedras espirituales van a la receta, no al fuego. Cuenta como forja.</CVG_RefiningFurnace.description>
+</LanguageData>

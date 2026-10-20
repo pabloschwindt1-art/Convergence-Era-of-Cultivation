@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_SpiritMeat.label>carne espiritual</CVG_SpiritMeat.label>
+  <CVG_SpiritMeat.description>Carne cruda de una bestia espiritual despierta, tibia y cargada de qi. Comerla empieza el camino del cuerpo para quien no tiene raíz espiritual y da sangre-qi (mucha más cocinada en sopa espiritual).</CVG_SpiritMeat.description>
+  <CVG_BeastBlood.label>sangre de bestia espiritual</CVG_BeastBlood.label>
+  <CVG_BeastBlood.description>Sangre espesa y oscura de una bestia espiritual, que todavía late con qi. Un cultivador del cuerpo la bebe para obtener sangre-qi; avanzar a Templado de Carne y a Forja de Huesos exige una dosis durante el retiro.</CVG_BeastBlood.description>
+  <CVG_BeastCore.label>núcleo de bestia</CVG_BeastCore.label>
+  <CVG_BeastCore.description>El qi cristalizado de una bestia espiritual de nivel alto (兽核). Absorberlo inunda todos los caminos que sigue el cultivador (y empieza el camino del cuerpo para quien no tiene raíz); avanzar a Purificación de la Médula y más allá exige uno.</CVG_BeastCore.description>
+  <CVG_BeastCore.ingestible.ingestCommandString>Absorber {0}</CVG_BeastCore.ingestible.ingestCommandString>
+  <CVG_BeastCore.ingestible.ingestReportString>Absorbiendo {0}.</CVG_BeastCore.ingestible.ingestReportString>
+  <CVG_SpiritSoup.label>sopa espiritual</CVG_SpiritSoup.label>
+  <CVG_SpiritSoup.description>Un caldo de carne espiritual cocido durante horas. Da sangre-qi (y empieza el camino del cuerpo para quien no tiene raíz), y ayuda un poco a cualquier cultivador durante un día.</CVG_SpiritSoup.description>
+</LanguageData>

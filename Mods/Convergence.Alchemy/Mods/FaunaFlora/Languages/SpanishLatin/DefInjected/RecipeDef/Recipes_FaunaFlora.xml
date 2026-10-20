@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_MakeQiRecoveryPill_MoonAntler.label>refinar píldoras de recuperación de qi con asta lunar</CVG_MakeQiRecoveryPill_MoonAntler.label>
+  <CVG_MakeQiRecoveryPill_MoonAntler.jobString>Refinando píldoras de recuperación de qi con asta lunar.</CVG_MakeQiRecoveryPill_MoonAntler.jobString>
+  <CVG_MakeQiRecoveryPill_MoonAntler.description>Muele un asta lunar con una piedra espiritual para obtener dos píldoras de recuperación de qi. El asta del ciervo lunar vuelve a crecer cada temporada, así que el Pabellón cría rebaños en lugar de huertos para su píldora más humilde.</CVG_MakeQiRecoveryPill_MoonAntler.description>
+  <CVG_MakePurificationPill_SpiritFungus.label>refinar píldora de purificación de sangre con hongo espiritual</CVG_MakePurificationPill_SpiritFungus.label>
+  <CVG_MakePurificationPill_SpiritFungus.jobString>Refinando una píldora de purificación de sangre con hongo espiritual.</CVG_MakePurificationPill_SpiritFungus.jobString>
+  <CVG_MakePurificationPill_SpiritFungus.description>Refina una píldora de purificación de sangre con hongo espiritual de las cuevas en lugar de hierbas espirituales. Los mineros juran que el hongo que muestra la salida de la oscuridad también le muestra a la sangre la salida de sus impurezas. Requiere un horno de alquimia de nivel 2.</CVG_MakePurificationPill_SpiritFungus.description>
+  <CVG_MakeNineTurnsPill_TribulationMushroom.label>refinar píldora de las nueve vueltas con champiñón de la tribulación</CVG_MakeNineTurnsPill_TribulationMushroom.label>
+  <CVG_MakeNineTurnsPill_TribulationMushroom.jobString>Refinando una píldora de las nueve vueltas con un champiñón de la tribulación.</CVG_MakeNineTurnsPill_TribulationMushroom.jobString>
+  <CVG_MakeNineTurnsPill_TribulationMushroom.description>Refina una píldora de las nueve vueltas con un champiñón de la tribulación en lugar del cristal espiritual. El rayo que aún guarda el champiñón da solo el noveno giro, y el horno únicamente tiene que sobrevivirlo. Requiere un horno de alquimia de nivel 3.</CVG_MakeNineTurnsPill_TribulationMushroom.description>
+</LanguageData>

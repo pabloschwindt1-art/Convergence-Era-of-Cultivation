@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Spirit plants of other Convergence mods respond strongly to fertility, so they thrive on spirit soil. -->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+    <li Class="PatchOperationFindMod">
+      <mods><li>Convergence: Alchemy &amp; Artifacts</li></mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="CVG_Plant_SpiritHerb"]/plant/fertilitySensitivity</xpath>
+            <success>Always</success>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="CVG_Plant_SpiritHerb"]/plant</xpath>
+            <value><fertilitySensitivity>1.2</fertilitySensitivity></value>
+          </li>
+        </operations>
+      </match>
+    </li>
+    <li Class="PatchOperationFindMod">
+      <mods><li>Convergence: Alchemy &amp; Artifacts</li></mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="CVG_Plant_SpiritGinseng"]/plant/fertilitySensitivity</xpath>
+            <success>Always</success>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="CVG_Plant_SpiritGinseng"]/plant</xpath>
+            <value><fertilitySensitivity>1.2</fertilitySensitivity></value>
+          </li>
+        </operations>
+      </match>
+    </li>
+    <li Class="PatchOperationFindMod">
+      <mods><li>Convergence: Alchemy &amp; Artifacts</li></mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="CVG_Plant_SnowLotus"]/plant/fertilitySensitivity</xpath>
+            <success>Always</success>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="CVG_Plant_SnowLotus"]/plant</xpath>
+            <value><fertilitySensitivity>1.2</fertilitySensitivity></value>
+          </li>
+        </operations>
+      </match>
+    </li>
+    <li Class="PatchOperationFindMod">
+      <mods><li>Convergence: Apparel</li></mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="CVG_Plant_CloudCotton"]/plant/fertilitySensitivity</xpath>
+            <success>Always</success>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="CVG_Plant_CloudCotton"]/plant</xpath>
+            <value><fertilitySensitivity>1.2</fertilitySensitivity></value>
+          </li>
+        </operations>
+      </match>
+    </li>
+    </operations>
+  </Operation>
+
+  <!-- The spirit tree gives qi to the room it stands in (indoors/greenhouse; outdoors qi needs a Core zone mechanic). -->
+  <Operation Class="PatchOperationFindMod">
+    <mods><li>Convergence: Resources</li></mods>
+    <match Class="PatchOperationAddModExtension">
+      <xpath>/Defs/ThingDef[defName="CVG_Plant_SpiritTree"]</xpath>
+      <value>
+        <li Class="Convergence.DefModExtension_FengShui">
+          <qi>3</qi>
+          <element>CVG_Element_Wood</element>
+        </li>
+      </value>
+    </match>
+  </Operation>
+</Patch>

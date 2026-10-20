@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <WorkTypeDef>
+    <defName>CVG_Cultivation</defName>
+    <labelShort>cultivate</labelShort>
+    <pawnLabel>Cultivator</pawnLabel>
+    <gerundLabel>cultivating</gerundLabel>
+    <description>Sit on a cultivation spot to gather qi and advance in cultivation. Only colonists with an awakened spirit root can do it.</description>
+    <verb>Cultivate</verb>
+    <naturalPriority>250</naturalPriority>
+    <workTags>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
+  <WorkGiverDef>
+    <defName>CVG_Cultivate</defName>
+    <label>cultivate</label>
+    <giverClass>Convergence.WorkGiver_Cultivate</giverClass>
+    <workType>CVG_Cultivation</workType>
+    <verb>cultivate at</verb>
+    <gerund>cultivating at</gerund>
+    <priorityInType>100</priorityInType>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
+  <JobDef>
+    <defName>CVG_Cultivate</defName>
+    <driverClass>Convergence.JobDriver_Cultivate</driverClass>
+    <reportString>cultivating.</reportString>
+    <casualInterruptible>true</casualInterruptible>
+  </JobDef>
+
+  <!-- Breakthrough retreat: ordered from the "Attempt breakthrough" button. -->
+  <JobDef>
+    <defName>CVG_Breakthrough</defName>
+    <driverClass>Convergence.JobDriver_Breakthrough</driverClass>
+    <reportString>attempting a breakthrough.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <playerInterruptible>true</playerInterruptible>
+    <suspendable>false</suspendable>
+  </JobDef>
+</Defs>

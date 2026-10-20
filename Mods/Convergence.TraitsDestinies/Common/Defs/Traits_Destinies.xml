@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Destinies: very rare, at most one per pawn (exclusionTag CVG_Destiny). -->
+
+  <TraitDef>
+    <defName>CVG_Destiny_Reincarnated</defName>
+    <commonality>0.012</commonality>
+    <exclusionTags>
+      <li>CVG_Destiny</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>reincarnated</label>
+        <labelFemale>reincarnated</labelFemale>
+        <description>Died in another life and was born again with fragments of it still in the blood: cultivation and study come as if remembered rather than learned. In Jiuxiao such souls were said to have crossed the bridge of rebirth without drinking Meng Po's soup of forgetting.</description>
+        <statFactors>
+          <CVG_CultivationSpeed>1.4</CVG_CultivationSpeed>
+          <GlobalLearningFactor>1.2</GlobalLearningFactor>
+        </statFactors>
+        <skillGains>
+          <Intellectual>2</Intellectual>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Destiny_Regressor</defName>
+    <commonality>0.012</commonality>
+    <exclusionTags>
+      <li>CVG_Destiny</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>regressor</label>
+        <labelFemale>regressor</labelFemale>
+        <description>Came back from a future where the world fell, carrying scars from battles not yet fought: raids against the colony are foreseen hours in advance, but the memory of that ending frays the nerves. Some whisper that the future {PAWN_nameDef} fled was the return of the Iron Calamity.</description>
+        <statOffsets>
+          <MentalBreakThreshold>0.03</MentalBreakThreshold>
+        </statOffsets>
+        <skillGains>
+          <Shooting>2</Shooting>
+          <Melee>2</Melee>
+        </skillGains>
+      </li>
+    </degreeDatas>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RaidPremonition">
+        <delayHours>6</delayHours>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Destiny_Transmigrated</defName>
+    <forcedPassions>
+      <li>Intellectual</li>
+    </forcedPassions>
+    <commonality>0.012</commonality>
+    <exclusionTags>
+      <li>CVG_Destiny</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>transmigrated</label>
+        <labelFemale>transmigrated</labelFemale>
+        <description>A soul from another world wearing this body: strange ideas and stranger manners make research fly and conversations stumble. Scholars of the Heavenly Cauldron Pavilion pay well for an hour of talk with such a soul, and laugh about it afterwards.</description>
+        <statOffsets>
+          <SocialImpact>-0.1</SocialImpact>
+        </statOffsets>
+        <statFactors>
+          <ResearchSpeed>1.3</ResearchSpeed>
+        </statFactors>
+        <skillGains>
+          <Intellectual>3</Intellectual>
+          <Crafting>2</Crafting>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Destiny_SonOfHeaven</defName>
+    <commonality>0.008</commonality>
+    <exclusionTags>
+      <li>CVG_Destiny</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>son of heaven</label>
+        <labelFemale>daughter of heaven</labelFemale>
+        <description>The protagonist of the age: once the Convergence comes, fate pulls {PAWN_objective} back from death once a year, and breakthroughs come a little easier. The Dao of Heaven picks a favorite for every era; the elders of Azure Peak add that it tires of them just as surely.</description>
+        <statOffsets>
+          <CVG_BreakthroughChance>0.1</CVG_BreakthroughChance>
+        </statOffsets>
+        <skillGains>
+          <Social>2</Social>
+        </skillGains>
+      </li>
+    </degreeDatas>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ExtraLives">
+        <lives>1</lives>
+        <rechargeDays>60</rechargeDays>
+        <messageKey>CVG_SonOfHeaven_Used</messageKey>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Destiny_Antagonist</defName>
+    <conflictingTraits>
+      <li>CVG_RighteousHero</li>
+    </conflictingTraits>
+    <commonality>0.01</commonality>
+    <exclusionTags>
+      <li>CVG_Destiny</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>antagonist</label>
+        <description>Born to be the villain of someone else's story: dark charisma, great power and a temper that breaks easily. The Blood Moon Cult claims every such soul is a debt the Dao of Heaven forgot to collect.</description>
+        <statOffsets>
+          <SocialImpact>0.2</SocialImpact>
+          <MentalBreakThreshold>0.04</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.15</MeleeDamageFactor>
+          <CVG_CultivationSpeed>1.15</CVG_CultivationSpeed>
+        </statFactors>
+        <skillGains>
+          <Melee>2</Melee>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Destiny_HeavenDefier</defName>
+    <forcedPassions>
+      <li>Melee</li>
+    </forcedPassions>
+    <commonality>0.008</commonality>
+    <exclusionTags>
+      <li>CVG_Destiny</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>heaven defier</label>
+        <description>Walks against the will of Heaven: far harsher tribulations, far greater power. Xue Jiuyou, founder of the Blood Moon Cult, called Heaven a cage; those born with this fate are said to feel the bars from the cradle.</description>
+        <statOffsets>
+          <CVG_CelestialDissonance>1.0</CVG_CelestialDissonance>
+        </statOffsets>
+        <statFactors>
+          <CVG_CultivationSpeed>1.3</CVG_CultivationSpeed>
+          <CVG_QiMax>1.3</CVG_QiMax>
+        </statFactors>
+        <skillGains>
+          <Melee>3</Melee>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Destiny_LegendaryBeastBlood</defName>
+    <commonality>0.008</commonality>
+    <exclusionTags>
+      <li>CVG_Destiny</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>legendary beast blood</label>
+        <description>A supreme beast's blood sleeps in {PAWN_nameDef}: animals sense it and yield, and blows land with a weight that is not quite human. The Ancient Dragon Clan hunts down whoever sells such blood, but it cannot hunt down whoever is born with it.</description>
+        <statOffsets>
+          <TameAnimalChance>0.2</TameAnimalChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.1</MeleeDamageFactor>
+        </statFactors>
+        <skillGains>
+          <Melee>2</Melee>
+          <Animals>2</Animals>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Destiny_FortuneStar</defName>
+    <commonality>0.01</commonality>
+    <exclusionTags>
+      <li>CVG_Destiny</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>fortune star</label>
+        <description>Absurdly lucky: deals go well and blows tend to miss. The merchants of the Heavenly Cauldron Pavilion keep a ledger of people born under this star, and refuse to gamble with anyone on it.</description>
+        <statOffsets>
+          <TradePriceImprovement>0.1</TradePriceImprovement>
+          <MeleeDodgeChance>4</MeleeDodgeChance>
+        </statOffsets>
+        <skillGains>
+          <Social>2</Social>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Destiny_LoneStar</defName>
+    <commonality>0.01</commonality>
+    <exclusionTags>
+      <li>CVG_Destiny</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>lone star</label>
+        <description>Prospers alone: learns and cultivates faster than most, but words come out wrong around others. The old astrologers of Jiuxiao called it the Orphan Star, the fate of those who outlive every sect they join.</description>
+        <statOffsets>
+          <SocialImpact>-0.15</SocialImpact>
+        </statOffsets>
+        <statFactors>
+          <GlobalLearningFactor>1.15</GlobalLearningFactor>
+          <CVG_CultivationSpeed>1.1</CVG_CultivationSpeed>
+        </statFactors>
+        <skillGains>
+          <Shooting>2</Shooting>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Destiny_TreasureMagnet</defName>
+    <forcedPassions>
+      <li>Mining</li>
+    </forcedPassions>
+    <commonality>0.01</commonality>
+    <exclusionTags>
+      <li>CVG_Destiny</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>treasure magnet</label>
+        <description>Treasures find {PAWN_nameDef}, not the other way around: veins give richer ore, harvests run a little heavier and deals lean the right way. Ever since the Great Rupture scattered the sect vaults across the dimensions, such people have been worth more than any map.</description>
+        <statOffsets>
+          <TradePriceImprovement>0.05</TradePriceImprovement>
+        </statOffsets>
+        <statFactors>
+          <PlantHarvestYield>1.05</PlantHarvestYield>
+          <MiningYield>1.1</MiningYield>
+        </statFactors>
+        <skillGains>
+          <Mining>3</Mining>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+</Defs>

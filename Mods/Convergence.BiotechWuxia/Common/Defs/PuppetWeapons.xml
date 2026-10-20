@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Puppet weapons (docs/revision/REVISION_BiotechWuxia.md, item 2). Same pattern as the vanilla light mech guns
+    (LightMechanoidGunRanged: destroyOnDrop, tradeability None, relicChance 0): built into the puppet, never dropped.
+    Own weapon tags (CVG_PuppetCrossbow / CVG_PuppetJadeNeedle) so only puppets get them and puppets get nothing else.
+  -->
+
+  <!-- ================= Zhuge repeating crossbow ================= -->
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>CVG_PuppetGun_RepeatingCrossbow</defName>
+    <label>puppet repeating crossbow</label>
+    <description>Zhuge Liang's repeating crossbow (诸葛连弩) loosed ten bolts in the time an archer drew once; the Thousand Strings Valley sank it into the chests of its bronze guardians and let the puppet's own gears work the lever. It fires short bursts of three bolts and is part of the puppet: it breaks if torn out.</description>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/CVG_PuppetCrossbow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>600</MarketValue>
+      <Mass>2</Mass>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.78</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.45</AccuracyLong>
+      <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>CVG_PuppetCrossbow</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>CVG_Bolt_PuppetCrossbow</defaultProjectile>
+        <warmupTime>1.1</warmupTime>
+        <range>22.9</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <soundCast>Bow_Recurve</soundCast>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>CVG_Bolt_PuppetCrossbow</defName>
+    <label>crossbow bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Arrow</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
+      <stoppingPower>0.5</stoppingPower>
+      <speed>50</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- ================= Jade needle caster ================= -->
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>CVG_PuppetGun_JadeNeedle</defName>
+    <label>jade needle caster</label>
+    <description>Embroiderers of the Thousand Strings Valley were said to be the deadliest women in Jiuxiao: a needle that can carry a thread through silk can carry qi through armor. The jade guardian flings needles of spirit jade charged by its beast core; they are thin, fast and pierce armor. It is part of the puppet and breaks if torn out.</description>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/CVG_PuppetJadeNeedle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>900</MarketValue>
+      <Mass>1</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.55</AccuracyLong>
+      <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>CVG_PuppetJadeNeedle</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>CVG_Needle_PuppetJade</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>24.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <soundCast>Bow_Small</soundCast>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>CVG_Needle_PuppetJade</defName>
+    <label>jade needle</label>
+    <graphicData>
+      <texPath>Things/Projectile/Needle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(120, 210, 150)</color>
+    </graphicData>
+    <projectile>
+      <damageDef>ArrowHighVelocity</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <armorPenetrationBase>0.45</armorPenetrationBase>
+      <stoppingPower>0.5</stoppingPower>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

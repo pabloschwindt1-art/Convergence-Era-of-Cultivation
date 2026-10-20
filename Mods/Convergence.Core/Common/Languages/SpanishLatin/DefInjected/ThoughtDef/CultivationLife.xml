@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Thought_BreakthroughSuccess.stages.0.label>avancé de reino</CVG_Thought_BreakthroughSuccess.stages.0.label>
+  <CVG_Thought_BreakthroughSuccess.stages.0.description>Avancé a un nuevo reino. El mundo se ve distinto desde aquí arriba.</CVG_Thought_BreakthroughSuccess.stages.0.description>
+  <CVG_Thought_BreakthroughFailed.stages.0.label>avance fallido</CVG_Thought_BreakthroughFailed.stages.0.label>
+  <CVG_Thought_BreakthroughFailed.stages.0.description>El qi se me escurrió entre los dedos en el umbral. Tanto cultivo y la puerta siguió cerrada.</CVG_Thought_BreakthroughFailed.stages.0.description>
+  <CVG_Thought_SurvivedTribulation.stages.0.label>sobreviví a la tribulación</CVG_Thought_SurvivedTribulation.stages.0.label>
+  <CVG_Thought_SurvivedTribulation.stages.0.description>El cielo me golpeó una y otra vez, y sigo en pie.</CVG_Thought_SurvivedTribulation.stages.0.description>
+  <CVG_Thought_WitnessedTribulation.stages.0.label>presencié una tribulación</CVG_Thought_WitnessedTribulation.stages.0.label>
+  <CVG_Thought_WitnessedTribulation.stages.0.description>Vi caer rayos de un cielo despejado sobre uno de los nuestros, y lo vi salir de ahí. Los inmortales existen.</CVG_Thought_WitnessedTribulation.stages.0.description>
+  <CVG_Thought_QiDeviation.stages.0.label>desviación de qi</CVG_Thought_QiDeviation.stages.0.label>
+  <CVG_Thought_QiDeviation.stages.0.description>Me arden los meridianos y el qi corre al revés. Cada respiración es una pelea.</CVG_Thought_QiDeviation.stages.0.description>
+  <CVG_Thought_PartnerAscended.stages.0.label>{0} avanzó de reino</CVG_Thought_PartnerAscended.stages.0.label>
+  <CVG_Thought_PartnerAscended.stages.0.description>Quien comparte mi camino subió un reino. En los viejos relatos, las parejas que ascienden juntas son las que llegan al cielo.</CVG_Thought_PartnerAscended.stages.0.description>
+  <CVG_Thought_KinAscended.stages.0.label>{0} avanzó de reino</CVG_Thought_KinAscended.stages.0.label>
+  <CVG_Thought_KinAscended.stages.0.description>Sangre de la familia subiendo un reino. Esta noche se desempolvan las tablillas de los ancestros.</CVG_Thought_KinAscended.stages.0.description>
+  <CVG_Thought_RivalAscended.stages.0.label>{0} me superó</CVG_Thought_RivalAscended.stages.0.label>
+  <CVG_Thought_RivalAscended.stages.0.description>Avanzó antes que yo. Todo cultivador conoce el sabor amargo de ver la espalda de un rival.</CVG_Thought_RivalAscended.stages.0.description>
+</LanguageData>

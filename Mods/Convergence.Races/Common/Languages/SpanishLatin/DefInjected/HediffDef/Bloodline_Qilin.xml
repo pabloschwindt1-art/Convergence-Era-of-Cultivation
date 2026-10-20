@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Bloodline_Qilin.label>sangre de qilin</CVG_Bloodline_Qilin.label>
+  <CVG_Bloodline_Qilin.description>Sangre de qilin despierta: mente serena, manos suaves y un cuerpo que resiste la enfermedad. Matar le pesa.</CVG_Bloodline_Qilin.description>
+  <CVG_Bloodline_Qilin.stages.0.label>rastro</CVG_Bloodline_Qilin.stages.0.label>
+  <CVG_Bloodline_Qilin.stages.1.label>diluida</CVG_Bloodline_Qilin.stages.1.label>
+  <CVG_Bloodline_Qilin.stages.2.label>pura</CVG_Bloodline_Qilin.stages.2.label>
+  <CVG_Bloodline_Qilin.stages.3.label>ancestral</CVG_Bloodline_Qilin.stages.3.label>
+  <CVG_QilinBlessed.label>bendición del qilin</CVG_QilinBlessed.label>
+  <CVG_QilinBlessed.description>La calma del qilin: las heridas cierran más rápido y el corazón pesa menos.</CVG_QilinBlessed.description>
+</LanguageData>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Mooring mishaps (docs/modulos/ESPACIO.md): the same Odyssey landing outcomes, worded for a flying island. -->
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/LandingOutcomeDef[defName="MinorGravshipCrash"]/letterLabel</xpath>
+    <value><letterLabel>rough mooring</letterLabel></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/LandingOutcomeDef[defName="MinorGravshipCrash"]/letterText</xpath>
+    <value><letterText>While mooring {GRAVSHIP}, {PILOT_nameDef} let go of the island heart too early and the island dropped for several feet. Some buildings took light damage from the fall.</letterText></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/LandingOutcomeDef[defName="ThrusterBreakdown"]/letterLabel</xpath>
+    <value><letterLabel>scorched thrusters</letterLabel></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/LandingOutcomeDef[defName="ThrusterBreakdown"]/letterText</xpath>
+    <value><letterText>While mooring {GRAVSHIP}, {PILOT_nameDef} drove the thrusters too hard and scorched their jade. The thrusters will need to be repaired before they can be used again.</letterText></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/LandingOutcomeDef[defName="OverheatedGravEngine"]/letterLabel</xpath>
+    <value><letterLabel>overheated island heart</letterLabel></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/LandingOutcomeDef[defName="OverheatedGravEngine"]/letterText</xpath>
+    <value><letterText>While mooring {GRAVSHIP}, {PILOT_nameDef} pushed too much qi into the island heart and it overheated. It will take longer than usual to settle, and until then the island cannot cast off.</letterText></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/LandingOutcomeDef[defName="GravNausea"]/letterLabel</xpath>
+    <value><letterLabel>island sickness</letterLabel></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Odyssey">
+    <xpath>Defs/LandingOutcomeDef[defName="GravNausea"]/letterText</xpath>
+    <value><letterText>While mooring {GRAVSHIP}, {PILOT_nameDef} had to turn sharply and the island braked hard and for a long time. Everyone aboard feels very sick. It will pass soon.</letterText></value>
+  </Operation>
+</Patch>

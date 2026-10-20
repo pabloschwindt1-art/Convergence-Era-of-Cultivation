@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Preset_SwordWay.label>pabellón de la espada</CVG_Preset_SwordWay.label>
+  <CVG_Preset_SwordWay.description>Disciplina, jerarquía y espada. Todo discípulo tiene un rango y un deber, y los fuertes guían a los débiles.</CVG_Preset_SwordWay.description>
+  <CVG_Preset_LotusPath.label>templo del loto silencioso</CVG_Preset_LotusPath.label>
+  <CVG_Preset_LotusPath.description>Una comunidad de sanadores que lo comparten todo y renuncian al deseo.</CVG_Preset_LotusPath.description>
+  <CVG_Preset_CauldronWay.label>pabellón del caldero celestial</CVG_Preset_CauldronWay.label>
+  <CVG_Preset_CauldronWay.description>Cada persona es el alquimista de su propia vida, y todo tiene un precio que se puede refinar en una píldora.</CVG_Preset_CauldronWay.description>
+  <CVG_Preset_DragonBlood.label>clan del dragón antiguo</CVG_Preset_DragonBlood.label>
+  <CVG_Preset_DragonBlood.description>Sangre pura, orgullo antiguo y una deuda con los ancestros. Los linajes se guardan como un tesoro.</CVG_Preset_DragonBlood.description>
+  <CVG_Preset_DemonicWay.label>culto de la luna sangrienta</CVG_Preset_DemonicWay.label>
+  <CVG_Preset_DemonicWay.description>El Cielo es una jaula y el poder es la única llave. Los rectos lo llaman demoníaco; funciona.</CVG_Preset_DemonicWay.description>
+  <CVG_Preset_WanderingPath.label>senda errante</CVG_Preset_WanderingPath.label>
+  <CVG_Preset_WanderingPath.description>Sin salón, sin maestro, sin muros: el camino es la secta. Cada uno cultiva donde está.</CVG_Preset_WanderingPath.description>
+  <CVG_Preset_BodyWay.label>camino del cuerpo</CVG_Preset_BodyWay.label>
+  <CVG_Preset_BodyWay.description>El cuerpo es el primer templo; templarlo es el primer deber. Quienes sostienen la línea con las manos desnudas son respetados sobre todos.</CVG_Preset_BodyWay.description>
+  <CVG_Preset_PuppetPath.label>senda de las marionetas</CVG_Preset_PuppetPath.label>
+  <CVG_Preset_PuppetPath.description>Paciencia, hilos y madera. Un discípulo del Valle de los Mil Hilos nunca pelea solo.</CVG_Preset_PuppetPath.description>
+  <CVG_Preset_ThunderWay.label>camino del trueno</CVG_Preset_ThunderWay.label>
+  <CVG_Preset_ThunderWay.description>Busca la tribulación, aguántala y renace. Un discípulo que no se ha plantado bajo el rayo sigue siendo un niño.</CVG_Preset_ThunderWay.description>
+</LanguageData>

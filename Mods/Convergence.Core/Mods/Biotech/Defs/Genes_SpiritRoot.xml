@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <GeneCategoryDef>
+    <defName>CVG_Cultivation</defName>
+    <label>cultivation</label>
+    <displayPriorityInXenotype>50</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <GeneDef Name="CVG_GeneBase" Abstract="True">
+    <displayCategory>CVG_Cultivation</displayCategory>
+    <biostatCpx>1</biostatCpx>
+  </GeneDef>
+
+  <!-- Calidad de la raíz: solo una (exclusionTag). -->
+  <GeneDef ParentName="CVG_GeneBase">
+    <defName>CVG_Gene_RootGrade_Inferior</defName>
+    <label>inferior root</label>
+    <description>A weak, muddy spirit root, carried in the blood. Dormant until qi flows.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootGrade_Inferior</iconPath>
+    <displayOrderInCategory>1</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_RootGrade</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritRoot">
+        <grade>CVG_RootGrade_Inferior</grade>
+      </li>
+    </modExtensions>
+  </GeneDef>
+  <GeneDef ParentName="CVG_GeneBase">
+    <defName>CVG_Gene_RootGrade_Common</defName>
+    <label>common root</label>
+    <description>An ordinary spirit root, carried in the blood. Dormant until qi flows.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootGrade_Common</iconPath>
+    <displayOrderInCategory>2</displayOrderInCategory>
+    <biostatCpx>2</biostatCpx>
+    <exclusionTags>
+      <li>CVG_RootGrade</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritRoot">
+        <grade>CVG_RootGrade_Common</grade>
+      </li>
+    </modExtensions>
+  </GeneDef>
+  <GeneDef ParentName="CVG_GeneBase">
+    <defName>CVG_Gene_RootGrade_Superior</defName>
+    <label>superior root</label>
+    <description>A bright, clear spirit root, carried in the blood. Dormant until qi flows.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootGrade_Superior</iconPath>
+    <displayOrderInCategory>3</displayOrderInCategory>
+    <biostatCpx>3</biostatCpx>
+    <exclusionTags>
+      <li>CVG_RootGrade</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritRoot">
+        <grade>CVG_RootGrade_Superior</grade>
+      </li>
+    </modExtensions>
+  </GeneDef>
+  <GeneDef ParentName="CVG_GeneBase">
+    <defName>CVG_Gene_RootGrade_Heavenly</defName>
+    <label>heavenly root</label>
+    <description>A spirit root seen once in a generation, carried in the blood. Dormant until qi flows.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootGrade_Heavenly</iconPath>
+    <displayOrderInCategory>4</displayOrderInCategory>
+    <biostatCpx>4</biostatCpx>
+    <exclusionTags>
+      <li>CVG_RootGrade</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritRoot">
+        <grade>CVG_RootGrade_Heavenly</grade>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <!-- Elementos de la raíz: se pueden combinar (menos elementos = raíz más pura). -->
+  <GeneDef ParentName="CVG_GeneBase">
+    <defName>CVG_Gene_RootElement_Metal</defName>
+    <label>metal root</label>
+    <description>The spirit root carries the metal element. Dormant until qi flows.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Metal</iconPath>
+    <displayOrderInCategory>10</displayOrderInCategory>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritRoot">
+        <element>CVG_Element_Metal</element>
+      </li>
+    </modExtensions>
+  </GeneDef>
+  <GeneDef ParentName="CVG_GeneBase">
+    <defName>CVG_Gene_RootElement_Wood</defName>
+    <label>wood root</label>
+    <description>The spirit root carries the wood element. Dormant until qi flows.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Wood</iconPath>
+    <displayOrderInCategory>11</displayOrderInCategory>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritRoot">
+        <element>CVG_Element_Wood</element>
+      </li>
+    </modExtensions>
+  </GeneDef>
+  <GeneDef ParentName="CVG_GeneBase">
+    <defName>CVG_Gene_RootElement_Water</defName>
+    <label>water root</label>
+    <description>The spirit root carries the water element. Dormant until qi flows.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Water</iconPath>
+    <displayOrderInCategory>12</displayOrderInCategory>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritRoot">
+        <element>CVG_Element_Water</element>
+      </li>
+    </modExtensions>
+  </GeneDef>
+  <GeneDef ParentName="CVG_GeneBase">
+    <defName>CVG_Gene_RootElement_Fire</defName>
+    <label>fire root</label>
+    <description>The spirit root carries the fire element. Dormant until qi flows.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Fire</iconPath>
+    <displayOrderInCategory>13</displayOrderInCategory>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritRoot">
+        <element>CVG_Element_Fire</element>
+      </li>
+    </modExtensions>
+  </GeneDef>
+  <GeneDef ParentName="CVG_GeneBase">
+    <defName>CVG_Gene_RootElement_Earth</defName>
+    <label>earth root</label>
+    <description>The spirit root carries the earth element. Dormant until qi flows.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Earth</iconPath>
+    <displayOrderInCategory>14</displayOrderInCategory>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritRoot">
+        <element>CVG_Element_Earth</element>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_GeneBase">
+    <defName>CVG_Gene_RootElement_Thunder</defName>
+    <label>thunder root</label>
+    <description>The spirit root carries thunder, a rare celestial variant born where wood and fire meet, or in the blood of the Thunder Qilin. Dormant until qi flows; heavenly tribulation strikes it more gently.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Thunder</iconPath>
+    <displayOrderInCategory>15</displayOrderInCategory>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritRoot">
+        <element>CVG_Element_Thunder</element>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+</Defs>

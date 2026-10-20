@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_Shell</defName>
+    <label>shell</label>
+    <description>A hardened back and chest, like a shell.</description>
+    <bloodline>CVG_Bloodline_Tortoise</bloodline>
+    <order>14</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_Shell_I</defName>
+    <label>shell I</label>
+    <description>A hardened back and chest, like a shell. The Black Tortoise carried the northern sky on its back, and its heirs inherited a little of the weight.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Shell</iconPath>
+    <iconColor>(0.7, 0.7, 0.7)</iconColor>
+    <displayOrderInCategory>141</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_Shell</li>
+    </exclusionTags>
+    <statOffsets>
+      <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+    </statOffsets>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_Shell</group>
+        <tier>1</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_Shell_II</defName>
+    <label>shell II</label>
+    <description>A hardened back and chest, like a shell. The Black Tortoise carried the northern sky on its back, and its heirs inherited a little of the weight.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Shell</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>142</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_Shell</li>
+    </exclusionTags>
+    <statOffsets>
+      <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+    </statOffsets>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_Shell</group>
+        <tier>2</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_Shell_III</defName>
+    <label>shell III</label>
+    <description>A hardened back and chest, like a shell. The Black Tortoise carried the northern sky on its back, and its heirs inherited a little of the weight.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Shell</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>143</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_Shell</li>
+    </exclusionTags>
+    <statOffsets>
+      <ArmorRating_Sharp>0.08</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.08</ArmorRating_Blunt>
+    </statOffsets>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_Shell</group>
+        <tier>3</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_Shell_IV</defName>
+    <label>shell IV</label>
+    <description>A hardened back and chest, like a shell. The Black Tortoise carried the northern sky on its back, and its heirs inherited a little of the weight.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Shell</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>144</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_Shell</li>
+    </exclusionTags>
+    <statOffsets>
+      <ArmorRating_Sharp>0.12</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+    </statOffsets>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_Shell</group>
+        <tier>4</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_StoneSleep</defName>
+    <label>stone sleep</label>
+    <description>Sleeps like a stone: rest comes faster and wounds close while sleeping.</description>
+    <bloodline>CVG_Bloodline_Tortoise</bloodline>
+    <order>15</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_StoneSleep_II</defName>
+    <label>stone sleep II</label>
+    <description>Sleeps like a stone: rest comes faster and wounds close while sleeping. Tortoise-blooded hermits of the north were known to sleep through whole wars and wake rested.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_StoneSleep</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>152</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_StoneSleep</li>
+    </exclusionTags>
+    <statFactors>
+      <RestRateMultiplier>1.1</RestRateMultiplier>
+      <InjuryHealingFactor>1.1</InjuryHealingFactor>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_StoneSleep</group>
+        <tier>2</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_StoneSleep_III</defName>
+    <label>stone sleep III</label>
+    <description>Sleeps like a stone: rest comes faster and wounds close while sleeping. Tortoise-blooded hermits of the north were known to sleep through whole wars and wake rested.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_StoneSleep</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>153</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_StoneSleep</li>
+    </exclusionTags>
+    <statFactors>
+      <RestRateMultiplier>1.2</RestRateMultiplier>
+      <InjuryHealingFactor>1.2</InjuryHealingFactor>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_StoneSleep</group>
+        <tier>3</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_StoneSleep_IV</defName>
+    <label>stone sleep IV</label>
+    <description>Sleeps like a stone: rest comes faster and wounds close while sleeping. Tortoise-blooded hermits of the north were known to sleep through whole wars and wake rested.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_StoneSleep</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>154</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_StoneSleep</li>
+    </exclusionTags>
+    <statFactors>
+      <RestRateMultiplier>1.3</RestRateMultiplier>
+      <InjuryHealingFactor>1.35</InjuryHealingFactor>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_StoneSleep</group>
+        <tier>4</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_GuardianSerpent</defName>
+    <label>guardian serpent</label>
+    <description>After the Convergence, whoever strikes the tortoise in melee may be bitten back by the serpent in the shell.</description>
+    <bloodline>CVG_Bloodline_Tortoise</bloodline>
+    <order>16</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_GuardianSerpent_III</defName>
+    <label>guardian serpent III</label>
+    <description>After the Convergence, whoever strikes the tortoise in melee may be bitten back by the serpent in the shell. The Black Tortoise never travels alone: the serpent coiled around it strikes before the tortoise is even awake.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_GuardianSerpent</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>163</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_GuardianSerpent</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_GuardianSerpent</group>
+        <tier>3</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_Retaliation">
+        <chance>0.35</chance>
+        <damageDef>Bite</damageDef>
+        <amount>8</amount>
+        <cooldownTicks>120</cooldownTicks>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_GuardianSerpent_IV</defName>
+    <label>guardian serpent IV</label>
+    <description>After the Convergence, whoever strikes the tortoise in melee may be bitten back by the serpent in the shell. The Black Tortoise never travels alone: the serpent coiled around it strikes before the tortoise is even awake.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_GuardianSerpent</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>164</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_GuardianSerpent</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_GuardianSerpent</group>
+        <tier>4</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_Retaliation">
+        <chance>0.6</chance>
+        <damageDef>Bite</damageDef>
+        <amount>14</amount>
+        <cooldownTicks>120</cooldownTicks>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+</Defs>

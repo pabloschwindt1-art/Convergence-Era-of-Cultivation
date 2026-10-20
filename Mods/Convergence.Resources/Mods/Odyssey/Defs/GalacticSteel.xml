@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Odyssey only: galactic steel exists only in asteroids (patch on the asteroid gen steps). -->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_GalacticSteel</defName>
+    <tradeability>Sellable</tradeability>
+    <label>galactic steel</label>
+    <description>Steel forged by the stars in the cores of asteroids. The finest metal there is; it pairs with qi-tech.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_GalacticSteel</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>30</MarketValue>
+      <Mass>0.35</Mass>
+      <StuffPower_Armor_Sharp>1.4</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.7</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.0</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.4</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.2</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <deepCommonality>0</deepCommonality>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <appearance>Metal</appearance>
+      <commonality>0.02</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <isAirtight>true</isAirtight>
+      <color>(140,110,190)</color>
+      <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+      <statFactors>
+        <MaxHitPoints>2.2</MaxHitPoints>
+        <Beauty>3</Beauty>
+        <Flammability>0</Flammability>
+        <WorkToMake>2.0</WorkToMake>
+        <WorkToBuild>1.8</WorkToBuild>
+        <MeleeWeapon_CooldownMultiplier>0.85</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>CVG_MineableGalacticSteel</defName>
+    <label>galactic steel vein</label>
+    <description>Star-forged steel in the heart of an asteroid. The cultivators who first flew past Jiuxiao's sky found these seams and swore the stars had been forged, not born.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(80,70,100)</color>
+      <colorTwo>(190,150,255)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>8000</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>CVG_GalacticSteel</mineableThing>
+      <mineableYield>35</mineableYield>
+      <mineableScatterCommonality>0</mineableScatterCommonality>
+      <veinMineable>true</veinMineable>
+    </building>
+  </ThingDef>
+
+</Defs>

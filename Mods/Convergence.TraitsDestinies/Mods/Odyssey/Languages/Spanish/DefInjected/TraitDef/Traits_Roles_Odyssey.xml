@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Role_SpiritAngler.degreeDatas.0.label>pescador espiritual</CVG_Role_SpiritAngler.degreeDatas.0.label>
+  <CVG_Role_SpiritAngler.degreeDatas.0.labelFemale>pescadora espiritual</CVG_Role_SpiritAngler.degreeDatas.0.labelFemale>
+  <CVG_Role_SpiritAngler.degreeDatas.0.description>Los peces vienen al anzuelo de {PAWN_nameDef}, incluso los que nadan en qi: pesca más rápido y saca más. Los cultivadores errantes cuentan de un viejo pescador que hizo saltar una carpa sobre la Puerta del Dragón con un sedal de luz de luna hilada.</CVG_Role_SpiritAngler.degreeDatas.0.description>
+</LanguageData>

@@ -1,0 +1,75 @@
+CONVERGENCE: FORMATIONS
+Copyright (c) 2026 Prospero1088 (packageId prospero1088.convergence.formations)
+
+This mod folder contains different kinds of material, each under its own
+terms. There is no single license for everything in it.
+
+1. CODE AND TECHNICAL DATA: MIT License
+   Applies to the compiled assemblies (Assemblies/*.dll, built from the
+   project source code), any script, and the technical data in the XML files:
+   structure, numbers, names and labels of definitions, patches, references,
+   About and LoadFolders. The full text is at the end of this file.
+
+2. ORIGINAL ART, LORE AND NARRATIVE TEXT: Creative Commons
+   Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+   Applies to (a) the author's original art: the PNG textures under Textures/
+   and About/Preview.png, except the files listed in section 3; and (b) the
+   narrative text: lore descriptions, story and event texts, letters,
+   backstories, scenario and rule-pack texts, and all their translations,
+   wherever they are written (inline in the Defs or in the Languages/
+   folders). Credit: "Prospero1088, Convergence: Era of Cultivation".
+   Non-commercial use only. Adaptations must be shared under the same license.
+   Full legal text: LICENSE-CC-BY-NC-SA-4.0.txt (this folder). Summary:
+   https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+3. MATERIAL DERIVED FROM RIMWORLD: not covered by the MIT License or by CC BY-NC-SA
+   The textures of this mod are original; none is derived from RimWorld
+   artwork.
+   The mod also refers to RimWorld's own assets and definitions by name (for
+   example vanilla textures, defs and sounds) without including them. Those
+   belong to Ludeon Studios.
+
+4. THIRD-PARTY MATERIAL
+   This mod includes no third-party code or art. It requires the Harmony
+   library (MIT License, Andreas Pardeike), which is installed separately and
+   is not part of this folder. Details: LICENSE-THIRD-PARTY.md in the project
+   repository.
+
+5. AI ASSISTANCE
+   The art of this project was created with the assistance of generative AI
+   tools (image generation and editing), then selected, edited, cut and placed
+   by the author. These licenses grant the rights the author holds;
+   AI-generated material may not be protected by copyright in some
+   jurisdictions.
+
+Separately, the RimWorld End User License Agreement gives Ludeon Studios a
+perpetual, irrevocable license to use and sublicense Derivative Works such as
+these mods. Nothing in these licenses limits it.
+
+Portions of the materials used to create this content/mod are trademarks
+and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon.
+This content/mod is not official and is not endorsed by Ludeon.
+
+==============================================================================
+
+MIT License
+
+Copyright (c) 2026 Prospero1088
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

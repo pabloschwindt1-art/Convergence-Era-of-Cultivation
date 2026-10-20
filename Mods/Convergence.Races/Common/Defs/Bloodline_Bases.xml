@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Bases shared by every bloodline of Convergence: Races. -->
+  <GeneCategoryDef>
+    <defName>CVG_Bloodline</defName>
+    <label>bloodline</label>
+    <displayPriorityInXenotype>49</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+  <!-- Identity gene: which bloodline and which purity. One bloodline per pawn (shared exclusionTag). -->
+  <GeneDef Name="CVG_BloodIdentityBase" Abstract="True">
+    <displayCategory>CVG_Bloodline</displayCategory>
+    <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    <selectionWeight>0</selectionWeight>
+    <biostatMet>0</biostatMet>
+    <biostatArc>0</biostatArc>
+    <exclusionTags>
+      <li>CVG_Bloodline</li>
+    </exclusionTags>
+  </GeneDef>
+
+  <!-- Look of a bloodline (horns, tails, colors). Purely cosmetic: the stats come from the bloodline hediff. -->
+  <GeneDef Name="CVG_BloodAspectBase" Abstract="True">
+    <displayCategory>CVG_Bloodline</displayCategory>
+    <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    <selectionWeight>0</selectionWeight>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>0</biostatMet>
+  </GeneDef>
+
+  <!-- Effects of a bloodline: one stage per purity (severity 1-4), added only after the Convergence (Core). -->
+  <HediffDef Name="CVG_BloodlineHediffBase" Abstract="True">
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <initialSeverity>1</initialSeverity>
+    <minSeverity>1</minSeverity>
+    <maxSeverity>4</maxSeverity>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+  </HediffDef>
+
+  <AbilityDef Name="CVG_InnateAbilityBase" Abstract="True">
+    <category>CVG_InnateBloodline</category>
+    <sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+    <stunTargetWhileCasting>false</stunTargetWhileCasting>
+  </AbilityDef>
+
+  <AbilityCategoryDef>
+    <defName>CVG_InnateBloodline</defName>
+    <displayOrder>300</displayOrder>
+  </AbilityCategoryDef>
+
+</Defs>

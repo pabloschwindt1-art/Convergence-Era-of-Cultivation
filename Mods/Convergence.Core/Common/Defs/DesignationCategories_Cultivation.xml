@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Architect tab for everything the mod builds (cultivation spots, later formations, alchemy, qi veins...). -->
+  <DesignationCategoryDef>
+    <defName>CVG_Cultivation</defName>
+    <label>cultivation</label>
+    <description>Cultivation spots, formations and other buildings of the Era of Cultivation.</description>
+    <order>450</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+</Defs>

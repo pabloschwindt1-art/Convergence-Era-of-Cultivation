@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Accessory layers: separate from the vanilla ones, so a pendant or a ring never takes the place of clothes or a utility belt. -->
+  <ApparelLayerDef>
+    <defName>CVG_Neck</defName>
+    <label>neck</label>
+    <drawOrder>310</drawOrder>
+  </ApparelLayerDef>
+  <ApparelLayerDef>
+    <defName>CVG_Finger</defName>
+    <label>finger</label>
+    <drawOrder>320</drawOrder>
+  </ApparelLayerDef>
+  <ApparelLayerDef>
+    <defName>CVG_Ear</defName>
+    <label>ear</label>
+    <drawOrder>330</drawOrder>
+  </ApparelLayerDef>
+  <ApparelLayerDef>
+    <defName>CVG_Waist</defName>
+    <label>waist</label>
+    <drawOrder>340</drawOrder>
+  </ApparelLayerDef>
+</Defs>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Tech_LightningStep.label>paso de relámpago</CVG_Tech_LightningStep.label>
+  <CVG_Tech_LightningStep.description>Conviértete en un destello de rayo y reaparece hasta 15 casillas más allá. Los cultivadores del trueno no entran en un combate: simplemente ya están ahí.\n\nSalto corto a una casilla visible (balance del salto potente de VPE).</CVG_Tech_LightningStep.description>
+  <CVG_Tech_LightningStep.verbProperties.label>paso de relámpago</CVG_Tech_LightningStep.verbProperties.label>
+  <CVG_Tech_ChainLightning.label>rayo en cadena</CVG_Tech_ChainLightning.label>
+  <CVG_Tech_ChainLightning.description>Llama un rayo de los Nueve Cielos sobre un enemigo y deja que salte de cuerpo en cuerpo. Cada salto aturde un momento y pierde algo de fuerza.\n\n12 de daño de quemadura, salta a 3 enemigos más a menos de 6 casillas (x0,8 cada uno), aturdimiento de 1 segundo, escalado con el reino y la maestría.</CVG_Tech_ChainLightning.description>
+  <CVG_Tech_ThunderRoar.label>rugido del trueno</CVG_Tech_ThunderRoar.label>
+  <CVG_Tech_ThunderRoar.description>Suelta en un solo rugido el trueno guardado en el dantian. Quienes estén delante quedan chamuscados y aturdidos, con los oídos zumbando como una campana golpeada.\n\nCono de 10 casillas: 8 de daño de quemadura y aturdimiento seguro de 2,5 segundos, escalado con el reino y la maestría. Requiere la Fundación y una raíz de trueno.</CVG_Tech_ThunderRoar.description>
+  <CVG_Tech_LightningReflexes.label>reflejos de relámpago</CVG_Tech_LightningReflexes.label>
+  <CVG_Tech_LightningReflexes.description>El qi del trueno corre por los nervios más rápido que el pensamiento: el cuerpo se mueve antes de que el ojo termine de ver. Se decía que los cultivadores del trueno de Jiuxiao atrapaban flechas en el aire.\n\nPasiva: esquiva cuerpo a cuerpo +3 y tiempo de apuntado -5% (más con el reino y la maestría).</CVG_Tech_LightningReflexes.description>
+  <CVG_Tech_StormHeart.label>corazón de la tormenta</CVG_Tech_StormHeart.label>
+  <CVG_Tech_StormHeart.description>En el ojo de la tormenta hay una quietud que lo ve todo. El cultivador pelea desde esa quietud, y cada golpe y cada disparo cae donde debía.\n\nPasiva: precisión cuerpo a cuerpo +2 y precisión a distancia +2 (más con el reino y la maestría).</CVG_Tech_StormHeart.description>
+  <CVG_Tech_LightningBody.label>cuerpo de relámpago</CVG_Tech_LightningBody.label>
+  <CVG_Tech_LightningBody.description>En la Fundación el propio cuerpo recuerda el rayo. El cultivador cruza un patio en lo que un mortal tarda en parpadear, y detrás de él el aire huele a tormenta.\n\nPasiva: velocidad de movimiento +6% (más con el reino y la maestría).</CVG_Tech_LightningBody.description>
+  <CVG_Tech_TribulationBorn.label>nacido de la tribulación</CVG_Tech_TribulationBorn.label>
+  <CVG_Tech_TribulationBorn.description>Un Núcleo Dorado de trueno fue forjado por el mismo cielo que envía la tribulación. El rayo reconoce a los suyos: quema menos, duele menos, y el cultivador sigue en pie donde otros caen.\n\nPasiva: armadura térmica +8% y umbral de shock de dolor +5% (más con el reino y la maestría).</CVG_Tech_TribulationBorn.description>
+</LanguageData>

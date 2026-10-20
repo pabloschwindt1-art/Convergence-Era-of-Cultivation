@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- La programa GameComponent_Convergence (baseChance 0: el narrador no la lanza al azar). -->
+  <IncidentDef>
+    <defName>CVG_Convergence</defName>
+    <label>the Convergence</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>Convergence.IncidentWorker_Convergence</workerClass>
+    <baseChance>0</baseChance>
+  </IncidentDef>
+</Defs>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Relic_FounderSword.label>espada del fundador</CVG_Relic_FounderSword.label>
+  <CVG_Relic_FounderSword.description>La espada que el fundador bajó de la montaña. Nunca ha cortado nada que no se le pidiera, y su filo lo afila cada año alguien que jamás la empuñó con ira.</CVG_Relic_FounderSword.description>
+  <CVG_Relic_FounderJade.label>jade del fundador</CVG_Relic_FounderJade.label>
+  <CVG_Relic_FounderJade.description>Un colgante de jade verde que el fundador llevaba en su tribulación. Dicen que aún zumba cuando un discípulo se planta bajo el rayo.</CVG_Relic_FounderJade.description>
+  <CVG_Relic_SectSeal.label>sello de la secta</CVG_Relic_SectSeal.label>
+  <CVG_Relic_SectSeal.description>El sello que cierra cada decreto de la secta. Quien lo tenga puede hablar en nombre del maestro; nadie se ha atrevido a probarlo sin él.</CVG_Relic_SectSeal.description>
+  <CVG_ScriptureStele.label>estela de las escrituras</CVG_ScriptureStele.label>
+  <CVG_ScriptureStele.description>Una losa alta de piedra en la que se tallaron los primeros preceptos de la secta en una escritura que solo los guardianes de las escrituras saben leer, aunque todos la recitan. El nombre de la secta está al pie de la estela; la parte superior se dejó en blanco, para lo que la secta aún no ha llegado a ser.</CVG_ScriptureStele.description>
+</LanguageData>

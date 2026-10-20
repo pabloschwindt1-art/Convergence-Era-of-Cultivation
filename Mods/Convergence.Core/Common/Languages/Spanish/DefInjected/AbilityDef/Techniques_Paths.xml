@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Tech_FlyingSword.label>espada voladora</CVG_Tech_FlyingSword.label>
+  <CVG_Tech_FlyingSword.description>Lanza una astilla de qi de espada que vuela como una hoja en el viento. Los discípulos del Pico de la Espada combatían así a cien pasos, y las viejas historias de Shushan están llenas de espadas que volvían volando a sus maestros.\n\nProyectil: 16 de daño cortante (penetración 30%), escalado con el reino y la maestría.</CVG_Tech_FlyingSword.description>
+  <CVG_Tech_UnbreakableEdge.label>núcleo dorado del metal</CVG_Tech_UnbreakableEdge.label>
+  <CVG_Tech_UnbreakableEdge.description>Con un Núcleo Dorado, el qi de metal se condensa en el propio cuerpo: la piel suena como una hoja golpeada y el fuego resbala sobre ella. Los ancianos del Filo Dorado decían que a un verdadero maestro se lo podía tirar a una forja y salía templado.\n\nPasiva: armadura cortante y térmica +6% (más con el reino y la maestría).</CVG_Tech_UnbreakableEdge.description>
+  <CVG_Tech_TenThousandYearPine.label>pino de diez mil años</CVG_Tech_TenThousandYearPine.label>
+  <CVG_Tech_TenThousandYearPine.description>El Núcleo Dorado de la madera es una semilla que nunca deja de brotar. Como el pino del monte Huang que vio pasar emperadores, el cuerpo se renueva estación tras estación.\n\nPasiva: curación de heridas +20% y velocidad de inmunidad +10% (más con el reino y la maestría).</CVG_Tech_TenThousandYearPine.description>
+  <CVG_Tech_BoundlessSea.label>mar sin orillas</CVG_Tech_BoundlessSea.label>
+  <CVG_Tech_BoundlessSea.description>Un Núcleo Dorado de agua guarda tanto como el Mar del Este y nunca se llena. Lo que el cultivador aprende entra y se asienta; lo que turba el corazón se hunde sin dejar rastro.\n\nPasiva: aprendizaje global +10% y umbral de crisis mental -2% (más con el reino y la maestría).</CVG_Tech_BoundlessSea.description>
+  <CVG_Tech_PhoenixEmber.label>brasa del fénix</CVG_Tech_PhoenixEmber.label>
+  <CVG_Tech_PhoenixEmber.description>El Núcleo Dorado del fuego guarda una brasa del fénix, que arde y vuelve a nacer. Las llamas se sienten como un baño tibio y las heridas se cierran antes, como si el cuerpo recordara sus propias cenizas.\n\nPasiva: armadura térmica +10%, temperatura mínima cómoda -4 °C y curación de heridas +10% (más con el reino y la maestría).</CVG_Tech_PhoenixEmber.description>
+  <CVG_Tech_EndlessMountain.label>montaña sin fin</CVG_Tech_EndlessMountain.label>
+  <CVG_Tech_EndlessMountain.description>Un Núcleo Dorado de tierra pesa como el monte Tai. El cultivador ya no cae: los golpes que tumbarían a un buey solo hacen temblar el suelo bajo sus pies.\n\nPasiva: armadura contundente +6%, umbral de shock de dolor +5% y capacidad de carga +10% (más con el reino y la maestría).</CVG_Tech_EndlessMountain.description>
+  <CVG_Tech_DivineSense.label>sentido divino</CVG_Tech_DivineSense.label>
+  <CVG_Tech_DivineSense.description>El shen se extiende más allá de los ojos como ondas en un estanque: el cultivador siente dónde caerá cada flecha y adónde llevará cada idea. Los viejos maestros contaban las hojas de un árbol con los ojos cerrados.\n\nPasiva: precisión a distancia +2 y velocidad de investigación +6% (más con el reino y la maestría).</CVG_Tech_DivineSense.description>
+  <CVG_Tech_IronShirt.label>camisa de hierro</CVG_Tech_IronShirt.label>
+  <CVG_Tech_IronShirt.description>La primera lección del Cuerpo Vajra: que la piel templada reciba el golpe como una camisa de hierro. Los maestros de kung fu del viejo mundo la entrenaban con sacos de arena y bastones; la carne templada la aprende en semanas.\n\nPasiva: armadura contundente +5% y cortante +3% (más con el reino y la maestría).</CVG_Tech_IronShirt.description>
+  <CVG_Tech_DragonElephantMight.label>fuerza del dragón y el elefante</CVG_Tech_DragonElephantMight.label>
+  <CVG_Tech_DragonElephantMight.description>Decían los monjes que la bestia más fuerte del agua es el dragón y en tierra, el elefante. El Cuerpo Vajra reúne la fuerza de los dos en el músculo templado.\n\nPasiva: daño cuerpo a cuerpo +6% y capacidad de carga +10% (más con el reino y la maestría).</CVG_Tech_DragonElephantMight.description>
+  <CVG_Tech_UnbreakableBones.label>huesos irrompibles</CVG_Tech_UnbreakableBones.label>
+  <CVG_Tech_UnbreakableBones.description>Los huesos forjados no se rompen: se doblan y vuelven. El dolor que tumbaría a un mortal es solo una sensación, y el cuerpo repara solo lo que puede.\n\nPasiva: umbral de shock de dolor +5% y curación de heridas +15% (más con el reino y la maestría).</CVG_Tech_UnbreakableBones.description>
+</LanguageData>

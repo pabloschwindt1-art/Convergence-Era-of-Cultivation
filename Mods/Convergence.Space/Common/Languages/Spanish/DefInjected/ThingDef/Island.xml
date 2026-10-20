@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_FlightCore.label>núcleo de vuelo</CVG_FlightCore.label>
+  <CVG_FlightCore.description>Una formación de vuelo grabada en jade y engastada alrededor de un núcleo de bestia que ha aprendido a flotar. Cada uno añade un trozo de suelo a una isla voladora. Pocas sectas poseyeron más de tres, y ninguna admitió cómo consiguió el cuarto.</CVG_FlightCore.description>
+  <CVG_IslandHeart.label>Corazón de la Isla</CVG_IslandHeart.label>
+  <CVG_IslandHeart.description>Una formación de vuelo engastada en un núcleo de bestia, el corazón de una isla voladora. Hace que el suelo a su alrededor olvide su peso, y carga todo lo que esté sobre roca de nube conectada a él: el salón, los campos y la gente. Sin ningún núcleo de vuelo en una montura puede cargar una isla modesta; cada núcleo de vuelo engastado la agranda, hasta seis. No empuja: para eso necesita propulsores o velas.\n\nAl despegar, todo lo que esté sobre roca de nube conectada va a un mapa nuevo. Sin estaca del cielo, la isla deja atrás el mapa donde estaba.</CVG_IslandHeart.description>
+  <CVG_GravityCoreMount.label>montura de núcleo de gravedad</CVG_GravityCoreMount.label>
+  <CVG_GravityCoreMount.description>Una cuna de jade donde se engasta un núcleo de vuelo en la formación del Corazón de la Isla. Cada núcleo engastado sube el peso que la isla puede cargar y amplía el terreno donde se puede colocar roca de nube. Una isla admite hasta seis núcleos; el séptimo nunca ha funcionado, y nadie ha explicado por qué.</CVG_GravityCoreMount.description>
+  <CVG_EssenceVessel.label>vasija de esencia</CVG_EssenceVessel.label>
+  <CVG_EssenceVessel.description>Un caldero de bronce donde las piedras espirituales se muelen hasta polvo y se mantienen ardiendo en frío. Alimenta los propulsores y velas de una isla voladora, y la isla la consume según la distancia que recorre. No explota al ser golpeada, lo cual es un alivio para todo el que alguna vez estuvo junto a un tanque de quimiocombustible.</CVG_EssenceVessel.description>
+  <CVG_QiThruster.label>propulsor de qi</CVG_QiThruster.label>
+  <CVG_QiThruster.description>Una boquilla de bronce que escupe las piedras espirituales de la isla como un penacho de qi blanco. Aumenta el alcance de una isla voladora. Necesita una zona libre detrás, sin edificios grandes ni roca de nube, porque el penacho no distingue lo que encuentra.\n\nUna isla admite hasta cuatro propulsores de qi.</CVG_QiThruster.description>
+  <CVG_WindSail.label>vela de viento</CVG_WindSail.label>
+  <CVG_WindSail.description>Una vela alta de tela sobre un marco de jade que bebe el viento de las alturas. Da menos alcance que un propulsor, pero su estela es silenciosa y quema muy poco. Una isla puede llevar hasta seis, y una flota de velas fue como la mayoría de las sectas cruzó el cielo antes de la Calamidad.</CVG_WindSail.description>
+  <CVG_HelmsmanAltar.label>altar del timonel</CVG_HelmsmanAltar.label>
+  <CVG_HelmsmanAltar.description>Un altar bajo de madera oscura con una brújula de jade, desde el que el timonel guía la isla inclinando su qi hacia el horizonte. Cualquier mano puede hacerla despegar; solo el reino de un cultivador la hace llegar más lejos. Cuanto más fuerte el mejor cultivador de la secta, más lejos está dispuesta a viajar la isla.</CVG_HelmsmanAltar.description>
+</LanguageData>

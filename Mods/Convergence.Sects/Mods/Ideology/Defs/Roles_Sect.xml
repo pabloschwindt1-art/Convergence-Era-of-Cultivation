@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Sect roles: vanilla role structure (PreceptRoleSingleBase), restricted to ideoligions with a sect doctrine. Icons are provisional vanilla ones. -->
+  <PreceptDef ParentName="PreceptRoleSingleBase">
+    <defName>CVG_Role_SectMaster</defName>
+    <label>sect master</label>
+    <description>The master of the sect: the one who taught the first disciples and still decides who may enter. Counsels, reassures and gives the sect its direction. A sect has one, and the position is never inherited by chance.</description>
+    <iconPath>UI/Roles/CVG/SectMaster</iconPath>
+    <nameMaker>NamerRoleMoralist</nameMaker>
+    <displayOrderInImpact>90</displayOrderInImpact>
+    <canRemoveInUI>true</canRemoveInUI>
+    <requiredMemes><li>CVG_Meme_SwordWay</li><li>CVG_Meme_LotusPath</li><li>CVG_Meme_CauldronWay</li><li>CVG_Meme_DragonBlood</li><li>CVG_Meme_DemonicWay</li><li>CVG_Meme_WanderingPath</li><li>CVG_Meme_BodyWay</li><li>CVG_Meme_ThunderWay</li><li MayRequire="Ludeon.RimWorld.Biotech">CVG_Meme_PuppetPath</li></requiredMemes>
+    <roleEffects>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>CVG_CultivationSpeed</statDef>
+        <modifier>0.15</modifier>
+      </li>
+    </roleEffects>
+    <grantedAbilities><li>Counsel</li><li>Reassure</li><li>Convert</li></grantedAbilities>
+    <roleRequiredWorkTags><li>Social</li></roleRequiredWorkTags>
+    <roleTags><li>Moralist</li></roleTags>
+  </PreceptDef>
+  <PreceptDef ParentName="PreceptRoleSingleBase">
+    <defName>CVG_Role_GrandElder</defName>
+    <!-- Varios roles de secta: sin el -5 por rol vacío (con 8 roles eran -40 y la colonia colapsaba). -->
+    <createsRoleEmptyThought>false</createsRoleEmptyThought>
+    <label>grand elder</label>
+    <description>The most senior elder, keeper of the sect's memory and its grudges. He does not lead the sect, but no master has ever acted against his wishes for long.</description>
+    <iconPath>UI/Roles/CVG/GrandElder</iconPath>
+    <nameMaker>NamerRoleMoralist</nameMaker>
+    <displayOrderInImpact>90</displayOrderInImpact>
+    <canRemoveInUI>true</canRemoveInUI>
+    <requiredMemes><li>CVG_Meme_SwordWay</li><li>CVG_Meme_LotusPath</li><li>CVG_Meme_CauldronWay</li><li>CVG_Meme_DragonBlood</li><li>CVG_Meme_DemonicWay</li><li>CVG_Meme_WanderingPath</li><li>CVG_Meme_BodyWay</li><li>CVG_Meme_ThunderWay</li><li MayRequire="Ludeon.RimWorld.Biotech">CVG_Meme_PuppetPath</li></requiredMemes>
+    <roleEffects>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>GlobalLearningFactor</statDef>
+        <modifier>0.15</modifier>
+      </li>
+    </roleEffects>
+    <grantedAbilities><li>PreachHealth</li></grantedAbilities>
+    <roleRequiredWorkTags><li>Social</li></roleRequiredWorkTags>
+  </PreceptDef>
+  <PreceptDef ParentName="PreceptRoleSingleBase">
+    <defName>CVG_Role_SwordElder</defName>
+    <!-- Varios roles de secta: sin el -5 por rol vacío (con 8 roles eran -40 y la colonia colapsaba). -->
+    <createsRoleEmptyThought>false</createsRoleEmptyThought>
+    <label>sword elder</label>
+    <description>The elder in charge of the discipline of arms. He fights in melee, trains the young with a wooden sword and has never lost a duel he cared about.</description>
+    <iconPath>UI/Roles/CVG/SwordElder</iconPath>
+    <nameMaker>NamerRoleMoralist</nameMaker>
+    <displayOrderInImpact>90</displayOrderInImpact>
+    <canRemoveInUI>true</canRemoveInUI>
+    <requiredMemes><li>CVG_Meme_SwordWay</li><li>CVG_Meme_LotusPath</li><li>CVG_Meme_CauldronWay</li><li>CVG_Meme_DragonBlood</li><li>CVG_Meme_DemonicWay</li><li>CVG_Meme_WanderingPath</li><li>CVG_Meme_BodyWay</li><li>CVG_Meme_ThunderWay</li><li MayRequire="Ludeon.RimWorld.Biotech">CVG_Meme_PuppetPath</li></requiredMemes>
+    <roleEffects>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>MeleeHitChance</statDef>
+        <modifier>5</modifier>
+      </li>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>MeleeDodgeChance</statDef>
+        <modifier>3</modifier>
+      </li>
+    </roleEffects>
+    <grantedAbilities></grantedAbilities>
+    <roleRequiredWorkTags><li>Violent</li></roleRequiredWorkTags>
+    <roleRequirements Inherit="False">
+      <li Class="RoleRequirement_SameIdeo">
+        <labelKey>RoleRequirementLabelSameIdeo</labelKey>
+      </li>
+      <li Class="RoleRequirement_MinSkillAny">
+        <skills>
+          <Melee>8</Melee>
+        </skills>
+      </li>
+    </roleRequirements>
+  </PreceptDef>
+  <PreceptDef ParentName="PreceptRoleSingleBase">
+    <defName>CVG_Role_AlchemistMaster</defName>
+    <!-- Varios roles de secta: sin el -5 por rol vacío (con 8 roles eran -40 y la colonia colapsaba). -->
+    <createsRoleEmptyThought>false</createsRoleEmptyThought>
+    <label>alchemist master</label>
+    <description>The master of the sect's cauldrons. He knows which herb kills and which heals, and he has never told anyone all of it.</description>
+    <iconPath>UI/Roles/CVG/AlchemistMaster</iconPath>
+    <nameMaker>NamerRoleMoralist</nameMaker>
+    <displayOrderInImpact>90</displayOrderInImpact>
+    <canRemoveInUI>true</canRemoveInUI>
+    <requiredMemes><li>CVG_Meme_SwordWay</li><li>CVG_Meme_LotusPath</li><li>CVG_Meme_CauldronWay</li><li>CVG_Meme_DragonBlood</li><li>CVG_Meme_DemonicWay</li><li>CVG_Meme_WanderingPath</li><li>CVG_Meme_BodyWay</li><li>CVG_Meme_ThunderWay</li><li MayRequire="Ludeon.RimWorld.Biotech">CVG_Meme_PuppetPath</li></requiredMemes>
+    <roleEffects>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>DrugSynthesisSpeed</statDef>
+        <modifier>0.3</modifier>
+      </li>
+    </roleEffects>
+    <grantedAbilities></grantedAbilities>
+    <roleRequiredWorkTags><li>Intellectual</li></roleRequiredWorkTags>
+    <roleRequirements Inherit="False">
+      <li Class="RoleRequirement_SameIdeo">
+        <labelKey>RoleRequirementLabelSameIdeo</labelKey>
+      </li>
+      <li Class="RoleRequirement_MinSkillAny">
+        <skills>
+          <Intellectual>8</Intellectual>
+        </skills>
+      </li>
+    </roleRequirements>
+  </PreceptDef>
+  <PreceptDef ParentName="PreceptRoleSingleBase">
+    <defName>CVG_Role_FormationMaster</defName>
+    <!-- Varios roles de secta: sin el -5 por rol vacío (con 8 roles eran -40 y la colonia colapsaba). -->
+    <createsRoleEmptyThought>false</createsRoleEmptyThought>
+    <label>formation master</label>
+    <description>The one who draws the sect's arrays, from the flags of the gathering formation to the pillars of its network. A mistake of his costs a mountain.</description>
+    <iconPath>UI/Roles/CVG/FormationMaster</iconPath>
+    <nameMaker>NamerRoleMoralist</nameMaker>
+    <displayOrderInImpact>90</displayOrderInImpact>
+    <canRemoveInUI>true</canRemoveInUI>
+    <requiredMemes><li>CVG_Meme_SwordWay</li><li>CVG_Meme_LotusPath</li><li>CVG_Meme_CauldronWay</li><li>CVG_Meme_DragonBlood</li><li>CVG_Meme_DemonicWay</li><li>CVG_Meme_WanderingPath</li><li>CVG_Meme_BodyWay</li><li>CVG_Meme_ThunderWay</li><li MayRequire="Ludeon.RimWorld.Biotech">CVG_Meme_PuppetPath</li></requiredMemes>
+    <roleEffects>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>ResearchSpeed</statDef>
+        <modifier>0.2</modifier>
+      </li>
+    </roleEffects>
+    <grantedAbilities></grantedAbilities>
+    <roleRequiredWorkTags><li>Intellectual</li></roleRequiredWorkTags>
+    <roleRequirements Inherit="False">
+      <li Class="RoleRequirement_SameIdeo">
+        <labelKey>RoleRequirementLabelSameIdeo</labelKey>
+      </li>
+      <li Class="RoleRequirement_MinSkillAny">
+        <skills>
+          <Intellectual>8</Intellectual>
+        </skills>
+      </li>
+    </roleRequirements>
+  </PreceptDef>
+  <PreceptDef ParentName="PreceptRoleSingleBase">
+    <defName>CVG_Role_ScriptureKeeper</defName>
+    <!-- Varios roles de secta: sin el -5 por rol vacío (con 8 roles eran -40 y la colonia colapsaba). -->
+    <createsRoleEmptyThought>false</createsRoleEmptyThought>
+    <label>keeper of the scriptures</label>
+    <description>Watches over the library of jade slips, ensures no manual leaves the pavilion and knows what each one forbids. Lends only to those who return them.</description>
+    <iconPath>UI/Roles/CVG/ScriptureKeeper</iconPath>
+    <nameMaker>NamerRoleMoralist</nameMaker>
+    <displayOrderInImpact>90</displayOrderInImpact>
+    <canRemoveInUI>true</canRemoveInUI>
+    <requiredMemes><li>CVG_Meme_SwordWay</li><li>CVG_Meme_LotusPath</li><li>CVG_Meme_CauldronWay</li><li>CVG_Meme_DragonBlood</li><li>CVG_Meme_DemonicWay</li><li>CVG_Meme_WanderingPath</li><li>CVG_Meme_BodyWay</li><li>CVG_Meme_ThunderWay</li><li MayRequire="Ludeon.RimWorld.Biotech">CVG_Meme_PuppetPath</li></requiredMemes>
+    <roleEffects>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>GlobalLearningFactor</statDef>
+        <modifier>0.25</modifier>
+      </li>
+    </roleEffects>
+    <grantedAbilities></grantedAbilities>
+    <roleRequiredWorkTags><li>Social</li></roleRequiredWorkTags>
+  </PreceptDef>
+  <PreceptDef ParentName="PreceptRoleSingleBase" MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>CVG_Role_PuppetMaster</defName>
+    <!-- Varios roles de secta: sin el -5 por rol vacío (con 8 roles eran -40 y la colonia colapsaba). -->
+    <createsRoleEmptyThought>false</createsRoleEmptyThought>
+    <label>puppet master</label>
+    <description>The disciple who commands the sect's puppets from behind a screen of strings. He does not need to be strong; he needs to be patient, and to have forgotten how to be lonely.</description>
+    <iconPath>UI/Roles/CVG/PuppetMaster</iconPath>
+    <nameMaker>NamerRoleMoralist</nameMaker>
+    <displayOrderInImpact>90</displayOrderInImpact>
+    <canRemoveInUI>true</canRemoveInUI>
+    <requiredMemes><li>CVG_Meme_SwordWay</li><li>CVG_Meme_LotusPath</li><li>CVG_Meme_CauldronWay</li><li>CVG_Meme_DragonBlood</li><li>CVG_Meme_DemonicWay</li><li>CVG_Meme_WanderingPath</li><li>CVG_Meme_BodyWay</li><li>CVG_Meme_ThunderWay</li><li MayRequire="Ludeon.RimWorld.Biotech">CVG_Meme_PuppetPath</li></requiredMemes>
+    <roleEffects>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>MechBandwidth</statDef>
+        <modifier>3</modifier>
+      </li>
+    </roleEffects>
+    <roleRequiredWorkTags><li>Intellectual</li></roleRequiredWorkTags>
+  </PreceptDef>
+</Defs>

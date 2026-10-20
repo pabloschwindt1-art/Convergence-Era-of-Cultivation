@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Convergence: Alchemy &amp; Artifacts</name>
+  <author>Prospero1088</author>
+  <packageId>prospero1088.convergence.alchemy</packageId>
+  <modVersion>0.1.0</modVersion>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>Alchemy and artifacts for Convergence: Era of Cultivation.
+
+A spirit forge and an alchemy furnace that are upgraded in place (levels 1-3), spirit weapons with spirit grade (sword, sabre, spear, bow and flying sword), pills with quality and toxicity (foundation, tempering, blood purification, qi recovery), spirit herbs, a rune table that engraves ordinary weapons and a talisman table. No electricity needed.
+
+Requires Convergence: Era of Cultivation and Convergence: Resources.
+
+License: code, scripts and technical data are MIT; original art, lore and narrative text are CC BY-NC-SA 4.0 (credit Prospero1088, non-commercial, share-alike). The art was created with the assistance of AI. RimWorld material, and art derived from it, belongs to Ludeon Studios and is not covered by these licenses. Details: LICENSE.txt in the mod folder.
+
+Portions of the materials used to create this content/mod are trademarks and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon. This content/mod is not official and is not endorsed by Ludeon.
+</description>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+    <li>
+      <packageId>prospero1088.convergence.core</packageId>
+      <displayName>Convergence: Era of Cultivation</displayName>
+      <downloadUrl>https://steamcommunity.com/app/294100/workshop/</downloadUrl>
+    </li>
+    <li>
+      <packageId>prospero1088.convergence.resources</packageId>
+      <displayName>Convergence: Resources</displayName>
+      <downloadUrl>https://steamcommunity.com/app/294100/workshop/</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Anomaly</li>
+    <li>Ludeon.RimWorld.Odyssey</li>
+    <li>prospero1088.convergence.core</li>
+    <li>prospero1088.convergence.resources</li>
+  </loadAfter>
+</ModMetaData>

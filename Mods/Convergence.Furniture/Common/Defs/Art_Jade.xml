@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Jade sculptures (docs/modulos/DIA_A_DIA.md, part 3b): the vanilla small / large / grand sculptures in jade, made at
+    the jade carver's table, with wuxia names and descriptions (Core RulePacks) and the colony tales. Not stuffed: the
+    material is always jade, so they are more beautiful than the vanilla ones of the same size.
+    Final art: Things/Building/Art/CVG/JadeSculpture{Small,Large,Grand} (today the vanilla sculptures tinted jade).
+  -->
+  <ThingDef Name="CVG_JadeSculptureBase" ParentName="ArtBuildingBase" Abstract="True">
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsArt</li>
+    </thingCategories>
+    <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+    <statBases>
+      <SellPriceFactor>1.10</SellPriceFactor>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Art">
+        <nameMaker>CVG_NamerArtWuxia</nameMaker>
+        <descriptionMaker>CVG_ArtDescription_JadeSculpture</descriptionMaker>
+        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+    </placeWorkers>
+    <tradeTags>
+      <li>Art</li>
+    </tradeTags>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Artistic</workSkill>
+      <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Sculpt</soundWorking>
+      <recipeUsers>
+        <li>CVG_JadeCarvingTable</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_JadeSculptureBase">
+    <defName>CVG_JadeSculptureSmall</defName>
+    <label>small jade sculpture</label>
+    <description>A figure of jade the size of a torso: an immortal, a sacred beast or a founder, carved slowly so the stone keeps its qi. Elders give them to favourite disciples, and the disciples keep them all their lives.</description>
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+      <texPath>Things/Building/CVG/Furniture/JadeSculptureSmall</texPath><drawSize>(1,1)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <fillPercent>0.35</fillPercent>
+    <rotatable>false</rotatable>
+    <castEdgeShadows>true</castEdgeShadows>
+    <statBases>
+      <MaxHitPoints>108</MaxHitPoints>
+      <Mass>3</Mass>
+      <Beauty>90</Beauty>
+      <WorkToMake>18000</WorkToMake>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">10</StyleDominance>
+    </statBases>
+    <costList>
+      <Jade>40</Jade>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Artistic>4</Artistic>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_JadeSculptureBase">
+    <defName>CVG_JadeSculptureLarge</defName>
+    <label>large jade sculpture</label>
+    <description>A person-sized jade sculpture. Sect halls keep one of their founder by the door, so that every disciple bows to the stone on the way in. The best ones seem to breathe at dusk.</description>
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+      <texPath>Things/Building/CVG/Furniture/JadeSculptureLarge</texPath>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <uiIconScale>0.666</uiIconScale>
+    <size>(1,1)</size>
+    <fillPercent>0.5</fillPercent>
+    <rotatable>false</rotatable>
+    <castEdgeShadows>true</castEdgeShadows>
+    <statBases>
+      <MaxHitPoints>216</MaxHitPoints>
+      <Mass>7</Mass>
+      <Beauty>180</Beauty>
+      <WorkToMake>30000</WorkToMake>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">20</StyleDominance>
+    </statBases>
+    <costList>
+      <Jade>100</Jade>
+      <CVG_SpiritJade>1</CVG_SpiritJade>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Artistic>6</Artistic>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_JadeSculptureBase">
+    <defName>CVG_JadeSculptureGrand</defName>
+    <label>grand jade sculpture</label>
+    <description>A jade monument carved from a single block, the kind of work a sect commissions once in a century. Pilgrims of the old world walked for months to see the jade Buddha of Shanghai; this one, the colony carved itself.</description>
+    <graphicData>
+      <graphicClass>Graphic_Random</graphicClass>
+      <texPath>Things/Building/CVG/Furniture/JadeSculptureGrand</texPath>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <uiIconScale>0.5</uiIconScale>
+    <size>(2,2)</size>
+    <fillPercent>0.6</fillPercent>
+    <rotatable>false</rotatable>
+    <castEdgeShadows>true</castEdgeShadows>
+    <statBases>
+      <MaxHitPoints>720</MaxHitPoints>
+      <Mass>30</Mass>
+      <Beauty>600</Beauty>
+      <WorkToMake>105000</WorkToMake>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">66</StyleDominance>
+    </statBases>
+    <costList>
+      <Jade>250</Jade>
+      <CVG_SpiritJade>4</CVG_SpiritJade>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Artistic>10</Artistic>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+</Defs>

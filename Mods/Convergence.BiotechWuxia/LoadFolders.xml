@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<loadFolders>
+  <v1.6>
+    <li>/</li>
+    <li>Common</li>
+    <li IfModActive="prospero1088.convergence.apparel">Mods/Apparel</li>
+    <li IfModActive="Ludeon.RimWorld.Anomaly">Mods/Anomaly</li>
+  </v1.6>
+</loadFolders>

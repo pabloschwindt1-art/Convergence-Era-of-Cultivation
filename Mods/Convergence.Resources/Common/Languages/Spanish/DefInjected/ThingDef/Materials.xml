@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_SpiritSteel.label>acero espiritual</CVG_SpiritSteel.label>
+  <CVG_SpiritSteel.description>Acero templado con piedras espirituales en un horno de refinado. Más fuerte y ligero que el acero, y conduce bien el qi: el metal preferido para armas y portones de secta.</CVG_SpiritSteel.description>
+  <CVG_MoonSilver.label>plata lunar</CVG_MoonSilver.label>
+  <CVG_MoonSilver.description>Plata refinada con jade espiritual bajo la luna. Muy ligera y hermosa; las sectas antiguas decían que quema lo que viene del vacío.</CVG_MoonSilver.description>
+  <CVG_ChaosGold.label>oro del caos</CVG_ChaosGold.label>
+  <CVG_ChaosGold.description>Oro fundido con cristal espiritual hasta que recuerda el caos anterior al mundo. Absurdamente valioso; se usa en artefactos altos y para presumir.</CVG_ChaosGold.description>
+  <CVG_ColdIron.label>hierro frío de mil años</CVG_ColdIron.label>
+  <CVG_ColdIron.description>Hierro que yació mil años en el frío profundo y despertó con la Convergencia. No se refina, solo se encuentra; sus filos son extremos.</CVG_ColdIron.description>
+  <CVG_SpiritCrystal.label>cristal espiritual</CVG_SpiritCrystal.label>
+  <CVG_SpiritCrystal.description>Cristal transparente crecido de qi denso. Alimenta formaciones y píldoras altas, y como material de construcción es frágil pero radiante.</CVG_SpiritCrystal.description>
+  <CVG_MineableSpiritCrystal.label>veta de cristal espiritual</CVG_MineableSpiritCrystal.label>
+  <CVG_MineableSpiritCrystal.description>Roca atravesada de cristal espiritual que creció cuando el qi volvió. Los mineros de Jiuxiao dejan una ofrenda de arroz antes de romper una veta, para que el cristal no recuerde quién se lo llevó.</CVG_MineableSpiritCrystal.description>
+  <CVG_MineableColdIron.label>veta de hierro frío</CVG_MineableColdIron.label>
+  <CVG_MineableColdIron.description>Hierro profundo y helado que durmió mil años. Solo aparece en tierras frías.</CVG_MineableColdIron.description>
+</LanguageData>

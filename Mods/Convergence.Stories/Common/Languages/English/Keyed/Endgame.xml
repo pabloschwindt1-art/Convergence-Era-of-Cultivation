@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Endgame_GateLabel>A gate has opened</CVG_Endgame_GateLabel>
+  <CVG_Endgame_Gate1>The founder's door has answered the jade. It stands on the edge of your land, black and silent, and it will stay open until someone enters.</CVG_Endgame_Gate1>
+  <CVG_Endgame_Gate2>The seal has found its door. A gate of pale light has opened where the sky is thinnest, and the clouds around it lean in to listen.</CVG_Endgame_Gate2>
+  <CVG_Endgame_Gate3>The shard has pointed the way. A gate has opened over a field of glass, and something metal moves beyond it.</CVG_Endgame_Gate3>
+  <CVG_Endgame_Gate4>The core has fallen silent, and in its silence a last gate has opened. Whatever is on the other side has been waiting for a very long time.</CVG_Endgame_Gate4>
+  <CVG_Endgame_NotReady>Nobody in the colony has reached the highest realm; the choice returns tomorrow.</CVG_Endgame_NotReady>
+  <CVG_Endgame_Ascended>{0} ascends.</CVG_Endgame_Ascended>
+  <CVG_Endgame_CalamityLabel>The Iron Calamity wakes</CVG_Endgame_CalamityLabel>
+  <CVG_Endgame_CalamityText>The machines that serve the Calamity have heard that someone sits on the Heavenly seat. They come in numbers that the sky has not seen since the Rupture.</CVG_Endgame_CalamityText>
+  <CVG_Endgame_Credits_Ascend>{0} crossed the last tribulation and rose beyond the Ninth Sky. The colony watched the light go up, and nobody called it a loss. The Rimworld goes on, a little brighter, and a little less alone.</CVG_Endgame_Credits_Ascend>
+  <CVG_Endgame_Credits_Seal>The rift closed over the colony like a sleeping eyelid. The storms of qi ceased, the sky forgot Jiuxiao, and the sects that remained kept their own memory. It was the quiet ending, and it was enough.</CVG_Endgame_Credits_Seal>
+  <CVG_Endgame_Credits_Rule>The Celestial seat was empty, and the colony sat in it. The sects bowed, because the old order wanted a hand, and the Iron Calamity woke, because it too wanted one. The reign had begun.</CVG_Endgame_Credits_Rule>
+  <CVG_ScenPart_ConvergenceOccurred>The Convergence has already happened: qi flows from the first day and the Mentor arrives.</CVG_ScenPart_ConvergenceOccurred>
+  <CVG_ScenPart_FirstRealm>the first realm</CVG_ScenPart_FirstRealm>
+  <CVG_ScenPart_AllColonists>All starting colonists</CVG_ScenPart_AllColonists>
+  <CVG_ScenPart_SomeColonists>{0} starting colonist(s)</CVG_ScenPart_SomeColonists>
+  <CVG_ScenPart_StartingCultivators>{0} already cultivate: {1}, stage {2}.</CVG_ScenPart_StartingCultivators>
+  <CVG_ScenPart_WithTechniques>They bring a technique manual and their first techniques.</CVG_ScenPart_WithTechniques>
+  <CVG_ScenPart_StartingBloodline>{0} starting colonist(s) carry the {1} bloodline.</CVG_ScenPart_StartingBloodline>
+</LanguageData>

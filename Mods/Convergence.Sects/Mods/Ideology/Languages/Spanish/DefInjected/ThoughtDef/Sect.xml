@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Cultivation_Obligatory_Self.stages.0.label>cultivo</CVG_Cultivation_Obligatory_Self.stages.0.label>
+  <CVG_Cultivation_Obligatory_Self.stages.0.description>Hice mi cultivo de hoy, como debo.</CVG_Cultivation_Obligatory_Self.stages.0.description>
+  <CVG_Cultivation_Venerated_Self.stages.0.label>cultivo</CVG_Cultivation_Venerated_Self.stages.0.label>
+  <CVG_Cultivation_Venerated_Self.stages.0.description>Mi cultivo fue una alegría y un honor.</CVG_Cultivation_Venerated_Self.stages.0.description>
+  <CVG_Cultivation_Frowned_Self.stages.0.label>cultivo</CVG_Cultivation_Frowned_Self.stages.0.label>
+  <CVG_Cultivation_Frowned_Self.stages.0.description>Estar ahí sentado sin hacer nada me pareció una pérdida de tiempo.</CVG_Cultivation_Frowned_Self.stages.0.description>
+  <CVG_Cultivation_Frowned_Know.stages.0.label>cultiva todo el día como un ermitaño</CVG_Cultivation_Frowned_Know.stages.0.label>
+  <CVG_Alchemy_Venerated_Self.stages.0.label>alquimia y píldoras</CVG_Alchemy_Venerated_Self.stages.0.label>
+  <CVG_Alchemy_Venerated_Self.stages.0.description>La píldora me sentó bien; los alquimistas saben lo que hacen.</CVG_Alchemy_Venerated_Self.stages.0.description>
+  <CVG_Alchemy_Frowned_Self.stages.0.label>alquimia y píldoras</CVG_Alchemy_Frowned_Self.stages.0.label>
+  <CVG_Alchemy_Frowned_Self.stages.0.description>Tomé una píldora. Sentí que hacía trampa.</CVG_Alchemy_Frowned_Self.stages.0.description>
+  <CVG_Alchemy_Frowned_Know.stages.0.label>toma píldoras como un niño</CVG_Alchemy_Frowned_Know.stages.0.label>
+  <CVG_Essence_Abhorrent_Self.stages.0.label>extracción de esencias</CVG_Essence_Abhorrent_Self.stages.0.label>
+  <CVG_Essence_Abhorrent_Self.stages.0.description>Participé en una extracción de esencia. Fue un asesinato.</CVG_Essence_Abhorrent_Self.stages.0.description>
+  <CVG_Essence_Abhorrent_Know.stages.0.label>extrajo una esencia viva</CVG_Essence_Abhorrent_Know.stages.0.label>
+  <CVG_Essence_Abhorrent_KnowMood.stages.0.label>extracción de esencias</CVG_Essence_Abhorrent_KnowMood.stages.0.label>
+  <CVG_Essence_Abhorrent_KnowMood.stages.0.description>Alguien extrajo la esencia de un ser vivo.</CVG_Essence_Abhorrent_KnowMood.stages.0.description>
+  <CVG_Essence_Honored_Self.stages.0.label>extracción de esencias</CVG_Essence_Honored_Self.stages.0.label>
+  <CVG_Essence_Honored_Self.stages.0.description>La esencia se extrajo con honor; el donante sigue vivo en otro.</CVG_Essence_Honored_Self.stages.0.description>
+  <CVG_Demonic_Forbidden_Self.stages.0.label>artes demoníacas</CVG_Demonic_Forbidden_Self.stages.0.label>
+  <CVG_Demonic_Forbidden_Self.stages.0.description>Usé un arte demoníaco. Ya no estoy limpio.</CVG_Demonic_Forbidden_Self.stages.0.description>
+  <CVG_Demonic_Forbidden_Know.stages.0.label>practica las artes demoníacas</CVG_Demonic_Forbidden_Know.stages.0.label>
+  <CVG_Demonic_Forbidden_KnowMood.stages.0.label>artes demoníacas</CVG_Demonic_Forbidden_KnowMood.stages.0.label>
+  <CVG_Demonic_Forbidden_KnowMood.stages.0.description>Alguien usó un arte demoníaco.</CVG_Demonic_Forbidden_KnowMood.stages.0.description>
+  <CVG_Demonic_Embraced_Self.stages.0.label>artes demoníacas</CVG_Demonic_Embraced_Self.stages.0.label>
+  <CVG_Demonic_Embraced_Self.stages.0.description>Mi arte demoníaco se sintió como libertad.</CVG_Demonic_Embraced_Self.stages.0.description>
+  <CVG_Duels_Encouraged_Self.stages.0.label>duelos entre discípulos</CVG_Duels_Encouraged_Self.stages.0.label>
+  <CVG_Duels_Encouraged_Self.stages.0.description>Luché con honor ante toda la secta.</CVG_Duels_Encouraged_Self.stages.0.description>
+  <CVG_Duels_Forbidden_Self.stages.0.label>duelos entre discípulos</CVG_Duels_Forbidden_Self.stages.0.label>
+  <CVG_Duels_Forbidden_Self.stages.0.description>Luché en un duelo. Estaba prohibido.</CVG_Duels_Forbidden_Self.stages.0.description>
+  <CVG_Hierarchy_Elders_KnowMood.stages.0.label>jerarquía de la secta</CVG_Hierarchy_Elders_KnowMood.stages.0.label>
+  <CVG_Hierarchy_Elders_KnowMood.stages.0.description>Alguien de la secta subió de reino. La jerarquía crece.</CVG_Hierarchy_Elders_KnowMood.stages.0.description>
+  <CVG_Hierarchy_Equals_Self.stages.0.label>jerarquía de la secta</CVG_Hierarchy_Equals_Self.stages.0.label>
+  <CVG_Hierarchy_Equals_Self.stages.0.description>Subí de reino, y nadie tuvo que darme permiso.</CVG_Hierarchy_Equals_Self.stages.0.description>
+  <CVG_Retreat_Revered_Self.stages.0.label>retiro de cultivo</CVG_Retreat_Revered_Self.stages.0.label>
+  <CVG_Retreat_Revered_Self.stages.0.description>Mi retiro fue respetado. Salí entero.</CVG_Retreat_Revered_Self.stages.0.description>
+  <CVG_Cultivation_Obligatory_Missed.stages.0.label>cultivo omitido</CVG_Cultivation_Obligatory_Missed.stages.0.label>
+  <CVG_Cultivation_Obligatory_Missed.stages.0.description>Un día entero sin sentarme a cultivar. El Dao no espera a quien se salta su práctica.</CVG_Cultivation_Obligatory_Missed.stages.0.description>
+</LanguageData>

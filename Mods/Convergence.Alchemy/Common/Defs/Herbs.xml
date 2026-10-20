@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Spirit herbs (until the Fauna & Flora module): rare wild plants that can also be sown. -->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_SpiritHerb</defName>
+    <label>spirit herb</label>
+    <description>Leaves and roots that drank qi while they grew. Shennong, the Divine Farmer, is said to have tasted every one of the hundred herbs himself, and those that did not kill him became the base of all alchemy. The basic ingredient of every pill.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/SpiritHerb</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <soundInteract>Grain_Drop</soundInteract>
+    <soundDrop>Grain_Drop</soundDrop>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MarketValue>4</MarketValue>
+      <Mass>0.05</Mass>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Flammability>1</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <healthAffectsPrice>false</healthAffectsPrice>
+  </ThingDef>
+
+  <!-- Rare ingredients of the spirit ginseng and the snow lotus (high-grade pills, e.g. CVG_NineTurnsPill). -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_SpiritGinsengRoot</defName>
+    <label>spirit ginseng root</label>
+    <description>The root of a spirit ginseng that drank qi for years, shaped like a small sleeping man. In Jiuxiao a root of a hundred years was worth a city, and the Heavenly Cauldron Pavilion still auctions the oldest ones by their rings. An ingredient for high-grade pills.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/SpiritGinsengRoot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Grain_Drop</soundInteract>
+    <soundDrop>Grain_Drop</soundDrop>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MarketValue>30</MarketValue>
+      <Mass>0.1</Mass>
+      <DeteriorationRate>1</DeteriorationRate>
+      <Flammability>1</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <healthAffectsPrice>false</healthAffectsPrice>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_SnowLotusPetal</defName>
+    <label>snow lotus petal</label>
+    <description>A petal of snow lotus, cold to the touch even beside a fire. Alchemists say it tempers the fury of the furnace, and no pill of the nine turns can be refined without it. An ingredient for high-grade pills.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/SnowLotusPetal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Grain_Drop</soundInteract>
+    <soundDrop>Grain_Drop</soundDrop>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MarketValue>18</MarketValue>
+      <Mass>0.03</Mass>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Flammability>1</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <healthAffectsPrice>false</healthAffectsPrice>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>CVG_Plant_SpiritHerb</defName>
+    <label>spirit herb</label>
+    <description>A common spirit herb. Since the Convergence it sprouts wherever qi pools, in the shade of old trees and around ancient ruins, and the wandering cultivators of Jiuxiao taught the Rim how to sow it. Rare in the wild, it can be sown by a skilled grower; yields spirit herbs.</description>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Nutrition>0.15</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/CVG/SpiritHerb</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <growDays>8</growDays>
+      <dieIfLeafless>false</dieIfLeafless>
+      <harvestWork>400</harvestWork>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>CVG_SpiritHerb</harvestedThingDef>
+      <harvestYield>4</harvestYield>
+      <sowMinSkill>6</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <purpose>Health</purpose>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>0.5~0.9</visualSizeRange>
+      <wildOrder>2</wildOrder>
+      <allowAutoCut>false</allowAutoCut>
+    </plant>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ProgressCounter">
+        <counter>SpiritFarming</counter>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>CVG_Plant_SpiritGinseng</defName>
+    <label>spirit ginseng</label>
+    <description>A slow, deep-rooted ginseng that gathers qi for years. Herb gatherers of Jiuxiao tie a red thread to its leaves before digging, believing that an old root hears footsteps and walks away underground. Very rare in the wild; yields spirit ginseng roots for high-grade pills.</description>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Nutrition>0.15</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/CVG/SpiritGinseng</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <growDays>18</growDays>
+      <dieIfLeafless>false</dieIfLeafless>
+      <harvestWork>400</harvestWork>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>CVG_SpiritGinsengRoot</harvestedThingDef>
+      <harvestYield>3</harvestYield>
+      <sowMinSkill>9</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <purpose>Health</purpose>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>0.5~0.9</visualSizeRange>
+      <wildOrder>2</wildOrder>
+      <allowAutoCut>false</allowAutoCut>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>CVG_Plant_SnowLotus</defName>
+    <label>snow lotus</label>
+    <description>A white lotus that blooms in the cold. The nuns of the Silent Lotus Temple say the first one grew where a frozen immortal wept on a glacier, and they take only a few petals from each flower. Rare; yields snow lotus petals for high-grade pills.</description>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Nutrition>0.15</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/CVG/SnowLotus</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <growDays>12</growDays>
+      <dieIfLeafless>false</dieIfLeafless>
+      <harvestWork>400</harvestWork>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>CVG_SnowLotusPetal</harvestedThingDef>
+      <harvestYield>4</harvestYield>
+      <sowMinSkill>8</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <purpose>Health</purpose>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>0.5~0.9</visualSizeRange>
+      <wildOrder>2</wildOrder>
+      <allowAutoCut>false</allowAutoCut>
+      <growMinGlow>0.3</growMinGlow>
+    </plant>
+  </ThingDef>
+
+</Defs>

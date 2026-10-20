@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Phoenix bloodline. Design and values: docs/modulos/razas/FENIX.md -->
+
+  <Convergence.BloodlineDef>
+    <defName>CVG_Bloodline_Phoenix</defName>
+    <label>phoenix</label>
+    <description>The blood of the Southern Court: fire that heals, ash that refuses to stay ash. It hates the cold.\n\nBest as: crafter and cook. The forge, the workbench and the kitchen, wherever its fire is welcome.</description>
+    <commonality>0.8</commonality>
+    <color>(1, 0.55, 0.25)</color>
+    <xenotypeIcon>Crown</xenotypeIcon>
+    <affinities>
+      <li>CVG_Element_Fire</li>
+    </affinities>
+    <purities>
+      <li>
+        <purity>CVG_Purity_Trace</purity>
+        <gene>CVG_Blood_Phoenix_Trace</gene>
+        <hediff>CVG_Bloodline_Phoenix</hediff>
+        <affinityCultivationFactor>1.05</affinityCultivationFactor>
+        <aspectGenes>
+          <li>CVG_Phoenix_Plumage</li>
+          <li>CVG_Phoenix_Eyes</li>
+        </aspectGenes>
+      </li>
+      <li>
+        <purity>CVG_Purity_Diluted</purity>
+        <gene>CVG_Blood_Phoenix_Diluted</gene>
+        <hediff>CVG_Bloodline_Phoenix</hediff>
+        <affinityCultivationFactor>1.1</affinityCultivationFactor>
+        <abilities>
+          <li>CVG_Ability_PhoenixFlames</li>
+        </abilities>
+        <aspectGenes>
+          <li>CVG_Phoenix_Skin</li>
+          <li>CVG_Phoenix_Crest</li>
+        </aspectGenes>
+      </li>
+      <li>
+        <purity>CVG_Purity_Pure</purity>
+        <gene>CVG_Blood_Phoenix_Pure</gene>
+        <passion>Minor</passion>
+        <xenotype>CVG_Xeno_Phoenix</xenotype>
+        <hediff>CVG_Bloodline_Phoenix</hediff>
+        <affinityCultivationFactor>1.2</affinityCultivationFactor>
+        <!-- TODO (M5 techniques): Nirvana (passive: revive once, Harmony on Pawn.Kill) -->
+        <aspectGenes>
+        </aspectGenes>
+      </li>
+      <li>
+        <purity>CVG_Purity_Ancestral</purity>
+        <gene>CVG_Blood_Phoenix_Ancestral</gene>
+        <passion>Major</passion>
+        <xenotype>CVG_Xeno_Phoenix</xenotype>
+        <hediff>CVG_Bloodline_Phoenix</hediff>
+        <affinityCultivationFactor>1.35</affinityCultivationFactor>
+        <!-- TODO (M5 techniques): Eternal Nirvana (revive every 180 days) -->
+        <aspectGenes>
+          <li>CVG_Phoenix_SkinAncestral</li>
+        </aspectGenes>
+      </li>
+    </purities>
+  </Convergence.BloodlineDef>
+
+  <!-- Metabolism of the purity genes: total Trace -1, Diluted -2 (a flaw; beast vitality I/II costs -1 of it); Pure and Ancestral compensate the vanilla genes of the
+       bloodline xenotype (added on reaching Pure, -5 metabolism) so the total is 0 (Pure) and +1 (Ancestral). -->
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Phoenix_Trace</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+      <li><def>Delicate</def></li>
+      <li><def>Wimp</def></li>
+    </suppressedTraits>
+    <aggroMentalBreakSelectionChanceFactor>2</aggroMentalBreakSelectionChanceFactor>
+    <label>trace of phoenix blood</label>
+    <description>A warm ash in the veins. In winter you are always the last to shiver. An ancestor breathed the qi-rich ash of the Fires of Heaven, the phoenix flames that fell on the Rim like shooting stars; the ember never went out, and it flares into rage easily.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Fire</iconPath>
+    <iconColor>(0.7, 0.7, 0.7)</iconColor>
+    <displayOrderInCategory>20</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <aptitudes>
+      <Crafting>1</Crafting>
+      <Cooking>1</Cooking>
+      <Plants>-2</Plants>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Phoenix</bloodline>
+        <purity>CVG_Purity_Trace</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Phoenix_Diluted</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+      <li><def>Delicate</def></li>
+      <li><def>Wimp</def></li>
+    </suppressedTraits>
+    <aggroMentalBreakSelectionChanceFactor>1.6</aggroMentalBreakSelectionChanceFactor>
+    <label>diluted phoenix blood</label>
+    <description>The old fire wakes in your wounds and closes them. You hate the cold. This is the blood of the Nirvana Company, wandering phoenix healers who stayed on the Rim: people call their children 'those who never fall ill', and step back when they boil over.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Fire</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>21</displayOrderInCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <aptitudes>
+      <Crafting>2</Crafting>
+      <Cooking>2</Cooking>
+      <Plants>-2</Plants>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Phoenix</bloodline>
+        <purity>CVG_Purity_Diluted</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Phoenix_Pure</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+      <li><def>Delicate</def></li>
+      <li><def>Wimp</def></li>
+    </suppressedTraits>
+    <aggroMentalBreakSelectionChanceFactor>1.3</aggroMentalBreakSelectionChanceFactor>
+    <label>pure phoenix blood</label>
+    <description>Feathers of the Southern Court. Death is a door you have already walked through once. The Heavenly Cauldron Pavilion would name its bearer a Guardian of the Flame, though the temper of the fire is still close to the surface.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Fire</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>22</displayOrderInCategory>
+    <biostatCpx>3</biostatCpx>
+    <biostatMet>5</biostatMet>
+    <aptitudes>
+      <Crafting>3</Crafting>
+      <Cooking>3</Cooking>
+      <Plants>-1</Plants>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Phoenix</bloodline>
+        <purity>CVG_Purity_Pure</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Phoenix_Ancestral</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+      <li><def>Delicate</def></li>
+      <li><def>Wimp</def></li>
+    </suppressedTraits>
+    <label>ancestral phoenix blood</label>
+    <description>Born of Danxue's pyre. The fire remembers you, and returns you to the world every time. Feng Mingluan burned nine times inside the Iron Calamity to kill it, and at this purity her fire has grown too calm to burn in anger.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Fire</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>23</displayOrderInCategory>
+    <biostatCpx>4</biostatCpx>
+    <biostatMet>6</biostatMet>
+    <aptitudes>
+      <Crafting>4</Crafting>
+      <Cooking>4</Cooking>
+      <Plants>-1</Plants>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Phoenix</bloodline>
+        <purity>CVG_Purity_Ancestral</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Phoenix_Plumage</defName>
+    <label>phoenix plumage</label>
+    <description>Flame-red hair that falls like feathers. The Classic of Mountains and Seas paints the phoenix of Mount Danxue in these colors, and the Southern Court never dyed it.</description>
+    <iconPath>UI/Icons/Genes/Gene_HairColor</iconPath>
+    <iconColor>(230, 80, 35)</iconColor>
+    <displayOrderInCategory>25</displayOrderInCategory>
+    <hairColorOverride>(230, 80, 35)</hairColorOverride>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Phoenix_Eyes</defName>
+    <label>golden eyes</label>
+    <description>Bright golden eyes with an ember at the center. It is said that a phoenix cannot lie under oath, because the fire in its eyes would give it away.</description>
+    <iconPath>UI/Icons/Genes/Gene_GrayEyes</iconPath>
+    <iconColor>(255, 185, 40)</iconColor>
+    <displayOrderInCategory>26</displayOrderInCategory>
+    <exclusionTags>
+      <li>EyeColor</li>
+    </exclusionTags>
+    <!-- Own art: Things/Pawn/Humanlike/CVG/Phoenix/Eyes (provisional: vanilla Biotech texture). See docs/modulos/razas/README.md. -->
+    <renderNodeProperties>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Male/GrayEyes_Male</texPath>
+        <texPathFemale>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Female/GrayEyes_Female</texPathFemale>
+        <color>(255, 185, 40)</color>
+        <anchorTag>RightEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.2</drawSize>
+        <side>Right</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+          </defaultData>
+        </drawData>
+      </li>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Male/GrayEyes_Male</texPath>
+        <texPathFemale>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Female/GrayEyes_Female</texPathFemale>
+        <color>(255, 185, 40)</color>
+        <anchorTag>LeftEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.2</drawSize>
+        <side>Left</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+            <flip>true</flip>
+          </defaultData>
+          <dataWest>
+            <flip>false</flip>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Phoenix_Skin</defName>
+    <label>ember skin</label>
+    <description>Warm skin with a faint ember glow, as if the ash of the Fires of Heaven still smoldered underneath. Phoenix mothers wrap their children in furs anyway, out of their own hatred of winter.</description>
+    <iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+    <iconColor>(235, 165, 130)</iconColor>
+    <displayOrderInCategory>27</displayOrderInCategory>
+    <exclusionTags>
+      <li>SkinColorOverride</li>
+    </exclusionTags>
+    <skinColorOverride>(235, 165, 130)</skinColorOverride>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Phoenix_SkinAncestral</defName>
+    <label>phoenix skin</label>
+    <description>Deep red skin, warm as a live coal. The five virtues of the phoenix, written on head, wings, back, breast and belly, can be read on it by those who know the old script.</description>
+    <iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+    <iconColor>(200, 95, 70)</iconColor>
+    <displayOrderInCategory>28</displayOrderInCategory>
+    <exclusionTags>
+      <li>SkinColorOverride</li>
+    </exclusionTags>
+    <skinColorOverride>(200, 95, 70)</skinColorOverride>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Phoenix_Crest</defName>
+    <label>feather crest</label>
+    <description>Feathered crests where the ears should be, like the crown of the fenghuang. They rise when the bearer is angry, which is often.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Phoenix_Crest</iconPath>
+    <iconColor>(230, 80, 35)</iconColor>
+    <displayOrderInCategory>29</displayOrderInCategory>
+    <exclusionTags>
+      <li>Ears</li>
+    </exclusionTags>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/CVG_PhoenixCrest/PhoenixCrest</texPath>
+        <colorType>Hair</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawSize>(1.1, 1.1)</drawSize>
+        <drawData>
+          <defaultData>
+            <layer>70</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Phoenix_Tail</defName>
+    <label>tail feathers</label>
+    <description>A small plume of tail feathers. The children of the Nirvana Company were born with them, and the Rim took them for wandering bird spirits.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Phoenix_Tail</iconPath>
+    <iconColor>(230, 80, 35)</iconColor>
+    <displayOrderInCategory>30</displayOrderInCategory>
+    <exclusionTags>
+      <li>Tail</li>
+    </exclusionTags>
+    <!-- Own art: Things/Pawn/Humanlike/CVG/Phoenix/TailFeathers (provisional: vanilla Biotech texture). See docs/modulos/razas/README.md. -->
+    <renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/CVG_PhoenixTail/PhoenixTail</texPath>
+        <colorType>Hair</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <drawSize>(0.85, 0.85)</drawSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.250)</offset>
+            <rotationOffset>-0.0</rotationOffset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.250)</offset>
+            <rotationOffset>0.0</rotationOffset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.20, 0, -0.150)</offset>
+            <rotationOffset>0.0</rotationOffset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.20, 0, -0.150)</offset>
+            <rotationOffset>-0.0</rotationOffset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Phoenix_TailGreat</defName>
+    <label>phoenix tail</label>
+    <description>A fan of long tail feathers, red and gold like the Vermilion Bird of the South. The Heavenly Cauldron Pavilion keeps the molted ones to fan its alchemy fires.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Phoenix_TailGreat</iconPath>
+    <iconColor>(255, 140, 40)</iconColor>
+    <displayOrderInCategory>31</displayOrderInCategory>
+    <exclusionTags>
+      <li>Tail</li>
+    </exclusionTags>
+    <!-- Own art: Things/Pawn/Humanlike/CVG/Phoenix/TailFeathers (provisional: vanilla Biotech texture). See docs/modulos/razas/README.md. -->
+    <renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/CVG_PhoenixTailGreat/PhoenixTailGreat</texPath>
+        <colorType>Hair</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <drawSize>(1.1, 1.1)</drawSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.239)</offset>
+            <rotationOffset>25.0</rotationOffset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.239)</offset>
+            <rotationOffset>-25.0</rotationOffset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.25, 0, -0.221)</offset>
+            <rotationOffset>-12.5</rotationOffset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.25, 0, -0.221)</offset>
+            <rotationOffset>12.5</rotationOffset>
+          </dataWest>
+        </drawData>
+      </li>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/CVG_PhoenixTailGreat/PhoenixTailGreat</texPath>
+        <colorType>Hair</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <drawSize>(1.1, 1.1)</drawSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.250)</offset>
+            <rotationOffset>-0.0</rotationOffset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.250)</offset>
+            <rotationOffset>0.0</rotationOffset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.25, 0, -0.150)</offset>
+            <rotationOffset>0.0</rotationOffset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.25, 0, -0.150)</offset>
+            <rotationOffset>-0.0</rotationOffset>
+          </dataWest>
+        </drawData>
+      </li>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/CVG_PhoenixTailGreat/PhoenixTailGreat</texPath>
+        <colorType>Hair</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <drawSize>(1.1, 1.1)</drawSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.239)</offset>
+            <rotationOffset>-25.0</rotationOffset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.239)</offset>
+            <rotationOffset>25.0</rotationOffset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.25, 0, -0.079)</offset>
+            <rotationOffset>12.5</rotationOffset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.25, 0, -0.079)</offset>
+            <rotationOffset>-12.5</rotationOffset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <HediffDef ParentName="CVG_BloodlineHediffBase">
+    <defName>CVG_Bloodline_Phoenix</defName>
+    <label>phoenix blood</label>
+    <description>Awakened phoenix blood: wounds close fast, fire barely touches the body. The cold and a short temper are the price.</description>
+    <defaultLabelColor>(1, 0.55, 0.25)</defaultLabelColor>
+    <!-- Done in XML: hot temper as aggroMentalBreakSelectionChanceFactor 2/1.6/1.3 on the identity genes. TODO (needs code; see docs/modulos/razas/FENIX.md): limb regrowth (Pure/Ancestral), incendiary mental breaks (a fire-starting break), cold-work mood, fire technique damage -->
+    <stages>
+      <li>
+        <minSeverity>1</minSeverity>
+        <label>trace</label>
+        <statOffsets>
+          <ArmorRating_Heat>0.05</ArmorRating_Heat>
+          <ComfyTemperatureMin>5</ComfyTemperatureMin>
+          <CVG_ForgeQuality>0.25</CVG_ForgeQuality>
+        </statOffsets>
+        <statFactors>
+          <InjuryHealingFactor>1.1</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.1</ImmunityGainSpeed>
+          <GeneralLaborSpeed>1.15</GeneralLaborSpeed>
+          <CookSpeed>1.15</CookSpeed>
+          <CVG_ForgeSpeed>1.2</CVG_ForgeSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <label>diluted</label>
+        <statOffsets>
+          <ArmorRating_Heat>0.15</ArmorRating_Heat>
+          <ComfyTemperatureMax>10</ComfyTemperatureMax>
+          <ComfyTemperatureMin>15</ComfyTemperatureMin>
+          <MentalBreakThreshold>0.06</MentalBreakThreshold>
+          <CVG_ForgeQuality>0.5</CVG_ForgeQuality>
+        </statOffsets>
+        <statFactors>
+          <InjuryHealingFactor>1.5</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.3</ImmunityGainSpeed>
+          <Flammability>0.7</Flammability>
+          <LifespanFactor>1.2</LifespanFactor>
+          <CVG_QiMax>1.05</CVG_QiMax>
+          <CVG_QiRegen>1.05</CVG_QiRegen>
+          <GeneralLaborSpeed>1.3</GeneralLaborSpeed>
+          <CookSpeed>1.3</CookSpeed>
+          <CVG_ForgeSpeed>1.4</CVG_ForgeSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <label>pure</label>
+        <statOffsets>
+          <ArmorRating_Heat>0.3</ArmorRating_Heat>
+          <ComfyTemperatureMax>25</ComfyTemperatureMax>
+          <ComfyTemperatureMin>10</ComfyTemperatureMin>
+          <MentalBreakThreshold>0.03</MentalBreakThreshold>
+          <CVG_ForgeQuality>1.0</CVG_ForgeQuality>
+        </statOffsets>
+        <statFactors>
+          <InjuryHealingFactor>2.0</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.6</ImmunityGainSpeed>
+          <Flammability>0.35</Flammability>
+          <LifespanFactor>1.5</LifespanFactor>
+          <CVG_QiMax>1.1</CVG_QiMax>
+          <CVG_QiRegen>1.2</CVG_QiRegen>
+          <GeneralLaborSpeed>1.5</GeneralLaborSpeed>
+          <CookSpeed>1.5</CookSpeed>
+          <CVG_ForgeSpeed>1.7</CVG_ForgeSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>4</minSeverity>
+        <label>ancestral</label>
+        <statOffsets>
+          <ArmorRating_Heat>0.5</ArmorRating_Heat>
+          <ComfyTemperatureMax>40</ComfyTemperatureMax>
+          <ComfyTemperatureMin>5</ComfyTemperatureMin>
+          <CVG_ForgeQuality>2.0</CVG_ForgeQuality>
+        </statOffsets>
+        <statFactors>
+          <InjuryHealingFactor>3.0</InjuryHealingFactor>
+          <ImmunityGainSpeed>2.0</ImmunityGainSpeed>
+          <Flammability>0</Flammability>
+          <LifespanFactor>2.0</LifespanFactor>
+          <CVG_QiMax>1.2</CVG_QiMax>
+          <CVG_QiRegen>1.35</CVG_QiRegen>
+          <GeneralLaborSpeed>1.8</GeneralLaborSpeed>
+          <CookSpeed>1.8</CookSpeed>
+          <CVG_ForgeSpeed>2.2</CVG_ForgeSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <AbilityDef ParentName="CVG_InnateAbilityBase">
+    <defName>CVG_Ability_PhoenixFlames</defName>
+    <label>phoenix flames</label>
+    <description>Hurl a golden flame that bursts on impact.\n\nFire burst of radius 2 (16 damage) that sets the target alight. Costs qi if the user cultivates.</description>
+    <iconPath>UI/Abilities/FireSpew</iconPath>
+    <cooldownTicksRange>10000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>19.9</range>
+      <warmupTime>0.6</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityQiCost">
+        <qiCost>25</qiCost>
+      </li>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>CVG_Projectile_PhoenixFlame</projectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- TODO: spare allies and scale with realm power (needs a projectile class). Own art: Things/Projectile/CVG/PhoenixFlame. -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>CVG_Projectile_PhoenixFlame</defName>
+    <label>phoenix flame</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Spark</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(255, 190, 60)</color>
+      <drawSize>1.6</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Flame</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <explosionRadius>2</explosionRadius>
+      <speed>40</speed>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+    </projectile>
+  </ThingDef>
+
+  <XenotypeDef>
+    <defName>CVG_Xeno_Phoenix</defName>
+    <label>flame guardian</label>
+    <description>Guardians of the Heavenly Cauldron Pavilion: pure phoenix blood, flame-red plumage, golden eyes and tail feathers. They heal fast, shrug off fire and loathe the cold.</description>
+    <descriptionShort>Pure phoenix blood: flame plumage and tail feathers. Fast healing, fireproof, hates the cold.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Highmate</iconPath>
+    <inheritable>true</inheritable>
+    <nameMaker>CVG_NamerPerson_Phoenix</nameMaker>
+    <nameMakerFemale>CVG_NamerPerson_Phoenix_Female</nameMakerFemale>
+    <chanceToUseNameMaker>0.8</chanceToUseNameMaker>
+    <genes>
+      <li>CVG_Blood_Phoenix_Pure</li>
+      <li>CVG_Phoenix_Plumage</li>
+      <li>CVG_Phoenix_Eyes</li>
+      <li>CVG_Phoenix_Skin</li>
+      <li>CVG_Phoenix_Crest</li>
+      <li>FireResistant</li>
+      <li>Immunity_Strong</li>
+      <li>Superclotting</li>
+      <li>Beauty_Pretty</li>
+      <li>CVG_BloodGene_BeastVitality_III</li>
+      <li>CVG_BloodGene_KeenSenses_III</li>
+      <li>CVG_BloodGene_BloodLongevity_III</li>
+      <li>CVG_BloodGene_BeastInstinct_III</li>
+      <li>CVG_BloodGene_QiResonance_III</li>
+      <li>CVG_BloodGene_FieryPlumes_III</li>
+      <li>CVG_BloodGene_AshBorn_III</li>
+      <li>CVG_BloodGene_Nirvana_III</li>
+    </genes>
+  </XenotypeDef>
+
+  <!-- Pawn kind for the vanilla "Spawn pawn" debug action and future factions/scenarios. -->
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>CVG_Kind_Phoenix</defName>
+    <initialResistanceRange>13~20</initialResistanceRange>
+    <initialWillRange>1~3</initialWillRange>
+    <label>flame guardian</label>
+    <defaultFactionDef>PlayerColony</defaultFactionDef>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelMoney>350~600</apparelMoney>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>CVG_Bloodline_Phoenix</li>
+        </categories>
+        <commonality>0.7</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+        <commonality>0.3</commonality>
+      </li>
+    </backstoryFiltersOverride>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <xenotypeSet>
+      <xenotypeChances>
+        <CVG_Xeno_Phoenix>1</CVG_Xeno_Phoenix>
+      </xenotypeChances>
+    </xenotypeSet>
+  </PawnKindDef>
+
+</Defs>

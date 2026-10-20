@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_AzurePeak_Disciple.label>discípulo externo de espada</CVG_AzurePeak_Disciple.label>
+  <CVG_AzurePeak_Bearer.label>portador de espada interno</CVG_AzurePeak_Bearer.label>
+  <CVG_AzurePeak_Blade.label>Hoja del Pico (núcleo)</CVG_AzurePeak_Blade.label>
+  <CVG_AzurePeak_Elder.label>anciano de espada</CVG_AzurePeak_Elder.label>
+  <CVG_AzurePeak_Swordsmith.label>herrero del Pico</CVG_AzurePeak_Swordsmith.label>
+  <CVG_SilentLotus_Lay.label>aprendiz laico</CVG_SilentLotus_Lay.label>
+  <CVG_SilentLotus_Monk.label>monje del templo</CVG_SilentLotus_Monk.label>
+  <CVG_SilentLotus_Guardian.label>guardián del templo</CVG_SilentLotus_Guardian.label>
+  <CVG_SilentLotus_Venerable.label>venerable</CVG_SilentLotus_Venerable.label>
+  <CVG_SilentLotus_Herbalist.label>herbolario del templo</CVG_SilentLotus_Herbalist.label>
+  <CVG_HeavenlyCauldron_Apprentice.label>aprendiz de caldero</CVG_HeavenlyCauldron_Apprentice.label>
+  <CVG_HeavenlyCauldron_Alchemist.label>alquimista</CVG_HeavenlyCauldron_Alchemist.label>
+  <CVG_HeavenlyCauldron_Master.label>maestro de caldero</CVG_HeavenlyCauldron_Master.label>
+  <CVG_HeavenlyCauldron_Grand.label>gran alquimista</CVG_HeavenlyCauldron_Grand.label>
+  <CVG_HeavenlyCauldron_Auctioneer.label>subastero del pabellón</CVG_HeavenlyCauldron_Auctioneer.label>
+  <CVG_AncientDragon_Watcher.label>vigilante del clan</CVG_AncientDragon_Watcher.label>
+  <CVG_AncientDragon_ClanElder.label>anciano del clan</CVG_AncientDragon_ClanElder.label>
+  <CVG_AncientDragon_Hoarder.label>tesorero del clan</CVG_AncientDragon_Hoarder.label>
+  <CVG_BloodMoon_Servant.label>siervo de sangre</CVG_BloodMoon_Servant.label>
+  <CVG_BloodMoon_Disciple.label>discípulo de sangre</CVG_BloodMoon_Disciple.label>
+  <CVG_BloodMoon_Crimson.label>núcleo carmesí</CVG_BloodMoon_Crimson.label>
+  <CVG_BloodMoon_Elder.label>anciano de sangre</CVG_BloodMoon_Elder.label>
+  <CVG_RogueCultivators_Wanderer.label>cultivador errante</CVG_RogueCultivators_Wanderer.label>
+  <CVG_RogueCultivators_Sellsword.label>mercenario cultivador</CVG_RogueCultivators_Sellsword.label>
+  <CVG_RogueCultivators_Veteran.label>errante veterano</CVG_RogueCultivators_Veteran.label>
+  <CVG_RogueCultivators_Hermit.label>ermitaño oculto</CVG_RogueCultivators_Hermit.label>
+  <CVG_RogueCultivators_Peddler.label>buhonero del mercado nocturno</CVG_RogueCultivators_Peddler.label>
+</LanguageData>

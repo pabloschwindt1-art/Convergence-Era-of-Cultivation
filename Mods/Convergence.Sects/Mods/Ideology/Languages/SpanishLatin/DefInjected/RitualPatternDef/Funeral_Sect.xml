@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Pattern_DaoFuneral.ritualExpectedDesc>Puedes celebrar un funeral del Dao {IDEOLIGION_adjective} por {PAWN_nameDef}.</CVG_Pattern_DaoFuneral.ritualExpectedDesc>
+  <CVG_Pattern_DaoFuneral.ritualExpectedDescNoAdjective>Puedes celebrar un funeral del Dao por {PAWN_nameDef}.</CVG_Pattern_DaoFuneral.ritualExpectedDescNoAdjective>
+</LanguageData>

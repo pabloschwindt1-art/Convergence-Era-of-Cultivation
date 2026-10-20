@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Blood Demon cultivator (docs/modulos/BIOTECH_WUXIA.md §2), the sanguophage in a wuxia key. Vanilla systems:
+    hemogen = blood essence, deathrest = retreat in the blood pool, bloodfeeding. Not evil by definition: the method is
+    blood, not the morals (no ideology or faction forced). Own pieces: the gene "blood demon arts" (cultivation, blood
+    techniques, weakness to moon silver) and the blood pool (deathrest casket without electricity).
+    Provisional art: vanilla sanguophage icon and deathrest casket tinted. Own art: UI/Icons/Xenotypes/CVG_BloodDemon,
+    Things/Building/CVG/BloodPool.
+  -->
+  <GeneDef>
+    <defName>CVG_BloodDemonArts</defName>
+    <label>blood demon arts</label>
+    <description>Before the Blood Moon Cult made it a creed, the blood arts were simply the oldest way to cultivate: every drop of blood holds a little qi. Carriers of this gene cultivate through blood essence (hemogen), learn the blood techniques (drain, blood armor) and heal by drinking the life of their foes. Moon silver, forged under the full moon of Jiuxiao, burns them.</description>
+    <iconPath>UI/Icons/Xenotypes/Sanguophage</iconPath>
+    <displayCategory>Hemogen</displayCategory>
+    <displayOrderInCategory>200</displayOrderInCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <abilities>
+      <li>CVG_Tech_BloodDrain</li>
+      <li>CVG_Tech_BloodArmor</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>CVG_Tech_BloodDrain</AbilityDef>
+      <AbilityDef>CVG_Tech_BloodArmor</AbilityDef>
+    </descriptionHyperlinks>
+    <statFactors>
+      <CVG_CultivationSpeed>1.2</CVG_CultivationSpeed>
+      <CVG_BodyTemperingSpeed>1.2</CVG_BodyTemperingSpeed>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_StuffWeakness">
+        <stuff>CVG_MoonSilver</stuff>
+        <factor>1.5</factor>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <XenotypeDef>
+    <defName>CVG_Xeno_BloodDemon</defName>
+    <label>blood demon</label>
+    <description>Cultivators who walk the blood path, first opened by Chiyou's war-shamans and later claimed by the Blood Moon Cult. Blood essence fuels their qi and their bodies; they retreat into blood pools instead of sleeping for long, do not age and drink the life of their enemies. Sunlight weakens them and moon silver burns them. Like the elders of the Blood Moon Cult, a blood demon can pass on the blood to a disciple, at the cost of a long coma.
+
+The blood path is a method, not a morality: a blood demon can be a hero, a hermit or a tyrant.</description>
+    <descriptionShort>Cultivators of the blood path: blood essence, blood pool retreats, blood techniques. Weak to sunlight and moon silver.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Sanguophage</iconPath>
+    <inheritable>false</inheritable>
+    <combatPowerFactor>2</combatPowerFactor>
+    <displayPriority>-990</displayPriority>
+    <factionlessGenerationWeight>0</factionlessGenerationWeight>
+    <genes>
+      <li>Hemogenic</li>
+      <li>HemogenDrain</li>
+      <li>Bloodfeeder</li>
+      <li>Coagulate</li>
+      <li>Ageless</li>
+      <li>Deathrest</li>
+      <li>MeleeDamage_Strong</li>
+      <li>WoundHealing_Fast</li>
+      <li>DarkVision</li>
+      <li>UVSensitivity_Mild</li>
+      <!-- "Passing on the blood": lets a blood demon make disciples (vanilla ReimplantXenogerm ability). -->
+      <li>XenogermReimplanter</li>
+      <li>CVG_BloodDemonArts</li>
+    </genes>
+  </XenotypeDef>
+
+  <AbilityDef>
+    <defName>CVG_Tech_BloodDrain</defName>
+    <label>blood drain</label>
+    <description>The Crimson Thread Palm of the Blood Moon Cult: legend says its founder learned it by watching mosquitoes drink from a sleeping dragon. Pull the blood out of a foe through the air; the stolen blood heals the caster and becomes blood essence.
+
+12 cutting damage (scaled by realm); half of it heals the caster.</description>
+    <iconPath>UI/Icons/Genes/Gene_Bloodfeeder</iconPath>
+    <cooldownTicksRange>2500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>false</ai_IsIncendiary>
+    <writeCombatLog>true</writeCombatLog>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>7.9</range>
+      <warmupTime>0.6</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityHemogenCost">
+        <hemogenCost>0.1</hemogenCost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityBloodDrain">
+        <damageDef>Cut</damageDef>
+        <damage>12</damage>
+        <healFraction>0.5</healFraction>
+        <hemogenPerDamage>0.015</hemogenPerDamage>
+        <fleck>PsycastPsychicLine</fleck>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DemonicArt" />
+    </modExtensions>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>CVG_Tech_BloodArmor</defName>
+    <label>blood armor</label>
+    <description>Blood demons who survived the purges of the righteous sects learned to wear their own blood as armor, red as a temple door. Harden spilled blood into a crimson armor that swallows blows.
+
+Shield of 50 (scaled by realm) for about 3 hours.</description>
+    <iconPath>UI/Icons/Genes/Gene_Coagulate</iconPath>
+    <cooldownTicksRange>5000</cooldownTicksRange>
+    <targetRequired>false</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsOffensive>false</ai_IsOffensive>
+    <ai_IsIncendiary>false</ai_IsIncendiary>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>0.9</range>
+      <warmupTime>0.5</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityAIConditions">
+        <!-- AI: raise it when enemies are close and it is not already up -->
+        <minEnemies>1</minEnemies>
+        <enemyRadius>15</enemyRadius>
+        <skipIfHediff>CVG_BloodArmor</skipIfHediff>
+      </li>
+      <li Class="CompProperties_AbilityHemogenCost">
+        <hemogenCost>0.25</hemogenCost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityTechniqueHediff">
+        <hediffDef>CVG_BloodArmor</hediffDef>
+        <onCaster>true</onCaster>
+        <durationPowerExponent>0</durationPowerExponent>
+        <fleckDef>PsycastAreaEffect</fleckDef>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DemonicArt" />
+    </modExtensions>
+  </AbilityDef>
+
+  <HediffDef>
+    <defName>CVG_BloodArmor</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>blood armor</label>
+    <description>Red as a temple door and hard as lacquer, an armor of hardened blood swallows blows until it breaks.</description>
+    <defaultLabelColor>(0.9, 0.35, 0.35)</defaultLabelColor>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>7500~7500</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="Convergence.HediffCompProperties_QiShield">
+        <capacity>50</capacity>
+        <absorbFleck>LightningGlow</absorbFleck>
+        <breakFleck>PsycastAreaEffect</breakFleck>
+      </li>
+    </comps>
+    <stages>
+      <li />
+    </stages>
+    <renderNodeProperties>
+      <li>
+        <debugLabel>Blood armor</debugLabel>
+        <nodeClass>Convergence.PawnRenderNode_Single</nodeClass>
+        <texPath>Other/ShieldBubble</texPath>
+        <shaderTypeDef>MoteGlow</shaderTypeDef>
+        <color>(1, 0.3, 0.3, 0.5)</color>
+        <parentTagDef>Body</parentTagDef>
+        <overrideMeshSize>(1.6, 1.6)</overrideMeshSize>
+        <baseLayer>85</baseLayer>
+        <pawnType>Any</pawnType>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>CVG_BloodPool</defName>
+    <label>blood pool</label>
+    <description>In the caves beneath the Blood Moon Cult's temples, elders sleep for weeks in basins of warm blood, and wake younger. This stone basin is where a blood demon retreats for days to restore the body (a deathrest casket without electricity). It can bind the same deathrest devices as a casket.
+
+Only those with the deathrest gene can use it. It draws on the qi network.</description>
+    <thingClass>Building_Bed</thingClass>
+    <tickerType>Rare</tickerType>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>42</pathCost>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <canOverlapZones>false</canOverlapZones>
+    <passability>PassThroughOnly</passability>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <thingCategories Inherit="False">
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Building/CVG/BloodPool</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <building>
+      <bed_showSleeperBody>true</bed_showSleeperBody>
+      <ai_chillDestination>false</ai_chillDestination>
+      <bed_healPerDay>6</bed_healPerDay>
+      <bed_canBeMedical>false</bed_canBeMedical>
+      <bed_DisplayOwnerType>false</bed_DisplayOwnerType>
+      <bed_DisplayOwnersInInspectString>false</bed_DisplayOwnersInInspectString>
+      <bed_countsForBedroomOrBarracks>false</bed_countsForBedroomOrBarracks>
+      <buildingTags>
+        <li>Bed</li>
+        <li>Biotech</li>
+      </buildingTags>
+      <relatedBuildCommands>
+        <li>CVG_BloodLotusBasin</li>
+        <li>CVG_BloodMoonCenser</li>
+        <li>CVG_BloodDrumOfReturn</li>
+      </relatedBuildCommands>
+    </building>
+    <designationCategory>Biotech</designationCategory>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Mass>80</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>2</Beauty>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+      <Comfort>0.7</Comfort>
+      <ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+      <SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+    </statBases>
+    <size>(1,2)</size>
+    <stuffCategories Inherit="False">
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>80</costStuffCount>
+    <costList>
+      <CVG_SpiritStone>10</CVG_SpiritStone>
+    </costList>
+    <comps>
+      <li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <compClass>CompAssignableToPawn_DeathrestCasket</compClass>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>0</basePowerConsumption>
+        <idlePowerDraw>0</idlePowerDraw>
+        <showPowerNeededIfOff>false</showPowerNeededIfOff>
+      </li>
+      <li Class="Convergence.CompProperties_QiNode">
+        <compClass>Convergence.CompQiConsumer</compClass>
+        <consumeDay>20</consumeDay>
+      </li>
+      <li Class="CompProperties_DeathrestBindable">
+        <stackLimit>1</stackLimit>
+        <countsTowardsBuildingLimit>false</countsTowardsBuildingLimit>
+        <deathrestEffectivenessFactor>1.1</deathrestEffectivenessFactor>
+        <mustBeLayingInToBind>true</mustBeLayingInToBind>
+        <displayTimeActive>false</displayTimeActive>
+        <soundStart>DeathrestCasket_Enter</soundStart>
+        <soundEnd>DeathrestCasket_Exit</soundEnd>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_DrawLinesToDeathrestBuildings</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <!-- ================= Blood essence pill (wuxia hemogen pack) ================= -->
+  <ThingDef>
+    <defName>CVG_BloodEssencePill</defName>
+    <label>blood essence pill</label>
+    <description>The Blood Moon Cult learned to boil blood down with powdered spirit stone until only its essence remained, a dark red pill that never spoils. A blood demon swallows it to restore blood essence (hemogen), more than a whole pack of raw blood gives. It can also fuel the blood lotus basin and the blood moon censer.</description>
+    <category>Item</category>
+    <thingClass>ThingWithComps</thingClass>
+    <drawerType>MapMeshOnly</drawerType>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <selectable>true</selectable>
+    <stackLimit>25</stackLimit>
+    <tickerType>Rare</tickerType>
+    <possessionCount>5</possessionCount>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <alwaysHaulable>true</alwaysHaulable>
+    <pathCost>14</pathCost>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <texPath>Things/Item/CVG_BloodEssencePill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <DeteriorationRate>1</DeteriorationRate>
+      <Mass>0.05</Mass>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.05</Nutrition>
+      <Beauty>0</Beauty>
+      <MarketValue>18</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <ingestible>
+      <foodType>Fluid</foodType>
+      <preferability>DesperateOnly</preferability>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      <nonDrugIngestibleWithoutFoodNeed>true</nonDrugIngestibleWithoutFoodNeed>
+      <specialThoughtDirect>IngestedHemogenPack</specialThoughtDirect>
+      <ingestSound>HemogenPack_Consume</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_OffsetHemogen">
+          <offset>0.3</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>CVG_Make_BloodEssencePill</defName>
+    <label>refine blood essence pill</label>
+    <description>Boil down a hemogen pack or spirit beast blood with a spirit stone into a blood essence pill.</description>
+    <jobString>Refining a blood essence pill.</jobString>
+    <workAmount>800</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>HemogenPack</li>
+            <li>CVG_BeastBlood</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritStone</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>HemogenPack</li>
+        <li>CVG_BeastBlood</li>
+        <li>CVG_SpiritStone</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_BloodEssencePill>1</CVG_BloodEssencePill>
+    </products>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+      <li MayRequire="prospero1088.convergence.alchemy">CVG_AlchemyFurnace</li>
+    </recipeUsers>
+    <descriptionHyperlinks>
+      <ThingDef>CVG_BloodEssencePill</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+</Defs>

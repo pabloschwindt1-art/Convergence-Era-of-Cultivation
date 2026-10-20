@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_PillToxicity.label>toxicidad de píldoras</CVG_PillToxicity.label>
+  <CVG_PillToxicity.description>Restos de poder medicinal que el cuerpo aún no limpió. Los alquimistas de Jiuxiao lo llaman veneno de píldora y dicen que la codicia de píldoras mató a más cultivadores que las tribulaciones. Un poco es inofensivo; demasiadas píldoras seguidas obstruyen los meridianos.</CVG_PillToxicity.description>
+  <CVG_PillToxicity.stages.0.label>rastro</CVG_PillToxicity.stages.0.label>
+  <CVG_PillToxicity.stages.1.label>acumulación</CVG_PillToxicity.stages.1.label>
+  <CVG_PillToxicity.stages.2.label>envenenamiento</CVG_PillToxicity.stages.2.label>
+  <CVG_PillToxicity.stages.3.label>envenenamiento grave</CVG_PillToxicity.stages.3.label>
+</LanguageData>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Alchemy & artifacts workbenches. Leveled ones use Core CompWorkbenchLevel (upgrade gizmo, art, speed and quality per level). -->
+
+  <ThingDef ParentName="BenchBase">
+    <defName>CVG_SpiritForge</defName>
+    <label>spirit forge</label>
+    <description>A wood-fired forge where metal is folded with the qi of spirit stones. The Azure Peak Sword Sect says its first fire was lit by Gan Jiang and Mo Ye, the smith couple of legend: when the metal would not melt, Mo Ye gave herself to the flames, and the twin swords that came out bore their names. It makes spirit weapons and everything a smithy makes, and can be upgraded in place (level 2: spears and bows; level 3: treasures such as the flying sword). No electricity.</description>
+    <thingClass>Convergence.Building_LeveledWorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/Alchemy/SpiritForge1</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(2.3,2.3)</drawSize>
+      <shadowData>
+        <volume>(1.8, 0.4, 1.6)</volume>
+      </shadowData>
+    </graphicData>
+    <stuffCategories>
+      <li>Stony</li>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>80</costStuffCount>
+    <costList>
+      <CVG_SpiritStone>20</CVG_SpiritStone>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>4000</WorkToBuild>
+      <MaxHitPoints>220</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2520</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>60.0</fuelConsumptionRate>
+        <fuelCapacity>50.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="Convergence.CompProperties_WorkbenchLevel">
+        <levels>
+          <li>
+            <texPath>Things/Building/CVG/Alchemy/SpiritForge1</texPath>
+            <workSpeedFactor>1</workSpeedFactor>
+            <qualityBonus>0</qualityBonus>
+          </li>
+          <li>
+            <texPath>Things/Building/CVG/Alchemy/SpiritForge2</texPath>
+            <requiredResearch>CVG_Research_SpiritForge2</requiredResearch>
+            <upgradeCost>
+              <CVG_SpiritSteel>50</CVG_SpiritSteel>
+              <CVG_SpiritStone>30</CVG_SpiritStone>
+            </upgradeCost>
+            <workSpeedFactor>1.25</workSpeedFactor>
+            <qualityBonus>0.25</qualityBonus>
+          </li>
+          <li>
+            <texPath>Things/Building/CVG/Alchemy/SpiritForge3</texPath>
+            <requiredResearch>CVG_Research_SpiritForge3</requiredResearch>
+            <upgradeCost>
+              <CVG_SpiritCrystal>10</CVG_SpiritCrystal>
+              <CVG_SpiritJade>20</CVG_SpiritJade>
+              <CVG_SpiritStone>50</CVG_SpiritStone>
+            </upgradeCost>
+            <workSpeedFactor>1.5</workSpeedFactor>
+            <qualityBonus>0.6</qualityBonus>
+          </li>
+        </levels>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <modExtensions>
+      <!-- Principle n.2: the spirit forge also makes every smithy recipe and joins the "make weapons" work giver. -->
+      <li Class="Convergence.DefModExtension_CopyRecipes"><from><li>FueledSmithy</li></from></li>
+      <li Class="Convergence.DefModExtension_Forge" />
+      <li Class="Convergence.DefModExtension_ProgressCounter">
+        <counter>Forging</counter>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BenchBase">
+    <defName>CVG_AlchemyFurnace</defName>
+    <label>alchemy furnace</label>
+    <description>A bronze cauldron over a spirit fire, cast after the tripod of Shennong, the Divine Farmer who tasted the hundred herbs to learn which ones heal and which ones kill. The Heavenly Cauldron Pavilion lights every new furnace with ash from an older one, so that each flame descends from his. Pills come out with a quality that depends on the alchemist and on the furnace level (level 2: blood purification pills; level 3: nine-turns pills), and it also makes everything a drug lab makes. No electricity.</description>
+    <thingClass>Convergence.Building_LeveledWorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/Alchemy/AlchemyFurnace1</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(2.3,2.3)</drawSize>
+      <shadowData>
+        <volume>(1.8, 0.4, 1.6)</volume>
+      </shadowData>
+    </graphicData>
+    <stuffCategories>
+      <li>Stony</li>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>80</costStuffCount>
+    <costList>
+      <CVG_SpiritStone>15</CVG_SpiritStone>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>4000</WorkToBuild>
+      <MaxHitPoints>220</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2520</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>60.0</fuelConsumptionRate>
+        <fuelCapacity>50.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="Convergence.CompProperties_WorkbenchLevel">
+        <levels>
+          <li>
+            <texPath>Things/Building/CVG/Alchemy/AlchemyFurnace1</texPath>
+            <workSpeedFactor>1</workSpeedFactor>
+            <qualityBonus>0</qualityBonus>
+          </li>
+          <li>
+            <texPath>Things/Building/CVG/Alchemy/AlchemyFurnace2</texPath>
+            <requiredResearch>CVG_Research_AlchemyFurnace2</requiredResearch>
+            <upgradeCost>
+              <CVG_SpiritStone>40</CVG_SpiritStone>
+              <CVG_SpiritJade>10</CVG_SpiritJade>
+            </upgradeCost>
+            <workSpeedFactor>1.25</workSpeedFactor>
+            <qualityBonus>0.25</qualityBonus>
+          </li>
+          <li>
+            <texPath>Things/Building/CVG/Alchemy/AlchemyFurnace3</texPath>
+            <requiredResearch>CVG_Research_AlchemyFurnace3</requiredResearch>
+            <upgradeCost>
+              <CVG_SpiritCrystal>8</CVG_SpiritCrystal>
+              <CVG_SpiritJade>20</CVG_SpiritJade>
+            </upgradeCost>
+            <workSpeedFactor>1.5</workSpeedFactor>
+            <qualityBonus>0.6</qualityBonus>
+          </li>
+        </levels>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <modExtensions>
+      <!-- Principle n.2: the alchemy furnace also makes every drug lab recipe and joins the "produce drugs" work giver. -->
+      <li Class="Convergence.DefModExtension_CopyRecipes"><from><li>DrugLab</li></from></li>
+      <li Class="Convergence.DefModExtension_ProgressCounter">
+        <counter>Alchemy</counter>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BenchBase">
+    <defName>CVG_RuneTable</defName>
+    <label>rune table</label>
+    <description>A slab of jade carved with formation lines. During the Iron Calamity the sects of Jiuxiao learned that mortal steel could not bite the devouring machine, so they etched runes on every blade their servants carried; the habit outlived the war. Engraves runes on an ordinary weapon, raising it to spirit grade 1 so it can wound cultivators.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/Alchemy/RuneTable</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(2.3,2.3)</drawSize>
+      <shadowData>
+        <volume>(1.8, 0.4, 1.6)</volume>
+      </shadowData>
+    </graphicData>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>80</costStuffCount>
+    <costList>
+      <CVG_SpiritJade>10</CVG_SpiritJade>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>4000</WorkToBuild>
+      <MaxHitPoints>220</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2520</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <comps>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ProgressCounter">
+        <counter>Forging</counter>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BenchBase">
+    <defName>CVG_TalismanTable</defName>
+    <label>talisman table</label>
+    <description>A desk of brushes, cinnabar ink and yellow paper. Tradition holds that Zhang Daoling, the first Celestial Master, received the art of talismans on Longhushan, the Dragon and Tiger Mountain, and that each one must be written in a single breath of qi or it is only ink. Writes single-use talismans.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/Alchemy/TalismanTable</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(2.3,2.3)</drawSize>
+      <shadowData>
+        <volume>(1.8, 0.4, 1.6)</volume>
+      </shadowData>
+    </graphicData>
+    <stuffCategories>
+      <li>Woody</li>
+    </stuffCategories>
+    <costStuffCount>80</costStuffCount>
+    <costList>
+      <CVG_SpiritStone>5</CVG_SpiritStone>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>4000</WorkToBuild>
+      <MaxHitPoints>220</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2520</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <comps>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ProgressCounter">
+        <counter>Talismans</counter>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Sect memes (Ideology only). Icons are provisional vanilla ones. -->
+  <MemeDef>
+    <defName>CVG_Meme_SwordWay</defName>
+    <label>sword way</label>
+    <description>The sword is neither good nor bad; the hand is. Mastery is won by cutting and tempering the Will of the Sword.</description>
+    <iconPath>UI/Memes/CVG/SwordWay</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>110</renderOrder>
+    <exclusionTags><li>CVG_Sect_SwordWay</li></exclusionTags>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->sword</li>
+        <li>memeHyphenPrefix->sword</li>
+        <li>memeConcept->sword way</li>
+        <li>memeLeaderNoun->blade</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <li>creation(tag=meme_CVG_Meme_SwordWay)->[deity0_name] taught the way of the sword way.</li>
+          <li>episode(uses=1,tag=meme_CVG_Meme_SwordWay)->[deity0_name] showed the first [memberName] the way of the sword way.</li>
+          <li>intro(tag=meme_CVG_Meme_SwordWay)->The early [memberNamePlural] of the [place_summary] [place_name] built a great [altarName] to [deity0_name].</li>
+          <li>conflict(tag=meme_CVG_Meme_SwordWay)->A powerful [foeLeader] despised the [memberNamePlural] and their ways.</li>
+          <li>founderJoin(tag=meme_CVG_Meme_SwordWay)->[memberName]'s savior [founderName] came down from the mountain with nothing but the sword way.</li>
+          <li>victory(tag=meme_CVG_Meme_SwordWay)->[founderName] faced the [foeLeader] and the [foeSoldiers] fled.</li>
+          <li>setup(tag=meme_CVG_Meme_SwordWay)->The believers were scattered, so they gathered to follow the sword way.</li>
+          <li>story(uses=1,tag=meme_CVG_Meme_SwordWay)->The believers spread out and grew in number, each walking the sword way in their own way.</li>
+          <li>lessonIntro(tag=meme_CVG_Meme_SwordWay)->Disciple, the old masters used to say:</li>
+          <li>lesson(tag=meme_CVG_Meme_SwordWay)->the sword is neither good nor bad; the hand is. Mastery is won by cutting and tempering the Will of the Sword.</li>
+          <li>lessonReinforcement(tag=meme_CVG_Meme_SwordWay)->You will understand it after many years of practice.</li>
+          <li>archistFact(tag=meme_CVG_Meme_SwordWay)->The archotechs watch the sword way as a gardener watches a vine.</li>
+          <li>archistProphecy(tag=meme_CVG_Meme_SwordWay)->[inTheEnd], the archotechs will depart, and those who followed the sword way will remain.</li>
+          <li>animistFact(tag=meme_CVG_Meme_SwordWay)->The spirits of the land walk the sword way with us.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Swordism</ideoName>
+        <theme>sword</theme>
+        <adjective>sword</adjective>
+        <member>swordsman</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+  <MemeDef>
+    <defName>CVG_Meme_LotusPath</defName>
+    <label>lotus path</label>
+    <description>Temper the body as a temple, heal without asking why, and let go of desire.</description>
+    <iconPath>UI/Memes/CVG/LotusPath</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>111</renderOrder>
+    <exclusionTags><li>CVG_Sect_LotusPath</li></exclusionTags>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->lotus</li>
+        <li>memeHyphenPrefix->lotus</li>
+        <li>memeConcept->lotus path</li>
+        <li>memeLeaderNoun->abbess</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <li>creation(tag=meme_CVG_Meme_LotusPath)->[deity0_name] taught the way of the lotus path.</li>
+          <li>episode(uses=1,tag=meme_CVG_Meme_LotusPath)->[deity0_name] showed the first [memberName] the way of the lotus path.</li>
+          <li>intro(tag=meme_CVG_Meme_LotusPath)->The early [memberNamePlural] of the [place_summary] [place_name] built a great [altarName] to [deity0_name].</li>
+          <li>conflict(tag=meme_CVG_Meme_LotusPath)->A powerful [foeLeader] despised the [memberNamePlural] and their ways.</li>
+          <li>founderJoin(tag=meme_CVG_Meme_LotusPath)->[memberName]'s savior [founderName] came down from the mountain with nothing but the lotus path.</li>
+          <li>victory(tag=meme_CVG_Meme_LotusPath)->[founderName] faced the [foeLeader] and the [foeSoldiers] fled.</li>
+          <li>setup(tag=meme_CVG_Meme_LotusPath)->The believers were scattered, so they gathered to follow the lotus path.</li>
+          <li>story(uses=1,tag=meme_CVG_Meme_LotusPath)->The believers spread out and grew in number, each walking the lotus path in their own way.</li>
+          <li>lessonIntro(tag=meme_CVG_Meme_LotusPath)->Disciple, the old masters used to say:</li>
+          <li>lesson(tag=meme_CVG_Meme_LotusPath)->temper the body as a temple, heal without asking why, and let go of desire.</li>
+          <li>lessonReinforcement(tag=meme_CVG_Meme_LotusPath)->You will understand it after many years of practice.</li>
+          <li>archistFact(tag=meme_CVG_Meme_LotusPath)->The archotechs watch the lotus path as a gardener watches a vine.</li>
+          <li>archistProphecy(tag=meme_CVG_Meme_LotusPath)->[inTheEnd], the archotechs will depart, and those who followed the lotus path will remain.</li>
+          <li>animistFact(tag=meme_CVG_Meme_LotusPath)->The spirits of the land walk the lotus path with us.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Lotusism</ideoName>
+        <theme>lotus</theme>
+        <adjective>lotus</adjective>
+        <member>lotus monk</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+  <MemeDef>
+    <defName>CVG_Meme_CauldronWay</defName>
+    <label>cauldron way</label>
+    <description>Everything has a price, and every price can be refined into a pill.</description>
+    <iconPath>UI/Memes/CVG/CauldronWay</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>112</renderOrder>
+    <exclusionTags><li>CVG_Sect_CauldronWay</li></exclusionTags>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->cauldron</li>
+        <li>memeHyphenPrefix->cauldron</li>
+        <li>memeConcept->cauldron way</li>
+        <li>memeLeaderNoun->guildmaster</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <li>creation(tag=meme_CVG_Meme_CauldronWay)->[deity0_name] taught the way of the cauldron way.</li>
+          <li>episode(uses=1,tag=meme_CVG_Meme_CauldronWay)->[deity0_name] showed the first [memberName] the way of the cauldron way.</li>
+          <li>intro(tag=meme_CVG_Meme_CauldronWay)->The early [memberNamePlural] of the [place_summary] [place_name] built a great [altarName] to [deity0_name].</li>
+          <li>conflict(tag=meme_CVG_Meme_CauldronWay)->A powerful [foeLeader] despised the [memberNamePlural] and their ways.</li>
+          <li>founderJoin(tag=meme_CVG_Meme_CauldronWay)->[memberName]'s savior [founderName] came down from the mountain with nothing but the cauldron way.</li>
+          <li>victory(tag=meme_CVG_Meme_CauldronWay)->[founderName] faced the [foeLeader] and the [foeSoldiers] fled.</li>
+          <li>setup(tag=meme_CVG_Meme_CauldronWay)->The believers were scattered, so they gathered to follow the cauldron way.</li>
+          <li>story(uses=1,tag=meme_CVG_Meme_CauldronWay)->The believers spread out and grew in number, each walking the cauldron way in their own way.</li>
+          <li>lessonIntro(tag=meme_CVG_Meme_CauldronWay)->Disciple, the old masters used to say:</li>
+          <li>lesson(tag=meme_CVG_Meme_CauldronWay)->everything has a price, and every price can be refined into a pill.</li>
+          <li>lessonReinforcement(tag=meme_CVG_Meme_CauldronWay)->You will understand it after many years of practice.</li>
+          <li>archistFact(tag=meme_CVG_Meme_CauldronWay)->The archotechs watch the cauldron way as a gardener watches a vine.</li>
+          <li>archistProphecy(tag=meme_CVG_Meme_CauldronWay)->[inTheEnd], the archotechs will depart, and those who followed the cauldron way will remain.</li>
+          <li>animistFact(tag=meme_CVG_Meme_CauldronWay)->The spirits of the land walk the cauldron way with us.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Cauldronism</ideoName>
+        <theme>cauldron</theme>
+        <adjective>cauldron</adjective>
+        <member>alchemist</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+  <MemeDef>
+    <defName>CVG_Meme_DragonBlood</defName>
+    <label>dragon blood</label>
+    <description>The blood of the dragons is a treasure to guard and a duty to keep pure.</description>
+    <iconPath>UI/Memes/CVG/DragonBlood</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>113</renderOrder>
+    <exclusionTags><li>CVG_Sect_DragonBlood</li></exclusionTags>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->dragon</li>
+        <li>memeHyphenPrefix->dragon</li>
+        <li>memeConcept->dragon blood</li>
+        <li>memeLeaderNoun->patriarch</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <li>creation(tag=meme_CVG_Meme_DragonBlood)->[deity0_name] taught the way of the dragon blood.</li>
+          <li>episode(uses=1,tag=meme_CVG_Meme_DragonBlood)->[deity0_name] showed the first [memberName] the way of the dragon blood.</li>
+          <li>intro(tag=meme_CVG_Meme_DragonBlood)->The early [memberNamePlural] of the [place_summary] [place_name] built a great [altarName] to [deity0_name].</li>
+          <li>conflict(tag=meme_CVG_Meme_DragonBlood)->A powerful [foeLeader] despised the [memberNamePlural] and their ways.</li>
+          <li>founderJoin(tag=meme_CVG_Meme_DragonBlood)->[memberName]'s savior [founderName] came down from the mountain with nothing but the dragon blood.</li>
+          <li>victory(tag=meme_CVG_Meme_DragonBlood)->[founderName] faced the [foeLeader] and the [foeSoldiers] fled.</li>
+          <li>setup(tag=meme_CVG_Meme_DragonBlood)->The believers were scattered, so they gathered to follow the dragon blood.</li>
+          <li>story(uses=1,tag=meme_CVG_Meme_DragonBlood)->The believers spread out and grew in number, each walking the dragon blood in their own way.</li>
+          <li>lessonIntro(tag=meme_CVG_Meme_DragonBlood)->Disciple, the old masters used to say:</li>
+          <li>lesson(tag=meme_CVG_Meme_DragonBlood)->the blood of the dragons is a treasure to guard and a duty to keep pure.</li>
+          <li>lessonReinforcement(tag=meme_CVG_Meme_DragonBlood)->You will understand it after many years of practice.</li>
+          <li>archistFact(tag=meme_CVG_Meme_DragonBlood)->The archotechs watch the dragon blood as a gardener watches a vine.</li>
+          <li>archistProphecy(tag=meme_CVG_Meme_DragonBlood)->[inTheEnd], the archotechs will depart, and those who followed the dragon blood will remain.</li>
+          <li>animistFact(tag=meme_CVG_Meme_DragonBlood)->The spirits of the land walk the dragon blood with us.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Dragonism</ideoName>
+        <theme>dragon</theme>
+        <adjective>dragon</adjective>
+        <member>scion</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+  <MemeDef>
+    <defName>CVG_Meme_DemonicWay</defName>
+    <label>demonic way</label>
+    <description>Heaven is a cage; break it with what you have in your veins.</description>
+    <iconPath>UI/Memes/CVG/DemonicWay</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>114</renderOrder>
+    <exclusionTags><li>CVG_Sect_DemonicWay</li></exclusionTags>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->blood</li>
+        <li>memeHyphenPrefix->blood</li>
+        <li>memeConcept->demonic way</li>
+        <li>memeLeaderNoun->venerable</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <li>creation(tag=meme_CVG_Meme_DemonicWay)->[deity0_name] taught the way of the demonic way.</li>
+          <li>episode(uses=1,tag=meme_CVG_Meme_DemonicWay)->[deity0_name] showed the first [memberName] the way of the demonic way.</li>
+          <li>intro(tag=meme_CVG_Meme_DemonicWay)->The early [memberNamePlural] of the [place_summary] [place_name] built a great [altarName] to [deity0_name].</li>
+          <li>conflict(tag=meme_CVG_Meme_DemonicWay)->A powerful [foeLeader] despised the [memberNamePlural] and their ways.</li>
+          <li>founderJoin(tag=meme_CVG_Meme_DemonicWay)->[memberName]'s savior [founderName] came down from the mountain with nothing but the demonic way.</li>
+          <li>victory(tag=meme_CVG_Meme_DemonicWay)->[founderName] faced the [foeLeader] and the [foeSoldiers] fled.</li>
+          <li>setup(tag=meme_CVG_Meme_DemonicWay)->The believers were scattered, so they gathered to follow the demonic way.</li>
+          <li>story(uses=1,tag=meme_CVG_Meme_DemonicWay)->The believers spread out and grew in number, each walking the demonic way in their own way.</li>
+          <li>lessonIntro(tag=meme_CVG_Meme_DemonicWay)->Disciple, the old masters used to say:</li>
+          <li>lesson(tag=meme_CVG_Meme_DemonicWay)->heaven is a cage; break it with what you have in your veins.</li>
+          <li>lessonReinforcement(tag=meme_CVG_Meme_DemonicWay)->You will understand it after many years of practice.</li>
+          <li>archistFact(tag=meme_CVG_Meme_DemonicWay)->The archotechs watch the demonic way as a gardener watches a vine.</li>
+          <li>archistProphecy(tag=meme_CVG_Meme_DemonicWay)->[inTheEnd], the archotechs will depart, and those who followed the demonic way will remain.</li>
+          <li>animistFact(tag=meme_CVG_Meme_DemonicWay)->The spirits of the land walk the demonic way with us.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Bloodmoonism</ideoName>
+        <theme>blood</theme>
+        <adjective>blood</adjective>
+        <member>blood disciple</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+  <MemeDef>
+    <defName>CVG_Meme_WanderingPath</defName>
+    <label>wandering path</label>
+    <description>Every road is a master and every master is a road: no sect, no chains.</description>
+    <iconPath>UI/Memes/CVG/WanderingPath</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>115</renderOrder>
+    <exclusionTags><li>CVG_Sect_WanderingPath</li></exclusionTags>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->road</li>
+        <li>memeHyphenPrefix->road</li>
+        <li>memeConcept->wandering path</li>
+        <li>memeLeaderNoun->elder wanderer</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <li>creation(tag=meme_CVG_Meme_WanderingPath)->[deity0_name] taught the way of the wandering path.</li>
+          <li>episode(uses=1,tag=meme_CVG_Meme_WanderingPath)->[deity0_name] showed the first [memberName] the way of the wandering path.</li>
+          <li>intro(tag=meme_CVG_Meme_WanderingPath)->The early [memberNamePlural] of the [place_summary] [place_name] built a great [altarName] to [deity0_name].</li>
+          <li>conflict(tag=meme_CVG_Meme_WanderingPath)->A powerful [foeLeader] despised the [memberNamePlural] and their ways.</li>
+          <li>founderJoin(tag=meme_CVG_Meme_WanderingPath)->[memberName]'s savior [founderName] came down from the mountain with nothing but the wandering path.</li>
+          <li>victory(tag=meme_CVG_Meme_WanderingPath)->[founderName] faced the [foeLeader] and the [foeSoldiers] fled.</li>
+          <li>setup(tag=meme_CVG_Meme_WanderingPath)->The believers were scattered, so they gathered to follow the wandering path.</li>
+          <li>story(uses=1,tag=meme_CVG_Meme_WanderingPath)->The believers spread out and grew in number, each walking the wandering path in their own way.</li>
+          <li>lessonIntro(tag=meme_CVG_Meme_WanderingPath)->Disciple, the old masters used to say:</li>
+          <li>lesson(tag=meme_CVG_Meme_WanderingPath)->every road is a master and every master is a road: no sect, no chains.</li>
+          <li>lessonReinforcement(tag=meme_CVG_Meme_WanderingPath)->You will understand it after many years of practice.</li>
+          <li>archistFact(tag=meme_CVG_Meme_WanderingPath)->The archotechs watch the wandering path as a gardener watches a vine.</li>
+          <li>archistProphecy(tag=meme_CVG_Meme_WanderingPath)->[inTheEnd], the archotechs will depart, and those who followed the wandering path will remain.</li>
+          <li>animistFact(tag=meme_CVG_Meme_WanderingPath)->The spirits of the land walk the wandering path with us.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Wayfarism</ideoName>
+        <theme>road</theme>
+        <adjective>road</adjective>
+        <member>wanderer</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+</Defs>

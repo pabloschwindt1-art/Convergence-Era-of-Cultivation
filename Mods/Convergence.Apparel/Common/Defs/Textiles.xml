@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Cloud Cotton: a spirit plant. Grows on normal soil for now; spirit soil (Fauna & Flora) will boost it. -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_CloudCotton</defName>
+    <label>cloud cotton</label>
+    <description>Soft, light fibres that glow faintly at night, as if each boll had kept a little starlight. Farmers of Jiuxiao say the plant first grew where the sleeve of a fallen immortal brushed the earth. It is the raw material of the cultivator's cloth and must be spun and woven on a spirit loom.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_CloudCotton</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <MarketValue>2.2</MarketValue>
+      <Mass>0.02</Mass>
+      <Flammability>1.2</Flammability>
+      <DeteriorationRate>3</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>true</burnableByRecipe>
+    <healthAffectsPrice>false</healthAffectsPrice>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>CVG_Plant_CloudCotton</defName>
+    <label>cloud cotton plant</label>
+    <description>A mid-size crop of pale, faintly luminous bolls that yields cloud cotton. On still nights a field of it looks like a low cloud resting on the ground, which gave the plant its name. The monks of the Silent Lotus Temple grow it on terraces and weave their plain robes from it.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.2</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/CVG/CloudCotton</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <growDays>10</growDays>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>CVG_CloudCotton</harvestedThingDef>
+      <harvestYield>8</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <sowMinSkill>4</sowMinSkill>
+      <topWindExposure>0.1</topWindExposure>
+      <immatureGraphicPath>Things/Plant/CVG/CloudCotton_Immature</immatureGraphicPath>
+      <visualSizeRange>0.3~1.05</visualSizeRange>
+      <wildOrder>2</wildOrder>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_CloudCloth</defName>
+    <label>cloud cloth</label>
+    <description>Fine, light cloth woven from cloud cotton on a spirit loom, warmer and a little tougher than ordinary cloth. Most sect robes of Jiuxiao are cut from it, because it takes dye evenly and keeps the colors of a sect for decades. Old weavers say a bolt of it should be folded, never rolled, or it remembers being a cloud and drifts.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_CloudCloth</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <StuffPower_Armor_Sharp>0.5</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.05</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.3</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>24</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>20</StuffPower_Insulation_Heat>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>5</MarketValue>
+      <Mass>0.026</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>3</DeteriorationRate>
+    </statBases>
+    <burnableByRecipe>true</burnableByRecipe>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <stuffProps>
+      <statFactors>
+        <Flammability>1.0</Flammability>
+        <Beauty>1.5</Beauty>
+      </statFactors>
+      <categories>
+        <li>Fabric</li>
+      </categories>
+      <color>(215,230,250)</color>
+      <commonality>0.05</commonality>
+      <allowColorGenerators>true</allowColorGenerators>
+    </stuffProps>
+    <thingCategories>
+      <li>Textiles</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Spirit silk: the best textile. Produced by Fauna & Flora (CVG_RaiseSilkworms with mulberry leaves, CVG_SpinSpiritSilk from
+       Jade Weaver spider cocoons) and sold by the Heavenly Cauldron Pavilion and wandering merchants. -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_SpiritSilk</defName>
+    <label>spirit silk</label>
+    <description>Thread of a silk that holds qi like a bell holds sound: fine, beautiful and surprisingly hard to cut. Sects raise it from silkworms fed on spirit mulberry leaves, and the finest comes from the cocoons of the Jade Weaver spider. The Heavenly Cauldron Pavilion still sells it by the ounce at its auctions.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_SpiritSilk</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <StuffPower_Armor_Sharp>0.85</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.1</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.4</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>28</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>22</StuffPower_Insulation_Heat>
+      <MaxHitPoints>120</MaxHitPoints>
+      <MarketValue>14</MarketValue>
+      <Mass>0.02</Mass>
+      <Flammability>0.9</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+    </statBases>
+    <burnableByRecipe>true</burnableByRecipe>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <stuffProps>
+      <statFactors>
+        <Beauty>2.2</Beauty>
+        <MaxHitPoints>1.2</MaxHitPoints>
+      </statFactors>
+      <categories>
+        <li>Fabric</li>
+      </categories>
+      <color>(170,230,210)</color>
+      <commonality>0.01</commonality>
+      <allowColorGenerators>true</allowColorGenerators>
+    </stuffProps>
+    <thingCategories>
+      <li>Textiles</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Spirit loom: no electricity, no research. Weaves cloud cloth and makes cultivator clothes. -->
+  <ThingDef ParentName="BenchBase">
+    <defName>CVG_SpiritLoom</defName>
+    <defaultPlacingRot>South</defaultPlacingRot><!-- el frente del arte es la vista sur: el trabajador queda del lado del frente -->
+    <label>spirit loom</label>
+    <description>A wooden loom whose frame is inlaid with jade, built after the loom of the Weaving Maiden, Zhinu, who wove the clouds of heaven. It weaves cloud cotton into cloth and sews cultivator robes. It needs no power, only patient hands.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/SpiritLoom</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <costList>
+      <WoodLog>80</WoodLog>
+      <Jade>3</Jade>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>2500</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkTableWorkSpeedFactor>0.8</WorkTableWorkSpeedFactor>
+    </statBases>
+    <size>(3,1)</size>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2410</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workTableRoomRole>Workshop</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>CVG_WeaveCloudCloth</defName>
+    <label>weave cloud cloth</label>
+    <description>Weave cloud cotton into cloud cloth.</description>
+    <jobString>Weaving cloud cloth.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>600</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_CloudCotton</li>
+          </thingDefs>
+        </filter>
+        <count>12</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>CVG_CloudCotton</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_CloudCloth>8</CVG_CloudCloth>
+    </products>
+    <recipeUsers>
+      <li>CVG_SpiritLoom</li>
+    </recipeUsers>
+  </RecipeDef>
+
+</Defs>

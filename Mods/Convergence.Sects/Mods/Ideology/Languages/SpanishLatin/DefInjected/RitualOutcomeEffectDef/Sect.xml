@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Outcome_Admission.description>Según la calidad del ritual, los participantes recibirán entre {MINMOOD} y {MAXMOOD} de ánimo durante {MOODDAYS} días.</CVG_Outcome_Admission.description>
+  <CVG_Outcome_Admission.outcomeChances.0.label>Terrible</CVG_Outcome_Admission.outcomeChances.0.label>
+  <CVG_Outcome_Admission.outcomeChances.0.description>¡La {0} fue terrible! Todos deseaban que acabara.</CVG_Outcome_Admission.outcomeChances.0.description>
+  <CVG_Outcome_Admission.outcomeChances.1.label>Sosa</CVG_Outcome_Admission.outcomeChances.1.label>
+  <CVG_Outcome_Admission.outcomeChances.1.description>La {0} fue sosa. Las palabras eran correctas y el corazón estaba ausente.</CVG_Outcome_Admission.outcomeChances.1.description>
+  <CVG_Outcome_Admission.outcomeChances.2.label>Solemne</CVG_Outcome_Admission.outcomeChances.2.label>
+  <CVG_Outcome_Admission.outcomeChances.2.description>La {0} fue solemne y estuvo bien hecha. Todos sintieron ser parte de algo más antiguo que ellos.</CVG_Outcome_Admission.outcomeChances.2.description>
+  <CVG_Outcome_Admission.outcomeChances.3.label>Inolvidable</CVG_Outcome_Admission.outcomeChances.3.label>
+  <CVG_Outcome_Admission.outcomeChances.3.description>¡La {0} fue inolvidable! Durante una hora la secta fue exactamente lo que soñaron sus fundadores.</CVG_Outcome_Admission.outcomeChances.3.description>
+  <CVG_Outcome_Ascension.description>Según la calidad del ritual, los participantes recibirán entre {MINMOOD} y {MAXMOOD} de ánimo durante {MOODDAYS} días.</CVG_Outcome_Ascension.description>
+  <CVG_Outcome_Ascension.outcomeChances.0.label>Terrible</CVG_Outcome_Ascension.outcomeChances.0.label>
+  <CVG_Outcome_Ascension.outcomeChances.0.description>¡La {0} fue terrible! Todos deseaban que acabara.</CVG_Outcome_Ascension.outcomeChances.0.description>
+  <CVG_Outcome_Ascension.outcomeChances.1.label>Sosa</CVG_Outcome_Ascension.outcomeChances.1.label>
+  <CVG_Outcome_Ascension.outcomeChances.1.description>La {0} fue sosa. Las palabras eran correctas y el corazón estaba ausente.</CVG_Outcome_Ascension.outcomeChances.1.description>
+  <CVG_Outcome_Ascension.outcomeChances.2.label>Solemne</CVG_Outcome_Ascension.outcomeChances.2.label>
+  <CVG_Outcome_Ascension.outcomeChances.2.description>La {0} fue solemne y estuvo bien hecha. Todos sintieron ser parte de algo más antiguo que ellos.</CVG_Outcome_Ascension.outcomeChances.2.description>
+  <CVG_Outcome_Ascension.outcomeChances.3.label>Inolvidable</CVG_Outcome_Ascension.outcomeChances.3.label>
+  <CVG_Outcome_Ascension.outcomeChances.3.description>¡La {0} fue inolvidable! Durante una hora la secta fue exactamente lo que soñaron sus fundadores.</CVG_Outcome_Ascension.outcomeChances.3.description>
+  <CVG_Outcome_Tournament.description>Según la calidad del ritual, los participantes recibirán entre {MINMOOD} y {MAXMOOD} de ánimo durante {MOODDAYS} días.</CVG_Outcome_Tournament.description>
+  <CVG_Outcome_Tournament.outcomeChances.0.label>Terrible</CVG_Outcome_Tournament.outcomeChances.0.label>
+  <CVG_Outcome_Tournament.outcomeChances.0.description>¡La {0} fue terrible! Todos deseaban que acabara.</CVG_Outcome_Tournament.outcomeChances.0.description>
+  <CVG_Outcome_Tournament.outcomeChances.1.label>Sosa</CVG_Outcome_Tournament.outcomeChances.1.label>
+  <CVG_Outcome_Tournament.outcomeChances.1.description>La {0} fue sosa. Las palabras eran correctas y el corazón estaba ausente.</CVG_Outcome_Tournament.outcomeChances.1.description>
+  <CVG_Outcome_Tournament.outcomeChances.2.label>Solemne</CVG_Outcome_Tournament.outcomeChances.2.label>
+  <CVG_Outcome_Tournament.outcomeChances.2.description>La {0} fue solemne y estuvo bien hecha. Todos sintieron ser parte de algo más antiguo que ellos.</CVG_Outcome_Tournament.outcomeChances.2.description>
+  <CVG_Outcome_Tournament.outcomeChances.3.label>Inolvidable</CVG_Outcome_Tournament.outcomeChances.3.label>
+  <CVG_Outcome_Tournament.outcomeChances.3.description>¡La {0} fue inolvidable! Durante una hora la secta fue exactamente lo que soñaron sus fundadores.</CVG_Outcome_Tournament.outcomeChances.3.description>
+  <CVG_Outcome_Admission.comps.1.label>líder presente</CVG_Outcome_Admission.comps.1.label>
+  <CVG_Outcome_Admission.comps.2.label>cantidad de participantes</CVG_Outcome_Admission.comps.2.label>
+  <CVG_Outcome_Admission.comps.4.label>empezado en el altar</CVG_Outcome_Admission.comps.4.label>
+  <CVG_Outcome_Ascension.comps.1.label>líder presente</CVG_Outcome_Ascension.comps.1.label>
+  <CVG_Outcome_Ascension.comps.2.label>cantidad de participantes</CVG_Outcome_Ascension.comps.2.label>
+  <CVG_Outcome_Ascension.comps.4.label>empezado en el altar</CVG_Outcome_Ascension.comps.4.label>
+  <CVG_Outcome_Tournament.comps.1.label>líder presente</CVG_Outcome_Tournament.comps.1.label>
+  <CVG_Outcome_Tournament.comps.2.label>cantidad de participantes</CVG_Outcome_Tournament.comps.2.label>
+  <CVG_Outcome_Tournament.comps.4.label>empezado en el altar</CVG_Outcome_Tournament.comps.4.label>
+</LanguageData>

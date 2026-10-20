@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Make_CVG_CalligraphyScroll.label>hacer pergamino de caligrafía</Make_CVG_CalligraphyScroll.label>
+  <Make_CVG_CalligraphyScroll.description>Hacer pergamino de caligrafía.</Make_CVG_CalligraphyScroll.description>
+  <Make_CVG_CalligraphyScroll.jobString>Haciendo pergamino de caligrafía.</Make_CVG_CalligraphyScroll.jobString>
+  <Make_CVG_InkPainting.label>hacer pintura de tinta</Make_CVG_InkPainting.label>
+  <Make_CVG_InkPainting.description>Hacer pintura de tinta.</Make_CVG_InkPainting.description>
+  <Make_CVG_InkPainting.jobString>Haciendo pintura de tinta.</Make_CVG_InkPainting.jobString>
+</LanguageData>

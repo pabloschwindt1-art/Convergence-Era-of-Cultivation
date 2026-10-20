@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_RefineSpiritSteel.label>refinar acero espiritual</CVG_RefineSpiritSteel.label>
+  <CVG_RefineSpiritSteel.description>Templa acero con piedras espirituales: 20 de acero y 2 piedras espirituales dan 20 de acero espiritual. Los herreros de las sectas lo templan en agua sacada de una veta de qi y juran que la hoja sale recordando la forma que quiere tener.</CVG_RefineSpiritSteel.description>
+  <CVG_RefineSpiritSteel.jobString>Refinando acero espiritual.</CVG_RefineSpiritSteel.jobString>
+  <CVG_RefineMoonSilver.label>refinar plata lunar</CVG_RefineMoonSilver.label>
+  <CVG_RefineMoonSilver.description>Refina plata con jade espiritual: 50 de plata y 2 de jade espiritual dan 10 de plata lunar. Solo se vierte de noche: la plata lunar vertida de día sale opaca y se enfurruña una semana.</CVG_RefineMoonSilver.description>
+  <CVG_RefineMoonSilver.jobString>Refinando plata lunar.</CVG_RefineMoonSilver.jobString>
+  <CVG_RefineChaosGold.label>refinar oro del caos</CVG_RefineChaosGold.label>
+  <CVG_RefineChaosGold.description>Funde oro con cristal espiritual: 20 de oro y 2 de cristal espiritual dan 10 de oro del caos. Su superficie nunca se queda en un solo color, y así distinguen las forjas de Jiuxiao el auténtico de una falsificación.</CVG_RefineChaosGold.description>
+  <CVG_RefineChaosGold.jobString>Refinando oro del caos.</CVG_RefineChaosGold.jobString>
+  <CVG_RefineSpiritJade.label>refinar jade espiritual</CVG_RefineSpiritJade.label>
+  <CVG_RefineSpiritJade.description>Despierta el jade con piedras espirituales: 10 de jade y 2 piedras espirituales dan 10 de jade espiritual. Los tallistas dicen que el jade común solo está dormido, y que el horno es el despertador más ruidoso que conocen.</CVG_RefineSpiritJade.description>
+  <CVG_RefineSpiritJade.jobString>Refinando jade espiritual.</CVG_RefineSpiritJade.jobString>
+</LanguageData>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Biotech in a wuxia key (Core hooks used by Convergence: Biotech Wuxia) -->
+  <CVG_Puppet_BandwidthPart>Maestro de marionetas, reino {0}: {1}</CVG_Puppet_BandwidthPart>
+  <CVG_Puppet_Backlash>El hilo de {1} se rompió: {PAWN_nameDef} sufre el contragolpe y pierde qi.</CVG_Puppet_Backlash>
+  <CVG_Puppet_StageN>etapa {0}</CVG_Puppet_StageN>
+  <CVG_Puppet_PowerPart>Hilo de un titiritero en {0}</CVG_Puppet_PowerPart>
+  <CVG_Puppet_NeedRealm>Necesita un titiritero en {0}</CVG_Puppet_NeedRealm>
+  <CVG_Puppet_Master>Maestro titiritero</CVG_Puppet_Master>
+  <CVG_Puppet_MasterNone>Ninguno (los hilos cuelgan sueltos)</CVG_Puppet_MasterNone>
+  <CVG_Puppet_NoBandwidth>faltan hilos</CVG_Puppet_NoBandwidth>
+  <CVG_Puppet_Uncontrolled>Hilos cortados</CVG_Puppet_Uncontrolled>
+  <CVG_Puppet_MayGoFeral>los hilos pueden romperse y la marioneta volverse salvaje</CVG_Puppet_MayGoFeral>
+  <CVG_Puppet_Energy>Qi de la marioneta</CVG_Puppet_Energy>
+</LanguageData>

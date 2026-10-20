@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Destiny_Reincarnated.degreeDatas.0.label>reencarnado</CVG_Destiny_Reincarnated.degreeDatas.0.label>
+  <CVG_Destiny_Reincarnated.degreeDatas.0.labelFemale>reencarnada</CVG_Destiny_Reincarnated.degreeDatas.0.labelFemale>
+  <CVG_Destiny_Reincarnated.degreeDatas.0.description>Murió en otra vida y volvió a nacer con jirones de ella todavía en la sangre: el cultivo y el estudio llegan como si los recordara en vez de aprenderlos. En Jiuxiao se decía que esas almas cruzaban el puente del renacer sin beber la sopa del olvido de Meng Po.</CVG_Destiny_Reincarnated.degreeDatas.0.description>
+  <CVG_Destiny_Regressor.degreeDatas.0.label>regresor</CVG_Destiny_Regressor.degreeDatas.0.label>
+  <CVG_Destiny_Regressor.degreeDatas.0.labelFemale>regresora</CVG_Destiny_Regressor.degreeDatas.0.labelFemale>
+  <CVG_Destiny_Regressor.degreeDatas.0.description>Volvió de un futuro en el que el mundo cayó, con cicatrices de batallas que todavía no se libraron: los asaltos contra la colonia se presienten horas antes, pero el recuerdo de aquel final desgasta los nervios. Hay quien susurra que el futuro del que huyó {PAWN_nameDef} era el regreso de la Calamidad de Hierro.</CVG_Destiny_Regressor.degreeDatas.0.description>
+  <CVG_Destiny_Transmigrated.degreeDatas.0.label>transmigrado</CVG_Destiny_Transmigrated.degreeDatas.0.label>
+  <CVG_Destiny_Transmigrated.degreeDatas.0.labelFemale>transmigrada</CVG_Destiny_Transmigrated.degreeDatas.0.labelFemale>
+  <CVG_Destiny_Transmigrated.degreeDatas.0.description>Un alma de otro mundo que habita este cuerpo: sus ideas raras y sus modales más raros hacen volar la investigación y tropezar las conversaciones. Los eruditos del Pabellón del Caldero Celestial pagan bien por una hora de charla con un alma así, y se ríen de ella después.</CVG_Destiny_Transmigrated.degreeDatas.0.description>
+  <CVG_Destiny_SonOfHeaven.degreeDatas.0.label>hijo del cielo</CVG_Destiny_SonOfHeaven.degreeDatas.0.label>
+  <CVG_Destiny_SonOfHeaven.degreeDatas.0.labelFemale>hija del cielo</CVG_Destiny_SonOfHeaven.degreeDatas.0.labelFemale>
+  <CVG_Destiny_SonOfHeaven.degreeDatas.0.description>Protagonista de su era: cuando llegue la Convergencia, el destino arrancará a {PAWN_nameDef} de la muerte una vez al año, y los avances le resultan algo más fáciles. El Dao Celestial elige un favorito en cada era; los ancianos del Pico Azur agregan que, con la misma certeza, se cansa de ellos.</CVG_Destiny_SonOfHeaven.degreeDatas.0.description>
+  <CVG_Destiny_Antagonist.degreeDatas.0.label>antagonista</CVG_Destiny_Antagonist.degreeDatas.0.label>
+  <CVG_Destiny_Antagonist.degreeDatas.0.description>Nació para ser la sombra en la historia de otro: carisma oscuro, gran poder y un temple que se quiebra con facilidad. El Culto de la Luna Sangrienta asegura que cada alma así es una deuda que el Dao Celestial olvidó cobrar.</CVG_Destiny_Antagonist.degreeDatas.0.description>
+  <CVG_Destiny_HeavenDefier.degreeDatas.0.label>desafiante del cielo</CVG_Destiny_HeavenDefier.degreeDatas.0.label>
+  <CVG_Destiny_HeavenDefier.degreeDatas.0.description>Camina contra la voluntad del Cielo: tribulaciones mucho más duras, poder mucho mayor. Xue Jiuyou, fundador del Culto de la Luna Sangrienta, llamó jaula al Cielo; dicen que quien nace con este destino siente los barrotes desde la cuna.</CVG_Destiny_HeavenDefier.degreeDatas.0.description>
+  <CVG_Destiny_LegendaryBeastBlood.degreeDatas.0.label>sangre de bestia legendaria</CVG_Destiny_LegendaryBeastBlood.degreeDatas.0.label>
+  <CVG_Destiny_LegendaryBeastBlood.degreeDatas.0.description>La sangre de una bestia suprema duerme en {PAWN_nameDef}: los animales la sienten y ceden, y sus golpes caen con un peso que no es del todo humano. El Clan del Dragón Antiguo persigue a quien vende esa sangre, pero no puede perseguir a quien nace con ella.</CVG_Destiny_LegendaryBeastBlood.degreeDatas.0.description>
+  <CVG_Destiny_FortuneStar.degreeDatas.0.label>estrella de la fortuna</CVG_Destiny_FortuneStar.degreeDatas.0.label>
+  <CVG_Destiny_FortuneStar.degreeDatas.0.description>Con una suerte absurda: los tratos salen bien y los golpes suelen fallar. Los mercaderes del Pabellón del Caldero Celestial llevan un registro de quienes nacieron bajo esta estrella, y se niegan a apostar con nadie de esa lista.</CVG_Destiny_FortuneStar.degreeDatas.0.description>
+  <CVG_Destiny_LoneStar.degreeDatas.0.label>estrella solitaria</CVG_Destiny_LoneStar.degreeDatas.0.label>
+  <CVG_Destiny_LoneStar.degreeDatas.0.description>Prospera en soledad: aprende y cultiva más rápido que la mayoría, pero las palabras le salen torcidas con los demás. Los viejos astrólogos de Jiuxiao la llamaban Estrella Huérfana, el destino de quien sobrevive a todas las sectas en las que entra.</CVG_Destiny_LoneStar.degreeDatas.0.description>
+  <CVG_Destiny_TreasureMagnet.degreeDatas.0.label>imán de tesoros</CVG_Destiny_TreasureMagnet.degreeDatas.0.label>
+  <CVG_Destiny_TreasureMagnet.degreeDatas.0.description>Los tesoros encuentran a {PAWN_nameDef}, y no al revés: las vetas dan más mineral, las cosechas rinden un poco más y los tratos se inclinan a su favor. Desde que la Gran Ruptura esparció las bóvedas de las sectas entre dimensiones, alguien así vale más que cualquier mapa.</CVG_Destiny_TreasureMagnet.degreeDatas.0.description>
+</LanguageData>

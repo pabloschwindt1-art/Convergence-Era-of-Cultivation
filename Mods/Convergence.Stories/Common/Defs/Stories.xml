@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <LetterDef>
+    <defName>CVG_StoryLetter</defName>
+    <letterClass>Convergence.Stories.ChoiceLetter_Story</letterClass>
+    <color>(150, 190, 230)</color>
+    <flashColor>(120, 170, 230)</flashColor>
+    <flashInterval>40</flashInterval>
+    <arriveSound>LetterArrive</arriveSound>
+  </LetterDef>
+
+  <HediffDef>
+    <defName>CVG_DamagedDantian</defName>
+    <label>damaged dantian</label>
+    <description>The sea of qi below the navel has been cracked like a jar. A damaged dantian cannot gather or hold qi, so the cultivator cannot cultivate the path of qi until it is mended. Old masters say the body remembers what the heart refuses to forget: an elixir of mending can still fill the crack.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <tendable>false</tendable>
+    <defaultLabelColor>(0.7, 0.5, 0.85)</defaultLabelColor>
+    <stages>
+      <li>
+        <becomeVisible>true</becomeVisible>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BlocksCultivation">
+        <paths><li>CVG_Path_Qi</li></paths>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_DantianElixir</defName>
+    <label>dantian mending elixir</label>
+    <description>A greenish elixir brewed by a hermit whose own dantian was shattered a century ago. He claims to have mended it with nine hundred tears and one spring of jade. Drunk by a cultivator with a damaged dantian, it closes the crack.</description>
+    <descriptionHyperlinks><HediffDef>CVG_DamagedDantian</HediffDef></descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/CVG/CVG_DantianElixir</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MarketValue>600</MarketValue>
+      <Mass>0.3</Mass>
+      <Flammability>0.4</Flammability>
+      <MaxHitPoints>60</MaxHitPoints>
+    </statBases>
+    <thingCategories><li>ItemsMisc</li></thingCategories>
+    <tradeability>Sellable</tradeability>
+    <ingestible>
+      <foodType>Fluid</foodType>
+      <preferability>NeverForNutrition</preferability>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <ingestSound>Ingest_Drink</ingestSound>
+      <outcomeDoers>
+        <li Class="Convergence.Stories.IngestionOutcomeDoer_RemoveHediffs">
+          <hediffs><li>CVG_DamagedDantian</li></hediffs>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_Cursed</defName>
+    <durationDays>4</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>cursed by the refugees</label>
+        <description>Something cold sits at the back of my neck since the cultists came.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_LightPillar</defName>
+    <label>pillar of light</label>
+    <description>A column of pale light rising from the earth where a treasure is being born. Its light pulls every sect for a hundred li.</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/CVG/LightPillar</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(1.6,1.6)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <statBases><Flammability>0</Flammability></statBases>
+    <building><claimable>false</claimable><deconstructible>false</deconstructible></building>
+    <comps>
+      <li Class="CompProperties_Glower"><glowRadius>12</glowRadius><glowColor>(255,235,140,0)</glowColor></li>
+      <li Class="CompProperties_Lifespan"><lifespanTicks>300000</lifespanTicks></li>
+    </comps>
+  </ThingDef>
+
+  <!-- Story incidents: only after the Convergence (and a few days later). Revenge is triggered by killing notable sect cultivators. -->
+  <IncidentDef>
+    <defName>CVG_Story_CultistsFlee</defName>
+    <label>cultists flee the Calamity</label>
+    <category>Misc</category>
+    <targetTags><li>Map_PlayerHome</li></targetTags>
+    <workerClass>Convergence.Stories.IncidentWorker_CultistsFlee</workerClass>
+    <baseChance>0.5</baseChance>
+    <minRefireDays>22</minRefireDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>CVG_Story_AllyPlea</defName>
+    <label>ally calls for help</label>
+    <category>Misc</category>
+    <targetTags><li>Map_PlayerHome</li></targetTags>
+    <workerClass>Convergence.Stories.IncidentWorker_AllyPlea</workerClass>
+    <baseChance>0.4</baseChance>
+    <minRefireDays>30</minRefireDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>CVG_Story_BeastMigration</defName>
+    <label>ferocious beasts</label>
+    <category>Misc</category>
+    <targetTags><li>Map_PlayerHome</li></targetTags>
+    <workerClass>Convergence.Stories.IncidentWorker_BeastMigration</workerClass>
+    <baseChance>0.6</baseChance>
+    <minRefireDays>18</minRefireDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>CVG_Story_TreasureBirth</defName>
+    <label>treasure is born</label>
+    <category>Misc</category>
+    <targetTags><li>Map_PlayerHome</li></targetTags>
+    <workerClass>Convergence.Stories.IncidentWorker_TreasureBirth</workerClass>
+    <baseChance>0.35</baseChance>
+    <minRefireDays>40</minRefireDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>CVG_Story_ClanVengeance</defName>
+    <label>clan vengeance</label>
+    <category>Misc</category>
+    <targetTags><li>Map_PlayerHome</li></targetTags>
+    <workerClass>Convergence.Stories.IncidentWorker_ClanVengeance</workerClass>
+    <baseChance>0.0</baseChance>
+    <minRefireDays>1</minRefireDays>
+  </IncidentDef>
+  <ScenPartDef>
+    <defName>CVG_StartingBloodline</defName>
+    <label>starting bloodline</label>
+    <scenPartClass>Convergence.Stories.ScenPart_StartingBloodline</scenPartClass>
+    <category>Fixed</category>
+    <summaryPriority>13</summaryPriority>
+  </ScenPartDef>
+  <ScenPartDef>
+    <defName>CVG_StoryOrigin</defName>
+    <label>story origin</label>
+    <scenPartClass>Convergence.Stories.ScenPart_StoryOrigin</scenPartClass>
+    <category>Fixed</category>
+    <summaryPriority>10</summaryPriority>
+  </ScenPartDef>
+  <ScenPartDef>
+    <defName>CVG_ConvergenceOccurred</defName>
+    <label>the Convergence has happened</label>
+    <scenPartClass>Convergence.Stories.ScenPart_ConvergenceOccurred</scenPartClass>
+    <category>Fixed</category>
+    <summaryPriority>11</summaryPriority>
+  </ScenPartDef>
+  <ScenPartDef>
+    <defName>CVG_StartingCultivators</defName>
+    <label>starting cultivators</label>
+    <scenPartClass>Convergence.Stories.ScenPart_StartingCultivators</scenPartClass>
+    <category>Fixed</category>
+    <summaryPriority>12</summaryPriority>
+  </ScenPartDef>
+  <ScenarioDef ParentName="ScenarioBase" Name="CVG_ScenarioBase" Abstract="True">
+    <scenario>
+      <playerFaction>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+    </scenario>
+  </ScenarioDef>
+
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>CVG_Scenario_LoneSurvivor</defName>
+    <label>Lone survivor</label>
+    <description>Every wall of the sect is gone and every master is dead. You walked out of the ash with a robe, a sword and a breath of qi, and you never looked back. Someone, somewhere, knows there was a survivor.</description>
+    <scenario>
+      <summary>One cultivator who survived the Calamity that destroyed their sect.</summary>
+      <playerFaction>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>1</pawnCount>
+          <pawnChoiceCount>3</pawnChoiceCount>
+        </li>
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MedicineHerbal</thingDef><count>12</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Pemmican</thingDef><count>150</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Silver</thingDef><count>150</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MeleeWeapon_LongSword</thingDef><count>1</count><stuff>Steel</stuff></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>CVG_JadeSlip</thingDef><count>1</count></li>
+        <li Class="ScenPart_StartingThing_Defined" MayRequire="prospero1088.convergence.apparel"><def>StartingThing_Defined</def><thingDef>CVG_Apparel_RobeOuter</thingDef><count>1</count><stuff>Cloth</stuff></li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart"><def>ScatterThingsNearPlayerStart</def><thingDef>WoodLog</thingDef><count>250</count></li>
+        <li Class="ScenPart_ScatterThingsAnywhere"><def>ScatterThingsAnywhere</def><thingDef>Steel</thingDef><count>300</count></li>
+
+        <li Class="Convergence.Stories.ScenPart_StoryOrigin">
+          <def>CVG_StoryOrigin</def>
+          <visible>false</visible>
+          <origin>LoneSurvivor</origin>
+          <followUps><li><key>assassin</key><days>6~12</days></li></followUps>
+        </li>
+        <li Class="Convergence.Stories.ScenPart_ConvergenceOccurred">
+          <def>CVG_ConvergenceOccurred</def>
+        </li>
+        <li Class="Convergence.Stories.ScenPart_StartingCultivators">
+          <def>CVG_StartingCultivators</def>
+          <realm>CVG_Realm_QiRefining</realm>
+          <stage>2~4</stage>
+          <count>99</count>
+          <techniques>true</techniques>
+        </li>
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <textKey>CVG_Scenario_LoneSurvivor_Start</textKey>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>CVG_Scenario_SectFlight</defName>
+    <label>Flight from the sect</label>
+    <description>The gates fell in a night. Four of you slipped out through the kitchen garden while the elders fought, and have been walking since. Other survivors will find you, and so will the hunters.</description>
+    <scenario>
+      <summary>Four disciples flee the destruction of their sect. Hunted, poorly equipped.</summary>
+      <playerFaction>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>4</pawnCount>
+          <pawnChoiceCount>6</pawnChoiceCount>
+        </li>
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MedicineHerbal</thingDef><count>12</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Pemmican</thingDef><count>150</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Silver</thingDef><count>150</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MeleeWeapon_LongSword</thingDef><count>1</count><stuff>Steel</stuff></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>CVG_JadeSlip</thingDef><count>1</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MeleeWeapon_Knife</thingDef><count>2</count><stuff>Steel</stuff></li>
+        <li Class="ScenPart_StartingThing_Defined" MayRequire="prospero1088.convergence.apparel"><def>StartingThing_Defined</def><thingDef>CVG_Apparel_RobeOuter</thingDef><count>1</count><stuff>Cloth</stuff></li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart"><def>ScatterThingsNearPlayerStart</def><thingDef>WoodLog</thingDef><count>250</count></li>
+        <li Class="ScenPart_ScatterThingsAnywhere"><def>ScatterThingsAnywhere</def><thingDef>Steel</thingDef><count>300</count></li>
+
+        <li Class="Convergence.Stories.ScenPart_StoryOrigin">
+          <def>CVG_StoryOrigin</def>
+          <visible>false</visible>
+          <origin>SectFlight</origin>
+          <followUps><li><key>refuge</key><days>4~8</days></li><li><key>pursuers</key><days>9~16</days></li></followUps>
+        </li>
+        <li Class="Convergence.Stories.ScenPart_ConvergenceOccurred">
+          <def>CVG_ConvergenceOccurred</def>
+        </li>
+        <li Class="Convergence.Stories.ScenPart_StartingCultivators">
+          <def>CVG_StartingCultivators</def>
+          <realm>CVG_Realm_QiRefining</realm>
+          <stage>1~3</stage>
+          <count>99</count>
+          <techniques>true</techniques>
+        </li>
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <textKey>CVG_Scenario_SectFlight_Start</textKey>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>CVG_Scenario_DestroyedFamily</defName>
+    <label>Destroyed family</label>
+    <description>The clan broke your dantian to punish a debt that was not yours, and cast you out with nothing. You can no longer feel the qi. The clan will want to know if you are still alive, and an old master might know a way to mend you.</description>
+    <scenario>
+      <summary>Cultivators whose dantian was shattered and who were cast out of their clan. They cannot cultivate until it is mended.</summary>
+      <playerFaction>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>3</pawnCount>
+          <pawnChoiceCount>5</pawnChoiceCount>
+        </li>
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+
+        <li Class="ScenPart_ForcedHediff">
+          <def>ForcedHediff</def>
+          <visible>false</visible>
+          <context>PlayerStarter</context>
+          <chance>1</chance>
+          <hediff>CVG_DamagedDantian</hediff>
+          <severityRange>1~1</severityRange>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MedicineHerbal</thingDef><count>12</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Pemmican</thingDef><count>150</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Silver</thingDef><count>150</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MeleeWeapon_Club</thingDef><count>1</count><stuff>WoodLog</stuff></li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart"><def>ScatterThingsNearPlayerStart</def><thingDef>WoodLog</thingDef><count>250</count></li>
+        <li Class="ScenPart_ScatterThingsAnywhere"><def>ScatterThingsAnywhere</def><thingDef>Steel</thingDef><count>300</count></li>
+
+        <li Class="Convergence.Stories.ScenPart_StoryOrigin">
+          <def>CVG_StoryOrigin</def>
+          <visible>false</visible>
+          <origin>DestroyedFamily</origin>
+          <followUps><li><key>master_offer</key><days>5~9</days></li><li><key>clan_returns</key><days>14~22</days></li></followUps>
+        </li>
+        <li Class="Convergence.Stories.ScenPart_ConvergenceOccurred">
+          <def>CVG_ConvergenceOccurred</def>
+        </li>
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <textKey>CVG_Scenario_DestroyedFamily_Start</textKey>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+  
+
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>CVG_Scenario_AscensionProject</defName>
+    <label>Ascension Project</label>
+    <description>The corporation detected something it could not explain, and sent you to study it far from any witness. You have a sample of qi, a budget and a deadline. The sample hums at night.</description>
+    <scenario>
+      <summary>Scientists of Ascension Dynamics with a sample of qi. No cultivators yet.</summary>
+      <playerFaction>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>3</pawnCount>
+          <pawnChoiceCount>6</pawnChoiceCount>
+        </li>
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>DropPods</method>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MedicineHerbal</thingDef><count>4</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Pemmican</thingDef><count>150</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Silver</thingDef><count>150</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MedicineIndustrial</thingDef><count>10</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>ComponentIndustrial</thingDef><count>20</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Gun_Revolver</thingDef><count>1</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>CVG_SpiritStone</thingDef><count>40</count></li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart"><def>ScatterThingsNearPlayerStart</def><thingDef>WoodLog</thingDef><count>250</count></li>
+        <li Class="ScenPart_ScatterThingsAnywhere"><def>ScatterThingsAnywhere</def><thingDef>Steel</thingDef><count>300</count></li>
+
+        <li Class="Convergence.Stories.ScenPart_StoryOrigin">
+          <def>CVG_StoryOrigin</def>
+          <visible>false</visible>
+          <origin>AscensionProject</origin>
+          <followUps><li><key>collective_demon</key><days>10~16</days></li></followUps>
+        </li>
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <textKey>CVG_Scenario_AscensionProject_Start</textKey>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>CVG_Scenario_ClassicalEra</defName>
+    <label>Classical era</label>
+    <description>Your people have lived on this land since before the sects had names. The qi returned a generation ago, and the young cultivate by the fire. One day a righteous sect will notice you.</description>
+    <scenario>
+      <summary>A tribe of the old world with no technology. The Convergence has already happened.</summary>
+      <playerFaction>
+        <factionDef>PlayerTribe</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>4</pawnCount>
+          <pawnChoiceCount>7</pawnChoiceCount>
+        </li>
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MedicineHerbal</thingDef><count>12</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Pemmican</thingDef><count>150</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Silver</thingDef><count>150</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MeleeWeapon_Club</thingDef><count>2</count><stuff>WoodLog</stuff></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Bow_Short</thingDef><count>2</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>CVG_JadeSlip</thingDef><count>1</count></li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart"><def>ScatterThingsNearPlayerStart</def><thingDef>WoodLog</thingDef><count>250</count></li>
+        <li Class="ScenPart_ScatterThingsAnywhere"><def>ScatterThingsAnywhere</def><thingDef>Steel</thingDef><count>300</count></li>
+
+        <li Class="Convergence.Stories.ScenPart_StoryOrigin">
+          <def>CVG_StoryOrigin</def>
+          <visible>false</visible>
+          <origin>ClassicalEra</origin>
+          <followUps><li><key>sect_offer</key><days>10~16</days></li></followUps>
+        </li>
+        <li Class="Convergence.Stories.ScenPart_ConvergenceOccurred">
+          <def>CVG_ConvergenceOccurred</def>
+        </li>
+        <li Class="Convergence.Stories.ScenPart_StartingCultivators">
+          <def>CVG_StartingCultivators</def>
+          <realm>CVG_Realm_QiRefining</realm>
+          <stage>1~2</stage>
+          <count>99</count>
+          <techniques>true</techniques>
+        </li>
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <textKey>CVG_Scenario_ClassicalEra_Start</textKey>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+  
+
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>CVG_Scenario_BeastHunters</defName>
+    <label>Beast hunters</label>
+    <description>You hunt what others flee from. Wind wolves, jade spiders, things that have grown too clever. You carry bows, ropes, and a ledger of kills with the price of each. A guild you do not belong to has been asking about you.</description>
+    <scenario>
+      <summary>Three hunters of spirit beasts, with bows and a taste for trouble.</summary>
+      <playerFaction>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>3</pawnCount>
+          <pawnChoiceCount>6</pawnChoiceCount>
+        </li>
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MedicineHerbal</thingDef><count>12</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Pemmican</thingDef><count>250</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Silver</thingDef><count>150</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Bow_Short</thingDef><count>3</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MeleeWeapon_Spear</thingDef><count>2</count><stuff>Steel</stuff></li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart"><def>ScatterThingsNearPlayerStart</def><thingDef>WoodLog</thingDef><count>250</count></li>
+        <li Class="ScenPart_ScatterThingsAnywhere"><def>ScatterThingsAnywhere</def><thingDef>Steel</thingDef><count>300</count></li>
+
+        <li Class="Convergence.Stories.ScenPart_StoryOrigin">
+          <def>CVG_StoryOrigin</def>
+          <visible>false</visible>
+          <origin>BeastHunters</origin>
+          <followUps><li><key>ev:BeastGuildOffer</key><days>3~6</days></li></followUps>
+        </li>
+        <li Class="Convergence.Stories.ScenPart_ConvergenceOccurred">
+          <def>CVG_ConvergenceOccurred</def>
+        </li>
+        <li Class="Convergence.Stories.ScenPart_StartingCultivators">
+          <def>CVG_StartingCultivators</def>
+          <realm>CVG_Realm_QiRefining</realm>
+          <stage>1~2</stage>
+          <count>99</count>
+          <techniques>true</techniques>
+        </li>
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <textKey>CVG_Scenario_BeastHunters_Start</textKey>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+  
+
+  
+
+  <ScenPartDef MayRequire="prospero1088.convergence.biotechwuxia">
+    <defName>CVG_StartingPuppets</defName>
+    <label>starting puppets</label>
+    <scenPartClass>Convergence.Stories.ScenPart_StartingPuppets</scenPartClass>
+    <category>Fixed</category>
+    <summaryPriority>14</summaryPriority>
+  </ScenPartDef>
+
+</Defs>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Scripture stele: a ritual focus that also concentrates a little qi. Final art: Things/Building/CVG/Sect/ScriptureStele (provisional: tinted vanilla altar). -->
+  <ThingDef ParentName="AltarBase">
+    <defName>CVG_ScriptureStele</defName>
+    <label>scripture stele</label>
+    <description>A tall slab of stone on which the sect's first precepts are carved in a script that only the keepers of the scriptures can read, though everyone recites it. The sect's name is at the foot of the stele; the top is left blank, for what the sect has not yet become.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <texPath>Things/Building/CVG/ScriptureStele</texPath>
+      <drawSize>(1,1)</drawSize>
+      <shadowData>
+        <volume>(0.8, 1, 0.8)</volume>
+      </shadowData>
+    </graphicData>
+    <size>(1,1)</size>
+    <costStuffCount>70</costStuffCount>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>9000</WorkToBuild>
+      <Beauty>8</Beauty>
+      <StyleDominance>10</StyleDominance>
+    </statBases>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>1</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

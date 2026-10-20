@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Peach wood also hurts shamblers (x1.5): the restless dead of the archotechs are still dead. -->
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/HediffDef[defName="Shambler"]</xpath>
+    <value>
+      <li Class="Convergence.DefModExtension_StuffWeakness">
+        <stuff>CVG_PeachWood</stuff>
+        <weapons>
+          <li>CVG_PeachWoodSword</li>
+        </weapons>
+        <factor>1.5</factor>
+      </li>
+    </value>
+  </Operation>
+</Patch>

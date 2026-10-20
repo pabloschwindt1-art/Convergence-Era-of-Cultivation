@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Projectiles, hediffs and the jade slip of the techniques (M5). Own art per element.
+    Own art (docs/ARTE.md): Things/Projectile/CVG/<Name>, Things/Item/CVG_JadeSlip.
+  -->
+
+  <!-- ================= Projectiles ================= -->
+  <ThingDef Name="CVG_TechniqueBulletBase" ParentName="BaseBullet" Abstract="True">
+    <thingClass>Convergence.Projectile_TechniqueBullet</thingClass>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_TechniqueBulletBase">
+    <defName>CVG_Projectile_MetalNeedle</defName>
+    <label>golden needle</label>
+    <graphicData>
+      <texPath>Things/Projectile/CVG/Metal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <armorPenetrationBase>0.45</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>85</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_TechniqueBulletBase">
+    <defName>CVG_Projectile_Thorn</defName>
+    <label>venom thorn</label>
+    <graphicData>
+      <texPath>Things/Projectile/CVG/Wood</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Arrow</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
+      <speed>55</speed>
+      <extraDamages>
+        <li>
+          <def>ToxicBite</def>
+          <amount>3</amount>
+        </li>
+      </extraDamages>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_TechniqueBulletBase">
+    <defName>CVG_Projectile_FrostShard</defName>
+    <label>frost shard</label>
+    <graphicData>
+      <texPath>Things/Projectile/CVG/Water</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.3</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Frostbite</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>60</speed>
+      <extraDamages>
+        <li>
+          <def>Blunt</def>
+          <amount>4</amount>
+        </li>
+      </extraDamages>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>CVG_Projectile_Fireball</defName>
+    <label>fireball</label>
+    <thingClass>Convergence.Projectile_TechniqueExplosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/CVG/Fire</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.6</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Flame</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <explosionRadius>1.5</explosionRadius>
+      <speed>40</speed>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_TechniqueBulletBase">
+    <defName>CVG_Projectile_StoneBullet</defName>
+    <label>stone bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/CVG/Earth</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>13</damageAmountBase>
+      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <stoppingPower>1.5</stoppingPower>
+      <speed>50</speed>
+      <extraDamages>
+        <li>
+          <def>Stun</def>
+          <amount>10</amount>
+          <chance>0.5</chance>
+        </li>
+      </extraDamages>
+    </projectile>
+  </ThingDef>
+
+  <!-- ================= Hediffs ================= -->
+  <HediffDef Name="CVG_TechniqueBuffBase" Abstract="True">
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <everCurableByItem>false</everCurableByItem>
+    <maxSeverity>1</maxSeverity>
+    <defaultLabelColor>(0.55, 0.8, 1)</defaultLabelColor>
+  </HediffDef>
+
+  <!-- Qi shield: absorbs damage (HediffComp_QiShield) and shows a bubble (vanilla texture, render node only). -->
+  <HediffDef ParentName="CVG_TechniqueBuffBase">
+    <defName>CVG_QiShield</defName>
+    <label>qi shield</label>
+    <description>A bell of qi wraps the body and swallows blows until it breaks.</description>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1800~1800</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="Convergence.HediffCompProperties_QiShield">
+        <capacity>40</capacity>
+        <absorbFleck>LightningGlow</absorbFleck>
+        <breakFleck>PsycastAreaEffect</breakFleck>
+      </li>
+    </comps>
+    <stages>
+      <li />
+    </stages>
+    <renderNodeProperties>
+      <li>
+        <debugLabel>Qi shield</debugLabel>
+        <nodeClass>Convergence.PawnRenderNode_Single</nodeClass>
+        <texPath>Other/ShieldBubble</texPath>
+        <shaderTypeDef>MoteGlow</shaderTypeDef>
+        <color>(0.6, 0.85, 1, 0.55)</color>
+        <parentTagDef>Body</parentTagDef>
+        <overrideMeshSize>(1.6, 1.6)</overrideMeshSize>
+        <baseLayer>85</baseLayer>
+        <pawnType>Any</pawnType>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+
+  <HediffDef ParentName="CVG_TechniqueBuffBase">
+    <defName>CVG_SpringRejuvenation</defName>
+    <label>spring rejuvenation</label>
+    <description>Living wood qi flows through the wounds, knitting flesh and slowing the bleeding.</description>
+    <defaultLabelColor>(0.5, 0.9, 0.5)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>10000~10000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <totalBleedFactor>0.5</totalBleedFactor>
+        <statFactors>
+          <InjuryHealingFactor>4</InjuryHealingFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="CVG_TechniqueBuffBase">
+    <defName>CVG_BlazingMeridians</defName>
+    <label>blazing meridians</label>
+    <description>Fire qi rages through the meridians: the body moves and strikes beyond its limits, and it burns.</description>
+    <defaultLabelColor>(1, 0.6, 0.35)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>5000~5000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <painOffset>0.05</painOffset>
+        <statFactors>
+          <MeleeDamageFactor>1.3</MeleeDamageFactor>
+          <MoveSpeed>1.2</MoveSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="CVG_TechniqueBuffBase">
+    <defName>CVG_MountainBody</defName>
+    <label>mountain body</label>
+    <description>Earth qi hardens skin and bones like rock. Blows glance off, but every step is heavy.</description>
+    <defaultLabelColor>(0.8, 0.7, 0.5)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>7500~7500</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>0.85</MoveSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ================= Jade slip ================= -->
+  <!-- Teaches a technique manual when read. Generic: each slip picks a random manual (or the debug/reward one). Not consumed. -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_JadeSlip</defName>
+    <label>jade slip</label>
+    <description>A slip of green jade carved with a cultivation manual. A cultivator who presses it to the forehead receives the manual straight into the mind and learns its first technique. The slip is not used up: it can teach other disciples. Reading one takes the "technique manuals" research (Cultivation tab).</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_JadeSlip</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <MarketValue>400</MarketValue>
+      <Mass>0.2</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <tradeability>All</tradeability>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <techLevel>Medieval</techLevel>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Read {0_label}</useLabel>
+        <useDuration>600</useDuration>
+      </li>
+      <li Class="Convergence.CompProperties_UseEffectLearnManual">
+        <fleckOnUsed>PsycastAreaEffect</fleckOnUsed>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

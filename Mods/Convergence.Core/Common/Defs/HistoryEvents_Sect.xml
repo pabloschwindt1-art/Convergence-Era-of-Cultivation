@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Cultivation events recorded by the Core (SectEvents); the sect precepts of Convergence: Sects (Ideology) react to them. -->
+  <HistoryEventDef><defName>CVG_Cultivated</defName><label>cultivated</label></HistoryEventDef>
+  <HistoryEventDef><defName>CVG_Ascended</defName><label>ascended a realm</label></HistoryEventDef>
+  <HistoryEventDef><defName>CVG_RetreatCompleted</defName><label>finished a breakthrough retreat</label></HistoryEventDef>
+  <HistoryEventDef><defName>CVG_TookPill</defName><label>took a pill</label></HistoryEventDef>
+  <HistoryEventDef><defName>CVG_DemonicArt</defName><label>used a demonic art</label></HistoryEventDef>
+  <HistoryEventDef><defName>CVG_ExtractedEssence</defName><label>extracted an essence</label></HistoryEventDef>
+  <HistoryEventDef><defName>CVG_DuelFought</defName><label>fought a duel</label></HistoryEventDef>
+</Defs>

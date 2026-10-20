@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Personality traits that show in the mood (docs/revision/REVISION_TraitsDestinies.md). -->
+  <ThoughtDef>
+    <defName>CVG_Thought_Seclusion</defName>
+    <workerClass>Convergence.ThoughtWorker_CVG_Seclusion</workerClass>
+    <requiredTraits>
+      <li>CVG_SecludedCultivator</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>closed-door seclusion</label>
+        <description>My own room, the door shut, nobody else. This is how cultivation should be. The monks of the Silent Lotus wall themselves in for forty-nine days; today I understand why.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+      <li>
+        <label>too many people</label>
+        <description>So many voices, so many breaths in one room. I cannot hear my own qi. Not even a rogue cultivators' night market is this loud.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_ArrogantRank</defName>
+    <workerClass>Convergence.ThoughtWorker_CVG_RealmRank</workerClass>
+    <requiredTraits>
+      <li>CVG_ArrogantYoungMaster</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>highest realm in the colony</label>
+        <description>Nobody here is above me. As it should be. Word of this will reach my clan.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+      <li>
+        <label>someone above my realm</label>
+        <description>Someone here has surpassed me. Me! Do they know who my father is? I will remember that face until the next sect tournament.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Story_Dantian_Mended>{PAWN_labelShort}'s dantian is whole again. The qi flows once more.</CVG_Story_Dantian_Mended>
+  <CVG_Story_Cultists_Label>Cultists flee the Calamity</CVG_Story_Cultists_Label>
+  <CVG_Story_Cultists_Text>A ragged group of Blood Moon cultists stumbles to the edge of your land, fleeing something worse than themselves. Their leader begs for shelter in the name of the old oaths: they are strong hands and know how to cultivate, and they swear they have nothing to hide.\n\nAny elder will tell you that a refugee who is too grateful is usually carrying something behind the gratitude.</CVG_Story_Cultists_Text>
+  <CVG_Story_Cultists_Opt_accept>Take them in</CVG_Story_Cultists_Opt_accept>
+  <CVG_Story_Cultists_Opt_refuse>Turn them away</CVG_Story_Cultists_Opt_refuse>
+  <CVG_Story_Cultists_Result_accept>{0} cultists join the colony. Something follows them.</CVG_Story_Cultists_Result_accept>
+  <CVG_Story_Cultists_Result_refuse>The cultists leave into the dusk without a word.</CVG_Story_Cultists_Result_refuse>
+  <CVG_Story_CultistsPursuit_Label>Those who hunt the cultists</CVG_Story_CultistsPursuit_Label>
+  <CVG_Story_CultistsPursuit_Text>The pursuers of the refugees have found the colony. They do not ask who shelters whom: they only ask where the cultists are. ({FACTION_name})</CVG_Story_CultistsPursuit_Text>
+  <CVG_Story_CultistsCurse_Label>A curse follows the refugees</CVG_Story_CultistsCurse_Label>
+  <CVG_Story_CultistsCurse_Text>The cultists carried a curse sewn into the hem of their robes. The air in the colony turns heavy, dreams go sour and nobody sleeps well. It will pass, the elders say, but not today.</CVG_Story_CultistsCurse_Text>
+  <CVG_Thought_Cursed_Label>cursed by the refugees</CVG_Thought_Cursed_Label>
+  <CVG_Thought_Cursed_Desc>Something cold sits at the back of my neck since the cultists came.</CVG_Thought_Cursed_Desc>
+  <CVG_Story_AllyPlea_Label>The {ALLY_name} calls for help</CVG_Story_AllyPlea_Label>
+  <CVG_Story_AllyPlea_Text>A messenger of the {ALLY_name} arrives out of breath: cultists of the Blood Moon besiege one of their outposts, and the sect asks you to hold the line. If you help, the cultists will come to your colony and the sect will fight at your side. If you refuse, they will remember it.</CVG_Story_AllyPlea_Text>
+  <CVG_Story_AllyPlea_Opt_help>Send help</CVG_Story_AllyPlea_Opt_help>
+  <CVG_Story_AllyPlea_Opt_decline>Decline</CVG_Story_AllyPlea_Opt_decline>
+  <CVG_Story_AllyRaid_Label>The Blood Moon strikes</CVG_Story_AllyRaid_Label>
+  <CVG_Story_AllyRaid_Text>The cultists who besieged the outpost of the {ALLY_name} turn on you. {FACTION_name} sends its disciples across the ridge.</CVG_Story_AllyRaid_Text>
+  <CVG_Story_AllyPlea_Reinforcements>Disciples of the {ALLY_name} arrive to fight at your side.</CVG_Story_AllyPlea_Reinforcements>
+  <CVG_Story_Beasts_Label>Ferocious beasts</CVG_Story_Beasts_Label>
+  <CVG_Story_Beasts_Text>A herd of {0} crosses the land, driven by the qi that returned to the world. They are only passing through; do not provoke them.</CVG_Story_Beasts_Text>
+  <CVG_Story_Treasure_Label>A pillar of light</CVG_Story_Treasure_Label>
+  <CVG_Story_Treasure_Text>A column of light rises from the earth. Old scrolls call it a treasure being born: spirit stone, jade and a slip of technique pushed up by the land itself. Every sect within a hundred li has seen it too.</CVG_Story_Treasure_Text>
+  <CVG_Story_TreasureRivals_Label>Rivals for the treasure</CVG_Story_TreasureRivals_Label>
+  <CVG_Story_TreasureRivals_Text>The {FACTION_name} came for the treasure that was born on your land. They will not leave without it.</CVG_Story_TreasureRivals_Text>
+  <CVG_Story_Vengeance_Label>The clan's vengeance</CVG_Story_Vengeance_Label>
+  <CVG_Story_Vengeance_Text>Blood calls for blood. Kin of {VICTIM}, who fell by your hand, have gathered at {FACTION_name} and now come for you.</CVG_Story_Vengeance_Text>
+  <CVG_Story_Vengeance_SomeoneName>an old enemy</CVG_Story_Vengeance_SomeoneName>
+  <CVG_Story_Assassin_Label>The assassin of the sect</CVG_Story_Assassin_Label>
+  <CVG_Story_Assassin_Text>Whoever destroyed your sect left a survivor, and that is a loose thread. The assassin has finally found the trail and comes with his disciples to cut it.</CVG_Story_Assassin_Text>
+  <CVG_Story_Pursuers_Label>The pursuers of the sect</CVG_Story_Pursuers_Label>
+  <CVG_Story_Pursuers_Text>The hunters who destroyed your sect have not given up. A new wave comes to finish what they started.</CVG_Story_Pursuers_Text>
+  <CVG_Story_MasterOffer_Label>An old master offers a way</CVG_Story_MasterOffer_Label>
+  <CVG_Story_MasterOffer_Text>A hermit passes by in the night and leaves a jar at the door: an elixir to mend a broken dantian. 'The body remembers what the heart refuses to forget', he says, and vanishes. Whoever drinks it will cultivate again.</CVG_Story_MasterOffer_Text>
+  <CVG_Story_ClanReturns_Label>The clan returns</CVG_Story_ClanReturns_Label>
+  <CVG_Story_ClanReturns_Text>The clan that cast you out has learned that you live, and that your dantian grows back. They come to take back what they say they never gave.</CVG_Story_ClanReturns_Text>
+  <CVG_Story_Emissaries_Label>Emissaries of the sect</CVG_Story_Emissaries_Label>
+  <CVG_Story_Emissaries_Text>Emissaries of the {FACTION_name} arrive. They were looking for the disciples who fell through the rift, and they see now how you have treated them.</CVG_Story_Emissaries_Text>
+  <CVG_Story_EmissariesHostile_Label>The sect comes for its disciples</CVG_Story_EmissariesHostile_Label>
+  <CVG_Story_EmissariesHostile_Text>The {FACTION_name} found its lost disciples, and it does not like what it sees. They come to take them back by force.</CVG_Story_EmissariesHostile_Text>
+  <CVG_Story_CollectiveDemon_Label>The experiment goes wrong</CVG_Story_CollectiveDemon_Label>
+  <CVG_Story_CollectiveDemon_Text>The sample of qi was too much for the equipment, and for the minds around it. Inner demons wake in several cultivators at once.</CVG_Story_CollectiveDemon_Text>
+  <CVG_Story_CollectiveDemon_Reason>the experiment overloaded the qi</CVG_Story_CollectiveDemon_Reason>
+  <CVG_Story_CollectiveDemonNone_Label>The experiment is quiet</CVG_Story_CollectiveDemonNone_Label>
+  <CVG_Story_CollectiveDemonNone_Text>The corporation's sample of qi hums in its container and does nothing. For now.</CVG_Story_CollectiveDemonNone_Text>
+  <CVG_Story_SectOffer_Label>A righteous sect extends its hand</CVG_Story_SectOffer_Label>
+  <CVG_Story_SectOffer_Text>Emissaries of the Azure Peak and the Silent Lotus have heard of your people. They offer their friendship and a gift: they would accept you as a minor sect under their protection.</CVG_Story_SectOffer_Text>
+  <CVG_Scenario_LoneSurvivor_Start>The sect is ashes. You have a robe, a sword and the little qi that you carry in your dantian.\n\nSomeone will come for you sooner or later.</CVG_Scenario_LoneSurvivor_Start>
+  <CVG_Scenario_SectFlight_Start>The gates fell in a single night. Four of you are all that is left of the sect.\n\nOthers may find you. So will the hunters.</CVG_Scenario_SectFlight_Start>
+  <CVG_Scenario_DestroyedFamily_Start>The clan broke your dantian and cast you out. You cannot cultivate now.\n\nLook for a way to mend what was broken.</CVG_Scenario_DestroyedFamily_Start>
+  <CVG_Scenario_LostDisciples_Start>The ground opened under your feet and you fell into a world of metal and glass.\n\nYour sect is looking for you.</CVG_Scenario_LostDisciples_Start>
+  <CVG_Scenario_AscensionProject_Start>The corporation sent you to study a sample of qi, far from any witness.\n\nThe sample hums at night.</CVG_Scenario_AscensionProject_Start>
+  <CVG_Scenario_ClassicalEra_Start>The qi returned a generation ago, and the young cultivate by the fire.\n\nOne day a righteous sect will notice you.</CVG_Scenario_ClassicalEra_Start>
+  <CVG_Scenario_ExiledAlchemist_Start>You left the Pavilion with a debt, a half-written formula and a cart of jars.\n\nThe collectors will find you.</CVG_Scenario_ExiledAlchemist_Start>
+  <CVG_Scenario_BeastHunters_Start>You hunt what others flee from.\n\nA guild has been asking about you.</CVG_Scenario_BeastHunters_Start>
+  <CVG_Scenario_LotusRefugees_Start>The temple split over a question nobody remembers. You walked out with herbs and a sutra.\n\nThe abbess watched you go.</CVG_Scenario_LotusRefugees_Start>
+  <CVG_Scenario_DragonHeir_Start>You carry a thread of dragon blood, thin as a hair.\n\nThe clan has noticed.</CVG_Scenario_DragonHeir_Start>
+  <CVG_SectWorld_Peace>Peace between {0} and {1}: both sects lay down their blades.</CVG_SectWorld_Peace>
+  <CVG_SectWorld_WarEnded>The war between sects is over: {0} defeated {1}.</CVG_SectWorld_WarEnded>
+  <CVG_Scenario_PuppetMaster_Start>You carry a thread tied around your heart.
+
+Three apprentices follow you, a wooden porter, a mason and a miner, and the road behind you is not empty.
+
+HOW YOUR PUPPETS WORK
+1. Puppets run on qi like mechs on power: when it runs out they go still. Build a sky-breath formation (Formations, under the open sky) and a spirit charger (Biotech tab) a few steps from it; formation pillars carry qi further. The research is already done.
+2. Work puppets, all three from the start: wooden (hauling, cleaning, sowing, plant cutting, doctoring), mason (construction, crafting, tailoring, cooking) and miner (mining, smithing, firefighting). Together they do every job but cultivating qi and research. They work faster as your realm rises.
+3. War puppets, unlocked by research and by your realm: bronze (melee guardian, Foundation), blade (twin blades, Golden Core) and jade (needles, peak of the Golden Core). They fight with the strength of your realm, never above you: three of them beat one cultivator of their level.
+4. Your threads are your bandwidth: the heart thread gives 4 and every realm one more. Work and bronze puppets take 1, blade 2, jade 3.
+5. Build puppets at the puppet workshop with a blueprint (drawn at a crafting spot), spirit thread and their material. Taking a puppet apart costs nothing; if one is destroyed in battle, you feel it.</CVG_Scenario_PuppetMaster_Start>
+</LanguageData>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_CookSteamedBuns.label>cocer bollos al vapor</CVG_CookSteamedBuns.label>
+  <CVG_CookSteamedBuns.description>Cuece al vapor una cesta de bollos rellenos con un ingrediente principal.</CVG_CookSteamedBuns.description>
+  <CVG_CookSteamedBuns.jobString>Cociendo bollos al vapor.</CVG_CookSteamedBuns.jobString>
+  <CVG_CookSteamedBunsBulk.label>cocer bollos al vapor x4</CVG_CookSteamedBunsBulk.label>
+  <CVG_CookSteamedBunsBulk.description>Cuece al vapor cuatro cestas de bollos a la vez.</CVG_CookSteamedBunsBulk.description>
+  <CVG_CookSteamedBunsBulk.jobString>Cociendo bollos al vapor.</CVG_CookSteamedBunsBulk.jobString>
+  <CVG_CookSpiritRice.label>cocinar arroz con carne espiritual</CVG_CookSpiritRice.label>
+  <CVG_CookSpiritRice.description>Cocina arroz y glasea encima láminas de carne de bestia espiritual.</CVG_CookSpiritRice.description>
+  <CVG_CookSpiritRice.jobString>Cocinando arroz con carne espiritual.</CVG_CookSpiritRice.jobString>
+  <CVG_CookSectBanquet.label>cocinar banquete de la secta</CVG_CookSectBanquet.label>
+  <CVG_CookSectBanquet.description>Cocina los ocho platos de un banquete de secta, con hierbas espirituales en el caldo.</CVG_CookSectBanquet.description>
+  <CVG_CookSectBanquet.jobString>Cocinando un banquete de la secta.</CVG_CookSectBanquet.jobString>
+  <CVG_MakeBiguPills.label>prensar píldoras de ayuno</CVG_MakeBiguPills.label>
+  <CVG_MakeBiguPills.description>Prensa arroz y una hierba espiritual en píldoras de grano que duran meses.</CVG_MakeBiguPills.description>
+  <CVG_MakeBiguPills.jobString>Prensando píldoras de ayuno.</CVG_MakeBiguPills.jobString>
+  <CVG_BrewCloudTea.label>preparar té de las nubes</CVG_BrewCloudTea.label>
+  <CVG_BrewCloudTea.description>Enrolla y cocina al vapor hojas de té de las nubes (o, si faltan, de hierba espiritual) para hacer té de las nubes.</CVG_BrewCloudTea.description>
+  <CVG_BrewCloudTea.jobString>Preparando té de las nubes.</CVG_BrewCloudTea.jobString>
+  <CVG_MakeIncense.label>enrollar incienso</CVG_MakeIncense.label>
+  <CVG_MakeIncense.description>Muele madera e hierba espiritual en una pasta y enróllala en varitas de incienso.</CVG_MakeIncense.description>
+  <CVG_MakeIncense.jobString>Enrollando incienso.</CVG_MakeIncense.jobString>
+  <Make_CVG_HerbalOintment.label>hacer ungüento de hierbas</Make_CVG_HerbalOintment.label>
+  <Make_CVG_HerbalOintment.description>Hacer ungüento de hierbas.</Make_CVG_HerbalOintment.description>
+  <Make_CVG_HerbalOintment.jobString>Haciendo ungüento de hierbas.</Make_CVG_HerbalOintment.jobString>
+  <Make_CVG_HealingPill.label>hacer píldora curativa</Make_CVG_HealingPill.label>
+  <Make_CVG_HealingPill.description>Hacer píldora curativa.</Make_CVG_HealingPill.description>
+  <Make_CVG_HealingPill.jobString>Haciendo píldora curativa.</Make_CVG_HealingPill.jobString>
+  <Make_CVG_JadeElixir.label>hacer elixir de jade</Make_CVG_JadeElixir.label>
+  <Make_CVG_JadeElixir.description>Hacer elixir de jade.</Make_CVG_JadeElixir.description>
+  <Make_CVG_JadeElixir.jobString>Haciendo elixir de jade.</Make_CVG_JadeElixir.jobString>
+  <CVG_CookSectBanquet.ingredients.0.filter.customSummary>proteína</CVG_CookSectBanquet.ingredients.0.filter.customSummary>
+</LanguageData>

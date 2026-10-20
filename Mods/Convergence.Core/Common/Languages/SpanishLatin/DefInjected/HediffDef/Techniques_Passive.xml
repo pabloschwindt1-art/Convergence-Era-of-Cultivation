@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Passive_GoldenBellSkin.label>piel de campana dorada</CVG_Passive_GoldenBellSkin.label>
+  <CVG_Passive_GoldenBellSkin.description>El qi de metal descansa bajo la piel como el bronce de una campana. Las hojas resbalan.</CVG_Passive_GoldenBellSkin.description>
+  <CVG_Passive_EdgeOfTheHeart.label>filo del corazón</CVG_Passive_EdgeOfTheHeart.label>
+  <CVG_Passive_EdgeOfTheHeart.description>El corazón corta antes de que se mueva la mano.</CVG_Passive_EdgeOfTheHeart.description>
+  <CVG_Passive_SwordIntent.label>intención de la espada</CVG_Passive_SwordIntent.label>
+  <CVG_Passive_SwordIntent.description>Una hoja invisible pesa sobre todos los que están cerca.</CVG_Passive_SwordIntent.description>
+  <CVG_Passive_EvergreenBreath.label>aliento perenne</CVG_Passive_EvergreenBreath.label>
+  <CVG_Passive_EvergreenBreath.description>El qi de madera entra con cada aliento y limpia el cuerpo.</CVG_Passive_EvergreenBreath.description>
+  <CVG_Passive_TreeHeart.label>corazón del árbol viejo</CVG_Passive_TreeHeart.label>
+  <CVG_Passive_TreeHeart.description>El pulso lento de todo lo vivo late en las manos.</CVG_Passive_TreeHeart.description>
+  <CVG_Passive_CloudSteps.label>pasos de nube</CVG_Passive_CloudSteps.label>
+  <CVG_Passive_CloudSteps.description>Cada paso se desliza como una nube sobre un lago.</CVG_Passive_CloudSteps.description>
+  <CVG_Passive_StillWaterMind.label>mente de agua quieta</CVG_Passive_StillWaterMind.label>
+  <CVG_Passive_StillWaterMind.description>Las tormentas del corazón pasan sin una onda.</CVG_Passive_StillWaterMind.description>
+  <CVG_Passive_TideReading.label>leer la marea</CVG_Passive_TideReading.label>
+  <CVG_Passive_TideReading.description>El flujo del combate es tan claro como una marea.</CVG_Passive_TideReading.description>
+  <CVG_Passive_InnerFurnace.label>horno interior</CVG_Passive_InnerFurnace.label>
+  <CVG_Passive_InnerFurnace.description>Brasas de qi de fuego brillan en el dantian.</CVG_Passive_InnerFurnace.description>
+  <CVG_Passive_SunHeart.label>corazón del sol</CVG_Passive_SunHeart.label>
+  <CVG_Passive_SunHeart.description>Un sol estable arde en el centro del pecho.</CVG_Passive_SunHeart.description>
+  <CVG_Passive_StoneMarrow.label>médula de piedra</CVG_Passive_StoneMarrow.label>
+  <CVG_Passive_StoneMarrow.description>La médula es densa como piedra de río.</CVG_Passive_StoneMarrow.description>
+  <CVG_Passive_RootedMountain.label>montaña enraizada</CVG_Passive_RootedMountain.label>
+  <CVG_Passive_RootedMountain.description>Raíces de qi de tierra llegan hondo bajo los pies.</CVG_Passive_RootedMountain.description>
+  <CVG_Passive_SpringRejuvenation.label>rejuvenecimiento primaveral</CVG_Passive_SpringRejuvenation.label>
+  <CVG_Passive_SpringRejuvenation.description>El qi de madera viva teje la carne sin pausa.</CVG_Passive_SpringRejuvenation.description>
+  <CVG_Passive_BlazingMeridians.label>meridianos ardientes</CVG_Passive_BlazingMeridians.label>
+  <CVG_Passive_BlazingMeridians.description>El qi de fuego corre caliente por los meridianos.</CVG_Passive_BlazingMeridians.description>
+  <CVG_Passive_MountainBody.label>cuerpo de montaña</CVG_Passive_MountainBody.label>
+  <CVG_Passive_MountainBody.description>El qi de tierra endurece la piel y los huesos como roca.</CVG_Passive_MountainBody.description>
+</LanguageData>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_SolarGoldSand.label>arena de oro solar</CVG_SolarGoldSand.label>
+  <CVG_SolarGoldSand.description>Arena dorada que bebió el sol del desierto durante diez mil años: yang puro. El horno de refinado la quema más caliente que la madera y puede fundir oro de ella.</CVG_SolarGoldSand.description>
+  <CVG_MineableSolarGold.label>veta de oro solar</CVG_MineableSolarGold.label>
+  <CVG_MineableSolarGold.description>Una veta de arena dorada empapada de sol, solo en desiertos. Los nómadas dicen que el sol enterró aquí la luz que le sobraba, y la desentierran para pagar sus deudas con las sectas.</CVG_MineableSolarGold.description>
+  <CVG_BloodFruit.label>fruta de sangre</CVG_BloodFruit.label>
+  <CVG_BloodFruit.description>Una fruta rojo oscuro de la selva profunda. Nutritiva, y da sangre-qi a quien templa el cuerpo.</CVG_BloodFruit.description>
+  <CVG_Plant_BloodFruitBush.label>arbusto de fruta de sangre</CVG_Plant_BloodFruitBush.label>
+  <CVG_Plant_BloodFruitBush.description>Un arbusto espinoso de la selva con frutos rojo oscuro que dan sangre-qi. El Culto de la Luna Sangrienta la planta alrededor de sus templos y asegura que cada fruto es una gota que dejó caer la luna.</CVG_Plant_BloodFruitBush.description>
+  <CVG_SpiritWood.label>madera espiritual</CVG_SpiritWood.label>
+  <CVG_SpiritWood.description>Madera de un árbol que creció donde se remansa el qi. Los muebles, pisos y paredes de madera espiritual suben la concentración de qi.</CVG_SpiritWood.description>
+  <CVG_SpiritWood.stuffProps.stuffAdjective>madera espiritual</CVG_SpiritWood.stuffProps.stuffAdjective>
+  <CVG_Plant_SpiritTree.label>árbol espiritual</CVG_Plant_SpiritTree.label>
+  <CVG_Plant_SpiritTree.description>Un árbol antiguo que bebió qi por sus raíces. Da madera espiritual.</CVG_Plant_SpiritTree.description>
+  <CVG_PoisonHerb.label>hierba venenosa</CVG_PoisonHerb.label>
+  <CVG_PoisonHerb.description>Una hierba morada de pantano. Mascada en dosis pequeñas entrena el cuerpo contra las toxinas (resistencia a toxinas durante dos días), a costa de algo de acumulación tóxica.</CVG_PoisonHerb.description>
+  <CVG_Plant_PoisonHerb.label>hierba venenosa</CVG_Plant_PoisonHerb.label>
+  <CVG_Plant_PoisonHerb.description>Una hierba morada que crece en los pantanos, llena de veneno. Los cultivadores del cuerpo del Loto Silencioso mastican una hoja por día durante un año, y los que sobreviven ya no temen a ningún veneno.</CVG_Plant_PoisonHerb.description>
+  <CVG_SpiritPearl.label>perla espiritual</CVG_SpiritPearl.label>
+  <CVG_SpiritPearl.description>Una perla crecida alrededor de una gota de qi. Muy valiosa; unas cuantas en una habitación suben su concentración de qi. Con Odyssey, captura rara al pescar.</CVG_SpiritPearl.description>
+  <CVG_PoisonHerb.ingestible.ingestCommandString>Tomar {0}</CVG_PoisonHerb.ingestible.ingestCommandString>
+  <CVG_PoisonHerb.ingestible.ingestReportString>Tomando {0}.</CVG_PoisonHerb.ingestible.ingestReportString>
+</LanguageData>

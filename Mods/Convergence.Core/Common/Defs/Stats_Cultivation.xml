@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <StatCategoryDef>
+    <defName>CVG_Cultivation</defName>
+    <label>Cultivation</label>
+    <displayOrder>45</displayOrder>
+    <displayAllByDefault>true</displayAllByDefault>
+  </StatCategoryDef>
+
+  <!-- Solo se muestran en cultivadores de qi despiertos (StatWorker_Cultivation). -->
+  <StatDef Name="CVG_CultivationStatBase" Abstract="True">
+    <category>CVG_Cultivation</category>
+    <workerClass>Convergence.StatWorker_Cultivation</workerClass>
+    <showOnAnimals>false</showOnAnimals>
+    <showOnMechanoids>false</showOnMechanoids>
+    <showOnEntities>false</showOnEntities>
+    <showOnDrones>false</showOnDrones>
+    <minValue>0</minValue>
+  </StatDef>
+
+  <StatDef ParentName="CVG_CultivationStatBase">
+    <defName>CVG_QiMax</defName>
+    <label>max qi</label>
+    <description>How much qi this cultivator can hold in their dantian. Grows with each stage and realm.</description>
+    <defaultBaseValue>100</defaultBaseValue>
+    <toStringStyle>Integer</toStringStyle>
+    <displayPriorityInCategory>100</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef ParentName="CVG_CultivationStatBase">
+    <defName>CVG_QiRegen</defName>
+    <label>qi regeneration</label>
+    <description>Qi recovered per hour just by breathing. Cultivating on a cultivation spot multiplies it.</description>
+    <!-- A rest the dantian fills in about a day; cultivating on a cushion, in a few hours. -->
+    <defaultBaseValue>4</defaultBaseValue>
+    <toStringStyle>FloatOne</toStringStyle>
+    <formatString>{0} / h</formatString>
+    <displayPriorityInCategory>90</displayPriorityInCategory>
+    <parts>
+      <li Class="Convergence.StatPart_CelestialCondition" />
+    </parts>
+  </StatDef>
+
+  <StatDef ParentName="CVG_CultivationStatBase">
+    <defName>CVG_CultivationSpeed</defName>
+    <label>cultivation speed</label>
+    <description>Multiplier to cultivation progress. It stacks with the spirit root quality and the qi concentration of the place.</description>
+    <defaultBaseValue>1</defaultBaseValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <displayPriorityInCategory>80</displayPriorityInCategory>
+    <parts>
+      <li Class="Convergence.StatPart_CelestialCondition" />
+      <li Class="Convergence.StatPart_CultivationDifficulty" />
+      <li Class="Convergence.StatPart_ElementalResonance" />
+    </parts>
+  </StatDef>
+
+  <StatDef ParentName="CVG_CultivationStatBase">
+    <defName>CVG_BreakthroughChance</defName>
+    <label>breakthrough chance</label>
+    <description>Base chance of breaking through to the next realm. It is multiplied by the difficulty of that realm, the quality of the spirit root and the qi concentration of the place. Pills such as the Foundation Pill add to it.</description>
+    <defaultBaseValue>0.5</defaultBaseValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <displayPriorityInCategory>70</displayPriorityInCategory>
+    <parts>
+      <li Class="Convergence.StatPart_CelestialCondition" />
+    </parts>
+  </StatDef>
+
+  <!-- Implants and machines raise it with statOffsets in their hediff (negative values lower it). -->
+  <StatDef ParentName="CVG_CultivationStatBase">
+    <defName>CVG_CelestialDissonance</defName>
+    <label>celestial dissonance</label>
+    <description>How much Heaven resents what was added to this body. Implants, bionics and machines raise it. The higher it is, the more and stronger lightning bolts fall during a heavenly tribulation.</description>
+    <defaultBaseValue>0</defaultBaseValue>
+    <toStringStyle>FloatTwo</toStringStyle>
+    <displayPriorityInCategory>60</displayPriorityInCategory>
+    <parts>
+      <li Class="Convergence.StatPart_ImplantDissonance" />
+    </parts>
+  </StatDef>
+
+  <!-- Techniques (M5): multiplier of the resource cost of every technique. Pills, gear and genes can lower it. -->
+  <StatDef ParentName="CVG_CultivationStatBase">
+    <defName>CVG_TechniqueCost</defName>
+    <label>technique cost</label>
+    <description>Multiplier of the qi (or other resource) spent on cultivation techniques. Mastering a technique lowers its own cost on top of this.</description>
+    <defaultBaseValue>1</defaultBaseValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <displayPriorityInCategory>50</displayPriorityInCategory>
+    <parts>
+      <li Class="Convergence.StatPart_CelestialCondition" />
+    </parts>
+  </StatDef>
+
+  <!--
+    Spirit grade of a weapon (docs/modulos/DEFENSA.md §1): 0 mortal, 1 runes, 2 spirit weapon, 3+ treasure. Set it with
+    Convergence.CompProperties_SpiritGrade on the weapon. Techniques, fists and natural weapons use the realm of the attacker.
+    Realm suppression: if the grade of an attack is lower than the realm of a cultivator, the damage is multiplied by this
+    curve (realms of difference -> damage factor), weakened or strengthened by the mod setting. Realm = order of the realm
+    (Qi Refining 1, Foundation 2, Golden Core 3); it stacks with the incoming damage factor of the realm hediff:
+    a Golden Core takes 0.2 x 0.4 = 8% from a mortal rifle.
+  -->
+  <StatDef>
+    <defName>CVG_SpiritGrade</defName>
+    <label>spirit grade</label>
+    <description>How much spiritual power this weapon carries. Against a cultivator of a higher realm, the damage of a lower-grade weapon is suppressed: each realm of difference cuts it sharply. Mortal weapons are grade 0; techniques strike with the realm of their caster.</description>
+    <category>Weapon</category>
+    <workerClass>Convergence.StatWorker_SpiritGrade</workerClass>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>Integer</toStringStyle>
+    <showOnPawns>false</showOnPawns>
+    <showOnAnimals>false</showOnAnimals>
+    <displayPriorityInCategory>1000</displayPriorityInCategory>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RealmSuppression">
+        <damageFactorCurve>
+          <points>
+            <li>(0, 1)</li>
+            <li>(1, 0.85)</li>
+            <li>(2, 0.5)</li>
+            <li>(3, 0.2)</li>
+            <li>(4, 0.08)</li>
+            <li>(5, 0.03)</li>
+          </points>
+        </damageFactorCurve>
+      </li>
+    </modExtensions>
+  </StatDef>
+  <!-- Path of the body (M4b). Blood qi has no passive regeneration: it comes from spirit-beast products. -->
+  <StatDef ParentName="CVG_CultivationStatBase">
+    <defName>CVG_BloodQiMax</defName>
+    <label>max blood qi</label>
+    <description>How much blood qi this body cultivator can hold. Grows with each stage and realm of the body.</description>
+    <defaultBaseValue>50</defaultBaseValue>
+    <toStringStyle>Integer</toStringStyle>
+    <displayPriorityInCategory>99</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef ParentName="CVG_CultivationStatBase">
+    <defName>CVG_BloodQiRegen</defName>
+    <label>blood qi regeneration</label>
+    <description>Blood qi recovered per hour on its own. Zero by default: blood qi comes from eating spirit-beast meat, beast blood and spirit soup.</description>
+    <defaultBaseValue>0</defaultBaseValue>
+    <toStringStyle>FloatOne</toStringStyle>
+    <formatString>{0} / h</formatString>
+    <displayPriorityInCategory>89</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef ParentName="CVG_CultivationStatBase">
+    <defName>CVG_BodyTemperingSpeed</defName>
+    <label>body tempering speed</label>
+    <description>Multiplier to the progress of body tempering on training equipment. Special bodies without a spirit root (steel, sword, tribulation, innate spirit) temper faster.</description>
+    <defaultBaseValue>1</defaultBaseValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <displayPriorityInCategory>79</displayPriorityInCategory>
+    <parts>
+      <li Class="Convergence.StatPart_CelestialCondition" />
+      <li Class="Convergence.StatPart_CultivationDifficulty" />
+    </parts>
+  </StatDef>
+
+  <!-- Multiplier of the chance to purify a bloodline (purification pills). Lineage heirs raise it. -->
+  <StatDef>
+    <defName>CVG_PurificationChance</defName>
+    <label>bloodline purification chance</label>
+    <description>Multiplier of the chance that a purification pill refines this person's bloodline.</description>
+    <category>CVG_Cultivation</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0</minValue>
+    <hideAtValue>1</hideAtValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <showOnAnimals>false</showOnAnimals>
+    <showOnMechanoids>false</showOnMechanoids>
+    <displayPriorityInCategory>40</displayPriorityInCategory>
+  </StatDef>
+
+  <!-- Environment resistance (user, 2026-10-17): the higher the realm, the less the world can touch the body. Given by the
+       realm stages (Golden Core 50 %, the next realm 75 %, the one before last 100 %); StatPart_EnvironmentResistance turns it
+       into comfortable temperature range, less flammability and toxic resistance, plus the affinity of the root's elements. -->
+  <StatDef>
+    <defName>CVG_EnvironmentResistance</defName>
+    <label>environment resistance</label>
+    <description>How little heat, cold, poison and fire can touch this body. Each realm tempers it further: at the Golden Core the world bites half as hard, and the old masters of Jiuxiao walked through snowstorms and burning halls in a single robe. The spirit root adds its own affinity: fire roots do not catch flame, water roots do not feel the frost, earth roots shrug off poison.</description>
+    <category>CVG_Cultivation</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <maxValue>1</maxValue>
+    <hideAtValue>0</hideAtValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <showOnAnimals>false</showOnAnimals>
+    <showOnMechanoids>false</showOnMechanoids>
+    <displayPriorityInCategory>40</displayPriorityInCategory>
+  </StatDef>
+</Defs>

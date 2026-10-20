@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Cultivation in the vanilla systems of daily life (docs/revision/REVISION_Core.md, high priority): thoughts, records
+    of the character sheet and tales for art. They are given by Convergence.CultivationLife (C#).
+  -->
+  <ThoughtDef>
+    <defName>CVG_Thought_BreakthroughSuccess</defName>
+    <durationDays>6</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>broke through</label>
+        <description>I broke through to a new realm. The world looks different from up here.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Lo que sienten los demás cuando alguien cercano avanza de reino ({0} = quien avanzó). -->
+  <ThoughtDef>
+    <defName>CVG_Thought_PartnerAscended</defName>
+    <durationDays>6</durationDays>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>{0} broke through</label>
+        <description>The one I share my path with has climbed a realm. In the old tales, partners who rise together are the ones who reach the sky.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_KinAscended</defName>
+    <durationDays>4</durationDays>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>{0} broke through</label>
+        <description>Family blood climbing a realm. The ancestors' tablets will be dusted tonight.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_RivalAscended</defName>
+    <durationDays>5</durationDays>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>{0} surpassed me</label>
+        <description>That one broke through before me. Every cultivator knows the bitter taste of watching a rival's back.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_BreakthroughFailed</defName>
+    <durationDays>4</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>breakthrough failed</label>
+        <description>The qi slipped through my fingers at the threshold. All that cultivation, and the gate stayed closed.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_SurvivedTribulation</defName>
+    <durationDays>10</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>survived the tribulation</label>
+        <description>Heaven struck me again and again, and I am still standing.</description>
+        <baseMoodEffect>12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_WitnessedTribulation</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>witnessed a tribulation</label>
+        <description>I saw lightning fall from a clear sky on one of us, and saw them walk out of it. Immortals are real.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_QiDeviation</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>CVG_QiDeviation</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>qi deviation</label>
+        <description>My meridians burn and the qi runs backwards. Every breath is a fight.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <RecordDef>
+    <defName>CVG_TimeCultivating</defName>
+    <label>time cultivating</label>
+    <description>Total time spent cultivating or tempering the body.</description>
+    <type>Time</type>
+    <workerClass>Convergence.RecordWorker_TimeCultivating</workerClass>
+  </RecordDef>
+
+  <RecordDef>
+    <defName>CVG_Breakthroughs</defName>
+    <label>breakthroughs</label>
+    <description>Realms reached by breaking through.</description>
+    <type>Int</type>
+  </RecordDef>
+
+  <RecordDef>
+    <defName>CVG_TribulationsSurvived</defName>
+    <label>tribulations survived</label>
+    <description>Heavenly tribulations survived.</description>
+    <type>Int</type>
+  </RecordDef>
+
+  <RecordDef>
+    <defName>CVG_TechniquesCast</defName>
+    <label>techniques cast</label>
+    <description>Cultivation techniques cast.</description>
+    <type>Int</type>
+  </RecordDef>
+
+  <TaleDef>
+    <defName>CVG_Tale_Breakthrough</defName>
+    <label>breakthrough</label>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <type>Volatile</type>
+    <usableForArt>true</usableForArt>
+    <baseInterest>60</baseInterest>
+    <rulePack>
+      <rulesStrings>
+        <li>tale_noun-&gt;[PAWN_nameDef] breaking through to a new realm</li>
+        <li>tale_noun-&gt;[PAWN_nameDef]'s breakthrough</li>
+        <li>image-&gt;[PAWN_nameFull] sitting cross-legged as qi spirals around [PAWN_objective] [circumstance_group]</li>
+        <li>image-&gt;[PAWN_nameFull] opening [PAWN_possessive] eyes as a new realm settles in [PAWN_possessive] dantian [circumstance_group]</li>
+        <li>circumstance_phrase-&gt;under a sky full of clouds</li>
+        <li>circumstance_phrase-&gt;while the air shimmers with qi</li>
+        <li>desc_sentence-&gt;[Quantity_adjphrase] [ally]s watch in awe.</li>
+        <li>desc_sentence-&gt;A crane circles above.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+
+  <TaleDef>
+    <defName>CVG_Tale_SurvivedTribulation</defName>
+    <label>survived a tribulation</label>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <type>Volatile</type>
+    <usableForArt>true</usableForArt>
+    <baseInterest>90</baseInterest>
+    <rulePack>
+      <rulesStrings>
+        <li>tale_noun-&gt;[PAWN_nameDef] surviving the heavenly tribulation</li>
+        <li>tale_noun-&gt;[PAWN_nameDef]'s tribulation</li>
+        <li>image-&gt;[PAWN_nameFull] standing under nine bolts of lightning [circumstance_group]</li>
+        <li>image-&gt;[PAWN_nameFull] walking out of the smoke of a tribulation [circumstance_group]</li>
+        <li>circumstance_phrase-&gt;with [PAWN_possessive] robes burned to rags</li>
+        <li>circumstance_phrase-&gt;unbowed</li>
+        <li>desc_sentence-&gt;Black clouds swirl above.</li>
+        <li>desc_sentence-&gt;[Quantity_adjphrase] [ally]s cheer from a distance.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+
+  <TaleDef>
+    <defName>CVG_Tale_DiedInTribulation</defName>
+    <label>died in a tribulation</label>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <type>Volatile</type>
+    <usableForArt>true</usableForArt>
+    <baseInterest>70</baseInterest>
+    <rulePack>
+      <rulesStrings>
+        <li>tale_noun-&gt;[PAWN_nameDef]'s death in the heavenly tribulation</li>
+        <li>tale_noun-&gt;heaven striking down [PAWN_nameDef]</li>
+        <li>image-&gt;[PAWN_nameFull] struck by the last bolt of a tribulation [circumstance_group]</li>
+        <li>circumstance_phrase-&gt;with one hand still raised to the sky</li>
+        <li>circumstance_phrase-&gt;as the clouds part</li>
+        <li>desc_sentence-&gt;[Quantity_adjphrase] [ally]s mourn below.</li>
+        <li>desc_sentence-&gt;A single lotus floats in the rain.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+
+</Defs>

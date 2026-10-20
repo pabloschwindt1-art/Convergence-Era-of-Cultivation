@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_BambooPalisade.label>empalizada de bambú</CVG_BambooPalisade.label>
+  <CVG_LowStoneWall.label>muralla baja de piedra</CVG_LowStoneWall.label>
+  <CVG_QiSpikeTrap.label>trampa de púas de qi</CVG_QiSpikeTrap.label>
+  <CVG_BambooPalisade.description>Una hilera de estacas de bambú afiladas, atadas a un travesaño y clavadas al suelo en diagonal. Detiene animales y frena asaltantes, da cobertura baja y arde como una antorcha. Los puestos fronterizos de la Senda Errante la levantan en una tarde y la desmontan en una mañana, que es el sentido de todo.</CVG_BambooPalisade.description>
+  <CVG_LowStoneWall.description>Un muro a la altura de la rodilla o la cintura, de piedras ajustadas sin mortero, como el que separa los campos en terraza y, cuando hace falta, a los defensores de los atacantes. Más resistente que una empalizada e imposible de quemar. Las viejas murallas de las sectas fueron todas bajas una vez; se hicieron altas solo después de que la Calamidad de Hierro enseñara lo que un muro bajo no detiene.</CVG_LowStoneWall.description>
+  <CVG_QiSpikeTrap.description>Un fragmento de formación asesina tallado en una losa y enterrado bajo un poco de tierra. Cuando pisa quien no lleva la marca de la secta, del suelo brotan púas de qi endurecido. No se puede colocar junto a otra trampa, y no hay que rearmarla: la formación recuerda.</CVG_QiSpikeTrap.description>
+</LanguageData>

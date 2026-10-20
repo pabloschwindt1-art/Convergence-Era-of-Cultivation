@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Bandwidth of a puppet master: +1 per realm level (strength of the soul), on the vanilla MechBandwidth stat. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/StatDef[defName="MechBandwidth"]/parts</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/StatDef[defName="MechBandwidth"]/parts</xpath>
+      <value>
+        <li Class="Convergence.StatPart_PuppetBandwidth">
+          <perRealmLevel>1</perRealmLevel>
+        </li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/StatDef[defName="MechBandwidth"]</xpath>
+      <value>
+        <parts>
+          <li Class="Convergence.StatPart_PuppetBandwidth">
+            <perRealmLevel>1</perRealmLevel>
+          </li>
+        </parts>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Puppet masters (Traits & Destinies, if loaded) are born with the Puppet Heart Thread. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/TraitDef[defName="CVG_Role_PuppetMaster"]</xpath>
+    <match Class="PatchOperationAddModExtension">
+      <xpath>Defs/TraitDef[defName="CVG_Role_PuppetMaster"]</xpath>
+      <value>
+        <li Class="Convergence.DefModExtension_TraitGrantsHediff">
+          <hediff>CVG_PuppetHeartThread</hediff>
+          <bodyPart>Heart</bodyPart>
+        </li>
+      </value>
+    </match>
+  </Operation>
+</Patch>

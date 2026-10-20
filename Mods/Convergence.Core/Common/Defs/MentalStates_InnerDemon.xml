@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Inner demon (心魔): a vanilla major mental break, only for cultivators (MentalBreakWorker_InnerDemon), x5 under the
+    inner demon moon (innerDemonBreakFactor of the condition). Behavior: wandering like psychotic wandering (think tree
+    patch in Patches/ThinkTree_InnerDemon.xml). When it ends: qi deviation (blood qi backflow for body cultivators).
+  -->
+  <MentalBreakDef>
+    <defName>CVG_InnerDemon</defName>
+    <mentalState>CVG_InnerDemon</mentalState>
+    <workerClass>Convergence.MentalBreakWorker_InnerDemon</workerClass>
+    <baseCommonality>0.6</baseCommonality>
+    <intensity>Major</intensity>
+  </MentalBreakDef>
+
+  <MentalStateDef ParentName="BaseMentalState">
+    <defName>CVG_InnerDemon</defName>
+    <stateClass>Convergence.MentalState_InnerDemon</stateClass>
+    <label>inner demon</label>
+    <category>Misc</category>
+    <moodRecoveryThought>Catharsis</moodRecoveryThought>
+    <blockNormalThoughts>true</blockNormalThoughts>
+    <nameColor>(0.85, 0.45, 0.55)</nameColor>
+    <minTicksBeforeRecovery>15000</minTicksBeforeRecovery>
+    <maxTicksBeforeRecovery>40000</maxTicksBeforeRecovery>
+    <recoveryMtbDays>0.25</recoveryMtbDays>
+    <recoveryMessage>{0} has driven the inner demon away, but the qi is still in turmoil.</recoveryMessage>
+    <beginLetterLabel>inner demon</beginLetterLabel>
+    <beginLetter>{0} is assailed by an inner demon (心魔): doubts, regrets and desires take shape in the mind. {0} wanders lost until it passes, and the qi will be left in disorder.</beginLetter>
+    <beginLetterDef>NegativeEvent</beginLetterDef>
+    <baseInspectLine>Mental state: Inner demon</baseInspectLine>
+    <tale>MentalStateGaveUp</tale>
+    <inCaravanCanDo>true</inCaravanCanDo>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_InnerDemon">
+        <qiHediff>CVG_QiDeviation</qiHediff>
+        <bodyHediff>CVG_BloodBackflow</bodyHediff>
+      </li>
+    </modExtensions>
+  </MentalStateDef>
+</Defs>

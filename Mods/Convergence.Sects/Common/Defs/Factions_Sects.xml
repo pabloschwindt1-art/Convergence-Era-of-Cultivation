@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- The sects are normal factions of the world, chosen at world creation like the vanilla ones (one of each, removable).
+       Saves from before this change get them at the Convergence (DefModExtension_ConvergenceFaction in Core). -->
+  <FactionDef ParentName="OutlanderFactionBase">
+    <defName>CVG_Faction_AzurePeak</defName>
+    <factionIconPath>World/CVG/Factions/AzurePeak</factionIconPath>
+    <label>azure peak sword sect</label>
+    <description>A sect of swordsmen on a peak split by a single stroke, four thousand years ago. Proud and strict, they temper the Will of the Sword and answer any slight to the honor of the Peak with a duel. They forge with metal, qi and, if needed, with whatever the Rim brings: they have no quarrel with technology. Neutral and fair at first; they trade blades and spirit metals.</description>
+    <fixedName>Azure Peak Sword Sect</fixedName>
+    <pawnSingular>sword disciple</pawnSingular>
+    <pawnsPlural>sword disciples</pawnsPlural>
+    <leaderTitle>sect master</leaderTitle>
+    <categoryTag>CVG_Sect_AzurePeak</categoryTag>
+    <listOrderPriority>40</listOrderPriority>
+    <techLevel>Medieval</techLevel>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>60</configurationListOrderPriority>
+    <backstoryFilters>
+      <li>
+        <categories><li>CVG_Cultivation</li></categories>
+        <commonality>2</commonality>
+      </li>
+    </backstoryFilters>
+    <structureMemeWeights Inherit="False">
+      <CVG_Structure_DaoOrigin MayRequire="Ludeon.RimWorld.Ideology">3</CVG_Structure_DaoOrigin>
+      <CVG_Structure_HeavenMandate MayRequire="Ludeon.RimWorld.Ideology">2</CVG_Structure_HeavenMandate>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+    </structureMemeWeights>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <earliestRaidDays>8</earliestRaidDays>
+    <canSiege>false</canSiege>
+    <settlementNameMaker>CVG_NamerSettlement_AzurePeak</settlementNameMaker>
+    <colorSpectrum>
+      <li>(0.86,0.93,1.00)</li>
+      <li>(1.00,1.00,1.00)</li>
+    </colorSpectrum>
+    <basicMemberKind>CVG_AzurePeak_Disciple</basicMemberKind>
+    <forcedMemes><li MayRequire="Ludeon.RimWorld.Ideology">CVG_Meme_SwordWay</li></forcedMemes>
+    <fixedLeaderKinds><li>CVG_AzurePeak_Elder</li></fixedLeaderKinds>
+    <caravanTraderKinds Inherit="False"><li>CVG_Trader_AzurePeak</li></caravanTraderKinds>
+    <visitorTraderKinds Inherit="False"><li>CVG_Trader_AzurePeak</li></visitorTraderKinds>
+    <baseTraderKinds Inherit="False"><li>CVG_Trader_AzurePeak</li></baseTraderKinds>
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <CVG_AzurePeak_Disciple>10</CVG_AzurePeak_Disciple>
+          <CVG_AzurePeak_Bearer>7</CVG_AzurePeak_Bearer>
+          <CVG_AzurePeak_Blade>4</CVG_AzurePeak_Blade>
+          <CVG_AzurePeak_Elder>1.5</CVG_AzurePeak_Elder>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <CVG_AzurePeak_Disciple>10</CVG_AzurePeak_Disciple>
+          <CVG_AzurePeak_Bearer>7</CVG_AzurePeak_Bearer>
+          <CVG_AzurePeak_Blade>4</CVG_AzurePeak_Blade>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <CVG_AzurePeak_Swordsmith>1</CVG_AzurePeak_Swordsmith>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+        </carriers>
+        <guards>
+          <CVG_AzurePeak_Disciple>10</CVG_AzurePeak_Disciple>
+          <CVG_AzurePeak_Bearer>7</CVG_AzurePeak_Bearer>
+          <CVG_AzurePeak_Blade>4</CVG_AzurePeak_Blade>
+          <CVG_AzurePeak_Elder>1.5</CVG_AzurePeak_Elder>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <CVG_AzurePeak_Disciple>10</CVG_AzurePeak_Disciple>
+          <CVG_AzurePeak_Bearer>7</CVG_AzurePeak_Bearer>
+          <CVG_AzurePeak_Blade>4</CVG_AzurePeak_Blade>
+          <CVG_AzurePeak_Elder>1.5</CVG_AzurePeak_Elder>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ConvergenceFaction">
+        <extraSettlements>1~2</extraSettlements>
+        <hostileTo>
+        <li>CVG_Faction_BloodMoon</li>
+        </hostileTo>
+        <alliedTo>
+        <li>CVG_Faction_SilentLotus</li>
+        <li>CVG_Faction_AncientDragon</li>
+        </alliedTo>
+      </li>
+    </modExtensions>
+  </FactionDef>
+
+  <FactionDef ParentName="OutlanderFactionBase">
+    <defName>CVG_Faction_SilentLotus</defName>
+    <factionIconPath>World/CVG/Factions/SilentLotus</factionIconPath>
+    <label>silent lotus temple</label>
+    <description>A monastery that tempers the body as a temple and heals without asking why a person was hurt, except those who killed for pleasure. Dogmatic, they ask for a sincere offering and do not trade in weapons: an unowned weapon is an unowned desire. The guardians of the temple are qilin. They keep few fighters, but very hardy ones.</description>
+    <fixedName>Silent Lotus Temple</fixedName>
+    <pawnSingular>monk</pawnSingular>
+    <pawnsPlural>monks</pawnsPlural>
+    <leaderTitle>abbess</leaderTitle>
+    <categoryTag>CVG_Sect_SilentLotus</categoryTag>
+    <listOrderPriority>41</listOrderPriority>
+    <techLevel>Medieval</techLevel>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>60</configurationListOrderPriority>
+    <backstoryFilters>
+      <li>
+        <categories><li>CVG_Cultivation</li></categories>
+        <commonality>2</commonality>
+      </li>
+    </backstoryFilters>
+    <structureMemeWeights Inherit="False">
+      <Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">2</Structure_OriginBuddhist>
+      <CVG_Structure_DaoOrigin MayRequire="Ludeon.RimWorld.Ideology">2</CVG_Structure_DaoOrigin>
+    </structureMemeWeights>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <earliestRaidDays>8</earliestRaidDays>
+    <canSiege>false</canSiege>
+    <settlementNameMaker>CVG_NamerSettlement_SilentLotus</settlementNameMaker>
+    <colorSpectrum>
+      <li>(0.92,1.00,0.90)</li>
+      <li>(1.00,1.00,1.00)</li>
+    </colorSpectrum>
+    <basicMemberKind>CVG_SilentLotus_Lay</basicMemberKind>
+    <forcedMemes><li MayRequire="Ludeon.RimWorld.Ideology">CVG_Meme_LotusPath</li></forcedMemes>
+    <fixedLeaderKinds><li>CVG_SilentLotus_Venerable</li></fixedLeaderKinds>
+    <caravanTraderKinds Inherit="False"><li>CVG_Trader_SilentLotus</li></caravanTraderKinds>
+    <visitorTraderKinds Inherit="False"><li>CVG_Trader_SilentLotus</li></visitorTraderKinds>
+    <baseTraderKinds Inherit="False"><li>CVG_Trader_SilentLotus</li></baseTraderKinds>
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <CVG_SilentLotus_Lay>10</CVG_SilentLotus_Lay>
+          <CVG_SilentLotus_Monk>7</CVG_SilentLotus_Monk>
+          <CVG_SilentLotus_Guardian>4</CVG_SilentLotus_Guardian>
+          <CVG_SilentLotus_Venerable>1.5</CVG_SilentLotus_Venerable>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <CVG_SilentLotus_Lay>10</CVG_SilentLotus_Lay>
+          <CVG_SilentLotus_Monk>7</CVG_SilentLotus_Monk>
+          <CVG_SilentLotus_Guardian>4</CVG_SilentLotus_Guardian>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <CVG_SilentLotus_Herbalist>1</CVG_SilentLotus_Herbalist>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+        </carriers>
+        <guards>
+          <CVG_SilentLotus_Lay>10</CVG_SilentLotus_Lay>
+          <CVG_SilentLotus_Monk>7</CVG_SilentLotus_Monk>
+          <CVG_SilentLotus_Guardian>4</CVG_SilentLotus_Guardian>
+          <CVG_SilentLotus_Venerable>1.5</CVG_SilentLotus_Venerable>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <CVG_SilentLotus_Lay>10</CVG_SilentLotus_Lay>
+          <CVG_SilentLotus_Monk>7</CVG_SilentLotus_Monk>
+          <CVG_SilentLotus_Guardian>4</CVG_SilentLotus_Guardian>
+          <CVG_SilentLotus_Venerable>1.5</CVG_SilentLotus_Venerable>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ConvergenceFaction">
+        <extraSettlements>1~2</extraSettlements>
+        <hostileTo>
+        <li>CVG_Faction_BloodMoon</li>
+        </hostileTo>
+        <alliedTo>
+        <li>CVG_Faction_AzurePeak</li>
+        <li>CVG_Faction_RogueCultivators</li>
+        </alliedTo>
+      </li>
+    </modExtensions>
+  </FactionDef>
+
+  <FactionDef ParentName="OutlanderFactionBase">
+    <defName>CVG_Faction_HeavenlyCauldron</defName>
+    <factionIconPath>World/CVG/Factions/HeavenlyCauldron</factionIconPath>
+    <label>heavenly cauldron pavilion</label>
+    <description>A guild of alchemists and auctioneers that sells pills to every side and so was never destroyed: nobody dares to kill everyone's supplier. They have wanted the Rim for centuries and buy and sell any technology with enthusiasm, and few scruples. The best trade in the game: pills, herbs, spirit stones and jade slips. Few fighters, mostly escorts.</description>
+    <fixedName>Heavenly Cauldron Pavilion</fixedName>
+    <pawnSingular>alchemist</pawnSingular>
+    <pawnsPlural>alchemists</pawnsPlural>
+    <leaderTitle>pavilion master</leaderTitle>
+    <categoryTag>CVG_Sect_HeavenlyCauldron</categoryTag>
+    <listOrderPriority>42</listOrderPriority>
+    <techLevel>Industrial</techLevel>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>60</configurationListOrderPriority>
+    <backstoryFilters>
+      <li>
+        <categories><li>CVG_Cultivation</li></categories>
+        <commonality>2</commonality>
+      </li>
+    </backstoryFilters>
+    <structureMemeWeights Inherit="False">
+      <CVG_Structure_DaoOrigin MayRequire="Ludeon.RimWorld.Ideology">3</CVG_Structure_DaoOrigin>
+      <CVG_Structure_Ancestors MayRequire="Ludeon.RimWorld.Ideology">1</CVG_Structure_Ancestors>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+    </structureMemeWeights>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <earliestRaidDays>8</earliestRaidDays>
+    <canSiege>false</canSiege>
+    <settlementNameMaker>CVG_NamerSettlement_HeavenlyCauldron</settlementNameMaker>
+    <colorSpectrum>
+      <li>(1.00,0.95,0.80)</li>
+      <li>(1.00,1.00,1.00)</li>
+    </colorSpectrum>
+    <basicMemberKind>CVG_HeavenlyCauldron_Apprentice</basicMemberKind>
+    <forcedMemes><li MayRequire="Ludeon.RimWorld.Ideology">CVG_Meme_CauldronWay</li></forcedMemes>
+    <fixedLeaderKinds><li>CVG_HeavenlyCauldron_Grand</li></fixedLeaderKinds>
+    <caravanTraderKinds Inherit="False"><li>CVG_Trader_HeavenlyCauldron</li></caravanTraderKinds>
+    <visitorTraderKinds Inherit="False"><li>CVG_Trader_HeavenlyCauldron</li></visitorTraderKinds>
+    <baseTraderKinds Inherit="False"><li>CVG_Trader_HeavenlyCauldron</li></baseTraderKinds>
+    <orbitalTraderKinds Inherit="False"><li>CVG_Trader_CauldronShip</li></orbitalTraderKinds>
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <CVG_HeavenlyCauldron_Apprentice>10</CVG_HeavenlyCauldron_Apprentice>
+          <CVG_HeavenlyCauldron_Alchemist>6</CVG_HeavenlyCauldron_Alchemist>
+          <CVG_HeavenlyCauldron_Master>3</CVG_HeavenlyCauldron_Master>
+          <CVG_HeavenlyCauldron_Grand>1.2</CVG_HeavenlyCauldron_Grand>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <CVG_HeavenlyCauldron_Apprentice>10</CVG_HeavenlyCauldron_Apprentice>
+          <CVG_HeavenlyCauldron_Alchemist>6</CVG_HeavenlyCauldron_Alchemist>
+          <CVG_HeavenlyCauldron_Master>3</CVG_HeavenlyCauldron_Master>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <CVG_HeavenlyCauldron_Auctioneer>1</CVG_HeavenlyCauldron_Auctioneer>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+        </carriers>
+        <guards>
+          <CVG_HeavenlyCauldron_Apprentice>10</CVG_HeavenlyCauldron_Apprentice>
+          <CVG_HeavenlyCauldron_Alchemist>6</CVG_HeavenlyCauldron_Alchemist>
+          <CVG_HeavenlyCauldron_Master>3</CVG_HeavenlyCauldron_Master>
+          <CVG_HeavenlyCauldron_Grand>1.2</CVG_HeavenlyCauldron_Grand>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <CVG_HeavenlyCauldron_Apprentice>10</CVG_HeavenlyCauldron_Apprentice>
+          <CVG_HeavenlyCauldron_Alchemist>6</CVG_HeavenlyCauldron_Alchemist>
+          <CVG_HeavenlyCauldron_Master>3</CVG_HeavenlyCauldron_Master>
+          <CVG_HeavenlyCauldron_Grand>1.2</CVG_HeavenlyCauldron_Grand>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ConvergenceFaction">
+        <extraSettlements>1~2</extraSettlements>
+        <hostileTo>
+        </hostileTo>
+        <alliedTo>
+        </alliedTo>
+      </li>
+    </modExtensions>
+  </FactionDef>
+
+  <FactionDef ParentName="OutlanderFactionBase">
+    <defName>CVG_Faction_AncientDragon</defName>
+    <factionIconPath>World/CVG/Factions/AncientDragon</factionIconPath>
+    <label>ancient dragon clan</label>
+    <description>The clan descended from the dragons that signed the Pact of the Four Points. Few, old and powerful, they admit only outsiders who prove themselves worthy and barter treasure for scales, bones and eggs. Their hospitality is ceremonial: courtesy while they weigh you. They hunt anyone who sells dragon scales. Its members of rank are all of the Golden Core.</description>
+    <fixedName>Ancient Dragon Clan</fixedName>
+    <pawnSingular>dragon scion</pawnSingular>
+    <pawnsPlural>dragon scions</pawnsPlural>
+    <leaderTitle>patriarch</leaderTitle>
+    <categoryTag>CVG_Sect_AncientDragon</categoryTag>
+    <listOrderPriority>43</listOrderPriority>
+    <techLevel>Medieval</techLevel>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>60</configurationListOrderPriority>
+    <backstoryFilters>
+      <li>
+        <categories><li>CVG_Cultivation</li></categories>
+        <commonality>2</commonality>
+      </li>
+    </backstoryFilters>
+    <structureMemeWeights Inherit="False">
+      <CVG_Structure_Ancestors MayRequire="Ludeon.RimWorld.Ideology">4</CVG_Structure_Ancestors>
+      <CVG_Structure_HeavenMandate MayRequire="Ludeon.RimWorld.Ideology">1</CVG_Structure_HeavenMandate>
+    </structureMemeWeights>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <earliestRaidDays>8</earliestRaidDays>
+    <canSiege>false</canSiege>
+    <settlementNameMaker>CVG_NamerSettlement_AncientDragon</settlementNameMaker>
+    <colorSpectrum>
+      <li>(0.90,1.00,0.92)</li>
+      <li>(1.00,1.00,1.00)</li>
+    </colorSpectrum>
+    <basicMemberKind>CVG_AncientDragon_Watcher</basicMemberKind>
+    <forcedMemes><li MayRequire="Ludeon.RimWorld.Ideology">CVG_Meme_DragonBlood</li></forcedMemes>
+    <fixedLeaderKinds><li>CVG_AncientDragon_ClanElder</li></fixedLeaderKinds>
+    <caravanTraderKinds Inherit="False"><li>CVG_Trader_AncientDragon</li></caravanTraderKinds>
+    <visitorTraderKinds Inherit="False"><li>CVG_Trader_AncientDragon</li></visitorTraderKinds>
+    <baseTraderKinds Inherit="False"><li>CVG_Trader_AncientDragon</li></baseTraderKinds>
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <CVG_AncientDragon_Watcher>8</CVG_AncientDragon_Watcher>
+          <CVG_AncientDragon_ClanElder>2</CVG_AncientDragon_ClanElder>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <CVG_AncientDragon_Watcher>8</CVG_AncientDragon_Watcher>
+          <CVG_AncientDragon_ClanElder>2</CVG_AncientDragon_ClanElder>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <CVG_AncientDragon_Hoarder>1</CVG_AncientDragon_Hoarder>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+        </carriers>
+        <guards>
+          <CVG_AncientDragon_Watcher>8</CVG_AncientDragon_Watcher>
+          <CVG_AncientDragon_ClanElder>2</CVG_AncientDragon_ClanElder>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <CVG_AncientDragon_Watcher>8</CVG_AncientDragon_Watcher>
+          <CVG_AncientDragon_ClanElder>2</CVG_AncientDragon_ClanElder>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ConvergenceFaction">
+        <extraSettlements>0~1</extraSettlements>
+        <hostileTo>
+        <li>CVG_Faction_BloodMoon</li>
+        </hostileTo>
+        <alliedTo>
+        <li>CVG_Faction_AzurePeak</li>
+        </alliedTo>
+      </li>
+    </modExtensions>
+  </FactionDef>
+
+  <FactionDef ParentName="OutlanderFactionBase">
+    <defName>CVG_Faction_BloodMoon</defName>
+    <factionIconPath>World/CVG/Factions/BloodMoon</factionIconPath>
+    <label>blood moon cult</label>
+    <description>A demonic cult born from a purged orthodox sect. They believe blood and soul concentrate qi faster than any meditation and that Heaven is a cage. Pragmatic, not mad: they respect strength and loyalty. They kidnap disciples for their rites. Hostile to everyone; they cross the rifts before anyone else.</description>
+    <fixedName>Blood Moon Cult</fixedName>
+    <pawnSingular>blood disciple</pawnSingular>
+    <pawnsPlural>blood disciples</pawnsPlural>
+    <leaderTitle>venerable</leaderTitle>
+    <categoryTag>CVG_Sect_BloodMoon</categoryTag>
+    <listOrderPriority>44</listOrderPriority>
+    <techLevel>Medieval</techLevel>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>60</configurationListOrderPriority>
+    <backstoryFilters>
+      <li>
+        <categories><li>CVG_Cultivation</li></categories>
+        <commonality>2</commonality>
+      </li>
+    </backstoryFilters>
+    <structureMemeWeights Inherit="False">
+      <CVG_Structure_Ancestors MayRequire="Ludeon.RimWorld.Ideology">2</CVG_Structure_Ancestors>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">2</Structure_Ideological>
+    </structureMemeWeights>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <earliestRaidDays>8</earliestRaidDays>
+    <canSiege>false</canSiege>
+    <settlementNameMaker>CVG_NamerSettlement_BloodMoon</settlementNameMaker>
+    <colorSpectrum>
+      <li>(1.00,0.88,0.88)</li>
+      <li>(1.00,1.00,1.00)</li>
+    </colorSpectrum>
+    <basicMemberKind>CVG_BloodMoon_Servant</basicMemberKind>
+    <forcedMemes><li MayRequire="Ludeon.RimWorld.Ideology">CVG_Meme_DemonicWay</li></forcedMemes>
+    <fixedLeaderKinds><li>CVG_BloodMoon_Elder</li></fixedLeaderKinds>
+    <naturalEnemy>true</naturalEnemy>
+    <caravanTraderKinds Inherit="False" />
+    <visitorTraderKinds Inherit="False" />
+    <baseTraderKinds Inherit="False" />
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <CVG_BloodMoon_Servant>10</CVG_BloodMoon_Servant>
+          <CVG_BloodMoon_Disciple>7</CVG_BloodMoon_Disciple>
+          <CVG_BloodMoon_Crimson>4</CVG_BloodMoon_Crimson>
+          <CVG_BloodMoon_Elder>1.5</CVG_BloodMoon_Elder>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <CVG_BloodMoon_Servant>10</CVG_BloodMoon_Servant>
+          <CVG_BloodMoon_Disciple>7</CVG_BloodMoon_Disciple>
+          <CVG_BloodMoon_Crimson>4</CVG_BloodMoon_Crimson>
+        </options>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <CVG_BloodMoon_Servant>10</CVG_BloodMoon_Servant>
+          <CVG_BloodMoon_Disciple>7</CVG_BloodMoon_Disciple>
+          <CVG_BloodMoon_Crimson>4</CVG_BloodMoon_Crimson>
+          <CVG_BloodMoon_Elder>1.5</CVG_BloodMoon_Elder>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ConvergenceFaction">
+        <neutralToPlayerMemes><li MayRequire="Ludeon.RimWorld.Ideology">CVG_Meme_DemonicWay</li></neutralToPlayerMemes>
+        <extraSettlements>1~2</extraSettlements>
+        <hostileTo>
+        <li>CVG_Faction_AzurePeak</li>
+        <li>CVG_Faction_SilentLotus</li>
+        <li>CVG_Faction_AncientDragon</li>
+        <li>CVG_Faction_RogueCultivators</li>
+        </hostileTo>
+        <alliedTo>
+        </alliedTo>
+      </li>
+    </modExtensions>
+  </FactionDef>
+
+  <FactionDef ParentName="OutlanderFactionBase">
+    <defName>CVG_Faction_RogueCultivators</defName>
+    <factionIconPath>World/CVG/Factions/RogueCultivators</factionIconPath>
+    <label>rogue cultivators</label>
+    <description>Not a sect: everyone who cultivates without ties. Orphans of destroyed sects, exiles, wanderers. They were the first to cross while the wall between the worlds was still thinning, years before the Convergence, because they had nothing to lose. They gather at inns and night markets, rent their swords for spirit stones and sell maps and incomplete slips. Unpredictable: each has learned a bit of everything.</description>
+    <fixedName>Rogue Cultivators</fixedName>
+    <pawnSingular>wandering cultivator</pawnSingular>
+    <pawnsPlural>wandering cultivators</pawnsPlural>
+    <leaderTitle>elder wanderer</leaderTitle>
+    <categoryTag>CVG_Sect_RogueCultivators</categoryTag>
+    <listOrderPriority>45</listOrderPriority>
+    <techLevel>Medieval</techLevel>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>60</configurationListOrderPriority>
+    <backstoryFilters>
+      <li>
+        <categories><li>CVG_Cultivation</li></categories>
+        <commonality>2</commonality>
+      </li>
+    </backstoryFilters>
+    <structureMemeWeights Inherit="False">
+      <CVG_Structure_DaoOrigin MayRequire="Ludeon.RimWorld.Ideology">2</CVG_Structure_DaoOrigin>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">2</Structure_Ideological>
+      <CVG_Structure_HeavenMandate MayRequire="Ludeon.RimWorld.Ideology">1</CVG_Structure_HeavenMandate>
+    </structureMemeWeights>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <earliestRaidDays>8</earliestRaidDays>
+    <canSiege>false</canSiege>
+    <settlementNameMaker>CVG_NamerSettlement_RogueCultivators</settlementNameMaker>
+    <colorSpectrum>
+      <li>(0.95,0.95,0.95)</li>
+      <li>(1.00,1.00,1.00)</li>
+    </colorSpectrum>
+    <basicMemberKind>CVG_RogueCultivators_Wanderer</basicMemberKind>
+    <forcedMemes><li MayRequire="Ludeon.RimWorld.Ideology">CVG_Meme_WanderingPath</li></forcedMemes>
+    <fixedLeaderKinds><li>CVG_RogueCultivators_Hermit</li></fixedLeaderKinds>
+    <caravanTraderKinds Inherit="False"><li>CVG_Trader_RogueCultivators</li><li>CVG_Trader_RogueWanderer</li></caravanTraderKinds>
+    <visitorTraderKinds Inherit="False"><li>CVG_Trader_RogueCultivators</li><li>CVG_Trader_RogueWanderer</li></visitorTraderKinds>
+    <baseTraderKinds Inherit="False"><li>CVG_Trader_RogueCultivators</li></baseTraderKinds>
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <CVG_RogueCultivators_Wanderer>10</CVG_RogueCultivators_Wanderer>
+          <CVG_RogueCultivators_Sellsword>7</CVG_RogueCultivators_Sellsword>
+          <CVG_RogueCultivators_Veteran>3</CVG_RogueCultivators_Veteran>
+          <CVG_RogueCultivators_Hermit>1</CVG_RogueCultivators_Hermit>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <CVG_RogueCultivators_Wanderer>10</CVG_RogueCultivators_Wanderer>
+          <CVG_RogueCultivators_Sellsword>7</CVG_RogueCultivators_Sellsword>
+          <CVG_RogueCultivators_Veteran>3</CVG_RogueCultivators_Veteran>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <CVG_RogueCultivators_Peddler>1</CVG_RogueCultivators_Peddler>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+        </carriers>
+        <guards>
+          <CVG_RogueCultivators_Wanderer>10</CVG_RogueCultivators_Wanderer>
+          <CVG_RogueCultivators_Sellsword>7</CVG_RogueCultivators_Sellsword>
+          <CVG_RogueCultivators_Veteran>3</CVG_RogueCultivators_Veteran>
+          <CVG_RogueCultivators_Hermit>1</CVG_RogueCultivators_Hermit>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <CVG_RogueCultivators_Wanderer>10</CVG_RogueCultivators_Wanderer>
+          <CVG_RogueCultivators_Sellsword>7</CVG_RogueCultivators_Sellsword>
+          <CVG_RogueCultivators_Veteran>3</CVG_RogueCultivators_Veteran>
+          <CVG_RogueCultivators_Hermit>1</CVG_RogueCultivators_Hermit>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ConvergenceFaction">
+        <extraSettlements>1~2</extraSettlements>
+        <hostileTo>
+        <li>CVG_Faction_BloodMoon</li>
+        </hostileTo>
+        <alliedTo>
+        <li>CVG_Faction_SilentLotus</li>
+        </alliedTo>
+      </li>
+    </modExtensions>
+  </FactionDef>
+
+</Defs>

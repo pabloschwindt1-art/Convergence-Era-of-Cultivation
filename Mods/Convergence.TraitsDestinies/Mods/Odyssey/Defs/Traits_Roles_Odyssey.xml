@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Odyssey role trait (loaded only with Odyssey). -->
+  <TraitDef>
+    <defName>CVG_Role_SpiritAngler</defName>
+    <commonality>0.04</commonality>
+    <exclusionTags>
+      <li>CVG_Role</li>
+    </exclusionTags>
+    <forcedPassions>
+      <li>Animals</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <degree>0</degree>
+        <label>spirit angler</label>
+        <labelFemale>spirit angler</labelFemale>
+        <description>Fish come to the hook of {PAWN_nameDef}, even those that swim in qi: fishes faster and catches more. Rogue cultivators tell of an old angler who drew a carp over the Dragon Gate on a line of spun moonlight.</description>
+        <skillGains>
+          <Animals>2</Animals>
+        </skillGains>
+        <statFactors>
+          <FishingSpeed>1.3</FishingSpeed>
+          <FishingYield>1.2</FishingYield>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+</Defs>

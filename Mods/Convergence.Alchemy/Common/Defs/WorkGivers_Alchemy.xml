@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Work givers for the alchemy benches with no vanilla counterpart (vanilla WorkGiver_DoBill only looks at its
+    fixedBillGiverDefs, so without these nobody works there). The spirit forge and the alchemy furnace join the vanilla
+    "make weapons" and "produce drugs" givers through DefModExtension_CopyRecipes (Workbenches.xml).
+    Structure copied from vanilla DoBillsMakeWeapons.
+  -->
+
+  <WorkGiverDef>
+    <defName>CVG_DoBillsRuneTable</defName>
+    <label>engrave runes at rune table</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>90</priorityInType>
+    <fixedBillGiverDefs>
+      <li>CVG_RuneTable</li>
+    </fixedBillGiverDefs>
+    <verb>engrave at</verb>
+    <gerund>engraving at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>CVG_DoBillsTalismanTable</defName>
+    <label>write talismans at talisman table</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Art</workType>
+    <priorityInType>90</priorityInType>
+    <fixedBillGiverDefs>
+      <li>CVG_TalismanTable</li>
+    </fixedBillGiverDefs>
+    <verb>write at</verb>
+    <gerund>writing at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+</Defs>

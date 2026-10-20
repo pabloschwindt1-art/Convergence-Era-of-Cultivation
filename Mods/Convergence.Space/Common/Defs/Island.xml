@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Flying sect (docs/modulos/ESPACIO.md): the gravship system of Odyssey with our own pieces. -->
+
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_FlightArray</defName>
+    <label>flight array</label>
+    <description>The Heavenly Court raised its pavilions on clouds because it had learned to teach stone to forget its weight. An array of flight turns a beast core into the heart of an island that rises, carries its hall and its people, and goes where its master points. Unlocks the Island Heart, cloud rock, flight cores, gravity core mounts, the essence vessel, qi thrusters, wind sails and the helmsman's altar.</description>
+    <baseCost>6000</baseCost>
+    <prerequisites><li>CVG_Research_QiGathering</li></prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>5</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>10</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <!-- ================= Ground of the island ================= -->
+  <TerrainDef ParentName="FloorBase">
+    <defName>CVG_CloudRock</defName>
+    <label>cloud rock</label>
+    <description>Pale rock as light as pumice and as dense as marble, with a skin of soil and moss on top. It is what the flying islands are made of: it carries its own weight only while the Island Heart remembers it. Only things standing on it rise with the island. It must be laid within the reach of an Island Heart, and can be removed with the remove-foundation designator.</description>
+    <texturePath>Terrain/Surfaces/CVG_CloudRock</texturePath>
+    <fertility>0.8</fertility>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>399</renderPrecedence>
+    <constructEffect>ConstructDirt</constructEffect>
+    <isPaintable>true</isPaintable>
+    <designationCategory>Odyssey</designationCategory>
+    <isFoundation>true</isFoundation>
+    <preventCraters>true</preventCraters>
+    <affordances>
+      <li>Substructure</li>
+    </affordances>
+    <statBases>
+      <WorkToBuild>500</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>2</Beauty>
+      <CleaningTimeFactor>0.9</CleaningTimeFactor>
+    </statBases>
+    <costList>
+      <CVG_SpiritWood>2</CVG_SpiritWood>
+      <CVG_SpiritStone>1</CVG_SpiritStone>
+    </costList>
+    <uiOrder>1010</uiOrder>
+    <terrainAffordanceNeeded>Walkable</terrainAffordanceNeeded>
+    <resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+    <researchPrerequisites><li>CVG_Research_FlightArray</li></researchPrerequisites>
+    <tags>
+      <li>Substructure</li>
+    </tags>
+    <placeWorkers>
+      <li>PlaceWorker_InSubstructureFootprint</li>
+      <li>PlaceWorker_BuildingsValidOverSubstructure</li>
+    </placeWorkers>
+  </TerrainDef>
+
+  <!-- ================= Flight core (the item) ================= -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_FlightCore</defName>
+    <label>flight core</label>
+    <description>A flight array engraved in jade and set around a beast core that has learned to float. Each one adds a patch of ground to a flying island. Few sects ever owned more than three, and none of them admitted how they got the fourth.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG_FlightCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+      <Flammability>0</Flammability>
+      <Mass>5</Mass>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <stackLimit>5</stackLimit>
+    <thingCategories><li>Manufactured</li></thingCategories>
+    <tradeability>Sellable</tradeability>
+    <genericMarketSellable>false</genericMarketSellable>
+    <recipeMaker IsNull="True" />
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>CVG_Make_FlightCore_Gravcore</defName>
+    <label>bind flight core (from a gravcore)</label>
+    <description>Teach a gravcore to float through a flight array and two beast cores.</description>
+    <jobString>Binding a flight core.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>12000</workAmount>
+    <researchPrerequisite>CVG_Research_FlightArray</researchPrerequisite>
+    <skillRequirements><Crafting>8</Crafting></skillRequirements>
+    <recipeUsers><li>CVG_CalligraphyDesk</li></recipeUsers>
+    <ingredients>
+      <li><filter><thingDefs><li>Gravcore</li></thingDefs></filter><count>1</count></li>
+      <li><filter><thingDefs><li>CVG_BeastCore</li></thingDefs></filter><count>2</count></li>
+      <li><filter><thingDefs><li>CVG_SpiritJade</li></thingDefs></filter><count>20</count></li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs><li>Gravcore</li><li>CVG_BeastCore</li><li>CVG_SpiritJade</li></thingDefs>
+    </fixedIngredientFilter>
+    <products><CVG_FlightCore>1</CVG_FlightCore></products>
+    <descriptionHyperlinks><ThingDef>CVG_FlightCore</ThingDef></descriptionHyperlinks>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_Make_FlightCore_Beasts</defName>
+    <label>bind flight core (from beast cores)</label>
+    <description>The expensive way, for sects without a gravcore: six beast cores, a mountain of jade and spirit stones.</description>
+    <jobString>Binding a flight core.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <workAmount>30000</workAmount>
+    <researchPrerequisite>CVG_Research_FlightArray</researchPrerequisite>
+    <skillRequirements><Crafting>12</Crafting></skillRequirements>
+    <recipeUsers><li>CVG_CalligraphyDesk</li></recipeUsers>
+    <ingredients>
+      <li><filter><thingDefs><li>CVG_BeastCore</li></thingDefs></filter><count>6</count></li>
+      <li><filter><thingDefs><li>CVG_SpiritJade</li></thingDefs></filter><count>80</count></li>
+      <li><filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter><count>200</count></li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs><li>CVG_BeastCore</li><li>CVG_SpiritJade</li><li>CVG_SpiritStone</li></thingDefs>
+    </fixedIngredientFilter>
+    <products><CVG_FlightCore>1</CVG_FlightCore></products>
+    <descriptionHyperlinks><ThingDef>CVG_FlightCore</ThingDef></descriptionHyperlinks>
+  </RecipeDef>
+
+  <!-- ================= Island Heart (the engine) ================= -->
+  <ThingDef ParentName="GravshipComponentBase">
+    <defName>CVG_IslandHeart</defName>
+    <minifiedDef IsNull="True" />
+    <thingCategories IsNull="True" />
+    <label>Island Heart</label>
+    <description>A flight array set in a beast core, the heart of a flying island. It makes the ground around it forget its weight, and carries whatever stands on cloud rock connected to it, including the hall, the fields and the people. Without a flight core in a mount it can carry a modest island; every flight core set in a mount makes it larger, up to six. It does not push: for that it needs thrusters or sails.\n\nWhen launched, everything on connected cloud rock goes to a new map. Without a sky stake, the island leaves the map it was on behind.</description>
+    <thingClass>Building_GravEngine</thingClass>
+    <drawerType>RealtimeOnly</drawerType>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Building/CVG/Island/IslandHeart</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <statBases>
+      <Beauty>2</Beauty>
+      <MaxHitPoints>900</MaxHitPoints>
+      <Mass>30</Mass>
+      <WorkToBuild>30000</WorkToBuild>
+      <GravshipRange>0</GravshipRange>
+      <SubstructureSupport>800</SubstructureSupport>
+      <MarketValue>3500</MarketValue>
+    </statBases>
+    <size>(3,3)</size>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.6</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>20</pathCost>
+    <canOverlapZones>false</canOverlapZones>
+    <designationCategory>Odyssey</designationCategory>
+    <uiOrder>2090</uiOrder>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <costList>
+      <CVG_BeastCore>3</CVG_BeastCore>
+      <CVG_SpiritJade>40</CVG_SpiritJade>
+      <CVG_SpiritStone>300</CVG_SpiritStone>
+    </costList>
+    <researchPrerequisites><li>CVG_Research_FlightArray</li></researchPrerequisites>
+    <building>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <deconstructible>false</deconstructible>
+      <relatedBuildCommands>
+        <li>CVG_GravityCoreMount</li>
+      </relatedBuildCommands>
+      <relatedTerrain>
+        <li>CVG_CloudRock</li>
+      </relatedTerrain>
+    </building>
+    <comps>
+      <li Class="CompProperties_SubstructureFootprint">
+        <radius>22.9</radius>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(120,255,200,0)</glowColor>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>CVG_GravityCoreMount</li>
+          <li>CVG_HelmsmanAltar</li>
+          <li>CVG_EssenceVessel</li>
+          <li>CVG_QiThruster</li>
+          <li>CVG_WindSail</li>
+          <li>CVG_ArkProtectiveFormation</li>
+          <!-- Odyssey parts: wuxia in RimWorld keeps both worlds. Where our own piece was worse than the vanilla one (thrusters),
+               the island simply uses the vanilla part; a colony with industrial tech can bolt them to the Heart. -->
+          <li>GravFieldExtender</li>
+          <li>PilotConsole</li>
+          <li>ChemfuelTank</li>
+          <li>LargeChemfuelTank</li>
+          <li>SmallThruster</li>
+          <li>LargeThruster</li>
+          <li>FuelOptimizer</li>
+          <li>SignalJammer</li>
+          <li>PilotSubpersonaCore</li>
+          <li>GravshipShieldGenerator</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_AmbientSound">
+        <sound>GravshipEngine_Ambient</sound>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_GravEngineAlias" />
+    </modExtensions>
+  </ThingDef>
+
+  <!-- ================= Gravity core mount (grows the island) ================= -->
+  <ThingDef ParentName="GravshipComponentBase">
+    <defName>CVG_GravityCoreMount</defName>
+    <label>gravity core mount</label>
+    <description>A jade cradle where a flight core is set into the Island Heart's array. Each core set raises the weight the island can carry and extends the ground where cloud rock can be laid. An island supports up to six cores; the seventh has never worked, and nobody has explained why.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Island/GravityCoreMount</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Beauty>2</Beauty>
+      <MaxHitPoints>220</MaxHitPoints>
+      <Mass>15</Mass>
+      <WorkToBuild>3000</WorkToBuild>
+    </statBases>
+    <fillPercent>0.4</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>14</pathCost>
+    <canOverlapZones>false</canOverlapZones>
+    <designationCategory>Odyssey</designationCategory>
+    <uiOrder>2300</uiOrder>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+    <researchPrerequisites><li>CVG_Research_FlightArray</li></researchPrerequisites>
+    <costList>
+      <CVG_FlightCore>1</CVG_FlightCore>
+      <CVG_SpiritJade>10</CVG_SpiritJade>
+    </costList>
+    <terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded>
+    <placeWorkers>
+      <li>PlaceWorker_InRangeOfGravEngine</li>
+    </placeWorkers>
+    <building>
+      <relatedTerrain>
+        <li>CVG_CloudRock</li>
+      </relatedTerrain>
+    </building>
+    <comps>
+      <li Class="CompProperties_SubstructureFootprint">
+        <radius>16.9</radius>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(120,255,200,0)</glowColor>
+      </li>
+      <li Class="CompProperties_GravshipFacility">
+        <statOffsets>
+          <SubstructureSupport>250</SubstructureSupport>
+        </statOffsets>
+        <requiresLOS>false</requiresLOS>
+        <maxSimultaneous>6</maxSimultaneous>
+        <maxDistance>18.9</maxDistance>
+        <onlyRequiresLooseConnection>true</onlyRequiresLooseConnection>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ================= Essence vessel (fuel: spirit stones) ================= -->
+  <ThingDef ParentName="GravshipComponentBase">
+    <defName>CVG_EssenceVessel</defName>
+    <label>essence vessel</label>
+    <description>A bronze cauldron where spirit stones are ground to dust and kept burning cold. It feeds the thrusters and sails of a flying island, and the island consumes it by the distance it travels. It does not explode when struck, which is a relief to everyone who has ever stood next to a chemfuel tank.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Island/EssenceVessel</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(2, 2)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>260</MaxHitPoints>
+      <Mass>30</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>2</Beauty>
+      <WorkToBuild>2500</WorkToBuild>
+    </statBases>
+    <size>(2, 2)</size>
+    <fillPercent>0.6</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>20</pathCost>
+    <canOverlapZones>false</canOverlapZones>
+    <designationCategory>Odyssey</designationCategory>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded>
+    <minifiedDef IsNull="True"/>
+    <thingCategories IsNull="True"/>
+    <costList>
+      <CVG_SpiritWood>40</CVG_SpiritWood>
+      <CVG_SpiritJade>6</CVG_SpiritJade>
+    </costList>
+    <researchPrerequisites><li>CVG_Research_FlightArray</li></researchPrerequisites>
+    <uiOrder>2150</uiOrder>
+    <comps>
+      <li Class="CompProperties_GravshipFacility">
+        <providesFuel>true</providesFuel>
+        <componentTypeDef>FuelStorage</componentTypeDef>
+        <requiresLOS>false</requiresLOS>
+        <showMaxSimultaneous>false</showMaxSimultaneous>
+        <maxSimultaneous>9999</maxSimultaneous>
+        <maxDistance>500</maxDistance>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelCapacity>250</fuelCapacity>
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>250</initialConfigurableTargetFuelLevel>
+        <fuelFilter>
+          <thingDefs>
+            <li>CVG_SpiritStone</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelLabel>Spirit stones</fuelLabel>
+        <fuelGizmoLabel>Spirit stones</fuelGizmoLabel>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <autoRefuelPercent>1</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <canEjectFuel>true</canEjectFuel>
+        <drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ================= Thrusters ================= -->
+  <ThingDef ParentName="ThrusterBase">
+    <defName>CVG_QiThruster</defName>
+    <label>qi thruster</label>
+    <description>A bronze nozzle that spits the island's spirit stones out as a plume of white qi. It increases the range of a flying island. It needs a clear area behind it, free of large buildings and cloud rock, because the plume does not care what it meets.\n\nAn island supports up to four qi thrusters.</description>
+    <designationCategory Inherit="False" /><!-- hidden from the build menu: the vanilla thruster is used instead; kept so old saves still load -->
+    <graphicData>
+      <texPath>Things/Building/CVG/Island/QiThruster</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2.2,2.2)</drawSize>
+      <shadowData><volume>(1, 1, 2)</volume></shadowData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>260</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>0</Beauty>
+      <WorkToBuild>9000</WorkToBuild>
+      <Mass>20</Mass>
+    </statBases>
+    <size>(1, 2)</size>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <costList>
+      <CVG_SpiritSteel>100</CVG_SpiritSteel>
+      <CVG_SpiritJade>10</CVG_SpiritJade>
+    </costList>
+    <researchPrerequisites><li>CVG_Research_FlightArray</li></researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_GravshipThruster">
+        <statOffsets>
+          <GravshipRange>10</GravshipRange>
+        </statOffsets>
+        <componentTypeDef>Thruster</componentTypeDef>
+        <exclusionAreaSize>(1, 0, 5)</exclusionAreaSize>
+        <exclusionAreaOffset>(0, 0, -5)</exclusionAreaOffset>
+        <directionInfluence>20</directionInfluence>
+        <flameSize>4.0</flameSize>
+        <flameOffsetsPerDirection>
+          <li>(0, 0, 0.5)</li>
+          <li>(0, 0, 0.5)</li>
+          <li>(0, 0, 0.5)</li>
+          <li>(0, 0, 0.5)</li>
+        </flameOffsetsPerDirection>
+        <flameShaderType>MoteGlow</flameShaderType>
+        <flameShaderParameters>
+          <_MainTex>/Things/Mote/SmallThruster_Burn</_MainTex>
+        </flameShaderParameters>
+        <requiresLOS>false</requiresLOS>
+        <maxSimultaneous>4</maxSimultaneous>
+        <maxDistance>500</maxDistance>
+        <exhaustSettings>
+          <exhaustFleckDef>GravshipThrusterExhaust</exhaustFleckDef>
+          <emissionsPerSecond>40.0</emissionsPerSecond>
+          <spawnRadiusRange>0.0~0.5</spawnRadiusRange>
+          <velocity>(0.0,0.0,-20.0)</velocity>
+          <velocityRotationRange>-10.0~10.0</velocityRotationRange>
+          <velocityMultiplierRange>0.8~1.2</velocityMultiplierRange>
+          <rotationOverTimeRange>-180.0~180.0</rotationOverTimeRange>
+          <scaleRange>1.5~3.0</scaleRange>
+        </exhaustSettings>
+      </li>
+      <li Class="CompProperties_Breakdownable" />   <!-- el propulsor vanilla lo consulta sin chequear null -->
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ThrusterBase">
+    <defName>CVG_WindSail</defName>
+    <label>wind sail</label>
+    <description>A tall sail of woven cloth stretched on a jade frame that drinks the wind of high places. It gives less range than a thruster, but its plume is quiet and it burns very little. An island can carry up to six, and a fleet of sails is how most sects crossed the sky before the Calamity.</description>
+    <designationCategory Inherit="False" /><!-- hidden from the build menu: the vanilla thruster is used instead; kept so old saves still load -->
+    <graphicData>
+      <texPath>Things/Building/CVG/Island/WindSail</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2.2,2.2)</drawSize>
+      <shadowData><volume>(1, 1, 2)</volume></shadowData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>0.6</Flammability>
+      <Beauty>3</Beauty>
+      <WorkToBuild>6000</WorkToBuild>
+      <Mass>12</Mass>
+    </statBases>
+    <size>(1, 2)</size>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <costList>
+      <CVG_SpiritWood>60</CVG_SpiritWood>
+      <Cloth>80</Cloth>
+    </costList>
+    <researchPrerequisites><li>CVG_Research_FlightArray</li></researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_GravshipThruster">
+        <statOffsets>
+          <GravshipRange>5</GravshipRange>
+        </statOffsets>
+        <componentTypeDef>Thruster</componentTypeDef>
+        <exclusionAreaSize>(1, 0, 3)</exclusionAreaSize>
+        <exclusionAreaOffset>(0, 0, -3)</exclusionAreaOffset>
+        <directionInfluence>10</directionInfluence>
+        <flameSize>2.5</flameSize>
+        <flameOffsetsPerDirection>
+          <li>(0, 0, 0.5)</li>
+          <li>(0, 0, 0.5)</li>
+          <li>(0, 0, 0.5)</li>
+          <li>(0, 0, 0.5)</li>
+        </flameOffsetsPerDirection>
+        <flameShaderType>MoteGlow</flameShaderType>
+        <flameShaderParameters>
+          <_MainTex>/Things/Mote/SmallThruster_Burn</_MainTex>
+        </flameShaderParameters>
+        <requiresLOS>false</requiresLOS>
+        <maxSimultaneous>6</maxSimultaneous>
+        <maxDistance>500</maxDistance>
+        <exhaustSettings>
+          <exhaustFleckDef>GravshipThrusterExhaust</exhaustFleckDef>
+          <emissionsPerSecond>20.0</emissionsPerSecond>
+          <spawnRadiusRange>0.0~0.5</spawnRadiusRange>
+          <velocity>(0.0,0.0,-12.0)</velocity>
+          <velocityRotationRange>-10.0~10.0</velocityRotationRange>
+          <velocityMultiplierRange>0.8~1.2</velocityMultiplierRange>
+          <rotationOverTimeRange>-180.0~180.0</rotationOverTimeRange>
+          <scaleRange>1.0~2.0</scaleRange>
+        </exhaustSettings>
+      </li>
+      <li Class="CompProperties_Breakdownable" />   <!-- el propulsor vanilla lo consulta sin chequear null -->
+    </comps>
+  </ThingDef>
+
+  <!-- ================= Helmsman's altar (the console) ================= -->
+  <ThingDef ParentName="GravshipComponentBase">
+    <defName>CVG_HelmsmanAltar</defName>
+    <label>helmsman's altar</label>
+    <description>A low altar of dark wood with a compass of jade, from which the helmsman steers the island by tilting their qi toward the horizon. Any hand can launch it; only a cultivator's realm makes it go farther. The stronger the best cultivator of the sect, the farther the island is willing to travel.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Island/HelmsmanAltar</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Mass>50</Mass>
+      <Flammability>0.4</Flammability>
+      <Beauty>3</Beauty>
+      <WorkToBuild>3500</WorkToBuild>
+    </statBases>
+    <size>(3, 2)</size>
+    <rotatable>true</rotatable>
+    <fillPercent>0.4</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>14</pathCost>
+    <canOverlapZones>false</canOverlapZones>
+    <costList>
+      <CVG_SpiritWood>80</CVG_SpiritWood>
+      <CVG_SpiritJade>15</CVG_SpiritJade>
+    </costList>
+    <resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <designationCategory>Odyssey</designationCategory>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0, 0,-1)</interactionCellOffset>
+    <researchPrerequisites><li>CVG_Research_FlightArray</li></researchPrerequisites>
+    <terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded>
+    <comps>
+      <li Class="CompProperties_GravshipFacility">
+        <fuelSavingsPercent>0.5</fuelSavingsPercent>
+        <compClass>CompPilotConsole</compClass>
+        <componentTypeDef>Controls</componentTypeDef>
+        <requiresLOS>false</requiresLOS>
+        <showMaxSimultaneous>false</showMaxSimultaneous>
+        <maxSimultaneous>1</maxSimultaneous>
+        <maxDistance>200</maxDistance>
+      </li>
+    </comps>
+    <uiOrder>2100</uiOrder>
+  </ThingDef>
+
+  <!-- ================= Ark protective formation (the gravship shield, powered by the qi network) ================= -->
+  <ThingDef ParentName="GravshipComponentBase">
+    <defName>CVG_ArkProtectiveFormation</defName>
+    <label>ark protective formation</label>
+    <description>A ring of jade pillars around a core of spirit steel that raises a dome of cold light over the island. It stops arrows, bolts and shells, though not the people who have already come aboard. It has to be charged before use, and it drinks from the qi network instead of the grid. An island can carry two of them. The Heavenly Court cast its domes thick, and still lost, which is why the next ones were built to be rebuilt.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Island/ArkProtectiveFormation</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3, 3)</drawSize>
+    </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawOffscreen>true</drawOffscreen>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <MaxHitPoints>260</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Mass>80</Mass>
+      <WorkToBuild>14000</WorkToBuild>
+    </statBases>
+    <size>(3, 3)</size>
+    <fillPercent>0.6</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>20</pathCost>
+    <canOverlapZones>false</canOverlapZones>
+    <designationCategory>Odyssey</designationCategory>
+    <uiOrder>2310</uiOrder>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <costList>
+      <CVG_SpiritSteel>120</CVG_SpiritSteel>
+      <CVG_SpiritJade>40</CVG_SpiritJade>
+      <CVG_SpiritStone>60</CVG_SpiritStone>
+    </costList>
+    <researchPrerequisites><li>CVG_Research_FlightArray</li></researchPrerequisites>
+    <terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded>
+    <specialDisplayRadius>24.9</specialDisplayRadius>
+    <comps>
+      <li Class="CompProperties_GravshipFacility">
+        <requiresLOS>false</requiresLOS>
+        <maxSimultaneous>2</maxSimultaneous>
+        <maxDistance>500</maxDistance>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>0</basePowerConsumption>
+        <idlePowerDraw>0</idlePowerDraw>
+        <showPowerNeededIfOff>false</showPowerNeededIfOff>
+      </li>
+      <li Class="Convergence.CompProperties_QiNode">
+        <compClass>Convergence.CompQiConsumer</compClass>
+        <consumeDay>60</consumeDay>
+      </li>
+      <li Class="CompProperties_Interactable">
+        <compClass>CompInteractable_GravshipShieldGenerator</compClass>
+        <ticksToActivate>120</ticksToActivate>
+        <jobString>activate</jobString>
+        <activateTexPath>UI/Commands/ActivateGravshipShield</activateTexPath>
+        <soundActivate>GravshipShieldGenerator_Activate</soundActivate>
+        <requiresPower>false</requiresPower>
+        <targetingParameters>
+          <canTargetBuildings>false</canTargetBuildings>
+          <canTargetAnimals>false</canTargetAnimals>
+          <canTargetMechs>false</canTargetMechs>
+          <onlyTargetControlledPawns>true</onlyTargetControlledPawns>
+        </targetingParameters>
+      </li>
+      <li Class="CompProperties_ProjectileInterceptor">
+        <compClass>CompGravshipShieldGenerator</compClass>
+        <radius>24.9</radius>
+        <interceptGroundProjectiles>true</interceptGroundProjectiles>
+        <interceptAirProjectiles>true</interceptAirProjectiles>
+        <color>(0.5, 0.95, 0.85)</color>
+        <reactivateEffect>BulletShieldGenerator_Reactivate</reactivateEffect>
+        <activeSound>BulletShield_Ambience</activeSound>
+        <hitPoints>600</hitPoints>
+        <hitPointsRestoreInstantlyAfterCharge>false</hitPointsRestoreInstantlyAfterCharge>
+        <startWithMaxHitPoints>false</startWithMaxHitPoints>
+        <chargeDurationTicks>10000</chargeDurationTicks>
+        <minIdleAlpha>0.2</minIdleAlpha>
+        <drawWithNoSelection>True</drawWithNoSelection>
+        <disarmedByEmpForTicks>1500</disarmedByEmpForTicks>
+        <gizmoTipKey>GravshipShieldTip</gizmoTipKey>
+        <alwaysShowHitpointsGizmo>true</alwaysShowHitpointsGizmo>
+        <rechargeHitPointsIntervalTicks>75</rechargeHitPointsIntervalTicks>
+        <activated>true</activated>
+        <activeDuration>6000</activeDuration>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

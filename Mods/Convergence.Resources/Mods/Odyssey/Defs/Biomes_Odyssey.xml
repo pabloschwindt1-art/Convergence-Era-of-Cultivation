@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Odyssey biome materials: lava field, glowforest and scarlands. -->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_FireCrystal</defName>
+    <tradeability>Sellable</tradeability>
+    <label>fire spirit crystal</label>
+    <description>Crystal grown in rivers of lava. Barely conducts heat; armor and walls of it shrug off fire. The refining furnace burns it as fuel.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_FireCrystal</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>ChunkRock_Drop</soundInteract>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>18</MarketValue>
+      <Mass>0.5</Mass>
+      <StuffPower_Armor_Sharp>0.7</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.35</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.6</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <BluntDamageMultiplier>1.4</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <deepCommonality>0</deepCommonality>
+    <stuffProps>
+      <categories>
+        <li>Stony</li>
+      </categories>
+      <commonality>0.01</commonality>
+      <color>(235,120,60)</color>
+      <constructEffect>ConstructMetal</constructEffect>
+      <soundImpactBullet>BulletImpact_Ground</soundImpactBullet>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Stone</soundImpactMelee>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <statOffsets>
+        <Beauty>8</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>0.8</MaxHitPoints>
+        <Beauty>3</Beauty>
+        <Flammability>0</Flammability>
+        <WorkToBuild>3</WorkToBuild>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.04</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>CVG_MineableFireCrystal</defName>
+    <label>fire crystal vein</label>
+    <description>Crystal veins born of lava, found only in lava fields. They stay warm for years after they are cut, and forges of the south keep one in the hearth to wake the fire.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(70,50,45)</color>
+      <colorTwo>(255,130,60)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>3000</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>CVG_FireCrystal</mineableThing>
+      <mineableYield>20</mineableYield>
+      <mineableScatterCommonality>0.05</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+      <veinMineable>true</veinMineable>
+    </building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ConvergenceMineable">
+        <eventLumps>2~3</eventLumps>
+        <eventLumpSize>2~6</eventLumpSize>
+        <allowedBiomes>
+          <li>LavaField</li>
+        </allowedBiomes>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_MoonJade</defName>
+    <tradeability>Sellable</tradeability>
+    <label>moon jade</label>
+    <description>Pale blue jade from the glowing forests; it shines softly at night. Beautiful, and said to calm the restless dead.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_MoonJade</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>ChunkRock_Drop</soundInteract>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>12</MarketValue>
+      <Mass>0.5</Mass>
+      <StuffPower_Armor_Sharp>0.9</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.6</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <BluntDamageMultiplier>1.4</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <deepCommonality>0</deepCommonality>
+    <stuffProps>
+      <categories>
+        <li>Stony</li>
+      </categories>
+      <commonality>0.01</commonality>
+      <color>(150,190,220)</color>
+      <constructEffect>ConstructMetal</constructEffect>
+      <soundImpactBullet>BulletImpact_Ground</soundImpactBullet>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Stone</soundImpactMelee>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <statOffsets>
+        <Beauty>14</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>0.7</MaxHitPoints>
+        <Beauty>3.5</Beauty>
+        <WorkToBuild>4</WorkToBuild>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.05</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>CVG_MineableMoonJade</defName>
+    <label>moon jade vein</label>
+    <description>Jade that glows like the moon, found only in glowforests. It is said to grow wherever moonlight fell on the same stone for a thousand nights.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(60,70,90)</color>
+      <colorTwo>(170,220,255)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>2500</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>CVG_MoonJade</mineableThing>
+      <mineableYield>25</mineableYield>
+      <mineableScatterCommonality>0.05</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+      <veinMineable>true</veinMineable>
+    </building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ConvergenceMineable">
+        <eventLumps>2~3</eventLumps>
+        <eventLumpSize>2~6</eventLumpSize>
+        <allowedBiomes>
+          <li>Glowforest</li>
+        </allowedBiomes>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_BloodJade</defName>
+    <tradeability>Sellable</tradeability>
+    <label>blood jade</label>
+    <description>Red jade from the scarred lands, veined like flesh. The demonic path treasures it; walls of it feel uneasy.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_BloodJade</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>ChunkRock_Drop</soundInteract>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>14</MarketValue>
+      <Mass>0.5</Mass>
+      <StuffPower_Armor_Sharp>0.95</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.5</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.6</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <BluntDamageMultiplier>1.4</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <deepCommonality>0</deepCommonality>
+    <stuffProps>
+      <categories>
+        <li>Stony</li>
+      </categories>
+      <commonality>0.01</commonality>
+      <color>(150,40,45)</color>
+      <constructEffect>ConstructMetal</constructEffect>
+      <soundImpactBullet>BulletImpact_Ground</soundImpactBullet>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Stone</soundImpactMelee>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>0.8</MaxHitPoints>
+        <Beauty>1.2</Beauty>
+        <WorkToBuild>4</WorkToBuild>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.04</qi>
+      </li>
+      <li Class="Convergence.DefModExtension_SpiritCraft">
+        <craft>DemonicPath</craft>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>CVG_MineableBloodJade</defName>
+    <label>blood jade vein</label>
+    <description>Jade the color of dried blood, found only in scarlands. The demonic path claims each seam marks a battlefield of the Iron Calamity, and nobody has proven otherwise.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(70,40,40)</color>
+      <colorTwo>(210,50,50)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>2500</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>CVG_BloodJade</mineableThing>
+      <mineableYield>25</mineableYield>
+      <mineableScatterCommonality>0.05</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+      <veinMineable>true</veinMineable>
+    </building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ConvergenceMineable">
+        <eventLumps>2~3</eventLumps>
+        <eventLumpSize>2~6</eventLumpSize>
+        <allowedBiomes>
+          <li>Scarlands</li>
+        </allowedBiomes>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="UglyRockBase" Name="CVG_DragonObsidianBase">
+    <defName>CVG_DragonObsidian</defName>
+    <label>dragon obsidian</label>
+    <description>Black volcanic glass with a red sheen, said to be dragon blood cooled in the lava. Hard and sharp.</description>
+    <graphicData>
+      <color>(32,28,36)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+    </statBases>
+    <building>
+      <mineableThing>CVG_ChunkDragonObsidian</mineableThing>
+      <mineableDropChance>0.25</mineableDropChance>
+      <smoothedThing>CVG_SmoothedDragonObsidian</smoothedThing>
+      <biomeSpecific>true</biomeSpecific>
+    </building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_WuxiaRock">
+        <preferredBiomes>
+          <li>LavaField</li>
+        </preferredBiomes>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_DragonObsidianBase">
+    <defName>CVG_SmoothedDragonObsidian</defName>
+    <label>smoothed dragon obsidian</label>
+    <description>Black volcanic glass with a red sheen, polished to a mirror. Clan elders read the future in its reflection, and rarely say what they saw.</description>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockSmooth_Atlas</texPath>
+    </graphicData>
+    <statBases>
+      <Beauty>2</Beauty>
+      <MarketValue>7</MarketValue>
+    </statBases>
+    <building>
+      <isNaturalRock>false</isNaturalRock>
+      <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <paintable>true</paintable>
+      <smoothedThing />
+    </building>
+    <saveCompressible>false</saveCompressible>
+    <repairEffect>Repair</repairEffect>
+  </ThingDef>
+
+  <ThingDef ParentName="ChunkRockBase">
+    <defName>CVG_ChunkDragonObsidian</defName>
+    <label>dragon obsidian chunk</label>
+    <graphicData>
+      <color>(32,28,36)</color>
+    </graphicData>
+    <statBases>
+      <Mass>24</Mass>
+    </statBases>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <butcherProducts>
+      <CVG_BlocksDragonObsidian>20</CVG_BlocksDragonObsidian>
+    </butcherProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>CVG_BlocksDragonObsidian</defName>
+    <label>dragon obsidian blocks</label>
+    <description>Blocks of dragon obsidian: hard, sharp and resistant to fire. The Ancient Dragon Clan builds its hoard halls of it, because no thief's fire can crack the walls.</description>
+    <graphicData>
+      <color>(32,28,36)</color>
+    </graphicData>
+    <statBases>
+      <Mass>1.2</Mass>
+      <SharpDamageMultiplier>0.9</SharpDamageMultiplier>
+      <MarketValue>1.3</MarketValue>
+    </statBases>
+    <stuffProps>
+      <color>(32,28,36)</color>
+      <soundImpactBullet>BulletImpact_Ground</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Stone</soundImpactMelee>
+      <stuffAdjective>dragon obsidian</stuffAdjective>
+      <statFactors>
+        <MaxHitPoints>2.0</MaxHitPoints>
+        <Beauty>1.5</Beauty>
+        <WorkToBuild>7.0</WorkToBuild>
+      </statFactors>
+      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+    </stuffProps>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.04</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <RecipeDef ParentName="MakeStoneBlocksBase">
+    <defName>CVG_Make_StoneBlocksDragonObsidian</defName>
+    <label>make dragon obsidian blocks</label>
+    <description>Cuts dragon obsidian chunks into usable blocks.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_ChunkDragonObsidian</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>CVG_ChunkDragonObsidian</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_BlocksDragonObsidian>20</CVG_BlocksDragonObsidian>
+    </products>
+  </RecipeDef>
+
+  <TerrainDef ParentName="TileStoneBase">
+    <defName>CVG_TileDragonObsidian</defName>
+    <label>dragon obsidian tile</label>
+    <color>(32,28,36)</color>
+    <costList>
+      <CVG_BlocksDragonObsidian>4</CVG_BlocksDragonObsidian>
+    </costList>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.02</qi>
+      </li>
+    </modExtensions>
+  </TerrainDef>
+
+  <HediffDef>
+    <defName>CVG_FlameWarmth</defName>
+    <label>flame lotus warmth</label>
+    <description>The fire of the flame lotus burns inside: the cold barely touches the body.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(1, 0.6, 0.3)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>60000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_FlameLotusPetal</defName>
+    <label>flame lotus petal</label>
+    <description>A petal of the lotus that blooms in lava. Chewed, it keeps the body warm for a day (comfortable temperature -25 C). Pure yang for alchemy.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/FlameLotusPetal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>8</MarketValue>
+      <Mass>0.05</Mass>
+      <DeteriorationRate>2</DeteriorationRate>
+    </statBases>
+    <stackLimit>75</stackLimit>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <preferability>NeverForNutrition</preferability>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestCommandString>Take {0}</ingestCommandString>
+      <ingestReportString>Taking {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_FlameWarmth</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>CVG_Plant_FlameLotus</defName>
+    <label>flame lotus</label>
+    <description>A red lotus that blooms on cooled lava. Southern legends say the Vermilion Bird rested on a lava field once, and the lotus grew where she folded her wings.</description>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Nutrition>0.15</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/CVG/FlameLotus</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(255, 140, 90)</color>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <growDays>10</growDays>
+      <harvestedThingDef>CVG_FlameLotusPetal</harvestedThingDef>
+      <harvestYield>5</harvestYield>
+      <harvestWork>400</harvestWork>
+      <dieIfLeafless>false</dieIfLeafless>
+      <visualSizeRange>0.5~0.9</visualSizeRange>
+      <harvestTag>Standard</harvestTag>
+      <wildOrder>2</wildOrder>
+      <allowAutoCut>false</allowAutoCut>
+    </plant>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>CVG_GlowSight</defName>
+    <label>glowcap sight</label>
+    <description>The glowing mushroom sharpens the eyes in the dark.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.6, 0.9, 1)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>60000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_GlowCap</defName>
+    <label>spirit glowcap</label>
+    <description>A glowing spirit mushroom from the glowforests. Eaten, it sharpens sight for a day.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/GlowCap</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>6</MarketValue>
+      <Mass>0.05</Mass>
+      <DeteriorationRate>2</DeteriorationRate>
+    </statBases>
+    <stackLimit>75</stackLimit>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <preferability>NeverForNutrition</preferability>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestCommandString>Take {0}</ingestCommandString>
+      <ingestReportString>Taking {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_GlowSight</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="CavePlantBase">
+    <defName>CVG_Plant_GlowMushroom</defName>
+    <label>spirit glowcap</label>
+    <description>A luminous spirit mushroom of the glowforests. Wanderers lost in the glowforests follow its light, and the lucky ones find the edge before dawn.</description>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Nutrition>0.15</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/CVG/GlowMushroom</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <growDays>8</growDays>
+      <harvestedThingDef>CVG_GlowCap</harvestedThingDef>
+      <harvestYield>6</harvestYield>
+      <harvestWork>400</harvestWork>
+      <dieIfLeafless>false</dieIfLeafless>
+      <visualSizeRange>0.5~0.9</visualSizeRange>
+      <harvestTag>Standard</harvestTag>
+      <wildOrder>2</wildOrder>
+      <allowAutoCut>false</allowAutoCut>
+    </plant>
+  </ThingDef>
+
+</Defs>

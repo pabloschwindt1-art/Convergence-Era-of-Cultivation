@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Tech_BloodDrain.label>drenar sangre</CVG_Tech_BloodDrain.label>
+  <CVG_Tech_BloodDrain.description>La Palma del Hilo Carmesí del Culto de la Luna Sangrienta: la leyenda dice que su fundador la aprendió viendo a los mosquitos beber de un dragón dormido. Arranca la sangre de un enemigo a través del aire; la sangre robada cura al lanzador y se vuelve esencia de sangre.
+
+12 de daño cortante (escalado por reino); la mitad cura al lanzador.</CVG_Tech_BloodDrain.description>
+  <CVG_Tech_BloodArmor.label>coraza de sangre</CVG_Tech_BloodArmor.label>
+  <CVG_Tech_BloodArmor.description>Los demonios de sangre que sobrevivieron a las purgas de las sectas rectas aprendieron a vestir su propia sangre como armadura, roja como la puerta de un templo. Endurece la sangre derramada en una coraza carmesí que se traga los golpes.
+
+Escudo de 50 (escalado por reino) durante unas 3 horas.</CVG_Tech_BloodArmor.description>
+</LanguageData>

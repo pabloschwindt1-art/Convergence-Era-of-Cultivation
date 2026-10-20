@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_QiNet_NotConnected>No está conectado a una red de qi.</CVG_QiNet_NotConnected>
+  <CVG_QiNet_Alone>No está conectado a otro nodo de qi.</CVG_QiNet_Alone>
+  <CVG_QiNet_Status>Red de qi: +{0} / -{1} por día, almacenado {2}/{3}</CVG_QiNet_Status>
+  <CVG_QiNet_NoQi>Sin qi: apagado.</CVG_QiNet_NoQi>
+  <CVG_QiNet_Infuse>Infundir qi</CVG_QiNet_Infuse>
+  <CVG_QiNet_InfuseDesc>Elige a un cultivador para que vierta parte de su qi en el cristal.</CVG_QiNet_InfuseDesc>
+  <CVG_QiNet_NoInfuser>Ningún cultivador puede llegar</CVG_QiNet_NoInfuser>
+  <CVG_QiNet_Infused>{0} infundió {1} de qi.</CVG_QiNet_Infused>
+  <CVG_QiNet_NeedsVein>Debe construirse sobre una veta de qi.</CVG_QiNet_NeedsVein>
+</LanguageData>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Setting_WuxiaRocks>Wuxia world: map tiles use only wuxia rocks</CVG_Setting_WuxiaRocks>
+  <CVG_Setting_WuxiaRocksTip>With a resources module that adds wuxia rocks (ten tribulations rock, black jade, cloud stone…), each world tile chooses its rock types only among them. Off: they mix with the vanilla rocks. Applies to newly generated maps.</CVG_Setting_WuxiaRocksTip>
+</LanguageData>

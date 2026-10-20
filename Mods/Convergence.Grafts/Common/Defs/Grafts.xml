@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Grafts: myth-themed bionics made of beast and jade parts. Installed only with a Dao Grafting Altar on the map (Recipe_InstallGraft). -->
+  <ThingDef Name="CVG_GraftBase" ParentName="BodyPartBase" Abstract="True">
+    <techLevel>Medieval</techLevel>
+    <thingCategories><li>BodyPartsBionic</li></thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <tradeTags><li>TechHediff</li></tradeTags>
+    <statBases><WorkToMake>16000</WorkToMake></statBases>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+      <skillRequirements><Crafting>6</Crafting></skillRequirements>
+      <recipeUsers><li>CVG_BoneRefiningFurnace</li></recipeUsers>
+      <displayPriority>310</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_FarmerArm</defName>
+    <label>divine farmer's arm</label>
+    <labelNoun>a divine farmer's arm</labelNoun>
+    <description>Shennong tasted a hundred herbs in a single day to teach mortals which plants heal and which kill. Sects of Jiuxiao say a sliver of his patience lives in the bone grown from the root of a thousand-year spirit tree. The arm knows when a seed wants water before the farmer does.\n\nPlant work +100%, harvest yield +15%.\n\nReplaces the whole arm, hand included.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_FarmerArm</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_FarmerArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.05</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><PlantWorkSpeed>1.0</PlantWorkSpeed><PlantHarvestYield>0.15</PlantHarvestYield><CVG_CelestialDissonance>0.1</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftBase">
+    <defName>CVG_Graft_FarmerArm</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_FarmerArm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>divine farmer's arm</label>
+    <description>Shennong tasted a hundred herbs in a single day to teach mortals which plants heal and which kill. Sects of Jiuxiao say a sliver of his patience lives in the bone grown from the root of a thousand-year spirit tree. The arm knows when a seed wants water before the farmer does.\n\nPlant work +100%, harvest yield +15%.\n\nReplaces the whole arm, hand included.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_FarmerArm</RecipeDef></descriptionHyperlinks>
+    
+    <costList><CVG_SpiritJade>3</CVG_SpiritJade><CVG_BeastBlood>2</CVG_BeastBlood><WoodLog>40</WoodLog></costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_DaoGrafting</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>CVG_Install_FarmerArm</defName>
+    <label>install divine farmer's arm</label>
+    <description>Install a divine farmer's arm. It needs a Dao grafting altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_FarmerArm</ThingDef><HediffDef>CVG_Graft_FarmerArm</HediffDef></descriptionHyperlinks>
+    <workerClass>Convergence.Grafts.Recipe_InstallGraft</workerClass>
+    <jobString>Installing divine farmer's arm.</jobString>
+    <workAmount>4500</workAmount>
+    <skillRequirements><Medicine>6</Medicine></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_FarmerArm</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_FarmerArm</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Shoulder</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_FarmerArm</addsHediff>
+  </RecipeDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_MinerArm</defName>
+    <label>Dao miner's arm</label>
+    <labelNoun>a Dao miner's arm</labelNoun>
+    <description>The miners of the Black Jade Mountains carved tunnels through stone that had swallowed three tribulations. Their arms, reforged with earth-veined marrow, listen to the rock and strike where it is already willing to break.\n\nMining speed +100%, mining yield +15%.\n\nReplaces the whole arm, hand included.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_MinerArm</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_MinerArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.05</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><MiningSpeed>1.0</MiningSpeed><MiningYield>0.15</MiningYield><CVG_CelestialDissonance>0.1</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftBase">
+    <defName>CVG_Graft_MinerArm</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_MinerArm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>Dao miner's arm</label>
+    <description>The miners of the Black Jade Mountains carved tunnels through stone that had swallowed three tribulations. Their arms, reforged with earth-veined marrow, listen to the rock and strike where it is already willing to break.\n\nMining speed +100%, mining yield +15%.\n\nReplaces the whole arm, hand included.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_MinerArm</RecipeDef></descriptionHyperlinks>
+    
+    <costList><CVG_SpiritStone>25</CVG_SpiritStone><CVG_BeastBlood>2</CVG_BeastBlood><Steel>40</Steel></costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_DaoGrafting</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>CVG_Install_MinerArm</defName>
+    <label>install Dao miner's arm</label>
+    <description>Install a Dao miner's arm. It needs a Dao grafting altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_MinerArm</ThingDef><HediffDef>CVG_Graft_MinerArm</HediffDef></descriptionHyperlinks>
+    <workerClass>Convergence.Grafts.Recipe_InstallGraft</workerClass>
+    <jobString>Installing Dao miner's arm.</jobString>
+    <workAmount>4500</workAmount>
+    <skillRequirements><Medicine>6</Medicine></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_MinerArm</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_MinerArm</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Shoulder</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_MinerArm</addsHediff>
+  </RecipeDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_SmithHand</defName>
+    <label>celestial smith's hand</label>
+    <labelNoun>a celestial smith's hand</labelNoun>
+    <description>Legend says the first flying sword was hammered by a smith who had traded his hand for one of living phoenix-bronze. It never feels the heat of the forge, and it remembers every blade it has ever folded.\n\nGeneral labor speed +20% per hand (smithing, crafting and sculpting).\n\nReplaces only the hand; the arm stays natural.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_SmithHand</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_SmithHand</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.1</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><GeneralLaborSpeed>0.2</GeneralLaborSpeed><CVG_CelestialDissonance>0.1</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftBase">
+    <defName>CVG_Graft_SmithHand</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_SmithHand</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>celestial smith's hand</label>
+    <description>Legend says the first flying sword was hammered by a smith who had traded his hand for one of living phoenix-bronze. It never feels the heat of the forge, and it remembers every blade it has ever folded.\n\nGeneral labor speed +20% per hand (smithing, crafting and sculpting).\n\nReplaces only the hand; the arm stays natural.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_SmithHand</RecipeDef></descriptionHyperlinks>
+    
+    <costList><CVG_SpiritStone>20</CVG_SpiritStone><CVG_BeastBlood>1</CVG_BeastBlood><Steel>30</Steel><CVG_SpiritSteel MayRequire="prospero1088.convergence.resources">10</CVG_SpiritSteel></costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_DaoGrafting</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>CVG_Install_SmithHand</defName>
+    <label>install celestial smith's hand</label>
+    <description>Install a celestial smith's hand. It needs a Dao grafting altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_SmithHand</ThingDef><HediffDef>CVG_Graft_SmithHand</HediffDef></descriptionHyperlinks>
+    <workerClass>Convergence.Grafts.Recipe_InstallGraft</workerClass>
+    <jobString>Installing celestial smith's hand.</jobString>
+    <workAmount>4500</workAmount>
+    <skillRequirements><Medicine>6</Medicine></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_SmithHand</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_SmithHand</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Hand</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_SmithHand</addsHediff>
+  </RecipeDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_AlchemistHand</defName>
+    <label>alchemist's hand</label>
+    <labelNoun>an alchemist's hand</labelNoun>
+    <description>Pill refiners of the Heavenly Cauldron Pavilion graft spirit-jade nerves into their palms so they can feel the fire inside the cauldron breathe. A pill made by such a hand carries less of the poison that every elixir hides.\n\nDrug synthesis and cooking +30%, tend quality +5%.\n\nReplaces only the hand; the arm stays natural.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_AlchemistHand</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_AlchemistHand</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.1</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><DrugSynthesisSpeed>0.3</DrugSynthesisSpeed><DrugCookingSpeed>0.3</DrugCookingSpeed><MedicalTendQuality>0.05</MedicalTendQuality><CVG_CelestialDissonance>0.1</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftBase">
+    <defName>CVG_Graft_AlchemistHand</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_AlchemistHand</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>alchemist's hand</label>
+    <description>Pill refiners of the Heavenly Cauldron Pavilion graft spirit-jade nerves into their palms so they can feel the fire inside the cauldron breathe. A pill made by such a hand carries less of the poison that every elixir hides.\n\nDrug synthesis and cooking +30%, tend quality +5%.\n\nReplaces only the hand; the arm stays natural.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_AlchemistHand</RecipeDef></descriptionHyperlinks>
+    
+    <costList><CVG_SpiritJade>3</CVG_SpiritJade><CVG_BeastBlood>1</CVG_BeastBlood><MedicineHerbal>10</MedicineHerbal></costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_DaoGrafting</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>CVG_Install_AlchemistHand</defName>
+    <label>install alchemist's hand</label>
+    <description>Install an alchemist's hand. It needs a Dao grafting altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_AlchemistHand</ThingDef><HediffDef>CVG_Graft_AlchemistHand</HediffDef></descriptionHyperlinks>
+    <workerClass>Convergence.Grafts.Recipe_InstallGraft</workerClass>
+    <jobString>Installing alchemist's hand.</jobString>
+    <workAmount>4500</workAmount>
+    <skillRequirements><Medicine>6</Medicine></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_AlchemistHand</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_AlchemistHand</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Hand</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_AlchemistHand</addsHediff>
+  </RecipeDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_HealerHand</defName>
+    <label>healer's hand</label>
+    <labelNoun>a healer's hand</labelNoun>
+    <description>Monks of the Silent Lotus Temple believe a healer's hand must first be healed itself. This graft, grown around a lotus seed, steadies the fingers and warms the wound it touches.\n\nTend quality +12%, tend speed +15%, surgery success +8% (per hand).\n\nReplaces only the hand; the arm stays natural.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_HealerHand</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_HealerHand</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.1</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><MedicalTendQuality>0.12</MedicalTendQuality><MedicalTendSpeed>0.15</MedicalTendSpeed><MedicalSurgerySuccessChance>0.08</MedicalSurgerySuccessChance><CVG_CelestialDissonance>0.1</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftBase">
+    <defName>CVG_Graft_HealerHand</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_HealerHand</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>healer's hand</label>
+    <description>Monks of the Silent Lotus Temple believe a healer's hand must first be healed itself. This graft, grown around a lotus seed, steadies the fingers and warms the wound it touches.\n\nTend quality +12%, tend speed +15%, surgery success +8% (per hand).\n\nReplaces only the hand; the arm stays natural.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_HealerHand</RecipeDef></descriptionHyperlinks>
+    
+    <costList><CVG_SpiritJade>2</CVG_SpiritJade><CVG_BeastBlood>2</CVG_BeastBlood><MedicineHerbal>15</MedicineHerbal></costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_DaoGrafting</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>CVG_Install_HealerHand</defName>
+    <label>install healer's hand</label>
+    <description>Install a healer's hand. It needs a Dao grafting altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_HealerHand</ThingDef><HediffDef>CVG_Graft_HealerHand</HediffDef></descriptionHyperlinks>
+    <workerClass>Convergence.Grafts.Recipe_InstallGraft</workerClass>
+    <jobString>Installing healer's hand.</jobString>
+    <workAmount>4500</workAmount>
+    <skillRequirements><Medicine>6</Medicine></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_HealerHand</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_HealerHand</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Hand</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_HealerHand</addsHediff>
+  </RecipeDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_BuilderArm</defName>
+    <label>mountain builder's arm</label>
+    <labelNoun>a mountain builder's arm</labelNoun>
+    <description>When the Great Rupture split Jiuxiao, builders raised walls in a single night to hold the fragments together. Their arms carry the strength of moving mountains — and the patience of waiting for them to settle.\n\nConstruction speed +35%, build success +10%, carrying capacity +25.\n\nReplaces the whole arm, hand included.\nCelestial dissonance +0.15.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_BuilderArm</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_BuilderArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.05</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><ConstructionSpeed>0.35</ConstructionSpeed><ConstructSuccessChance>0.1</ConstructSuccessChance><CarryingCapacity>25</CarryingCapacity><CVG_CelestialDissonance>0.15</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftBase">
+    <defName>CVG_Graft_BuilderArm</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_BuilderArm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>mountain builder's arm</label>
+    <description>When the Great Rupture split Jiuxiao, builders raised walls in a single night to hold the fragments together. Their arms carry the strength of moving mountains — and the patience of waiting for them to settle.\n\nConstruction speed +35%, build success +10%, carrying capacity +25.\n\nReplaces the whole arm, hand included.\nCelestial dissonance +0.15.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_BuilderArm</RecipeDef></descriptionHyperlinks>
+    
+    <costList><CVG_SpiritStone>25</CVG_SpiritStone><Steel>20</Steel><CVG_BeastBlood>2</CVG_BeastBlood></costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_DaoGrafting</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>CVG_Install_BuilderArm</defName>
+    <label>install mountain builder's arm</label>
+    <description>Install a mountain builder's arm. It needs a Dao grafting altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_BuilderArm</ThingDef><HediffDef>CVG_Graft_BuilderArm</HediffDef></descriptionHyperlinks>
+    <workerClass>Convergence.Grafts.Recipe_InstallGraft</workerClass>
+    <jobString>Installing mountain builder's arm.</jobString>
+    <workAmount>4500</workAmount>
+    <skillRequirements><Medicine>6</Medicine></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_BuilderArm</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_BuilderArm</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Shoulder</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_BuilderArm</addsHediff>
+  </RecipeDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_JadeArtistFingers</defName>
+    <label>jade artist's fingers</label>
+    <labelNoun>a jade artist's fingers</labelNoun>
+    <description>An artist of the old courts carved a jade dragon so perfect that it flew away the night it was finished. These slender jade-boned fingers are said to remember the first cut of that sculpture.\n\nGeneral labor speed +20% (sculpting, smithing and crafting), social impact +5%.\n\nReplaces only the hand; the arm stays natural.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_JadeArtistFingers</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_JadeArtistFingers</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.1</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><GeneralLaborSpeed>0.2</GeneralLaborSpeed><SocialImpact>0.05</SocialImpact><CVG_CelestialDissonance>0.1</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftBase">
+    <defName>CVG_Graft_JadeArtistFingers</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_JadeArtistFingers</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>jade artist's fingers</label>
+    <description>An artist of the old courts carved a jade dragon so perfect that it flew away the night it was finished. These slender jade-boned fingers are said to remember the first cut of that sculpture.\n\nGeneral labor speed +20% (sculpting, smithing and crafting), social impact +5%.\n\nReplaces only the hand; the arm stays natural.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_JadeArtistFingers</RecipeDef></descriptionHyperlinks>
+    
+    <costList><CVG_SpiritJade>5</CVG_SpiritJade><Jade>15</Jade><CVG_BeastBlood>1</CVG_BeastBlood></costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_DaoGrafting</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>CVG_Install_JadeArtistFingers</defName>
+    <label>install jade artist's fingers</label>
+    <description>Install a jade artist's fingers. It needs a Dao grafting altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_JadeArtistFingers</ThingDef><HediffDef>CVG_Graft_JadeArtistFingers</HediffDef></descriptionHyperlinks>
+    <workerClass>Convergence.Grafts.Recipe_InstallGraft</workerClass>
+    <jobString>Installing jade artist's fingers.</jobString>
+    <workAmount>4500</workAmount>
+    <skillRequirements><Medicine>6</Medicine></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_JadeArtistFingers</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_JadeArtistFingers</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Hand</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_JadeArtistFingers</addsHediff>
+  </RecipeDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_ShepherdArm</defName>
+    <label>beast shepherd's arm</label>
+    <labelNoun>a beast shepherd's arm</labelNoun>
+    <description>Grown from the sinew of a spirit ox that guarded its herd for three hundred years, this arm carries a scent beasts trust. Wild things calm under it; tame things work harder for it.\n\nAnimal gathering +30%/+20%, taming and training +15%.\n\nReplaces the whole arm, hand included.\nCelestial dissonance +0.2.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_ShepherdArm</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_ShepherdArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.05</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><AnimalGatherSpeed>0.3</AnimalGatherSpeed><AnimalGatherYield>0.2</AnimalGatherYield><TameAnimalChance>0.15</TameAnimalChance><TrainAnimalChance>0.15</TrainAnimalChance><CVG_CelestialDissonance>0.2</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftBase">
+    <defName>CVG_Graft_ShepherdArm</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_ShepherdArm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>beast shepherd's arm</label>
+    <description>Grown from the sinew of a spirit ox that guarded its herd for three hundred years, this arm carries a scent beasts trust. Wild things calm under it; tame things work harder for it.\n\nAnimal gathering +30%/+20%, taming and training +15%.\n\nReplaces the whole arm, hand included.\nCelestial dissonance +0.2.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_ShepherdArm</RecipeDef></descriptionHyperlinks>
+    
+    <costList><CVG_BeastBlood>4</CVG_BeastBlood><CVG_SpiritLeather>10</CVG_SpiritLeather><CVG_SpiritJade>2</CVG_SpiritJade></costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_BeastGrafting</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>CVG_Install_ShepherdArm</defName>
+    <label>install beast shepherd's arm</label>
+    <description>Install a beast shepherd's arm. It needs a Dao grafting altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_ShepherdArm</ThingDef><HediffDef>CVG_Graft_ShepherdArm</HediffDef></descriptionHyperlinks>
+    <workerClass>Convergence.Grafts.Recipe_InstallGraft</workerClass>
+    <jobString>Installing beast shepherd's arm.</jobString>
+    <workAmount>4500</workAmount>
+    <skillRequirements><Medicine>6</Medicine></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_ShepherdArm</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_ShepherdArm</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Shoulder</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_ShepherdArm</addsHediff>
+  </RecipeDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>CVG_Graft_DaoBones</defName>
+    <label>Dao bones</label>
+    <labelNoun>Dao bones</labelNoun>
+    <description>Some are born with Dao bones; most must earn them. Rebuilt from the marrow of beasts that touched the heavens, these bones hum with the rhythm of the Dao and steady every breakthrough.\n\nCultivation speed +15%, breakthrough chance +5%.\nCelestial dissonance +0.2.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_DaoBones</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_DaoBones</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <statOffsets><CVG_CultivationSpeed>0.15</CVG_CultivationSpeed><CVG_BreakthroughChance>0.05</CVG_BreakthroughChance><CVG_CelestialDissonance>0.2</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftBase">
+    <defName>CVG_Graft_DaoBones</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_DaoBones</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>Dao bones</label>
+    <description>Some are born with Dao bones; most must earn them. Rebuilt from the marrow of beasts that touched the heavens, these bones hum with the rhythm of the Dao and steady every breakthrough.\n\nCultivation speed +15%, breakthrough chance +5%.\nCelestial dissonance +0.2.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_DaoBones</RecipeDef></descriptionHyperlinks>
+    
+    <costList><CVG_BeastCore>1</CVG_BeastCore><CVG_SpiritJade>4</CVG_SpiritJade><CVG_BeastBlood>3</CVG_BeastBlood></costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_BeastGrafting</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>CVG_Install_DaoBones</defName>
+    <label>install Dao bones</label>
+    <description>Install Dao bones. It needs a Dao grafting altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_DaoBones</ThingDef><HediffDef>CVG_Graft_DaoBones</HediffDef></descriptionHyperlinks>
+    <workerClass>Convergence.Grafts.Recipe_InstallGraftImplant</workerClass>
+    <jobString>Installing Dao bones.</jobString>
+    <workAmount>4500</workAmount>
+    <skillRequirements><Medicine>6</Medicine></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_DaoBones</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_DaoBones</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Spine</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_DaoBones</addsHediff>
+  </RecipeDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>CVG_Graft_DragonVeins</defName>
+    <label>dragon veins</label>
+    <labelNoun>dragon veins</labelNoun>
+    <description>The earth itself has dragon veins — the rivers of qi that run under mountains. Threaded through a body, they make qi flow like a flood after the rains.\n\nQi regeneration +1.0, blood-qi regeneration +0.5.\nCelestial dissonance +0.15.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_DragonVeins</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_DragonVeins</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <statOffsets><CVG_QiRegen>1.0</CVG_QiRegen><CVG_BloodQiRegen>0.5</CVG_BloodQiRegen><CVG_CelestialDissonance>0.15</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftBase">
+    <defName>CVG_Graft_DragonVeins</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_DragonVeins</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>dragon veins</label>
+    <description>The earth itself has dragon veins — the rivers of qi that run under mountains. Threaded through a body, they make qi flow like a flood after the rains.\n\nQi regeneration +1.0, blood-qi regeneration +0.5.\nCelestial dissonance +0.15.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_DragonVeins</RecipeDef></descriptionHyperlinks>
+    
+    <costList><CVG_BeastCore>1</CVG_BeastCore><CVG_BeastBlood>6</CVG_BeastBlood><CVG_SpiritJade>2</CVG_SpiritJade></costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_BeastGrafting</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>CVG_Install_DragonVeins</defName>
+    <label>install dragon veins</label>
+    <description>Install dragon veins. It needs a Dao grafting altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_DragonVeins</ThingDef><HediffDef>CVG_Graft_DragonVeins</HediffDef></descriptionHyperlinks>
+    <workerClass>Convergence.Grafts.Recipe_InstallGraftImplant</workerClass>
+    <jobString>Installing dragon veins.</jobString>
+    <workAmount>4500</workAmount>
+    <skillRequirements><Medicine>6</Medicine></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_DragonVeins</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_DragonVeins</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Heart</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_DragonVeins</addsHediff>
+  </RecipeDef>
+
+  <!-- Implant removal (like vanilla RemovePainstopper). No altar needed: taking a graft out is plain surgery. -->
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>CVG_Remove_DaoBones</defName>
+    <label>remove Dao bones</label>
+    <description>Remove the Dao bones. The beast marrow is drawn out bone by bone and can be set into another body later.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_DaoBones</ThingDef><HediffDef>CVG_Graft_DaoBones</HediffDef></descriptionHyperlinks>
+    <jobString>Removing Dao bones.</jobString>
+    <removesHediff>CVG_Graft_DaoBones</removesHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>CVG_Remove_DragonVeins</defName>
+    <label>remove dragon veins</label>
+    <description>Remove the dragon veins. The threads of qi are unwound from the heart and coiled back into their jade sheath.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_DragonVeins</ThingDef><HediffDef>CVG_Graft_DragonVeins</HediffDef></descriptionHyperlinks>
+    <jobString>Removing dragon veins.</jobString>
+    <removesHediff>CVG_Graft_DragonVeins</removesHediff>
+  </RecipeDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_ThousandLiEyes</defName>
+    <label>thousand-li eye</label>
+    <labelNoun>a thousand-li eye</labelNoun>
+    <description>Qianliyan, the heavenly guardian, saw everything within a thousand li. Eyes carved from a Gudiao eagle's and polished with spirit crystal see the archer before the archer sees you.\n\nSight efficiency x1.3, shooting accuracy +2.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_ThousandLiEyes</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_ThousandLiEyes</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.3</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><ShootingAccuracyPawn>2.0</ShootingAccuracyPawn><CVG_CelestialDissonance>0.1</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftBase">
+    <defName>CVG_Graft_ThousandLiEyes</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_ThousandLiEyes</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>thousand-li eye</label>
+    <description>Qianliyan, the heavenly guardian, saw everything within a thousand li. Eyes carved from a Gudiao eagle's and polished with spirit crystal see the archer before the archer sees you.\n\nSight efficiency x1.3, shooting accuracy +2.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_ThousandLiEyes</RecipeDef></descriptionHyperlinks>
+    
+    <costList><CVG_BeastCore>1</CVG_BeastCore><CVG_SpiritJade>2</CVG_SpiritJade><CVG_SpiritStone>10</CVG_SpiritStone></costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_BeastGrafting</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>CVG_Install_ThousandLiEyes</defName>
+    <label>install thousand-li eye</label>
+    <description>Install a thousand-li eye. It needs a Dao grafting altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_ThousandLiEyes</ThingDef><HediffDef>CVG_Graft_ThousandLiEyes</HediffDef></descriptionHyperlinks>
+    <workerClass>Convergence.Grafts.Recipe_InstallGraft</workerClass>
+    <jobString>Installing thousand-li eye.</jobString>
+    <workAmount>4500</workAmount>
+    <skillRequirements><Medicine>6</Medicine></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_ThousandLiEyes</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_ThousandLiEyes</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Eye</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_ThousandLiEyes</addsHediff>
+  </RecipeDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_SteedLegs</defName>
+    <label>thousand-li steed's leg</label>
+    <labelNoun>a thousand-li steed's leg</labelNoun>
+    <description>A thousand-li horse runs a thousand li in a day and still asks for more road. Its tendons, woven into a runner's legs, turn every journey into a short walk.\n\nLeg efficiency x1.35.\nCelestial dissonance +0.2.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_SteedLegs</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_SteedLegs</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.35</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><CVG_CelestialDissonance>0.2</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftBase">
+    <defName>CVG_Graft_SteedLegs</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_SteedLegs</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>thousand-li steed's leg</label>
+    <description>A thousand-li horse runs a thousand li in a day and still asks for more road. Its tendons, woven into a runner's legs, turn every journey into a short walk.\n\nLeg efficiency x1.35.\nCelestial dissonance +0.2.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_SteedLegs</RecipeDef></descriptionHyperlinks>
+    
+    <costList><CVG_BeastCore>1</CVG_BeastCore><CVG_BeastBlood>3</CVG_BeastBlood><CVG_SpiritLeather>10</CVG_SpiritLeather></costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_BeastGrafting</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>CVG_Install_SteedLegs</defName>
+    <label>install thousand-li steed's leg</label>
+    <description>Install a thousand-li steed's leg. It needs a Dao grafting altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_SteedLegs</ThingDef><HediffDef>CVG_Graft_SteedLegs</HediffDef></descriptionHyperlinks>
+    <workerClass>Convergence.Grafts.Recipe_InstallGraft</workerClass>
+    <jobString>Installing thousand-li steed's leg.</jobString>
+    <workAmount>4500</workAmount>
+    <skillRequirements><Medicine>6</Medicine></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_SteedLegs</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_SteedLegs</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Leg</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_SteedLegs</addsHediff>
+  </RecipeDef>
+
+  <ThingDef ParentName="BenchBase">
+    <defName>CVG_BoneRefiningFurnace</defName>
+    <label>bone refining furnace</label>
+    <description>A stone furnace where the bones, marrow and hides of spirit beasts are cleaned, ground and re-grown into grafts. It burns nothing but patience. A good furnace, say the old refiners, remembers every bone it has worked.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Building/CVG/Grafts/BoneRefiningFurnace</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <costList>
+      <Steel>70</Steel>
+      <CVG_SpiritStone>10</CVG_SpiritStone>
+    </costList>
+    <constructEffect>ConstructMetal</constructEffect>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>3200</WorkToBuild>
+      <MaxHitPoints>220</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <size>(3,1)</size>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2420</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs><li>ITab_Bills</li></inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workTableRoomRole>Workshop</workTableRoomRole>
+    </building>
+    <placeWorkers><li>PlaceWorker_PreventInteractionSpotOverlap</li></placeWorkers>
+    <researchPrerequisites><li>CVG_Research_DaoGrafting</li></researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="BedWithQualityBase">
+    <defName>CVG_GraftingAltar</defName>
+    <stuffCategories Inherit="False" />
+    <costStuffCount>0</costStuffCount>
+    <label>Dao grafting altar</label>
+    <description>A slab of white stone with a formation carved around it. The patient lies in the circle while the surgeon, kneeling at the head, lines the graft up with the old bone. Nothing here is surgery as a physician would understand it; everything is ritual, and the rituals are precise.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Grafts/GraftingAltar</texPath>
+      <shaderType>Cutout</shaderType>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <castEdgeShadows>True</castEdgeShadows>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>4500</WorkToBuild>
+      <Mass>60</Mass>
+      <Flammability>0.2</Flammability>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+      <Comfort>0.6</Comfort>
+      <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
+      <MedicalTendQualityOffset>0.10</MedicalTendQualityOffset>
+      <SurgerySuccessChanceFactor>1.15</SurgerySuccessChanceFactor>
+      <Beauty>3</Beauty>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>VitalsMonitor</li>
+          <li>EndTable</li>
+          <li>Dresser</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <size>(1,2)</size>
+    <costList>
+      <Steel>40</Steel>
+      <CVG_SpiritStone>40</CVG_SpiritStone>
+      <CVG_SpiritJade>4</CVG_SpiritJade>
+    </costList>
+    <building>
+      <bed_showSleeperBody>True</bed_showSleeperBody>
+      <bed_healPerDay>12</bed_healPerDay>
+      <bed_defaultMedical>true</bed_defaultMedical>
+      <buildingSizeCategory>Small</buildingSizeCategory>
+    </building>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>42</pathCost>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <designationCategory>Furniture</designationCategory>
+    <researchPrerequisites><li>CVG_Research_DaoGrafting</li></researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <techLevel>Medieval</techLevel>
+  </ThingDef>
+
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_DaoGrafting</defName>
+    <label>Dao grafting</label>
+    <description>The Pavilion's surgeons call it a trade, the Lotus monks a vow, and the Azure Peak a fashion. In every case, the principle is the same: a bone that remembers the Dao can teach the body what the mind knows. Unlocks the Dao grafting altar, the bone refining furnace and the trade grafts.</description>
+    <baseCost>2400</baseCost>
+    <prerequisites><li>CVG_Research_BodyTempering</li></prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>2</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch"><knowledgeCost>6</knowledgeCost></li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_BeastGrafting</defName>
+    <label>beast grafting</label>
+    <description>The old masters said that a beast that touched the heavens leaves a piece of itself in its bones. With the altar and the right marrow, that piece can be set into a mortal frame. Unlocks the Dao bones, dragon veins, thousand-li eyes, steed legs, the shepherd's arm, and the beast organs: dragon lungs, jade kidneys, wind-hearing ears and qilin skin.</description>
+    <baseCost>3600</baseCost>
+    <prerequisites><li>CVG_Research_DaoGrafting</li></prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>2</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch"><knowledgeCost>9</knowledgeCost></li>
+    </modExtensions>
+  </ResearchProjectDef>
+</Defs>

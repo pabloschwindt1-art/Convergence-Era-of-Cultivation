@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Review of Convergence: Furniture (docs/revision/REVISION_Furniture.md): cultivation places, bedside facility, sleeping mat and the comfortable chair.
+       Art provisional (tinted vanilla); final art Things/Building/CVG/Furniture/<Name>. -->
+
+  <!-- ================= Cultivation places: more qi regeneration per sit and more qi in the air (qi concentration speeds cultivation and breakthroughs) ================= -->
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_JadePlatform</defName>
+    <label>jade platform</label>
+    <description>A low square platform of polished green jade with a round mat on top, where a cultivator sits for hours without the cold of the stone reaching them. The qi of the jade rises into the sitter and the sitter's own qi returns twice as fast. Sects hand out a place on one as a reward for ten years of service, and a place on the oldest is inherited.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/JadePlatform</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <designationCategory>CVG_Cultivation</designationCategory>
+    <researchPrerequisites><li>CVG_Research_QiBreathing</li></researchPrerequisites>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.15</fillPercent>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToBuild>4500</WorkToBuild>
+      <Mass>40</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>4</Beauty>
+      <Comfort>0.55</Comfort>
+    </statBases>
+    <costList>
+      <Jade>25</Jade>
+      <Cloth>10</Cloth>
+    </costList>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <building><isSittable>true</isSittable></building>
+    <uiOrder>2451</uiOrder>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivationSpot">
+        <qiRegenFactor>8</qiRegenFactor>
+        <sessionTicks>3000</sessionTicks>
+      </li>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>5</qi>
+        <element>CVG_Element_Earth</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_SpiritJadeDais</defName>
+    <label>spirit jade dais</label>
+    <description>A dais of raw spirit jade where the qi is so thick that sitting on it feels like breathing under water. Cultivators who attempt a breakthrough here are said to have a calmer heart, and the thickened qi makes the attempt more likely to succeed. The Heavenly Court used a dais like this one to seat its judges, and the judges never needed to raise their voices.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/SpiritJadeDais</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <designationCategory>CVG_Cultivation</designationCategory>
+    <researchPrerequisites><li>CVG_Research_QiBreathing</li></researchPrerequisites>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.15</fillPercent>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>220</MaxHitPoints>
+      <WorkToBuild>9000</WorkToBuild>
+      <Mass>60</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>7</Beauty>
+      <Comfort>0.6</Comfort>
+    </statBases>
+    <costList>
+      <CVG_SpiritJade>30</CVG_SpiritJade>
+      <CVG_SpiritStone>10</CVG_SpiritStone>
+    </costList>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <building><isSittable>true</isSittable></building>
+    <uiOrder>2452</uiOrder>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivationSpot">
+        <qiRegenFactor>12</qiRegenFactor>
+        <sessionTicks>3500</sessionTicks>
+      </li>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>9</qi>
+        <element>CVG_Element_Earth</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- ================= Beds: bedside facility (the vanilla end table, wuxia version), sleeping mat ================= -->
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_BedsideTray</defName>
+    <label>bedside tray</label>
+    <description>A small lacquered tray on four short legs, with a teapot, a dish for the night pill and a candle. Placed against the head of a bed it makes it a little more comfortable, because the sleeper knows that on waking there will be tea. Bedside trays are the one piece of furniture all sects agree on.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/BedsideTray</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shadowData><volume>(0.3, 0.6, 0.3)</volume></shadowData>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.35</fillPercent>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <rotatable>true</rotatable>
+    <surfaceType>Item</surfaceType>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToBuild>900</WorkToBuild>
+      <Mass>4</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>3</Beauty>
+    </statBases>
+    <costList>
+      <WoodLog>25</WoodLog>
+    </costList>
+    <placeWorkers><li>PlaceWorker_ShowFacilitiesConnections</li></placeWorkers>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <Comfort>0.06</Comfort>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+        <mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead>
+      </li>
+    </comps>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <castEdgeShadows>false</castEdgeShadows>
+  </ThingDef>
+
+  <ThingDef ParentName="SleepingSpotBase">
+    <defName>CVG_SleepingMat</defName>
+    <label>sleeping mat</label>
+    <description>A rolled-up mat of woven reeds that a disciple unrolls wherever the road ends for the night. No frame, no pillow, no excuses: the Wandering Path sleeps on these, and so do the novices of every sect for their first year. Only a spot where someone may sleep, not a comfortable one.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/SleepingMat</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <size>(1,2)</size>
+    <designationCategory>Furniture</designationCategory>
+    <statBases>
+      <WorkToBuild>100</WorkToBuild>
+      <Comfort>0.45</Comfort>
+      <SurgerySuccessChanceFactor>0.7</SurgerySuccessChanceFactor>
+    </statBases>
+    <costList>
+      <Cloth>5</Cloth>
+    </costList>
+  </ThingDef>
+
+  <!-- ================= Comfortable chair (armchair) ================= -->
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>CVG_BambooRecliner</defName>
+    <label>bamboo recliner</label>
+    <description>A reclining chair of bent bamboo with a cushion of wadded cloud cotton, as comfortable as anything an old master ever sat in. The slats creak when you lean back, which the old masters said was the chair saying it was happy. The Silent Lotus keep one in every infirmary and one more in the abbess's study.</description>
+    <replaceTags><li>Chair</li></replaceTags>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/BambooRecliner</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <shadowData><volume>(0.3, 0.33, 0.3)</volume></shadowData>
+    </graphicData>
+    <uiIconScale>0.9</uiIconScale>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>110</MaxHitPoints>
+      <WorkToBuild>3500</WorkToBuild>
+      <Mass>12</Mass>
+      <Flammability>1.2</Flammability>
+      <Beauty>4</Beauty>
+      <Comfort>0.82</Comfort>
+    </statBases>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <costList>
+      <WoodLog>60</WoodLog>
+      <Cloth>50</Cloth>
+    </costList>
+    <pathCost>30</pathCost>
+    <fillPercent>0.40</fillPercent>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <building>
+      <isSittable>true</isSittable>
+      <destroySound>BuildingDestroyed_Soft_Small</destroySound>
+    </building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>1</qi>
+        <element>CVG_Element_Wood</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

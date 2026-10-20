@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Bloodline backstories (one childhood and one adulthood per bloodline), spawn category CVG_Bloodline_<L>.
+       Used by CVG_Kind_<L> through backstoryFiltersOverride; other mods (Sects, Stories) can ask for the category with MayRequire. -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_DragonClanWard</defName>
+    <title>dragon clan ward</title>
+    <titleShort>ward</titleShort>
+    <description>[PAWN_nameDef] was raised as a ward of a storm house that claimed descent from Ao Lingshuang, the dragon princess exiled to the Rim. [PAWN_pronoun] learned the clan genealogies, the wave-like greeting and that a dragon bows to no one.\n\nAt thirteen [PAWN_pronoun] stood under a storm for the Rite of the First Lightning, and the lightning let [PAWN_objective] live.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Bloodline_Dragon</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>2</Social>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_StormArchivist</defName>
+    <title>storm archivist</title>
+    <titleShort>archivist</titleShort>
+    <description>[PAWN_nameDef] kept the archives of the Ancient Dragon Clan: tide charts of the shattered Celestial Sea, the treaties of the Pact of the Four Points and the name of every lord since Ao Zhenhai.\n\n[PAWN_pronoun] read everything and swept nothing. Sweeping floors, the Clan says, is beneath the descendants of the Sea-Sealer.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Bloodline_Dragon</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>6</Intellectual>
+      <Social>3</Social>
+    </skillGains>
+    <workDisables>
+      <li>Cleaning</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_AshOrphan</defName>
+    <title>ash orphan</title>
+    <titleShort>orphan</titleShort>
+    <description>[PAWN_nameDef] was found as a baby, warm and unharmed, in the ashes of a burned village. The wandering healers of the Nirvana Company took [PAWN_objective] in, wrapped [PAWN_objective] in far too many furs and taught [PAWN_objective] to keep the cookfire alive.\n\nEvery spring [PAWN_pronoun] scattered the company's ashes on the south wind, 'so the fire remembers'.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Bloodline_Phoenix</li>
+    </spawnCategories>
+    <skillGains>
+      <Cooking>2</Cooking>
+      <Crafting>2</Crafting>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_CauldronFlamekeeper</defName>
+    <title>cauldron flamekeeper</title>
+    <titleShort>flamekeeper</titleShort>
+    <description>[PAWN_nameDef] tended the alchemy fires of the Heavenly Cauldron Pavilion as one of its Guardians of the Flame. [PAWN_possessive] fire tempered blades, simmered broths and never went out, not even for a single night.\n\nThe gardens of the Pavilion were another matter: every plant [PAWN_pronoun] touched seemed to wilt.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Bloodline_Phoenix</li>
+    </spawnCategories>
+    <skillGains>
+      <Crafting>6</Crafting>
+      <Cooking>4</Cooking>
+    </skillGains>
+    <workDisables>
+      <li>PlantWork</li>
+    </workDisables>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_LotusNovice</defName>
+    <title>lotus novice</title>
+    <titleShort>novice</titleShort>
+    <description>[PAWN_nameDef] grew up as a novice of the Silent Lotus Temple, sweeping the paths so that no one would tread on the living grass. The Voices of the Lotus taught [PAWN_objective] to set bones, brew bitter herbs and sit beside the dying without looking away.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Bloodline_Qilin</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>2</Medicine>
+      <Plants>2</Plants>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_ValleyHealer</defName>
+    <title>valley healer</title>
+    <titleShort>healer</titleShort>
+    <description>Like the qilin midwife Jin Zhi before [PAWN_objective], [PAWN_nameDef] walked from village to village delivering children, mending wounds and witnessing oaths; a promise made before [PAWN_objective] was considered certified.\n\n[PAWN_pronoun] never stayed where an execution was planned.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Bloodline_Qilin</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>6</Medicine>
+      <Plants>3</Plants>
+      <Social>1</Social>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Caring</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_MountainShadowChild</defName>
+    <title>mountain's shadow child</title>
+    <titleShort>mountain child</titleShort>
+    <description>[PAWN_nameDef] grew up in a village in the shadow of a Fallen Pillar, the colossal shell that became a mountain. Like every child there, [PAWN_pronoun] wore a fist-sized stone around [PAWN_possessive] neck, swapped every year for a heavier one.\n\n[PAWN_pronoun] learned to dig, to carry and to wait.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Bloodline_Tortoise</li>
+    </spawnCategories>
+    <skillGains>
+      <Mining>2</Mining>
+      <Construction>2</Construction>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_ShellKeeper</defName>
+    <title>shell keeper</title>
+    <titleShort>keeper</titleShort>
+    <description>[PAWN_nameDef] served as a gate warden of an outpost of the Northern Abyss Citadel, in the tradition of Shen Yuan, who held a gate alone for three months. [PAWN_pronoun] raised walls, dug cellars and never once left [PAWN_possessive] post.\n\n[PAWN_pronoun] was taught not to fight, but to endure until the world changed.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Bloodline_Tortoise</li>
+    </spawnCategories>
+    <skillGains>
+      <Construction>5</Construction>
+      <Mining>4</Mining>
+      <Melee>1</Melee>
+    </skillGains>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_FoxWeddingChild</defName>
+    <title>fox-wedding child</title>
+    <titleShort>foundling</titleShort>
+    <description>[PAWN_nameDef] was born on a day of rain under sunshine, the 'fox's wedding', and grew up among the traveling bards and merchants who came through that small rift. [PAWN_pronoun] learned to sing, to haggle and to tell a lie so pretty that nobody minded.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Bloodline_Fox</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>2</Social>
+      <Artistic>2</Artistic>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_QingqiuCourtier</defName>
+    <title>Qingqiu courtier</title>
+    <titleShort>courtier</titleShort>
+    <description>[PAWN_nameDef] served the scattered Court of Qingqiu as a translator and go-between, selling secrets to every sect and keeping the letter of every deal. [PAWN_pronoun] valued beauty above power and music above swords.\n\n[PAWN_pronoun] would rather talk [PAWN_possessive] way out of anything than lift a pick.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Bloodline_Fox</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>6</Social>
+      <Artistic>4</Artistic>
+    </skillGains>
+    <workDisables>
+      <li>Mining</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Social</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+</Defs>

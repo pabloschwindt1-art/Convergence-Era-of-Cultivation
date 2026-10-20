@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Jiangshi.label>jiangshi</CVG_Jiangshi.label>
+  <CVG_Jiangshi.namePrefix>jiangshi </CVG_Jiangshi.namePrefix>
+  <CVG_Jiangshi.description>Un cadáver saltarín levantado por el yin que despertó la Convergencia. Bebe el yang de los vivos con sus garras y deja qi cadavérico en la herida.
+
+Sobre los jiangshi: llegan de noche y el sol los quema. Las armas de madera de duraznero les hacen el triple de daño, un espejo bagua los deslumbra y una cataplasma de arroz glutinoso saca el qi cadavérico de los heridos. En las historias antiguas, los sacerdotes taoístas de Xiangxi los llevaban a casa de noche, tocando una campanilla, con un talismán en cada frente.</CVG_Jiangshi.description>
+  <CVG_Jiangshi.tools.left_claw.label>garra izquierda</CVG_Jiangshi.tools.left_claw.label>
+  <CVG_Jiangshi.tools.left_claw.labelNoLocation>garra</CVG_Jiangshi.tools.left_claw.labelNoLocation>
+  <CVG_Jiangshi.tools.right_claw.label>garra derecha</CVG_Jiangshi.tools.right_claw.label>
+  <CVG_Jiangshi.tools.right_claw.labelNoLocation>garra</CVG_Jiangshi.tools.right_claw.labelNoLocation>
+</LanguageData>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Endgame chain (docs/modulos/ENDGAME.md). Art provisional; final art Things/Item/CVG/<DefName>. -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_FounderSeal</defName>
+    <label>founder's seal</label>
+    <description>A disc of black jade with a single character cut into it, so worn that only the fingers can read it. The founder of the oldest sect of Jiuxiao pressed it into the door of his own tomb on the day he left, and the door has been waiting for a hand that could turn it back.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/CVG_FounderSeal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0</MarketValue>
+      <Mass>0.5</Mass>
+      <MaxHitPoints>400</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <stackLimit>1</stackLimit>
+    <tradeability>None</tradeability>
+    <thingCategories Inherit="False" />
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_JiuxiaoShard</defName>
+    <label>shard of Jiuxiao</label>
+    <description>A splinter of the sky itself, light as a feather and cold as a winter well. When Jiuxiao broke, every fragment kept a little of the whole; this one remembers the clouds the sects once walked on, and hums when you carry it toward higher ground.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/CVG_JiuxiaoShard</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0</MarketValue>
+      <Mass>0.5</Mass>
+      <MaxHitPoints>400</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <stackLimit>1</stackLimit>
+    <tradeability>None</tradeability>
+    <thingCategories Inherit="False" />
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_RuptureCore</defName>
+    <label>core of the Rupture</label>
+    <description>A knot of fused metal and qi pulled from the middle of the field where the Great Rupture began. It is warm, and not from any fire. Old chronicles say the Iron Calamity drank here for a hundred years and left this, the one thing it could not digest.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/CVG_RuptureCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0</MarketValue>
+      <Mass>0.5</Mass>
+      <MaxHitPoints>400</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <stackLimit>1</stackLimit>
+    <tradeability>None</tradeability>
+    <thingCategories Inherit="False" />
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_HeavenKey</defName>
+    <label>key of heaven</label>
+    <description>A key that is also a door, a door that is also a prayer. The Heavenly Court cut one for every ruler who might be worthy of the Ninth Sky, and every one of them was lost in the deepest realm, where the heavens test those who try to take their place.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/CVG_HeavenKey</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0</MarketValue>
+      <Mass>0.5</Mass>
+      <MaxHitPoints>400</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <stackLimit>1</stackLimit>
+    <tradeability>None</tradeability>
+    <thingCategories Inherit="False" />
+  </ThingDef>
+  <Convergence.Stories.SecretRealmDef>
+    <defName>CVG_EndRealm_FounderTomb</defName>
+    <label>Tomb of the Founder</label>
+    <description>The burial hall of the man who founded the oldest sect of Jiuxiao. It has no treasure he could not carry, no guard he did not choose. The founder wanted to be remembered, and his tomb checks, politely and without mercy, whether you deserve to.</description>
+    <commonality>0</commonality>
+    <minColonyRealm>1</minColonyRealm>
+    <maxRealmLevel>3</maxRealmLevel>
+    <collapseDays>8</collapseDays>
+    <floor>TileGranite</floor>
+    <wallStuff>BlocksGranite</wallStuff>
+    <lantern>CVG_RealmLantern</lantern>
+    <trap>CVG_FormationTrap</trap>
+    <traps>8~12</traps>
+    <guardianRooms>3~5</guardianRooms>
+    <guardians>
+      <li><kind>CVG_Sanctuary_Disciple</kind><count>2~3</count></li>
+      <li><kind>CVG_Sanctuary_Elder</kind><count>1~2</count></li>
+      <li MayRequire="prospero1088.convergence.biotechwuxia"><kind>CVG_Puppet_Bronze</kind><count>1~2</count></li>
+    </guardians>
+    <boss>
+      <li><kind>CVG_Sanctuary_Elder</kind><count>2</count></li>
+      <li MayRequire="prospero1088.convergence.biotechwuxia"><kind>CVG_Puppet_Jade</kind><count>1</count></li>
+    </boss>
+    <treasure>
+      <li><thing>CVG_SpiritStone</thing><count>120~240</count></li>
+      <li><thing>CVG_SpiritJade</thing><count>8~16</count></li>
+      <li><thing>CVG_JadeSlip</thing><count>2~4</count></li>
+    </treasure>
+    <bossTreasure>
+      <li><thing>CVG_FounderSeal</thing><count>1</count></li>
+      <li><thing>CVG_SpiritStone</thing><count>200~300</count></li>
+      <li><thing>CVG_BeastCore</thing><count>1~2</count></li>
+    </bossTreasure>
+    <siteGuards />
+  </Convergence.Stories.SecretRealmDef>
+  <Convergence.Stories.SecretRealmDef>
+    <defName>CVG_EndRealm_JiuxiaoFragment</defName>
+    <label>Fragment of Jiuxiao</label>
+    <description>A piece of the broken Celestial Realm that drifts at the height where birds do not fly. Its pavilions still stand, tilted, among clouds that smell of old incense, and its guardians still keep the hours of a court that no longer exists.</description>
+    <commonality>0</commonality>
+    <minColonyRealm>2</minColonyRealm>
+    <maxRealmLevel>3</maxRealmLevel>
+    <collapseDays>8</collapseDays>
+    <floor>PavedTile</floor>
+    <wallStuff>BlocksMarble</wallStuff>
+    <lantern>CVG_RealmLantern</lantern>
+    <trap>CVG_FormationTrap</trap>
+    <traps>8~12</traps>
+    <guardianRooms>3~5</guardianRooms>
+    <guardians>
+      <li><kind>CVG_Sanctuary_Disciple</kind><count>2~4</count></li>
+      <li><kind>CVG_Sanctuary_Elder</kind><count>2</count></li>
+      <li MayRequire="prospero1088.convergence.faunaflora"><kind>CVG_CelestialCrane</kind><count>1~2</count></li>
+      <li MayRequire="prospero1088.convergence.biotechwuxia"><kind>CVG_Puppet_Jade</kind><count>1~2</count></li>
+    </guardians>
+    <boss>
+      <li><kind>CVG_Sanctuary_Elder</kind><count>3</count></li>
+      <li MayRequire="prospero1088.convergence.biotechwuxia"><kind>CVG_Puppet_Jade</kind><count>1~2</count></li>
+    </boss>
+    <treasure>
+      <li><thing>CVG_SpiritStone</thing><count>120~240</count></li>
+      <li><thing>CVG_SpiritJade</thing><count>8~16</count></li>
+      <li><thing>CVG_JadeSlip</thing><count>2~4</count></li>
+    </treasure>
+    <bossTreasure>
+      <li><thing>CVG_JiuxiaoShard</thing><count>1</count></li>
+      <li><thing>CVG_SpiritStone</thing><count>200~300</count></li>
+      <li><thing>CVG_BeastCore</thing><count>1~2</count></li>
+    </bossTreasure>
+    <siteGuards />
+  </Convergence.Stories.SecretRealmDef>
+  <Convergence.Stories.SecretRealmDef>
+    <defName>CVG_EndRealm_RuptureField</defName>
+    <label>Field of the Great Rupture</label>
+    <description>The battlefield where the Iron Calamity was beaten and Jiuxiao came apart. The ground is glass and bone and rusted metal, and under it the qi still screams. Something here is still working, in its own patient way.</description>
+    <commonality>0</commonality>
+    <minColonyRealm>3</minColonyRealm>
+    <maxRealmLevel>3</maxRealmLevel>
+    <collapseDays>8</collapseDays>
+    <floor>MetalTile</floor>
+    <wallStuff>BlocksSlate</wallStuff>
+    <lantern>CVG_RealmLantern</lantern>
+    <trap>CVG_FormationTrap</trap>
+    <traps>8~12</traps>
+    <guardianRooms>3~5</guardianRooms>
+    <guardians>
+      <li MayRequire="ludeon.rimworld.biotech"><kind>Mech_Lancer</kind><count>2~3</count></li>
+      <li MayRequire="ludeon.rimworld.biotech"><kind>Mech_Scyther</kind><count>1~2</count></li>
+      <li MayRequire="ludeon.rimworld.biotech"><kind>Mech_Pikeman</kind><count>2</count></li>
+      <li><kind>CVG_Sanctuary_Elder</kind><count>1</count></li>
+    </guardians>
+    <boss>
+      <li MayRequire="ludeon.rimworld.biotech"><kind>Mech_CentipedeBlaster</kind><count>1</count></li>
+      <li MayRequire="ludeon.rimworld.biotech"><kind>Mech_Lancer</kind><count>2</count></li>
+      <li><kind>CVG_Sanctuary_Elder</kind><count>2</count></li>
+    </boss>
+    <treasure>
+      <li><thing>CVG_SpiritStone</thing><count>120~240</count></li>
+      <li><thing>CVG_SpiritJade</thing><count>8~16</count></li>
+      <li><thing>CVG_JadeSlip</thing><count>2~4</count></li>
+    </treasure>
+    <bossTreasure>
+      <li><thing>CVG_RuptureCore</thing><count>1</count></li>
+      <li><thing>CVG_SpiritStone</thing><count>200~300</count></li>
+      <li><thing>CVG_BeastCore</thing><count>1~2</count></li>
+    </bossTreasure>
+    <siteGuards />
+  </Convergence.Stories.SecretRealmDef>
+  <Convergence.Stories.SecretRealmDef>
+    <defName>CVG_EndRealm_DeepestRealm</defName>
+    <label>The Deepest Realm</label>
+    <description>Beneath every realm there is another, and under that one the heavens keep a room where they weigh those who would take their seat. Nobody knows how the floor holds. Everyone who has returned from it has returned older, or not at all.</description>
+    <commonality>0</commonality>
+    <minColonyRealm>3</minColonyRealm>
+    <maxRealmLevel>3</maxRealmLevel>
+    <collapseDays>8</collapseDays>
+    <floor>PavedTile</floor>
+    <wallStuff>BlocksSlate</wallStuff>
+    <lantern>CVG_RealmLantern</lantern>
+    <trap>CVG_FormationTrap</trap>
+    <traps>8~12</traps>
+    <guardianRooms>3~5</guardianRooms>
+    <guardians>
+      <li><kind>CVG_Sanctuary_Elder</kind><count>3</count></li>
+      <li MayRequire="ludeon.rimworld.biotech"><kind>Mech_Lancer</kind><count>1~2</count></li>
+      <li MayRequire="prospero1088.convergence.biotechwuxia"><kind>CVG_Puppet_Jade</kind><count>2</count></li>
+      <li MayRequire="prospero1088.convergence.faunaflora"><kind>CVG_NineNetherSpider</kind><count>1~2</count></li>
+    </guardians>
+    <boss>
+      <li><kind>CVG_Sanctuary_Elder</kind><count>4</count></li>
+      <li MayRequire="ludeon.rimworld.biotech"><kind>Mech_CentipedeBlaster</kind><count>1</count></li>
+      <li MayRequire="prospero1088.convergence.biotechwuxia"><kind>CVG_Puppet_Jade</kind><count>2</count></li>
+    </boss>
+    <treasure>
+      <li><thing>CVG_SpiritStone</thing><count>120~240</count></li>
+      <li><thing>CVG_SpiritJade</thing><count>8~16</count></li>
+      <li><thing>CVG_JadeSlip</thing><count>2~4</count></li>
+    </treasure>
+    <bossTreasure>
+      <li><thing>CVG_HeavenKey</thing><count>1</count></li>
+      <li><thing>CVG_SpiritStone</thing><count>200~300</count></li>
+      <li><thing>CVG_BeastCore</thing><count>1~2</count></li>
+    </bossTreasure>
+    <siteGuards />
+  </Convergence.Stories.SecretRealmDef>
+</Defs>

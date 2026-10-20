@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    The Master (M6, minimal version). docs/LORE.md "El Maestro", docs/lore/MAESTROS.md.
+    Arrives with the Convergence (30% wounded from the sky, 70% walking in), joins the colony as a very powerful
+    resident without flaws, teaches lessons one by one (Convergence.MentorLesson_* with Class=, extendable in XML),
+    protects the colony from the first raid with cultivators and leaves after stayDays (1 RimWorld year = 60 days),
+    leaving a jade fragment. Only the first archetype for now: Elder Yun Shouzhi (upright elder).
+    In the MVP a Nascent Soul (realm 4) is a Golden Core at its peak + the presence hediff.
+  -->
+  <Convergence.MentorDef>
+    <defName>CVG_Mentor_YunShouzhi</defName>
+    <label>Elder Yun Shouzhi</label>
+    <description>A retired Sword Elder of Azure Peak who traded his sword for a hoe. He held the torn guardian formation of his sect during the Convergence and was thrown across the rift.</description>
+    <archetype>upright elder</archetype>
+    <commonality>1</commonality>
+    <pawnKind>Colonist</pawnKind>
+    <firstName>Shouzhi</firstName>
+    <nickName>Elder Yun</nickName>
+    <lastName>Yun</lastName>
+    <gender>Male</gender>
+    <biologicalAge>68</biologicalAge>
+    <chronologicalAge>612</chronologicalAge>
+    <traits>
+      <li>Kind</li>
+      <li>Tough</li>
+      <li>GreatMemory</li>
+    </traits>
+    <rootGrade>CVG_RootGrade_Heavenly</rootGrade>
+    <rootElements>
+      <li>CVG_Element_Metal</li>
+      <li>CVG_Element_Wood</li>
+    </rootElements>
+    <realm>CVG_Realm_GoldenCore</realm>
+    <stage>4</stage>
+    <foundationQuality>1.3</foundationQuality>
+    <apparel>
+      <li>Apparel_Pants</li>
+      <li MayRequire="prospero1088.convergence.apparel">CVG_Apparel_RobeElder</li>
+    </apparel>
+    <manuals>
+      <li>CVG_Manual_GoldenEdge</li>
+      <li>CVG_Manual_EvergreenSutra</li>
+    </manuals>
+    <teachesResearch>
+      <li>CVG_Research_QiBreathing</li>
+      <!-- Para que la tablilla de su tercera lección se pueda leer (antes la lección quedaba trabada). -->
+      <li>CVG_Research_TechniqueManuals</li>
+    </teachesResearch>
+    <presenceHediff>CVG_MentorPresence</presenceHediff>
+    <protectionHediff>CVG_MentorProtection</protectionHediff>
+    <woundedChance>0.3</woundedChance>
+    <stayDays>30~60</stayDays>
+    <farewellItem>CVG_JadeFragment_Leaf</farewellItem>
+    <lessons>
+      <li Class="Convergence.MentorLesson_BuildThing">
+        <label>a place to breathe</label>
+        <description>"Qi does not come to those who chase it. Build a place to sit and wait for it." Build a cultivation cushion.</description>
+        <thingDef>CVG_CultivationCushion</thingDef>
+        <count>1</count>
+        <rewards>
+          <MedicineHerbal>6</MedicineHerbal>
+        </rewards>
+      </li>
+      <li Class="Convergence.MentorLesson_ReachStage">
+        <label>listen to the qi</label>
+        <description>"Slow is smooth. Smooth is fast." Any disciple must advance one stage while Elder Yun watches: by cultivating qi on a cushion, or by tempering the body with spirit-beast blood.</description>
+        <stage>2</stage>
+        <rewards>
+          <CVG_FoundationPill>1</CVG_FoundationPill>
+        </rewards>
+      </li>
+      <li Class="Convergence.MentorLesson_LearnTechnique">
+        <label>the first technique</label>
+        <description>"Do not draw it if you will not finish it." Elder Yun hands over a jade slip. Any disciple must learn a new technique.</description>
+        <count>1</count>
+        <startItems>
+          <CVG_JadeSlip>1</CVG_JadeSlip>
+        </startItems>
+        <rewards>
+          <CVG_BeastCore>1</CVG_BeastCore>
+        </rewards>
+      </li>
+    </lessons>
+    <arrivalWalkerText>An old man sits by the road, watering a potted plant that was not there a moment ago. His robe is plain, his hands calloused, and the air around him is so still that birds land on his shoulders.\n\n"I am thirsty, I am hungry and I am in no hurry," says {PAWN_nameDef}. "Your world just woke up. You will need someone to teach you how to breathe."\n\nElder Yun joins the colony.</arrivalWalkerText>
+    <arrivalWoundedText>Blue flames streak across the sky and something crashes beyond the fields. In the crater lies an old man in a torn robe, a broken hoe still in his hand: {PAWN_nameDef}, thrown across the rift by the Convergence.\n\nHe is badly hurt. Rescue him and let him heal: when he can stand, he will teach the colony.</arrivalWoundedText>
+    <protectionText>Cultivators have come for the colony. {PAWN_nameDef} sets down his watering pot and steps to the front.\n\n"There. Behind the hedge. Don't shout. Watch, and learn."\n\nFor a day, the Elder fights with the full strength of a Nascent Soul.</protectionText>
+    <farewellText>One morning the sky above the colony trembles: the guardian formation of Azure Peak opens again and calls its Elder home.\n\n"Water the pot. That's all. That's the whole sect," says {PAWN_nameDef}, and steps into the light.\n\nWhere he stood lies a leaf of green jade. It is warm, and sometimes it seems to whisper.</farewellText>
+    <deathText>{PAWN_nameDef} has fallen. As his body cools, his soul flees into the jade he always wore; a fragment breaks off and stays with the colony, still warm.</deathText>
+  </Convergence.MentorDef>
+
+  <!-- Presence of a Nascent Soul master: very strong, barely eats, never breaks. -->
+  <HediffDef>
+    <defName>CVG_MentorPresence</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Nascent Soul presence</label>
+    <description>A master of the Nascent Soul realm, only half-bound to this world. Hard to hurt, quick and strong; needs little food or rest and keeps a calm heart.</description>
+    <defaultLabelColor>(1, 0.85, 0.45)</defaultLabelColor>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1</maxSeverity>
+    <stages>
+      <li>
+        <hungerRateFactor>0.25</hungerRateFactor>
+        <restFallFactor>0.5</restFallFactor>
+        <statOffsets>
+          <MentalBreakThreshold>-0.5</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>0.5</IncomingDamageFactor>
+          <MeleeDamageFactor>1.6</MeleeDamageFactor>
+          <MoveSpeed>1.15</MoveSpeed>
+          <GlobalLearningFactor>1.5</GlobalLearningFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>CVG_MentorProtection</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>guardian's resolve</label>
+    <description>The master fights to protect the colony with all the strength of a Nascent Soul.</description>
+    <defaultLabelColor>(1, 0.6, 0.35)</defaultLabelColor>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>60000~60000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <MeleeDamageFactor>2</MeleeDamageFactor>
+          <IncomingDamageFactor>0.3</IncomingDamageFactor>
+          <MoveSpeed>1.3</MoveSpeed>
+          <AimingDelayFactor>0.5</AimingDelayFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- Left by Elder Yun. Mechanics (echoes of the jade, search chain) come later; for now it is a keepsake. -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_JadeFragment_Leaf</defName>
+    <label>leaf of the peak</label>
+    <description>A leaf of green jade, broken from the pendant of Elder Yun Shouzhi. It is always warm. Sometimes it seems to whisper: "it grows where the water is clean", "it smells of cut grass", "it burns blue when the Peak is near".\n\nOne day it will lead the colony to its master.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <texPath>Things/Item/CVG_JadeFragment_Leaf</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <Mass>0.1</Mass>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <tradeability>None</tradeability>
+    <destroyable>false</destroyable>
+  </ThingDef>
+</Defs>

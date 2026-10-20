@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Realm_SkinTempering.label>Templado de Piel</CVG_Realm_SkinTempering.label>
+  <CVG_Realm_SkinTempering.description>Empieza el camino del cuerpo: la sangre de bestia espiritual y las palizas sin fin endurecen la piel hasta que las hojas solo dejan arañazos.</CVG_Realm_SkinTempering.description>
+  <CVG_Realm_FleshTempering.label>Templado de Carne</CVG_Realm_FleshTempering.label>
+  <CVG_Realm_FleshTempering.description>Los músculos se desgarran y se reconstruyen con sangre de bestia hasta quedar densos como cuerdas. La fuerza se duplica; heridas que lisiarían a un mortal apenas lo frenan.</CVG_Realm_FleshTempering.description>
+  <CVG_Realm_BoneForging.label>Forja de Huesos</CVG_Realm_BoneForging.label>
+  <CVG_Realm_BoneForging.description>Los propios huesos se martillean y se empapan en sangre de bestia hasta que suenan como el hierro.</CVG_Realm_BoneForging.description>
+  <CVG_Realm_MarrowCleansing.label>Purificación de la Médula</CVG_Realm_MarrowCleansing.label>
+  <CVG_Realm_MarrowCleansing.description>La esencia de un núcleo de bestia lava la médula. El cuerpo renueva su propia sangre: las heridas cierran rápido y la enfermedad no encuentra dónde agarrarse.</CVG_Realm_MarrowCleansing.description>
+  <CVG_Realm_BloodRefining.label>Refinamiento de la Sangre</CVG_Realm_BloodRefining.label>
+  <CVG_Realm_BloodRefining.description>Cada gota de sangre se refina en sangre-qi. El cultivador apenas sangra y se cura como una bestia.</CVG_Realm_BloodRefining.description>
+  <CVG_Realm_GoldenBody.label>Cuerpo Dorado</CVG_Realm_GoldenBody.label>
+  <CVG_Realm_GoldenBody.description>El legendario cuerpo dorado (金身): piel, carne, hueso, médula y sangre se vuelven un todo indestructible. El Cielo responde con una tribulación.</CVG_Realm_GoldenBody.description>
+</LanguageData>

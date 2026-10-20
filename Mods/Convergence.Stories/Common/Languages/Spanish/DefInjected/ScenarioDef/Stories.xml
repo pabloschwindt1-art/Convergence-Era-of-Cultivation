@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Scenario_LoneSurvivor.label>Superviviente solitario</CVG_Scenario_LoneSurvivor.label>
+  <CVG_Scenario_LoneSurvivor.description>No queda un muro de la secta y todos los maestros han muerto. Saliste de las cenizas con una túnica, una espada y un soplo de qi, y no miraste atrás. Alguien, en algún lugar, sabe que hubo un superviviente.</CVG_Scenario_LoneSurvivor.description>
+  <CVG_Scenario_LoneSurvivor.scenario.summary>Un cultivador que sobrevivió a la Calamidad que destruyó su secta.</CVG_Scenario_LoneSurvivor.scenario.summary>
+  <CVG_Scenario_SectFlight.label>Huida de la secta</CVG_Scenario_SectFlight.label>
+  <CVG_Scenario_SectFlight.description>Las puertas cayeron en una noche. Cuatro de vosotros escapasteis por el huerto de la cocina mientras los ancianos luchaban, y habéis caminado desde entonces. Otros supervivientes os encontrarán, y los cazadores también.</CVG_Scenario_SectFlight.description>
+  <CVG_Scenario_SectFlight.scenario.summary>Cuatro discípulos huyen de la destrucción de su secta. Perseguidos y mal equipados.</CVG_Scenario_SectFlight.scenario.summary>
+  <CVG_Scenario_DestroyedFamily.label>Familia destruida</CVG_Scenario_DestroyedFamily.label>
+  <CVG_Scenario_DestroyedFamily.description>El clan os rompió el dantian para castigar una deuda que no era vuestra, y os echó sin nada. Ya no sentís el qi. El clan querrá saber si seguís vivos, y quizá un viejo maestro conozca la forma de repararos.</CVG_Scenario_DestroyedFamily.description>
+  <CVG_Scenario_DestroyedFamily.scenario.summary>Cultivadores a los que rompieron el dantian y expulsaron de su clan. No pueden cultivar hasta repararlo.</CVG_Scenario_DestroyedFamily.scenario.summary>
+  <CVG_Scenario_AscensionProject.label>Proyecto Ascensión</CVG_Scenario_AscensionProject.label>
+  <CVG_Scenario_AscensionProject.description>La corporación detectó algo que no podía explicar y os envió a estudiarlo lejos de todo testigo. Tenéis una muestra de qi, un presupuesto y un plazo. La muestra zumba por las noches.</CVG_Scenario_AscensionProject.description>
+  <CVG_Scenario_AscensionProject.scenario.summary>Científicos de Ascension Dynamics con una muestra de qi. Aún sin cultivadores.</CVG_Scenario_AscensionProject.scenario.summary>
+  <CVG_Scenario_ClassicalEra.label>Era Clásica</CVG_Scenario_ClassicalEra.label>
+  <CVG_Scenario_ClassicalEra.description>Vuestro pueblo vive en esta tierra desde antes de que las sectas tuvieran nombre. El qi regresó hace una generación y los jóvenes cultivan junto al fuego. Un día una secta recta se fijará en vosotros.</CVG_Scenario_ClassicalEra.description>
+  <CVG_Scenario_ClassicalEra.scenario.summary>Una tribu del viejo mundo sin tecnología. La Convergencia ya ocurrió.</CVG_Scenario_ClassicalEra.scenario.summary>
+  <CVG_Scenario_BeastHunters.label>Cazadores de bestias</CVG_Scenario_BeastHunters.label>
+  <CVG_Scenario_BeastHunters.description>Cazáis lo que otros evitan. Lobos de viento, arañas de jade, cosas que se han vuelto demasiado listas. Lleváis arcos, cuerdas y un libro de piezas con el precio de cada una. Un gremio al que no pertenecéis ha estado preguntando por vosotros.</CVG_Scenario_BeastHunters.description>
+  <CVG_Scenario_BeastHunters.scenario.summary>Tres cazadores de bestias espirituales, con arcos y afición a los problemas.</CVG_Scenario_BeastHunters.scenario.summary>
+  <CVG_Scenario_LoneSurvivor.scenario.name>Superviviente solitario</CVG_Scenario_LoneSurvivor.scenario.name>
+  <CVG_Scenario_LoneSurvivor.scenario.description>No queda un muro de la secta y todos los maestros han muerto. Saliste de las cenizas con una túnica, una espada y un soplo de qi, y no miraste atrás. Alguien, en algún lugar, sabe que hubo un superviviente.</CVG_Scenario_LoneSurvivor.scenario.description>
+  <CVG_Scenario_SectFlight.scenario.name>Huida de la secta</CVG_Scenario_SectFlight.scenario.name>
+  <CVG_Scenario_SectFlight.scenario.description>Las puertas cayeron en una noche. Cuatro de vosotros escapasteis por el huerto de la cocina mientras los ancianos luchaban, y habéis caminado desde entonces. Otros supervivientes os encontrarán, y los cazadores también.</CVG_Scenario_SectFlight.scenario.description>
+  <CVG_Scenario_DestroyedFamily.scenario.name>Familia destruida</CVG_Scenario_DestroyedFamily.scenario.name>
+  <CVG_Scenario_DestroyedFamily.scenario.description>El clan os rompió el dantian para castigar una deuda que no era vuestra, y os echó sin nada. Ya no sentís el qi. El clan querrá saber si seguís vivos, y quizá un viejo maestro conozca la forma de repararos.</CVG_Scenario_DestroyedFamily.scenario.description>
+  <CVG_Scenario_AscensionProject.scenario.name>Proyecto Ascensión</CVG_Scenario_AscensionProject.scenario.name>
+  <CVG_Scenario_AscensionProject.scenario.description>La corporación detectó algo que no podía explicar y os envió a estudiarlo lejos de todo testigo. Tenéis una muestra de qi, un presupuesto y un plazo. La muestra zumba por las noches.</CVG_Scenario_AscensionProject.scenario.description>
+  <CVG_Scenario_ClassicalEra.scenario.name>Era Clásica</CVG_Scenario_ClassicalEra.scenario.name>
+  <CVG_Scenario_ClassicalEra.scenario.description>Vuestro pueblo vive en esta tierra desde antes de que las sectas tuvieran nombre. El qi regresó hace una generación y los jóvenes cultivan junto al fuego. Un día una secta recta se fijará en vosotros.</CVG_Scenario_ClassicalEra.scenario.description>
+  <CVG_Scenario_BeastHunters.scenario.name>Cazadores de bestias</CVG_Scenario_BeastHunters.scenario.name>
+  <CVG_Scenario_BeastHunters.scenario.description>Cazáis lo que otros evitan. Lobos de viento, arañas de jade, cosas que se han vuelto demasiado listas. Lleváis arcos, cuerdas y un libro de piezas con el precio de cada una. Un gremio al que no pertenecéis ha estado preguntando por vosotros.</CVG_Scenario_BeastHunters.scenario.description>
+</LanguageData>

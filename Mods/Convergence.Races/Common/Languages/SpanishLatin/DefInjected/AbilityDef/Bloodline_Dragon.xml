@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Ability_DragonBreath.label>aliento de dragón</CVG_Ability_DragonBreath.label>
+  <CVG_Ability_DragonBreath.description>Exhala un cono de agua cargada de rayo. Las llamas mueren a su paso.\n\nCono de 7 casillas: quemaduras de rayo (14 x potencia del reino), 25% de aturdir 2 segundos, apaga el fuego. Cuesta qi si quien la usa cultiva.</CVG_Ability_DragonBreath.description>
+</LanguageData>

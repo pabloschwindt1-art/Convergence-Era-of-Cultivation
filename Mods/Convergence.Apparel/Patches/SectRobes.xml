@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Sect members wear the robe of their rank in the color of their sect. Only if Convergence: Sects is loaded. -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Convergence: Sects</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_AzurePeak_Disciple"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeOuter</li></apparelRequired>
+        <apparelColor>(0.25,0.55,0.75,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_AzurePeak_Bearer"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeInner</li></apparelRequired>
+        <apparelColor>(0.25,0.55,0.75,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_AzurePeak_Blade"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeElder</li></apparelRequired>
+        <apparelColor>(0.25,0.55,0.75,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_AzurePeak_Elder"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeElder</li></apparelRequired>
+        <apparelColor>(0.25,0.55,0.75,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_AzurePeak_Swordsmith"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeInner</li></apparelRequired>
+        <apparelColor>(0.25,0.55,0.75,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_SilentLotus_Lay"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeOuter</li></apparelRequired>
+        <apparelColor>(0.85,0.8,0.55,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_SilentLotus_Monk"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeInner</li></apparelRequired>
+        <apparelColor>(0.85,0.8,0.55,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_SilentLotus_Guardian"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeElder</li></apparelRequired>
+        <apparelColor>(0.85,0.8,0.55,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_SilentLotus_Venerable"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeElder</li></apparelRequired>
+        <apparelColor>(0.85,0.8,0.55,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_SilentLotus_Herbalist"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeInner</li></apparelRequired>
+        <apparelColor>(0.85,0.8,0.55,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_HeavenlyCauldron_Apprentice"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeOuter</li></apparelRequired>
+        <apparelColor>(0.85,0.55,0.2,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_HeavenlyCauldron_Alchemist"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeInner</li></apparelRequired>
+        <apparelColor>(0.85,0.55,0.2,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_HeavenlyCauldron_Master"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeElder</li></apparelRequired>
+        <apparelColor>(0.85,0.55,0.2,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_HeavenlyCauldron_Grand"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeElder</li></apparelRequired>
+        <apparelColor>(0.85,0.55,0.2,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_HeavenlyCauldron_Auctioneer"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeInner</li></apparelRequired>
+        <apparelColor>(0.85,0.55,0.2,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_AncientDragon_Watcher"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeInner</li></apparelRequired>
+        <apparelColor>(0.55,0.15,0.15,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_AncientDragon_ClanElder"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeElder</li></apparelRequired>
+        <apparelColor>(0.55,0.15,0.15,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_AncientDragon_Hoarder"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeInner</li></apparelRequired>
+        <apparelColor>(0.55,0.15,0.15,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_BloodMoon_Servant"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeOuter</li></apparelRequired>
+        <apparelColor>(0.5,0.05,0.1,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_BloodMoon_Disciple"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeInner</li></apparelRequired>
+        <apparelColor>(0.5,0.05,0.1,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_BloodMoon_Crimson"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeElder</li></apparelRequired>
+        <apparelColor>(0.5,0.05,0.1,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_BloodMoon_Elder"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeElder</li></apparelRequired>
+        <apparelColor>(0.5,0.05,0.1,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_RogueCultivators_Wanderer"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeOuter</li></apparelRequired>
+        <apparelColor>(0.5,0.45,0.35,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_RogueCultivators_Sellsword"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeInner</li></apparelRequired>
+        <apparelColor>(0.5,0.45,0.35,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_RogueCultivators_Veteran"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeElder</li></apparelRequired>
+        <apparelColor>(0.5,0.45,0.35,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_RogueCultivators_Hermit"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeElder</li></apparelRequired>
+        <apparelColor>(0.5,0.45,0.35,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="CVG_RogueCultivators_Peddler"]</xpath>
+      <value>
+        <apparelRequired><li>CVG_Apparel_RobeInner</li></apparelRequired>
+        <apparelColor>(0.5,0.45,0.35,1)</apparelColor>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/TraderKindDef[defName="CVG_Trader_HeavenlyCauldron"]/stockGenerators</xpath>
+      <value>
+        <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritSilk</thingDef><countRange>5~20</countRange></li>
+        <li Class="StockGenerator_SingleDef"><thingDef>CVG_CloudCloth</thingDef><countRange>20~60</countRange></li>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/TraderKindDef[defName="CVG_Trader_CauldronShip"]/stockGenerators</xpath>
+      <value>
+        <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritSilk</thingDef><countRange>5~20</countRange></li>
+        <li Class="StockGenerator_SingleDef"><thingDef>CVG_CloudCloth</thingDef><countRange>20~60</countRange></li>
+      </value>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/TraderKindDef[defName="CVG_Trader_RogueWanderer"]/stockGenerators</xpath>
+      <value>
+        <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritSilk</thingDef><countRange>0~6</countRange></li>
+        <li Class="StockGenerator_SingleDef"><thingDef>CVG_CloudCloth</thingDef><countRange>20~60</countRange></li>
+      </value>
+    </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

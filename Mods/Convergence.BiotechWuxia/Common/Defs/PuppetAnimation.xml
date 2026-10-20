@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Gentle idle sway of the puppets, as if a thread still pulled them. Same structure as the vanilla ShamblerSway
+       (AnimationDef keyframes on the Root node, started by race.startingAnimation like the revenant), much softer. -->
+  <AnimationDef>
+    <defName>CVG_PuppetSway</defName>
+    <durationTicks>360</durationTicks>
+    <startOnRandomTick>true</startOnRandomTick>
+    <keyframeParts>
+      <li>
+        <key>Root</key>
+        <value>
+          <workerType>AnimationWorker_Keyframes</workerType>
+          <keyframes>
+            <li>
+              <tick>0</tick>
+              <angle>-3</angle>
+            </li>
+            <li>
+              <tick>150</tick>
+              <angle>3</angle>
+            </li>
+            <li>
+              <tick>180</tick>
+              <angle>3</angle>
+            </li>
+            <li>
+              <tick>330</tick>
+              <angle>-3</angle>
+            </li>
+            <li>
+              <tick>360</tick>
+              <angle>-3</angle>
+            </li>
+          </keyframes>
+          <pivot>(0.5, 0)</pivot>
+        </value>
+      </li>
+    </keyframeParts>
+  </AnimationDef>
+
+</Defs>

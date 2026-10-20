@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- With the Flying Sect mod, the deepest secret realms can hold a flight core (the way to make an island bigger). -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/Convergence.Stories.SecretRealmDef[defName="CVG_SecretRealm_NetherLabyrinth"]/bossTreasure</xpath>
+    <value>
+      <li MayRequire="prospero1088.convergence.space"><thing>CVG_FlightCore</thing><count>1</count><chance>0.4</chance></li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/Convergence.Stories.SecretRealmDef[defName="CVG_SecretRealm_ThunderTomb"]/bossTreasure</xpath>
+    <value>
+      <li MayRequire="prospero1088.convergence.space"><thing>CVG_FlightCore</thing><count>1</count><chance>0.15</chance></li>
+    </value>
+  </Operation>
+</Patch>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_TimeCultivating.label>tiempo cultivando</CVG_TimeCultivating.label>
+  <CVG_TimeCultivating.description>Tiempo total cultivando o templando el cuerpo.</CVG_TimeCultivating.description>
+  <CVG_Breakthroughs.label>avances</CVG_Breakthroughs.label>
+  <CVG_Breakthroughs.description>Reinos alcanzados con un avance.</CVG_Breakthroughs.description>
+  <CVG_TribulationsSurvived.label>tribulaciones superadas</CVG_TribulationsSurvived.label>
+  <CVG_TribulationsSurvived.description>Tribulaciones celestiales superadas.</CVG_TribulationsSurvived.description>
+  <CVG_TechniquesCast.label>técnicas lanzadas</CVG_TechniquesCast.label>
+  <CVG_TechniquesCast.description>Técnicas de cultivo lanzadas.</CVG_TechniquesCast.description>
+</LanguageData>

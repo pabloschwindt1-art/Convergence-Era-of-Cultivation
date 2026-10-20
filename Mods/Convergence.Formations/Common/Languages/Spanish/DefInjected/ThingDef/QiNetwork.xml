@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_QiVeinWell.label>pozo de vena de qi</CVG_QiVeinWell.label>
+  <CVG_QiVeinWell.description>Un brocal de piedra hundido en una veta de qi, con un núcleo de jade en el fondo que deja subir el qi en lugar de derramarse. No necesita combustible y no se detiene nunca, por eso las sectas se disputaron el terreno antes que cualquier otra cosa. Debe construirse sobre una veta de qi y conectarse al resto con pilares.</CVG_QiVeinWell.description>
+  <CVG_QiGatherArray.label>formación de reunión de qi</CVG_QiGatherArray.label>
+  <CVG_QiGatherArray.description>Un brasero de piedras espirituales rodeado de tablillas de pizarra, la hermana pequeña del pozo de vena: no puede sacar qi del suelo, solo de las piedras que quema, pero aprovecha al máximo el qi que ya flota en el aire. Rinde más donde el qi es espeso, y nada sin piedras.</CVG_QiGatherArray.description>
+  <CVG_FormationPillar.label>pilar de formación</CVG_FormationPillar.label>
+  <CVG_FormationPillar.description>Una piedra de matriz chata, hundida a ras del suelo y tallada con la rueda de los cinco elementos alrededor de un ojo de jade, que zumba cuando otra piedra con la misma rueda está a la vista. Todo lo que cae dentro de su círculo comparte una red de qi: pozos, formaciones, cristales y los edificios que beben de ellos. Sin cables, sin huecos, sin complicaciones.</CVG_FormationPillar.description>
+  <CVG_QiCrystal.label>cristal acumulador</CVG_QiCrystal.label>
+  <CVG_QiCrystal.description>Un cristal de jade en bruto que absorbe el qi que la red no necesita y lo devuelve cuando la red se queda seca. Pierde un poco cada día, como todo lo que guarda qi. Un cultivador también puede verter en él su propio qi a mano.</CVG_QiCrystal.description>
+  <CVG_CondensationPool.label>estanque de condensación</CVG_CondensationPool.label>
+  <CVG_CondensationPool.description>Una pila poco profunda de piedra forrada de jade donde el qi sobrante, sin otro lugar adonde ir, llueve despacio y cristaliza. Solo bebe lo que los acumuladores ya no pueden guardar, y cada tanto una piedra espiritual nueva se asienta en el fondo. Las sectas antiguas los cavaban bajo sus venas, y los ancianos dicen que toda piedra espiritual del mundo fue alguna vez qi que nadie necesitaba.</CVG_CondensationPool.description>
+</LanguageData>

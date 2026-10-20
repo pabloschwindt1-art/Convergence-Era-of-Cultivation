@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_BloodPool.label>estanque de sangre</CVG_BloodPool.label>
+  <CVG_BloodPool.description>En las cuevas bajo los templos del Culto de la Luna Sangrienta, los ancianos duermen semanas en estanques de sangre tibia y despiertan más jóvenes. En este estanque de piedra un demonio de sangre se retira durante días para restaurar el cuerpo (un ataúd de sueño de muerte sin electricidad). Se le pueden conectar los mismos dispositivos que a un ataúd.
+
+Solo pueden usarlo quienes tienen el gen de sueño de muerte. Se alimenta de la red de qi.</CVG_BloodPool.description>
+  <CVG_BloodEssencePill.label>píldora de esencia de sangre</CVG_BloodEssencePill.label>
+  <CVG_BloodEssencePill.description>El Culto de la Luna Sangrienta aprendió a reducir la sangre al fuego con piedra espiritual en polvo hasta que solo quedaba su esencia, una píldora rojo oscuro que nunca se echa a perder. Un demonio de sangre la traga para recuperar esencia de sangre (hemógeno), más que un paquete entero de sangre cruda. También sirve de combustible para la pila del loto de sangre y el incensario de la Luna Sangrienta.</CVG_BloodEssencePill.description>
+</LanguageData>

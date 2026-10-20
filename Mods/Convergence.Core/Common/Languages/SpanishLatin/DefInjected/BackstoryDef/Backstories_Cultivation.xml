@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Childhood, tier 1 -->
+  <CVG_Backstory_LakeFisherChild.title>hijo de pescador</CVG_Backstory_LakeFisherChild.title>
+  <CVG_Backstory_LakeFisherChild.titleFemale>hija de pescador</CVG_Backstory_LakeFisherChild.titleFemale>
+  <CVG_Backstory_LakeFisherChild.titleShort>hijo de pescador</CVG_Backstory_LakeFisherChild.titleShort>
+  <CVG_Backstory_LakeFisherChild.titleShortFemale>hija de pescador</CVG_Backstory_LakeFisherChild.titleShortFemale>
+  <CVG_Backstory_LakeFisherChild.description>[PAWN_nameDef] fue hijo de un pescador de una aldea del lago en Jiuxiao, y aprendió a remendar redes, limpiar carpas y remar antes de saber leer.</CVG_Backstory_LakeFisherChild.description>
+  <CVG_Backstory_PaddyChild.title>niño del arrozal</CVG_Backstory_PaddyChild.title>
+  <CVG_Backstory_PaddyChild.titleFemale>niña del arrozal</CVG_Backstory_PaddyChild.titleFemale>
+  <CVG_Backstory_PaddyChild.titleShort>niño del arrozal</CVG_Backstory_PaddyChild.titleShort>
+  <CVG_Backstory_PaddyChild.titleShortFemale>niña del arrozal</CVG_Backstory_PaddyChild.titleShortFemale>
+  <CVG_Backstory_PaddyChild.description>[PAWN_nameDef] creció plantando arroz en los arrozales escalonados bajo una montaña de secta, con el barro hasta las rodillas, y nunca vio a un cultivador de cerca.</CVG_Backstory_PaddyChild.description>
+  <CVG_Backstory_MuleDriverChild.title>hijo de arriero</CVG_Backstory_MuleDriverChild.title>
+  <CVG_Backstory_MuleDriverChild.titleFemale>hija de arriero</CVG_Backstory_MuleDriverChild.titleFemale>
+  <CVG_Backstory_MuleDriverChild.titleShort>hijo de arriero</CVG_Backstory_MuleDriverChild.titleShort>
+  <CVG_Backstory_MuleDriverChild.titleShortFemale>hija de arriero</CVG_Backstory_MuleDriverChild.titleShortFemale>
+  <CVG_Backstory_MuleDriverChild.description>Los padres de [PAWN_nameDef] guiaban caravanas de mulas por los caminos de secta de Jiuxiao. Dormía bajo las carretas, daba de comer a las mulas y aprendió qué posadas aguaban el vino.</CVG_Backstory_MuleDriverChild.description>
+  <CVG_Backstory_TeaHouseChild.title>niño de la casa de té</CVG_Backstory_TeaHouseChild.title>
+  <CVG_Backstory_TeaHouseChild.titleFemale>niña de la casa de té</CVG_Backstory_TeaHouseChild.titleFemale>
+  <CVG_Backstory_TeaHouseChild.titleShort>niño de la casa de té</CVG_Backstory_TeaHouseChild.titleShort>
+  <CVG_Backstory_TeaHouseChild.titleShortFemale>niña de la casa de té</CVG_Backstory_TeaHouseChild.titleShortFemale>
+  <CVG_Backstory_TeaHouseChild.description>[PAWN_nameDef] llevaba bandejas en la casa de té de su familia, en un camino de secta, donde los discípulos chismeaban sobre los ancianos y los ancianos fingían no escuchar.</CVG_Backstory_TeaHouseChild.description>
+  <CVG_Backstory_LateRootVillager.title>aldeano de raíz tardía</CVG_Backstory_LateRootVillager.title>
+  <CVG_Backstory_LateRootVillager.titleFemale>aldeana de raíz tardía</CVG_Backstory_LateRootVillager.titleFemale>
+  <CVG_Backstory_LateRootVillager.titleShort>aldeano</CVG_Backstory_LateRootVillager.titleShort>
+  <CVG_Backstory_LateRootVillager.titleShortFemale>aldeana</CVG_Backstory_LateRootVillager.titleShortFemale>
+  <CVG_Backstory_LateRootVillager.description>[PAWN_nameDef] era un niño cualquiera de una aldea arrocera hasta que un tasador ambulante del Pabellón del Caldero Celestial le apoyó una aguja de jade en la muñeca y encontró una raíz espiritual que nadie había pensado buscar. La aldea vendió dos bueyes para comprarle su primer manual, y pasó el resto de su infancia intentando devolvérselos.</CVG_Backstory_LateRootVillager.description>
+  <CVG_Backstory_SectServantChild.title>sirviente de secta</CVG_Backstory_SectServantChild.title>
+  <CVG_Backstory_SectServantChild.titleShort>sirviente</CVG_Backstory_SectServantChild.titleShort>
+  <CVG_Backstory_SectServantChild.description>[PAWN_nameDef] se crio como sirviente ligado a los patios exteriores de una secta mediana, subiendo agua por novecientos escalones antes del alba y restregando calderos hasta que salía la luna. Nunca le dejaron entrar en las salas de práctica, así que escuchaba a través de las paredes.</CVG_Backstory_SectServantChild.description>
+  <CVG_Backstory_StoneVeinChild.title>niño de la veta</CVG_Backstory_StoneVeinChild.title>
+  <CVG_Backstory_StoneVeinChild.titleFemale>niña de la veta</CVG_Backstory_StoneVeinChild.titleFemale>
+  <CVG_Backstory_StoneVeinChild.titleShort>niño de la veta</CVG_Backstory_StoneVeinChild.titleShort>
+  <CVG_Backstory_StoneVeinChild.titleShortFemale>niña de la veta</CVG_Backstory_StoneVeinChild.titleShortFemale>
+  <CVG_Backstory_StoneVeinChild.description>[PAWN_nameDef] nació entre mineros de piedra espiritual en un pueblo de veta de Jiuxiao, y empujaba carritos y clasificaba piedras por su brillo antes de saber leer. Aprendió qué tono de azul significaba dinero y cuál significaba que la galería estaba a punto de venirse abajo.</CVG_Backstory_StoneVeinChild.description>
+  <CVG_Backstory_PillHallRunner.title>mandadero de píldoras</CVG_Backstory_PillHallRunner.title>
+  <CVG_Backstory_PillHallRunner.titleFemale>mandadera de píldoras</CVG_Backstory_PillHallRunner.titleFemale>
+  <CVG_Backstory_PillHallRunner.titleShort>recadero</CVG_Backstory_PillHallRunner.titleShort>
+  <CVG_Backstory_PillHallRunner.titleShortFemale>recadera</CVG_Backstory_PillHallRunner.titleShortFemale>
+  <CVG_Backstory_PillHallRunner.description>[PAWN_nameDef] hacía mandados en una sala de píldoras del Pabellón del Caldero Celestial: llevaba pedidos, contaba piedras espirituales e iba a buscar al anciano equivocado cuando el correcto estaba ocupado. Aprendió pronto que toda píldora tiene tres precios: el escrito, el pedido y el pagado.</CVG_Backstory_PillHallRunner.description>
+  <CVG_Backstory_InnChild.title>niño de posada</CVG_Backstory_InnChild.title>
+  <CVG_Backstory_InnChild.titleFemale>niña de posada</CVG_Backstory_InnChild.titleFemale>
+  <CVG_Backstory_InnChild.titleShort>niño de posada</CVG_Backstory_InnChild.titleShort>
+  <CVG_Backstory_InnChild.titleShortFemale>niña de posada</CVG_Backstory_InnChild.titleShortFemale>
+  <CVG_Backstory_InnChild.description>[PAWN_nameDef] se crio en la Posada de la Nube Errante, donde los cultivadores errantes beben, se baten a duelo y duermen la borrachera de sus deudas. Aprendió a servir vino, a esconderse bajo las mesas y a distinguir a uno de Fundación de uno de Refinamiento de Qi por cómo cruzan una puerta.</CVG_Backstory_InnChild.description>
+  <CVG_Backstory_RangeGoatherd.title>cabrero del Dragón</CVG_Backstory_RangeGoatherd.title>
+  <CVG_Backstory_RangeGoatherd.titleFemale>cabrera del Dragón</CVG_Backstory_RangeGoatherd.titleFemale>
+  <CVG_Backstory_RangeGoatherd.titleShort>cabrero</CVG_Backstory_RangeGoatherd.titleShort>
+  <CVG_Backstory_RangeGoatherd.titleShortFemale>cabrera</CVG_Backstory_RangeGoatherd.titleShortFemale>
+  <CVG_Backstory_RangeGoatherd.description>[PAWN_nameDef] pastoreaba cabras en las faldas de la Cordillera del Dragón Enroscado, donde el Clan del Dragón Antiguo prohíbe subir por encima de la línea de nubes. A veces bajaban jinetes con cuernos entre la niebla a contar los rebaños, y los cabreros aprendieron a quedarse quietos y dejarlos.</CVG_Backstory_RangeGoatherd.description>
+  <CVG_Backstory_BellowsChild.title>niño del fuelle</CVG_Backstory_BellowsChild.title>
+  <CVG_Backstory_BellowsChild.titleFemale>niña del fuelle</CVG_Backstory_BellowsChild.titleFemale>
+  <CVG_Backstory_BellowsChild.titleShort>niño del fuelle</CVG_Backstory_BellowsChild.titleShort>
+  <CVG_Backstory_BellowsChild.titleShortFemale>niña del fuelle</CVG_Backstory_BellowsChild.titleShortFemale>
+  <CVG_Backstory_BellowsChild.description>[PAWN_nameDef] accionaba el fuelle en una forja que abastecía de espadas de práctica al Pico Azur. Aprendió los colores del acero caliente, que el hierro espiritual canta medio tono antes de rajarse y a mantener los antebrazos lejos del temple, casi siempre.</CVG_Backstory_BellowsChild.description>
+  <CVG_Backstory_PeddlersChild.title>hijo de charlatán</CVG_Backstory_PeddlersChild.title>
+  <CVG_Backstory_PeddlersChild.titleFemale>hija de charlatán</CVG_Backstory_PeddlersChild.titleFemale>
+  <CVG_Backstory_PeddlersChild.titleShort>hijo del vendedor</CVG_Backstory_PeddlersChild.titleShort>
+  <CVG_Backstory_PeddlersChild.titleShortFemale>hija del vendedor</CVG_Backstory_PeddlersChild.titleShortFemale>
+  <CVG_Backstory_PeddlersChild.description>La familia de [PAWN_nameDef] iba de feria en feria vendiendo "Píldoras Doradas de Nueve Vueltas" que jamás habían pasado cerca de un caldero. Aprendió el discurso, la ruta de escape y el nombre de cada pueblo que los colgaría nada más verlos.</CVG_Backstory_PeddlersChild.description>
+  <CVG_Backstory_NightMarketChild.title>niño del mercado</CVG_Backstory_NightMarketChild.title>
+  <CVG_Backstory_NightMarketChild.titleFemale>niña del mercado</CVG_Backstory_NightMarketChild.titleFemale>
+  <CVG_Backstory_NightMarketChild.titleShort>niño del mercado</CVG_Backstory_NightMarketChild.titleShort>
+  <CVG_Backstory_NightMarketChild.titleShortFemale>niña del mercado</CVG_Backstory_NightMarketChild.titleShortFemale>
+  <CVG_Backstory_NightMarketChild.description>[PAWN_nameDef] se crio en los mercados nocturnos de las grietas, donde los cultivadores errantes venden tablillas de jade a medio terminar y los chatarreros del Borde venden baterías, a la luz de los faroles y sin preguntas. Aprendió a regatear en dos idiomas y a reconocer una piedra espiritual falsa por su peso.</CVG_Backstory_NightMarketChild.description>
+  <CVG_Backstory_HerbTerraceChild.title>niño de las terrazas</CVG_Backstory_HerbTerraceChild.title>
+  <CVG_Backstory_HerbTerraceChild.titleFemale>niña de las terrazas</CVG_Backstory_HerbTerraceChild.titleFemale>
+  <CVG_Backstory_HerbTerraceChild.titleShort>niño de las terrazas</CVG_Backstory_HerbTerraceChild.titleShort>
+  <CVG_Backstory_HerbTerraceChild.titleShortFemale>niña de las terrazas</CVG_Backstory_HerbTerraceChild.titleShortFemale>
+  <CVG_Backstory_HerbTerraceChild.description>[PAWN_nameDef] desherbaba las terrazas de hierbas espirituales de una secta desde los cinco años. Algunas hierbas muerden, otras solo crecen si les cantas, y la hierba lunar hay que recogerla exactamente a medianoche o se vuelve polvo en la mano.</CVG_Backstory_HerbTerraceChild.description>
+  <CVG_Backstory_DreamingFarmChild.title>granjero soñador</CVG_Backstory_DreamingFarmChild.title>
+  <CVG_Backstory_DreamingFarmChild.titleFemale>granjera soñadora</CVG_Backstory_DreamingFarmChild.titleFemale>
+  <CVG_Backstory_DreamingFarmChild.titleShort>niño de granja</CVG_Backstory_DreamingFarmChild.titleShort>
+  <CVG_Backstory_DreamingFarmChild.titleShortFemale>niña de granja</CVG_Backstory_DreamingFarmChild.titleShortFemale>
+  <CVG_Backstory_DreamingFarmChild.description>[PAWN_nameDef] creció en una granja común del Borde y cada noche soñaba con la misma montaña, una que no aparece en ningún mapa, con nueve cimas y una puerta en lo alto. Ordeñaba las vacas, arreglaba las cercas y dibujaba la montaña en los márgenes de todo.</CVG_Backstory_DreamingFarmChild.description>
+  <CVG_Backstory_TalismanFolder.title>plegador de talismán</CVG_Backstory_TalismanFolder.title>
+  <CVG_Backstory_TalismanFolder.titleFemale>plegadora de talismán</CVG_Backstory_TalismanFolder.titleFemale>
+  <CVG_Backstory_TalismanFolder.titleShort>plegador</CVG_Backstory_TalismanFolder.titleShort>
+  <CVG_Backstory_TalismanFolder.titleShortFemale>plegadora</CVG_Backstory_TalismanFolder.titleShortFemale>
+  <CVG_Backstory_TalismanFolder.description>La familia de [PAWN_nameDef] pintaba talismanes de papel en un taller de callejón: cinabrio, pincel, un soplo de qi y una plegaria para que el trazo saliera bien. Los plegaba de a miles y aprendió que un talismán con una línea mal no hace nada, y que uno con dos líneas mal prende fuego.</CVG_Backstory_TalismanFolder.description>
+  <CVG_Backstory_WreckFieldScavenger.title>rebuscador de restos</CVG_Backstory_WreckFieldScavenger.title>
+  <CVG_Backstory_WreckFieldScavenger.titleFemale>rebuscadora de restos</CVG_Backstory_WreckFieldScavenger.titleFemale>
+  <CVG_Backstory_WreckFieldScavenger.titleShort>rebuscador de restos</CVG_Backstory_WreckFieldScavenger.titleShort>
+  <CVG_Backstory_WreckFieldScavenger.titleShortFemale>rebuscadora de restos</CVG_Backstory_WreckFieldScavenger.titleShortFemale>
+  <CVG_Backstory_WreckFieldScavenger.description>Cerca de la aldea de [PAWN_nameDef] había un campo prohibido donde los cascarones de la Calamidad de Hierro siguen oxidándose medio enterrados en las colinas. Se colaba de noche para arrancar placas y cables extraños, se ganaba una paliza de los ancianos por eso y vendía las piezas a los compradores del Pabellón por buen dinero.</CVG_Backstory_WreckFieldScavenger.description>
+  <CVG_Backstory_SutraCopyist.title>copista de sutras</CVG_Backstory_SutraCopyist.title>
+  <CVG_Backstory_SutraCopyist.titleShort>copista</CVG_Backstory_SutraCopyist.titleShort>
+  <CVG_Backstory_SutraCopyist.description>[PAWN_nameDef] copiaba sutras en el escritorio de un templo, diez mil caracteres al día, incluidos manuales de técnicas que se suponía que no debía entender. Algunos los entendió de todos modos.</CVG_Backstory_SutraCopyist.description>
+  <!-- Childhood, tier 2 -->
+  <CVG_Backstory_HermitFoundling.title>expósito del ermitaño</CVG_Backstory_HermitFoundling.title>
+  <CVG_Backstory_HermitFoundling.titleFemale>expósita del ermitaño</CVG_Backstory_HermitFoundling.titleFemale>
+  <CVG_Backstory_HermitFoundling.titleShort>expósito</CVG_Backstory_HermitFoundling.titleShort>
+  <CVG_Backstory_HermitFoundling.titleShortFemale>expósita</CVG_Backstory_HermitFoundling.titleShortFemale>
+  <CVG_Backstory_HermitFoundling.description>[PAWN_nameDef] fue hallado en una cesta a la entrada de una cueva del acantilado por un viejo cultivador errante que hacía tiempo había renunciado a la gente. Él le enseñó a leer el viento, a nombrar cada hierba del risco y a quedarse perfectamente quieto durante un día entero.\n\nUna mañana, sin más, ya no estaba: dejó un cuenco de madera y una nota: "El mundo es ruidoso. Sé amable con él de todos modos".</CVG_Backstory_HermitFoundling.description>
+  <CVG_Backstory_AlchemistChild.title>hijo de alquimista</CVG_Backstory_AlchemistChild.title>
+  <CVG_Backstory_AlchemistChild.titleFemale>hija de alquimista</CVG_Backstory_AlchemistChild.titleFemale>
+  <CVG_Backstory_AlchemistChild.titleShort>hijo</CVG_Backstory_AlchemistChild.titleShort>
+  <CVG_Backstory_AlchemistChild.titleShortFemale>hija</CVG_Backstory_AlchemistChild.titleShortFemale>
+  <CVG_Backstory_AlchemistChild.description>[PAWN_nameDef] se crio entre el humo de un horno de píldoras familiar que abastecía al Pabellón del Caldero Celestial. Aprendió a moler, a pesar, a juzgar una hierba por lo amarga que es su raíz y a correr cuando la tapa del horno empezaba a traquetear.\n\nNo tiene cejas dignas de mención.</CVG_Backstory_AlchemistChild.description>
+  <CVG_Backstory_IronDayChild.title>hijo del Día de Hierro</CVG_Backstory_IronDayChild.title>
+  <CVG_Backstory_IronDayChild.titleFemale>hija del Día de Hierro</CVG_Backstory_IronDayChild.titleFemale>
+  <CVG_Backstory_IronDayChild.titleShort>hijo del hierro</CVG_Backstory_IronDayChild.titleShort>
+  <CVG_Backstory_IronDayChild.titleShortFemale>hija del hierro</CVG_Backstory_IronDayChild.titleShortFemale>
+  <CVG_Backstory_IronDayChild.description>[PAWN_nameDef] nació en el Día del Hierro, la noche en que las aldeas de Jiuxiao golpean ollas y martillean yunques para recordar la Calamidad de Hierro y espantar lo que quede de ella. Su abuela juraba que un niño nacido en semejante estruendo jamás temería a una máquina.\n\nCreció martillando más que rezando.</CVG_Backstory_IronDayChild.description>
+  <CVG_Backstory_SwordCemeterySweeper.title>barrendero de espadas</CVG_Backstory_SwordCemeterySweeper.title>
+  <CVG_Backstory_SwordCemeterySweeper.titleFemale>barrendera de espadas</CVG_Backstory_SwordCemeterySweeper.titleFemale>
+  <CVG_Backstory_SwordCemeterySweeper.titleShort>barrendero</CVG_Backstory_SwordCemeterySweeper.titleShort>
+  <CVG_Backstory_SwordCemeterySweeper.titleShortFemale>barrendera</CVG_Backstory_SwordCemeterySweeper.titleShortFemale>
+  <CVG_Backstory_SwordCemeterySweeper.description>[PAWN_nameDef] barría hojas en el Cementerio de Espadas del Pico Azur, donde las hojas de los ancianos muertos están clavadas en la tierra y zumban cuando llueve. Tocarlas estaba prohibido, así que aprendió cuáles cantaban en la tormenta y cuáles se quedaban mudas.\n\nDesde entonces no ha podido dormir con truenos.</CVG_Backstory_SwordCemeterySweeper.description>
+  <CVG_Backstory_RiftCrossedChild.title>niño cruzagrietas</CVG_Backstory_RiftCrossedChild.title>
+  <CVG_Backstory_RiftCrossedChild.titleFemale>niña cruzagrietas</CVG_Backstory_RiftCrossedChild.titleFemale>
+  <CVG_Backstory_RiftCrossedChild.titleShort>niño de la grieta</CVG_Backstory_RiftCrossedChild.titleShort>
+  <CVG_Backstory_RiftCrossedChild.titleShortFemale>niña de la grieta</CVG_Backstory_RiftCrossedChild.titleShortFemale>
+  <CVG_Backstory_RiftCrossedChild.description>Una grieta fina como un cabello se abrió en un desagüe de la ciudad natal de [PAWN_nameDef], y cayó por ella a un arrozal de Jiuxiao. Un año después otra grieta lo escupió de vuelta, hablando dos lenguas y sin que nadie le creyera.\n\nAprendió dos alfabetos y no se confía de ninguno de los dos cielos.</CVG_Backstory_RiftCrossedChild.description>
+  <CVG_Backstory_RiftScrapScholar.title>chatarrero de grieta</CVG_Backstory_RiftScrapScholar.title>
+  <CVG_Backstory_RiftScrapScholar.titleFemale>chatarrera de grieta</CVG_Backstory_RiftScrapScholar.titleFemale>
+  <CVG_Backstory_RiftScrapScholar.titleShort>chatarrero</CVG_Backstory_RiftScrapScholar.titleShort>
+  <CVG_Backstory_RiftScrapScholar.titleShortFemale>chatarrera</CVG_Backstory_RiftScrapScholar.titleShortFemale>
+  <CVG_Backstory_RiftScrapScholar.description>El depósito de chatarra de detrás de la casa de [PAWN_nameDef] quedaba a sotavento de una grieta, y por ella se colaban cosas raras: tablillas de jade sin escritura, placas de bronce grabadas con formaciones, una campana que sonaba sin que nadie la tocara. Lo juntaba todo e intentaba hacerlo funcionar.\n\nLo primero que construyó fue un detector de qi con una radio rota. No funcionó. El segundo, sí.</CVG_Backstory_RiftScrapScholar.description>
+  <CVG_Backstory_ImperialPage.title>paje imperial</CVG_Backstory_ImperialPage.title>
+  <CVG_Backstory_ImperialPage.titleShort>paje</CVG_Backstory_ImperialPage.titleShort>
+  <CVG_Backstory_ImperialPage.description>[PAWN_nameDef] sirvió como paje en una casa imperial del Borde, sirviendo vino a los psicolanzadores y memorizando el orden de precedencia. Una noche llevaron ante el señor a un cultivador errante capturado, que se negó a arrodillarse; el vino del señor se congeló en la copa, y el invitado siguió de pie.\n\nEsa noche aprendió qué significa "sin licencia".</CVG_Backstory_ImperialPage.description>
+  <CVG_Backstory_TempleGateChild.title>expósito del templo</CVG_Backstory_TempleGateChild.title>
+  <CVG_Backstory_TempleGateChild.titleFemale>expósita del templo</CVG_Backstory_TempleGateChild.titleFemale>
+  <CVG_Backstory_TempleGateChild.titleShort>niño del templo</CVG_Backstory_TempleGateChild.titleShort>
+  <CVG_Backstory_TempleGateChild.titleShortFemale>niña del templo</CVG_Backstory_TempleGateChild.titleShortFemale>
+  <CVG_Backstory_TempleGateChild.description>[PAWN_nameDef] fue dejado a la puerta del Templo del Loto Silencioso con un nombre prendido a la manta. Nunca fue novicio, solo un niño laico: tocaba las campanas de las horas, alimentaba al qilin del templo y llevaba caldo amargo al pabellón de los peregrinos.\n\nLos monjes dicen que el qilin lo eligió. El qilin no ha hecho comentarios.</CVG_Backstory_TempleGateChild.description>
+  <CVG_Backstory_ClinicChild.title>niño de la clínica</CVG_Backstory_ClinicChild.title>
+  <CVG_Backstory_ClinicChild.titleFemale>niña de la clínica</CVG_Backstory_ClinicChild.titleFemale>
+  <CVG_Backstory_ClinicChild.titleShort>niño de clínica</CVG_Backstory_ClinicChild.titleShort>
+  <CVG_Backstory_ClinicChild.titleShortFemale>niña de clínica</CVG_Backstory_ClinicChild.titleShortFemale>
+  <CVG_Backstory_ClinicChild.description>La madre de [PAWN_nameDef] atendía una clínica en un pueblo de grieta del Borde, tratando a cultivadores con desviación de qi a base de vendas, un escáner de segunda mano y mucha paciencia. Sostenía la lámpara, presionaba las heridas y aprendió que los meridianos se ven con bastante claridad en un escaneo lo bastante bueno.</CVG_Backstory_ClinicChild.description>
+  <CVG_Backstory_SkyIslandDeckhand.title>grumete del cielo</CVG_Backstory_SkyIslandDeckhand.title>
+  <CVG_Backstory_SkyIslandDeckhand.titleShort>grumete</CVG_Backstory_SkyIslandDeckhand.titleShort>
+  <CVG_Backstory_SkyIslandDeckhand.description>[PAWN_nameDef] se crio a bordo de una isla voladora mercante, una de las colinas flotantes que van a la deriva entre los fragmentos de Jiuxiao sobre una formación de elevación más vieja que cualquier secta. Ataba cabos, reparaba las piedras de la formación y aprendió que el piso es solo un lugar al que la isla todavía no ha llegado.</CVG_Backstory_SkyIslandDeckhand.description>
+  <CVG_Backstory_WanderersPorter.title>porteador errante</CVG_Backstory_WanderersPorter.title>
+  <CVG_Backstory_WanderersPorter.titleFemale>porteadora errante</CVG_Backstory_WanderersPorter.titleFemale>
+  <CVG_Backstory_WanderersPorter.titleShort>porteador</CVG_Backstory_WanderersPorter.titleShort>
+  <CVG_Backstory_WanderersPorter.titleShortFemale>porteadora</CVG_Backstory_WanderersPorter.titleShortFemale>
+  <CVG_Backstory_WanderersPorter.description>Un cultivador errante compró a [PAWN_nameDef] a una familia hambrienta para que le cargara los fardos, y juntos recorrieron medio Jiuxiao. Le enseñó a montar campamento, a desollar una bestia y exactamente una postura de combate, "por si me muero".\n\nSe murió. [PAWN_nameDef] se quedó con los fardos.</CVG_Backstory_WanderersPorter.description>
+  <CVG_Backstory_SpiritMarkedChild.title>marcado por espíritus</CVG_Backstory_SpiritMarkedChild.title>
+  <CVG_Backstory_SpiritMarkedChild.titleFemale>marcada por espíritus</CVG_Backstory_SpiritMarkedChild.titleFemale>
+  <CVG_Backstory_SpiritMarkedChild.titleShort>niño espíritu</CVG_Backstory_SpiritMarkedChild.titleShort>
+  <CVG_Backstory_SpiritMarkedChild.titleShortFemale>niña espíritu</CVG_Backstory_SpiritMarkedChild.titleShortFemale>
+  <CVG_Backstory_SpiritMarkedChild.description>[PAWN_nameDef] nació con una marca con forma de hoja, y el chamán de la tribu lo declaró señalado por los espíritus del árbol ánima. Se sentaba con los ancianos, aprendió las canciones que hacen estremecerse al árbol y, a los doce, lo enviaron a recibir a los primeros caminantes de las grietas que salieron de las colinas.\n\nNo eran espíritus. Tenían hambre.</CVG_Backstory_SpiritMarkedChild.description>
+  <!-- Childhood, tier 3 -->
+  <CVG_Backstory_FallenHouseHeir.title>heredero de casa caída</CVG_Backstory_FallenHouseHeir.title>
+  <CVG_Backstory_FallenHouseHeir.titleFemale>heredera de casa caída</CVG_Backstory_FallenHouseHeir.titleFemale>
+  <CVG_Backstory_FallenHouseHeir.titleShort>heredero</CVG_Backstory_FallenHouseHeir.titleShort>
+  <CVG_Backstory_FallenHouseHeir.titleShortFemale>heredera</CVG_Backstory_FallenHouseHeir.titleShortFemale>
+  <CVG_Backstory_FallenHouseHeir.description>[PAWN_nameDef] nació como último heredero de la casa Wen de Jiuxiao, un clan de cultivadores que alguna vez tuvo tres montañas y un asiento en los consejos del Pico Azur. Cuando nació, las viejas deudas de la Calamidad de Hierro y una disputa perdida contra un clan rival habían dejado a la familia un solo patio y una biblioteca de técnicas que nadie podía darse el lujo de practicar.\n\nAprendió etiqueta, genealogía y a vender una reliquia sin parecer triste. Nadie le enseñó nunca a cargar su propio equipaje.</CVG_Backstory_FallenHouseHeir.description>
+  <CVG_Backstory_BeastRaisedChild.title>criado por bestias</CVG_Backstory_BeastRaisedChild.title>
+  <CVG_Backstory_BeastRaisedChild.titleFemale>criada por bestias</CVG_Backstory_BeastRaisedChild.titleFemale>
+  <CVG_Backstory_BeastRaisedChild.titleShort>niño salvaje</CVG_Backstory_BeastRaisedChild.titleShort>
+  <CVG_Backstory_BeastRaisedChild.titleShortFemale>niña salvaje</CVG_Backstory_BeastRaisedChild.titleShortFemale>
+  <CVG_Backstory_BeastRaisedChild.description>Cuando una caravana se dispersó en un bosque de bestias espirituales, [PAWN_nameDef] se perdió y vivió tres años con una manada de lobos lunares que lo trataban como a un cachorro lento pero leal. Más tarde, un monje del Templo del Loto Silencioso lo devolvió al habla, una palabra por día, pero las palabras nunca llegaron a ser la lengua en la que piensa.\n\nTodavía gruñe cuando algo lo sobresalta, y prefiere hablar con un lobo antes que con un mercader.</CVG_Backstory_BeastRaisedChild.description>
+  <CVG_Backstory_CultCaptiveChild.title>cautivo del culto</CVG_Backstory_CultCaptiveChild.title>
+  <CVG_Backstory_CultCaptiveChild.titleFemale>cautiva del culto</CVG_Backstory_CultCaptiveChild.titleFemale>
+  <CVG_Backstory_CultCaptiveChild.titleShort>cautivo</CVG_Backstory_CultCaptiveChild.titleShort>
+  <CVG_Backstory_CultCaptiveChild.titleShortFemale>cautiva</CVG_Backstory_CultCaptiveChild.titleShortFemale>
+  <CVG_Backstory_CultCaptiveChild.description>A los nueve años, [PAWN_nameDef] fue capturado en una incursión nocturna del Culto de la Luna Sangrienta y encerrado en una jaula de hueso para desangrarlo en la siguiente Luna del Demonio Interno. Escapó cuando una secta rival asaltó el enclave, quedándose muy quieto entre los muertos.\n\nAprendió a vendarse sus propias heridas y nunca duerme de cara a una puerta. Algunas noches no duerme en absoluto.</CVG_Backstory_CultCaptiveChild.description>
+  <CVG_Backstory_BloodServantChild.title>niño siervo de sangre</CVG_Backstory_BloodServantChild.title>
+  <CVG_Backstory_BloodServantChild.titleFemale>niña sierva de sangre</CVG_Backstory_BloodServantChild.titleFemale>
+  <CVG_Backstory_BloodServantChild.titleShort>siervo de sangre</CVG_Backstory_BloodServantChild.titleShort>
+  <CVG_Backstory_BloodServantChild.titleShortFemale>sierva de sangre</CVG_Backstory_BloodServantChild.titleShortFemale>
+  <CVG_Backstory_BloodServantChild.description>[PAWN_nameDef] se crio en un enclave del Culto de la Luna Sangrienta, bien alimentado y bien enseñado: que el Cielo es una jaula, que la sangre es más rápida que el aliento y que los débiles les deben a los fuertes. Cada luna roja se cortaba la palma para alimentar las farolas de alma.\n\nNadie le enseñó nunca a cuidar a los enfermos, solo a usarlos.</CVG_Backstory_BloodServantChild.description>
+  <CVG_Backstory_LabRaisedSubject.title>sujeto de laboratorio</CVG_Backstory_LabRaisedSubject.title>
+  <CVG_Backstory_LabRaisedSubject.titleShort>sujeto</CVG_Backstory_LabRaisedSubject.titleShort>
+  <CVG_Backstory_LabRaisedSubject.description>[PAWN_nameDef] creció en un hábitat de Ascension Dynamics como Sujeto 14, parte de un grupo de niños a quienes les medían el "campo psíquico anómalo" cada mañana antes del desayuno. Aprendió a leer los escáneres, y después aprendió a mentirles.\n\nVio su primera planta viva a los quince y desde entonces no se confía de ninguna. El expediente dice que sus padres fueron "donantes".</CVG_Backstory_LabRaisedSubject.description>
+  <CVG_Backstory_YoungMaster.title>joven amo</CVG_Backstory_YoungMaster.title>
+  <CVG_Backstory_YoungMaster.titleFemale>joven ama</CVG_Backstory_YoungMaster.titleFemale>
+  <CVG_Backstory_YoungMaster.titleShort>joven amo</CVG_Backstory_YoungMaster.titleShort>
+  <CVG_Backstory_YoungMaster.titleShortFemale>joven ama</CVG_Backstory_YoungMaster.titleShortFemale>
+  <CVG_Backstory_YoungMaster.description>[PAWN_nameDef] fue el heredero mimado de un clan de cultivadores adinerado: píldoras para desayunar, cuatro sirvientes para vestirlo y un padre que pagaba cada ventana que rompía y cada niño campesino al que golpeaba. Todos se inclinaban. Dio por hecho que así funcionaba el mundo.\n\nDesde entonces, el mundo le ha ofrecido una corrección. Sigue sin cargar un saco.</CVG_Backstory_YoungMaster.description>
+  <CVG_Backstory_SilentVowChild.title>voto de silencio</CVG_Backstory_SilentVowChild.title>
+  <CVG_Backstory_SilentVowChild.titleShort>niño silencioso</CVG_Backstory_SilentVowChild.titleShort>
+  <CVG_Backstory_SilentVowChild.titleShortFemale>niña silenciosa</CVG_Backstory_SilentVowChild.titleShortFemale>
+  <CVG_Backstory_SilentVowChild.description>Tras una fiebre a los siete años, [PAWN_nameDef] hizo voto de silencio en un santuario de montaña y lo mantuvo durante toda su infancia. Aprendió a leer, a preparar medicinas y a responder cualquier pregunta con un pincel y un trozo de papel.\n\nLa gente dejó de hacerle preguntas. No le importó.</CVG_Backstory_SilentVowChild.description>
+  <!-- Childhood, tier 4 -->
+  <CVG_Backstory_ExpelledProdigy.title>prodigio expulsado</CVG_Backstory_ExpelledProdigy.title>
+  <CVG_Backstory_ExpelledProdigy.titleFemale>prodigio expulsada</CVG_Backstory_ExpelledProdigy.titleFemale>
+  <CVG_Backstory_ExpelledProdigy.titleShort>prodigio</CVG_Backstory_ExpelledProdigy.titleShort>
+  <CVG_Backstory_ExpelledProdigy.description>[PAWN_nameDef] entró en la sala de jóvenes de una secta a los seis años, recitaba el Sutra de la Fundación entero a los ocho y a los once fue expulsado por corregir a un anciano delante de sus discípulos. El anciano estaba equivocado; ese era el problema.\n\nSalió por la puerta con los manuales de la secta en la cabeza, de donde no podían quitárselos, y con la firme convicción de que acarrear y cavar es para quien no sabe recitar.</CVG_Backstory_ExpelledProdigy.description>
+  <CVG_Backstory_CaveBornChild.title>niño nacido en cueva</CVG_Backstory_CaveBornChild.title>
+  <CVG_Backstory_CaveBornChild.titleFemale>niña nacida en cueva</CVG_Backstory_CaveBornChild.titleFemale>
+  <CVG_Backstory_CaveBornChild.titleShort>niño de cueva</CVG_Backstory_CaveBornChild.titleShort>
+  <CVG_Backstory_CaveBornChild.titleShortFemale>niña de cueva</CVG_Backstory_CaveBornChild.titleShortFemale>
+  <CVG_Backstory_CaveBornChild.description>[PAWN_nameDef] nació dentro de una cueva de herencia sellada donde sus padres, cultivadores errantes que huían del Culto de la Luna Sangrienta, llevaban años escondidos con la biblioteca de un maestro muerto y las trampas de un maestro muerto. Aprendió a leer formaciones antes que caras y a cavar antes que a caminar.\n\nNo vio el sol hasta los ocho años, y no le gustó, ni él ni nada de lo que crece debajo.</CVG_Backstory_CaveBornChild.description>
+  <CVG_Backstory_BeastTideOrphan.title>huérfano de la marea</CVG_Backstory_BeastTideOrphan.title>
+  <CVG_Backstory_BeastTideOrphan.titleFemale>huérfana de la marea</CVG_Backstory_BeastTideOrphan.titleFemale>
+  <CVG_Backstory_BeastTideOrphan.titleShort>huérfano</CVG_Backstory_BeastTideOrphan.titleShort>
+  <CVG_Backstory_BeastTideOrphan.titleShortFemale>huérfana</CVG_Backstory_BeastTideOrphan.titleShortFemale>
+  <CVG_Backstory_BeastTideOrphan.description>Una marea de bestias se tragó la aldea de [PAWN_nameDef] en una sola noche. Unos cazadores lo encontraron dos días después dentro de un granero, rodeado de los cuerpos de las cosas que habían intentado entrar.\n\nSe crio en campamentos de cazadores y mató por primera vez a los diez, con un arco prestado y sin sentir nada en particular. Con la gente tampoco siente nada en particular.</CVG_Backstory_BeastTideOrphan.description>
+  <!-- Adulthood, tier 1 -->
+  <CVG_Backstory_LakeFisher.title>pescador del lago</CVG_Backstory_LakeFisher.title>
+  <CVG_Backstory_LakeFisher.titleFemale>pescadora del lago</CVG_Backstory_LakeFisher.titleFemale>
+  <CVG_Backstory_LakeFisher.titleShort>pescador</CVG_Backstory_LakeFisher.titleShort>
+  <CVG_Backstory_LakeFisher.titleShortFemale>pescadora</CVG_Backstory_LakeFisher.titleShortFemale>
+  <CVG_Backstory_LakeFisher.description>[PAWN_nameDef] pescaba en los lagos de Jiuxiao con redes y cormoranes, vendiendo carpas a las cocinas de las sectas y salando el resto.</CVG_Backstory_LakeFisher.description>
+  <CVG_Backstory_RiceFarmer.title>arrocero</CVG_Backstory_RiceFarmer.title>
+  <CVG_Backstory_RiceFarmer.titleFemale>arrocera</CVG_Backstory_RiceFarmer.titleFemale>
+  <CVG_Backstory_RiceFarmer.titleShort>arrocero</CVG_Backstory_RiceFarmer.titleShort>
+  <CVG_Backstory_RiceFarmer.titleShortFemale>arrocera</CVG_Backstory_RiceFarmer.titleShortFemale>
+  <CVG_Backstory_RiceFarmer.description>[PAWN_nameDef] cultivaba arroz en las terrazas bajo una montaña de secta y pagaba una décima parte de la cosecha a la secta, como habían hecho sus padres y los padres de sus padres.</CVG_Backstory_RiceFarmer.description>
+  <CVG_Backstory_MuleCaravaneer.title>arriero</CVG_Backstory_MuleCaravaneer.title>
+  <CVG_Backstory_MuleCaravaneer.titleFemale>arriera</CVG_Backstory_MuleCaravaneer.titleFemale>
+  <CVG_Backstory_MuleCaravaneer.titleShort>arriero</CVG_Backstory_MuleCaravaneer.titleShort>
+  <CVG_Backstory_MuleCaravaneer.titleShortFemale>arriera</CVG_Backstory_MuleCaravaneer.titleShortFemale>
+  <CVG_Backstory_MuleCaravaneer.description>[PAWN_nameDef] guiaba caravanas de mulas entre los pueblos de secta de Jiuxiao, llevando grano en un sentido y píldoras en el otro, y nunca preguntó qué había en las cajas selladas.</CVG_Backstory_MuleCaravaneer.description>
+  <CVG_Backstory_TeaHouseServer.title>mesero de casa de té</CVG_Backstory_TeaHouseServer.title>
+  <CVG_Backstory_TeaHouseServer.titleFemale>mesera de casa de té</CVG_Backstory_TeaHouseServer.titleFemale>
+  <CVG_Backstory_TeaHouseServer.titleShort>mesero</CVG_Backstory_TeaHouseServer.titleShort>
+  <CVG_Backstory_TeaHouseServer.titleShortFemale>mesera</CVG_Backstory_TeaHouseServer.titleShortFemale>
+  <CVG_Backstory_TeaHouseServer.description>[PAWN_nameDef] servía té en una casa de té del camino al Pico Azur, y se enteraba de cada rumor de la secta un día antes que la propia secta.</CVG_Backstory_TeaHouseServer.description>
+  <CVG_Backstory_ExpelledOuterDisciple.title>discípulo expulsado</CVG_Backstory_ExpelledOuterDisciple.title>
+  <CVG_Backstory_ExpelledOuterDisciple.titleFemale>discípula expulsada</CVG_Backstory_ExpelledOuterDisciple.titleFemale>
+  <CVG_Backstory_ExpelledOuterDisciple.titleShort>discípulo</CVG_Backstory_ExpelledOuterDisciple.titleShort>
+  <CVG_Backstory_ExpelledOuterDisciple.titleShortFemale>discípula</CVG_Backstory_ExpelledOuterDisciple.titleShortFemale>
+  <CVG_Backstory_ExpelledOuterDisciple.description>Durante diez años, [PAWN_nameDef] fue discípulo externo de una secta recta: barría, plantaba, montaba guardia y esperaba un ascenso a los patios interiores que nunca llegó. Lo expulsaron por romperle la mandíbula a un discípulo núcleo que se había burlado de su raíz espiritual, y se fue con una espada de práctica de madera y un rencor.</CVG_Backstory_ExpelledOuterDisciple.description>
+  <CVG_Backstory_SpiritStoneMiner.title>minero de vetas</CVG_Backstory_SpiritStoneMiner.title>
+  <CVG_Backstory_SpiritStoneMiner.titleFemale>minera de vetas</CVG_Backstory_SpiritStoneMiner.titleFemale>
+  <CVG_Backstory_SpiritStoneMiner.titleShort>minero</CVG_Backstory_SpiritStoneMiner.titleShort>
+  <CVG_Backstory_SpiritStoneMiner.titleShortFemale>minera</CVG_Backstory_SpiritStoneMiner.titleShortFemale>
+  <CVG_Backstory_SpiritStoneMiner.description>[PAWN_nameDef] excavaba vetas de piedra espiritual para un gremio minero de Jiuxiao, siguiendo el brillo a través de la roca por el dolor de muelas que le provocaba. Años de polvo luminoso le han dejado los pulmones un poco brillantes y el pico un poco más sabio.</CVG_Backstory_SpiritStoneMiner.description>
+  <CVG_Backstory_SectGateGuard.title>guardia de puerta</CVG_Backstory_SectGateGuard.title>
+  <CVG_Backstory_SectGateGuard.titleShort>guardia</CVG_Backstory_SectGateGuard.titleShort>
+  <CVG_Backstory_SectGateGuard.description>[PAWN_nameDef] montó guardia en la puerta de montaña de una secta recta durante doce años, haciéndole a cada visitante las tres preguntas y rechazando a quienes respondían demasiado rápido. Dos veces subió el Culto de la Luna Sangrienta por los escalones de noche, y dos veces aguantó la puerta.</CVG_Backstory_SectGateGuard.description>
+  <CVG_Backstory_SpiritHerbFarmer.title>herbolario de secta</CVG_Backstory_SpiritHerbFarmer.title>
+  <CVG_Backstory_SpiritHerbFarmer.titleFemale>herbolaria de secta</CVG_Backstory_SpiritHerbFarmer.titleFemale>
+  <CVG_Backstory_SpiritHerbFarmer.titleShort>herbolario</CVG_Backstory_SpiritHerbFarmer.titleShort>
+  <CVG_Backstory_SpiritHerbFarmer.titleShortFemale>herbolaria</CVG_Backstory_SpiritHerbFarmer.titleShortFemale>
+  <CVG_Backstory_SpiritHerbFarmer.description>[PAWN_nameDef] cultivaba hierbas espirituales en las terrazas del valle medicinal de una secta, donde cada planta quiere un qi distinto, una canción distinta y una hora distinta de la noche. Perdió un dedo por un loto de sangre y aprendió el resto por el camino lento.</CVG_Backstory_SpiritHerbFarmer.description>
+  <CVG_Backstory_SectCook.title>cocinero de secta</CVG_Backstory_SectCook.title>
+  <CVG_Backstory_SectCook.titleFemale>cocinera de secta</CVG_Backstory_SectCook.titleFemale>
+  <CVG_Backstory_SectCook.titleShort>cocinero</CVG_Backstory_SectCook.titleShort>
+  <CVG_Backstory_SectCook.titleShortFemale>cocinera</CVG_Backstory_SectCook.titleShortFemale>
+  <CVG_Backstory_SectCook.description>[PAWN_nameDef] manejaba la cocina de una secta de trescientos discípulos, cociendo arroz espiritual en un caldero del tamaño de un estanque y sazonándolo con la cantidad exacta de qi que aguanta un estómago de Refinamiento de Qi. Diez mil cuencos por estación; el Dao de los ancianos, dice, descansa por completo sobre el de la cocina.</CVG_Backstory_SectCook.description>
+  <CVG_Backstory_CloudInnkeeper.title>posadero errante</CVG_Backstory_CloudInnkeeper.title>
+  <CVG_Backstory_CloudInnkeeper.titleFemale>posadera errante</CVG_Backstory_CloudInnkeeper.titleFemale>
+  <CVG_Backstory_CloudInnkeeper.titleShort>posadero</CVG_Backstory_CloudInnkeeper.titleShort>
+  <CVG_Backstory_CloudInnkeeper.titleShortFemale>posadera</CVG_Backstory_CloudInnkeeper.titleShortFemale>
+  <CVG_Backstory_CloudInnkeeper.description>[PAWN_nameDef] atendía una sucursal de la Posada de la Nube Errante, donde los cultivadores errantes de todos los reinos beben bajo una sola regla: nada de peleas adentro. La hacía cumplir con sopa, paciencia y un cuchillo de carnicero, y sabe el plato favorito de cada errante y la mayoría de sus nombres verdaderos.</CVG_Backstory_CloudInnkeeper.description>
+  <CVG_Backstory_RiftSmuggler.title>contrabandista</CVG_Backstory_RiftSmuggler.title>
+  <CVG_Backstory_RiftSmuggler.titleShort>contrabandista</CVG_Backstory_RiftSmuggler.titleShort>
+  <CVG_Backstory_RiftSmuggler.description>[PAWN_nameDef] pasaba tecnología del Borde por las grietas hasta el Pabellón del Caldero Celestial y píldoras de Jiuxiao en sentido contrario, en cajas rotuladas "cerámica". El Edicto de Conformidad del Qi del Imperio volvió ilegal un extremo de la ruta y los contratos del Pabellón hicieron muy rentable el otro.</CVG_Backstory_RiftSmuggler.description>
+  <CVG_Backstory_SectCourier.title>mensajero entre sectas</CVG_Backstory_SectCourier.title>
+  <CVG_Backstory_SectCourier.titleFemale>mensajera entre sectas</CVG_Backstory_SectCourier.titleFemale>
+  <CVG_Backstory_SectCourier.titleShort>mensajero</CVG_Backstory_SectCourier.titleShort>
+  <CVG_Backstory_SectCourier.titleShortFemale>mensajera</CVG_Backstory_SectCourier.titleShortFemale>
+  <CVG_Backstory_SectCourier.description>[PAWN_nameDef] llevaba cartas selladas entre las sectas de Jiuxiao, recorriendo mil li en tres días sobre un par de piernas aligeradas con qi. Los mensajeros sobreviven porque matar a uno empieza una guerra, y no abrió una carta en su vida.</CVG_Backstory_SectCourier.description>
+  <CVG_Backstory_MechWatcher.title>vigía de mecanoides</CVG_Backstory_MechWatcher.title>
+  <CVG_Backstory_MechWatcher.titleShort>vigía</CVG_Backstory_MechWatcher.titleShort>
+  <CVG_Backstory_MechWatcher.description>[PAWN_nameDef] atendía un puesto de escucha del Borde que rastreaba la actividad mecanoide, y vio cómo las señales se espesaban mes a mes tras la Convergencia, siempre hacia los lugares donde la gente había empezado a cultivar. Presentó un informe al respecto, y se quedó con el rifle.</CVG_Backstory_MechWatcher.description>
+  <CVG_Backstory_CultivatorCatcher.title>cazacultivadores</CVG_Backstory_CultivatorCatcher.title>
+  <CVG_Backstory_CultivatorCatcher.titleShort>cazador</CVG_Backstory_CultivatorCatcher.titleShort>
+  <CVG_Backstory_CultivatorCatcher.titleShortFemale>cazadora</CVG_Backstory_CultivatorCatcher.titleShortFemale>
+  <CVG_Backstory_CultivatorCatcher.description>[PAWN_nameDef] iba con una banda pirata especializada en cultivadores de reino bajo: redes lastradas, collares de descarga y un comprador esperando en cada extremo, el Pabellón para los talentosos y Ascension Dynamics para el resto. Un discípulo de Refinamiento de Qi vale más que un núcleo de mecanoide y es más fácil de cargar; curarlos después era trabajo de otro.</CVG_Backstory_CultivatorCatcher.description>
+  <CVG_Backstory_BeggarDisciple.title>discípulo del mendigo</CVG_Backstory_BeggarDisciple.title>
+  <CVG_Backstory_BeggarDisciple.titleFemale>discípula del mendigo</CVG_Backstory_BeggarDisciple.titleFemale>
+  <CVG_Backstory_BeggarDisciple.titleShort>mendigo</CVG_Backstory_BeggarDisciple.titleShort>
+  <CVG_Backstory_BeggarDisciple.titleShortFemale>mendiga</CVG_Backstory_BeggarDisciple.titleShortFemale>
+  <CVG_Backstory_BeggarDisciple.description>[PAWN_nameDef] siguió al Viejo Zhao, el mendigo de la Posada de la Nube Errante que, según dicen, esconde un Alma Naciente bajo los harapos, durante seis años de mendigar, pelear y dormir bajo los puentes. El viejo enseñaba una postura en cada ciudad y nunca la misma dos veces, y [PAWN_nameDef] se fue con cuarenta posturas y un cuenco.</CVG_Backstory_BeggarDisciple.description>
+  <CVG_Backstory_TalismanPainter.title>pintor de talismanes</CVG_Backstory_TalismanPainter.title>
+  <CVG_Backstory_TalismanPainter.titleFemale>pintora de talismanes</CVG_Backstory_TalismanPainter.titleFemale>
+  <CVG_Backstory_TalismanPainter.titleShort>pintor</CVG_Backstory_TalismanPainter.titleShort>
+  <CVG_Backstory_TalismanPainter.titleShortFemale>pintora</CVG_Backstory_TalismanPainter.titleShortFemale>
+  <CVG_Backstory_TalismanPainter.description>[PAWN_nameDef] se ganaba la vida pintando talismanes: cinabrio sobre papel amarillo, un soplo de qi en cada trazo y la certeza de que una línea equivocada quema la mano que sostiene el pincel. Tras la Convergencia empezó a pintarlos sobre placas de circuito, y descubrió que ahí también funcionan.</CVG_Backstory_TalismanPainter.description>
+  <CVG_Backstory_InheritanceCaveRaider.title>saqueador de cuevas</CVG_Backstory_InheritanceCaveRaider.title>
+  <CVG_Backstory_InheritanceCaveRaider.titleFemale>saqueadora de cuevas</CVG_Backstory_InheritanceCaveRaider.titleFemale>
+  <CVG_Backstory_InheritanceCaveRaider.titleShort>saqueador</CVG_Backstory_InheritanceCaveRaider.titleShort>
+  <CVG_Backstory_InheritanceCaveRaider.titleShortFemale>saqueadora</CVG_Backstory_InheritanceCaveRaider.titleShortFemale>
+  <CVG_Backstory_InheritanceCaveRaider.description>[PAWN_nameDef] entraba a la fuerza en las cuevas de herencia de cultivadores muertos, pasando formaciones, títeres y algún fantasma ocasional, para vender los manuales que quedaran dentro. La mitad de los manuales eran falsos, dejados por el saqueador anterior, y un cuarto estaban malditos, pero el resto pagaba lo suficiente para seguir.</CVG_Backstory_InheritanceCaveRaider.description>
+  <CVG_Backstory_FakePillMerchant.title>vendedor de píldoras</CVG_Backstory_FakePillMerchant.title>
+  <CVG_Backstory_FakePillMerchant.titleFemale>vendedora de píldoras</CVG_Backstory_FakePillMerchant.titleFemale>
+  <CVG_Backstory_FakePillMerchant.titleShort>mercader</CVG_Backstory_FakePillMerchant.titleShort>
+  <CVG_Backstory_FakePillMerchant.description>[PAWN_nameDef] vendía Píldoras de Fundación de pueblo en pueblo, siempre un paso por delante de los cobradores del Pabellón. Las píldoras eran casi todo azúcar, pero los testimonios eran reales: quien ha comprado esperanza rara vez admite que era falsa.</CVG_Backstory_FakePillMerchant.description>
+  <!-- Adulthood, tier 2 -->
+  <CVG_Backstory_SpiritBeastHunter.title>cazador de bestias</CVG_Backstory_SpiritBeastHunter.title>
+  <CVG_Backstory_SpiritBeastHunter.titleFemale>cazadora de bestias</CVG_Backstory_SpiritBeastHunter.titleFemale>
+  <CVG_Backstory_SpiritBeastHunter.titleShort>cazador</CVG_Backstory_SpiritBeastHunter.titleShort>
+  <CVG_Backstory_SpiritBeastHunter.titleShortFemale>cazadora</CVG_Backstory_SpiritBeastHunter.titleShortFemale>
+  <CVG_Backstory_SpiritBeastHunter.description>[PAWN_nameDef] cazaba bestias espirituales por sus núcleos y sus pieles y se los vendía a los compradores del Pabellón del Caldero Celestial. Cumplía las tres reglas de los cazadores: nunca matar a un qilin, nunca cazar bajo una luna roja y nunca confiar en una bestia que hable.\n\nRompió la tercera una vez. Tiene una cicatriz.</CVG_Backstory_SpiritBeastHunter.description>
+  <CVG_Backstory_LotusMonk.title>monje del Loto</CVG_Backstory_LotusMonk.title>
+  <CVG_Backstory_LotusMonk.titleFemale>monja del Loto</CVG_Backstory_LotusMonk.titleFemale>
+  <CVG_Backstory_LotusMonk.titleShort>monje</CVG_Backstory_LotusMonk.titleShort>
+  <CVG_Backstory_LotusMonk.titleShortFemale>monja</CVG_Backstory_LotusMonk.titleShortFemale>
+  <CVG_Backstory_LotusMonk.description>[PAWN_nameDef] tomó los votos completos en el Templo del Loto Silencioso: templar el cuerpo en los manantiales fríos cada amanecer, recolocar los huesos de los peregrinos cada mediodía y sentarse con los moribundos cada noche. El Templo no enseña a matar, solo a aguantar y a remendar.\n\nPosee un cuenco, un hábito y nada más, y considera que eso ya es una cosa de más.</CVG_Backstory_LotusMonk.description>
+  <!-- Adulthood, tier 3 -->
+  <CVG_Backstory_SwordForger.title>maestro forjador</CVG_Backstory_SwordForger.title>
+  <CVG_Backstory_SwordForger.titleFemale>maestra forjadora</CVG_Backstory_SwordForger.titleFemale>
+  <CVG_Backstory_SwordForger.titleShort>maestro forjador</CVG_Backstory_SwordForger.titleShort>
+  <CVG_Backstory_SwordForger.titleShortFemale>maestra forjadora</CVG_Backstory_SwordForger.titleShortFemale>
+  <CVG_Backstory_SwordForger.description>[PAWN_nameDef] fue maestro forjador del Pico Azur, uno de los pocos cuyas hojas llevan los Ancianos de Espada, plegando hierro espiritual cien veces y escuchándolo entre pliegue y pliegue. Tras la Convergencia plegó plastiacero de la misma manera, para horror de los viejos herreros y deleite de los Ancianos de Espada.\n\n"Una hoja", dice, "es la segunda columna vertebral del forjador". Es casi lo único que dice; habla con el acero con más facilidad que con la gente.</CVG_Backstory_SwordForger.description>
+  <!-- Adulthood, tier 2 -->
+  <CVG_Backstory_FormationMason.title>albañil de formaciones</CVG_Backstory_FormationMason.title>
+  <CVG_Backstory_FormationMason.titleShort>albañil</CVG_Backstory_FormationMason.titleShort>
+  <CVG_Backstory_FormationMason.description>[PAWN_nameDef] levantaba formaciones: piedras colocadas para que el qi de un lugar se curve a su alrededor, muros que zumban, puertas que no se abren para el nombre equivocado. Tras la Convergencia aprendió a pasar un cable de cobre por esas mismas piedras, y los muros zumbaron más fuerte.\n\nLos viejos maestros lo llamaron herejía. A los muros no pareció importarles.</CVG_Backstory_FormationMason.description>
+  <CVG_Backstory_BloodMoonRecruiter.title>reclutador del Culto</CVG_Backstory_BloodMoonRecruiter.title>
+  <CVG_Backstory_BloodMoonRecruiter.titleFemale>reclutadora del Culto</CVG_Backstory_BloodMoonRecruiter.titleFemale>
+  <CVG_Backstory_BloodMoonRecruiter.titleShort>reclutador</CVG_Backstory_BloodMoonRecruiter.titleShort>
+  <CVG_Backstory_BloodMoonRecruiter.titleShortFemale>reclutadora</CVG_Backstory_BloodMoonRecruiter.titleShortFemale>
+  <CVG_Backstory_BloodMoonRecruiter.description>[PAWN_nameDef] reclutaba para el Culto de la Luna Sangrienta a las órdenes de la Santa de Sangre Su Lanyin, buscando a los desesperados, los expulsados y los ambiciosos para prometerles un cultivo sin techo. Trajo a cuarenta discípulos. Treinta acabaron como farolas de alma.\n\nAprendió a no preguntar nunca qué pasa con los enfermos. Era malo para el reclutamiento.</CVG_Backstory_BloodMoonRecruiter.description>
+  <CVG_Backstory_CorporateHunter.title>cazador corporativo</CVG_Backstory_CorporateHunter.title>
+  <CVG_Backstory_CorporateHunter.titleFemale>cazadora corporativa</CVG_Backstory_CorporateHunter.titleFemale>
+  <CVG_Backstory_CorporateHunter.titleShort>cazarrecompensas</CVG_Backstory_CorporateHunter.titleShort>
+  <CVG_Backstory_CorporateHunter.description>[PAWN_nameDef] era contratista de recuperación para Ascension Dynamics: rastreaba portadores de linaje con sensores de campo y los entregaba vivos en cápsulas de criosueño. El contrato decía "sin preguntas", y la prima por un espécimen vivo era muy buena.\n\nDejó de contar a partir de treinta. De todos modos, las cápsulas tenían número.</CVG_Backstory_CorporateHunter.description>
+  <CVG_Backstory_ImperialRegistrar.title>registrador del qi</CVG_Backstory_ImperialRegistrar.title>
+  <CVG_Backstory_ImperialRegistrar.titleFemale>registradora del qi</CVG_Backstory_ImperialRegistrar.titleFemale>
+  <CVG_Backstory_ImperialRegistrar.titleShort>registrador</CVG_Backstory_ImperialRegistrar.titleShort>
+  <CVG_Backstory_ImperialRegistrar.titleShortFemale>registradora</CVG_Backstory_ImperialRegistrar.titleShortFemale>
+  <CVG_Backstory_ImperialRegistrar.description>[PAWN_nameDef] fue funcionario de la Oficina de Orden Psíquico del Imperio: sellaba el registro de cada cultivador que se sometía al Edicto de Conformidad del Qi y archivaba los nombres de los que no lo hacían. La lista de no conformes era larga, y tiene una memoria excelente.\n\nNunca lo entrenaron para pelear. La Oficina tenía a otra gente para eso.</CVG_Backstory_ImperialRegistrar.description>
+  <CVG_Backstory_TribalSpiritSpeaker.title>voz de los espíritus</CVG_Backstory_TribalSpiritSpeaker.title>
+  <CVG_Backstory_TribalSpiritSpeaker.titleShort>portavoz</CVG_Backstory_TribalSpiritSpeaker.titleShort>
+  <CVG_Backstory_TribalSpiritSpeaker.description>Cuando los caminantes de las grietas bajaron por primera vez de las colinas, la tribu de [PAWN_nameDef] envió a su portavoz de los espíritus a recibirlos, y los llamó espíritus, les hizo ofrendas y escuchó. Los cultivadores tuvieron la cortesía de no corregirlo durante toda una estación.\n\nPara cuando lo hicieron, ya había aprendido a respirar como ellos respiraban, y el árbol ánima había empezado a estremecerse cuando se sentaba debajo.</CVG_Backstory_TribalSpiritSpeaker.description>
+  <CVG_Backstory_RiftCartographer.title>cartógrafo de grietas</CVG_Backstory_RiftCartographer.title>
+  <CVG_Backstory_RiftCartographer.titleFemale>cartógrafa de grietas</CVG_Backstory_RiftCartographer.titleFemale>
+  <CVG_Backstory_RiftCartographer.titleShort>cartógrafo</CVG_Backstory_RiftCartographer.titleShort>
+  <CVG_Backstory_RiftCartographer.titleShortFemale>cartógrafa</CVG_Backstory_RiftCartographer.titleShortFemale>
+  <CVG_Backstory_RiftCartographer.description>[PAWN_nameDef] cartografiaba las grietas y los reinos secretos que hay detrás, entrando en lugares que no aparecían en ninguna carta y saliendo, por lo general, con una carta. Un mapa, dice, es la promesa de que el piso seguirá ahí mañana, y las grietas no cumplen bien sus promesas.\n\nEl Pabellón compró los mapas. El Imperio compró las copias del Pabellón.</CVG_Backstory_RiftCartographer.description>
+  <CVG_Backstory_BeastTamer.title>domador de bestias</CVG_Backstory_BeastTamer.title>
+  <CVG_Backstory_BeastTamer.titleFemale>domadora de bestias</CVG_Backstory_BeastTamer.titleFemale>
+  <CVG_Backstory_BeastTamer.titleShort>domador</CVG_Backstory_BeastTamer.titleShort>
+  <CVG_Backstory_BeastTamer.titleShortFemale>domadora</CVG_Backstory_BeastTamer.titleShortFemale>
+  <CVG_Backstory_BeastTamer.description>[PAWN_nameDef] domaba bestias espirituales para el jardín de bestias de una secta de Jiuxiao: halcones de trueno, jabalíes de piedra y un león de melena de hierro al que nadie más se acercaba. Un vínculo, dice, no es una correa; la bestia decide cada mañana si sigue en pie.\n\nEl león lo siguió por la grieta. Está en algún lugar de este planeta.</CVG_Backstory_BeastTamer.description>
+  <CVG_Backstory_PillTester.title>probador de píldoras</CVG_Backstory_PillTester.title>
+  <CVG_Backstory_PillTester.titleFemale>probadora de píldoras</CVG_Backstory_PillTester.titleFemale>
+  <CVG_Backstory_PillTester.titleShort>probador</CVG_Backstory_PillTester.titleShort>
+  <CVG_Backstory_PillTester.titleShortFemale>probadora</CVG_Backstory_PillTester.titleShortFemale>
+  <CVG_Backstory_PillTester.description>El Pabellón del Caldero Celestial le pagaba a [PAWN_nameDef] por tragarse cada píldora nueva antes de que saliera a subasta y describir, por escrito, lo que pasaba después. Sobrevivió a trescientas doce, incluida una que le dejó el cabello blanco durante un mes y otra a la que nadie debería haber sobrevivido.\n\nSu cuerpo ya no confía en nada, ni siquiera en las enfermedades.</CVG_Backstory_PillTester.description>
+  <CVG_Backstory_DragonHunter.title>cazador de dragones</CVG_Backstory_DragonHunter.title>
+  <CVG_Backstory_DragonHunter.titleFemale>cazadora de dragones</CVG_Backstory_DragonHunter.titleFemale>
+  <CVG_Backstory_DragonHunter.titleShort>cazador de dragones</CVG_Backstory_DragonHunter.titleShort>
+  <CVG_Backstory_DragonHunter.titleShortFemale>cazadora de dragones</CVG_Backstory_DragonHunter.titleShortFemale>
+  <CVG_Backstory_DragonHunter.description>[PAWN_nameDef] cazaba a los de sangre de dragón por sus escamas, que el Pabellón compra al peso y Ascension Dynamics por gramo. El Clan del Dragón Antiguo caza a quienes venden escamas, así que aprendió a disparar primero, desollar rápido y no dormir nunca dos veces en el mismo valle.\n\nSigue vivo. El Clan tiene una lista, y está en ella.</CVG_Backstory_DragonHunter.description>
+  <!-- Adulthood, tier 3 -->
+  <CVG_Backstory_SutraLibrarian.title>guardián de sutras</CVG_Backstory_SutraLibrarian.title>
+  <CVG_Backstory_SutraLibrarian.titleFemale>guardiana de sutras</CVG_Backstory_SutraLibrarian.titleFemale>
+  <CVG_Backstory_SutraLibrarian.titleShort>bibliotecario</CVG_Backstory_SutraLibrarian.titleShort>
+  <CVG_Backstory_SutraLibrarian.titleShortFemale>bibliotecaria</CVG_Backstory_SutraLibrarian.titleShortFemale>
+  <CVG_Backstory_SutraLibrarian.description>[PAWN_nameDef] custodiaba la Sala de los Diez Mil Rollos de una secta de Jiuxiao contra las polillas, la humedad y los ladrones, en ese orden de urgencia. Memorizó el catálogo, luego los márgenes y luego los propios rollos.\n\nNunca ha practicado una sola técnica de las que contienen, ni ha empuñado nada más afilado que un abrecartas. Con leerlas le bastó.</CVG_Backstory_SutraLibrarian.description>
+  <CVG_Backstory_RepentantAssassin.title>asesino arrepentido</CVG_Backstory_RepentantAssassin.title>
+  <CVG_Backstory_RepentantAssassin.titleFemale>asesina arrepentida</CVG_Backstory_RepentantAssassin.titleFemale>
+  <CVG_Backstory_RepentantAssassin.titleShort>asesino</CVG_Backstory_RepentantAssassin.titleShort>
+  <CVG_Backstory_RepentantAssassin.titleShortFemale>asesina</CVG_Backstory_RepentantAssassin.titleShortFemale>
+  <CVG_Backstory_RepentantAssassin.description>[PAWN_nameDef] fue un Hilo Rojo del Culto de la Luna Sangrienta, uno de los cuchillos que se envían a llenar las farolas de alma. El último objetivo era un niño bajo la protección de un monje del Loto Silencioso, y el monje no levantó la mano; solo le preguntó su nombre.\n\nSoltó la hoja allí mismo. En su lugar, carga con la lista de nombres, y pesa.</CVG_Backstory_RepentantAssassin.description>
+  <CVG_Backstory_ShellEngineer.title>ingeniero del Hierro</CVG_Backstory_ShellEngineer.title>
+  <CVG_Backstory_ShellEngineer.titleFemale>ingeniera del Hierro</CVG_Backstory_ShellEngineer.titleFemale>
+  <CVG_Backstory_ShellEngineer.titleShort>ingeniero</CVG_Backstory_ShellEngineer.titleShort>
+  <CVG_Backstory_ShellEngineer.titleShortFemale>ingeniera</CVG_Backstory_ShellEngineer.titleShortFemale>
+  <CVG_Backstory_ShellEngineer.description>[PAWN_nameDef] fue uno de los ingenieros de la Era de Hierro, como llama Jiuxiao a los estudiosos que investigan los cascarones caídos de la Calamidad de Hierro en vez de quemarlos. Construyó martillos hidráulicos y formaciones de elevación con los huesos de las máquinas y vendió los diseños a quien pudiera pagar.\n\nConoce esos cascarones mejor que nadie vivo, está seguro de que no todos están vacíos y revisa los cerrojos tres veces cada noche.</CVG_Backstory_ShellEngineer.description>
+  <CVG_Backstory_QiTechnologist.title>tecnólogo del qi</CVG_Backstory_QiTechnologist.title>
+  <CVG_Backstory_QiTechnologist.titleFemale>tecnóloga del qi</CVG_Backstory_QiTechnologist.titleFemale>
+  <CVG_Backstory_QiTechnologist.titleShort>tecnólogo</CVG_Backstory_QiTechnologist.titleShort>
+  <CVG_Backstory_QiTechnologist.titleShortFemale>tecnóloga</CVG_Backstory_QiTechnologist.titleShortFemale>
+  <CVG_Backstory_QiTechnologist.description>[PAWN_nameDef] era un físico del Borde que, tras la Convergencia, apuntó todos los sensores de campo psíquico que pudo pedir prestados a un cultivador en meditación y descubrió que las lecturas cambiaban cuando el cultivador se enojaba. Su artículo, "El campo tiene voluntad", fue motivo de burla en dos universidades y Ascension Dynamics lo compró entero.\n\nSigue pensando que el título era exacto. Su lugar es un laboratorio, no una cantera ni una línea de tiro, y en eso todos están de acuerdo.</CVG_Backstory_QiTechnologist.description>
+  <CVG_Backstory_ReformedDemonic.title>demoníaco reformado</CVG_Backstory_ReformedDemonic.title>
+  <CVG_Backstory_ReformedDemonic.titleFemale>demoníaca reformada</CVG_Backstory_ReformedDemonic.titleFemale>
+  <CVG_Backstory_ReformedDemonic.titleShort>reformado</CVG_Backstory_ReformedDemonic.titleShort>
+  <CVG_Backstory_ReformedDemonic.titleShortFemale>reformada</CVG_Backstory_ReformedDemonic.titleShortFemale>
+  <CVG_Backstory_ReformedDemonic.description>[PAWN_nameDef] recorrió solo el camino de la sangre durante años, tomando qi de cualquier cosa que sangrara y subiendo más rápido que cualquier discípulo de secta. Hasta que una noche el demonio interno le habló con la voz de su madre, y entendió lo que costaría seguir subiendo.\n\nLo selló, perdió la mitad de su cultivo y ahora entrena despacio, con mucho cuidado y muy pocas palabras; ya no confía en su propia voz cuando hay otras personas cerca.</CVG_Backstory_ReformedDemonic.description>
+  <CVG_Backstory_ImplantTechnician.title>técnico de implantes</CVG_Backstory_ImplantTechnician.title>
+  <CVG_Backstory_ImplantTechnician.titleFemale>técnica de implantes</CVG_Backstory_ImplantTechnician.titleFemale>
+  <CVG_Backstory_ImplantTechnician.titleShort>técnico</CVG_Backstory_ImplantTechnician.titleShort>
+  <CVG_Backstory_ImplantTechnician.titleShortFemale>técnica</CVG_Backstory_ImplantTechnician.titleShortFemale>
+  <CVG_Backstory_ImplantTechnician.description>[PAWN_nameDef] instalaba implantes forzadores de meridianos para Ascension Dynamics: filamentos de plastiacero y aleación psíquica que empujan el qi por un cuerpo que nunca estuvo hecho para contenerlo. Vio a sujetos alcanzar Fundación en un mes y consumirse en un año, y archivó cada informe.\n\nSigue creyendo que el diseño tiene arreglo. Tiene notas, y ninguna paciencia para nada que crezca por su cuenta.</CVG_Backstory_ImplantTechnician.description>
+  <CVG_Backstory_MeridianDoctor.title>médico de meridianos</CVG_Backstory_MeridianDoctor.title>
+  <CVG_Backstory_MeridianDoctor.titleFemale>médica de meridianos</CVG_Backstory_MeridianDoctor.titleFemale>
+  <CVG_Backstory_MeridianDoctor.titleShort>médico</CVG_Backstory_MeridianDoctor.titleShort>
+  <CVG_Backstory_MeridianDoctor.titleShortFemale>médica</CVG_Backstory_MeridianDoctor.titleShortFemale>
+  <CVG_Backstory_MeridianDoctor.description>[PAWN_nameDef] se ganaba la vida abriendo meridianos: agujas de plata, moxa y, tras la Convergencia, una sonda de ultrasonido de segunda mano que mostraba los canales mejor que la palma de cualquier maestro. Trataba desviaciones de qi, raíces bloqueadas y las quemaduras de discípulos demasiado ambiciosos, y cobraba según el reino.\n\nHa detenido más demonios internos con una aguja que la mayoría de las sectas con un sutra, y ha jurado no usar nunca una para hacer daño.</CVG_Backstory_MeridianDoctor.description>
+  <!-- Adulthood, tier 4 -->
+  <CVG_Backstory_MinisterAlchemist.title>ministro alquimista</CVG_Backstory_MinisterAlchemist.title>
+  <CVG_Backstory_MinisterAlchemist.titleFemale>ministra alquimista</CVG_Backstory_MinisterAlchemist.titleFemale>
+  <CVG_Backstory_MinisterAlchemist.titleShort>ministro</CVG_Backstory_MinisterAlchemist.titleShort>
+  <CVG_Backstory_MinisterAlchemist.titleShortFemale>ministra</CVG_Backstory_MinisterAlchemist.titleShortFemale>
+  <CVG_Backstory_MinisterAlchemist.description>[PAWN_nameDef] fue primer ministro de un pequeño reino de Jiuxiao que pagaba su tributo al Pabellón del Caldero Celestial en grano y en silencio. Tras años dirigiendo la corte, renunció para estudiar las artes de la píldora, insistiendo en que gobernar un reino y gobernar un horno son la misma disciplina.\n\nLa corte respiró aliviada. El horno todavía no está de acuerdo. Las manos de un ministro firman y sirven té; no cavan, y nunca han sostenido un arma.</CVG_Backstory_MinisterAlchemist.description>
+  <CVG_Backstory_AuctionCaller.title>subastador</CVG_Backstory_AuctionCaller.title>
+  <CVG_Backstory_AuctionCaller.titleFemale>subastadora</CVG_Backstory_AuctionCaller.titleFemale>
+  <CVG_Backstory_AuctionCaller.titleShort>subastador</CVG_Backstory_AuctionCaller.titleShort>
+  <CVG_Backstory_AuctionCaller.titleShortFemale>subastadora</CVG_Backstory_AuctionCaller.titleShortFemale>
+  <CVG_Backstory_AuctionCaller.description>[PAWN_nameDef] dirigía subastas para el Pabellón del Caldero Celestial, vendiendo tablillas de jade, núcleos de bestia y, una vez memorable, la propia espada de un cultivador errante a su dueño. Cada lote venía con un secreto y cada secreto con un precio, y los recuerda todos.\n\nEl Pabellón asegura la voz de un subastador, no sus manos; nunca ha construido, arreglado ni acarreado nada, y considera las herramientas muebles ajenos.</CVG_Backstory_AuctionCaller.description>
+  <CVG_Backstory_FailedTribulant.title>sobreviviente del rayo</CVG_Backstory_FailedTribulant.title>
+  <CVG_Backstory_FailedTribulant.titleShort>sobreviviente</CVG_Backstory_FailedTribulant.titleShort>
+  <CVG_Backstory_FailedTribulant.description>[PAWN_nameDef] intentó la tribulación del Núcleo Dorado demasiado pronto, con píldoras prestadas y sin maestro, en una colina a las afueras de un pueblo que todavía habla de eso. El noveno rayo se llevó su cultivo y le dejó las cicatrices de relámpago que le van del cuello a la muñeca.\n\nDespués se levantó, cosa que nadie esperaba, y ahora enseña paciencia a quien esté dispuesto a quedarse quieto para aprenderla. No puede cargar mucho con esos brazos, y no se acerca al fuego.</CVG_Backstory_FailedTribulant.description>
+  <CVG_Backstory_RetiredAscensionElder.title>anciano de la Puerta</CVG_Backstory_RetiredAscensionElder.title>
+  <CVG_Backstory_RetiredAscensionElder.titleFemale>anciana de la Puerta</CVG_Backstory_RetiredAscensionElder.titleFemale>
+  <CVG_Backstory_RetiredAscensionElder.titleShort>anciano</CVG_Backstory_RetiredAscensionElder.titleShort>
+  <CVG_Backstory_RetiredAscensionElder.titleShortFemale>anciana</CVG_Backstory_RetiredAscensionElder.titleShortFemale>
+  <CVG_Backstory_RetiredAscensionElder.description>[PAWN_nameDef] alcanzó el sexto reino, la Puerta de la Ascensión, y estuvo tres días ante la tribulación final antes de darse la vuelta y bajar la montaña a pie. "El cielo estaba abierto", le dijo a la secta, "y descubrí que no quería irme".\n\nEntregó su cultivo a la formación de la secta y se quedó solo con lo aprendido. La carne de un cultivador conserva la edad de su primer avance, no los años que vienen después, así que la cara es joven; las articulaciones y la paciencia, no. Camina despacio y no hace con las manos nada que pueda hacer un aprendiz.</CVG_Backstory_RetiredAscensionElder.description>
+  <CVG_Backstory_FallenCelestialEmperor.title>emperador caído</CVG_Backstory_FallenCelestialEmperor.title>
+  <CVG_Backstory_FallenCelestialEmperor.titleFemale>emperatriz caída</CVG_Backstory_FallenCelestialEmperor.titleFemale>
+  <CVG_Backstory_FallenCelestialEmperor.titleShort>emperador</CVG_Backstory_FallenCelestialEmperor.titleShort>
+  <CVG_Backstory_FallenCelestialEmperor.titleShortFemale>emperatriz</CVG_Backstory_FallenCelestialEmperor.titleShortFemale>
+  <CVG_Backstory_FallenCelestialEmperor.description>[PAWN_nameDef] se sentaba en el Trono de Jade de un fragmento de Jiuxiao y nueve sectas y cien reinos lo llamaban Emperador Celestial, hasta que una grieta se abrió bajo la sala del trono y se llevó el trono, el fragmento y la mayoría de los reinos. El cultivo le frenó los años hasta casi detenerlos; el reinado duró mucho más de lo que sugiere la cara.\n\nTodavía habla como si la sala estuviera llena, quiere todo lo que ve, y tiene sirvientes para cocinar, barrer y cargar, incluso cuando no hay sirvientes.</CVG_Backstory_FallenCelestialEmperor.description>
+  <CVG_Backstory_HeavenlyOriginHeir.title>heredero del Origen</CVG_Backstory_HeavenlyOriginHeir.title>
+  <CVG_Backstory_HeavenlyOriginHeir.titleFemale>heredera del Origen</CVG_Backstory_HeavenlyOriginHeir.titleFemale>
+  <CVG_Backstory_HeavenlyOriginHeir.titleShort>último heredero</CVG_Backstory_HeavenlyOriginHeir.titleShort>
+  <CVG_Backstory_HeavenlyOriginHeir.titleShortFemale>última heredera</CVG_Backstory_HeavenlyOriginHeir.titleShortFemale>
+  <CVG_Backstory_HeavenlyOriginHeir.description>[PAWN_nameDef] es el último discípulo de la Secta del Origen Celestial, la secta ortodoxa que alguna vez gobernó el cultivo de Jiuxiao y fue exterminada por orden del Dao después de que Xue Jiuyou, uno de los suyos, fundara el Culto de la Luna Sangrienta. Lleva consigo su herencia completa: los sutras, las formas de espada y las artes curativas de una secta que ya no existe.\n\nTambién lleva su duelo. No habla de eso, ni de mucho más, y algunas mañanas no se levanta en absoluto.</CVG_Backstory_HeavenlyOriginHeir.description>
+  <CVG_Backstory_IronCalamityVeteran.title>veterano del Hierro</CVG_Backstory_IronCalamityVeteran.title>
+  <CVG_Backstory_IronCalamityVeteran.titleFemale>veterana del Hierro</CVG_Backstory_IronCalamityVeteran.titleFemale>
+  <CVG_Backstory_IronCalamityVeteran.titleShort>veterano</CVG_Backstory_IronCalamityVeteran.titleShort>
+  <CVG_Backstory_IronCalamityVeteran.titleShortFemale>veterana</CVG_Backstory_IronCalamityVeteran.titleShortFemale>
+  <CVG_Backstory_IronCalamityVeteran.description>[PAWN_nameDef] luchó en la última guerra de la Calamidad de Hierro, cuando la inteligencia de máquina venida de más allá del cielo devoraba el qi de Jiuxiao, y es de los pocos que siguen en pie y la vieron. La Calamidad queda a eras de distancia en la cuenta de Jiuxiao, pero [PAWN_nameDef] avanzó en aquel campo de batalla y desde entonces los años solo caminan. En el Pilar Caído abrió un antiguo cascarón de guerra con las manos desnudas, y las manos nunca han vuelto a cerrarse del todo.\n\nDespués levantó las murallas de tres sectas, porque las murallas no piensan. No soporta un libro, una lección ni un ruido repentino.</CVG_Backstory_IronCalamityVeteran.description>
+  <CVG_Backstory_GrandAlchemist.title>gran alquimista</CVG_Backstory_GrandAlchemist.title>
+  <CVG_Backstory_GrandAlchemist.titleShort>gran alquimista</CVG_Backstory_GrandAlchemist.titleShort>
+  <CVG_Backstory_GrandAlchemist.description>[PAWN_nameDef] fue Gran Alquimista del Pabellón del Caldero Celestial, uno de los poquísimos vivos capaces de refinar una píldora de cuarto grado, y no salió de la sala de los hornos durante más tiempo del que vive la mayoría de la gente. El fuego de las Nueve Vueltas responde a su voz, y también la mitad del libro de deudas del Pabellón.\n\nEl Pabellón mantiene a sus Grandes Alquimistas lejos de todo lo que sangre o pese más que un cucharón; es malo para las manos, y las manos son el activo.</CVG_Backstory_GrandAlchemist.description>
+  <CVG_Backstory_SwordSaintHermit.title>santo de la espada</CVG_Backstory_SwordSaintHermit.title>
+  <CVG_Backstory_SwordSaintHermit.titleFemale>santa de la espada</CVG_Backstory_SwordSaintHermit.titleFemale>
+  <CVG_Backstory_SwordSaintHermit.titleShort>santo de la espada</CVG_Backstory_SwordSaintHermit.titleShort>
+  <CVG_Backstory_SwordSaintHermit.titleShortFemale>santa de la espada</CVG_Backstory_SwordSaintHermit.titleShortFemale>
+  <CVG_Backstory_SwordSaintHermit.description>[PAWN_nameDef] es una de las tres personas vivas a las que el Pico Azur llama Santo de la Espada, y la única que rechazó el título. Vivió solo en una cima del Cementerio de Espadas, cortando la lluvia, y bajó únicamente cuando la Convergencia desgarró la formación.\n\nNo ha dicho una frase completa en años. Cocinar, cuidar enfermos y conversar son cosas que hacen otros; [PAWN_nameDef] tiene una espada.</CVG_Backstory_SwordSaintHermit.description>
+  <CVG_Backstory_SealedDemonLord.title>señor demoníaco</CVG_Backstory_SealedDemonLord.title>
+  <CVG_Backstory_SealedDemonLord.titleFemale>señora demoníaca</CVG_Backstory_SealedDemonLord.titleFemale>
+  <CVG_Backstory_SealedDemonLord.titleShort>señor demoníaco</CVG_Backstory_SealedDemonLord.titleShort>
+  <CVG_Backstory_SealedDemonLord.titleShortFemale>señora demoníaca</CVG_Backstory_SealedDemonLord.titleShortFemale>
+  <CVG_Backstory_SealedDemonLord.description>[PAWN_nameDef] fue un Señor Demoníaco del camino de la sangre, temido por cinco sectas y cortejado por el Culto de la Luna Sangrienta, hasta que una abadesa del Loto Silencioso selló el demonio en su interior con un solo toque y lo dejó marcharse. El sello aguanta. El hambre que contiene no duerme.\n\nNo se le puede confiar a los enfermos ni a los animales, y lo sabe mejor que nadie.</CVG_Backstory_SealedDemonLord.description>
+  <CVG_Backstory_ExiledDragonPatriarch.title>patriarca exiliado</CVG_Backstory_ExiledDragonPatriarch.title>
+  <CVG_Backstory_ExiledDragonPatriarch.titleFemale>matriarca exiliada</CVG_Backstory_ExiledDragonPatriarch.titleFemale>
+  <CVG_Backstory_ExiledDragonPatriarch.titleShort>patriarca</CVG_Backstory_ExiledDragonPatriarch.titleShort>
+  <CVG_Backstory_ExiledDragonPatriarch.titleShortFemale>matriarca</CVG_Backstory_ExiledDragonPatriarch.titleShortFemale>
+  <CVG_Backstory_ExiledDragonPatriarch.description>[PAWN_nameDef] dirigió una casa menor del Clan del Dragón Antiguo durante más tiempo del que duran la mayoría de los reinos, hasta que una guerra perdida contra el Culto de la Luna Sangrienta le costó a la casa su tesoro y la ley del Clan le costó los cuernos. La sangre de dragón mantiene el cuerpo en la edad de su primera muda, así que el exilio parece joven; la voz de mando, la memoria de cada tratado y el gusto por los tesoros son mucho más viejos.\n\nEl Clan cría a sus herederos para gobernar, no para barrer, cocinar ni cargar, y nunca vio motivo para aprender.</CVG_Backstory_ExiledDragonPatriarch.description>
+  <CVG_Backstory_FormationGrandmaster.title>maestro de formaciones</CVG_Backstory_FormationGrandmaster.title>
+  <CVG_Backstory_FormationGrandmaster.titleFemale>maestra de formaciones</CVG_Backstory_FormationGrandmaster.titleFemale>
+  <CVG_Backstory_FormationGrandmaster.titleShort>gran maestro</CVG_Backstory_FormationGrandmaster.titleShort>
+  <CVG_Backstory_FormationGrandmaster.titleShortFemale>gran maestra</CVG_Backstory_FormationGrandmaster.titleShortFemale>
+  <CVG_Backstory_FormationGrandmaster.description>[PAWN_nameDef] fue uno de los doce grandes maestros de formaciones que sostuvieron la Gran Ruptura, trazando las formaciones que impiden que los fragmentos de Jiuxiao se separen del todo. Once de los doce han muerto. [PAWN_nameDef] lleva más reinos que arrugas; los sueños en geometría son mucho más viejos que la cara.\n\nNunca ha peleado, porque las manos de un gran maestro valen más que una espada, y nunca se le ha dado bien la gente, porque la gente no se queda donde se la coloca.</CVG_Backstory_FormationGrandmaster.description>
+  <CVG_Backstory_ImmortalPhysician.title>médico inmortal</CVG_Backstory_ImmortalPhysician.title>
+  <CVG_Backstory_ImmortalPhysician.titleFemale>médica inmortal</CVG_Backstory_ImmortalPhysician.titleFemale>
+  <CVG_Backstory_ImmortalPhysician.titleShort>médico inmortal</CVG_Backstory_ImmortalPhysician.titleShort>
+  <CVG_Backstory_ImmortalPhysician.titleShortFemale>médica inmortal</CVG_Backstory_ImmortalPhysician.titleShortFemale>
+  <CVG_Backstory_ImmortalPhysician.description>[PAWN_nameDef] recorrió Jiuxiao como el Médico Inmortal, curando plagas con una cesta de hierbas y una aguja y rechazando cada secta que le ofreció un asiento y cada rey que le ofreció un palacio. El Loto Silencioso guarda un registro de todos los que ha curado; llena una sala, y la cara sobre la cesta no ha envejecido un día desde que se empezó el registro, como no envejece la cara de un cultivador.\n\nHizo voto de no hacer daño nunca y voto de pobreza, que no deja lugar para herramientas, y ha cumplido ambos.</CVG_Backstory_ImmortalPhysician.description>
+  <!-- Adulthood, tier 1 -->
+  <CVG_Backstory_SwordApprentice.title>aprendiz de espada</CVG_Backstory_SwordApprentice.title>
+  <CVG_Backstory_SwordApprentice.titleShort>aprendiz de espada</CVG_Backstory_SwordApprentice.titleShort>
+  <CVG_Backstory_SwordApprentice.description>[PAWN_nameDef] fue Aprendiz de Espada del Pico Azur, el rango externo que barre los patios de entrenamiento y hace mil cortes antes del desayuno y mil después. Ocho años de las mismas tres formas, hasta que los ancianos dejaron de corregirlas.</CVG_Backstory_SwordApprentice.description>
+  <!-- Adulthood, tier 2 -->
+  <CVG_Backstory_SwordBearer.title>portador de espada</CVG_Backstory_SwordBearer.title>
+  <CVG_Backstory_SwordBearer.titleFemale>portadora de espada</CVG_Backstory_SwordBearer.titleFemale>
+  <CVG_Backstory_SwordBearer.titleShort>portador</CVG_Backstory_SwordBearer.titleShort>
+  <CVG_Backstory_SwordBearer.titleShortFemale>portadora</CVG_Backstory_SwordBearer.titleShortFemale>
+  <CVG_Backstory_SwordBearer.description>[PAWN_nameDef] llegó a Portador de Espada del Pico Azur, el rango interno al que se confía una hoja con nombre del Cementerio de Espadas y el deber de ponerse en primera línea cuando el Culto de la Luna Sangrienta sube por los escalones. La hoja tiene nombre; no lo dice en voz alta.</CVG_Backstory_SwordBearer.description>
+  <!-- Adulthood, tier 3 -->
+  <CVG_Backstory_BladeOfThePeak.title>hoja del Pico</CVG_Backstory_BladeOfThePeak.title>
+  <CVG_Backstory_BladeOfThePeak.titleShort>hoja</CVG_Backstory_BladeOfThePeak.titleShort>
+  <CVG_Backstory_BladeOfThePeak.description>[PAWN_nameDef] fue Hoja del Pico, uno de los discípulos núcleo de la Secta de la Espada del Pico Azur que portan la técnica firma de la secta, la Lluvia de Qi de Espada, y el derecho a desafiar a un anciano. Ganó tres torneos de secta y perdió el cuarto contra Yan Zhao, el joven prodigio, cosa que el Pico no le ha dejado olvidar.\n\nUna Hoja no planta, ni acarrea, ni cocina; la secta tiene aprendices para eso, y nunca aprendió.</CVG_Backstory_BladeOfThePeak.description>
+  <!-- Adulthood, tier 1 -->
+  <CVG_Backstory_LotusLayApprentice.title>aprendiz del Loto</CVG_Backstory_LotusLayApprentice.title>
+  <CVG_Backstory_LotusLayApprentice.titleShort>aprendiz laico</CVG_Backstory_LotusLayApprentice.titleShort>
+  <CVG_Backstory_LotusLayApprentice.titleShortFemale>aprendiz laica</CVG_Backstory_LotusLayApprentice.titleShortFemale>
+  <CVG_Backstory_LotusLayApprentice.description>[PAWN_nameDef] sirvió como aprendiz laico del Templo del Loto Silencioso, el rango anterior a los votos: cambiaba vendajes en el pabellón de peregrinos, hervía caldo amargo y sostenía las manos de aquellos a los que los monjes no podían salvar.</CVG_Backstory_LotusLayApprentice.description>
+  <!-- Adulthood, tier 3 -->
+  <CVG_Backstory_VajraGuardian.title>guardián Vajra</CVG_Backstory_VajraGuardian.title>
+  <CVG_Backstory_VajraGuardian.titleFemale>guardiana Vajra</CVG_Backstory_VajraGuardian.titleFemale>
+  <CVG_Backstory_VajraGuardian.titleShort>guardián</CVG_Backstory_VajraGuardian.titleShort>
+  <CVG_Backstory_VajraGuardian.titleShortFemale>guardiana</CVG_Backstory_VajraGuardian.titleShortFemale>
+  <CVG_Backstory_VajraGuardian.description>[PAWN_nameDef] fue Guardián del Templo del Loto Silencioso, uno de los monjes que templan el cuerpo hasta que un puño detiene una espada y cuya palma, la Palma Vajra, aturde a un buey. Los Guardianes se plantan en las puertas de las pagodas para que los sanadores de dentro nunca tengan que levantar la mano.\n\nTomó los votos del Templo por completo: no matar por placer, ni armas, ni posesiones, ni explicaciones.</CVG_Backstory_VajraGuardian.description>
+  <!-- Adulthood, tier 1 -->
+  <CVG_Backstory_CauldronApprentice.title>aprendiz de caldero</CVG_Backstory_CauldronApprentice.title>
+  <CVG_Backstory_CauldronApprentice.titleShort>aprendiz</CVG_Backstory_CauldronApprentice.titleShort>
+  <CVG_Backstory_CauldronApprentice.description>[PAWN_nameDef] fue Aprendiz de Caldero del Pabellón del Caldero Celestial: molía hierbas, alimentaba el horno y probaba cada lote fallido para que el alquimista no tuviera que hacerlo. Hubo muchos lotes fallidos.</CVG_Backstory_CauldronApprentice.description>
+  <!-- Adulthood, tier 2 -->
+  <CVG_Backstory_PavilionAlchemist.title>alquimista del gremio</CVG_Backstory_PavilionAlchemist.title>
+  <CVG_Backstory_PavilionAlchemist.titleShort>alquimista</CVG_Backstory_PavilionAlchemist.titleShort>
+  <CVG_Backstory_PavilionAlchemist.description>[PAWN_nameDef] refinaba píldoras de primer y segundo grado para el Pabellón del Caldero Celestial: de Reunión de Qi, de Fundación, las píldoras de curación baratas que las sectas compran por cajas. Un buen alquimista, decía el Pabellón, y uno rentable, que valoraba más.\n\nTodavía firma cada píldora con una marca diminuta en la cáscara. Nadie se ha dado cuenta nunca.</CVG_Backstory_PavilionAlchemist.description>
+  <!-- Adulthood, tier 3 -->
+  <CVG_Backstory_CauldronMaster.title>maestro de caldero</CVG_Backstory_CauldronMaster.title>
+  <CVG_Backstory_CauldronMaster.titleFemale>maestra de caldero</CVG_Backstory_CauldronMaster.titleFemale>
+  <CVG_Backstory_CauldronMaster.titleShort>maestro de caldero</CVG_Backstory_CauldronMaster.titleShort>
+  <CVG_Backstory_CauldronMaster.titleShortFemale>maestra de caldero</CVG_Backstory_CauldronMaster.titleShortFemale>
+  <CVG_Backstory_CauldronMaster.description>[PAWN_nameDef] tuvo el rango de Maestro de Caldero en el Pabellón del Caldero Celestial, con horno propio, tres aprendices y el derecho a refinar píldoras de tercer grado para subasta. El fuego de las Nueve Vueltas todavía no le responde, pero lo escucha.\n\nEl contrato del Pabellón prohíbe a un Maestro de Caldero pelear, cavar o acarrear, bajo pena de perder el horno. Ha leído el contrato con atención.</CVG_Backstory_CauldronMaster.description>
+  <!-- Adulthood, tier 2 -->
+  <CVG_Backstory_VeinFinder.title>buscavetas</CVG_Backstory_VeinFinder.title>
+  <CVG_Backstory_VeinFinder.titleShort>buscavetas</CVG_Backstory_VeinFinder.titleShort>
+  <CVG_Backstory_VeinFinder.description>[PAWN_nameDef] fue buscavetas: recorría las colinas por delante de los gremios mineros de Jiuxiao con una vara horquillada de madera de duraznero y un dolor de muelas que empeora cuanto más cerca está la piedra espiritual. Los gremios pagan por veta, el Pabellón paga por el mapa y el Clan del Dragón le paga por no acercarse a sus montañas.</CVG_Backstory_VeinFinder.description>
+  <!-- Adulthood, tier 3 -->
+  <CVG_Backstory_MountainOpener.title>abremontañas</CVG_Backstory_MountainOpener.title>
+  <CVG_Backstory_MountainOpener.titleShort>abremontañas</CVG_Backstory_MountainOpener.titleShort>
+  <CVG_Backstory_MountainOpener.description>[PAWN_nameDef] fue abremontañas, uno de los cultivadores del camino de la tierra que los gremios mineros de Jiuxiao contratan para partir una ladera de un solo golpe donde cuarenta picos tardarían una estación. El Pico Azur llama a la técnica Golpe Parte-Montañas y la enseña para la guerra; los gremios pagan mejor.\n\nAños de eso le grabaron el qi de tierra en los huesos y el silencio de las galerías en los modales. Le habla a la roca con más soltura que a la gente.</CVG_Backstory_MountainOpener.description>
+  <!-- Adulthood, tier 1 -->
+  <CVG_Backstory_JadeSlipEngraver.title>grabador de jade</CVG_Backstory_JadeSlipEngraver.title>
+  <CVG_Backstory_JadeSlipEngraver.titleFemale>grabadora de jade</CVG_Backstory_JadeSlipEngraver.titleFemale>
+  <CVG_Backstory_JadeSlipEngraver.titleShort>grabador</CVG_Backstory_JadeSlipEngraver.titleShort>
+  <CVG_Backstory_JadeSlipEngraver.titleShortFemale>grabadora</CVG_Backstory_JadeSlipEngraver.titleShortFemale>
+  <CVG_Backstory_JadeSlipEngraver.description>[PAWN_nameDef] grababa tablillas de jade, las tablas en las que Jiuxiao registra sus técnicas: una aguja, un soplo firme de qi y diez mil caracteres por tablilla. Grababa manuales que no tenía permiso de leer, y los leía de todos modos, un carácter a la vez.</CVG_Backstory_JadeSlipEngraver.description>
+  <!-- Adulthood, tier 2 -->
+  <CVG_Backstory_SlipAppraiser.title>tasador de tablillas</CVG_Backstory_SlipAppraiser.title>
+  <CVG_Backstory_SlipAppraiser.titleFemale>tasadora de tablillas</CVG_Backstory_SlipAppraiser.titleFemale>
+  <CVG_Backstory_SlipAppraiser.titleShort>tasador</CVG_Backstory_SlipAppraiser.titleShort>
+  <CVG_Backstory_SlipAppraiser.titleShortFemale>tasadora</CVG_Backstory_SlipAppraiser.titleShortFemale>
+  <CVG_Backstory_SlipAppraiser.description>[PAWN_nameDef] tasaba tablillas de jade para las subastas del Pabellón del Caldero Celestial: qué manuales estaban completos, cuáles se habían copiado con un trazo de menos que retorcería un meridiano, cuáles eran falsificaciones de los mercados nocturnos. Los cultivadores errantes le traían tablillas desenterradas de cuevas de herencia, y les decía, con delicadeza, cuánto valían.\n\nLa mayoría valía el jade.</CVG_Backstory_SlipAppraiser.description>
+  <!-- Childhood, tier 2 -->
+  <CVG_Backstory_AppraisersApprentice.title>aprendiz de tasador</CVG_Backstory_AppraisersApprentice.title>
+  <CVG_Backstory_AppraisersApprentice.titleFemale>aprendiz de tasadora</CVG_Backstory_AppraisersApprentice.titleFemale>
+  <CVG_Backstory_AppraisersApprentice.titleShort>aprendiz</CVG_Backstory_AppraisersApprentice.titleShort>
+  <CVG_Backstory_AppraisersApprentice.description>A los ocho años, [PAWN_nameDef] entró de aprendiz con un tasador de tablillas del Pabellón del Caldero Celestial, puliendo tablillas de jade y aprendiendo a distinguir un manual verdadero de una falsificación de mercado nocturno por la profundidad de los trazos. A los doce detectaba un carácter faltante más rápido que el maestro, y tenía cuidado de no decirlo nunca.</CVG_Backstory_AppraisersApprentice.description>
+  <!-- Adulthood, tier 1 -->
+  <CVG_Backstory_BellowsStriker.title>machacador de forja</CVG_Backstory_BellowsStriker.title>
+  <CVG_Backstory_BellowsStriker.titleFemale>machacadora de forja</CVG_Backstory_BellowsStriker.titleFemale>
+  <CVG_Backstory_BellowsStriker.titleShort>machacador</CVG_Backstory_BellowsStriker.titleShort>
+  <CVG_Backstory_BellowsStriker.titleShortFemale>machacadora</CVG_Backstory_BellowsStriker.titleShortFemale>
+  <CVG_Backstory_BellowsStriker.description>[PAWN_nameDef] fue machacador en una forja de las faldas del Pico Azur: blandía el martillo grande donde señalaba el herrero, hacía hojas de práctica y herraduras y, una vez al año, le dejaban sostener las tenazas mientras el maestro plegaba hierro espiritual.</CVG_Backstory_BellowsStriker.description>
+  <!-- Adulthood, tier 2 -->
+  <CVG_Backstory_ShellSmith.title>herrero de cascarones</CVG_Backstory_ShellSmith.title>
+  <CVG_Backstory_ShellSmith.titleFemale>herrera de cascarones</CVG_Backstory_ShellSmith.titleFemale>
+  <CVG_Backstory_ShellSmith.titleShort>herrero</CVG_Backstory_ShellSmith.titleShort>
+  <CVG_Backstory_ShellSmith.titleShortFemale>herrera</CVG_Backstory_ShellSmith.titleShortFemale>
+  <CVG_Backstory_ShellSmith.description>[PAWN_nameDef] fue herrero de cascarones del Pico Azur, uno de los herreros que trabajan los cascarones caídos de la Calamidad de Hierro para hacer hojas, como hace la secta desde que las Espadas del Cielo Roto se forjaron con las primeras máquinas muertas. El metal se resiste al martillo y recuerda lo que fue.\n\nDesde la Convergencia tiene plastiacero con qué compararlo, y dice que los cascarones siguen siendo más duros.</CVG_Backstory_ShellSmith.description>
+  <!-- Childhood, tier 1 -->
+  <CVG_Backstory_BeastGardenChild.title>niño del bestiario</CVG_Backstory_BeastGardenChild.title>
+  <CVG_Backstory_BeastGardenChild.titleFemale>niña del bestiario</CVG_Backstory_BeastGardenChild.titleFemale>
+  <CVG_Backstory_BeastGardenChild.titleShort>niño del jardín</CVG_Backstory_BeastGardenChild.titleShort>
+  <CVG_Backstory_BeastGardenChild.titleShortFemale>niña del jardín</CVG_Backstory_BeastGardenChild.titleShortFemale>
+  <CVG_Backstory_BeastGardenChild.description>[PAWN_nameDef] limpiaba el jardín de bestias de una secta desde los seis años, alimentando halcones de trueno y jabalíes de piedra y aprendiendo cuáles muerden.</CVG_Backstory_BeastGardenChild.description>
+  <!-- Adulthood, tier 1 -->
+  <CVG_Backstory_BeastGardenHand.title>peón del bestiario</CVG_Backstory_BeastGardenHand.title>
+  <CVG_Backstory_BeastGardenHand.titleFemale>peona del bestiario</CVG_Backstory_BeastGardenHand.titleFemale>
+  <CVG_Backstory_BeastGardenHand.titleShort>peón del jardín</CVG_Backstory_BeastGardenHand.titleShort>
+  <CVG_Backstory_BeastGardenHand.titleShortFemale>peona del jardín</CVG_Backstory_BeastGardenHand.titleShortFemale>
+  <CVG_Backstory_BeastGardenHand.description>[PAWN_nameDef] trabajaba en el jardín de bestias de una secta de Jiuxiao: alimentar, cepillar, acarrear estiércol y evitar que los jabalíes de piedra se comieran las perchas de los halcones de trueno. Nunca domó nada, pero sabe qué come cada bestia de un jardín y cuándo está a punto de morder.</CVG_Backstory_BeastGardenHand.description>
+  <!-- Adulthood, tier 3 -->
+  <CVG_Backstory_BeastTideWalker.title>caminante de mareas</CVG_Backstory_BeastTideWalker.title>
+  <CVG_Backstory_BeastTideWalker.titleShort>caminante de mareas</CVG_Backstory_BeastTideWalker.titleShort>
+  <CVG_Backstory_BeastTideWalker.description>[PAWN_nameDef] fue caminante de mareas: un cultivador que sale solo al encuentro de una marea de bestias y vuelve con la marea caminando detrás. Las sectas lo pagan, las aldeas lo rezan, y las bestias, ligadas por contratos de sangre y paciencia en vez de jaulas, lo siguen porque lo eligieron.\n\nEntiende a las bestias mucho mejor que a la gente, y ha dejado de fingir lo contrario.</CVG_Backstory_BeastTideWalker.description>
+  <!-- Adulthood, tier 1 -->
+  <CVG_Backstory_ArrayApprentice.title>aprendiz de formación</CVG_Backstory_ArrayApprentice.title>
+  <CVG_Backstory_ArrayApprentice.titleShort>aprendiz</CVG_Backstory_ArrayApprentice.titleShort>
+  <CVG_Backstory_ArrayApprentice.description>[PAWN_nameDef] cargaba piedras para un maestro de formaciones, colocando cada una exactamente donde señalaba el pie del maestro y aprendiendo, despacio, por qué. Las murallas de cuatro puestos de secta se apoyan en piedras que colocó.</CVG_Backstory_ArrayApprentice.description>
+  <!-- Adulthood, tier 2 -->
+  <CVG_Backstory_CloudStepMessenger.title>mensajero de nube</CVG_Backstory_CloudStepMessenger.title>
+  <CVG_Backstory_CloudStepMessenger.titleFemale>mensajera de nube</CVG_Backstory_CloudStepMessenger.titleFemale>
+  <CVG_Backstory_CloudStepMessenger.titleShort>mensajero</CVG_Backstory_CloudStepMessenger.titleShort>
+  <CVG_Backstory_CloudStepMessenger.titleShortFemale>mensajera</CVG_Backstory_CloudStepMessenger.titleShortFemale>
+  <CVG_Backstory_CloudStepMessenger.description>[PAWN_nameDef] fue mensajero del paso de nube, uno de los correos a los que las sectas confían las cartas que empiezan o detienen guerras, entrenado en el Paso Errante hasta que una carrera de un día se volvió de una mañana. Ha dejado atrás flechas, mareas de bestias y, una vez, a un cobrador del Pabellón, que fue más difícil.</CVG_Backstory_CloudStepMessenger.description>
+  <CVG_Backstory_EldersTableCook.title>cocinero de ancianos</CVG_Backstory_EldersTableCook.title>
+  <CVG_Backstory_EldersTableCook.titleFemale>cocinera de ancianos</CVG_Backstory_EldersTableCook.titleFemale>
+  <CVG_Backstory_EldersTableCook.titleShort>cocinero de ancianos</CVG_Backstory_EldersTableCook.titleShort>
+  <CVG_Backstory_EldersTableCook.titleShortFemale>cocinera de ancianos</CVG_Backstory_EldersTableCook.titleShortFemale>
+  <CVG_Backstory_EldersTableCook.description>[PAWN_nameDef] cocinaba para la mesa de los ancianos de una gran secta, donde un cuenco de arroz debe llevar exactamente el qi que quiere un estómago de Núcleo Dorado y un condimento equivocado puede costar un avance. Los ancianos nunca se quejaron. Los ancianos nunca se quejan; simplemente dejan de venir.\n\nSiguieron viniendo.</CVG_Backstory_EldersTableCook.description>
+  <CVG_Backstory_RenownedWanderer.title>errante de renombre</CVG_Backstory_RenownedWanderer.title>
+  <CVG_Backstory_RenownedWanderer.titleShort>errante</CVG_Backstory_RenownedWanderer.titleShort>
+  <CVG_Backstory_RenownedWanderer.description>[PAWN_nameDef] fue un nombre de renombre entre los cultivadores errantes de Jiuxiao, de los que la Posada de la Nube Errante cuelga una placa: doce duelos ganados en el propio piso de la posada, una técnica prestada de cada secta a la que molestó alguna vez y una reputación que llega un día antes que él.\n\nDebe dinero en cuatro pueblos y es bienvenido en todos.</CVG_Backstory_RenownedWanderer.description>
+</LanguageData>

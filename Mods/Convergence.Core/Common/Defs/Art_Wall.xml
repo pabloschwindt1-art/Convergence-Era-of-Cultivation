@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Hanging-scroll art (docs/modulos/DIA_A_DIA.md, part 3b): calligraphy scrolls and ink paintings, made at the calligraphy desk
+    with the vanilla art system (quality, tales). Shown on a standing wooden scroll stand, built like the vanilla small
+    sculpture (1x1 floor art, not rotatable, minifiable). Hanging them on walls was tried and read badly.
+  -->
+  <ThingDef Name="CVG_ScrollArtBase" ParentName="ArtBuildingBase" Abstract="True">
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsArt</li>
+    </thingCategories>
+    <fillPercent>0.3</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <SellPriceFactor>1.10</SellPriceFactor>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Art">
+        <nameMaker>CVG_NamerArtWuxia</nameMaker>
+        <descriptionMaker>CVG_ArtDescription_Scroll</descriptionMaker>
+        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+    </placeWorkers>
+    <tradeTags>
+      <li>Art</li>
+    </tradeTags>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Artistic</workSkill>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Sculpt</soundWorking>
+      <recipeUsers>
+        <li>CVG_CalligraphyDesk</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_ScrollArtBase">
+    <defName>CVG_CalligraphyScroll</defName>
+    <label>calligraphy scroll</label>
+    <description>A hanging scroll of characters brushed in one breath: a line of the Daodejing, a sect motto, a poem about rain on the bamboo. Hung on its stand, it lifts the room; masters say you can read the calligrapher's heart in the tremble of each stroke.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/CalligraphyScroll</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(1.2,1.2)</drawSize>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <Mass>0.5</Mass>
+      <Beauty>35</Beauty>
+      <WorkToMake>6000</WorkToMake>
+    </statBases>
+    <costList>
+      <Cloth>6</Cloth>
+      <WoodLog>4</WoodLog>
+    </costList>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_ScrollArtBase">
+    <defName>CVG_InkPainting</defName>
+    <label>ink painting</label>
+    <description>Mountains, mist and a lone scholar in a boat, painted in shades of a single ink. The painters of the Song dynasty left most of the silk empty, so that the eye would wander; the best ink paintings of the sects hide a sword path in the mountains.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/InkPainting</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(1.2,1.2)</drawSize>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <Mass>0.5</Mass>
+      <Beauty>60</Beauty>
+      <WorkToMake>12000</WorkToMake>
+    </statBases>
+    <costList>
+      <Cloth>12</Cloth>
+      <WoodLog>4</WoodLog>
+    </costList>
+  </ThingDef>
+
+  <!-- The calligraphy desk is also a work table for scroll art; vanilla art bills are done by this work giver. -->
+  <WorkGiverDef>
+    <defName>CVG_DoBillsCalligraphy</defName>
+    <label>make scrolls at calligraphy desk</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Art</workType>
+    <priorityInType>90</priorityInType>
+    <fixedBillGiverDefs>
+      <li>CVG_CalligraphyDesk</li>
+    </fixedBillGiverDefs>
+    <verb>paint at</verb>
+    <gerund>painting at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+</Defs>

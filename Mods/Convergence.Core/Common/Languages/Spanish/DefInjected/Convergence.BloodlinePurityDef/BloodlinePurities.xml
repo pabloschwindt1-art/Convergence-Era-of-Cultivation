@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Purity_Trace.label>rastro</CVG_Purity_Trace.label>
+  <CVG_Purity_Trace.description>Un rastro de sangre de bestia, dormido durante generaciones. Dones pequeños y un defecto leve.</CVG_Purity_Trace.description>
+  <CVG_Purity_Diluted.label>diluida</CVG_Purity_Diluted.label>
+  <CVG_Purity_Diluted.description>Sangre aguada por generaciones, pero despierta: dones notables, la primera capacidad innata y defectos marcados.</CVG_Purity_Diluted.description>
+  <CVG_Purity_Pure.label>pura</CVG_Purity_Pure.label>
+  <CVG_Purity_Pure.description>La sangre corre sin mezcla: dones fuertes, una segunda capacidad innata y solo defectos leves.</CVG_Purity_Pure.description>
+  <CVG_Purity_Ancestral.label>ancestral</CVG_Purity_Ancestral.label>
+  <CVG_Purity_Ancestral.description>La sangre de las primeras bestias. Dones enormes, la capacidad suprema y casi ningún defecto.</CVG_Purity_Ancestral.description>
+</LanguageData>

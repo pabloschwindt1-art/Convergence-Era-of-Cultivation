@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_InnerDemon.label>demonio interno</CVG_InnerDemon.label>
+  <CVG_InnerDemon.recoveryMessage>{0} expulsó al demonio interno, pero el qi sigue revuelto.</CVG_InnerDemon.recoveryMessage>
+  <CVG_InnerDemon.beginLetterLabel>demonio interno</CVG_InnerDemon.beginLetterLabel>
+  <CVG_InnerDemon.beginLetter>Un demonio interno (心魔) asalta a {0}: las dudas, los remordimientos y los deseos toman forma en su mente. Vaga perdido hasta que pase, y el qi le quedará desordenado.</CVG_InnerDemon.beginLetter>
+  <CVG_InnerDemon.baseInspectLine>Estado mental: demonio interno</CVG_InnerDemon.baseInspectLine>
+</LanguageData>

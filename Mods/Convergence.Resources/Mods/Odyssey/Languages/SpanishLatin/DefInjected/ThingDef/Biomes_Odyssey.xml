@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_FireCrystal.label>cristal de fuego espiritual</CVG_FireCrystal.label>
+  <CVG_FireCrystal.description>Cristal crecido en ríos de lava. Casi no conduce el calor; las armaduras y muros de él resisten el fuego. El horno de refinado lo quema como combustible.</CVG_FireCrystal.description>
+  <CVG_MineableFireCrystal.label>veta de cristal de fuego</CVG_MineableFireCrystal.label>
+  <CVG_MineableFireCrystal.description>Vetas de cristal nacidas de la lava, solo en campos de lava. Siguen tibias años después de cortadas, y las forjas del sur guardan una en el hogar para despertar el fuego.</CVG_MineableFireCrystal.description>
+  <CVG_MoonJade.label>jade lunar</CVG_MoonJade.label>
+  <CVG_MoonJade.description>Jade azul pálido de los bosques luminosos; brilla suave de noche. Hermoso, y se dice que calma a los muertos inquietos.</CVG_MoonJade.description>
+  <CVG_MineableMoonJade.label>veta de jade lunar</CVG_MineableMoonJade.label>
+  <CVG_MineableMoonJade.description>Jade que brilla como la luna, solo en bosques luminosos. Dicen que crece donde la luz de la luna cayó sobre la misma piedra mil noches seguidas.</CVG_MineableMoonJade.description>
+  <CVG_BloodJade.label>jade de sangre</CVG_BloodJade.label>
+  <CVG_BloodJade.description>Jade rojo de las tierras marcadas, veteado como carne. El camino demoníaco lo atesora; sus muros inquietan.</CVG_BloodJade.description>
+  <CVG_MineableBloodJade.label>veta de jade de sangre</CVG_MineableBloodJade.label>
+  <CVG_MineableBloodJade.description>Jade del color de la sangre seca, solo en tierras marcadas. El camino demoníaco afirma que cada veta señala un campo de batalla de la Calamidad de Hierro, y nadie ha probado lo contrario.</CVG_MineableBloodJade.description>
+  <CVG_DragonObsidian.label>obsidiana de dragón</CVG_DragonObsidian.label>
+  <CVG_DragonObsidian.description>Vidrio volcánico negro con reflejos rojos; se dice que es sangre de dragón enfriada en la lava. Dura y cortante.</CVG_DragonObsidian.description>
+  <CVG_SmoothedDragonObsidian.label>obsidiana de dragón pulida</CVG_SmoothedDragonObsidian.label>
+  <CVG_SmoothedDragonObsidian.description>Vidrio volcánico negro con reflejos rojos, pulido como un espejo. Los ancianos del Clan leen el futuro en su reflejo, y rara vez dicen lo que vieron.</CVG_SmoothedDragonObsidian.description>
+  <CVG_ChunkDragonObsidian.label>trozo de obsidiana de dragón</CVG_ChunkDragonObsidian.label>
+  <CVG_BlocksDragonObsidian.label>bloques de obsidiana de dragón</CVG_BlocksDragonObsidian.label>
+  <CVG_BlocksDragonObsidian.description>Bloques de obsidiana de dragón: duros, cortantes y resistentes al fuego. El Clan del Dragón Antiguo levanta con ella sus salones del tesoro, porque ningún fuego de ladrón agrieta los muros.</CVG_BlocksDragonObsidian.description>
+  <CVG_BlocksDragonObsidian.stuffProps.stuffAdjective>obsidiana de dragón</CVG_BlocksDragonObsidian.stuffProps.stuffAdjective>
+  <CVG_FlameLotusPetal.label>pétalo de loto de llama</CVG_FlameLotusPetal.label>
+  <CVG_FlameLotusPetal.description>Un pétalo del loto que florece en la lava. Mascado, mantiene el cuerpo caliente un día (temperatura cómoda -25 °C). Yang puro para la alquimia.</CVG_FlameLotusPetal.description>
+  <CVG_Plant_FlameLotus.label>loto de llama</CVG_Plant_FlameLotus.label>
+  <CVG_Plant_FlameLotus.description>Un loto rojo que florece sobre la lava enfriada. Las leyendas del sur dicen que el Ave Bermellón descansó una vez sobre un campo de lava, y el loto creció donde plegó las alas.</CVG_Plant_FlameLotus.description>
+  <CVG_GlowCap.label>hongo luminoso espiritual</CVG_GlowCap.label>
+  <CVG_GlowCap.description>Un hongo espiritual luminoso de los bosques luminosos. Comido, agudiza la vista durante un día.</CVG_GlowCap.description>
+  <CVG_Plant_GlowMushroom.label>hongo luminoso espiritual</CVG_Plant_GlowMushroom.label>
+  <CVG_Plant_GlowMushroom.description>Un hongo espiritual luminoso de los bosques luminosos. Los errantes perdidos en los bosques luminosos siguen su luz, y los afortunados llegan al borde antes del amanecer.</CVG_Plant_GlowMushroom.description>
+  <CVG_FlameLotusPetal.ingestible.ingestCommandString>Tomar {0}</CVG_FlameLotusPetal.ingestible.ingestCommandString>
+  <CVG_FlameLotusPetal.ingestible.ingestReportString>Tomando {0}.</CVG_FlameLotusPetal.ingestible.ingestReportString>
+  <CVG_GlowCap.ingestible.ingestCommandString>Tomar {0}</CVG_GlowCap.ingestible.ingestCommandString>
+  <CVG_GlowCap.ingestible.ingestReportString>Tomando {0}.</CVG_GlowCap.ingestible.ingestReportString>
+</LanguageData>

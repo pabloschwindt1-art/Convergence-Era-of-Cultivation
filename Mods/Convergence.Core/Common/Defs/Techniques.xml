@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Cultivation techniques (M5). A technique is a vanilla AbilityDef with:
+      - Convergence.TechniqueExtension (modExtensions): manual, tier (row), order, minRealm, prerequisites (ANY of them),
+        requiresElement, unlockCost, masteryXpPerUse and optional realmPowerCurve / masteryPowerCurve.
+      - Convergence.CompProperties_AbilityResourceCost: cost in the resource of the manual's path (qi).
+      - Generic effect comps: TechniqueProjectile, TechniqueHediff, Cone (Convergence) or any vanilla comp.
+    Power = realm x mastery x element affinity; it scales damage, shields and durations.
+    Icons: provisional = the element icon of the root genes. Own art goes in UI/Techniques/<defName>.png and is picked up
+    automatically (see docs/ARTE.md).
+  -->
+
+  <AbilityCategoryDef>
+    <defName>CVG_Technique</defName>
+    <displayOrder>310</displayOrder>
+  </AbilityCategoryDef>
+
+  <!-- ================= Mastery levels (by use) ================= -->
+  <Convergence.TechniqueMasteryDef>
+    <defName>CVG_Mastery_Novice</defName>
+    <label>novice</label>
+    <order>1</order>
+    <xpRequired>0</xpRequired>
+    <color>(0.75, 0.75, 0.75)</color>
+  </Convergence.TechniqueMasteryDef>
+  <Convergence.TechniqueMasteryDef>
+    <defName>CVG_Mastery_Adept</defName>
+    <label>adept</label>
+    <order>2</order>
+    <xpRequired>100</xpRequired>
+    <powerFactor>1.1</powerFactor>
+    <costFactor>0.95</costFactor>
+    <cooldownFactor>0.9</cooldownFactor>
+    <color>(0.55, 0.85, 0.55)</color>
+  </Convergence.TechniqueMasteryDef>
+  <Convergence.TechniqueMasteryDef>
+    <defName>CVG_Mastery_Expert</defName>
+    <label>expert</label>
+    <order>3</order>
+    <xpRequired>300</xpRequired>
+    <powerFactor>1.25</powerFactor>
+    <costFactor>0.9</costFactor>
+    <cooldownFactor>0.8</cooldownFactor>
+    <color>(0.45, 0.7, 1)</color>
+  </Convergence.TechniqueMasteryDef>
+  <Convergence.TechniqueMasteryDef>
+    <defName>CVG_Mastery_Master</defName>
+    <label>master</label>
+    <order>4</order>
+    <xpRequired>700</xpRequired>
+    <powerFactor>1.4</powerFactor>
+    <costFactor>0.8</costFactor>
+    <cooldownFactor>0.7</cooldownFactor>
+    <color>(0.75, 0.5, 1)</color>
+  </Convergence.TechniqueMasteryDef>
+  <Convergence.TechniqueMasteryDef>
+    <defName>CVG_Mastery_Peerless</defName>
+    <label>peerless</label>
+    <order>5</order>
+    <xpRequired>1500</xpRequired>
+    <powerFactor>1.6</powerFactor>
+    <costFactor>0.7</costFactor>
+    <cooldownFactor>0.6</cooldownFactor>
+    <color>(1, 0.8, 0.3)</color>
+  </Convergence.TechniqueMasteryDef>
+
+  <!-- ================= Manuals (one per element) ================= -->
+  <Convergence.TechniqueManualDef>
+    <defName>CVG_Manual_GoldenEdge</defName>
+    <label>Golden Edge Scripture</label>
+    <description>A sword sect's foundation manual. It teaches to compress metal qi into needles as sharp as a blade and to wrap the body in a bell of qi that turns blows aside.</description>
+    <path>CVG_Path_Qi</path>
+    <requiredResearch>CVG_Research_TechniqueManuals</requiredResearch>
+    <element>CVG_Element_Metal</element>
+    <order>1</order>
+    <openedByRoot>true</openedByRoot>
+    <fromJadeSlips>false</fromJadeSlips>
+    <cardTexPath>UI/Paths/CVG_Path_Metal</cardTexPath>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Metal</iconPath>
+  </Convergence.TechniqueManualDef>
+  <Convergence.TechniqueManualDef>
+    <defName>CVG_Manual_EvergreenSutra</defName>
+    <label>Evergreen Sutra</label>
+    <description>A healer's sutra. Wood qi grows thorns that poison the enemy and springs of life that close wounds.</description>
+    <path>CVG_Path_Qi</path>
+    <requiredResearch>CVG_Research_TechniqueManuals</requiredResearch>
+    <element>CVG_Element_Wood</element>
+    <order>2</order>
+    <openedByRoot>true</openedByRoot>
+    <fromJadeSlips>false</fromJadeSlips>
+    <cardTexPath>UI/Paths/CVG_Path_Wood</cardTexPath>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Wood</iconPath>
+  </Convergence.TechniqueManualDef>
+  <Convergence.TechniqueManualDef>
+    <defName>CVG_Manual_FlowingCloud</defName>
+    <label>Flowing Cloud Manual</label>
+    <description>Water qi is patient and never where the enemy strikes. Frost shards, freezing breath and the light step that crosses a battlefield in a heartbeat.</description>
+    <path>CVG_Path_Qi</path>
+    <requiredResearch>CVG_Research_TechniqueManuals</requiredResearch>
+    <element>CVG_Element_Water</element>
+    <order>3</order>
+    <openedByRoot>true</openedByRoot>
+    <fromJadeSlips>false</fromJadeSlips>
+    <cardTexPath>UI/Paths/CVG_Path_Water</cardTexPath>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Water</iconPath>
+  </Convergence.TechniqueManualDef>
+  <Convergence.TechniqueManualDef>
+    <defName>CVG_Manual_BlazingSun</defName>
+    <label>Blazing Sun Art</label>
+    <description>Fire qi devours. Fireballs, burning meridians that drive the body beyond its limits and, for those born of fire, a sea of flames.</description>
+    <path>CVG_Path_Qi</path>
+    <requiredResearch>CVG_Research_TechniqueManuals</requiredResearch>
+    <element>CVG_Element_Fire</element>
+    <order>4</order>
+    <openedByRoot>true</openedByRoot>
+    <fromJadeSlips>false</fromJadeSlips>
+    <cardTexPath>UI/Paths/CVG_Path_Fire</cardTexPath>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Fire</iconPath>
+  </Convergence.TechniqueManualDef>
+  <Convergence.TechniqueManualDef>
+    <defName>CVG_Manual_MountainHeart</defName>
+    <label>Mountain Heart Method</label>
+    <description>Earth qi is heavy and patient as a mountain. Stones that stun, a body hard as rock and the tremor that knocks a whole line down.</description>
+    <path>CVG_Path_Qi</path>
+    <requiredResearch>CVG_Research_TechniqueManuals</requiredResearch>
+    <element>CVG_Element_Earth</element>
+    <order>5</order>
+    <openedByRoot>true</openedByRoot>
+    <fromJadeSlips>false</fromJadeSlips>
+    <cardTexPath>UI/Paths/CVG_Path_Earth</cardTexPath>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Earth</iconPath>
+  </Convergence.TechniqueManualDef>
+
+  <!-- ================= Bases ================= -->
+  <AbilityDef Name="CVG_TechniqueBase" Abstract="True">
+    <category>CVG_Technique</category>
+    <gizmoClass>Convergence.Command_Technique</gizmoClass>
+    <writeCombatLog>true</writeCombatLog>
+    <showPsycastEffects>false</showPsycastEffects>
+    <stunTargetWhileCasting>false</stunTargetWhileCasting>
+    <sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
+  </AbilityDef>
+
+  <!-- Elemental bolt: a projectile at a target. -->
+  <AbilityDef Name="CVG_TechniqueBoltBase" ParentName="CVG_TechniqueBase" Abstract="True">
+    <!-- Balance from VPE (ice spike / flameball): 12 neural heat at ~0.54/s = ~22 s; psyfocus 0.02-0.04 = 8-16 qi. -->
+    <cooldownTicksRange>1330</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <comps>
+      <!-- AI: not point-blank (melee is better there). -->
+      <li Class="Convergence.CompProperties_AbilityAIConditions">
+        <minDistance>2</minDistance>
+      </li>
+    </comps>
+    <ai_IsIncendiary>false</ai_IsIncendiary>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>22.9</range>
+      <warmupTime>0.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>Shot_ChargeBlaster</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <!-- Self cast (shields, buffs). -->
+  <AbilityDef Name="CVG_TechniqueSelfBase" ParentName="CVG_TechniqueBase" Abstract="True">
+    <targetRequired>false</targetRequired>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsOffensive>false</ai_IsOffensive>
+    <ai_IsIncendiary>false</ai_IsIncendiary>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>0.9</range>
+      <warmupTime>0.4</warmupTime>
+      <requireLineOfSight>false</requireLineOfSight>
+      <drawAimPie>false</drawAimPie>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <!-- Cone (breath) from the caster. -->
+  <AbilityDef Name="CVG_TechniqueConeBase" ParentName="CVG_TechniqueBase" Abstract="True">
+    <!-- Balance from VPE (breathe flame / ice breath): psyfocus 0.08 = 32 qi, 26-36 heat = ~57 s, range 9.9-12.9. -->
+    <cooldownTicksRange>3450</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <comps>
+      <!-- AI: only worth its long cooldown against a group (or when desperate). -->
+      <li Class="Convergence.CompProperties_AbilityAIConditions">
+        <maxDistance>9.5</maxDistance>
+        <minEnemies>2</minEnemies>
+        <enemyRadius>3.5</enemyRadius>
+        <desperateHealth>0.4</desperateHealth>
+      </li>
+    </comps>
+    <ai_IsIncendiary>false</ai_IsIncendiary>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>9.9</range>
+      <warmupTime>1</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+  </AbilityDef>
+
+  <!-- ================= Metal: Golden Edge Scripture ================= -->
+  <AbilityDef ParentName="CVG_TechniqueBoltBase">
+    <defName>CVG_Tech_MetalNeedle</defName>
+    <label>golden needle</label>
+    <description>Compress metal qi into a needle and shoot it. It pierces armor well.\n\nProjectile: 11 piercing damage (armor penetration 45%), scaled by realm and mastery.</description>
+    <iconPath>UI/Techniques/CVG_Tech_MetalNeedle</iconPath>
+    <verbProperties>
+      <soundCast>Shot_NeedleGun</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityResourceCost">
+        <cost>10</cost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityTechniqueProjectile">
+        <projectileDef>CVG_Projectile_MetalNeedle</projectileDef>
+        <castFleck>SparkFlash</castFleck>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_GoldenEdge</manual>
+        <tier>1</tier>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <AbilityDef ParentName="CVG_TechniqueSelfBase">
+    <defName>CVG_Tech_QiShield</defName>
+    <label>golden bell shield</label>
+    <description>Spread qi around the body like a bronze bell. It absorbs damage until it breaks or fades.\n\nQi shield: absorbs 40 damage (scaled by realm and mastery) for about 30 seconds. It stops blows before armor does.</description>
+    <iconPath>UI/Techniques/CVG_Tech_QiShield</iconPath>
+    <verbProperties>
+      <soundCast>EnergyShield_Reset</soundCast>
+    </verbProperties>
+    <cooldownTicksRange>2780</cooldownTicksRange>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityAIConditions">
+        <!-- AI: raise it when enemies are close and it is not already up -->
+        <minEnemies>1</minEnemies>
+        <enemyRadius>15</enemyRadius>
+        <skipIfHediff>CVG_QiShield</skipIfHediff>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityResourceCost">
+        <cost>8</cost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityTechniqueHediff">
+        <hediffDef>CVG_QiShield</hediffDef>
+        <onCaster>true</onCaster>
+        <durationPowerExponent>0</durationPowerExponent>
+        <fleckDef>PsycastAreaEffect</fleckDef>
+        <fleckScale>1.5</fleckScale>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_GoldenEdge</manual>
+        <tier>2</tier>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_MetalNeedle</li>
+        </prerequisites>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <AbilityDef ParentName="CVG_TechniqueConeBase">
+    <defName>CVG_Tech_SwordQiSweep</defName>
+    <label>sword qi sweep</label>
+    <description>Release a crescent of sword qi in front of you that cuts everything in its path.\n\nCone of 10 cells: 18 cutting damage, scaled by realm and mastery. Requires Foundation Establishment and a metal root.</description>
+    <iconPath>UI/Techniques/CVG_Tech_SwordQiSweep</iconPath>
+    <verbProperties>
+      <soundCast>MeleeHit_Metal_Sharp</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityResourceCost">
+        <cost>32</cost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityCone">
+        <range>9.9</range>
+        <lineWidthEnd>4</lineWidthEnd>
+        <damageDef>Cut</damageDef>
+        <damAmount>18</damAmount>
+        <armorPenetration>0.35</armorPenetration>
+        <fleckDef>SparkFlash</fleckDef>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_GoldenEdge</manual>
+        <tier>3</tier>
+        <minRealm>CVG_Realm_Foundation</minRealm>
+        <requiresElement>true</requiresElement>
+        <unlockCost>2</unlockCost>
+        <prerequisites>
+          <li>CVG_Tech_MetalNeedle</li>
+        </prerequisites>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <!-- ================= Wood: Evergreen Sutra ================= -->
+  <AbilityDef ParentName="CVG_TechniqueBoltBase">
+    <defName>CVG_Tech_ThornBolt</defName>
+    <label>venom thorn</label>
+    <description>Grow a thorn of wood qi and fling it. Its sap is toxic.\n\nProjectile: 9 damage plus a toxic sting, scaled by realm and mastery.</description>
+    <iconPath>UI/Techniques/CVG_Tech_ThornBolt</iconPath>
+    <verbProperties>
+      <soundCast>Bow_Small</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityResourceCost">
+        <cost>10</cost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityTechniqueProjectile">
+        <projectileDef>CVG_Projectile_Thorn</projectileDef>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_EvergreenSutra</manual>
+        <tier>1</tier>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_SpringRejuvenation</defName>
+    <label>spring rejuvenation</label>
+    <description>Living wood qi circulates through the body without pause, closing wounds as spring closes the scars of winter. In the old world, the Evergreen hermits healed by being near; here the body heals itself.\n\nPassive: injury healing +40% (more with realm and mastery).</description>
+    <iconPath>UI/Techniques/CVG_Tech_SpringRejuvenation</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_EvergreenSutra</manual>
+        <tier>2</tier>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_ThornBolt</li>
+          <li>CVG_Tech_EvergreenBreath</li>
+        </prerequisites>
+        <passiveHediff>CVG_Passive_SpringRejuvenation</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <AbilityDef ParentName="CVG_TechniqueConeBase">
+    <defName>CVG_Tech_ThornStorm</defName>
+    <label>thorn storm</label>
+    <description>A gust of poisoned thorns that sweeps the area in front of you.\n\nCone of 10 cells: 10 damage plus a toxic sting, scaled by realm and mastery. Requires Foundation Establishment and a wood root.</description>
+    <iconPath>UI/Techniques/CVG_Tech_ThornStorm</iconPath>
+    <verbProperties>
+      <soundCast>Shot_Shotgun</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityResourceCost">
+        <cost>32</cost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityCone">
+        <range>9.9</range>
+        <lineWidthEnd>5</lineWidthEnd>
+        <damageDef>ToxicBite</damageDef>
+        <damAmount>10</damAmount>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_EvergreenSutra</manual>
+        <tier>3</tier>
+        <minRealm>CVG_Realm_Foundation</minRealm>
+        <requiresElement>true</requiresElement>
+        <unlockCost>2</unlockCost>
+        <prerequisites>
+          <li>CVG_Tech_ThornBolt</li>
+        </prerequisites>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <!-- ================= Water: Flowing Cloud Manual ================= -->
+  <AbilityDef ParentName="CVG_TechniqueBoltBase">
+    <defName>CVG_Tech_FrostShard</defName>
+    <label>frost shard</label>
+    <description>Freeze water qi into a shard of ice. It chills flesh to the bone.\n\nProjectile: 8 frostbite plus 4 blunt damage, scaled by realm and mastery.</description>
+    <iconPath>UI/Techniques/CVG_Tech_FrostShard</iconPath>
+    <verbProperties>
+      <soundCast>Explosion_Stun</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityResourceCost">
+        <cost>10</cost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityTechniqueProjectile">
+        <projectileDef>CVG_Projectile_FrostShard</projectileDef>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_FlowingCloud</manual>
+        <tier>1</tier>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <!-- Swift step: vanilla jump (Verb_CastAbilityJump + PawnFlyer, both in Core). -->
+  <AbilityDef ParentName="CVG_TechniqueBase">
+    <defName>CVG_Tech_SwiftStep</defName>
+    <label>swift cloud step</label>
+    <description>Ride a wisp of qi and land up to 12 cells away in a heartbeat. The Wandering Path teaches it first, because a cultivator who cannot leave a fight never lives to choose one.</description>
+    <iconPath>UI/Techniques/CVG_Tech_SwiftStep</iconPath>
+    <cooldownTicksRange>900</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <jobDef>CastJump</jobDef>
+    <verbProperties>
+      <soundCast>Longjump_Jump</soundCast>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>swift step</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>0.2</warmupTime>
+      <range>12.9</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityResourceCost">
+        <cost>8</cost>
+      </li>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>PsycastSkipFlashEntry</fleckDef>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_FlowingCloud</manual>
+        <tier>2</tier>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_FrostShard</li>
+        </prerequisites>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <AbilityDef ParentName="CVG_TechniqueConeBase">
+    <defName>CVG_Tech_FrostBreath</defName>
+    <label>frost breath</label>
+    <description>Exhale a freezing mist. Those caught in it may freeze in place, and fires go out.\n\nCone of 10 cells: 12 frostbite damage and 40% chance to stun, scaled by realm and mastery. Requires Foundation Establishment and a water root.</description>
+    <iconPath>UI/Techniques/CVG_Tech_FrostBreath</iconPath>
+    <verbProperties>
+      <soundCast>Explosion_Stun</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityResourceCost">
+        <cost>32</cost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityCone">
+        <range>9.9</range>
+        <lineWidthEnd>5</lineWidthEnd>
+        <damageDef>Frostbite</damageDef>
+        <damAmount>12</damAmount>
+        <stunChance>0.4</stunChance>
+        <stunTicks>150</stunTicks>
+        <extinguishFire>true</extinguishFire>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_FlowingCloud</manual>
+        <tier>3</tier>
+        <minRealm>CVG_Realm_Foundation</minRealm>
+        <requiresElement>true</requiresElement>
+        <unlockCost>2</unlockCost>
+        <prerequisites>
+          <li>CVG_Tech_FrostShard</li>
+        </prerequisites>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <!-- ================= Fire: Blazing Sun Art ================= -->
+  <AbilityDef ParentName="CVG_TechniqueBoltBase">
+    <defName>CVG_Tech_Fireball</defName>
+    <label>fireball</label>
+    <description>Condense fire qi into a ball that bursts on impact and sets things alight.\n\nBurst of radius 1.5: 10 burn damage, scaled by realm and mastery. Every fire disciple's first lesson, and the reason the Azure Peak keeps its practice yards far from the library.</description>
+    <iconPath>UI/Techniques/CVG_Tech_Fireball</iconPath>
+    <verbProperties>
+      <soundCast>Shot_IncendiaryLauncher</soundCast>
+    </verbProperties>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityResourceCost">
+        <cost>10</cost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityTechniqueProjectile">
+        <projectileDef>CVG_Projectile_Fireball</projectileDef>
+        <castFleck>FireGlow</castFleck>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_BlazingSun</manual>
+        <tier>1</tier>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_BlazingMeridians</defName>
+    <label>blazing meridians</label>
+    <description>Fire qi runs hot in the meridians at all times: the body strikes harder and moves faster than a mortal's. Zhurong, god of fire, was said to have veins of flame; the Blazing Sun Art lights a small copy of them.\n\nPassive: melee damage +8% and move speed +3% (more with realm and mastery).</description>
+    <iconPath>UI/Techniques/CVG_Tech_BlazingMeridians</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_BlazingSun</manual>
+        <tier>2</tier>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_Fireball</li>
+          <li>CVG_Tech_InnerFurnace</li>
+        </prerequisites>
+        <passiveHediff>CVG_Passive_BlazingMeridians</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <AbilityDef ParentName="CVG_TechniqueConeBase">
+    <defName>CVG_Tech_SeaOfFlames</defName>
+    <label>sea of flames</label>
+    <description>Open the dantian and let the fire out. A wave of flame washes over everything in front of you.\n\nCone of 10 cells: 16 burn damage, scaled by realm and mastery. Requires Foundation Establishment and a fire root.</description>
+    <iconPath>UI/Techniques/CVG_Tech_SeaOfFlames</iconPath>
+    <verbProperties>
+      <soundCast>FireSpew_Resolve</soundCast>
+    </verbProperties>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityResourceCost">
+        <cost>32</cost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityCone">
+        <range>9.9</range>
+        <lineWidthEnd>5</lineWidthEnd>
+        <damageDef>Flame</damageDef>
+        <damAmount>16</damAmount>
+        <fleckDef>BlastFlame</fleckDef>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_BlazingSun</manual>
+        <tier>3</tier>
+        <minRealm>CVG_Realm_Foundation</minRealm>
+        <requiresElement>true</requiresElement>
+        <unlockCost>2</unlockCost>
+        <prerequisites>
+          <li>CVG_Tech_Fireball</li>
+        </prerequisites>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <!-- ================= Earth: Mountain Heart Method ================= -->
+  <AbilityDef ParentName="CVG_TechniqueBoltBase">
+    <defName>CVG_Tech_StoneBullet</defName>
+    <label>stone bullet</label>
+    <description>Pull a stone from the ground with earth qi and hurl it. A good hit leaves the enemy dazed.\n\nProjectile: 13 blunt damage and 50% chance to stun, scaled by realm and mastery.</description>
+    <iconPath>UI/Techniques/CVG_Tech_StoneBullet</iconPath>
+    <verbProperties>
+      <soundCast>StoneImpact</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityResourceCost">
+        <cost>10</cost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityTechniqueProjectile">
+        <projectileDef>CVG_Projectile_StoneBullet</projectileDef>
+        <castFleck>DustPuffThick</castFleck>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_MountainHeart</manual>
+        <tier>1</tier>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_MountainBody</defName>
+    <label>mountain body</label>
+    <description>Earth qi lives in skin and bones and hardens them like rock, without the heaviness of the old technique. The guardians of the Mountain Heart stood at the gates of their sect for days and arrows broke on them.\n\nPassive: sharp and blunt armor +5% (more with realm and mastery).</description>
+    <iconPath>UI/Techniques/CVG_Tech_MountainBody</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_MountainHeart</manual>
+        <tier>2</tier>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_StoneBullet</li>
+          <li>CVG_Tech_StoneMarrow</li>
+        </prerequisites>
+        <passiveHediff>CVG_Passive_MountainBody</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+
+  <AbilityDef ParentName="CVG_TechniqueConeBase">
+    <defName>CVG_Tech_EarthTremor</defName>
+    <label>earth tremor</label>
+    <description>Stamp and send a shockwave through the ground. Those in front of you are battered and knocked senseless.\n\nCone of 10 cells: 12 blunt damage and 60% chance to stun, scaled by realm and mastery. Requires Foundation Establishment and an earth root.</description>
+    <iconPath>UI/Techniques/CVG_Tech_EarthTremor</iconPath>
+    <verbProperties>
+      <soundCast>Explosion_Thump</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityResourceCost">
+        <cost>32</cost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityCone">
+        <range>9.9</range>
+        <lineWidthEnd>6</lineWidthEnd>
+        <damageDef>Blunt</damageDef>
+        <damAmount>12</damAmount>
+        <stunChance>0.6</stunChance>
+        <stunTicks>180</stunTicks>
+        <fleckDef>DustPuffThick</fleckDef>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_MountainHeart</manual>
+        <tier>3</tier>
+        <minRealm>CVG_Realm_Foundation</minRealm>
+        <requiresElement>true</requiresElement>
+        <unlockCost>2</unlockCost>
+        <prerequisites>
+          <li>CVG_Tech_StoneBullet</li>
+        </prerequisites>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+</Defs>

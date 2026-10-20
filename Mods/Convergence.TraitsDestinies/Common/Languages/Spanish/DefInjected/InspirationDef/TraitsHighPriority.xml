@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Inspired_Enlightenment.label>iluminación súbita</CVG_Inspired_Enlightenment.label>
+  <CVG_Inspired_Enlightenment.beginLetter>[PAWN_pronoun] ha vislumbrado el Dao. Durante los próximos 3 días cultiva mucho más rápido y avanza con más seguridad.\n\nLos viejos maestros lo llamaban dunwu, el despertar súbito: años de paciencia pagados en un solo aliento.</CVG_Inspired_Enlightenment.beginLetter>
+  <CVG_Inspired_Enlightenment.endMessage>{0} ha perdido la inspiración (iluminación súbita).</CVG_Inspired_Enlightenment.endMessage>
+  <CVG_Inspired_Enlightenment.baseInspectLine>Inspiración: iluminación súbita</CVG_Inspired_Enlightenment.baseInspectLine>
+  <CVG_Inspired_SwordIntent.label>intención de la espada</CVG_Inspired_SwordIntent.label>
+  <CVG_Inspired_SwordIntent.beginLetter>Una intención de espada ha despertado en [PAWN_objective]. Durante los próximos 4 días sus golpes aciertan más y cortan más hondo.\n\nLos cultivadores de la espada dicen que la intención elige al espadachín, y no al revés.</CVG_Inspired_SwordIntent.beginLetter>
+  <CVG_Inspired_SwordIntent.endMessage>{0} ha perdido la inspiración (intención de la espada).</CVG_Inspired_SwordIntent.endMessage>
+  <CVG_Inspired_SwordIntent.baseInspectLine>Inspiración: intención de la espada</CVG_Inspired_SwordIntent.baseInspectLine>
+  <CVG_Inspired_ForgeFire.label>fuego de la forja</CVG_Inspired_ForgeFire.label>
+  <CVG_Inspired_ForgeFire.beginLetter>El fuego de Gan Jiang y Mo Ye arde en sus manos. Durante los próximos 4 días forja y trabaja mucho más rápido.\n\nLos herreros de la leyenda se arrojaron a su horno para terminar un par de espadas; este fuego pide menos.</CVG_Inspired_ForgeFire.beginLetter>
+  <CVG_Inspired_ForgeFire.endMessage>{0} ha perdido la inspiración (fuego de la forja).</CVG_Inspired_ForgeFire.endMessage>
+  <CVG_Inspired_ForgeFire.baseInspectLine>Inspiración: fuego de la forja</CVG_Inspired_ForgeFire.baseInspectLine>
+</LanguageData>

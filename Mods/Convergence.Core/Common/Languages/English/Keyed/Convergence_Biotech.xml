@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Biotech in a wuxia key (Core hooks used by Convergence: Biotech Wuxia) -->
+  <CVG_Puppet_BandwidthPart>Puppet master, realm {0}: {1}</CVG_Puppet_BandwidthPart>
+  <CVG_Puppet_Backlash>The thread of {1} snapped: {PAWN_nameDef} suffers the backlash and loses qi.</CVG_Puppet_Backlash>
+  <CVG_Puppet_StageN>stage {0}</CVG_Puppet_StageN>
+  <CVG_Puppet_PowerPart>Thread of a {0} master</CVG_Puppet_PowerPart>
+  <CVG_Puppet_NeedRealm>Needs a puppet master at {0}</CVG_Puppet_NeedRealm>
+  <CVG_Puppet_Master>Puppet master</CVG_Puppet_Master>
+  <CVG_Puppet_MasterNone>None (the threads hang loose)</CVG_Puppet_MasterNone>
+  <CVG_Puppet_NoBandwidth>not enough threads</CVG_Puppet_NoBandwidth>
+  <CVG_Puppet_Uncontrolled>Threads cut</CVG_Puppet_Uncontrolled>
+  <CVG_Puppet_MayGoFeral>the strings may snap and the puppet go wild</CVG_Puppet_MayGoFeral>
+  <CVG_Puppet_Energy>Puppet qi</CVG_Puppet_Energy>
+</LanguageData>

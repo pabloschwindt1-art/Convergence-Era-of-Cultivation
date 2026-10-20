@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_BuildPuppet_Wood.label>atar marioneta de madera</CVG_BuildPuppet_Wood.label>
+  <CVG_BuildPuppet_Wood.description>Tallar y enlazar una marioneta de trabajo de madera (acarrear, limpiar, sembrar, cortar plantas y curar).</CVG_BuildPuppet_Wood.description>
+  <CVG_BuildPuppet_Wood.jobString>Atando una marioneta.</CVG_BuildPuppet_Wood.jobString>
+  <CVG_BuildPuppet_Bronze.label>atar marioneta guardiana de bronce</CVG_BuildPuppet_Bronze.label>
+  <CVG_BuildPuppet_Bronze.description>Fundir y enlazar una marioneta de guerra guardiana de bronce (escalón 2: el titiritero tiene que haber establecido su Fundación).</CVG_BuildPuppet_Bronze.description>
+  <CVG_BuildPuppet_Bronze.jobString>Atando una marioneta.</CVG_BuildPuppet_Bronze.jobString>
+  <CVG_BuildPuppet_Jade.label>atar marioneta guardiana de jade</CVG_BuildPuppet_Jade.label>
+  <CVG_BuildPuppet_Jade.description>Tallar una guardiana de jade de guerra alrededor de un núcleo de bestia (escalón 4: el titiritero tiene que estar en la cima del Núcleo Dorado).</CVG_BuildPuppet_Jade.description>
+  <CVG_BuildPuppet_Jade.jobString>Atando una marioneta.</CVG_BuildPuppet_Jade.jobString>
+</LanguageData>

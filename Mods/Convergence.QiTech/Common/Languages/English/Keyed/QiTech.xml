@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_QiConverter_Mode_QiToPower>Mode: qi to electricity</CVG_QiConverter_Mode_QiToPower>
+  <CVG_QiConverter_Mode_PowerToQi>Mode: electricity to qi</CVG_QiConverter_Mode_PowerToQi>
+  <CVG_QiConverter_Toggle_QiToPower>Switch to electricity to qi</CVG_QiConverter_Toggle_QiToPower>
+  <CVG_QiConverter_Toggle_PowerToQi>Switch to qi to electricity</CVG_QiConverter_Toggle_PowerToQi>
+  <CVG_QiConverter_ToggleDesc>Changes the direction of the conversion. Qi to electricity: consumes {1} qi/day from the network and gives {0} W. Electricity to qi: takes {0} W and gives {2} qi/day.</CVG_QiConverter_ToggleDesc>
+  <CVG_QiConverter_Watts>Electricity: {0} W</CVG_QiConverter_Watts>
+</LanguageData>

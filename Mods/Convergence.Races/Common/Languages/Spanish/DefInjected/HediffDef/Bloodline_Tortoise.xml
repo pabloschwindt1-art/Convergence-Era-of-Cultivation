@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Bloodline_Tortoise.label>sangre de tortuga negra</CVG_Bloodline_Tortoise.label>
+  <CVG_Bloodline_Tortoise.description>Sangre de tortuga negra despierta: armadura, aguante y resistencia al veneno y la enfermedad. Siempre camina lento.</CVG_Bloodline_Tortoise.description>
+  <CVG_Bloodline_Tortoise.stages.0.label>rastro</CVG_Bloodline_Tortoise.stages.0.label>
+  <CVG_Bloodline_Tortoise.stages.1.label>diluida</CVG_Bloodline_Tortoise.stages.1.label>
+  <CVG_Bloodline_Tortoise.stages.2.label>pura</CVG_Bloodline_Tortoise.stages.2.label>
+  <CVG_Bloodline_Tortoise.stages.3.label>ancestral</CVG_Bloodline_Tortoise.stages.3.label>
+  <CVG_XuanwuShell.label>caparazón de Xuanwu</CVG_XuanwuShell.label>
+  <CVG_XuanwuShell.description>Un caparazón de piedra negra cubre el cuerpo: los golpes resbalan, pero moverse pesa.</CVG_XuanwuShell.description>
+</LanguageData>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Celestial materials inspired by Tale of Immortal / Amazing Cultivation Simulator (docs/modulos/CONTENIDO_TOI_ACS.md). -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_MeteoricIron</defName>
+    <label>meteoric iron</label>
+    <description>Black, dense iron that fell from the sky with a streak of qi still clinging to it. Smiths say it remembers the cold of the void and tempers faster than any ore. Refined with a little fire, it is as good as spirit steel and far easier to come by after a good night of falling stars.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_MeteoricIron</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <statBases>
+      <MarketValue>5</MarketValue>
+      <Mass>0.6</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <stackLimit>75</stackLimit>
+    <thingCategories><li>ResourcesRaw</li></thingCategories>
+    <healthAffectsPrice>false</healthAffectsPrice>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_StarSand</defName>
+    <label>star sand</label>
+    <description>Fine glittering sand that gathers at dawn where the dew of the highest peaks runs off. The alchemists of the Heavenly Cauldron grind it into the base of their most delicate pills, and the sand-gatherers will not tell anyone where it collects, which is why it is rare and expensive.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_StarSand</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Silver_Drop</soundInteract>
+    <soundDrop>Silver_Drop</soundDrop>
+    <statBases>
+      <MarketValue>14</MarketValue>
+      <Mass>0.02</Mass>
+      <MaxHitPoints>40</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <stackLimit>150</stackLimit>
+    <thingCategories><li>ResourcesRaw</li></thingCategories>
+    <healthAffectsPrice>false</healthAffectsPrice>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>CVG_RefineMeteoricIron</defName>
+    <label>refine meteoric iron into spirit steel</label>
+    <description>Refine meteoric iron into spirit steel, without needing ordinary steel.</description>
+    <jobString>Refining meteoric iron.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workAmount>1200</workAmount>
+    <workSkill>Crafting</workSkill>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_MeteoricIron</li></thingDefs></filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs><li>CVG_MeteoricIron</li><li>CVG_SpiritStone</li></thingDefs>
+    </fixedIngredientFilter>
+    <products><CVG_SpiritSteel>10</CVG_SpiritSteel></products>
+    <skillRequirements><Crafting>4</Crafting></skillRequirements>
+    <recipeUsers><li>CVG_RefiningFurnace</li></recipeUsers>
+  </RecipeDef>
+</Defs>

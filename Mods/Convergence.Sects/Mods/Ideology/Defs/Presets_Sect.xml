@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- One preconfigured ideoligion per sect (docs/LORE.md): for the player at the start screen. Factions get theirs through forcedMemes. -->
+  <IdeoPresetDef>
+    <defName>CVG_Preset_SwordWay</defName>
+    <label>sword pavilion</label>
+    <description>Discipline, hierarchy and the sword. Every disciple has a rank and a duty, and the strong lead the weak.</description>
+    <categoryDef>Strong</categoryDef>
+    <memes>
+      <li>CVG_Meme_SwordWay</li>
+      <li>Loyalist</li>
+    </memes>
+  </IdeoPresetDef>
+  <IdeoPresetDef>
+    <defName>CVG_Preset_LotusPath</defName>
+    <label>silent lotus temple</label>
+    <description>A community of healers who hold everything in common and give up desire.</description>
+    <categoryDef>Strong</categoryDef>
+    <memes>
+      <li>CVG_Meme_LotusPath</li>
+      <li>Collectivist</li>
+    </memes>
+  </IdeoPresetDef>
+  <IdeoPresetDef>
+    <defName>CVG_Preset_CauldronWay</defName>
+    <label>heavenly cauldron pavilion</label>
+    <description>Every person is an alchemist of their own life, and everything has a price that can be refined into a pill.</description>
+    <categoryDef>Strong</categoryDef>
+    <memes>
+      <li>CVG_Meme_CauldronWay</li>
+      <li>Individualist</li>
+    </memes>
+  </IdeoPresetDef>
+  <IdeoPresetDef>
+    <defName>CVG_Preset_DragonBlood</defName>
+    <label>ancient dragon clan</label>
+    <description>Pure blood, ancient pride and a debt to the ancestors. Bloodlines are guarded like treasure.</description>
+    <categoryDef>Strong</categoryDef>
+    <memes>
+      <li>CVG_Meme_DragonBlood</li>
+      <li>Supremacist</li>
+    </memes>
+  </IdeoPresetDef>
+  <IdeoPresetDef>
+    <defName>CVG_Preset_DemonicWay</defName>
+    <label>blood moon cult</label>
+    <description>The Heavens are a cage and power is the only key. The righteous call it demonic; it works.</description>
+    <categoryDef>Strong</categoryDef>
+    <memes>
+      <li>CVG_Meme_DemonicWay</li>
+      <li>Raider</li>
+    </memes>
+  </IdeoPresetDef>
+  <IdeoPresetDef>
+    <defName>CVG_Preset_WanderingPath</defName>
+    <label>wandering path</label>
+    <description>No hall, no master, no walls: the road is the sect. Everyone cultivates where they stand.</description>
+    <categoryDef>Strong</categoryDef>
+    <memes>
+      <li>CVG_Meme_WanderingPath</li>
+      <li>Individualist</li>
+    </memes>
+  </IdeoPresetDef>
+  <IdeoPresetDef>
+    <defName>CVG_Preset_BodyWay</defName>
+    <label>body way</label>
+    <description>The body is the first temple; tempering it is the first duty. Those who hold the line with their bare hands are respected above all.</description>
+    <categoryDef>Strong</categoryDef>
+    <memes>
+      <li>CVG_Meme_BodyWay</li>
+      <li>Loyalist</li>
+    </memes>
+  </IdeoPresetDef>
+  <IdeoPresetDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>CVG_Preset_PuppetPath</defName>
+    <label>puppet path</label>
+    <description>Patience, threads and wood. A disciple of the Valley of a Thousand Strings never fights alone.</description>
+    <categoryDef>Strong</categoryDef>
+    <memes>
+      <li>CVG_Meme_PuppetPath</li>
+      <li>Individualist</li>
+    </memes>
+  </IdeoPresetDef>
+  <IdeoPresetDef>
+    <defName>CVG_Preset_ThunderWay</defName>
+    <label>thunder way</label>
+    <description>Seek the tribulation, bear it and be reborn. A disciple who has not stood under the lightning is still a child.</description>
+    <categoryDef>Strong</categoryDef>
+    <memes>
+      <li>CVG_Meme_ThunderWay</li>
+      <li>Loyalist</li>
+    </memes>
+  </IdeoPresetDef>
+</Defs>

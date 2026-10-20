@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_AuspiciousPresence</defName>
+    <label>auspicious presence</label>
+    <description>After the Convergence, allies nearby feel calmer and luckier (mood).</description>
+    <bloodline>CVG_Bloodline_Qilin</bloodline>
+    <order>11</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_AuspiciousPresence_I</defName>
+    <label>auspicious presence I</label>
+    <description>After the Convergence, allies nearby feel calmer and luckier (mood). Villages of Jiuxiao rang their bells when a qilin-blooded traveler passed, and the harvest that year was always good.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_AuspiciousPresence</iconPath>
+    <iconColor>(0.7, 0.7, 0.7)</iconColor>
+    <displayOrderInCategory>111</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_AuspiciousPresence</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_AuspiciousPresence</group>
+        <tier>1</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_GeneAura">
+        <radius>6</radius>
+        <hediff>CVG_AuspiciousPresence</hediff>
+        <affectAllies>true</affectAllies>
+        <affectHostiles>false</affectHostiles>
+        <onlyEntities>false</onlyEntities>
+        <affectSelf>false</affectSelf>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_AuspiciousPresence_II</defName>
+    <label>auspicious presence II</label>
+    <description>After the Convergence, allies nearby feel calmer and luckier (mood). Villages of Jiuxiao rang their bells when a qilin-blooded traveler passed, and the harvest that year was always good.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_AuspiciousPresence</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>112</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_AuspiciousPresence</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_AuspiciousPresence</group>
+        <tier>2</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_GeneAura">
+        <radius>8</radius>
+        <hediff>CVG_AuspiciousPresence</hediff>
+        <affectAllies>true</affectAllies>
+        <affectHostiles>false</affectHostiles>
+        <onlyEntities>false</onlyEntities>
+        <affectSelf>false</affectSelf>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_AuspiciousPresence_III</defName>
+    <label>auspicious presence III</label>
+    <description>After the Convergence, allies nearby feel calmer and luckier (mood). Villages of Jiuxiao rang their bells when a qilin-blooded traveler passed, and the harvest that year was always good.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_AuspiciousPresence</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>113</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_AuspiciousPresence</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_AuspiciousPresence</group>
+        <tier>3</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_GeneAura">
+        <radius>10</radius>
+        <hediff>CVG_AuspiciousPresence</hediff>
+        <affectAllies>true</affectAllies>
+        <affectHostiles>false</affectHostiles>
+        <onlyEntities>false</onlyEntities>
+        <affectSelf>false</affectSelf>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_AuspiciousPresence_IV</defName>
+    <label>auspicious presence IV</label>
+    <description>After the Convergence, allies nearby feel calmer and luckier (mood). Villages of Jiuxiao rang their bells when a qilin-blooded traveler passed, and the harvest that year was always good.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_AuspiciousPresence</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>114</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_AuspiciousPresence</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_AuspiciousPresence</group>
+        <tier>4</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_GeneAura">
+        <radius>12</radius>
+        <hediff>CVG_AuspiciousPresence</hediff>
+        <affectAllies>true</affectAllies>
+        <affectHostiles>false</affectHostiles>
+        <onlyEntities>false</onlyEntities>
+        <affectSelf>false</affectSelf>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_PureHooves</defName>
+    <label>pure hooves</label>
+    <description>The qilin walks through fire and poison unharmed.</description>
+    <bloodline>CVG_Bloodline_Qilin</bloodline>
+    <order>12</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_PureHooves_II</defName>
+    <label>pure hooves II</label>
+    <description>The qilin walks through fire and poison unharmed. The qilin never treads on a living blade of grass, and so the world returns the courtesy.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_PureHooves</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>122</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_PureHooves</li>
+    </exclusionTags>
+    <statOffsets>
+      <ToxicEnvironmentResistance>0.25</ToxicEnvironmentResistance>
+    </statOffsets>
+    <damageFactors>
+      <Flame>0.8</Flame>
+    </damageFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_PureHooves</group>
+        <tier>2</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_PureHooves_III</defName>
+    <label>pure hooves III</label>
+    <description>The qilin walks through fire and poison unharmed. The qilin never treads on a living blade of grass, and so the world returns the courtesy.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_PureHooves</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>123</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_PureHooves</li>
+    </exclusionTags>
+    <statOffsets>
+      <ToxicEnvironmentResistance>0.5</ToxicEnvironmentResistance>
+    </statOffsets>
+    <damageFactors>
+      <Flame>0.6</Flame>
+    </damageFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_PureHooves</group>
+        <tier>3</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_PureHooves_IV</defName>
+    <label>pure hooves IV</label>
+    <description>The qilin walks through fire and poison unharmed. The qilin never treads on a living blade of grass, and so the world returns the courtesy.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_PureHooves</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>124</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_PureHooves</li>
+    </exclusionTags>
+    <statOffsets>
+      <ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+    </statOffsets>
+    <damageFactors>
+      <Flame>0.4</Flame>
+    </damageFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_PureHooves</group>
+        <tier>4</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_EvilRepellent</defName>
+    <label>evil repellent</label>
+    <description>After the Convergence, hostile entities of the void near the qilin are weakened.</description>
+    <bloodline>CVG_Bloodline_Qilin</bloodline>
+    <order>13</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_EvilRepellent_III</defName>
+    <label>evil repellent III</label>
+    <description>After the Convergence, hostile entities of the void near the qilin are weakened. Temple guardians carved qilin over every gate because the things that crawl out of the void cannot stand their gaze.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_EvilRepellent</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>133</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_EvilRepellent</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_EvilRepellent</group>
+        <tier>3</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_GeneAura">
+        <radius>8</radius>
+        <hediff>CVG_EvilRepelled</hediff>
+        <affectAllies>false</affectAllies>
+        <affectHostiles>true</affectHostiles>
+        <onlyEntities>true</onlyEntities>
+        <affectSelf>false</affectSelf>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_EvilRepellent_IV</defName>
+    <label>evil repellent IV</label>
+    <description>After the Convergence, hostile entities of the void near the qilin are weakened. Temple guardians carved qilin over every gate because the things that crawl out of the void cannot stand their gaze.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_EvilRepellent</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>134</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_EvilRepellent</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_EvilRepellent</group>
+        <tier>4</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_GeneAura">
+        <radius>12</radius>
+        <hediff>CVG_EvilRepelled</hediff>
+        <affectAllies>false</affectAllies>
+        <affectHostiles>true</affectHostiles>
+        <onlyEntities>true</onlyEntities>
+        <affectSelf>false</affectSelf>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <HediffDef>
+    <defName>CVG_AuspiciousPresence</defName>
+    <label>auspicious presence</label>
+    <description>A qilin is near. The world feels a little kinder.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>4</maxSeverity>
+    <defaultLabelColor>(1, 0.85, 0.45)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>600</disappearsAfterTicks>
+      </li>
+    </comps>
+    <stages>
+      <li><minSeverity>0</minSeverity><label>I</label></li>
+      <li><minSeverity>2</minSeverity><label>II</label></li>
+      <li><minSeverity>3</minSeverity><label>III</label></li>
+      <li><minSeverity>4</minSeverity><label>IV</label></li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_AuspiciousPresence</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>CVG_AuspiciousPresence</hediff>
+    <validWhileDespawned>false</validWhileDespawned>
+    <stages>
+      <li><label>auspicious presence</label><description>A qilin walks among us.</description><baseMoodEffect>1</baseMoodEffect></li>
+      <li><label>auspicious presence</label><description>A qilin walks among us.</description><baseMoodEffect>2</baseMoodEffect></li>
+      <li><label>auspicious presence</label><description>A qilin walks among us.</description><baseMoodEffect>3</baseMoodEffect></li>
+      <li><label>auspicious presence</label><description>A qilin walks among us.</description><baseMoodEffect>4</baseMoodEffect></li>
+    </stages>
+  </ThoughtDef>
+
+  <HediffDef>
+    <defName>CVG_EvilRepelled</defName>
+    <label>repelled by the qilin</label>
+    <description>The auspicious blood of a qilin weakens this creature of the void.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <initialSeverity>3</initialSeverity>
+    <maxSeverity>4</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>600</disappearsAfterTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>0.8</MeleeDamageFactor>
+          <MoveSpeed>0.85</MoveSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>4</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>0.65</MeleeDamageFactor>
+          <MoveSpeed>0.75</MoveSpeed>
+          <IncomingDamageFactor>1.15</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Base of every sect pawn kind: a humanlike combatant. Realm, stage, manuals and root come from DefModExtension_CultivatorPawnKind (Core). -->
+  <PawnKindDef Abstract="True" Name="CVG_SectKindBase">
+    <race>Human</race>
+    <chemicalAddictionChance>0.02</chemicalAddictionChance>
+    <invNutrition>2.55</invNutrition>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <maxGenerationAge>75</maxGenerationAge>
+    <apparelAllowHeadgearChance>0.3</apparelAllowHeadgearChance>
+    <initialWillRange>0~2</initialWillRange>
+    <initialResistanceRange>14~24</initialResistanceRange>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances />
+    </xenotypeSet>
+  </PawnKindDef>
+
+  <!-- Azure Peak Sword Sect -->
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_AzurePeak_Disciple</defName>
+    <label>outer sword disciple</label>
+    <defaultFactionDef>CVG_Faction_AzurePeak</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_AzurePeak</nameMaker>
+    <combatPower>55</combatPower>
+    <minGenerationAge>16</minGenerationAge>
+    <weaponTags><li>MedievalMeleeDecent</li></weaponTags>
+    <weaponMoney>150~400</weaponMoney>
+    <apparelTags><li>Neolithic</li></apparelTags>
+    <apparelMoney>150~450</apparelMoney>
+    <gearHealthRange>0.6~1.8</gearHealthRange>
+    <itemQuality>Normal</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_QiRefining</realm>
+        <stage>1~3</stage>
+        <manuals><li>CVG_Manual_GoldenEdge</li><li>CVG_Manual_FlowingCloud</li></manuals>
+        <elements><li>CVG_Element_Metal</li><li>CVG_Element_Water</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_AzurePeak_Bearer</defName>
+    <label>inner sword bearer</label>
+    <defaultFactionDef>CVG_Faction_AzurePeak</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_AzurePeak</nameMaker>
+    <combatPower>105</combatPower>
+    <minGenerationAge>25</minGenerationAge>
+    <weaponTags><li>MedievalMeleeDecent</li></weaponTags>
+    <weaponMoney>150~400</weaponMoney>
+    <apparelTags><li>Neolithic</li></apparelTags>
+    <apparelMoney>150~450</apparelMoney>
+    <gearHealthRange>0.6~1.8</gearHealthRange>
+    <itemQuality>Normal</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_Foundation</realm>
+        <stage>1~2</stage>
+        <manuals><li>CVG_Manual_GoldenEdge</li><li>CVG_Manual_FlowingCloud</li></manuals>
+        <elements><li>CVG_Element_Metal</li><li>CVG_Element_Water</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_AzurePeak_Blade</defName>
+    <label>core blade of the peak</label>
+    <defaultFactionDef>CVG_Faction_AzurePeak</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_AzurePeak</nameMaker>
+    <combatPower>140</combatPower>
+    <minGenerationAge>25</minGenerationAge>
+    <weaponTags><li>MedievalMeleeAdvanced</li><li>LongSword</li></weaponTags>
+    <weaponMoney>400~900</weaponMoney>
+    <apparelTags><li>Neolithic</li></apparelTags>
+    <apparelMoney>500~1200</apparelMoney>
+    <gearHealthRange>1.0~2.5</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_Foundation</realm>
+        <stage>3~4</stage>
+        <manuals><li>CVG_Manual_GoldenEdge</li><li>CVG_Manual_FlowingCloud</li></manuals>
+        <elements><li>CVG_Element_Metal</li><li>CVG_Element_Water</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_AzurePeak_Elder</defName>
+    <label>sword elder</label>
+    <defaultFactionDef>CVG_Faction_AzurePeak</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_AzurePeak</nameMaker>
+    <combatPower>250</combatPower>
+    <minGenerationAge>40</minGenerationAge>
+    <weaponTags><li>MedievalMeleeAdvanced</li><li>LongSword</li></weaponTags>
+    <weaponMoney>400~900</weaponMoney>
+    <apparelTags><li>Neolithic</li></apparelTags>
+    <apparelMoney>500~1200</apparelMoney>
+    <gearHealthRange>1.0~2.5</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_GoldenCore</realm>
+        <stage>1~3</stage>
+        <manuals><li>CVG_Manual_GoldenEdge</li><li>CVG_Manual_FlowingCloud</li></manuals>
+        <elements><li>CVG_Element_Metal</li><li>CVG_Element_Water</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_AzurePeak_Swordsmith</defName>
+    <label>peak swordsmith</label>
+    <defaultFactionDef>CVG_Faction_AzurePeak</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_AzurePeak</nameMaker>
+    <trader>true</trader>
+    <isFighter>false</isFighter>
+    <combatPower>45</combatPower>
+    <weaponTags><li>MedievalMeleeDecent</li></weaponTags>
+    <weaponMoney>100~200</weaponMoney>
+    <apparelTags><li>Neolithic</li></apparelTags>
+    <apparelMoney>400~800</apparelMoney>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_QiRefining</realm>
+        <stage>2~3</stage>
+        <manuals><li>CVG_Manual_GoldenEdge</li><li>CVG_Manual_FlowingCloud</li></manuals>
+        <elements><li>CVG_Element_Metal</li><li>CVG_Element_Water</li></elements>
+        <scaleWithColony>false</scaleWithColony>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Silent Lotus Temple -->
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_SilentLotus_Lay</defName>
+    <label>lay apprentice</label>
+    <defaultFactionDef>CVG_Faction_SilentLotus</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_SilentLotus</nameMaker>
+    <combatPower>50</combatPower>
+    <minGenerationAge>16</minGenerationAge>
+    <weaponTags><li>NeolithicMeleeBasic</li></weaponTags>
+    <weaponMoney>150~400</weaponMoney>
+    <apparelTags><li>Neolithic</li></apparelTags>
+    <apparelMoney>150~450</apparelMoney>
+    <gearHealthRange>0.6~1.8</gearHealthRange>
+    <itemQuality>Normal</itemQuality>
+    <xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+      <xenotypeChances>
+      <CVG_Xeno_Qilin MayRequire="prospero1088.convergence.races">0.3</CVG_Xeno_Qilin>
+      </xenotypeChances>
+    </xenotypeSet>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_QiRefining</realm>
+        <stage>1~3</stage>
+        <manuals><li>CVG_Manual_MountainHeart</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Earth</li><li>CVG_Element_Wood</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_SilentLotus_Monk</defName>
+    <label>temple monk</label>
+    <defaultFactionDef>CVG_Faction_SilentLotus</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_SilentLotus</nameMaker>
+    <combatPower>100</combatPower>
+    <minGenerationAge>25</minGenerationAge>
+    <weaponTags><li>NeolithicMeleeBasic</li></weaponTags>
+    <weaponMoney>150~400</weaponMoney>
+    <apparelTags><li>Neolithic</li></apparelTags>
+    <apparelMoney>150~450</apparelMoney>
+    <gearHealthRange>0.6~1.8</gearHealthRange>
+    <itemQuality>Normal</itemQuality>
+    <xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+      <xenotypeChances>
+      <CVG_Xeno_Qilin MayRequire="prospero1088.convergence.races">0.3</CVG_Xeno_Qilin>
+      </xenotypeChances>
+    </xenotypeSet>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_Foundation</realm>
+        <stage>1~2</stage>
+        <manuals><li>CVG_Manual_MountainHeart</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Earth</li><li>CVG_Element_Wood</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_SilentLotus_Guardian</defName>
+    <label>temple guardian</label>
+    <defaultFactionDef>CVG_Faction_SilentLotus</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_SilentLotus</nameMaker>
+    <combatPower>135</combatPower>
+    <minGenerationAge>25</minGenerationAge>
+    <weaponTags><li>NeolithicMeleeDecent</li></weaponTags>
+    <weaponMoney>400~900</weaponMoney>
+    <apparelTags><li>Neolithic</li></apparelTags>
+    <apparelMoney>500~1200</apparelMoney>
+    <gearHealthRange>1.0~2.5</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+      <xenotypeChances>
+      <CVG_Xeno_Qilin MayRequire="prospero1088.convergence.races">0.3</CVG_Xeno_Qilin>
+      </xenotypeChances>
+    </xenotypeSet>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_Foundation</realm>
+        <stage>3~4</stage>
+        <manuals><li>CVG_Manual_MountainHeart</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Earth</li><li>CVG_Element_Wood</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_SilentLotus_Venerable</defName>
+    <fixedGender>Female</fixedGender>
+    <label>venerable</label>
+    <defaultFactionDef>CVG_Faction_SilentLotus</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_SilentLotus</nameMaker>
+    <combatPower>240</combatPower>
+    <minGenerationAge>40</minGenerationAge>
+    <weaponTags><li>NeolithicMeleeDecent</li></weaponTags>
+    <weaponMoney>400~900</weaponMoney>
+    <apparelTags><li>Neolithic</li></apparelTags>
+    <apparelMoney>500~1200</apparelMoney>
+    <gearHealthRange>1.0~2.5</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+      <xenotypeChances>
+      <CVG_Xeno_Qilin MayRequire="prospero1088.convergence.races">0.3</CVG_Xeno_Qilin>
+      </xenotypeChances>
+    </xenotypeSet>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_GoldenCore</realm>
+        <stage>1~3</stage>
+        <manuals><li>CVG_Manual_MountainHeart</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Earth</li><li>CVG_Element_Wood</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_SilentLotus_Herbalist</defName>
+    <label>temple herbalist</label>
+    <defaultFactionDef>CVG_Faction_SilentLotus</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_SilentLotus</nameMaker>
+    <trader>true</trader>
+    <isFighter>false</isFighter>
+    <combatPower>45</combatPower>
+    <weaponTags><li>NeolithicMeleeBasic</li></weaponTags>
+    <weaponMoney>100~200</weaponMoney>
+    <apparelTags><li>Neolithic</li></apparelTags>
+    <apparelMoney>400~800</apparelMoney>
+    <xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+      <xenotypeChances>
+      <CVG_Xeno_Qilin MayRequire="prospero1088.convergence.races">0.3</CVG_Xeno_Qilin>
+      </xenotypeChances>
+    </xenotypeSet>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_QiRefining</realm>
+        <stage>2~3</stage>
+        <manuals><li>CVG_Manual_MountainHeart</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Earth</li><li>CVG_Element_Wood</li></elements>
+        <scaleWithColony>false</scaleWithColony>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Heavenly Cauldron Pavilion -->
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_HeavenlyCauldron_Apprentice</defName>
+    <label>cauldron apprentice</label>
+    <defaultFactionDef>CVG_Faction_HeavenlyCauldron</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_HeavenlyCauldron</nameMaker>
+    <combatPower>50</combatPower>
+    <minGenerationAge>16</minGenerationAge>
+    <weaponTags><li>Gun</li></weaponTags>
+    <weaponMoney>150~400</weaponMoney>
+    <apparelTags><li>IndustrialBasic</li></apparelTags>
+    <apparelMoney>150~450</apparelMoney>
+    <gearHealthRange>0.6~1.8</gearHealthRange>
+    <itemQuality>Normal</itemQuality>
+    <xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+      <xenotypeChances>
+      <CVG_Xeno_Phoenix MayRequire="prospero1088.convergence.races">0.12</CVG_Xeno_Phoenix>
+      <CVG_Xeno_Fox MayRequire="prospero1088.convergence.races">0.12</CVG_Xeno_Fox>
+      </xenotypeChances>
+    </xenotypeSet>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_QiRefining</realm>
+        <stage>1~3</stage>
+        <manuals><li>CVG_Manual_BlazingSun</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Fire</li><li>CVG_Element_Wood</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_HeavenlyCauldron_Alchemist</defName>
+    <label>alchemist</label>
+    <defaultFactionDef>CVG_Faction_HeavenlyCauldron</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_HeavenlyCauldron</nameMaker>
+    <combatPower>100</combatPower>
+    <minGenerationAge>25</minGenerationAge>
+    <weaponTags><li>Gun</li></weaponTags>
+    <weaponMoney>150~400</weaponMoney>
+    <apparelTags><li>IndustrialBasic</li></apparelTags>
+    <apparelMoney>150~450</apparelMoney>
+    <gearHealthRange>0.6~1.8</gearHealthRange>
+    <itemQuality>Normal</itemQuality>
+    <xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+      <xenotypeChances>
+      <CVG_Xeno_Phoenix MayRequire="prospero1088.convergence.races">0.12</CVG_Xeno_Phoenix>
+      <CVG_Xeno_Fox MayRequire="prospero1088.convergence.races">0.12</CVG_Xeno_Fox>
+      </xenotypeChances>
+    </xenotypeSet>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_Foundation</realm>
+        <stage>1~2</stage>
+        <manuals><li>CVG_Manual_BlazingSun</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Fire</li><li>CVG_Element_Wood</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_HeavenlyCauldron_Master</defName>
+    <label>cauldron master</label>
+    <defaultFactionDef>CVG_Faction_HeavenlyCauldron</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_HeavenlyCauldron</nameMaker>
+    <combatPower>135</combatPower>
+    <minGenerationAge>25</minGenerationAge>
+    <weaponTags><li>IndustrialGunAdvanced</li></weaponTags>
+    <weaponMoney>400~900</weaponMoney>
+    <apparelTags><li>IndustrialBasic</li></apparelTags>
+    <apparelMoney>500~1200</apparelMoney>
+    <gearHealthRange>1.0~2.5</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+      <xenotypeChances>
+      <CVG_Xeno_Phoenix MayRequire="prospero1088.convergence.races">0.12</CVG_Xeno_Phoenix>
+      <CVG_Xeno_Fox MayRequire="prospero1088.convergence.races">0.12</CVG_Xeno_Fox>
+      </xenotypeChances>
+    </xenotypeSet>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_Foundation</realm>
+        <stage>3~4</stage>
+        <manuals><li>CVG_Manual_BlazingSun</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Fire</li><li>CVG_Element_Wood</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_HeavenlyCauldron_Grand</defName>
+    <label>grand alchemist</label>
+    <defaultFactionDef>CVG_Faction_HeavenlyCauldron</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_HeavenlyCauldron</nameMaker>
+    <combatPower>240</combatPower>
+    <minGenerationAge>40</minGenerationAge>
+    <weaponTags><li>IndustrialGunAdvanced</li></weaponTags>
+    <weaponMoney>400~900</weaponMoney>
+    <apparelTags><li>IndustrialBasic</li></apparelTags>
+    <apparelMoney>500~1200</apparelMoney>
+    <gearHealthRange>1.0~2.5</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+      <xenotypeChances>
+      <CVG_Xeno_Phoenix MayRequire="prospero1088.convergence.races">0.12</CVG_Xeno_Phoenix>
+      <CVG_Xeno_Fox MayRequire="prospero1088.convergence.races">0.12</CVG_Xeno_Fox>
+      </xenotypeChances>
+    </xenotypeSet>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_GoldenCore</realm>
+        <stage>1~3</stage>
+        <manuals><li>CVG_Manual_BlazingSun</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Fire</li><li>CVG_Element_Wood</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_HeavenlyCauldron_Auctioneer</defName>
+    <label>pavilion auctioneer</label>
+    <defaultFactionDef>CVG_Faction_HeavenlyCauldron</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_HeavenlyCauldron</nameMaker>
+    <trader>true</trader>
+    <isFighter>false</isFighter>
+    <combatPower>45</combatPower>
+    <weaponTags><li>Gun</li></weaponTags>
+    <weaponMoney>500~800</weaponMoney>
+    <apparelTags><li>IndustrialBasic</li></apparelTags>
+    <apparelMoney>400~800</apparelMoney>
+    <xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+      <xenotypeChances>
+      <CVG_Xeno_Phoenix MayRequire="prospero1088.convergence.races">0.12</CVG_Xeno_Phoenix>
+      <CVG_Xeno_Fox MayRequire="prospero1088.convergence.races">0.12</CVG_Xeno_Fox>
+      </xenotypeChances>
+    </xenotypeSet>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_QiRefining</realm>
+        <stage>2~3</stage>
+        <manuals><li>CVG_Manual_BlazingSun</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Fire</li><li>CVG_Element_Wood</li></elements>
+        <scaleWithColony>false</scaleWithColony>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Ancient Dragon Clan -->
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_AncientDragon_Watcher</defName>
+    <label>dragon watcher</label>
+    <defaultFactionDef>CVG_Faction_AncientDragon</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_AncientDragon</nameMaker>
+    <combatPower>230</combatPower>
+    <minGenerationAge>40</minGenerationAge>
+    <weaponTags><li>MedievalMeleeAdvanced</li></weaponTags>
+    <weaponMoney>900~1500</weaponMoney>
+    <apparelTags><li>Neolithic</li></apparelTags>
+    <apparelMoney>150~450</apparelMoney>
+    <gearHealthRange>0.6~1.8</gearHealthRange>
+    <itemQuality>Normal</itemQuality>
+    <xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+      <xenotypeChances>
+      <CVG_Xeno_Dragon MayRequire="prospero1088.convergence.races">1.0</CVG_Xeno_Dragon>
+      </xenotypeChances>
+    </xenotypeSet>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_GoldenCore</realm>
+        <stage>1~2</stage>
+        <manuals><li>CVG_Manual_FlowingCloud</li><li>CVG_Manual_MountainHeart</li></manuals>
+        <elements><li>CVG_Element_Water</li><li>CVG_Element_Earth</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_AncientDragon_ClanElder</defName>
+    <label>clan elder</label>
+    <defaultFactionDef>CVG_Faction_AncientDragon</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_AncientDragon</nameMaker>
+    <combatPower>300</combatPower>
+    <minGenerationAge>40</minGenerationAge>
+    <weaponTags><li>MedievalMeleeAdvanced</li><li>LongSword</li></weaponTags>
+    <weaponMoney>900~1500</weaponMoney>
+    <apparelTags><li>Neolithic</li></apparelTags>
+    <apparelMoney>500~1200</apparelMoney>
+    <gearHealthRange>1.0~2.5</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+      <xenotypeChances>
+      <CVG_Xeno_Dragon MayRequire="prospero1088.convergence.races">1.0</CVG_Xeno_Dragon>
+      </xenotypeChances>
+    </xenotypeSet>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_GoldenCore</realm>
+        <stage>3~4</stage>
+        <manuals><li>CVG_Manual_FlowingCloud</li><li>CVG_Manual_MountainHeart</li></manuals>
+        <elements><li>CVG_Element_Water</li><li>CVG_Element_Earth</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_AncientDragon_Hoarder</defName>
+    <label>clan hoarder</label>
+    <defaultFactionDef>CVG_Faction_AncientDragon</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_AncientDragon</nameMaker>
+    <trader>true</trader>
+    <isFighter>false</isFighter>
+    <combatPower>45</combatPower>
+    <weaponTags><li>MedievalMeleeAdvanced</li></weaponTags>
+    <weaponMoney>900~1500</weaponMoney>
+    <apparelTags><li>Neolithic</li></apparelTags>
+    <apparelMoney>400~800</apparelMoney>
+    <xenotypeSet MayRequire="Ludeon.RimWorld.Biotech">
+      <xenotypeChances>
+      <CVG_Xeno_Dragon MayRequire="prospero1088.convergence.races">1.0</CVG_Xeno_Dragon>
+      </xenotypeChances>
+    </xenotypeSet>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_GoldenCore</realm>
+        <stage>2~3</stage>
+        <manuals><li>CVG_Manual_FlowingCloud</li><li>CVG_Manual_MountainHeart</li></manuals>
+        <elements><li>CVG_Element_Water</li><li>CVG_Element_Earth</li></elements>
+        <scaleWithColony>false</scaleWithColony>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Blood Moon Cult -->
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_BloodMoon_Servant</defName>
+    <label>blood servant</label>
+    <defaultFactionDef>CVG_Faction_BloodMoon</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_BloodMoon</nameMaker>
+    <combatPower>55</combatPower>
+    <minGenerationAge>16</minGenerationAge>
+    <weaponTags><li>MedievalMeleeDecent</li></weaponTags>
+    <weaponMoney>150~400</weaponMoney>
+    <apparelTags><li>Tribal</li></apparelTags>
+    <apparelMoney>150~450</apparelMoney>
+    <gearHealthRange>0.6~1.8</gearHealthRange>
+    <itemQuality>Normal</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_QiRefining</realm>
+        <stage>1~3</stage>
+        <manuals><li>CVG_Manual_FlowingCloud</li><li>CVG_Manual_BlazingSun</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Water</li><li>CVG_Element_Fire</li><li>CVG_Element_Wood</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_BloodMoon_Disciple</defName>
+    <label>blood disciple</label>
+    <defaultFactionDef>CVG_Faction_BloodMoon</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_BloodMoon</nameMaker>
+    <combatPower>110</combatPower>
+    <minGenerationAge>25</minGenerationAge>
+    <weaponTags><li>MedievalMeleeDecent</li></weaponTags>
+    <weaponMoney>150~400</weaponMoney>
+    <apparelTags><li>Tribal</li></apparelTags>
+    <apparelMoney>150~450</apparelMoney>
+    <gearHealthRange>0.6~1.8</gearHealthRange>
+    <itemQuality>Normal</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_Foundation</realm>
+        <stage>1~2</stage>
+        <manuals><li>CVG_Manual_FlowingCloud</li><li>CVG_Manual_BlazingSun</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Water</li><li>CVG_Element_Fire</li><li>CVG_Element_Wood</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_BloodMoon_Crimson</defName>
+    <label>crimson core</label>
+    <defaultFactionDef>CVG_Faction_BloodMoon</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_BloodMoon</nameMaker>
+    <combatPower>145</combatPower>
+    <minGenerationAge>25</minGenerationAge>
+    <weaponTags><li>MedievalMeleeAdvanced</li></weaponTags>
+    <weaponMoney>400~900</weaponMoney>
+    <apparelTags><li>Tribal</li></apparelTags>
+    <apparelMoney>500~1200</apparelMoney>
+    <gearHealthRange>1.0~2.5</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_Foundation</realm>
+        <stage>3~4</stage>
+        <manuals><li>CVG_Manual_FlowingCloud</li><li>CVG_Manual_BlazingSun</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Water</li><li>CVG_Element_Fire</li><li>CVG_Element_Wood</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_BloodMoon_Elder</defName>
+    <label>blood elder</label>
+    <defaultFactionDef>CVG_Faction_BloodMoon</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_BloodMoon</nameMaker>
+    <combatPower>250</combatPower>
+    <minGenerationAge>40</minGenerationAge>
+    <weaponTags><li>MedievalMeleeAdvanced</li></weaponTags>
+    <weaponMoney>400~900</weaponMoney>
+    <apparelTags><li>Tribal</li></apparelTags>
+    <apparelMoney>500~1200</apparelMoney>
+    <gearHealthRange>1.0~2.5</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_GoldenCore</realm>
+        <stage>1~3</stage>
+        <manuals><li>CVG_Manual_FlowingCloud</li><li>CVG_Manual_BlazingSun</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Water</li><li>CVG_Element_Fire</li><li>CVG_Element_Wood</li></elements>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Rogue Cultivators -->
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_RogueCultivators_Wanderer</defName>
+    <label>wandering cultivator</label>
+    <defaultFactionDef>CVG_Faction_RogueCultivators</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_RogueCultivators</nameMaker>
+    <combatPower>55</combatPower>
+    <minGenerationAge>16</minGenerationAge>
+    <weaponTags><li>MedievalMeleeDecent</li><li>Gun</li></weaponTags>
+    <weaponMoney>150~400</weaponMoney>
+    <apparelTags><li>Neolithic</li><li>IndustrialBasic</li></apparelTags>
+    <apparelMoney>150~450</apparelMoney>
+    <gearHealthRange>0.6~1.8</gearHealthRange>
+    <itemQuality>Normal</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_QiRefining</realm>
+        <stage>1~3</stage>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_RogueCultivators_Sellsword</defName>
+    <label>cultivator sellsword</label>
+    <defaultFactionDef>CVG_Faction_RogueCultivators</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_RogueCultivators</nameMaker>
+    <combatPower>105</combatPower>
+    <minGenerationAge>25</minGenerationAge>
+    <weaponTags><li>MedievalMeleeDecent</li><li>Gun</li></weaponTags>
+    <weaponMoney>150~400</weaponMoney>
+    <apparelTags><li>Neolithic</li><li>IndustrialBasic</li></apparelTags>
+    <apparelMoney>150~450</apparelMoney>
+    <gearHealthRange>0.6~1.8</gearHealthRange>
+    <itemQuality>Normal</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_Foundation</realm>
+        <stage>1~2</stage>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_RogueCultivators_Veteran</defName>
+    <label>veteran wanderer</label>
+    <defaultFactionDef>CVG_Faction_RogueCultivators</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_RogueCultivators</nameMaker>
+    <combatPower>140</combatPower>
+    <minGenerationAge>25</minGenerationAge>
+    <weaponTags><li>MedievalMeleeDecent</li><li>Gun</li></weaponTags>
+    <weaponMoney>150~400</weaponMoney>
+    <apparelTags><li>Neolithic</li><li>IndustrialBasic</li></apparelTags>
+    <apparelMoney>150~450</apparelMoney>
+    <gearHealthRange>0.6~1.8</gearHealthRange>
+    <itemQuality>Normal</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_Foundation</realm>
+        <stage>3~4</stage>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_RogueCultivators_Hermit</defName>
+    <label>hidden hermit</label>
+    <defaultFactionDef>CVG_Faction_RogueCultivators</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_RogueCultivators</nameMaker>
+    <combatPower>245</combatPower>
+    <minGenerationAge>40</minGenerationAge>
+    <weaponTags><li>MedievalMeleeAdvanced</li><li>IndustrialGunAdvanced</li></weaponTags>
+    <weaponMoney>400~900</weaponMoney>
+    <apparelTags><li>IndustrialBasic</li></apparelTags>
+    <apparelMoney>500~1200</apparelMoney>
+    <gearHealthRange>1.0~2.5</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_GoldenCore</realm>
+        <stage>1~3</stage>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_SectKindBase">
+    <defName>CVG_RogueCultivators_Peddler</defName>
+    <label>night-market peddler</label>
+    <defaultFactionDef>CVG_Faction_RogueCultivators</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_RogueCultivators</nameMaker>
+    <trader>true</trader>
+    <isFighter>false</isFighter>
+    <combatPower>45</combatPower>
+    <weaponTags><li>MedievalMeleeDecent</li></weaponTags>
+    <weaponMoney>100~200</weaponMoney>
+    <apparelTags><li>IndustrialBasic</li></apparelTags>
+    <apparelMoney>400~800</apparelMoney>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_QiRefining</realm>
+        <stage>2~3</stage>
+        <scaleWithColony>false</scaleWithColony>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+</Defs>

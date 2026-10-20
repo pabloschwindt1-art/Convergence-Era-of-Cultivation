@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Review of Convergence: Formations (docs/revision/REVISION_Formations.md): a long-range fixed defense, the wuxia mortar/heavy turret. -->
+  <ThingDef ParentName="CVG_TechniqueBulletBase">
+    <defName>CVG_Projectile_QiBolt</defName>
+    <label>qi bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/CVG/QiBolt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.6</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>34</damageAmountBase>
+      <armorPenetrationBase>0.65</armorPenetrationBase>
+      <stoppingPower>2</stoppingPower>
+      <speed>75</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>CVG_Gun_ThunderBallista</defName>
+    <label>thunder ballista</label>
+    <description>A ballista whose bolt is wrapped in a ball of thunder qi. It hits hard, reaches far and takes a long time to aim.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Formations/ThunderBallistaTurret_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.6,1.6)</drawSize>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.7</AccuracyTouch>
+      <AccuracyShort>0.8</AccuracyShort>
+      <AccuracyMedium>0.8</AccuracyMedium>
+      <AccuracyLong>0.7</AccuracyLong>
+      <RangedWeapon_Cooldown>5.5</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>20</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>CVG_Projectile_QiBolt</defaultProjectile>
+        <warmupTime>2.0</warmupTime>
+        <range>46.9</range>
+        <minRange>6.9</minRange>
+        <soundCast>Bow_Recurve</soundCast>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <consumeFuelPerShot>0.5</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_ThunderBallistaTurret</defName>
+    <label>thunder ballista turret</label>
+    <description>The ballista of the high walls of the old sects, the one that ended sieges before they began. It reaches almost twice as far as a rune crossbow and hits much harder, but it is slow and cannot hit anyone who gets close. Burns spirit stones for the thunder. The first was built to stop one particular enemy, and each of its bolts still seems to remember which.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawHighlight>true</drawHighlight>
+    <drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
+    <uiIconPath>Things/Building/CVG/Formations/ThunderBallistaTurret_MenuIcon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/CVG/Formations/ThunderBallistaTurret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(1.959,1.959)</drawSize>
+      <damageData><rect>(0.2,0.2,1.6,1.6)</rect></damageData>
+    </graphicData>
+    <category>Building</category>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <size>(2,2)</size>
+    <statBases>
+      <MaxHitPoints>320</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <WorkToBuild>9000</WorkToBuild>
+      <Mass>90</Mass>
+      <Beauty>2</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0</fuelConsumptionRate>
+        <fuelCapacity>20</fuelCapacity>
+        <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
+        <initialFuelPercent>0.5</initialFuelPercent>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <autoRefuelPercent>0.4</autoRefuelPercent>
+        <fuelLabel>Spirit stones</fuelLabel>
+        <fuelGizmoLabel>Spirit stones</fuelGizmoLabel>
+      </li>
+      <li Class="CompProperties_Stunnable"><affectedDamageDefs><li>Stun</li><li>EMP</li></affectedDamageDefs></li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <costList>
+      <WoodLog>120</WoodLog>
+      <Steel>120</Steel>
+      <CVG_SpiritStone>15</CVG_SpiritStone>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <uiOrder>2542</uiOrder>
+    <building>
+      <combatPower>110</combatPower>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>CVG_Gun_ThunderBallista</turretGunDef>
+      <turretBurstCooldownTime>5.5</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <researchPrerequisites><li>CVG_Research_DefensiveFormations</li></researchPrerequisites>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Dao Comprehension (docs/modulos/INVESTIGACION.md). Projects of the Cultivation tab with DefModExtension_DaoResearch:
+    - With Anomaly: at startup they become knowledge projects of the category CVG_DaoComprehension (knowledgeCost).
+      Comprehension comes from cultivating (0.25/h), tempering the body (0.15/h), breathing as an awakened cultivator
+      (0.02/h), reading jade slips (1.5) and absorbing beast cores (1); sudden enlightenment while practicing (+3).
+    - Without Anomaly: normal research (baseCost) at the contemplation desk; cultivating also adds to the current
+      Dao project (200 research points per comprehension point).
+    Completing a project sends an enlightenment letter naming the colonist who contributed most.
+  -->
+  <KnowledgeCategoryDef>
+    <defName>CVG_DaoComprehension</defName>
+    <label>Dao comprehension</label>
+    <color>(0.55, 0.8, 1)</color>
+    <texPath>UI/Icons/Genes/CVG_RootGrade_Heavenly</texPath>
+  </KnowledgeCategoryDef>
+
+  <ResearchProjectDef Name="CVG_DaoResearchBase" Abstract="True">
+    <techLevel>Neolithic</techLevel>
+    <tab>CVG_Cultivation</tab>
+    <requiredResearchBuilding>CVG_ContemplationDesk</requiredResearchBuilding>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_QiBreathing</defName>
+    <label>qi breathing</label>
+    <description>How to sit, breathe and let the qi of the world flow into the dantian. Unlocks the cultivation cushion. A Master who arrives with the Convergence teaches it at once.</description>
+    <baseCost>800</baseCost>
+    <researchViewX>1</researchViewX>
+    <researchViewY>0</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>2</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_Foundation</defName>
+    <label>foundation establishment</label>
+    <description>Understanding how refined qi condenses into a liquid foundation. Required to break through to Foundation Establishment.</description>
+    <baseCost>2000</baseCost>
+    <prerequisites>
+      <li>CVG_Research_QiBreathing</li>
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>0</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>6</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_GoldenCore</defName>
+    <label>golden core</label>
+    <description>How to compress a foundation into a golden core, and why Heaven answers with a tribulation. Required to break through to Golden Core.</description>
+    <baseCost>4000</baseCost>
+    <prerequisites>
+      <li>CVG_Research_Foundation</li>
+    </prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>0</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>14</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <!-- Special discovery: opens a part of the world. TODO: secret realm missions (pocket maps, docs/modulos/INVESTIGACION.md §2b). -->
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_SecretRealms</defName>
+    <label>secret realms</label>
+    <description>Hints in old manuals speak of pocket worlds folded inside this one: secret realms full of trials and treasures. Comprehending them reveals that they exist.</description>
+    <baseCost>6000</baseCost>
+    <prerequisites>
+      <li>CVG_Research_GoldenCore</li>
+    </prerequisites>
+    <researchViewX>4</researchViewX>
+    <researchViewY>0</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>25</knowledgeCost>
+        <discoveryText>{PAWN_nameDef} discovered that secret realms exist in this world. Exploring them will be hard, but very rewarding.</discoveryText>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_TechniqueManuals</defName>
+    <label>technique manuals</label>
+    <description>How to read the dense script of a jade slip without burning the mind. Colonists can learn technique manuals from jade slips.</description>
+    <baseCost>1200</baseCost>
+    <prerequisites>
+      <li>CVG_Research_QiBreathing</li>
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>1</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>4</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_BodyTempering</defName>
+    <label>body tempering</label>
+    <description>The path of those without a root: tempering skin, flesh and bone with spirit-beast blood. Unlocks the training equipment and the breakthrough to Flesh Tempering.</description>
+    <baseCost>1000</baseCost>
+    <researchViewX>1</researchViewX>
+    <researchViewY>2</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>3</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <!-- Without Anomaly the Dao projects are researched here (with Anomaly it is optional decoration). -->
+  <ThingDef ParentName="BenchBase">
+    <defName>CVG_ContemplationDesk</defName>
+    <label>contemplation desk</label>
+    <description>A low desk with brushes, old manuals and a bowl of clear water. Colonists study the Dao here (the research projects of the Cultivation tab).\n\nWith Anomaly, Dao comprehension comes from cultivating instead.</description>
+    <thingClass>Building_ResearchBench</thingClass>
+    <size>(3,2)</size>
+    <stuffCategories>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>60</costStuffCount>
+    <graphicData>
+      <texPath>Things/Building/CVG/ContemplationDesk</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <ResearchSpeedFactor>0.8</ResearchSpeedFactor>
+    </statBases>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2470</uiOrder>
+  </ThingDef>
+</Defs>

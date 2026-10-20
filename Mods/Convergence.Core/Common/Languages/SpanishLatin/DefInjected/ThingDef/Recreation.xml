@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_GoBoard.label>tablero de go</CVG_GoBoard.label>
+  <CVG_GoBoard.description>Un tablero de diecinueve por diecinueve líneas y dos cuencos de piedras (围棋, weiqi). Los cultivadores dicen que una partida de go es una batalla del Dao en miniatura. Entretiene unas horas, entrena las habilidades intelectuales y da un poco de comprensión del Dao.\n\nNecesita sillas o taburetes al lado para usarse.</CVG_GoBoard.description>
+  <CVG_CalligraphyDesk.label>mesa de caligrafía</CVG_CalligraphyDesk.label>
+  <CVG_CalligraphyDesk.description>Una mesa baja con pinceles, piedra de tinta y papel de arroz. Escribir los caracteres del Dao calma el corazón: un pasatiempo refinado que entrena las habilidades artísticas y da un poco de comprensión del Dao. Aquí se hacen los pergaminos de caligrafía y las pinturas de tinta para las paredes.</CVG_CalligraphyDesk.description>
+</LanguageData>

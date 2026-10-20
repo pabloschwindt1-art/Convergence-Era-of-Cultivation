@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Element_Metal.label>metal</CVG_Element_Metal.label>
+  <CVG_Element_Metal.description>Qi afilado e inflexible. Favorece las espadas y la defensa.</CVG_Element_Metal.description>
+  <CVG_Element_Wood.label>madera</CVG_Element_Wood.label>
+  <CVG_Element_Wood.description>Qi vivo, que crece. Favorece la sanación y el cultivo espiritual de plantas.</CVG_Element_Wood.description>
+  <CVG_Element_Water.label>agua</CVG_Element_Water.label>
+  <CVG_Element_Water.description>Qi fluido y paciente. Favorece el control y la resistencia.</CVG_Element_Water.description>
+  <CVG_Element_Fire.label>fuego</CVG_Element_Fire.label>
+  <CVG_Element_Fire.description>Qi violento y devorador. Favorece la destrucción y la alquimia.</CVG_Element_Fire.description>
+  <CVG_Element_Earth.label>tierra</CVG_Element_Earth.label>
+  <CVG_Element_Earth.description>Qi pesado y estable. Favorece el cuerpo y las formaciones.</CVG_Element_Earth.description>
+</LanguageData>

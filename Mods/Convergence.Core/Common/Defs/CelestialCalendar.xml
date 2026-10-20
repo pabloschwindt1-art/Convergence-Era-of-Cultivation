@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Celestial calendar (docs/EVENTOS.md §1). Map conditions that only start after the Convergence
+    (IncidentWorker_CelestialCondition). Effects in DefModExtension_CelestialCondition: factors/offsets to any stat with
+    Convergence.StatPart_CelestialCondition in its parts (cultivation speed, qi regen, technique cost, breakthrough
+    chance, body tempering), Dao comprehension and qi-deviation risk while cultivating.
+    Frequency (docs/ANALISIS_VE.md §1.2): ambient events 0.5-1.2 / ~15 days; stronger ones lower and with longer refire.
+  -->
+  <GameConditionDef>
+    <defName>CVG_QiTide</defName>
+    <conditionClass>GameCondition</conditionClass>
+    <label>qi tide</label>
+    <description>The sky of Jiuxiao presses close and qi floods the land. Cultivation is twice as fast, qi comes back quickly and breakthroughs are easier: a good time to advance.</description>
+    <endMessage>The qi tide recedes.</endMessage>
+    <letterText>The air shimmers and the ground hums: a qi tide has come. For a few days cultivation is twice as fast, qi regenerates faster and breakthroughs are easier.</letterText>
+    <letterDef>PositiveEvent</letterDef>
+    <canBePermanent>false</canBePermanent>
+    <exclusiveConditions>
+      <li>CVG_QiEbb</li>
+    </exclusiveConditions>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CelestialCondition">
+        <statFactors>
+          <CVG_CultivationSpeed>2</CVG_CultivationSpeed>
+          <CVG_QiRegen>1.5</CVG_QiRegen>
+          <CVG_BodyTemperingSpeed>1.3</CVG_BodyTemperingSpeed>
+        </statFactors>
+        <statOffsets>
+          <CVG_BreakthroughChance>0.1</CVG_BreakthroughChance>
+        </statOffsets>
+        <daoComprehensionFactor>1.5</daoComprehensionFactor>
+      </li>
+    </modExtensions>
+  </GameConditionDef>
+
+  <GameConditionDef>
+    <defName>CVG_QiEbb</defName>
+    <conditionClass>GameCondition</conditionClass>
+    <label>qi ebb</label>
+    <description>The qi of the world ebbs away. Cultivating barely helps, qi comes back slowly and techniques cost more.</description>
+    <endMessage>The qi flows back.</endMessage>
+    <letterText>The world feels thin and dry: the qi is ebbing. For a few days cultivation is much slower, qi regenerates slowly and techniques cost more.</letterText>
+    <letterDef>NegativeEvent</letterDef>
+    <canBePermanent>false</canBePermanent>
+    <exclusiveConditions>
+      <li>CVG_QiTide</li>
+    </exclusiveConditions>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CelestialCondition">
+        <statFactors>
+          <CVG_CultivationSpeed>0.4</CVG_CultivationSpeed>
+          <CVG_QiRegen>0.5</CVG_QiRegen>
+          <CVG_TechniqueCost>1.3</CVG_TechniqueCost>
+        </statFactors>
+        <daoComprehensionFactor>0.7</daoComprehensionFactor>
+      </li>
+    </modExtensions>
+  </GameConditionDef>
+
+  <GameConditionDef>
+    <defName>CVG_InnerDemonMoon</defName>
+    <conditionClass>GameCondition</conditionClass>
+    <label>inner demon moon</label>
+    <description>A red moon of Jiuxiao rises. Doubts and desires grow loud in the minds of cultivators: breakthroughs are harder and cultivating may send the qi astray.</description>
+    <endMessage>The inner demon moon sets.</endMessage>
+    <letterText>A blood-red moon rises over the colony: the inner demon moon. While it shines, breakthroughs are harder and every hour of cultivation risks a qi deviation. Some cultivators would rather wait.</letterText>
+    <letterDef>NegativeEvent</letterDef>
+    <canBePermanent>false</canBePermanent>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CelestialCondition">
+        <statFactors>
+          <CVG_CultivationSpeed>0.85</CVG_CultivationSpeed>
+        </statFactors>
+        <statOffsets>
+          <CVG_BreakthroughChance>-0.15</CVG_BreakthroughChance>
+        </statOffsets>
+        <deviationChancePerHour>0.02</deviationChancePerHour>
+        <deviationHediff>CVG_QiDeviation</deviationHediff>
+        <innerDemonBreakFactor>5</innerDemonBreakFactor>
+      </li>
+    </modExtensions>
+  </GameConditionDef>
+
+  <IncidentDef Name="CVG_CelestialIncidentBase" Abstract="True">
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>Convergence.IncidentWorker_CelestialCondition</workerClass>
+  </IncidentDef>
+
+  <IncidentDef ParentName="CVG_CelestialIncidentBase">
+    <defName>CVG_QiTide</defName>
+    <label>qi tide</label>
+    <gameCondition>CVG_QiTide</gameCondition>
+    <letterLabel>Qi tide</letterLabel>
+    <letterDef>PositiveEvent</letterDef>
+    <baseChance>0.6</baseChance>
+    <minRefireDays>20</minRefireDays>
+    <earliestDay>5</earliestDay>
+    <durationDays>3~6</durationDays>
+  </IncidentDef>
+
+  <IncidentDef ParentName="CVG_CelestialIncidentBase">
+    <defName>CVG_QiEbb</defName>
+    <label>qi ebb</label>
+    <gameCondition>CVG_QiEbb</gameCondition>
+    <letterLabel>Qi ebb</letterLabel>
+    <letterDef>NegativeEvent</letterDef>
+    <baseChance>0.35</baseChance>
+    <minRefireDays>25</minRefireDays>
+    <earliestDay>10</earliestDay>
+    <durationDays>2~4</durationDays>
+  </IncidentDef>
+
+  <IncidentDef ParentName="CVG_CelestialIncidentBase">
+    <defName>CVG_InnerDemonMoon</defName>
+    <label>inner demon moon</label>
+    <gameCondition>CVG_InnerDemonMoon</gameCondition>
+    <letterLabel>Inner demon moon</letterLabel>
+    <letterDef>NegativeEvent</letterDef>
+    <baseChance>0.25</baseChance>
+    <minRefireDays>30</minRefireDays>
+    <earliestDay>15</earliestDay>
+    <durationDays>1~2.5</durationDays>
+  </IncidentDef>
+</Defs>

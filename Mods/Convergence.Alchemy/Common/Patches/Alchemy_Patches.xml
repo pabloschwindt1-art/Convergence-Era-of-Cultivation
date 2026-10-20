@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Spirit metals of Convergence: Resources can also be used for spirit weapons. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="CVG_SpiritSteel" or defName="CVG_MoonSilver" or defName="CVG_ChaosGold" or defName="CVG_ColdIron" or defName="CVG_GalacticSteel"]/stuffProps/categories</xpath>
+    <value>
+      <li>CVG_SpiritMetal</li>
+    </value>
+  </Operation>
+
+  <!-- Wuxia materials give a minimum spirit grade to any weapon made of them (Convergence.DefModExtension_SpiritGradeMaterial):
+       a mortal jian of spirit steel already hurts a Qi Refining cultivator; chaos gold gives at least 2. A floor, not a sum.
+       Only when Convergence: Resources is active (success Always). -->
+  <Operation Class="PatchOperationAddModExtension">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="CVG_SpiritSteel" or defName="CVG_MoonSilver" or defName="CVG_ColdIron" or defName="CVG_GalacticSteel" or defName="CVG_SpiritCrystal" or defName="CVG_JadeBamboo" or defName="CVG_PeachTimber"]</xpath>
+    <value>
+      <li Class="Convergence.DefModExtension_SpiritGradeMaterial">
+        <minGrade>1</minGrade>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="CVG_ChaosGold"]</xpath>
+    <value>
+      <li Class="Convergence.DefModExtension_SpiritGradeMaterial">
+        <minGrade>2</minGrade>
+      </li>
+    </value>
+  </Operation>
+
+  <!-- Foundation pill: the provisional Core recipe moves to the alchemy furnace, with quality and toxicity (same defName). -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="CVG_FoundationPill"]/recipeMaker/recipeUsers</xpath>
+    <value>
+      <recipeUsers>
+        <li>CVG_AlchemyFurnace</li>
+      </recipeUsers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="CVG_FoundationPill"]/costList</xpath>
+    <value>
+      <costList>
+        <CVG_SpiritHerb>4</CVG_SpiritHerb>
+        <CVG_SpiritStone>2</CVG_SpiritStone>
+        <Silver>10</Silver>
+      </costList>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="CVG_FoundationPill"]/ingestible/outcomeDoers</xpath>
+    <value>
+      <outcomeDoers>
+        <li Class="Convergence.IngestionOutcomeDoer_GiveHediffByQuality">
+          <hediffDef>CVG_FoundationPillAbsorbed</hediffDef>
+          <severity>1.0</severity>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_PillToxicity</hediffDef>
+          <severity>0.15</severity>
+        </li>
+      </outcomeDoers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="CVG_FoundationPill"]/comps</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="CVG_FoundationPill"]/comps</xpath>
+      <value>
+        <li>
+          <compClass>CompQuality</compClass>
+        </li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="CVG_FoundationPill"]</xpath>
+      <value>
+        <comps>
+          <li>
+            <compClass>CompQuality</compClass>
+          </li>
+        </comps>
+      </value>
+    </nomatch>
+  </Operation>
+  <!-- A drug for the game (drug policies, Ideology drug precepts), like vanilla Penoxycyline: medical, no addiction or overdose. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="CVG_FoundationPill"]/ingestible/drugCategory</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="CVG_FoundationPill"]/ingestible/drugCategory</xpath>
+      <value>
+        <drugCategory>Medical</drugCategory>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="CVG_FoundationPill"]/ingestible</xpath>
+      <value>
+        <drugCategory>Medical</drugCategory>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="CVG_FoundationPill"]/comps</xpath>
+    <value>
+      <li Class="CompProperties_Drug">
+        <listOrder>1090</listOrder>
+        <overdoseSeverityOffset>0~0</overdoseSeverityOffset>
+      </li>
+    </value>
+  </Operation>
+
+  <!-- Its effect scales with quality: severity 0.5 (awful) .. 2.2 (legendary). -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="CVG_FoundationPillAbsorbed"]/maxSeverity</xpath>
+    <value>
+      <maxSeverity>2.2</maxSeverity>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="CVG_FoundationPillAbsorbed"]/stages</xpath>
+    <value>
+      <stages>
+        <li>
+          <minSeverity>0</minSeverity>
+          <statOffsets>
+            <CVG_BreakthroughChance>0.2</CVG_BreakthroughChance>
+          </statOffsets>
+        </li>
+        <li>
+          <minSeverity>0.9</minSeverity>
+          <statOffsets>
+            <CVG_BreakthroughChance>0.3</CVG_BreakthroughChance>
+          </statOffsets>
+        </li>
+        <li>
+          <minSeverity>1.15</minSeverity>
+          <statOffsets>
+            <CVG_BreakthroughChance>0.38</CVG_BreakthroughChance>
+          </statOffsets>
+        </li>
+        <li>
+          <minSeverity>1.4</minSeverity>
+          <statOffsets>
+            <CVG_BreakthroughChance>0.45</CVG_BreakthroughChance>
+          </statOffsets>
+        </li>
+        <li>
+          <minSeverity>1.7</minSeverity>
+          <statOffsets>
+            <CVG_BreakthroughChance>0.55</CVG_BreakthroughChance>
+          </statOffsets>
+        </li>
+        <li>
+          <minSeverity>2.1</minSeverity>
+          <statOffsets>
+            <CVG_BreakthroughChance>0.65</CVG_BreakthroughChance>
+          </statOffsets>
+        </li>
+      </stages>
+    </value>
+  </Operation>
+</Patch>

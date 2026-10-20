@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Spirit herbs appear rarely in the wild of every biome with wild plants; the snow lotus only in cold ones. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/BiomeDef[defName="TemperateForest" or defName="TropicalRainforest" or defName="TemperateSwamp" or defName="TropicalSwamp" or defName="AridShrubland" or defName="BorealForest"]/wildPlants</xpath>
+    <value>
+      <CVG_Plant_SpiritHerb>0.06</CVG_Plant_SpiritHerb>
+      <CVG_Plant_SpiritGinseng>0.015</CVG_Plant_SpiritGinseng>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/BiomeDef[defName="BorealForest" or defName="Tundra" or defName="ColdBog"]/wildPlants</xpath>
+    <value>
+      <CVG_Plant_SnowLotus>0.03</CVG_Plant_SnowLotus>
+    </value>
+  </Operation>
+</Patch>

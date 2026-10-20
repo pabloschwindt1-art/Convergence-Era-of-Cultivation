@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Person namers for the bloodline xenotypes (XenotypeDef.nameMaker / nameMakerFemale, like Biotech's Impid or Dirtmole).
+       Chinese order: family name first. A courtesy name in quotes becomes the nickname; without it, the given name is the nickname. -->
+
+  <!-- dragon: clan names of the Ancient Dragon Clan (Ao is the surname of the Dragon Kings) -->
+  <RulePackDef>
+    <defName>CVG_NamerPerson_Dragon</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[family] [given]</li>
+        <li>r_name->[family] '[courtesy]' [given]</li>
+        <li>family->Ao</li>
+        <li>family->Long</li>
+        <li>family->Lei</li>
+        <li>family->Hai</li>
+        <li>family->Jiang</li>
+        <li>family->Yun</li>
+        <li>family->Lan</li>
+        <li>family->Bo</li>
+        <li>given->Zhenhai</li>
+        <li>given->Tianlei</li>
+        <li>given->Haoyang</li>
+        <li>given->Longxi</li>
+        <li>given->Mingyuan</li>
+        <li>given->Chenhai</li>
+        <li>given->Jinglei</li>
+        <li>given->Yunhai</li>
+        <li>given->Botao</li>
+        <li>given->Zhenyu</li>
+        <li>given->Haotian</li>
+        <li>given->Leiming</li>
+        <li>given->Canghai</li>
+        <li>given->Yuanlong</li>
+        <li>courtesy->Boyuan</li>
+        <li>courtesy->Zhongtao</li>
+        <li>courtesy->Ziyun</li>
+        <li>courtesy->Yuhai</li>
+        <li>courtesy->Shuyan</li>
+        <li>courtesy->Wenlong</li>
+        <li>courtesy->Xuanzhi</li>
+        <li>courtesy->Mingde</li>
+        <li>courtesy->Zhiyuan</li>
+        <li>courtesy->Qingyu</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- dragon (female) -->
+  <RulePackDef>
+    <defName>CVG_NamerPerson_Dragon_Female</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[family] [given]</li>
+        <li>r_name->[family] '[courtesy]' [given]</li>
+        <li>family->Ao</li>
+        <li>family->Long</li>
+        <li>family->Lei</li>
+        <li>family->Hai</li>
+        <li>family->Jiang</li>
+        <li>family->Yun</li>
+        <li>family->Lan</li>
+        <li>family->Bo</li>
+        <li>given->Lingshuang</li>
+        <li>given->Bilan</li>
+        <li>given->Haiyue</li>
+        <li>given->Xueying</li>
+        <li>given->Yunxi</li>
+        <li>given->Qinglan</li>
+        <li>given->Mingzhu</li>
+        <li>given->Lanxin</li>
+        <li>given->Ruoshui</li>
+        <li>given->Tingyu</li>
+        <li>given->Xiaolan</li>
+        <li>given->Yuelan</li>
+        <li>courtesy->Boyuan</li>
+        <li>courtesy->Zhongtao</li>
+        <li>courtesy->Ziyun</li>
+        <li>courtesy->Yuhai</li>
+        <li>courtesy->Shuyan</li>
+        <li>courtesy->Wenlong</li>
+        <li>courtesy->Xuanzhi</li>
+        <li>courtesy->Mingde</li>
+        <li>courtesy->Zhiyuan</li>
+        <li>courtesy->Qingyu</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- phoenix: names of the Southern Court and the Nirvana Company (fire, dawn, vermilion) -->
+  <RulePackDef>
+    <defName>CVG_NamerPerson_Phoenix</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[family] [given]</li>
+        <li>r_name->[family] '[courtesy]' [given]</li>
+        <li>family->Feng</li>
+        <li>family->Huang</li>
+        <li>family->Chi</li>
+        <li>family->Zhu</li>
+        <li>family->Dan</li>
+        <li>family->Yan</li>
+        <li>family->Li</li>
+        <li>family->Xia</li>
+        <li>given->Chiyun</li>
+        <li>given->Yanhui</li>
+        <li>given->Zhaoming</li>
+        <li>given->Huoxuan</li>
+        <li>given->Danqing</li>
+        <li>given->Liyang</li>
+        <li>given->Chenguang</li>
+        <li>given->Yaoyang</li>
+        <li>given->Xuhe</li>
+        <li>given->Jinwu</li>
+        <li>given->Langyan</li>
+        <li>given->Yuzhao</li>
+        <li>courtesy->Wende</li>
+        <li>courtesy->Yiren</li>
+        <li>courtesy->Xinli</li>
+        <li>courtesy->Zhaohua</li>
+        <li>courtesy->Ziyan</li>
+        <li>courtesy->Chunhui</li>
+        <li>courtesy->Yuanzhi</li>
+        <li>courtesy->Shaoming</li>
+        <li>courtesy->Lingyun</li>
+        <li>courtesy->Huiguang</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- phoenix (female) -->
+  <RulePackDef>
+    <defName>CVG_NamerPerson_Phoenix_Female</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[family] [given]</li>
+        <li>r_name->[family] '[courtesy]' [given]</li>
+        <li>family->Feng</li>
+        <li>family->Huang</li>
+        <li>family->Chi</li>
+        <li>family->Zhu</li>
+        <li>family->Dan</li>
+        <li>family->Yan</li>
+        <li>family->Li</li>
+        <li>family->Xia</li>
+        <li>given->Mingluan</li>
+        <li>given->Huangying</li>
+        <li>given->Danxue</li>
+        <li>given->Yanling</li>
+        <li>given->Zhuqing</li>
+        <li>given->Xiaxi</li>
+        <li>given->Liuhuo</li>
+        <li>given->Caiyun</li>
+        <li>given->Yuxia</li>
+        <li>given->Hongluan</li>
+        <li>given->Jinyu</li>
+        <li>given->Zhaoxia</li>
+        <li>courtesy->Wende</li>
+        <li>courtesy->Yiren</li>
+        <li>courtesy->Xinli</li>
+        <li>courtesy->Zhaohua</li>
+        <li>courtesy->Ziyan</li>
+        <li>courtesy->Chunhui</li>
+        <li>courtesy->Yuanzhi</li>
+        <li>courtesy->Shaoming</li>
+        <li>courtesy->Lingyun</li>
+        <li>courtesy->Huiguang</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- qilin: names of the Middle Valleys and the Silent Lotus (virtue, peace, good omen) -->
+  <RulePackDef>
+    <defName>CVG_NamerPerson_Qilin</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[family] [given]</li>
+        <li>r_name->[family] '[courtesy]' [given]</li>
+        <li>family->Lin</li>
+        <li>family->Jin</li>
+        <li>family->Ren</li>
+        <li>family->Bai</li>
+        <li>family->Lu</li>
+        <li>family->Qi</li>
+        <li>family->Wen</li>
+        <li>family->An</li>
+        <li>given->Wenshu</li>
+        <li>given->Shoukang</li>
+        <li>given->Zhiping</li>
+        <li>given->Anren</li>
+        <li>given->Huaide</li>
+        <li>given->Jingyi</li>
+        <li>given->Ruihe</li>
+        <li>given->Yunqing</li>
+        <li>given->Shanyuan</li>
+        <li>given->Mingshan</li>
+        <li>given->Xiangrui</li>
+        <li>given->Chenghe</li>
+        <li>courtesy->Zixiang</li>
+        <li>courtesy->Wenruo</li>
+        <li>courtesy->Shouzhi</li>
+        <li>courtesy->Yuanshan</li>
+        <li>courtesy->Deming</li>
+        <li>courtesy->Huairen</li>
+        <li>courtesy->Jingzhi</li>
+        <li>courtesy->Ruolin</li>
+        <li>courtesy->Heping</li>
+        <li>courtesy->Shanze</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- qilin (female) -->
+  <RulePackDef>
+    <defName>CVG_NamerPerson_Qilin_Female</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[family] [given]</li>
+        <li>r_name->[family] '[courtesy]' [given]</li>
+        <li>family->Lin</li>
+        <li>family->Jin</li>
+        <li>family->Ren</li>
+        <li>family->Bai</li>
+        <li>family->Lu</li>
+        <li>family->Qi</li>
+        <li>family->Wen</li>
+        <li>family->An</li>
+        <li>given->Jinzhi</li>
+        <li>given->Ruixue</li>
+        <li>given->Huiyin</li>
+        <li>given->Lanzhi</li>
+        <li>given->Shuhe</li>
+        <li>given->Yixin</li>
+        <li>given->Anqi</li>
+        <li>given->Suxin</li>
+        <li>given->Wanru</li>
+        <li>given->Qinghe</li>
+        <li>given->Yueru</li>
+        <li>given->Lianxin</li>
+        <li>courtesy->Zixiang</li>
+        <li>courtesy->Wenruo</li>
+        <li>courtesy->Shouzhi</li>
+        <li>courtesy->Yuanshan</li>
+        <li>courtesy->Deming</li>
+        <li>courtesy->Huairen</li>
+        <li>courtesy->Jingzhi</li>
+        <li>courtesy->Ruolin</li>
+        <li>courtesy->Heping</li>
+        <li>courtesy->Shanze</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- black tortoise: names of the Northern Abyss (mountain, depth, endurance) -->
+  <RulePackDef>
+    <defName>CVG_NamerPerson_Tortoise</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[family] [given]</li>
+        <li>r_name->[family] '[courtesy]' [given]</li>
+        <li>family->Xuan</li>
+        <li>family->Shen</li>
+        <li>family->Beiming</li>
+        <li>family->Gui</li>
+        <li>family->Mo</li>
+        <li>family->Yue</li>
+        <li>family->Shi</li>
+        <li>family->Hou</li>
+        <li>given->Zhongshan</li>
+        <li>given->Houde</li>
+        <li>given->Jianshi</li>
+        <li>given->Chenmo</li>
+        <li>given->Yuanjing</li>
+        <li>given->Shouyi</li>
+        <li>given->Wenzhong</li>
+        <li>given->Dingyue</li>
+        <li>given->Jingshan</li>
+        <li>given->Changgeng</li>
+        <li>given->Pan</li>
+        <li>given->Kun</li>
+        <li>courtesy->Zhongyuan</li>
+        <li>courtesy->Houzai</li>
+        <li>courtesy->Rensheng</li>
+        <li>courtesy->Shoucheng</li>
+        <li>courtesy->Jingzhi</li>
+        <li>courtesy->Zijian</li>
+        <li>courtesy->Changfeng</li>
+        <li>courtesy->Yuanshi</li>
+        <li>courtesy->Moyan</li>
+        <li>courtesy->Dingzhi</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- tortoise (female) -->
+  <RulePackDef>
+    <defName>CVG_NamerPerson_Tortoise_Female</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[family] [given]</li>
+        <li>r_name->[family] '[courtesy]' [given]</li>
+        <li>family->Xuan</li>
+        <li>family->Shen</li>
+        <li>family->Beiming</li>
+        <li>family->Gui</li>
+        <li>family->Mo</li>
+        <li>family->Yue</li>
+        <li>family->Shi</li>
+        <li>family->Hou</li>
+        <li>given->Jingyuan</li>
+        <li>given->Moxue</li>
+        <li>given->Ningshuang</li>
+        <li>given->Anlan</li>
+        <li>given->Shanyin</li>
+        <li>given->Shuijing</li>
+        <li>given->Xuanyi</li>
+        <li>given->Hanxue</li>
+        <li>given->Yuanyue</li>
+        <li>given->Dongyi</li>
+        <li>given->Chenyi</li>
+        <li>given->Changning</li>
+        <li>courtesy->Zhongyuan</li>
+        <li>courtesy->Houzai</li>
+        <li>courtesy->Rensheng</li>
+        <li>courtesy->Shoucheng</li>
+        <li>courtesy->Jingzhi</li>
+        <li>courtesy->Zijian</li>
+        <li>courtesy->Changfeng</li>
+        <li>courtesy->Yuanshi</li>
+        <li>courtesy->Moyan</li>
+        <li>courtesy->Dingzhi</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- fox: names of Qingqiu (Tushan is the house of the Great Yu's fox bride); the quoted name is the social name, the true one stays hidden -->
+  <RulePackDef>
+    <defName>CVG_NamerPerson_Fox</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[family] [given]</li>
+        <li>r_name->[family] '[courtesy]' [given]</li>
+        <li>family->Hu</li>
+        <li>family->Tushan</li>
+        <li>family->Su</li>
+        <li>family->Bai</li>
+        <li>family->Qing</li>
+        <li>family->Hua</li>
+        <li>family->Yao</li>
+        <li>family->Ji</li>
+        <li>given->Wuming</li>
+        <li>given->Yaoguang</li>
+        <li>given->Ziye</li>
+        <li>given->Yuheng</li>
+        <li>given->Mochen</li>
+        <li>given->Huaxuan</li>
+        <li>given->Qianye</li>
+        <li>given->Linglang</li>
+        <li>given->Yeyu</li>
+        <li>given->Suiyun</li>
+        <li>given->Changyin</li>
+        <li>given->Xiaofeng</li>
+        <li>courtesy->Wuxiang</li>
+        <li>courtesy->Qianmian</li>
+        <li>courtesy->Yunmeng</li>
+        <li>courtesy->Yeling</li>
+        <li>courtesy->Ziqian</li>
+        <li>courtesy->Huanzhi</li>
+        <li>courtesy->Mengli</li>
+        <li>courtesy->Shixu</li>
+        <li>courtesy->Weiyang</li>
+        <li>courtesy->Qingmo</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- fox (female) -->
+  <RulePackDef>
+    <defName>CVG_NamerPerson_Fox_Female</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[family] [given]</li>
+        <li>r_name->[family] '[courtesy]' [given]</li>
+        <li>family->Hu</li>
+        <li>family->Tushan</li>
+        <li>family->Su</li>
+        <li>family->Bai</li>
+        <li>family->Qing</li>
+        <li>family->Hua</li>
+        <li>family->Yao</li>
+        <li>family->Ji</li>
+        <li>given->Jiuyao</li>
+        <li>given->Daji</li>
+        <li>given->Meiniang</li>
+        <li>given->Yaoyao</li>
+        <li>given->Qianqian</li>
+        <li>given->Hongxiu</li>
+        <li>given->Feiyan</li>
+        <li>given->Ruyan</li>
+        <li>given->Wanxing</li>
+        <li>given->Xiangyun</li>
+        <li>given->Yuexi</li>
+        <li>given->Lingxi</li>
+        <li>courtesy->Wuxiang</li>
+        <li>courtesy->Qianmian</li>
+        <li>courtesy->Yunmeng</li>
+        <li>courtesy->Yeling</li>
+        <li>courtesy->Ziqian</li>
+        <li>courtesy->Huanzhi</li>
+        <li>courtesy->Mengli</li>
+        <li>courtesy->Shixu</li>
+        <li>courtesy->Weiyang</li>
+        <li>courtesy->Qingmo</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

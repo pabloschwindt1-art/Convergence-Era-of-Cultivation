@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Spirit soil: a buildable fertile floor. Spirit plants (and Cloud Cotton) grow faster on it (see Patches). Adds a little qi to the room. -->
+  <TerrainDef ParentName="FloorBase">
+    <defName>CVG_SpiritSoil</defName>
+    <label>spirit soil</label>
+    <description>Rich earth mixed with spirit stone dust and beast blood. Extremely fertile: crops grow much faster here, and the ground breathes a little qi (+0.04 qi per cell). Shennong the Divine Farmer taught that earth is a patient mother, and that she repays the farmer who feeds her with more than grain. Sect gardeners mix the soil with dust of spirit stone and beast blood and say the field remembers it.</description>
+    <texturePath>Terrain/Surfaces/SoilRich</texturePath>
+    <color>(0.55,0.75,0.85)</color>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>255</renderPrecedence>
+    <fertility>1.9</fertility>
+    <affordances>
+      <li>GrowSoil</li>
+    </affordances>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Beauty>0</Beauty>
+      <Cleanliness>-0.3</Cleanliness>
+    </statBases>
+    <costList>
+      <CVG_SpiritStone>2</CVG_SpiritStone>
+      <CVG_BeastBlood>1</CVG_BeastBlood>
+    </costList>
+    <uiOrder>2100</uiOrder>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.04</qi>
+      </li>
+    </modExtensions>
+  </TerrainDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_TribulationMushroom</defName>
+    <label>tribulation mushroom</label>
+    <description>A violet mushroom that sprouts where heavenly lightning struck. It still hums with the tribulation. Alchemists use it in place of a spirit crystal for the nine-turns pill. Cultivators say the first tribulation mushroom grew from the tears of a man who failed his breakthrough. Alchemists pay a fortune for it because it holds a trace of the lightning that Heaven wasted on him.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_TribulationMushroom</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <MarketValue>120</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>0.4</Flammability>
+      <DeteriorationRate>4</DeteriorationRate>
+    </statBases>
+    <stackLimit>25</stackLimit>
+    <thingCategories><li>ResourcesRaw</li></thingCategories>
+    <healthAffectsPrice>false</healthAffectsPrice>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>CVG_Plant_TribulationMushroom</defName>
+    <label>tribulation mushroom</label>
+    <description>A violet mushroom that sprouts only where heavenly lightning has struck. It glows faintly and dies soon if nobody picks it. It grows where Heaven struck and failed, and it never grows twice in the same place. Sect elders warn that a mushroom picked in anger tastes of ash.</description>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Beauty>3</Beauty>
+      <Nutrition>0.2</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/CVG/TribulationMushroom</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <fertilityMin>0.0</fertilityMin>
+      <fertilitySensitivity>0.0</fertilitySensitivity>
+      <growDays>6</growDays>
+      <lifespanDaysPerGrowDays>1.8</lifespanDaysPerGrowDays>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>CVG_TribulationMushroom</harvestedThingDef>
+      <harvestYield>3</harvestYield>
+      <harvestWork>300</harvestWork>
+      <maxMeshCount>1</maxMeshCount>
+      <visualSizeRange>0.5~0.8</visualSizeRange>
+      <topWindExposure>0.05</topWindExposure>
+      <neverBlightable>true</neverBlightable>
+      <allowAutoCut>false</allowAutoCut>
+      <sowMinSkill>99</sowMinSkill>
+    </plant>
+    <comps>
+      <li Class="CompProperties_Glower"><glowRadius>3.5</glowRadius><glowColor>(110,60,170,0)</glowColor></li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_TribulationSprout">
+        <chance>0.35</chance>
+        <radius>3</radius>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_SpiritFungus</defName>
+    <label>spirit fungus</label>
+    <description>A pale fungus that grows in the dark of caves and under rock roofs. Alchemists use it in blood purification pills. Miners of the Black Jade Mountains call it the lamp of the deep, because it shows the way out. Alchemists say it is simply stubborn, as stubborn as the dark itself.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_SpiritFungus</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <MarketValue>9</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>0.4</Flammability>
+      <DeteriorationRate>4</DeteriorationRate>
+    </statBases>
+    <stackLimit>75</stackLimit>
+    <thingCategories><li>ResourcesRaw</li></thingCategories>
+    <healthAffectsPrice>false</healthAffectsPrice>
+  </ThingDef>
+
+  <ThingDef ParentName="CavePlantBase">
+    <defName>CVG_Plant_SpiritFungus</defName>
+    <label>spirit fungus</label>
+    <description>A pale blue fungus that grows in deep caves and under mountains. It sheds a faint light and dies if exposed to the sun. It feeds on qi that seeps through stone, so it grows thickest where an old vein sleeps. Wherever it glows, someone once buried a treasure or a grudge.</description>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <Beauty>2</Beauty>
+      <BeautyOutdoors>2</BeautyOutdoors>
+      <Nutrition>0.3</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/CVG/SpiritFungus</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <fertilityMin>0.01</fertilityMin>
+      <fertilitySensitivity>0.15</fertilitySensitivity>
+      <growDays>25</growDays>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>CVG_SpiritFungus</harvestedThingDef>
+      <harvestYield>10</harvestYield>
+      <maxMeshCount>4</maxMeshCount>
+      <visualSizeRange>0.4~0.7</visualSizeRange>
+      <topWindExposure>0.05</topWindExposure>
+      <wildClusterRadius>3</wildClusterRadius>
+      <wildClusterWeight>4</wildClusterWeight>
+      <cavePlantWeight>0.08</cavePlantWeight>
+      <purpose>Misc</purpose>
+      <sowMinSkill>5</sowMinSkill>
+      <sowTags><li>Ground</li></sowTags>
+    </plant>
+    <comps>
+      <li Class="CompProperties_Glower"><glowRadius>4.5</glowRadius><glowColor>(40,90,110,0)</glowColor></li>
+    </comps>
+  </ThingDef>
+</Defs>

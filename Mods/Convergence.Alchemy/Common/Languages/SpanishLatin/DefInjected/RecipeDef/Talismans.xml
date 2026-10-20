@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_EngraveRunes.label>grabar runas</CVG_EngraveRunes.label>
+  <CVG_EngraveRunes.jobString>Grabando runas.</CVG_EngraveRunes.jobString>
+  <CVG_EngraveRunes.description>Graba runas de formación en un arma corriente (grado espiritual 0): conserva todo lo que tenía y sube a grado espiritual 1, suficiente para herir a cultivadores del primer reino. Las mismas tres líneas se tallaron en millones de hojas mortales durante la Calamidad de Hierro, y los veteranos aún las llaman runas de guerra. No acepta armas que ya tienen grado 1 o más.</CVG_EngraveRunes.description>
+</LanguageData>

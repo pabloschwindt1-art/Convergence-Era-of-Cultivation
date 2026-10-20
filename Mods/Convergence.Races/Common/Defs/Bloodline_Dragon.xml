@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Dragon bloodline. Design and values: docs/modulos/razas/DRAGON.md -->
+
+  <Convergence.BloodlineDef>
+    <defName>CVG_Bloodline_Dragon</defName>
+    <label>dragon</label>
+    <description>The blood of the Celestial Sea lords: water, lightning and pride. Scales harden the body and the storm answers its call.\n\nBest as: scholar and leader. Research, teaching and diplomacy, from the head of the table.</description>
+    <commonality>0.8</commonality>
+    <color>(0.45, 0.8, 0.85)</color>
+    <xenotypeIcon>Horn</xenotypeIcon>
+    <affinities>
+      <li>CVG_Element_Water</li>
+    </affinities>
+    <purities>
+      <li>
+        <purity>CVG_Purity_Trace</purity>
+        <gene>CVG_Blood_Dragon_Trace</gene>
+        <hediff>CVG_Bloodline_Dragon</hediff>
+        <affinityCultivationFactor>1.05</affinityCultivationFactor>
+        <aspectGenes>
+          <li>CVG_Dragon_Scales</li>
+          <li>CVG_Dragon_Eyes</li>
+        </aspectGenes>
+      </li>
+      <li>
+        <purity>CVG_Purity_Diluted</purity>
+        <gene>CVG_Blood_Dragon_Diluted</gene>
+        <hediff>CVG_Bloodline_Dragon</hediff>
+        <affinityCultivationFactor>1.1</affinityCultivationFactor>
+        <abilities>
+          <li>CVG_Ability_DragonBreath</li>
+        </abilities>
+        <aspectGenes>
+          <li>CVG_Dragon_Horns</li>
+          <li>CVG_Dragon_Mane</li>
+          <li>CVG_Dragon_ThunderVoice</li>
+        </aspectGenes>
+      </li>
+      <li>
+        <purity>CVG_Purity_Pure</purity>
+        <gene>CVG_Blood_Dragon_Pure</gene>
+        <passion>Minor</passion>
+        <xenotype>CVG_Xeno_Dragon</xenotype>
+        <hediff>CVG_Bloodline_Dragon</hediff>
+        <affinityCultivationFactor>1.2</affinityCultivationFactor>
+        <!-- TODO (M5 techniques): Dragon's Pressure (aura: stagger weaker realms, beasts flee) -->
+        <aspectGenes>
+          <li>CVG_Dragon_HornsGreat</li>
+        </aspectGenes>
+      </li>
+      <li>
+        <purity>CVG_Purity_Ancestral</purity>
+        <gene>CVG_Blood_Dragon_Ancestral</gene>
+        <passion>Major</passion>
+        <xenotype>CVG_Xeno_Dragon</xenotype>
+        <hediff>CVG_Bloodline_Dragon</hediff>
+        <affinityCultivationFactor>1.35</affinityCultivationFactor>
+        <!-- TODO (M5 techniques): Dragon Form (6 h transformation) -->
+      </li>
+    </purities>
+  </Convergence.BloodlineDef>
+
+  <!-- Metabolism of the purity genes: total Trace -1, Diluted -2 (a flaw; beast vitality I/II costs -1 of it); Pure and Ancestral compensate the vanilla genes of the
+       bloodline xenotype (added on reaching Pure, -3 metabolism) so the total is 0 (Pure) and +1 (Ancestral). -->
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Dragon_Trace</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+      <li><def>Delicate</def></li>
+      <li><def>Wimp</def></li>
+    </suppressedTraits>
+    <socialFightChanceFactor>1.5</socialFightChanceFactor>
+    <label>trace of dragon blood</label>
+    <description>A single scale beneath the skin. The storm is dreaming of you. Some ancestor picked up a scale from the Rains of Scales that once fell on the Rim and wore it as an amulet until it became blood; a little of the clan's pride came with it, quick to take offence.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Water</iconPath>
+    <iconColor>(0.7, 0.7, 0.7)</iconColor>
+    <displayOrderInCategory>10</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <aptitudes>
+      <Intellectual>1</Intellectual>
+      <Social>1</Social>
+      <Animals>-2</Animals>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Dragon</bloodline>
+        <purity>CVG_Purity_Trace</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Dragon_Diluted</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+      <li><def>Delicate</def></li>
+      <li><def>Wimp</def></li>
+    </suppressedTraits>
+    <socialFightChanceFactor>1.3</socialFightChanceFactor>
+    <label>diluted dragon blood</label>
+    <description>Dragon blood thinned by generations, yet it still answers thunder. It flows in the storm houses descended from Ao Lingshuang, the princess who fled the Ancient Dragon Clan to live on the Rim as a mercenary, and so does her pride.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Water</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>11</displayOrderInCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <aptitudes>
+      <Intellectual>2</Intellectual>
+      <Social>2</Social>
+      <Animals>-2</Animals>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Dragon</bloodline>
+        <purity>CVG_Purity_Diluted</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Dragon_Pure</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+      <li><def>Delicate</def></li>
+      <li><def>Wimp</def></li>
+    </suppressedTraits>
+    <socialFightChanceFactor>1.1</socialFightChanceFactor>
+    <label>pure dragon blood</label>
+    <description>Horns, scale and storm: the blood of the Ancient Dragon Clan runs true in this body. The Clan would greet its bearer as kin, and expects kin to bow to nothing but the Dao of Heaven.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Water</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>12</displayOrderInCategory>
+    <biostatCpx>3</biostatCpx>
+    <biostatMet>3</biostatMet>
+    <aptitudes>
+      <Intellectual>3</Intellectual>
+      <Social>3</Social>
+      <Animals>-1</Animals>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Dragon</bloodline>
+        <purity>CVG_Purity_Pure</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Dragon_Ancestral</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+      <li><def>Delicate</def></li>
+      <li><def>Wimp</def></li>
+    </suppressedTraits>
+    <label>ancestral dragon blood</label>
+    <description>A sovereign of the Celestial Sea in human form. Even the Heavens lower their voice. This is the blood of Ao Zhenhai, who hurled the Celestial Sea against the Iron Calamity, and it has grown too vast for petty quarrels.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Water</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>13</displayOrderInCategory>
+    <biostatCpx>4</biostatCpx>
+    <biostatMet>4</biostatMet>
+    <aptitudes>
+      <Intellectual>4</Intellectual>
+      <Social>4</Social>
+      <Animals>-1</Animals>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Dragon</bloodline>
+        <purity>CVG_Purity_Ancestral</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Dragon_Scales</defName>
+    <label>dragon scales</label>
+    <description>Blue-green scaled skin, the color of the Celestial Sea before the Great Rupture. The armor it grants only awakens with the qi; until then it is merely beautiful, and a little cold to the touch.</description>
+    <iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+    <iconColor>(95, 150, 160)</iconColor>
+    <displayOrderInCategory>15</displayOrderInCategory>
+    <exclusionTags>
+      <li>SkinColorOverride</li>
+    </exclusionTags>
+    <skinColorOverride>(95, 150, 160)</skinColorOverride>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Dragon_Eyes</defName>
+    <label>serpentine eyes</label>
+    <description>Golden eyes with the hint of a vertical pupil, the eyes of the Dragon Kings who watched the rivers from their palaces under the water. Animals do not hold their gaze.</description>
+    <iconPath>UI/Icons/Genes/Gene_GrayEyes</iconPath>
+    <iconColor>(255, 200, 60)</iconColor>
+    <displayOrderInCategory>16</displayOrderInCategory>
+    <exclusionTags>
+      <li>EyeColor</li>
+    </exclusionTags>
+    <!-- Own art: Things/Pawn/Humanlike/CVG/Dragon/Eyes (provisional: vanilla Biotech texture). See docs/modulos/razas/README.md. -->
+    <renderNodeProperties>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Male/GrayEyes_Male</texPath>
+        <texPathFemale>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Female/GrayEyes_Female</texPathFemale>
+        <color>(255, 200, 60)</color>
+        <anchorTag>RightEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.2</drawSize>
+        <side>Right</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+          </defaultData>
+        </drawData>
+      </li>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Male/GrayEyes_Male</texPath>
+        <texPathFemale>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Female/GrayEyes_Female</texPathFemale>
+        <color>(255, 200, 60)</color>
+        <anchorTag>LeftEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.2</drawSize>
+        <side>Left</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+            <flip>true</flip>
+          </defaultData>
+          <dataWest>
+            <flip>false</flip>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Dragon_Mane</defName>
+    <label>dragon mane</label>
+    <description>Dark sea-green hair that grows like a dragon's mane. The Clan wears it long and loose; cutting it is a sign of mourning.</description>
+    <iconPath>UI/Icons/Genes/Gene_HairColor</iconPath>
+    <iconColor>(50, 110, 115)</iconColor>
+    <displayOrderInCategory>17</displayOrderInCategory>
+    <hairColorOverride>(50, 110, 115)</hairColorOverride>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Dragon_ThunderVoice</defName>
+    <label>thunder voice</label>
+    <description>A deep voice that rumbles like distant thunder. In the Rite of the First Lightning the young dragon answers the storm, and the storm stays in its throat.</description>
+    <iconPath>UI/Icons/Genes/Gene_VoiceRoar</iconPath>
+    <displayOrderInCategory>18</displayOrderInCategory>
+    <exclusionTags>
+      <li>Voice</li>
+    </exclusionTags>
+    <soundCall>Pawn_Furskin_Call</soundCall>
+    <soundDeath>Pawn_Furskin_Death</soundDeath>
+    <soundWounded>Pawn_Furskin_Wounded</soundWounded>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Dragon_Horns</defName>
+    <label>dragon horns</label>
+    <description>Two short ivory horns, the first to sprout after the Rite of the First Lightning. Among the Clan they mark someone who is no longer a child, but not yet kin.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Dragon_Horns</iconPath>
+    <iconColor>(235, 225, 190)</iconColor>
+    <displayOrderInCategory>19</displayOrderInCategory>
+    <exclusionTags>
+      <li>Headbone</li>
+    </exclusionTags>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/CVG_DragonHornsA/DragonHornsA</texPath>
+        <color>(235, 225, 190)</color>
+        <parentTagDef>Head</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Dragon_HornsGreat</defName>
+    <label>great dragon horns</label>
+    <description>Large golden horns that rise from the brow, curved like those of the dragons on the old seals of the Celestial Sea. The Clan reads rank in them, and no lord of the Clan has ever worn a hat.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Dragon_HornsGreat</iconPath>
+    <iconColor>(225, 185, 90)</iconColor>
+    <displayOrderInCategory>20</displayOrderInCategory>
+    <exclusionTags>
+      <li>Headbone</li>
+    </exclusionTags>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/CVG_DragonHornsB/DragonHornsB</texPath>
+        <color>(225, 185, 90)</color>
+        <parentTagDef>Head</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawSize>(1.35, 1.35)</drawSize>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+            <offset>(0, 0, 0.08)</offset>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+            <offset>(0, 0, 0.08)</offset>
+          </dataNorth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Dragon_Tail</defName>
+    <label>scaled tail</label>
+    <description>A long scaled tail. The dragon begets nine sons, none alike, and each inherited a different part of the father; this blood kept the tail, and with it a swimmer's balance.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Dragon_Tail</iconPath>
+    <iconColor>(95, 150, 160)</iconColor>
+    <displayOrderInCategory>21</displayOrderInCategory>
+    <exclusionTags>
+      <li>Tail</li>
+    </exclusionTags>
+    <renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPath>Things/Pawn/Humanlike/BodyAttachments/CVG_DragonTail/DragonTail</texPath>
+        <colorType>Skin</colorType>
+        <overrideMeshSize>(1, 1)</overrideMeshSize>
+        <drawSize>(1.5, 1.5)</drawSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, -0.12)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+            <offset>(0, 0, -0.12)</offset>
+          </dataSouth>
+          <dataEast>
+            <offset>(-0.12, 0, -0.10)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0.12, 0, -0.10)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <HediffDef ParentName="CVG_BloodlineHediffBase">
+    <defName>CVG_Bloodline_Dragon</defName>
+    <label>dragon blood</label>
+    <description>Awakened dragon blood: scales, strength and a very long life. Its pride and its hunger come with it.</description>
+    <defaultLabelColor>(0.45, 0.8, 0.85)</defaultLabelColor>
+    <!-- Done in XML: pride as socialFightChanceFactor 1.5/1.3/1.1 on the identity genes. TODO (needs code; see docs/modulos/razas/DRAGON.md): Pride (mood on humble work), Dragon Hoard (room wealth thought), hunted by rival clans (raid weight), lightning tribulation damage x0.9/x0.7 -->
+    <stages>
+      <li>
+        <minSeverity>1</minSeverity>
+        <label>trace</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.04</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.05</MeleeDamageFactor>
+          <CVG_QiMax>1.05</CVG_QiMax>
+          <ResearchSpeed>1.15</ResearchSpeed>
+          <GlobalLearningFactor>1.1</GlobalLearningFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <label>diluted</label>
+        <hungerRateFactor>1.3</hungerRateFactor>
+        <statOffsets>
+          <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.08</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.05</ArmorRating_Heat>
+          <SocialImpact>0.05</SocialImpact>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.1</MeleeDamageFactor>
+          <IncomingDamageFactor>0.95</IncomingDamageFactor>
+          <LifespanFactor>1.25</LifespanFactor>
+          <CVG_QiMax>1.1</CVG_QiMax>
+          <CVG_QiRegen>1.05</CVG_QiRegen>
+          <ResearchSpeed>1.3</ResearchSpeed>
+          <GlobalLearningFactor>1.2</GlobalLearningFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <label>pure</label>
+        <hungerRateFactor>1.15</hungerRateFactor>
+        <statOffsets>
+          <ArmorRating_Sharp>0.18</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.1</ArmorRating_Heat>
+          <SocialImpact>0.15</SocialImpact>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.2</MeleeDamageFactor>
+          <IncomingDamageFactor>0.88</IncomingDamageFactor>
+          <LifespanFactor>1.6</LifespanFactor>
+          <CVG_QiMax>1.2</CVG_QiMax>
+          <CVG_QiRegen>1.15</CVG_QiRegen>
+          <ResearchSpeed>1.5</ResearchSpeed>
+          <GlobalLearningFactor>1.3</GlobalLearningFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>4</minSeverity>
+        <label>ancestral</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.2</ArmorRating_Heat>
+          <SocialImpact>0.3</SocialImpact>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.35</MeleeDamageFactor>
+          <IncomingDamageFactor>0.75</IncomingDamageFactor>
+          <LifespanFactor>2.5</LifespanFactor>
+          <CVG_QiMax>1.35</CVG_QiMax>
+          <CVG_QiRegen>1.3</CVG_QiRegen>
+          <ResearchSpeed>1.8</ResearchSpeed>
+          <GlobalLearningFactor>1.5</GlobalLearningFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <AbilityDef ParentName="CVG_InnateAbilityBase">
+    <defName>CVG_Ability_DragonBreath</defName>
+    <label>dragon's breath</label>
+    <description>Exhale a cone of lightning-charged water. Flames die where it passes.\n\nCone of 7 cells: lightning burns (14 x realm power), 25% chance to stun for 2 seconds, puts out fires. Costs qi if the user cultivates.</description>
+    <iconPath>UI/Abilities/CVG_DragonBreath</iconPath>
+    <cooldownTicksRange>15000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>7.9</range>
+      <warmupTime>0.8</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityQiCost">
+        <qiCost>25</qiCost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityCone">
+        <range>7.9</range>
+        <lineWidthEnd>3</lineWidthEnd>
+        <damageDef>Burn</damageDef>
+        <damAmount>14</damAmount>
+        <stunChance>0.25</stunChance>
+        <stunTicks>120</stunTicks>
+        <extinguishFire>true</extinguishFire>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <XenotypeDef>
+    <defName>CVG_Xeno_Dragon</defName>
+    <label>dragon descendant</label>
+    <description>Members of the Ancient Dragon Clan: pure dragon blood, horns, a scaled tail and blue-green scales. Proud, strong and long-lived; after the Convergence they breathe lightning.</description>
+    <descriptionShort>Pure dragon blood: horns, scales and a scaled tail. Strong, armored and proud.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Impid</iconPath>
+    <inheritable>true</inheritable>
+    <nameMaker>CVG_NamerPerson_Dragon</nameMaker>
+    <nameMakerFemale>CVG_NamerPerson_Dragon_Female</nameMakerFemale>
+    <chanceToUseNameMaker>0.8</chanceToUseNameMaker>
+    <genes>
+      <li>CVG_Blood_Dragon_Pure</li>
+      <li>CVG_Dragon_Scales</li>
+      <li>CVG_Dragon_Eyes</li>
+      <li>CVG_Dragon_Mane</li>
+      <li>CVG_Dragon_ThunderVoice</li>
+      <li>CVG_Dragon_HornsGreat</li>
+      <li>Robust</li>
+      <li>Immunity_Strong</li>
+      <li>Hair_Grayless</li>
+      <li>CVG_BloodGene_BeastVitality_III</li>
+      <li>CVG_BloodGene_KeenSenses_III</li>
+      <li>CVG_BloodGene_BloodLongevity_III</li>
+      <li>CVG_BloodGene_BeastInstinct_III</li>
+      <li>CVG_BloodGene_QiResonance_III</li>
+      <li>CVG_BloodGene_DragonScales_III</li>
+      <li>CVG_BloodGene_DragonLungs_III</li>
+      <li>CVG_BloodGene_DragonVitality_III</li>
+    </genes>
+  </XenotypeDef>
+
+  <!-- Pawn kind for the vanilla "Spawn pawn" debug action and future factions/scenarios. -->
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>CVG_Kind_Dragon</defName>
+    <initialResistanceRange>13~20</initialResistanceRange>
+    <initialWillRange>1~3</initialWillRange>
+    <label>dragon descendant</label>
+    <defaultFactionDef>PlayerColony</defaultFactionDef>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelMoney>350~600</apparelMoney>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>CVG_Bloodline_Dragon</li>
+        </categories>
+        <commonality>0.7</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+        <commonality>0.3</commonality>
+      </li>
+    </backstoryFiltersOverride>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <xenotypeSet>
+      <xenotypeChances>
+        <CVG_Xeno_Dragon>1</CVG_Xeno_Dragon>
+      </xenotypeChances>
+    </xenotypeSet>
+  </PawnKindDef>
+
+</Defs>

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Bamboo (user request): the wuxia version of a fast softwood tree. Common bamboo grows very fast and spreads by itself;
+    its material is light and flexible. Jade spirit bamboo is rare, needs rich or spirit soil, and gives a fine material for
+    weapons, artifacts and furniture. Both are Woody stuff, so everything made of wood can be made of bamboo.
+  -->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_Bamboo</defName>
+    <label>bamboo</label>
+    <description>Hollow, jointed stalks that bend in a storm and do not break. Light and flexible: walls and furniture of bamboo go up fast but burn easily, and a bamboo staff hits harder than it looks. The old saying goes that the bamboo is the gentleman of plants, upright and empty inside, which is why every sect courtyard has a grove.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_Bamboo</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Wood_Drop</soundInteract>
+    <soundDrop>Wood_Drop</soundDrop>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>1.2</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>0.25</Mass>
+      <Flammability>1.2</Flammability>
+      <DeteriorationRate>1</DeteriorationRate>
+      <StuffPower_Armor_Sharp>0.45</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.55</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.3</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>6</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>6</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.4</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.05</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>true</burnableByRecipe>
+    <stuffProps>
+      <stuffAdjective>bamboo</stuffAdjective>
+      <categories>
+        <li>Woody</li>
+      </categories>
+      <commonality>0.05</commonality>
+      <color>(175, 185, 110)</color>
+      <constructEffect>ConstructWood</constructEffect>
+      <appearance>Planks</appearance>
+      <soundImpactBullet>BulletImpact_Wood</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Wood</soundImpactMelee>
+      <statFactors>
+        <MaxHitPoints>0.6</MaxHitPoints>
+        <Beauty>1.1</Beauty>
+        <Flammability>1.2</Flammability>
+        <WorkToMake>0.6</WorkToMake>
+        <WorkToBuild>0.55</WorkToBuild>
+        <DoorOpenSpeed>1.3</DoorOpenSpeed>
+        <MeleeWeapon_CooldownMultiplier>0.9</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_JadeBamboo</defName>
+    <label>jade spirit bamboo</label>
+    <description>Bamboo the colour of jade that grew where the qi pools, each joint ringed with faint veins of light. It is as hard as iron and still bends, rings like a bell when struck and holds qi in its hollow heart. Swordsmiths make practice blades and flying-sword sheaths of it, alchemists their stirring rods, and the flutes of the Silent Lotus Temple are carved from nothing else.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_JadeBamboo</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Wood_Drop</soundInteract>
+    <soundDrop>Wood_Drop</soundDrop>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>8</MarketValue>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>0.3</Mass>
+      <Flammability>0.4</Flammability>
+      <DeteriorationRate>0.3</DeteriorationRate>
+      <StuffPower_Armor_Sharp>1.0</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.9</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.6</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.9</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.2</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>true</burnableByRecipe>
+    <stuffProps>
+      <stuffAdjective>jade bamboo</stuffAdjective>
+      <categories>
+        <li>Woody</li>
+      </categories>
+      <commonality>0.005</commonality>
+      <color>(105, 195, 150)</color>
+      <constructEffect>ConstructWood</constructEffect>
+      <appearance>Planks</appearance>
+      <soundImpactBullet>BulletImpact_Wood</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Wood</soundImpactMelee>
+      <statFactors>
+        <MaxHitPoints>1.3</MaxHitPoints>
+        <Beauty>1.8</Beauty>
+        <Flammability>0.4</Flammability>
+        <WorkToMake>1.1</WorkToMake>
+        <WorkToBuild>1.1</WorkToBuild>
+        <MeleeWeapon_CooldownMultiplier>0.85</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+      <canSuggestUseDefaultStuff>false</canSuggestUseDefaultStuff>
+    </stuffProps>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.05</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="TreeBase">
+    <defName>CVG_Plant_Bamboo</defName>
+    <label>bamboo grove</label>
+    <description>A clump of bamboo that shoots up a hand's width a day and sends runners under the soil in every direction. Left alone, it swallows a field in a season; cut back, it gives light, flexible stalks almost endlessly.</description>
+    <graphicData>
+      <texPath>Things/Plant/CVG/Bamboo</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Beauty>2</Beauty>
+      <BeautyOutdoors>2</BeautyOutdoors>
+      <Nutrition>0.8</Nutrition>
+    </statBases>
+    <plant>
+      <growDays>6</growDays>
+      <harvestedThingDef>CVG_Bamboo</harvestedThingDef>
+      <harvestYield>18</harvestYield>
+      <harvestWork>450</harvestWork>
+      <wildClusterRadius>5</wildClusterRadius>
+      <wildClusterWeight>60</wildClusterWeight>
+      <visualSizeRange>0.9~1.4</visualSizeRange>
+      <dieIfLeafless>false</dieIfLeafless>
+    </plant>
+    <comps>
+      <li Class="Convergence.CompProperties_PlantSpread">
+        <mtbDays>8</mtbDays>
+        <radius>2</radius>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="TreeBase">
+    <defName>CVG_Plant_JadeBamboo</defName>
+    <label>jade spirit bamboo</label>
+    <description>Jade-green bamboo with veins of light in every joint. It only takes root in rich or spirit soil, grows slowly for a bamboo and never runs wild; a grove of it is a treasure sects guard with formations.</description>
+    <graphicData>
+      <texPath>Things/Plant/CVG/JadeBamboo</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Beauty>6</Beauty>
+      <BeautyOutdoors>6</BeautyOutdoors>
+      <Nutrition>0.8</Nutrition>
+    </statBases>
+    <plant>
+      <growDays>20</growDays>
+      <fertilityMin>1.3</fertilityMin>
+      <harvestedThingDef>CVG_JadeBamboo</harvestedThingDef>
+      <harvestYield>12</harvestYield>
+      <harvestWork>900</harvestWork>
+      <wildClusterRadius>3</wildClusterRadius>
+      <visualSizeRange>1.0~1.5</visualSizeRange>
+      <dieIfLeafless>false</dieIfLeafless>
+    </plant>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.05</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Peach trees (lore: peach wood wards off the dead; the peaches of immortality of the Queen Mother of the West) -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_PeachTimber</defName>
+    <label>peach timber</label>
+    <description>Rose-brown logs of the peach tree. Since the Yellow Emperor's time the peach tree has stood at the gate between the living and the dead: door gods were carved from it and exorcists' swords still are. Ordinary wood for a carpenter; cured with talisman ash, a weapon the restless dead fear.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_PeachTimber</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Wood_Drop</soundInteract>
+    <soundDrop>Wood_Drop</soundDrop>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>2</MarketValue>
+      <MaxHitPoints>130</MaxHitPoints>
+      <Mass>0.4</Mass>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>0.8</DeteriorationRate>
+      <StuffPower_Armor_Sharp>0.55</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.55</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.4</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>4</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.45</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.95</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>true</burnableByRecipe>
+    <stuffProps>
+      <stuffAdjective>peachwood</stuffAdjective>
+      <categories>
+        <li>Woody</li>
+      </categories>
+      <commonality>0.02</commonality>
+      <color>(190, 140, 120)</color>
+      <constructEffect>ConstructWood</constructEffect>
+      <appearance>Planks</appearance>
+      <soundImpactBullet>BulletImpact_Wood</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Wood</soundImpactMelee>
+      <statFactors>
+        <Beauty>1.3</Beauty>
+      </statFactors>
+      <canSuggestUseDefaultStuff>false</canSuggestUseDefaultStuff>
+    </stuffProps>
+  </ThingDef>
+
+  <!-- Common peach: raw fruit like the vanilla berries -->
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>CVG_Peach</defName>
+    <label>peaches</label>
+    <description>Soft pink peaches with a velvet skin, sweet enough to eat straight from the branch. In Jiuxiao the peach meant long life, so every child got one on their birthday; these common ones only promise a good afternoon.</description>
+    <possessionCount>10</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_Peach</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.3</MarketValue>
+      <Mass>0.027</Mass>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <tasteThought></tasteThought>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="TreeBase">
+    <defName>CVG_Plant_PeachTree</defName>
+    <label>peach tree</label>
+    <description>A gnarled peach tree that blossoms pink in spring. Harvest it for peaches and it fruits again; cut it down and it also gives peach timber, the wood exorcists carve into swords against the restless dead. They plant one by every gate.</description>
+    <graphicData>
+      <texPath>Things/Plant/CVG/PeachTree</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.4,1.4)</drawSize>
+    </graphicData>
+    <statBases>
+      <Beauty>4</Beauty>
+      <BeautyOutdoors>4</BeautyOutdoors>
+    </statBases>
+    <thingClass>Convergence.Plant_FruitTree</thingClass>
+    <plant>
+      <growDays>18</growDays>
+      <!-- fruit tree: Harvest gives peaches and the tree grows back (like the celestial peach); Cut also gives timber -->
+      <harvestedThingDef>CVG_Peach</harvestedThingDef>
+      <harvestYield>15</harvestYield>
+      <harvestTag>Standard</harvestTag>
+      <harvestAfterGrowth>0.65</harvestAfterGrowth>
+      <harvestWork>400</harvestWork>
+      <wildClusterWeight>15</wildClusterWeight>
+      <visualSizeRange>1.0~1.6</visualSizeRange>
+    </plant>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_WoodOnCut">
+        <thingDef>CVG_PeachTimber</thingDef>
+        <yield>30</yield>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>CVG_Plant_CelestialPeach</defName>
+    <label>celestial peach tree</label>
+    <description>A peach tree of the gardens of Jiuxiao, said to descend from the orchard of the Queen Mother of the West. It only takes root in spirit-rich soil and fruits once in a long while; its peaches lengthen life and steady the breath of cultivators. Sects have gone to war over a single tree.</description>
+    <graphicData>
+      <texPath>Things/Plant/CVG/CelestialPeach</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.6,1.6)</drawSize>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>30</pathCost>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Beauty>10</Beauty>
+      <BeautyOutdoors>10</BeautyOutdoors>
+      <Nutrition>0.3</Nutrition>
+    </statBases>
+    <plant>
+      <growDays>45</growDays>
+      <fertilityMin>1.3</fertilityMin>
+      <harvestedThingDef>CVG_ImmortalPeach</harvestedThingDef>
+      <harvestYield>3</harvestYield>
+      <harvestAfterGrowth>0.55</harvestAfterGrowth>
+      <harvestTag>Standard</harvestTag>
+      <harvestWork>300</harvestWork>
+      <sowWork>2000</sowWork>
+      <sowMinSkill>10</sowMinSkill>
+      <sowTags><li>Ground</li></sowTags>
+      <purpose>Food</purpose>
+      <wildClusterRadius>-1</wildClusterRadius>
+      <visualSizeRange>1.0~1.4</visualSizeRange>
+      <dieIfLeafless>false</dieIfLeafless>
+    </plant>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.1</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_ImmortalPeach</defName>
+    <label>peach of immortality</label>
+    <description>A peach that glows faintly pink and smells of spring rain. The Queen Mother of the West served them at her banquet every three thousand years; a mortal who eats one heals and lives better, and a cultivator's qi flows like a river in flood for days.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_ImmortalPeach</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <tickerType>Rare</tickerType>
+    <statBases>
+      <MarketValue>120</MarketValue>
+      <Mass>0.1</Mass>
+      <Nutrition>0.3</Nutrition>
+      <DeteriorationRate>2</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+      <preferability>DesperateOnly</preferability>
+      <joy>0.3</joy>
+      <joyKind>Gluttonous</joyKind>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_PeachBlessing</hediffDef>
+          <severity>1</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>CVG_PeachBlessing</defName>
+    <label>peach blessing</label>
+    <description>The essence of a peach of immortality runs through the body: wounds close faster, the breath is long and the qi flows freely.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1, 0.75, 0.8)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>600000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <naturalHealingFactor>1.5</naturalHealingFactor>
+        <statFactors>
+          <CVG_CultivationSpeed>1.3</CVG_CultivationSpeed>
+        </statFactors>
+        <statOffsets>
+          <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

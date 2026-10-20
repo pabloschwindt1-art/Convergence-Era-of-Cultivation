@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Apparel_PuppeteerMask.label>máscara del titiritero</CVG_Apparel_PuppeteerMask.label>
+  <CVG_Apparel_PuppeteerMask.description>Una media máscara lacada de madera espiritual, que se lleva para que el rival no sepa qué mano mueve qué hilo. Su forro de hilo espiritual escucha a las marionetas cercanas y deja al maestro sostener unas cuantas más. No necesita energía ni máquinas.</CVG_Apparel_PuppeteerMask.description>
+  <CVG_Apparel_ThousandThreadsCrown.label>corona de mil hilos</CVG_Apparel_ThousandThreadsCrown.label>
+  <CVG_Apparel_ThousandThreadsCrown.description>Un aro de jade del que se alzan mil hilos de seda espiritual como un halo. Los grandes maestros del Valle se enterraban con una; se decía que los hilos seguían moviéndose un año. Amplía el alcance sobre las marionetas más que ningún otro tocado, y no consume nada.</CVG_Apparel_ThousandThreadsCrown.description>
+  <CVG_ThreadTotem.label>tótem de hilos</CVG_ThreadTotem.label>
+  <CVG_ThreadTotem.description>Un pilar de madera espiritual con un ojo de jade, cubierto de hilos que zumban cuando hay un maestro titiritero cerca. Sintonizado a un maestro, le añade 1 de ancho de banda, como un nodo de banda, pero funciona con piedras espirituales en vez de electricidad. Resintonizarlo a otro maestro lleva mucho más tiempo que la primera sintonía.\n\nCuando se acaban las piedras los hilos se aflojan y deja de ayudar.</CVG_ThreadTotem.description>
+</LanguageData>

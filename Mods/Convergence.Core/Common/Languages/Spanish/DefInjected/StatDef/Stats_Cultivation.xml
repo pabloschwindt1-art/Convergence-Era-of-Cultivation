@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_QiMax.label>qi máximo</CVG_QiMax.label>
+  <CVG_QiMax.description>Cuánto qi puede guardar este cultivador en su dantian. Crece con cada etapa y cada reino.</CVG_QiMax.description>
+  <CVG_QiRegen.label>regeneración de qi</CVG_QiRegen.label>
+  <CVG_QiRegen.description>Qi que se recupera por hora solo con respirar. Cultivar en un lugar de cultivo la multiplica.</CVG_QiRegen.description>
+  <CVG_CultivationSpeed.label>velocidad de cultivo</CVG_CultivationSpeed.label>
+  <CVG_CultivationSpeed.description>Multiplicador del progreso de cultivo. Se combina con la calidad de la raíz espiritual y con la concentración de qi del lugar.</CVG_CultivationSpeed.description>
+  <CVG_BreakthroughChance.label>probabilidad de avance</CVG_BreakthroughChance.label>
+  <CVG_BreakthroughChance.description>Probabilidad base de avanzar al reino siguiente. Se multiplica por la dificultad de ese reino, la calidad de la raíz espiritual y la concentración de qi del lugar. Píldoras como la Píldora de Fundación la aumentan.</CVG_BreakthroughChance.description>
+  <CVG_CelestialDissonance.label>disonancia celestial</CVG_CelestialDissonance.label>
+  <CVG_CelestialDissonance.description>Cuánto le molesta al Cielo lo que se le agregó a este cuerpo. Los implantes, las prótesis biónicas y las máquinas la aumentan. Cuanto más alta, más rayos y más fuertes caen durante una tribulación celestial.</CVG_CelestialDissonance.description>
+  <CVG_TechniqueCost.label>coste de técnicas</CVG_TechniqueCost.label>
+  <CVG_TechniqueCost.description>Multiplicador del qi (u otro recurso) que gastan las técnicas de cultivo. Dominar una técnica baja además su propio coste.</CVG_TechniqueCost.description>
+  <CVG_SpiritGrade.label>grado espiritual</CVG_SpiritGrade.label>
+  <CVG_SpiritGrade.description>Cuánto poder espiritual lleva esta arma. Contra un cultivador de un reino superior, el daño de un arma de menor grado se suprime: cada reino de diferencia lo reduce mucho. Las armas mortales son grado 0; las técnicas golpean con el reino de quien las lanza.</CVG_SpiritGrade.description>
+  <CVG_BloodQiMax.label>sangre-qi máxima</CVG_BloodQiMax.label>
+  <CVG_BloodQiMax.description>Cuánta sangre-qi puede guardar este cultivador del cuerpo. Crece con cada etapa y cada reino del cuerpo.</CVG_BloodQiMax.description>
+  <CVG_BloodQiRegen.label>regeneración de sangre-qi</CVG_BloodQiRegen.label>
+  <CVG_BloodQiRegen.description>Sangre-qi que se recupera sola por hora. Cero por defecto: la sangre-qi sale de comer carne de bestia espiritual, sangre de bestia y sopa espiritual.</CVG_BloodQiRegen.description>
+  <CVG_BodyTemperingSpeed.label>velocidad de templado</CVG_BodyTemperingSpeed.label>
+  <CVG_BodyTemperingSpeed.description>Multiplicador del progreso del templado del cuerpo en los aparatos de entrenamiento. Los cuerpos especiales sin raíz espiritual (acero, espada, tribulación, espiritual innato) templan más rápido.</CVG_BodyTemperingSpeed.description>
+  <CVG_PurificationChance.label>probabilidad de purificar el linaje</CVG_PurificationChance.label>
+  <CVG_PurificationChance.description>Multiplicador de la probabilidad de que una píldora de purificación refine el linaje de esta persona.</CVG_PurificationChance.description>
+  <CVG_EnvironmentResistance.label>resistencia al entorno</CVG_EnvironmentResistance.label>
+  <CVG_EnvironmentResistance.description>Cuánto pueden tocar a este cuerpo el calor, el frío, el veneno y el fuego. Cada reino lo templa un poco más: en el Núcleo Dorado el mundo muerde con la mitad de fuerza, y los viejos maestros de Jiuxiao cruzaban tormentas de nieve y salones en llamas con una sola túnica. La raíz espiritual suma su afinidad: las raíces de fuego no se prenden, las de agua no sienten la helada y las de tierra se sacuden el veneno.</CVG_EnvironmentResistance.description>
+</LanguageData>

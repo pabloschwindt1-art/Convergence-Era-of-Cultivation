@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Research_QiBreathing.label>respiración del qi</CVG_Research_QiBreathing.label>
+  <CVG_Research_QiBreathing.description>Cómo sentarse, respirar y dejar que el qi del mundo fluya hacia el dantian. Desbloquea el cojín de cultivo. Un Maestro que llega con la Convergencia lo enseña al instante.</CVG_Research_QiBreathing.description>
+  <CVG_Research_Foundation.label>establecimiento de fundación</CVG_Research_Foundation.label>
+  <CVG_Research_Foundation.description>Comprender cómo el qi refinado se condensa en una fundación líquida. Necesario para avanzar a Establecimiento de Fundación.</CVG_Research_Foundation.description>
+  <CVG_Research_GoldenCore.label>núcleo dorado</CVG_Research_GoldenCore.label>
+  <CVG_Research_GoldenCore.description>Cómo comprimir una fundación en un núcleo dorado, y por qué el Cielo responde con una tribulación. Necesario para avanzar a Núcleo Dorado.</CVG_Research_GoldenCore.description>
+  <CVG_Research_SecretRealms.label>reinos secretos</CVG_Research_SecretRealms.label>
+  <CVG_Research_SecretRealms.description>Pistas en manuales antiguos hablan de mundos de bolsillo plegados dentro de este: reinos secretos llenos de pruebas y tesoros. Comprenderlos revela que existen.</CVG_Research_SecretRealms.description>
+  <CVG_Research_SecretRealms.modExtensions.0.discoveryText>{PAWN_nameDef} descubrió que en este mundo existen los reinos secretos. Explorarlos es difícil, pero muy satisfactorio.</CVG_Research_SecretRealms.modExtensions.0.discoveryText>
+  <CVG_Research_TechniqueManuals.label>manuales de técnicas</CVG_Research_TechniqueManuals.label>
+  <CVG_Research_TechniqueManuals.description>Cómo leer la escritura densa de una tablilla de jade sin quemarse la mente. Los colonos pueden aprender manuales de técnicas de las tablillas de jade.</CVG_Research_TechniqueManuals.description>
+  <CVG_Research_BodyTempering.label>templado del cuerpo</CVG_Research_BodyTempering.label>
+  <CVG_Research_BodyTempering.description>El camino de quien no tiene raíz: templar piel, carne y hueso con sangre de bestia espiritual. Desbloquea los aparatos de entrenamiento y el avance a Templado de Carne.</CVG_Research_BodyTempering.description>
+</LanguageData>

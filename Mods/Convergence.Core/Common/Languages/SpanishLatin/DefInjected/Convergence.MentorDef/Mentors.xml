@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Mentor_YunShouzhi.label>Anciano Yun Shouzhi</CVG_Mentor_YunShouzhi.label>
+  <CVG_Mentor_YunShouzhi.description>Un Anciano de Espada retirado del Pico Celeste que cambió su espada por una azada. Sostuvo la formación guardiana desgarrada de su secta durante la Convergencia y la grieta lo arrojó al otro lado.</CVG_Mentor_YunShouzhi.description>
+  <CVG_Mentor_YunShouzhi.archetype>anciano recto</CVG_Mentor_YunShouzhi.archetype>
+  <CVG_Mentor_YunShouzhi.lessons.0.label>un lugar para respirar</CVG_Mentor_YunShouzhi.lessons.0.label>
+  <CVG_Mentor_YunShouzhi.lessons.0.description>"El qi no viene a quien lo persigue. Construid un lugar donde sentaros a esperarlo." Construir un cojín de cultivo.</CVG_Mentor_YunShouzhi.lessons.0.description>
+  <CVG_Mentor_YunShouzhi.lessons.1.label>escuchar el qi</CVG_Mentor_YunShouzhi.lessons.1.label>
+  <CVG_Mentor_YunShouzhi.lessons.1.description>"Lento es suave. Suave es rápido." Algún discípulo debe avanzar una etapa mientras el Anciano Yun lo observa: cultivando qi en un cojín o templando el cuerpo con sangre de bestia espiritual.</CVG_Mentor_YunShouzhi.lessons.1.description>
+  <CVG_Mentor_YunShouzhi.lessons.2.label>la primera técnica</CVG_Mentor_YunShouzhi.lessons.2.label>
+  <CVG_Mentor_YunShouzhi.lessons.2.description>"No la saques si no vas a terminarlo." El Anciano Yun entrega una tablilla de jade. Algún discípulo debe aprender una técnica nueva.</CVG_Mentor_YunShouzhi.lessons.2.description>
+  <CVG_Mentor_YunShouzhi.arrivalWalkerText>Un anciano está sentado junto al camino, regando una maceta que hace un momento no estaba ahí. Su túnica es sencilla, sus manos callosas, y el aire a su alrededor está tan quieto que los pájaros se le posan en los hombros.\n\n"Tengo sed, tengo hambre y no tengo prisa", dice {PAWN_nameDef}. "Su mundo acaba de despertar. Van a necesitar a alguien que les enseñe a respirar."\n\nEl Anciano Yun se une a la colonia.</CVG_Mentor_YunShouzhi.arrivalWalkerText>
+  <CVG_Mentor_YunShouzhi.arrivalWoundedText>Llamas azules cruzan el cielo y algo se estrella más allá de los campos. En el cráter yace un anciano con la túnica hecha jirones y una azada rota en la mano: {PAWN_nameDef}, arrojado a través de la grieta por la Convergencia.\n\nEstá muy malherido. Rescátenlo y dejen que sane: cuando pueda tenerse en pie, enseñará a la colonia.</CVG_Mentor_YunShouzhi.arrivalWoundedText>
+  <CVG_Mentor_YunShouzhi.protectionText>Unos cultivadores vienen a por la colonia. {PAWN_nameDef} deja la regadera y se pone al frente.\n\n"Ahí. Detrás del seto. No grites. Mira y aprende."\n\nDurante un día, el Anciano lucha con toda la fuerza de un Alma Naciente.</CVG_Mentor_YunShouzhi.protectionText>
+  <CVG_Mentor_YunShouzhi.farewellText>Una mañana el cielo sobre la colonia tiembla: la formación guardiana del Pico Celeste vuelve a abrirse y llama a su Anciano.\n\n"Riega la maceta. Eso es todo. Eso es toda la secta", dice {PAWN_nameDef}, y entra en la luz.\n\nDonde estaba queda una hoja de jade verde. Está tibia y a veces parece susurrar.</CVG_Mentor_YunShouzhi.farewellText>
+  <CVG_Mentor_YunShouzhi.deathText>{PAWN_nameDef} ha caído. Mientras su cuerpo se enfría, su alma se refugia en el jade que siempre llevaba; un fragmento se desprende y se queda con la colonia, todavía tibio.</CVG_Mentor_YunShouzhi.deathText>
+</LanguageData>

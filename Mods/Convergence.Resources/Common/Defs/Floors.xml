@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Spirit floors: each cell adds qi to the room (Core: DefModExtension_FengShui on TerrainDef counts per cell). -->
+  <DesignatorDropdownGroupDef>
+    <defName>CVG_SpiritFloors</defName>
+    <label>spirit floors</label>
+    <iconSource>Placed</iconSource>
+  </DesignatorDropdownGroupDef>
+
+  <TerrainDef ParentName="FloorBase">
+    <defName>CVG_JadeTiles</defName>
+    <label>jade tiles</label>
+    <description>Polished jade tiles. Beautiful, and qi likes to settle on them (+0.02 qi per cell).</description>
+    <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+    <color>(0.37, 0.62, 0.48)</color>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>245</renderPrecedence>
+    <statBases>
+      <WorkToBuild>800</WorkToBuild>
+      <Beauty>4</Beauty>
+      <Cleanliness>0.1</Cleanliness>
+    </statBases>
+    <costList>
+      <Jade>10</Jade>
+    </costList>
+    <designatorDropdown>CVG_SpiritFloors</designatorDropdown>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.02</qi>
+      </li>
+    </modExtensions>
+  </TerrainDef>
+
+  <TerrainDef ParentName="FloorBase">
+    <defName>CVG_SpiritStoneFloor</defName>
+    <label>spirit stone floor</label>
+    <description>Flagstones set with spirit stones that slowly breathe qi into the room (+0.05 qi per cell). Sect halls laid these floors so that even a disciple asleep would keep cultivating.</description>
+    <texturePath>Terrain/Surfaces/TileStone</texturePath>
+    <color>(0.45, 0.55, 0.72)</color>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>245</renderPrecedence>
+    <statBases>
+      <WorkToBuild>700</WorkToBuild>
+      <Beauty>2</Beauty>
+      <Cleanliness>0.1</Cleanliness>
+    </statBases>
+    <costList>
+      <CVG_SpiritStone>3</CVG_SpiritStone>
+    </costList>
+    <designatorDropdown>CVG_SpiritFloors</designatorDropdown>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.05</qi>
+      </li>
+    </modExtensions>
+  </TerrainDef>
+
+  <!-- Bamboo floor (user request): the wuxia twin of the vanilla wood floor, laid from split bamboo. Own tileable texture. -->
+  <TerrainDef ParentName="FloorBase">
+    <defName>CVG_BambooFloor</defName>
+    <label>bamboo floor</label>
+    <description>Split bamboo slats laid side by side, cool underfoot in summer and warm in winter. The Bamboo Sea villages floor every hall with it, and say a house on bamboo never holds a grudge: it creaks once, then forgets. Quick to lay, but it burns like any wood.</description>
+    <texturePath>Terrain/Surfaces/CVG_BambooFloor</texturePath>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>246</renderPrecedence>
+    <burnedDef>BurnedWoodPlankFloor</burnedDef>
+    <isPaintable>true</isPaintable>
+    <statBases>
+      <WorkToBuild>85</WorkToBuild>
+      <Flammability>0.22</Flammability>
+    </statBases>
+    <costList>
+      <CVG_Bamboo>4</CVG_Bamboo>
+    </costList>
+    <constructEffect>ConstructWood</constructEffect>
+    <uiOrder>2001</uiOrder>
+  </TerrainDef>
+
+  <TerrainDef ParentName="FloorBase">
+    <defName>CVG_SpiritWoodFloor</defName>
+    <label>spirit wood floor</label>
+    <description>Wood planks soaked with spirit stone dust (+0.03 qi per cell). Flammable.</description>
+    <texturePath>Terrain/Surfaces/WoodFloor</texturePath>
+    <color>(0.48, 0.58, 0.42)</color>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>245</renderPrecedence>
+    <statBases>
+      <WorkToBuild>300</WorkToBuild>
+      <Beauty>2</Beauty>
+      <Cleanliness>0.1</Cleanliness>
+      <Flammability>0.22</Flammability>
+    </statBases>
+    <costList>
+      <WoodLog>3</WoodLog>
+      <CVG_SpiritStone>1</CVG_SpiritStone>
+    </costList>
+    <burnedDef>BurnedWoodPlankFloor</burnedDef>
+    <constructEffect>ConstructWood</constructEffect>
+    <designatorDropdown>CVG_SpiritFloors</designatorDropdown>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.03</qi>
+      </li>
+    </modExtensions>
+  </TerrainDef>
+
+  <TerrainDef ParentName="FloorBase">
+    <defName>CVG_FiveElementMosaic</defName>
+    <label>five-element mosaic</label>
+    <description>A mosaic of metal, wood, water, fire and earth in the generating cycle. The best floor for cultivation (+0.1 qi per cell).</description>
+    <texturePath>Terrain/Surfaces/Flagstone</texturePath>
+    <color>(0.72, 0.62, 0.42)</color>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>245</renderPrecedence>
+    <statBases>
+      <WorkToBuild>1500</WorkToBuild>
+      <Beauty>6</Beauty>
+      <Cleanliness>0.1</Cleanliness>
+    </statBases>
+    <costList>
+      <CVG_SpiritJade>3</CVG_SpiritJade>
+      <CVG_SpiritStone>2</CVG_SpiritStone>
+      <Gold>5</Gold>
+    </costList>
+    <designatorDropdown>CVG_SpiritFloors</designatorDropdown>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.1</qi>
+      </li>
+    </modExtensions>
+  </TerrainDef>
+
+</Defs>

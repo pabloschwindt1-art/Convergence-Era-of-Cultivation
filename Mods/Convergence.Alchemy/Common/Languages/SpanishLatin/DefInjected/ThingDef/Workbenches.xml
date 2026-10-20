@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_SpiritForge.label>forja espiritual</CVG_SpiritForge.label>
+  <CVG_SpiritForge.description>Una forja de leña donde el metal se pliega con el qi de las piedras espirituales. La Secta de la Espada del Pico Azur dice que su primer fuego lo encendieron Gan Jiang y Mo Ye, la pareja de herreros de la leyenda: cuando el metal no quería fundirse, Mo Ye se entregó a las llamas, y las espadas gemelas que salieron llevan sus nombres. Hace armas espirituales y todo lo que hace una herrería, y se mejora en el sitio (nivel 2: lanzas y arcos; nivel 3: tesoros como la espada voladora). Sin electricidad.</CVG_SpiritForge.description>
+  <CVG_AlchemyFurnace.label>horno de alquimia</CVG_AlchemyFurnace.label>
+  <CVG_AlchemyFurnace.description>Un caldero de bronce sobre un fuego espiritual, fundido a imagen del trípode de Shennong, el Divino Labrador que probó las cien hierbas para saber cuáles curan y cuáles matan. El Pabellón del Caldero Celestial enciende cada horno nuevo con ceniza de uno más antiguo, para que toda llama descienda de la suya. Las píldoras salen con una calidad que depende del alquimista y del nivel del horno (nivel 2: píldoras de purificación de sangre; nivel 3: píldoras de las nueve vueltas), y también hace todo lo que hace un laboratorio de drogas. Sin electricidad.</CVG_AlchemyFurnace.description>
+  <CVG_RuneTable.label>mesa de runas</CVG_RuneTable.label>
+  <CVG_RuneTable.description>Una losa de jade tallada con líneas de formación. Durante la Calamidad de Hierro, las sectas de Jiuxiao aprendieron que el acero mortal no mordía a la máquina devoradora, así que grabaron runas en cada hoja que llevaban sus sirvientes; la costumbre sobrevivió a la guerra. Graba runas en un arma corriente y la sube a grado espiritual 1, para que pueda herir a cultivadores.</CVG_RuneTable.description>
+  <CVG_TalismanTable.label>mesa de talismanes</CVG_TalismanTable.label>
+  <CVG_TalismanTable.description>Un escritorio con pinceles, tinta de cinabrio y papel amarillo. La tradición dice que Zhang Daoling, el primer Maestro Celestial, recibió el arte de los talismanes en Longhushan, la Montaña del Dragón y el Tigre, y que cada uno debe escribirse de un solo aliento de qi o no es más que tinta. Escribe talismanes de un solo uso.</CVG_TalismanTable.description>
+</LanguageData>

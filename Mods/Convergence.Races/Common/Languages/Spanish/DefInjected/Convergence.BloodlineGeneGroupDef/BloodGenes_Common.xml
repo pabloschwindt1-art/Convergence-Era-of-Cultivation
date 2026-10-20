@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_GeneGroup_BeastVitality.label>vitalidad bestial</CVG_GeneGroup_BeastVitality.label>
+  <CVG_GeneGroup_BeastVitality.description>La sangre de la bestia cierra heridas y apaga el dolor, pero quema comida.</CVG_GeneGroup_BeastVitality.description>
+  <CVG_GeneGroup_KeenSenses.label>sentidos agudos</CVG_GeneGroup_KeenSenses.label>
+  <CVG_GeneGroup_KeenSenses.description>Ojos y oídos de cazador. Con poca pureza los sentidos están en carne viva: el ruido y el brillo crispan los nervios.</CVG_GeneGroup_KeenSenses.description>
+  <CVG_GeneGroup_BloodLongevity.label>longevidad de sangre</CVG_GeneGroup_BloodLongevity.label>
+  <CVG_GeneGroup_BloodLongevity.description>El cuerpo envejece despacio, como las viejas bestias; el precio es una descendencia más difícil.</CVG_GeneGroup_BloodLongevity.description>
+  <CVG_GeneGroup_BeastInstinct.label>instinto de la bestia</CVG_GeneGroup_BeastInstinct.label>
+  <CVG_GeneGroup_BeastInstinct.description>Garras en el alma: golpes más duros y reflejos rápidos, y un carácter que busca pelea.</CVG_GeneGroup_BeastInstinct.description>
+  <CVG_GeneGroup_QiResonance.label>resonancia de qi</CVG_GeneGroup_QiResonance.label>
+  <CVG_GeneGroup_QiResonance.description>La sangre vibra con el qi: cultivo más rápido y un dantian mayor, aunque el qi está inquieto con poca pureza. Solo importa a cultivadores despiertos.</CVG_GeneGroup_QiResonance.description>
+</LanguageData>

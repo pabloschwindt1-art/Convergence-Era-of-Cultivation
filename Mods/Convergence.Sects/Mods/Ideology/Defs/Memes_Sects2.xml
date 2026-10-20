@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Sect memes, part 2 (Ideology only). Icons are provisional vanilla ones. -->
+  <MemeDef>
+    <defName>CVG_Meme_BodyWay</defName>
+    <label>body way</label>
+    <description>The body is the first temple. Temper it with blows, hunger and cold until it no longer needs the qi to be a weapon.</description>
+    <iconPath>UI/Memes/CVG/BodyWay</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>116</renderOrder>
+    <exclusionTags><li>CVG_Sect_BodyWay</li></exclusionTags>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->body</li>
+        <li>memeHyphenPrefix->body</li>
+        <li>memeConcept->body way</li>
+        <li>memeLeaderNoun->monk</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <li>creation(tag=meme_CVG_Meme_BodyWay)->[deity0_name] taught the body way.</li>
+          <li>episode(uses=1,tag=meme_CVG_Meme_BodyWay)->[deity0_name] showed the first [memberName] the body way.</li>
+          <li>intro(tag=meme_CVG_Meme_BodyWay)->The early [memberNamePlural] of the [place_summary] [place_name] built a great [altarName] to [deity0_name].</li>
+          <li>conflict(tag=meme_CVG_Meme_BodyWay)->A powerful [foeLeader] despised the [memberNamePlural] and their ways.</li>
+          <li>founderJoin(tag=meme_CVG_Meme_BodyWay)->[memberName]'s savior [founderName] came down from the mountain with nothing but the body way.</li>
+          <li>victory(tag=meme_CVG_Meme_BodyWay)->[founderName] faced the [foeLeader] and the [foeSoldiers] fled.</li>
+          <li>setup(tag=meme_CVG_Meme_BodyWay)->The believers were scattered, so they gathered to follow the body way.</li>
+          <li>story(uses=1,tag=meme_CVG_Meme_BodyWay)->The believers spread out and grew in number, each walking the body way in their own way.</li>
+          <li>lessonIntro(tag=meme_CVG_Meme_BodyWay)->Disciple, the old masters used to say:</li>
+          <li>lesson(tag=meme_CVG_Meme_BodyWay)->the body is the first temple. Temper it with blows, hunger and cold until it no longer needs the qi to be a weapon.</li>
+          <li>lessonReinforcement(tag=meme_CVG_Meme_BodyWay)->You will understand it after many years of practice.</li>
+          <li>archistFact(tag=meme_CVG_Meme_BodyWay)->The archotechs watch the body way as a gardener watches a vine.</li>
+          <li>archistProphecy(tag=meme_CVG_Meme_BodyWay)->[inTheEnd], the archotechs will depart, and those who followed the body way will remain.</li>
+          <li>animistFact(tag=meme_CVG_Meme_BodyWay)->The spirits of the land walk the body way with us.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Bodyism</ideoName>
+        <theme>body</theme>
+        <adjective>body</adjective>
+        <member>bodyist</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+  <MemeDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>CVG_Meme_PuppetPath</defName>
+    <label>puppet path</label>
+    <description>Whoever pulls the strings does not need to be strong, only patient. Lend a piece of your soul to wood and bronze, and let it fight in your place.</description>
+    <iconPath>UI/Memes/CVG/PuppetPath</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>117</renderOrder>
+    <exclusionTags><li>CVG_Sect_PuppetPath</li></exclusionTags>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->puppet</li>
+        <li>memeHyphenPrefix->puppet</li>
+        <li>memeConcept->puppet path</li>
+        <li>memeLeaderNoun->puppeteer</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <li>creation(tag=meme_CVG_Meme_PuppetPath)->[deity0_name] taught the puppet path.</li>
+          <li>episode(uses=1,tag=meme_CVG_Meme_PuppetPath)->[deity0_name] showed the first [memberName] the puppet path.</li>
+          <li>intro(tag=meme_CVG_Meme_PuppetPath)->The early [memberNamePlural] of the [place_summary] [place_name] built a great [altarName] to [deity0_name].</li>
+          <li>conflict(tag=meme_CVG_Meme_PuppetPath)->A powerful [foeLeader] despised the [memberNamePlural] and their ways.</li>
+          <li>founderJoin(tag=meme_CVG_Meme_PuppetPath)->[memberName]'s savior [founderName] came down from the mountain with nothing but the puppet path.</li>
+          <li>victory(tag=meme_CVG_Meme_PuppetPath)->[founderName] faced the [foeLeader] and the [foeSoldiers] fled.</li>
+          <li>setup(tag=meme_CVG_Meme_PuppetPath)->The believers were scattered, so they gathered to follow the puppet path.</li>
+          <li>story(uses=1,tag=meme_CVG_Meme_PuppetPath)->The believers spread out and grew in number, each walking the puppet path in their own way.</li>
+          <li>lessonIntro(tag=meme_CVG_Meme_PuppetPath)->Disciple, the old masters used to say:</li>
+          <li>lesson(tag=meme_CVG_Meme_PuppetPath)->whoever pulls the strings does not need to be strong, only patient. Lend a piece of your soul to wood and bronze, and let it fight in your place.</li>
+          <li>lessonReinforcement(tag=meme_CVG_Meme_PuppetPath)->You will understand it after many years of practice.</li>
+          <li>archistFact(tag=meme_CVG_Meme_PuppetPath)->The archotechs watch the puppet path as a gardener watches a vine.</li>
+          <li>archistProphecy(tag=meme_CVG_Meme_PuppetPath)->[inTheEnd], the archotechs will depart, and those who followed the puppet path will remain.</li>
+          <li>animistFact(tag=meme_CVG_Meme_PuppetPath)->The spirits of the land walk the puppet path with us.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Puppetry</ideoName>
+        <theme>puppet</theme>
+        <adjective>puppet</adjective>
+        <member>puppeteer</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+  <MemeDef>
+    <defName>CVG_Meme_ThunderWay</defName>
+    <label>thunder way</label>
+    <description>Lightning is the Heaven's own judgment. Walk toward it, bear it, and what survives is yours.</description>
+    <iconPath>UI/Memes/CVG/ThunderWay</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>118</renderOrder>
+    <exclusionTags><li>CVG_Sect_ThunderWay</li></exclusionTags>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->thunder</li>
+        <li>memeHyphenPrefix->thunder</li>
+        <li>memeConcept->thunder way</li>
+        <li>memeLeaderNoun->thunder-bearer</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <li>creation(tag=meme_CVG_Meme_ThunderWay)->[deity0_name] taught the thunder way.</li>
+          <li>episode(uses=1,tag=meme_CVG_Meme_ThunderWay)->[deity0_name] showed the first [memberName] the thunder way.</li>
+          <li>intro(tag=meme_CVG_Meme_ThunderWay)->The early [memberNamePlural] of the [place_summary] [place_name] built a great [altarName] to [deity0_name].</li>
+          <li>conflict(tag=meme_CVG_Meme_ThunderWay)->A powerful [foeLeader] despised the [memberNamePlural] and their ways.</li>
+          <li>founderJoin(tag=meme_CVG_Meme_ThunderWay)->[memberName]'s savior [founderName] came down from the mountain with nothing but the thunder way.</li>
+          <li>victory(tag=meme_CVG_Meme_ThunderWay)->[founderName] faced the [foeLeader] and the [foeSoldiers] fled.</li>
+          <li>setup(tag=meme_CVG_Meme_ThunderWay)->The believers were scattered, so they gathered to follow the thunder way.</li>
+          <li>story(uses=1,tag=meme_CVG_Meme_ThunderWay)->The believers spread out and grew in number, each walking the thunder way in their own way.</li>
+          <li>lessonIntro(tag=meme_CVG_Meme_ThunderWay)->Disciple, the old masters used to say:</li>
+          <li>lesson(tag=meme_CVG_Meme_ThunderWay)->lightning is the Heaven's own judgment. Walk toward it, bear it, and what survives is yours.</li>
+          <li>lessonReinforcement(tag=meme_CVG_Meme_ThunderWay)->You will understand it after many years of practice.</li>
+          <li>archistFact(tag=meme_CVG_Meme_ThunderWay)->The archotechs watch the thunder way as a gardener watches a vine.</li>
+          <li>archistProphecy(tag=meme_CVG_Meme_ThunderWay)->[inTheEnd], the archotechs will depart, and those who followed the thunder way will remain.</li>
+          <li>animistFact(tag=meme_CVG_Meme_ThunderWay)->The spirits of the land walk the thunder way with us.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Thunderism</ideoName>
+        <theme>thunder</theme>
+        <adjective>thunder</adjective>
+        <member>thunderer</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+</Defs>

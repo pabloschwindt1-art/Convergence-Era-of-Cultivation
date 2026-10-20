@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Role traits tied to systems (docs/modulos/RASGOS.md §9.3). One role per pawn (exclusionTag CVG_Role). -->
+  <TraitDef>
+    <defName>CVG_Role_SectDisciple</defName>
+    <commonality>0.05</commonality>
+    <exclusionTags>
+      <li>CVG_Role</li>
+    </exclusionTags>
+    <conflictingTraits>
+      <li>CVG_SecludedCultivator</li>
+    </conflictingTraits>
+    <degreeDatas>
+      <li>
+        <degree>0</degree>
+        <label>sect disciple</label>
+        <labelFemale>sect disciple</labelFemale>
+        <description>Raised in a sect of the Nine Heavens, {PAWN_nameDef} learned early to breathe, bow and fight. Learns quickly and cultivates a little faster.</description>
+        <skillGains>
+          <Social>1</Social>
+          <Melee>2</Melee>
+        </skillGains>
+        <statOffsets>
+          <SocialImpact>0.05</SocialImpact>
+        </statOffsets>
+        <statFactors>
+          <GlobalLearningFactor>1.1</GlobalLearningFactor>
+          <CVG_CultivationSpeed>1.05</CVG_CultivationSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  <TraitDef>
+    <defName>CVG_Role_LineageHeir</defName>
+    <commonality>0.04</commonality>
+    <exclusionTags>
+      <li>CVG_Role</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <degree>0</degree>
+        <label>lineage heir</label>
+        <labelFemale>lineage heir</labelFemale>
+        <description>The heir of an old bloodline: the beast blood answers {PAWN_objective} easily, and purifying a bloodline works much better. Since the dragons' Pact of the Four Points sealed the great bloodlines, every heir carries a sliver of that oath along with the blood.</description>
+        <skillGains>
+          <Social>1</Social>
+        </skillGains>
+        <statFactors>
+          <CVG_PurificationChance>1.5</CVG_PurificationChance>
+        </statFactors>
+      </li>
+    </degreeDatas>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_TraitConflicts">
+        <conflicts>
+          <li><trait>Immunity</trait><degree>-1</degree></li>
+          <li><trait>Wimp</trait></li>
+        </conflicts>
+      </li>
+    </modExtensions>
+  </TraitDef>
+  <TraitDef>
+    <defName>CVG_Role_SpiritTailor</defName>
+    <commonality>0.05</commonality>
+    <exclusionTags>
+      <li>CVG_Role</li>
+    </exclusionTags>
+    <forcedPassions>
+      <li>Crafting</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <degree>0</degree>
+        <label>spirit tailor</label>
+        <description>Thread and needle obey {PAWN_objective}, spirit silk and beast leather too, and the same deft hands speed up all manual work. The robes of Azure Peak's elders are stitched with qi so they never tear in a duel, a craft every spirit tailor dreams of.</description>
+        <skillGains>
+          <Crafting>2</Crafting>
+          <Artistic>1</Artistic>
+        </skillGains>
+        <statFactors>
+          <GeneralLaborSpeed>1.15</GeneralLaborSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  <TraitDef>
+    <defName>CVG_Role_FengShuiMaster</defName>
+    <commonality>0.04</commonality>
+    <exclusionTags>
+      <li>CVG_Role</li>
+    </exclusionTags>
+    <conflictingTraits>
+      <li>CVG_Craft_FormationMaster</li>
+    </conflictingTraits>
+    <forcedPassions>
+      <li>Artistic</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <degree>0</degree>
+        <label>feng shui master</label>
+        <labelFemale>feng shui master</labelFemale>
+        <description>Knows where qi gathers and where it leaks: builds well and breaks through more surely. Geomancers say the Coiled Dragon Range of the Ancient Dragon Clan was a fragment of its own before the Rupture because masters like this placed its first halls.</description>
+        <skillGains>
+          <Artistic>2</Artistic>
+          <Construction>1</Construction>
+        </skillGains>
+        <statOffsets>
+          <CVG_BreakthroughChance>0.05</CVG_BreakthroughChance>
+        </statOffsets>
+        <statFactors>
+          <ConstructionSpeed>1.1</ConstructionSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+</Defs>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<!-- Puppet Master: the puppeteer's start, like the mechanitor start of Biotech (needs Convergence: Biotech Wuxia). -->
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>CVG_Scenario_PuppetMaster</defName>
+    <label>Puppet master</label>
+    <description>The Thousand Strings Valley fell in a single night, and the master of the workshop carried the only thread out of it, tied around his own heart. He had three apprentices, a wooden porter, a mason and a miner, who will not leave him, and a promise to the dead to build more. The heirs of the valley are somewhere behind him on the road.</description>
+    <scenario>
+      <summary>One puppet master with the heart thread and the three work puppets (wooden, mason and miner) already bound to them.</summary>
+      <playerFaction>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>1</pawnCount>
+          <pawnChoiceCount>3</pawnChoiceCount>
+        </li>
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MedicineHerbal</thingDef><count>10</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Pemmican</thingDef><count>120</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Silver</thingDef><count>200</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>CVG_SpiritThread</thingDef><count>10</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>CVG_PuppetBlueprint</thingDef><count>1</count></li>
+        <!-- like the vanilla mechanitor start (BasicMechtech, Batteries...): the research to charge and build puppets is done -->
+        <li Class="ScenPart_StartingResearch"><def>StartingResearch</def><project>CVG_Research_QiBreathing</project></li>
+        <li Class="ScenPart_StartingResearch"><def>StartingResearch</def><project>CVG_Research_QiNetwork</project></li>
+        <li Class="ScenPart_StartingResearch"><def>StartingResearch</def><project>CVG_Research_Puppetry</project></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>CVG_SpiritStone</thingDef><count>60</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>CVG_SpiritWood</thingDef><count>50</count></li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart"><def>ScatterThingsNearPlayerStart</def><thingDef>WoodLog</thingDef><count>300</count></li>
+        <li Class="ScenPart_ScatterThingsAnywhere"><def>ScatterThingsAnywhere</def><thingDef>Steel</thingDef><count>200</count></li>
+
+        <li Class="Convergence.Stories.ScenPart_StoryOrigin">
+          <def>CVG_StoryOrigin</def>
+          <visible>false</visible>
+          <origin>PuppetMaster</origin>
+          <followUps><li><key>ev:PuppetHeirs</key><days>10~16</days></li></followUps>
+        </li>
+        <li Class="Convergence.Stories.ScenPart_ConvergenceOccurred">
+          <def>CVG_ConvergenceOccurred</def>
+        </li>
+        <li Class="Convergence.Stories.ScenPart_StartingCultivators">
+          <def>CVG_StartingCultivators</def>
+          <realm>CVG_Realm_QiRefining</realm>
+          <stage>2~3</stage>
+          <count>1</count>
+          <techniques>true</techniques>
+        </li>
+        <li Class="Convergence.Stories.ScenPart_StartingPuppets">
+          <def>CVG_StartingPuppets</def>
+          <link>CVG_PuppetHeartThread</link>
+          <puppetKind>CVG_Puppet_Wood</puppetKind>
+          <count>1</count>
+        </li>
+        <!-- the three work puppets: between them they do every job but cultivating qi and research, so the lone master gets a hand -->
+        <li Class="Convergence.Stories.ScenPart_StartingPuppets">
+          <def>CVG_StartingPuppets</def>
+          <link>CVG_PuppetHeartThread</link>
+          <puppetKind>CVG_Puppet_Mason</puppetKind>
+          <count>1</count>
+        </li>
+        <li Class="Convergence.Stories.ScenPart_StartingPuppets">
+          <def>CVG_StartingPuppets</def>
+          <link>CVG_PuppetHeartThread</link>
+          <puppetKind>CVG_Puppet_Miner</puppetKind>
+          <count>1</count>
+        </li>
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <textKey>CVG_Scenario_PuppetMaster_Start</textKey>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+</Defs>

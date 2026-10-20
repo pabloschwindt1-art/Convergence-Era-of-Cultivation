@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_NamerArtWuxia.rulePack.rulesStrings>
+    <li>r_art_name(p=3)-&gt;[wx_subject] [wx_trans] [wx_place]</li>
+    <li>r_art_name(p=2)-&gt;[wx_subject]</li>
+    <li>r_art_name-&gt;[wx_place]</li>
+    <li>wx_subject-&gt;El inmortal que cruza las nubes</li>
+    <li>wx_subject-&gt;El Dragón Azur</li>
+    <li>wx_subject-&gt;La última lección del fundador</li>
+    <li>wx_subject-&gt;Nueve rayos de la tribulación</li>
+    <li>wx_subject-&gt;El qilin bajo el melocotonero</li>
+    <li>wx_subject-&gt;La grulla y el pino</li>
+    <li>wx_subject-&gt;La vigilia del Tigre Blanco</li>
+    <li>wx_subject-&gt;El Pájaro Bermellón</li>
+    <li>wx_subject-&gt;La Tortuga Negra</li>
+    <li>wx_subject-&gt;La corte del Emperador de Jade</li>
+    <li>wx_subject-&gt;La rebeldía del Rey Mono</li>
+    <li>wx_subject-&gt;Chang'e en la luna</li>
+    <li>wx_subject-&gt;Los Ocho Inmortales</li>
+    <li>wx_subject-&gt;La despedida del Santo de la Espada</li>
+    <li>wx_subject-&gt;El loto de mil años</li>
+    <li>wx_subject-&gt;La Convergencia</li>
+    <li>wx_trans-&gt;de</li>
+    <li>wx_trans-&gt;sobre</li>
+    <li>wx_trans-&gt;bajo</li>
+    <li>wx_trans-&gt;en</li>
+    <li>wx_place-&gt;el monte Kunlun</li>
+    <li>wx_place-&gt;los Nueve Cielos</li>
+    <li>wx_place-&gt;Jiuxiao</li>
+    <li>wx_place-&gt;el Mar del Este</li>
+    <li>wx_place-&gt;Penglai</li>
+    <li>wx_place-&gt;el Templo del Loto Silencioso</li>
+    <li>wx_place-&gt;el Pico Azur</li>
+    <li>wx_place-&gt;el monte Tai</li>
+    <li>wx_place-&gt;las Fuentes Amarillas</li>
+  </CVG_NamerArtWuxia.rulePack.rulesStrings>
+  <CVG_ArtDescription_JadeSculpture.rulePack.rulesStrings>
+    <li>physical_description_root-&gt;Esta [carving] de jade [depicts] [image]. [wx_motif] [desc_sentence_group]</li>
+    <li>physical_description_root-&gt;Esta [carving] de jade muestra una [depiction] de [image]. [wx_motif] [desc_sentence_group]</li>
+    <li>carving-&gt;talla</li>
+    <li>carving-&gt;figura</li>
+    <li>carving-&gt;pieza</li>
+    <li>wx_motif-&gt;Alrededor de la base, unas grullas rodean un pino de la longevidad.</li>
+    <li>wx_motif-&gt;Un pequeño qilin se asoma detrás de la figura principal.</li>
+    <li>wx_motif-&gt;La piedra quedó áspera donde se juntan las nubes de una tribulación.</li>
+    <li>wx_motif-&gt;Unos caracteres diminutos en el dorso dicen: "El Dao que puede nombrarse no es el Dao eterno."</li>
+    <li>wx_motif-&gt;El artista escondió una espada en los pliegues de una túnica, como gusta a las sectas de la espada.</li>
+    <li>wx_motif-&gt;Los cinco elementos giran en una rueda alrededor de la figura.</li>
+    <li>wx_motif-&gt;En un rincón, el fundador de una secta alza la mano en una última lección.</li>
+    <li>wx_motif-&gt;Nueve líneas finas de rayo cruzan el cielo de arriba.</li>
+  </CVG_ArtDescription_JadeSculpture.rulePack.rulesStrings>
+  <CVG_ArtDescription_Scroll.rulePack.rulesStrings>
+    <li>physical_description_root-&gt;Esta [scroll] [depicts] [image] con [ink_style]. [wx_motif] [desc_sentence_group]</li>
+    <li>scroll-&gt;obra de tinta</li>
+    <li>scroll-&gt;pintura colgante</li>
+    <li>scroll-&gt;caligrafía</li>
+    <li>ink_style-&gt;unos pocos trazos feroces de tinta negra</li>
+    <li>ink_style-&gt;aguadas pálidas de tinta gris</li>
+    <li>ink_style-&gt;escritura corrida que tiembla como el agua</li>
+    <li>ink_style-&gt;escritura de sello rígida como una estela</li>
+    <li>ink_style-&gt;una tinta tan fina que parece niebla</li>
+    <li>wx_motif-&gt;Alrededor de la base, unas grullas rodean un pino de la longevidad.</li>
+    <li>wx_motif-&gt;Un pequeño qilin se asoma detrás de la figura principal.</li>
+    <li>wx_motif-&gt;La piedra quedó áspera donde se juntan las nubes de una tribulación.</li>
+    <li>wx_motif-&gt;Unos caracteres diminutos en el dorso dicen: "El Dao que puede nombrarse no es el Dao eterno."</li>
+    <li>wx_motif-&gt;El artista escondió una espada en los pliegues de una túnica, como gusta a las sectas de la espada.</li>
+    <li>wx_motif-&gt;Los cinco elementos giran en una rueda alrededor de la figura.</li>
+    <li>wx_motif-&gt;En un rincón, el fundador de una secta alza la mano en una última lección.</li>
+    <li>wx_motif-&gt;Nueve líneas finas de rayo cruzan el cielo de arriba.</li>
+  </CVG_ArtDescription_Scroll.rulePack.rulesStrings>
+</LanguageData>

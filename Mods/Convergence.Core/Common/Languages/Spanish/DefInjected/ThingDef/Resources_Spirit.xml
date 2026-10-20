@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_SpiritStone.label>piedra espiritual</CVG_SpiritStone.label>
+  <CVG_SpiritStone.description>Una piedra empapada de qi condensado desde la Convergencia. Los cultivadores comercian con ella, la queman para alimentar formaciones y forjas, y la absorben para cultivar.</CVG_SpiritStone.description>
+  <CVG_SpiritJade.label>jade espiritual</CVG_SpiritJade.label>
+  <CVG_SpiritJade.description>Jade que bebió qi durante la Convergencia. Brilla débilmente y guarda lo que se graba en él: tablillas de técnicas, talismanes y artefactos se hacen con él. También es una piedra de construcción hermosa.</CVG_SpiritJade.description>
+  <CVG_MineableSpiritStone.label>veta de piedra espiritual</CVG_MineableSpiritStone.label>
+  <CVG_MineableSpiritStone.description>Roca surcada de piedras espirituales que se condensaron cuando el qi volvió al mundo. Antes de la Convergencia estas vetas eran roca común; los mineros juran que ahora se oye respirar la piedra.</CVG_MineableSpiritStone.description>
+  <CVG_MineableSpiritJade.label>jade espiritual</CVG_MineableSpiritJade.label>
+  <CVG_MineableSpiritJade.description>Jade que bebió qi durante la Convergencia. Brilla débilmente en la oscuridad.</CVG_MineableSpiritJade.description>
+</LanguageData>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Leveled workbenches, pills and runes (Core hooks used by Convergence: Alchemy) -->
+  <CVG_Pill_Effect>Efecto de la píldora</CVG_Pill_Effect>
+  <CVG_Pill_QualityScales>La calidad de la píldora escala su efecto: las mejores son más fuertes, más limpias o funcionan con más probabilidad.</CVG_Pill_QualityScales>
+  <CVG_Pill_PurifyChance>Probabilidad de purificar el linaje</CVG_Pill_PurifyChance>
+  <CVG_Pill_NoBloodline>{PAWN_nameDef} no tiene sangre de bestia que purificar: la píldora solo deja un regusto ardiente.</CVG_Pill_NoBloodline>
+  <CVG_Pill_PurifyFailed>La píldora no bastó para purificar la sangre de {PAWN_nameDef}.</CVG_Pill_PurifyFailed>
+  <CVG_Workbench_Upgrade>Mejorar a nivel {0}</CVG_Workbench_Upgrade>
+  <CVG_Workbench_UpgradeDesc>Mejora {0} a nivel {1}. Trabaja más rápido y desbloquea mejores recetas.
+
+Costo (a 8 casillas o menos de la mesa): {2}.</CVG_Workbench_UpgradeDesc>
+  <CVG_Workbench_Missing>Faltan materiales a 8 casillas o menos de la mesa: {0}.</CVG_Workbench_Missing>
+  <CVG_Workbench_Upgraded>{0} subió a nivel {1}.</CVG_Workbench_Upgraded>
+  <CVG_Workbench_Level>Nivel {0}/{1}</CVG_Workbench_Level>
+  <CVG_Workbench_RequiresResearch>Requiere comprender {0} (pestaña de investigación Cultivo).</CVG_Workbench_RequiresResearch>
+</LanguageData>

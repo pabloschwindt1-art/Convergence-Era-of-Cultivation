@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Funeral of the Dao: the sect funeral, on the vanilla funeral behavior (grave + attendees). A disciple is not mourned: they are returned to the Dao. -->
+  <RitualPatternDef>
+    <defName>CVG_Pattern_DaoFuneral</defName>
+    <nameMaker>NamerRitualFuneral</nameMaker>
+    <ritualExpectedDesc>You can hold a {IDEOLIGION_adjective} funeral of the Dao for {PAWN_nameDef}.</ritualExpectedDesc>
+    <ritualExpectedDescNoAdjective>You can hold a funeral of the Dao for {PAWN_nameDef}.</ritualExpectedDescNoAdjective>
+    <ritualObligationTriggers>
+      <li Class="RitualObligationTrigger_MemberDiedProperties">
+        <mustBePlayerIdeo>true</mustBePlayerIdeo>
+      </li>
+    </ritualObligationTriggers>
+    <ritualObligationTargetFilter>GraveWithTargetsCorpse</ritualObligationTargetFilter>
+    <ritualBehavior>Funeral</ritualBehavior>
+    <ritualOutcomeEffect>AttendedFuneral</ritualOutcomeEffect>
+  </RitualPatternDef>
+
+  <PreceptDef ParentName="FuneralBase">
+    <defName>CVG_Ritual_DaoFuneral</defName>
+    <label>funeral of the Dao</label>
+    <description>When a disciple dies the sect does not weep: it burns paper money and calls the name three times so that the qi they gathered can return to the Dao. The grave is dug facing the mountain.</description>
+    <ritualPatternBase>CVG_Pattern_DaoFuneral</ritualPatternBase>
+    <extraTextPawnDeathLetter>{PAWN_nameDef} should be buried and given a funeral of the Dao, so the qi {PAWN_pronoun} gathered can return to the heavens.</extraTextPawnDeathLetter>
+    <classic>false</classic>
+    <requiredMemes>
+      <li>CVG_Meme_SwordWay</li>
+      <li>CVG_Meme_LotusPath</li>
+      <li>CVG_Meme_CauldronWay</li>
+      <li>CVG_Meme_DragonBlood</li>
+      <li>CVG_Meme_DemonicWay</li>
+      <li>CVG_Meme_WanderingPath</li>
+      <li>CVG_Meme_BodyWay</li>
+      <li>CVG_Meme_ThunderWay</li><li MayRequire="Ludeon.RimWorld.Biotech">CVG_Meme_PuppetPath</li>
+    </requiredMemes>
+  </PreceptDef>
+</Defs>

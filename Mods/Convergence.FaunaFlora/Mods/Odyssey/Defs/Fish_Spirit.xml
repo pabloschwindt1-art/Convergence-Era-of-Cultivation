@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Spirit fish (Odyssey). Only after the Convergence: before it, a catch becomes a common fish of the same water (Core patch on FishingUtility). -->
+  <ThingDef ParentName="FishBase">
+    <defName>CVG_Fish_GoldenCarp</defName>
+    <label>golden carp</label>
+    <description>A golden carp whose scales shine like coins. Fish of luck; very rare ones are said to leap the Dragon Gate. A golden carp that leaps the Dragon Gate is said to become a dragon, and every fisher of the great rivers has cast a line hoping to see it jump.</description>
+    <graphicData>
+      <texPath>Things/Item/Fish/CVG_GoldenCarp</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>22</MarketValue>
+      <Nutrition>0.35</Nutrition>
+    </statBases>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_PostConvergence" />
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="FishBase">
+    <defName>CVG_Fish_JadeEel</defName>
+    <label>jade eel</label>
+    <description>A slender green eel with a jade sheen. Its flesh is full of qi. Drowned monks of the Silent Lotus Temple are said to return as jade eels, still looking for the shore. Their meat is rich in qi and in sorrow.</description>
+    <graphicData>
+      <texPath>Things/Item/Fish/CVG_JadeEel</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>26</MarketValue>
+      <Nutrition>0.35</Nutrition>
+    </statBases>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_PostConvergence" />
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="FishBase">
+    <defName>CVG_Fish_MoonFish</defName>
+    <label>moon fish</label>
+    <description>A round silver fish that shines at night. Traders value it. On nights of the full moon the moon fish rise to the surface to look at their own reflection. Fishermen of the south hang their scales on the door to keep out ghosts.</description>
+    <graphicData>
+      <texPath>Things/Item/Fish/CVG_MoonFish</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>30</MarketValue>
+      <Nutrition>0.35</Nutrition>
+    </statBases>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_PostConvergence" />
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="FishBase">
+    <defName>CVG_Fish_ThunderFish</defName>
+    <label>thunder fish</label>
+    <description>A blue fish that crackles with static. Lucky catches are rich in lightning qi. Thunder fish bite best in a storm, for those who dare stand in the rain. Old fishers say each one carries a splinter of the Thunder God's drum.</description>
+    <graphicData>
+      <texPath>Things/Item/Fish/CVG_ThunderFish</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>34</MarketValue>
+      <Nutrition>0.35</Nutrition>
+    </statBases>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_PostConvergence" />
+    </modExtensions>
+  </ThingDef>
+</Defs>

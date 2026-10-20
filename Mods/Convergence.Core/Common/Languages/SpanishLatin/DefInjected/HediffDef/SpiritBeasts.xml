@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_SpiritBeast.label>bestia espiritual</CVG_SpiritBeast.label>
+  <CVG_SpiritBeast.description>El qi ha despertado a este animal. Es más fuerte, rápido y resistente que los de su especie, y su carne y su sangre llevan el poder espiritual que necesitan los cultivadores del cuerpo.</CVG_SpiritBeast.description>
+  <CVG_SpiritBeast.stages.0.label>nivel 1</CVG_SpiritBeast.stages.0.label>
+  <CVG_SpiritBeast.stages.1.label>nivel 2</CVG_SpiritBeast.stages.1.label>
+  <CVG_SpiritBeast.stages.2.label>nivel 3</CVG_SpiritBeast.stages.2.label>
+  <CVG_SpiritBeast.stages.3.label>nivel 4</CVG_SpiritBeast.stages.3.label>
+  <CVG_SpiritNourished.label>nutrido de espíritu</CVG_SpiritNourished.label>
+  <CVG_SpiritNourished.description>Una sopa espiritual calienta los meridianos: el cultivo y el templado del cuerpo van un poco más rápido durante un día.</CVG_SpiritNourished.description>
+</LanguageData>

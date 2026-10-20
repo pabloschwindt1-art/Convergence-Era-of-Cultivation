@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Puppet Master (docs/modulos/BIOTECH_WUXIA.md §1). Vanilla mechanitor systems, wuxia aesthetics:
+    - Puppet Heart Thread: implant hediff with Convergence.DefModExtension_MechanitorLink (Core makes it count as a
+      mechlink). Bandwidth +1 per realm level (StatPart in Patches/MechBandwidth.xml).
+    - Puppets = light mechs (vanilla races) with Convergence.CompPuppet: bond hediff = realm of the master (stats),
+      more health per realm, recharge with the master's qi, backlash on the master when one breaks.
+    - Puppet workshop = mech gestator with a zero-draw self-contained power net (no electricity needed).
+      Spirit charger = mech recharger that burns spirit stones (Core patch on Building_MechCharger).
+    Provisional art: vanilla mech and building textures, tinted. Own art paths: Things/Pawn/CVG/Puppet{Wood,Bronze,Jade},
+    Things/Building/CVG/PuppetWorkshop, Things/Building/CVG/SpiritCharger, Things/Item/CVG_PuppetHeartThread,
+    Things/Item/CVG_PuppetBlueprint, Things/Item/CVG_SpiritThread.
+  -->
+
+  <!-- ================= Puppet Heart Thread ================= -->
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>CVG_PuppetHeartThread</defName>
+    <hediffClass>Convergence.Hediff_PuppetLink</hediffClass>
+    <label>puppet heart thread</label>
+    <description>Yan Shi, the artificer of the Zhou court, built a man of leather and wood so lifelike that the king wanted him executed for flirting with the concubines; the old masters of Jiuxiao say Yan Shi's true secret was a single thread tied to his own heart. Woven into the heart and soul, this thread lets its bearer move wood, bronze and jade as if they were limbs: they can command and build puppets (as a mechanitor). Higher realms hold more threads at once.</description>
+    <descriptionShort>A thread of spirit silk woven into the soul: lets this person command and build puppets.</descriptionShort>
+    <isBad>false</isBad>
+    <duplicationAllowed>false</duplicationAllowed>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <stages>
+      <li>
+        <statOffsets>
+          <MechBandwidth>4</MechBandwidth>
+          <MechControlGroups>2</MechControlGroups>
+        </statOffsets>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_MechanitorLink" />
+    </modExtensions>
+  </HediffDef>
+
+  <ThingDef ParentName="MechanitorImplantBase">
+    <defName>CVG_PuppetHeartThread</defName>
+    <label>puppet heart thread</label>
+    <description>A coil of glowing spirit silk taken from the crypt of a puppet master of the Thousand Strings Valley, a lineage that fled Jiuxiao when the Great Rupture cut its threads. Wound into the heart, it lets a person command and build puppets (as a mechanitor: bandwidth, control groups, puppet workshop).
+
+Once woven, it can only be recovered after death.</description>
+    <thingCategories Inherit="False"><li>ItemsMisc</li></thingCategories>
+    <techLevel>Medieval</techLevel>
+    <descriptionHyperlinks><HediffDef>CVG_PuppetHeartThread</HediffDef></descriptionHyperlinks>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>0.2</Mass>
+      <MarketValue>600</MarketValue>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/CVG_PuppetHeartThread</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <tradeability>All</tradeability>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>InstallMechlink</useJob>
+        <useLabel>Weave {0_label} into the heart</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>CVG_PuppetHeartThread</hediffDef>
+        <bodyPart>Heart</bodyPart>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ================= Materials ================= -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_SpiritThread</defName>
+    <label>spirit thread</label>
+    <description>Puppet masters say an ordinary thread carries a tug, but a spirit thread carries an intention. Spun thin enough to conduct qi, it ties a puppet to the will of its master; the Jade Weaver spiders of Jiuxiao give the finest.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_SpiritThread</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MarketValue>6</MarketValue>
+      <Mass>0.02</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>1</Flammability>
+      <WorkToMake>1200</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+        <li>HandTailoringBench</li>
+        <li>ElectricTailoringBench</li>
+      </recipeUsers>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <displayPriority>2300</displayPriority>
+      <productCount>10</productCount>
+    </recipeMaker>
+    <costList>
+      <Cloth>20</Cloth>
+      <CVG_SpiritStone>2</CVG_SpiritStone>
+    </costList>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_PuppetBlueprint</defName>
+    <label>puppet blueprint</label>
+    <description>The Thousand Strings Valley never wrote its secrets in books, only in scrolls of joint diagrams and binding sigils that burn if a thief unrolls them the wrong way. Every puppet needs one; masters sell them, crypts hide them, and a patient scholar can draw them.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/PuppetBlueprint</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MarketValue>80</MarketValue>
+      <Mass>0.1</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1</Flammability>
+      <WorkToMake>2500</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <tradeability>All</tradeability>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <skillRequirements>
+        <Intellectual>6</Intellectual>
+      </skillRequirements>
+      <researchPrerequisite>CVG_Research_Puppetry</researchPrerequisite>
+      <displayPriority>2310</displayPriority>
+    </recipeMaker>
+    <costList>
+      <Cloth>10</Cloth>
+      <CVG_SpiritStone>4</CVG_SpiritStone>
+    </costList>
+  </ThingDef>
+
+  <!-- ================= Research ================= -->
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_Puppetry</defName>
+    <label>puppetry</label>
+    <description>Since Yan Shi's living automaton, puppetry has been the art of lending a piece of one's soul to wood, bronze and jade. Comprehending it unlocks puppet blueprints, the puppet workshop and the spirit charger, both fed by the qi network.</description>
+    <baseCost>2000</baseCost>
+    <prerequisites>
+      <li>CVG_Research_QiBreathing</li>
+      <li>CVG_Research_QiNetwork</li>
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>5</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>6</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <!-- War puppet tiers (user design 2026-10-17): Dao research per tier, so a Golden Core puppet never shows up early. -->
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_WarThreads</defName>
+    <label>war threads</label>
+    <description>A working puppet is a servant; a war puppet is a second body. The Thousand Strings Valley taught it only to masters who had laid their Foundation, because a thread that kills pulls back on the heart. Unlocks the bronze puppet.</description>
+    <baseCost>2500</baseCost>
+    <prerequisites>
+      <li>CVG_Research_Puppetry</li>
+      <li>CVG_Research_Foundation</li>
+    </prerequisites>
+    <researchViewX>4</researchViewX>
+    <researchViewY>5</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>8</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_SteelThreads</defName>
+    <label>spirit steel threads</label>
+    <description>Spirit steel holds a thread without fraying, so a blade puppet can move as fast as the master thinks. The valley's sword masters wove two threads into each one and called them their shadows. Unlocks the blade puppet.</description>
+    <baseCost>4000</baseCost>
+    <prerequisites>
+      <li>CVG_Research_WarThreads</li>
+      <li>CVG_Research_GoldenCore</li>
+    </prerequisites>
+    <researchViewX>5</researchViewX>
+    <researchViewY>5</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>14</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_JadeThreads</defName>
+    <label>jade threads</label>
+    <description>Jade remembers. A jade guardian keeps a little of the master's own cultivation in its core, which is why only a master at the peak of the Golden Core can bind one, and why the sects envy them. Unlocks the jade guardian.</description>
+    <baseCost>6000</baseCost>
+    <prerequisites>
+      <li>CVG_Research_SteelThreads</li>
+    </prerequisites>
+    <researchViewX>5</researchViewX>
+    <researchViewY>6</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>20</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <!-- Material weaknesses (user design): wood burns, iron and bronze stiffen in the cold, spirit steel only half, jade none. -->
+  <HediffDef>
+    <defName>CVG_PuppetMaterial_Wood</defName>
+    <label>wooden body</label>
+    <description>Spirit wood moves as lightly as a branch in the wind, and burns like one: fire does double damage.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <damageFactors>
+          <Flame>2</Flame>
+        </damageFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>CVG_PuppetMaterial_Iron</defName>
+    <label>iron joints</label>
+    <description>Iron and bronze joints are strong, but below freezing they stiffen: the puppet moves and works slower in the cold.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <initialSeverity>0.1</initialSeverity>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+      </li>
+      <li>
+        <minSeverity>0.5</minSeverity>
+        <label>stiff with cold</label>
+        <statFactors>
+          <MoveSpeed>0.75</MoveSpeed>
+          <WorkSpeedGlobal>0.75</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="Convergence.HediffCompProperties_ColdBrittle" />
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>CVG_PuppetMaterial_Steel</defName>
+    <label>spirit steel joints</label>
+    <description>Spirit steel keeps a little qi in the metal, so the cold only stiffens it half as much as iron.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <initialSeverity>0.1</initialSeverity>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+      </li>
+      <li>
+        <minSeverity>0.5</minSeverity>
+        <label>stiff with cold</label>
+        <statFactors>
+          <MoveSpeed>0.88</MoveSpeed>
+          <WorkSpeedGlobal>0.88</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="Convergence.HediffCompProperties_ColdBrittle" />
+    </comps>
+  </HediffDef>
+
+  <!-- ================= Puppets (light mechs) ================= -->
+  <HediffDef>
+    <defName>CVG_PuppetBond</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>master's thread</label>
+    <description>A puppet is only as strong as the soul at the other end of its thread. Work puppets work faster as their master's realm rises; war puppets fight with the strength of their master's realm, up to the ceiling of their tier, and never above the master.</description>
+    <defaultLabelColor>(0.7, 0.85, 1)</defaultLabelColor>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <initialSeverity>1</initialSeverity>
+    <minSeverity>0</minSeverity>
+    <maxSeverity>6</maxSeverity>
+    <stages>
+      <li>
+        <minSeverity>1</minSeverity>
+        <label>realm 1</label>
+        <statFactors>
+          <WorkSpeedGlobal>1.05</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <label>realm 2</label>
+        <statFactors>
+          <WorkSpeedGlobal>1.15</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <label>realm 3</label>
+        <statFactors>
+          <WorkSpeedGlobal>1.3</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>4</minSeverity>
+        <label>realm 4+</label>
+        <statFactors>
+          <WorkSpeedGlobal>1.5</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>CVG_PuppetBacklash</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>thread backlash</label>
+    <description>Every puppet master of the Thousand Strings Valley bears scars that no blade made: each one is a puppet that died. One of this person's puppets was destroyed and the snapped thread lashed back into the soul; it passes in a couple of days.</description>
+    <defaultLabelColor>(0.9, 0.5, 0.4)</defaultLabelColor>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>90000~120000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <painOffset>0.08</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef Name="CVG_PuppetRaceBase" ParentName="LightMechanoid" Abstract="True">
+    <statBases>
+      <!-- Wood, bronze and jade drink qi, not chemfuel: recharging leaves no toxic wastepacks (works without technology). -->
+      <WastepacksPerRecharge>0</WastepacksPerRecharge>
+      <BandwidthCost>1</BandwidthCost>
+    </statBases>
+    <race>
+      <startingAnimation>CVG_PuppetSway</startingAnimation>
+    </race>
+    <comps>
+      <li Class="Convergence.CompProperties_Puppet">
+        <bondHediff>CVG_PuppetBond</bondHediff>
+        <backlashHediff>CVG_PuppetBacklash</backlashHediff>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_PuppetRaceBase">
+    <defName>CVG_Puppet_Wood</defName>
+    <label>wooden puppet</label>
+    <description>Village puppeteers of the old shadow-theatres learned that a wooden servant never tires and never gossips. This jointed puppet of spirit wood hauls and cleans tirelessly for its master and grows stronger as the master's realm rises.
+
+Work puppet (tier 1): hauling, cleaning, sowing, plant cutting and doctoring. It barely fights. Weak to fire (wooden body). 1 thread. Built from 40 spirit wood, 10 spirit thread and 1 blueprint.</description>
+    <statBases>
+      <CleaningSpeed>0.5</CleaningSpeed>
+      <MoveSpeed>3.0</MoveSpeed>
+    </statBases>
+    <race>
+      <mechFixedSkillLevel>6</mechFixedSkillLevel>
+      <mechEnabledWorkTypes>
+        <li>Hauling</li>
+        <li>Cleaning</li>
+        <li>PlantCutting</li>
+        <li>Growing</li>
+        <li>Doctor</li>
+      </mechEnabledWorkTypes>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Lifter_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Lifter_Death</soundDeath>
+          <soundCall>Pawn_Mech_Lifter_Call</soundCall>
+        </li>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>100</minAge>
+          <soundWounded>Pawn_Mech_Lifter_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Lifter_Death</soundDeath>
+          <soundCall>Pawn_Mech_Lifter_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_PuppetTier">
+        <tier>1</tier>
+        <materialHediff>CVG_PuppetMaterial_Wood</materialHediff>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <PawnKindDef ParentName="NonCombatLightMechanoidKind">
+    <defName>CVG_Puppet_Wood</defName>
+    <label>wooden puppet</label>
+    <race>CVG_Puppet_Wood</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/CVG/Puppet/Wood</texPath>
+          <shaderType>Cutout</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.43</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/CVG/Puppet/Wood</texPath>
+          <shaderType>Cutout</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.43</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="CVG_PuppetRaceBase">
+    <defName>CVG_Puppet_Bronze</defName>
+    <label>bronze guardian puppet</label>
+    <description>Zhuge Liang's wooden oxen carried grain over the mountains; the Valley cast its gate guardians in bronze instead, in the likeness of the clay soldiers buried with the first emperor, and gave them fists rather than weapons. Heavy and patient, this puppet holds the line for its master and grows stronger as the master's realm rises.
+
+War puppet (tier 2): melee front-liner with heavy bronze fists and thick plating; slower than the blade puppet. Fights with the strength of its master's realm, up to Foundation Establishment. Stiffens in the cold. 1 thread. Needs war threads research and a Foundation master. Built from 40 spirit steel, 15 spirit thread and 1 blueprint.</description>
+    <statBases>
+      <BandwidthCost>1</BandwidthCost>
+      <MoveSpeed>3.2</MoveSpeed>
+      <ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+    </statBases>
+    <race>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Militor_Death</soundDeath>
+          <soundCall>Pawn_Mech_Militor_Call</soundCall>
+        </li>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>100</minAge>
+          <soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Militor_Death</soundDeath>
+          <soundCall>Pawn_Mech_Militor_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <tools>
+      <li>
+        <label>bronze fists</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>13</power>
+        <cooldownTime>2.0</cooldownTime>
+        <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_PuppetTier">
+        <tier>2</tier>
+        <combat>true</combat>
+        <minMasterRealm>2</minMasterRealm>
+        <minMasterStage>1</minMasterStage>
+        <capRealm>2</capRealm>
+        <capStage>4</capStage>
+        <materialHediff>CVG_PuppetMaterial_Iron</materialHediff>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <PawnKindDef ParentName="LightMechanoidKind">
+    <defName>CVG_Puppet_Bronze</defName>
+    <label>bronze guardian puppet</label>
+    <race>CVG_Puppet_Bronze</race>
+    <combatPower>50</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/CVG/Puppet/Bronze</texPath>
+          <shaderType>Cutout</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.62</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/CVG/Puppet/Bronze</texPath>
+          <shaderType>Cutout</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.62</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags Inherit="False" />
+  </PawnKindDef>
+
+  <ThingDef ParentName="CVG_PuppetRaceBase">
+    <defName>CVG_Puppet_Jade</defName>
+    <label>jade guardian puppet</label>
+    <description>Only a grandmaster dares to carve jade around a beast core: the core remembers being alive and must be persuaded, every day, to obey. Fast, hard and deadly, the jade guardian is the pride of a puppet master and the envy of the sects; the living core pulls twice as hard on the master's threads (2 bandwidth).
+
+War puppet (tier 4): the strongest, with jade needles at range; it can also hunt. Fights with the strength of its master's realm, up to Ascension. Almost no weaknesses. 3 threads. Needs jade threads research and a master at the peak of the Golden Core. Built from 50 spirit jade, 25 spirit thread, 2 blueprints and 1 beast core.</description>
+    <statBases>
+      <MoveSpeed>4.4</MoveSpeed>
+      <!-- Elite puppet: the beast core inside pulls twice as hard on the master's threads. -->
+      <BandwidthCost>3</BandwidthCost>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+    </statBases>
+    <race>
+      <mechEnabledWorkTypes>
+        <li>Hunting</li>
+      </mechEnabledWorkTypes>
+      <baseHealthScale>1.5</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Militor_Death</soundDeath>
+          <soundCall>Pawn_Mech_Militor_Call</soundCall>
+        </li>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>100</minAge>
+          <soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Militor_Death</soundDeath>
+          <soundCall>Pawn_Mech_Militor_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_PuppetTier">
+        <tier>4</tier>
+        <combat>true</combat>
+        <minMasterRealm>3</minMasterRealm>
+        <minMasterStage>4</minMasterStage>
+        <capRealm>6</capRealm>
+        <capStage>4</capStage>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <PawnKindDef ParentName="LightMechanoidKind">
+    <defName>CVG_Puppet_Jade</defName>
+    <label>jade guardian puppet</label>
+    <race>CVG_Puppet_Jade</race>
+    <combatPower>150</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/CVG/Puppet/Jade</texPath>
+          <shaderType>Cutout</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.85</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/CVG/Puppet/Jade</texPath>
+          <shaderType>Cutout</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.85</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags Inherit="False">
+      <li>CVG_PuppetJadeNeedle</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <!-- ================= Puppet recipes (built in the workshop, vanilla gestation) ================= -->
+  <RecipeDef Name="CVG_PuppetRecipeBase" ParentName="BaseMechanoidRecipe" Abstract="True">
+    <researchPrerequisite>CVG_Research_Puppetry</researchPrerequisite>
+    <jobString>Binding a puppet.</jobString>
+    <displayPriority>90</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CVG_PuppetRecipeBase">
+    <defName>CVG_BuildPuppet_Wood</defName>
+    <label>bind wooden puppet</label>
+    <description>Carve and bind a wooden work puppet (hauling, cleaning, sowing, plant cutting and doctoring).</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritWood</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritThread</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_PuppetBlueprint</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <CVG_Puppet_Wood>1</CVG_Puppet_Wood>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>CVG_Puppet_Wood</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CVG_PuppetRecipeBase">
+    <defName>CVG_BuildPuppet_Bronze</defName>
+    <researchPrerequisite>CVG_Research_WarThreads</researchPrerequisite>
+    <label>bind bronze guardian puppet</label>
+    <description>Cast and bind a bronze guardian war puppet (tier 2: the master must have laid their Foundation).</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritSteel</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritThread</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_PuppetBlueprint</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <CVG_Puppet_Bronze>1</CVG_Puppet_Bronze>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>CVG_Puppet_Bronze</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CVG_PuppetRecipeBase">
+    <defName>CVG_BuildPuppet_Jade</defName>
+    <researchPrerequisite>CVG_Research_JadeThreads</researchPrerequisite>
+    <label>bind jade guardian puppet</label>
+    <description>Carve a jade guardian war puppet around a beast core (tier 4: the master must stand at the peak of the Golden Core).</description>
+    <gestationCycles>2</gestationCycles>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritJade</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritThread</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_PuppetBlueprint</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_BeastCore</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <CVG_Puppet_Jade>1</CVG_Puppet_Jade>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>CVG_Puppet_Jade</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+  <!-- ================= Buildings ================= -->
+  <ThingDef ParentName="MechGestatorBase">
+    <defName>CVG_PuppetWorkshop</defName>
+    <label>puppet workshop</label>
+    <description>The workshops of the Thousand Strings Valley hummed day and night, their looms fed by the qi of the mountain itself. This carving frame with a binding loom of spirit thread is where a puppet master builds puppets (as a mech gestator). It needs no electricity.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Puppet/PuppetWorkshop</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(3, 2, 1.9)</volume>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Building/CVG/Puppet/PuppetWorkshop_south</uiIconPath>
+    <uiIconScale>1.85</uiIconScale>
+    <interactionCellOffset>(1,0,2)</interactionCellOffset>
+    <designationCategory>Biotech</designationCategory>
+    <recipes>
+      <li>CVG_BuildPuppet_Wood</li>
+      <li>CVG_BuildPuppet_Miner</li>
+      <li>CVG_BuildPuppet_Mason</li>
+      <li>CVG_BuildPuppet_Blade</li>
+      <li>CVG_BuildPuppet_Bronze</li>
+      <li>CVG_BuildPuppet_Jade</li>
+    </recipes>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>6000</WorkToBuild>
+      <Mass>25</Mass>
+      <Flammability>1</Flammability>
+    </statBases>
+    <size>(3,2)</size>
+    <costList>
+      <CVG_SpiritWood>120</CVG_SpiritWood>
+      <CVG_SpiritStone>15</CVG_SpiritStone>
+    </costList>
+    <researchPrerequisites>
+      <li>CVG_Research_Puppetry</li>
+    </researchPrerequisites>
+    <building>
+      <barDrawData>
+        <north>
+          <preRotationOffset>(-1.06, 0.91)</preRotationOffset>
+          <size>(0.7, 0.13)</size>
+        </north>
+        <south>
+          <preRotationOffset>(-1.06, 0.82)</preRotationOffset>
+          <size>(0.7, 0.13)</size>
+        </south>
+        <east>
+          <preRotationOffset>(1.06, -0.97)</preRotationOffset>
+          <size>(0.7, 0.13)</size>
+        </east>
+        <west>
+          <preRotationOffset>(-1.06, -0.97)</preRotationOffset>
+          <size>(0.7, 0.13)</size>
+        </west>
+      </barDrawData>
+      <formingGraphicData>
+        <texPath>Things/Pawn/CVG/Puppet/Wood_south</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>(1,1)</drawSize>
+      </formingGraphicData>
+      <formingMechPerRotationOffset>
+        <li>(0, 0, 0)</li>
+        <li>(0, 0, 0)</li>
+        <li>(0, 0, 0)</li>
+        <li>(0, 0, 0)</li>
+      </formingMechPerRotationOffset>
+      <mechGestatorCylinderGraphic>
+        <texPath>Things/Building/CVG/Puppet/Empty</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(5.6,4)</drawSize>
+        <shaderType>Transparent</shaderType>
+      </mechGestatorCylinderGraphic>
+      <mechGestatorTopGraphic>
+        <texPath>Things/Building/CVG/Puppet/Empty</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(5.6,4)</drawSize>
+      </mechGestatorTopGraphic>
+      <gestatorFormingMote>
+        <north>MechGestatorForming_North</north>
+        <east>MechGestatorForming_East</east>
+        <west>MechGestatorForming_East</west>
+        <south>MechGestatorForming_South</south>
+      </gestatorFormingMote>
+      <gestatorCycleCompleteMote>
+        <north>MechGestatorCycleComplete_North</north>
+        <east>MechGestatorCycleComplete_East</east>
+        <west>MechGestatorCycleComplete_East</west>
+        <south>MechGestatorCycleComplete_South</south>
+      </gestatorCycleCompleteMote>
+      <gestatorFormedMote>
+        <north>MechGestatorFormed_North</north>
+        <east>MechGestatorFormed_East</east>
+        <west>MechGestatorFormed_East</west>
+        <south>MechGestatorFormed_South</south>
+      </gestatorFormedMote>
+    </building>
+    <comps>
+      <!-- The vanilla gestator code needs a power comp; its on/off state is decided by the qi network (CompQiConsumer), not by electricity. -->
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>0</basePowerConsumption>
+        <idlePowerDraw>0</idlePowerDraw>
+        <showPowerNeededIfOff>false</showPowerNeededIfOff>
+      </li>
+      <li Class="Convergence.CompProperties_QiNode">
+        <compClass>Convergence.CompQiConsumer</compClass>
+        <consumeDay>40</consumeDay>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMechCharger">
+    <defName>CVG_SpiritCharger</defName>
+    <label>spirit charger</label>
+    <description>Puppets do not eat, but they thirst: the Valley's masters left them to drink in basins of ground spirit stones at night, like horses at a trough. This stone basin drinks from the qi network instead of electricity and, unlike a mech recharger, leaves no toxic waste behind; puppets also draw qi from their master when they run low.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Puppet/SpiritCharger</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(2.9, 0.5, 0.9)</volume>
+      </shadowData>
+    </graphicData>
+    <interactionCellOffset>(0,0,1)</interactionCellOffset>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Biotech</designationCategory>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Mass>25</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <size>(3,1)</size>
+    <building>
+      <requiredMechWeightClasses>
+        <li>Light</li>
+      </requiredMechWeightClasses>
+      <barDrawData>
+        <north>
+          <preRotationOffset>(-0.01598358,0.0255661)</preRotationOffset>
+          <size>(0.5505219,0.1139069)</size>
+        </north>
+        <south>
+          <preRotationOffset>(0.006927488,-0.02323151)</preRotationOffset>
+          <size>(0.5479813,0.1345978)</size>
+        </south>
+        <east>
+          <preRotationOffset>(0.1157379,-0.006530767)</preRotationOffset>
+          <size>(0.4481201,0.1160278)</size>
+        </east>
+        <west>
+          <preRotationOffset>(-0.1114426,-0.005119322)</preRotationOffset>
+          <size>(0.4646759,0.1281815)</size>
+        </west>
+      </barDrawData>
+    </building>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>80</costStuffCount>
+    <costList>
+      <CVG_SpiritStone>10</CVG_SpiritStone>
+    </costList>
+    <researchPrerequisites>
+      <li>CVG_Research_Puppetry</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_ThingContainer">
+        <compClass>CompThingContainer</compClass>
+        <stackLimit>5</stackLimit>
+        <drawContainedThing>false</drawContainedThing>
+        <dropEffecterDef>MechChargerWasteRemoved</dropEffecterDef>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>0</basePowerConsumption>
+        <idlePowerDraw>0</idlePowerDraw>
+        <showPowerNeededIfOff>false</showPowerNeededIfOff>
+      </li>
+      <li Class="Convergence.CompProperties_QiNode">
+        <compClass>Convergence.CompQiConsumer</compClass>
+        <consumeDay>30</consumeDay>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

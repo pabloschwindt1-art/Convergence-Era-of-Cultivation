@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_ForgeSpeed.label>velocidad de forja</CVG_ForgeSpeed.label>
+  <CVG_ForgeSpeed.description>Multiplicador de la velocidad de trabajo en forjas (herrerías, bancos de fabricación, forjas espirituales).</CVG_ForgeSpeed.description>
+  <CVG_ForgeQuality.label>calidad de forja</CVG_ForgeQuality.label>
+  <CVG_ForgeQuality.description>Niveles de calidad que se suman a todo lo hecho en una forja. La parte decimal es la probabilidad de un nivel más. Hasta obra maestra; legendario sigue necesitando inspiración.</CVG_ForgeQuality.description>
+  <CVG_ForgeQuality.formatString>+{0} niveles</CVG_ForgeQuality.formatString>
+</LanguageData>

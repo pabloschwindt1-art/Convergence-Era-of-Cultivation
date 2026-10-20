@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    PROVISIONAL until the alchemy module: cheap vanilla recipe at the crafting spot (no electricity, no research).
+    The alchemy module will replace the recipe (alchemy furnace, spirit herbs, pill quality).
+  -->
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>CVG_FoundationPill</defName>
+    <label>foundation pill</label>
+    <description>A pill refined from medicinal herbs and silver dust. Taken before a breakthrough retreat, it steadies the qi while the foundation condenses, raising the chance of reaching Foundation Establishment. A cultivator attempting that breakthrough takes one on their own if there is one at hand.\n\nIts effect lasts one day and is spent in the breakthrough attempt.</description>
+    <descriptionHyperlinks>
+      <HediffDef>CVG_FoundationPillAbsorbed</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/CVG_FoundationPill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <MarketValue>45</MarketValue>
+      <Mass>0.01</Mass>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_FoundationPillAbsorbed</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <displayPriority>2200</displayPriority>
+      <bulkRecipeCount>0</bulkRecipeCount>
+    </recipeMaker>
+    <costList>
+      <MedicineHerbal>2</MedicineHerbal>
+      <Silver>15</Silver>
+    </costList>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>CVG_FoundationPillAbsorbed</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>foundation pill absorbed</label>
+    <description>The medicinal power of a foundation pill circulates through the meridians, ready to steady the next breakthrough. It is spent in the breakthrough attempt.</description>
+    <defaultLabelColor>(0.55, 0.8, 1)</defaultLabelColor>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>60000~60000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <CVG_BreakthroughChance>0.3</CVG_BreakthroughChance>
+        </statOffsets>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BreakthroughAid" />
+    </modExtensions>
+  </HediffDef>
+
+  <!-- Left by a failed breakthrough or tribulation. It fades on its own in about two days. -->
+  <HediffDef>
+    <defName>CVG_QiDeviation</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>qi deviation</label>
+    <description>The breakthrough failed and the qi ran wild through the meridians. Until it settles, the cultivator is dazed and in pain, and cultivates poorly.</description>
+    <defaultLabelColor>(0.9, 0.5, 0.4)</defaultLabelColor>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>90000~150000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <painOffset>0.15</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <CVG_CultivationSpeed>0.5</CVG_CultivationSpeed>
+          <CVG_QiRegen>0.5</CVG_QiRegen>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

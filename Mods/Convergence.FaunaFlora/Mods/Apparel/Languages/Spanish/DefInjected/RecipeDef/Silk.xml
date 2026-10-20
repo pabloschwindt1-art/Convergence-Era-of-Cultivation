@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_SpinSpiritSilk.label>hilar seda espiritual</CVG_SpinSpiritSilk.label>
+  <CVG_SpinSpiritSilk.description>Hila capullos de araña de jade en seda espiritual.</CVG_SpinSpiritSilk.description>
+  <CVG_SpinSpiritSilk.jobString>Hilando seda espiritual.</CVG_SpinSpiritSilk.jobString>
+
+  <CVG_RaiseSilkworms.label>criar gusanos de seda</CVG_RaiseSilkworms.label>
+  <CVG_RaiseSilkworms.description>Alimentar con hojas de morera una bandeja de gusanos de seda de la secta hasta que hilen seda espiritual.</CVG_RaiseSilkworms.description>
+  <CVG_RaiseSilkworms.jobString>Criando gusanos de seda.</CVG_RaiseSilkworms.jobString>
+</LanguageData>

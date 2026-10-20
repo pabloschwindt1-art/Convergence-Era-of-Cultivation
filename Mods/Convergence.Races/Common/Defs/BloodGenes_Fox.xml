@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_FoxFire</defName>
+    <label>fox fire</label>
+    <description>After the Convergence, the fox can throw small fox-fires (ability). Higher tiers aim better.</description>
+    <bloodline>CVG_Bloodline_Fox</bloodline>
+    <order>17</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_FoxFire_II</defName>
+    <label>fox fire II</label>
+    <description>After the Convergence, the fox can throw small fox-fires (ability). Higher tiers aim better.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_FoxFire</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>172</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_FoxFire</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_FoxFire</group>
+        <tier>2</tier>
+        <awakenedAbilities>
+          <li>CVG_Ability_FoxFire</li>
+        </awakenedAbilities>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_FoxFire_III</defName>
+    <label>fox fire III</label>
+    <description>After the Convergence, the fox can throw small fox-fires (ability). Higher tiers aim better.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_FoxFire</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>173</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_FoxFire</li>
+    </exclusionTags>
+    <statOffsets>
+      <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+    </statOffsets>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_FoxFire</group>
+        <tier>3</tier>
+        <awakenedAbilities>
+          <li>CVG_Ability_FoxFire</li>
+        </awakenedAbilities>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_FoxFire_IV</defName>
+    <label>fox fire IV</label>
+    <description>After the Convergence, the fox can throw small fox-fires (ability). Higher tiers aim better.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_FoxFire</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>174</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_FoxFire</li>
+    </exclusionTags>
+    <statOffsets>
+      <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+    </statOffsets>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_FoxFire</group>
+        <tier>4</tier>
+        <awakenedAbilities>
+          <li>CVG_Ability_FoxFire</li>
+        </awakenedAbilities>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_IllusionVeil</defName>
+    <label>illusion veil</label>
+    <description>A shimmer of illusion: blows tend to miss the fox.</description>
+    <bloodline>CVG_Bloodline_Fox</bloodline>
+    <order>18</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_IllusionVeil_I</defName>
+    <label>illusion veil I</label>
+    <description>A shimmer of illusion: blows tend to miss the fox. Fox spirits taught the first illusion arts, and swore no mortal would ever see them clearly.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_IllusionVeil</iconPath>
+    <iconColor>(0.7, 0.7, 0.7)</iconColor>
+    <displayOrderInCategory>181</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_IllusionVeil</li>
+    </exclusionTags>
+    <statOffsets>
+      <MeleeDodgeChance>3</MeleeDodgeChance>
+    </statOffsets>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_IllusionVeil</group>
+        <tier>1</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_IllusionVeil_II</defName>
+    <label>illusion veil II</label>
+    <description>A shimmer of illusion: blows tend to miss the fox. Fox spirits taught the first illusion arts, and swore no mortal would ever see them clearly.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_IllusionVeil</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>182</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_IllusionVeil</li>
+    </exclusionTags>
+    <statOffsets>
+      <MeleeDodgeChance>6</MeleeDodgeChance>
+    </statOffsets>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_IllusionVeil</group>
+        <tier>2</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_IllusionVeil_III</defName>
+    <label>illusion veil III</label>
+    <description>A shimmer of illusion: blows tend to miss the fox. Fox spirits taught the first illusion arts, and swore no mortal would ever see them clearly.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_IllusionVeil</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>183</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_IllusionVeil</li>
+    </exclusionTags>
+    <statOffsets>
+      <MeleeDodgeChance>9</MeleeDodgeChance>
+    </statOffsets>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_IllusionVeil</group>
+        <tier>3</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_IllusionVeil_IV</defName>
+    <label>illusion veil IV</label>
+    <description>A shimmer of illusion: blows tend to miss the fox. Fox spirits taught the first illusion arts, and swore no mortal would ever see them clearly.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_IllusionVeil</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>184</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_IllusionVeil</li>
+    </exclusionTags>
+    <statOffsets>
+      <MeleeDodgeChance>12</MeleeDodgeChance>
+    </statOffsets>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_IllusionVeil</group>
+        <tier>4</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_NineLives</defName>
+    <label>nine tails, nine lives</label>
+    <description>After the Convergence, each tail is a life: when the fox would die, it survives, healed, and spends one (1 / 3 / 6 / 9 lives).</description>
+    <bloodline>CVG_Bloodline_Fox</bloodline>
+    <order>19</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_NineLives_I</defName>
+    <label>nine tails, nine lives I</label>
+    <description>After the Convergence, each tail is a life: when the fox would die, it survives, healed, and spends one (1 / 3 / 6 / 9 lives). Old tales say a fox grows a new tail every thousand years, and pays for each one with a life it refuses to give up.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_NineLives</iconPath>
+    <iconColor>(0.7, 0.7, 0.7)</iconColor>
+    <displayOrderInCategory>191</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_NineLives</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_NineLives</group>
+        <tier>1</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_ExtraLives">
+        <lives>1</lives>
+        <messageKey>CVG_NineLives_Used</messageKey>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_NineLives_II</defName>
+    <label>nine tails, nine lives II</label>
+    <description>After the Convergence, each tail is a life: when the fox would die, it survives, healed, and spends one (1 / 3 / 6 / 9 lives). Old tales say a fox grows a new tail every thousand years, and pays for each one with a life it refuses to give up.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_NineLives</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>192</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_NineLives</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_NineLives</group>
+        <tier>2</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_ExtraLives">
+        <lives>3</lives>
+        <messageKey>CVG_NineLives_Used</messageKey>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_NineLives_III</defName>
+    <label>nine tails, nine lives III</label>
+    <description>After the Convergence, each tail is a life: when the fox would die, it survives, healed, and spends one (1 / 3 / 6 / 9 lives). Old tales say a fox grows a new tail every thousand years, and pays for each one with a life it refuses to give up.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_NineLives</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>193</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_NineLives</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_NineLives</group>
+        <tier>3</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_ExtraLives">
+        <lives>6</lives>
+        <messageKey>CVG_NineLives_Used</messageKey>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_NineLives_IV</defName>
+    <label>nine tails, nine lives IV</label>
+    <description>After the Convergence, each tail is a life: when the fox would die, it survives, healed, and spends one (1 / 3 / 6 / 9 lives). Old tales say a fox grows a new tail every thousand years, and pays for each one with a life it refuses to give up.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_NineLives</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>194</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_NineLives</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_NineLives</group>
+        <tier>4</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_ExtraLives">
+        <lives>9</lives>
+        <messageKey>CVG_NineLives_Used</messageKey>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <AbilityDef ParentName="CVG_InnateAbilityBase">
+    <defName>CVG_Ability_FoxFire</defName>
+    <label>fox fire</label>
+    <description>Flick a small blue-white fox-fire at a target. It burns and sets things alight. Costs qi if the user cultivates.</description>
+    <iconPath>UI/Abilities/FireSpew</iconPath>
+    <cooldownTicksRange>2500</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>15.9</range>
+      <warmupTime>0.4</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityQiCost">
+        <qiCost>15</qiCost>
+      </li>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>CVG_Projectile_FoxFire</projectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>CVG_Projectile_FoxFire</defName>
+    <label>fox fire</label>
+    <graphicData>
+      <texPath>Things/Projectile/Spark</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(160, 210, 255)</color>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Flame</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <speed>45</speed>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+    </projectile>
+  </ThingDef>
+
+</Defs>

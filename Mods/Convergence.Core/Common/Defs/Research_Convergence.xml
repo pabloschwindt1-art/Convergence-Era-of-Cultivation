@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchTabDef>
+    <defName>CVG_Cultivation</defName>
+    <label>cultivation</label>
+  </ResearchTabDef>
+
+  <!-- Modo "Investigación": completarla dispara la Convergencia. Sin requisitos tecnológicos (sirve en modo clásico). -->
+  <ResearchProjectDef>
+    <defName>CVG_SpiritualAnomalyStudy</defName>
+    <label>spiritual anomaly study</label>
+    <description>Strange lights in the sky, animals restless at night, a stone that hums when touched. Study the anomaly and find out what is coming. Completing this project triggers the Convergence if it has not happened yet.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>CVG_Cultivation</tab>
+    <researchViewX>0</researchViewX>
+    <researchViewY>0</researchViewY>
+    <researchMods>
+      <li Class="Convergence.ResearchMod_TriggerConvergence" />
+    </researchMods>
+  </ResearchProjectDef>
+</Defs>

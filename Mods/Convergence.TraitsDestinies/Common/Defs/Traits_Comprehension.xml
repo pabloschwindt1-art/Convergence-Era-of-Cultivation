@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Comprehension: no trait = normal. Late bloomer / ephemeral genius scale cultivation speed by realm (Core curve). -->
+
+  <TraitDef>
+    <defName>CVG_Comprehension</defName>
+    <commonality>0.3</commonality>
+    <exclusionTags>
+      <li>CVG_Comprehension</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <degree>-1</degree>
+        <label>dull comprehension</label>
+        <description>The Dao reaches {PAWN_nameDef} slowly: cultivation, study and techniques come hard. Yet the Silent Lotus tells of a slow-witted gardener who became abbot after watching a single leaf fall. It improves with sudden enlightenments.</description>
+        <commonality>1</commonality>
+        <statFactors>
+          <CVG_CultivationSpeed>0.8</CVG_CultivationSpeed>
+          <GlobalLearningFactor>0.9</GlobalLearningFactor>
+          <CVG_TechniqueCost>1.1</CVG_TechniqueCost>
+        </statFactors>
+        <skillGains>
+          <Intellectual>-2</Intellectual>
+        </skillGains>
+      </li>
+      <li>
+        <degree>1</degree>
+        <label>sharp comprehension</label>
+        <description>{PAWN_nameDef} grasps the Dao quickly: faster cultivation and cheaper techniques. Azure Peak recruiters show children a single sword form; those who repeat it that same night are the ones they look for. It improves further with sudden enlightenments.</description>
+        <commonality>0.6</commonality>
+        <statFactors>
+          <CVG_CultivationSpeed>1.25</CVG_CultivationSpeed>
+          <GlobalLearningFactor>1.1</GlobalLearningFactor>
+          <CVG_TechniqueCost>0.95</CVG_TechniqueCost>
+        </statFactors>
+        <skillGains>
+          <Intellectual>2</Intellectual>
+        </skillGains>
+      </li>
+      <li>
+        <degree>2</degree>
+        <label>prodigy</label>
+        <description>A prodigy of the Dao, seen once a generation: cultivation, learning and techniques come with frightening ease. Every sect of Jiuxiao would go to war for such a disciple, and more than one has.</description>
+        <commonality>0.1</commonality>
+        <statFactors>
+          <CVG_CultivationSpeed>1.6</CVG_CultivationSpeed>
+          <GlobalLearningFactor>1.25</GlobalLearningFactor>
+          <CVG_TechniqueCost>0.85</CVG_TechniqueCost>
+        </statFactors>
+        <skillGains>
+          <Intellectual>4</Intellectual>
+        </skillGains>
+      </li>
+    </degreeDatas>
+      <modExtensions>
+      <li Class="Convergence.DefModExtension_TraitConflicts">
+        <conflicts>
+          <li><ownDegree>2</ownDegree><trait>SlowLearner</trait></li>
+          <li><ownDegree>1</ownDegree><trait>SlowLearner</trait></li>
+          <li><ownDegree>-1</ownDegree><trait>FastLearner</trait></li>
+          <li><ownDegree>-1</ownDegree><trait>TooSmart</trait></li>
+        </conflicts>
+      </li>
+      <li Class="Convergence.DefModExtension_TraitProgression">
+        <counter>Enlightenment</counter>
+        <steps>
+          <li>
+            <degree>1</degree>
+            <threshold>2</threshold>
+          </li>
+          <li>
+            <degree>2</degree>
+            <threshold>5</threshold>
+          </li>
+        </steps>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_LateBloomer</defName>
+    <commonality>0.04</commonality>
+    <exclusionTags>
+      <li>CVG_Comprehension</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>late bloomer</label>
+        <description>Great vessels take long to fill: slow in the first realms, faster and faster in the high ones. The proverb is carved over the gate of the Ancient Dragon Clan, who count their youth in centuries.</description>
+      </li>
+    </degreeDatas>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RealmCultivationCurve">
+        <curve>
+          <points>
+            <li>(1, 0.8)</li>
+            <li>(2, 1.0)</li>
+            <li>(3, 1.3)</li>
+            <li>(4, 1.6)</li>
+            <li>(6, 2.0)</li>
+          </points>
+        </curve>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_EphemeralGenius</defName>
+    <commonality>0.04</commonality>
+    <exclusionTags>
+      <li>CVG_Comprehension</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>ephemeral genius</label>
+        <description>Blinding speed in the first realms; the higher realms stall. Rogue cultivators call them fireworks: everyone remembers the flash, nobody remembers where they fell.</description>
+      </li>
+    </degreeDatas>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RealmCultivationCurve">
+        <curve>
+          <points>
+            <li>(1, 1.6)</li>
+            <li>(2, 1.3)</li>
+            <li>(3, 0.9)</li>
+            <li>(4, 0.7)</li>
+            <li>(6, 0.6)</li>
+          </points>
+        </curve>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+</Defs>

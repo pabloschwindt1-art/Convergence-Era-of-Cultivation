@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Recreation of the soul (docs/modulos/MOBILIARIO.md §2): vanilla joy system. The go board plays like the chess table
+    (Gaming_Cerebral, two players, intellectual); the calligraphy desk is high culture (HighCulture, artistic).
+    Both give a little Dao comprehension while used (CompDaoStudy). Provisional art: vanilla chess table / game of Ur,
+    tinted. Own art: Things/Building/CVG/GoBoard, Things/Building/CVG/CalligraphyDesk.
+  -->
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>CVG_GoBoard</defName>
+    <label>go board</label>
+    <description>A board of nineteen by nineteen lines and two bowls of stones (围棋, weiqi). Cultivators say a game of go is a battle of the Dao in miniature. Fun for a few hours, it trains intellectual skills and gives a little Dao comprehension.\n\nThis building requires adjacent chairs or stools to use.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/GoBoard</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <shadowData>
+        <volume>(0.65, 0.25, 0.6)</volume>
+        <offset>(0, 0, -0.15)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <fillPercent>0.40</fillPercent>
+    <tickerType>Rare</tickerType>
+    <building>
+      <joyKind>Gaming_Cerebral</joyKind>
+      <paintable>true</paintable>
+    </building>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>6000</WorkToBuild>
+      <Mass>5</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>4</Beauty>
+      <JoyGainFactor>1</JoyGainFactor>
+    </statBases>
+    <stuffCategories>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>60</costStuffCount>
+    <pathCost>30</pathCost>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Joy</designationCategory>
+    <comps>
+      <li Class="Convergence.CompProperties_DaoStudy">
+        <comprehensionPerHour>0.05</comprehensionPerHour>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>CVG_CalligraphyDesk</defName>
+    <defaultPlacingRot>South</defaultPlacingRot><!-- el frente del arte es la vista sur: el trabajador queda del lado del frente -->
+    <thingClass>Building_WorkTable</thingClass>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <label>calligraphy desk</label>
+    <description>A low desk with brushes, an ink stone and rice paper. Writing the characters of the Dao calms the heart: a refined pastime that trains artistic skills and gives a little Dao comprehension. Calligraphy scrolls and ink paintings for the walls are made here.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/CalligraphyDesk</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <shadowData>
+        <volume>(0.65, 0.25, 0.6)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>true</rotatable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <fillPercent>0.35</fillPercent>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,1)</interactionCellOffset>
+    <tickerType>Rare</tickerType>
+    <building>
+      <joyKind>HighCulture</joyKind>
+    </building>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Mass>6</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>3</Beauty>
+      <JoyGainFactor>1</JoyGainFactor>
+    </statBases>
+    <stuffCategories>
+      <li>Woody</li>
+    </stuffCategories>
+    <costStuffCount>40</costStuffCount>
+    <costList>
+      <Cloth>10</Cloth>
+    </costList>
+    <pathCost>30</pathCost>
+    <passability>PassThroughOnly</passability>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <designationCategory>Joy</designationCategory>
+    <comps>
+      <li Class="Convergence.CompProperties_DaoStudy">
+        <comprehensionPerHour>0.05</comprehensionPerHour>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <JobDef>
+    <defName>CVG_Play_Go</defName>
+    <driverClass>JobDriver_SitFacingBuilding</driverClass>
+    <reportString>playing go.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>2</joyMaxParticipants>
+    <joySkill>Intellectual</joySkill>
+    <joyXpPerTick>0.002</joyXpPerTick>
+    <joyKind>Gaming_Cerebral</joyKind>
+    <taleOnCompletion>PlayedGame</taleOnCompletion>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>CVG_PracticeCalligraphy</defName>
+    <driverClass>JobDriver_WatchBuilding</driverClass>
+    <reportString>practicing calligraphy.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>1</joyMaxParticipants>
+    <joySkill>Artistic</joySkill>
+    <joyXpPerTick>0.003</joyXpPerTick>
+    <joyKind>HighCulture</joyKind>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JoyGiverDef>
+    <defName>CVG_Play_Go</defName>
+    <giverClass>JoyGiver_InteractBuildingSitAdjacent</giverClass>
+    <baseChance>2</baseChance>
+    <thingDefs>
+      <li>CVG_GoBoard</li>
+    </thingDefs>
+    <jobDef>CVG_Play_Go</jobDef>
+    <joyKind>Gaming_Cerebral</joyKind>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+
+  <JoyGiverDef>
+    <defName>CVG_PracticeCalligraphy</defName>
+    <giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
+    <baseChance>2</baseChance>
+    <thingDefs>
+      <li>CVG_CalligraphyDesk</li>
+    </thingDefs>
+    <jobDef>CVG_PracticeCalligraphy</jobDef>
+    <joyKind>HighCulture</joyKind>
+    <requiredCapacities>
+      <li>Manipulation</li>
+      <li>Sight</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+</Defs>

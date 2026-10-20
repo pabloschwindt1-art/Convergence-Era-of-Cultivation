@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Hediff_QiRefining.label>Refinamiento de Qi</CVG_Hediff_QiRefining.label>
+  <CVG_Hediff_QiRefining.description>Este cultivador está en el reino de Refinamiento de Qi: el qi recorre los meridianos abiertos y fortalece poco a poco el cuerpo.</CVG_Hediff_QiRefining.description>
+  <CVG_Hediff_QiRefining.stages.0.label>etapa 1</CVG_Hediff_QiRefining.stages.0.label>
+  <CVG_Hediff_QiRefining.stages.1.label>etapa 2</CVG_Hediff_QiRefining.stages.1.label>
+  <CVG_Hediff_QiRefining.stages.2.label>etapa 3</CVG_Hediff_QiRefining.stages.2.label>
+  <CVG_Hediff_QiRefining.stages.3.label>etapa 4</CVG_Hediff_QiRefining.stages.3.label>
+  <CVG_Hediff_Foundation.label>Establecimiento de Fundación</CVG_Hediff_Foundation.label>
+  <CVG_Hediff_Foundation.description>Este cultivador ha establecido su fundación: un estanque de qi líquido en el dantian. El cuerpo es mucho más resistente y rápido, sana deprisa y envejece despacio.</CVG_Hediff_Foundation.description>
+  <CVG_Hediff_Foundation.stages.0.label>etapa 1</CVG_Hediff_Foundation.stages.0.label>
+  <CVG_Hediff_Foundation.stages.1.label>etapa 2</CVG_Hediff_Foundation.stages.1.label>
+  <CVG_Hediff_Foundation.stages.2.label>etapa 3</CVG_Hediff_Foundation.stages.2.label>
+  <CVG_Hediff_Foundation.stages.3.label>etapa 4</CVG_Hediff_Foundation.stages.3.label>
+  <CVG_Hediff_GoldenCore.label>Núcleo Dorado</CVG_Hediff_GoldenCore.label>
+  <CVG_Hediff_GoldenCore.description>Este cultivador ha condensado un núcleo dorado. Su qi es inmenso, el cuerpo se mueve como el viento, apenas siente los golpes y puede vivir siglos.</CVG_Hediff_GoldenCore.description>
+  <CVG_Hediff_GoldenCore.stages.0.label>etapa 1</CVG_Hediff_GoldenCore.stages.0.label>
+  <CVG_Hediff_GoldenCore.stages.1.label>etapa 2</CVG_Hediff_GoldenCore.stages.1.label>
+  <CVG_Hediff_GoldenCore.stages.2.label>etapa 3</CVG_Hediff_GoldenCore.stages.2.label>
+  <CVG_Hediff_GoldenCore.stages.3.label>etapa 4</CVG_Hediff_GoldenCore.stages.3.label>
+</LanguageData>

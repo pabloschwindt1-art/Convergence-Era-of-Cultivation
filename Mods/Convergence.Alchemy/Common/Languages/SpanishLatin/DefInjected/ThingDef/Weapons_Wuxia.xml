@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Jian.label>jian</CVG_Jian.label>
+  <CVG_Jian.description>La espada recta de doble filo, llamada el caballero de las armas. Todas las sectas de espada de Jiuxiao empezaron con un jian mortal y un discípulo que practicó los mismos nueve cortes durante diez años; el Pico Azur todavía le entrega uno a cada discípulo nuevo antes de cualquier hoja espiritual. Forjado en acero espiritual o plata lunar ya muerde el qi de los cultivadores.</CVG_Jian.description>
+  <CVG_Jian.tools.0.label>empuñadura</CVG_Jian.tools.0.label>
+  <CVG_Jian.tools.1.label>punta</CVG_Jian.tools.1.label>
+  <CVG_Jian.tools.2.label>filo</CVG_Jian.tools.2.label>
+  <CVG_Dao.label>dao</CVG_Dao.label>
+  <CVG_Dao.description>El sable ancho de un solo filo, el general de las armas. Donde el jian pide diez años, el dao pide uno: milicianos, guardias de caravana y los discípulos externos de la Calamidad de Hierro lo aprendieron primero. Dicen en las laderas de Wudang: el sable es como un tigre feroz, la espada como un fénix en vuelo.</CVG_Dao.description>
+  <CVG_Dao.tools.0.label>empuñadura</CVG_Dao.tools.0.label>
+  <CVG_Dao.tools.1.label>filo</CVG_Dao.tools.1.label>
+  <CVG_Bishou.label>daga bishou</CVG_Bishou.label>
+  <CVG_Bishou.description>Una daga corta de empuñadura en forma de cuchara, tan pequeña que cabe en una manga. Los asesinos del pabellón de la Luna Oculta no llevaban otra cosa, y se jactaban de que una hoja de un cun es un cun más peligrosa. Rápida en el cuerpo a cuerpo.</CVG_Bishou.description>
+  <CVG_Bishou.tools.0.label>empuñadura</CVG_Bishou.tools.0.label>
+  <CVG_Bishou.tools.1.label>hoja</CVG_Bishou.tools.1.label>
+  <CVG_Bishou.tools.2.label>punta</CVG_Bishou.tools.2.label>
+  <CVG_Zhanmadao.label>zhanmadao</CVG_Zhanmadao.label>
+  <CVG_Zhanmadao.description>El sable que corta caballos: una hoja a dos manos tan larga como un hombre, hecha para segar las patas de la caballería a la carga. La infantería Song que la llevó primero era mortal, igual que los primeros cultivadores que descubrieron que también corta la piel de hierro de las bestias despiertas. Lenta y pesada, pero cada golpe decide.</CVG_Zhanmadao.description>
+  <CVG_Zhanmadao.tools.0.label>empuñadura</CVG_Zhanmadao.tools.0.label>
+  <CVG_Zhanmadao.tools.1.label>filo</CVG_Zhanmadao.tools.1.label>
+  <CVG_Guandao.label>guandao</CVG_Guandao.label>
+  <CVG_Guandao.description>Una pesada hoja en media luna sobre un asta larga, llamada así por Guan Yu, el general que se volvió dios de la guerra y de la lealtad. Las sectas de las llanuras guardan una en el altar de su campo de entrenamiento, y se espera que el guardián de la puerta la empuñe. Barre y estoca a una distancia que una espada no alcanza.</CVG_Guandao.description>
+  <CVG_Guandao.tools.0.label>asta</CVG_Guandao.tools.0.label>
+  <CVG_Guandao.tools.1.label>punta</CVG_Guandao.tools.1.label>
+  <CVG_Guandao.tools.2.label>hoja</CVG_Guandao.tools.2.label>
+  <CVG_Staff.label>bastón gun</CVG_Staff.label>
+  <CVG_Staff.description>Un bastón liso tan alto como quien lo lleva, la primera arma que se enseña en todo monasterio porque puede detener a un hombre sin matarlo. Los monjes del linaje del Qilin dicen que fue el arma del Rey Mono antes de robar el Ruyi Jingu Bang. De bambú es ligero; de duraznero, asusta a los jiangshi.</CVG_Staff.description>
+  <CVG_Staff.tools.0.label>punta</CVG_Staff.tools.0.label>
+  <CVG_Staff.tools.1.label>asta</CVG_Staff.tools.1.label>
+  <CVG_IronFan.label>abanico de hierro</CVG_IronFan.label>
+  <CVG_IronFan.description>Un abanico plegable de varillas de acero forjado y bordes afilados. Letrados y damas del jianghu los llevaban donde las espadas estaban prohibidas; la Princesa del Abanico de Hierro de la leyenda apagaba con el suyo los fuegos de las Montañas Llameantes. Detiene golpes tan bien como corta, y hace más difícil golpear a quien lo lleva.</CVG_IronFan.description>
+  <CVG_IronFan.tools.0.label>varillas</CVG_IronFan.tools.0.label>
+  <CVG_IronFan.tools.1.label>filo</CVG_IronFan.tools.1.label>
+  <CVG_StraightBow.label>arco recto de bambú</CVG_StraightBow.label>
+  <CVG_StraightBow.description>Un arco simple tallado de una sola vara, el arco de caza de toda aldea de montaña. Las aldeas del Mar de Bambú los hacen de bambú partido a lo largo de la fibra, y dicen que un arco que nunca disparó a un hombre es el mejor para llevar a los bosques espirituales. Se hace de cualquier madera.</CVG_StraightBow.description>
+  <CVG_StraightBow.tools.0.label>pala</CVG_StraightBow.tools.0.label>
+  <CVG_Arrow_Straight.label>flecha de arco recto</CVG_Arrow_Straight.label>
+  <CVG_HornBow.label>arco compuesto de cuerno de bestia</CVG_HornBow.label>
+  <CVG_HornBow.description>Un arco compuesto de cuerno, madera y tendón pegados en capas y curados durante un año, el arma de los arqueros a caballo de la estepa del norte. Desde la Convergencia los arqueros intercalan tiras de cuerno de una bestia despierta alrededor de su núcleo, y el arco conserva un rastro del qi de la bestia. Grado espiritual 1.</CVG_HornBow.description>
+  <CVG_HornBow.tools.0.label>pala</CVG_HornBow.tools.0.label>
+  <CVG_Arrow_Horn.label>flecha de arco de cuerno</CVG_Arrow_Horn.label>
+  <CVG_RepeatingCrossbow.label>ballesta de repetición zhuge</CVG_RepeatingCrossbow.label>
+  <CVG_RepeatingCrossbow.description>Una ballesta con un cargador de diez virotes sobre la culata, que se arma y se dispara con una sola palanca: el invento que se atribuye al estratega Zhuge Liang. Débil a distancia pero mortífera en la puerta de una ciudad. Los maestros titiriteros copiaron su mecanismo para sus marionetas.</CVG_RepeatingCrossbow.description>
+  <CVG_RepeatingCrossbow.tools.0.label>culata</CVG_RepeatingCrossbow.tools.0.label>
+  <CVG_Bolt_Repeating.label>virote de ballesta de repetición</CVG_Bolt_Repeating.label>
+  <CVG_FlyingNeedles.label>agujas voladoras</CVG_FlyingNeedles.label>
+  <CVG_FlyingNeedles.description>Un estuche de agujas de acero que se lanzan con un giro de muñeca, el arma oculta del jianghu. Los sanadores del Valle del Qilin dicen que la técnica nació de la acupuntura: quien sabe dónde poner una aguja para curar sabe dónde ponerla para detener. Poco alcance, pero dos agujas a la vez y casi sin aviso.</CVG_FlyingNeedles.description>
+  <CVG_FlyingNeedles.tools.0.label>estuche</CVG_FlyingNeedles.tools.0.label>
+  <CVG_Needle_Flying.label>aguja voladora</CVG_Needle_Flying.label>
+</LanguageData>

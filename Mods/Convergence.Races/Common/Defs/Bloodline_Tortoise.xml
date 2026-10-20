@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Black tortoise bloodline. Design and values: docs/modulos/razas/TORTUGA.md -->
+
+  <Convergence.BloodlineDef>
+    <defName>CVG_Bloodline_Tortoise</defName>
+    <label>black tortoise</label>
+    <description>The blood of Xuanwu, the pillar of the north: a shell-hard body, endless patience and a very slow step.\n\nBest as: miner, builder and guardian. The wall that holds while others strike.</description>
+    <commonality>1.0</commonality>
+    <color>(0.45, 0.6, 0.5)</color>
+    <xenotypeIcon>Skull</xenotypeIcon>
+    <affinities>
+      <li>CVG_Element_Water</li>
+      <li>CVG_Element_Earth</li>
+    </affinities>
+    <purities>
+      <li>
+        <purity>CVG_Purity_Trace</purity>
+        <gene>CVG_Blood_Tortoise_Trace</gene>
+        <hediff>CVG_Bloodline_Tortoise</hediff>
+        <affinityCultivationFactor>1.05</affinityCultivationFactor>
+        <aspectGenes>
+          <li>CVG_Tortoise_Ridges</li>
+          <li>CVG_Tortoise_Eyes</li>
+        </aspectGenes>
+      </li>
+      <li>
+        <purity>CVG_Purity_Diluted</purity>
+        <gene>CVG_Blood_Tortoise_Diluted</gene>
+        <hediff>CVG_Bloodline_Tortoise</hediff>
+        <affinityCultivationFactor>1.1</affinityCultivationFactor>
+        <abilities>
+          <li>CVG_Ability_XuanwuShell</li>
+        </abilities>
+        <aspectGenes>
+          <li>CVG_Tortoise_Shell</li>
+          <li>CVG_Tortoise_Hair</li>
+          <li>CVG_Tortoise_Build</li>
+        </aspectGenes>
+      </li>
+      <li>
+        <purity>CVG_Purity_Pure</purity>
+        <gene>CVG_Blood_Tortoise_Pure</gene>
+        <passion>Minor</passion>
+        <xenotype>CVG_Xeno_Tortoise</xenotype>
+        <hediff>CVG_Bloodline_Tortoise</hediff>
+        <affinityCultivationFactor>1.2</affinityCultivationFactor>
+        <!-- TODO (M5 techniques): Guardian Serpent (automatic melee counterattack) -->
+        <aspectGenes>
+          <li>CVG_Tortoise_Ridges</li>
+        </aspectGenes>
+      </li>
+      <li>
+        <purity>CVG_Purity_Ancestral</purity>
+        <gene>CVG_Blood_Tortoise_Ancestral</gene>
+        <passion>Major</passion>
+        <xenotype>CVG_Xeno_Tortoise</xenotype>
+        <hediff>CVG_Bloodline_Tortoise</hediff>
+        <affinityCultivationFactor>1.35</affinityCultivationFactor>
+        <!-- TODO (M5 techniques): Immovable Mountain (anchored aura, allies take x0.7 damage) -->
+        <aspectGenes>
+          <li>CVG_Tortoise_ShellAncestral</li>
+        </aspectGenes>
+      </li>
+    </purities>
+  </Convergence.BloodlineDef>
+
+  <!-- Metabolism of the purity genes: total Trace -1, Diluted -2 (a flaw; beast vitality I/II costs -1 of it); Pure and Ancestral compensate the vanilla genes of the
+       bloodline xenotype (added on reaching Pure, -5 metabolism) so the total is 0 (Pure) and +1 (Ancestral). -->
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Tortoise_Trace</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+      <li><def>Delicate</def></li>
+      <li><def>Wimp</def></li>
+      <li><def>SpeedOffset</def><degree>1</degree></li>
+      <li><def>SpeedOffset</def><degree>2</degree></li>
+    </suppressedTraits>
+    <label>trace of black tortoise blood</label>
+    <description>The mountain's shadow runs in your blood. You do not hurry. Your ancestors lived in the shadow of a Fallen Pillar, a colossal shell that fell on the Rim and became a mountain, and its patience passed into them.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Earth</iconPath>
+    <iconColor>(0.7, 0.7, 0.7)</iconColor>
+    <displayOrderInCategory>40</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <aptitudes>
+      <Mining>1</Mining>
+      <Construction>1</Construction>
+      <Crafting>-2</Crafting>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Tortoise</bloodline>
+        <purity>CVG_Purity_Trace</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Tortoise_Diluted</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+      <li><def>Delicate</def></li>
+      <li><def>Wimp</def></li>
+      <li><def>SpeedOffset</def><degree>1</degree></li>
+      <li><def>SpeedOffset</def><degree>2</degree></li>
+    </suppressedTraits>
+    <label>diluted black tortoise blood</label>
+    <description>Your skin is thick and slow to wound. Your sleep is deeper than a lake. The xuanwu who served as Gate Wardens of the Rim's fortresses left this blood to families of captains, who are taught not to fight but to endure.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Earth</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>41</displayOrderInCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <aptitudes>
+      <Mining>2</Mining>
+      <Construction>2</Construction>
+      <Crafting>-2</Crafting>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Tortoise</bloodline>
+        <purity>CVG_Purity_Diluted</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Tortoise_Pure</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+      <li><def>Delicate</def></li>
+      <li><def>Wimp</def></li>
+      <li><def>SpeedOffset</def><degree>1</degree></li>
+      <li><def>SpeedOffset</def><degree>2</degree></li>
+    </suppressedTraits>
+    <label>pure black tortoise blood</label>
+    <description>The serpent coils within the shell. You do not strike first, and you are never struck down. Tortoise and serpent are one in Xuanwu, the Dark Warrior of the North, and the Northern Abyss would call its bearer a Pillar Guardian.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Earth</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>42</displayOrderInCategory>
+    <biostatCpx>3</biostatCpx>
+    <biostatMet>5</biostatMet>
+    <aptitudes>
+      <Mining>3</Mining>
+      <Construction>3</Construction>
+      <Crafting>-1</Crafting>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Tortoise</bloodline>
+        <purity>CVG_Purity_Pure</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Tortoise_Ancestral</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+      <li><def>Delicate</def></li>
+      <li><def>Wimp</def></li>
+      <li><def>SpeedOffset</def><degree>1</degree></li>
+      <li><def>SpeedOffset</def><degree>2</degree></li>
+    </suppressedTraits>
+    <label>ancestral black tortoise blood</label>
+    <description>You are a pillar of the sky. The world has leaned on you for ten thousand years and has not yet broken you. Beiming Laozu held up a whole fragment of Jiuxiao during the Great Rupture, and they say he still sleeps there, waiting for the sky to crack again.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Earth</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>43</displayOrderInCategory>
+    <biostatCpx>4</biostatCpx>
+    <biostatMet>6</biostatMet>
+    <aptitudes>
+      <Mining>4</Mining>
+      <Construction>4</Construction>
+      <Crafting>-1</Crafting>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Tortoise</bloodline>
+        <purity>CVG_Purity_Ancestral</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Tortoise_Ridges</defName>
+    <label>shell ridges</label>
+    <description>Hard ridges on the face, like the rim of a shell. The children of the Northern Abyss carry a fist-sized stone around the neck, and the ridges are said to grow with each heavier one.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Tortoise_Ridges</iconPath>
+    <displayOrderInCategory>45</displayOrderInCategory>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <colorType>Skin</colorType>
+        <useRottenColor>true</useRottenColor>
+        <useSkinShader>true</useSkinShader>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/CVG_TortoiseRidges/TortoiseRidges</texPath>
+        <visibleFacing>
+          <li>East</li>
+          <li>South</li>
+          <li>West</li>
+          <li>North</li>
+        </visibleFacing>
+        <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+        <baseLayer>66</baseLayer>   <!-- sobre el pelo: si no, el flequillo las tapa -->
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Tortoise_Eyes</defName>
+    <label>deep dark eyes</label>
+    <description>Eyes dark as deep water, the color of Beiming, the Northern Deep where the xuanwu held up the floating islands. They blink slowly and miss nothing.</description>
+    <iconPath>UI/Icons/Genes/Gene_GrayEyes</iconPath>
+    <iconColor>(70, 80, 85)</iconColor>
+    <displayOrderInCategory>46</displayOrderInCategory>
+    <exclusionTags>
+      <li>EyeColor</li>
+    </exclusionTags>
+    <!-- Own art: Things/Pawn/Humanlike/CVG/Tortoise/Eyes (provisional: vanilla Biotech texture). See docs/modulos/razas/README.md. -->
+    <renderNodeProperties>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Male/GrayEyes_Male</texPath>
+        <texPathFemale>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Female/GrayEyes_Female</texPathFemale>
+        <color>(70, 80, 85)</color>
+        <anchorTag>RightEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.2</drawSize>
+        <side>Right</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+          </defaultData>
+        </drawData>
+      </li>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Male/GrayEyes_Male</texPath>
+        <texPathFemale>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Female/GrayEyes_Female</texPathFemale>
+        <color>(70, 80, 85)</color>
+        <anchorTag>LeftEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.2</drawSize>
+        <side>Left</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+            <flip>true</flip>
+          </defaultData>
+          <dataWest>
+            <flip>false</flip>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Tortoise_Shell</defName>
+    <label>shell skin</label>
+    <description>Thick slate-green skin with the faint pattern of a shell. It is the hide the tortoises who held up Jiuxiao's sky wore under their carapaces.</description>
+    <iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+    <iconColor>(100, 115, 100)</iconColor>
+    <displayOrderInCategory>47</displayOrderInCategory>
+    <exclusionTags>
+      <li>SkinColorOverride</li>
+    </exclusionTags>
+    <skinColorOverride>(100, 115, 100)</skinColorOverride>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Tortoise_ShellAncestral</defName>
+    <label>black shell skin</label>
+    <description>Skin dark and hard as basalt. When Nüwa mended the broken sky she used the legs of a giant tortoise as pillars; this is the skin of those pillars.</description>
+    <iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+    <iconColor>(62, 72, 66)</iconColor>
+    <displayOrderInCategory>48</displayOrderInCategory>
+    <exclusionTags>
+      <li>SkinColorOverride</li>
+    </exclusionTags>
+    <skinColorOverride>(62, 72, 66)</skinColorOverride>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Tortoise_Hair</defName>
+    <label>ink hair</label>
+    <description>Hair black as ink, the black of Xuanwu, lord of the north and of winter. It hardly ever grays, which feeds the legend that tortoises do not age.</description>
+    <iconPath>UI/Icons/Genes/Gene_HairColor</iconPath>
+    <iconColor>(30, 32, 36)</iconColor>
+    <displayOrderInCategory>49</displayOrderInCategory>
+    <hairColorOverride>(30, 32, 36)</hairColorOverride>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Tortoise_Build</defName>
+    <label>stout build</label>
+    <description>A broad, heavy body made to carry weight. 'If you cannot win, endure until the world changes', say the Gate Wardens, and this body was built for exactly that.</description>
+    <iconPath>UI/Icons/Genes/Gene_BodyHulk</iconPath>
+    <displayOrderInCategory>50</displayOrderInCategory>
+    <exclusionTags>
+      <li>BodyType</li>
+    </exclusionTags>
+    <bodyType>Hulk</bodyType>
+  </GeneDef>
+
+  <HediffDef ParentName="CVG_BloodlineHediffBase">
+    <defName>CVG_Bloodline_Tortoise</defName>
+    <label>black tortoise blood</label>
+    <description>Awakened black tortoise blood: armor, endurance and resistance to poison and sickness. It always walks slowly.</description>
+    <defaultLabelColor>(0.45, 0.6, 0.5)</defaultLabelColor>
+    <!-- TODO (needs code; see docs/modulos/razas/TORTUGA.md): stubbornness mood when work changes, slow to wake, Ancestral immunity to knockback and stun (StaggerDurationFactor 0 already) -->
+    <stages>
+      <li>
+        <minSeverity>1</minSeverity>
+        <label>trace</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.04</ArmorRating_Blunt>
+          <PainShockThreshold>0.05</PainShockThreshold>
+          <ToxicResistance>0.1</ToxicResistance>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>0.97</IncomingDamageFactor>
+          <ImmunityGainSpeed>1.1</ImmunityGainSpeed>
+          <LifespanFactor>1.5</LifespanFactor>
+          <MoveSpeed>0.75</MoveSpeed>
+          <GlobalLearningFactor>0.95</GlobalLearningFactor>
+          <CVG_QiMax>1.05</CVG_QiMax>
+          <MiningSpeed>1.15</MiningSpeed>
+          <MiningYield>1.1</MiningYield>
+          <CarryingCapacity>1.2</CarryingCapacity>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <label>diluted</label>
+        <restFallFactor>0.67</restFallFactor>
+        <statOffsets>
+          <ArmorRating_Sharp>0.12</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+          <PainShockThreshold>0.15</PainShockThreshold>
+          <ToxicResistance>0.3</ToxicResistance>
+          <ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>0.9</IncomingDamageFactor>
+          <ImmunityGainSpeed>1.3</ImmunityGainSpeed>
+          <LifespanFactor>2.0</LifespanFactor>
+          <StaggerDurationFactor>0.8</StaggerDurationFactor>
+          <MoveSpeed>0.7</MoveSpeed>
+          <GlobalLearningFactor>0.85</GlobalLearningFactor>
+          <CVG_QiMax>1.1</CVG_QiMax>
+          <CVG_QiRegen>1.05</CVG_QiRegen>
+          <MiningSpeed>1.3</MiningSpeed>
+          <MiningYield>1.2</MiningYield>
+          <CarryingCapacity>1.4</CarryingCapacity>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <label>pure</label>
+        <restFallFactor>0.77</restFallFactor>
+        <statOffsets>
+          <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+          <PainShockThreshold>0.3</PainShockThreshold>
+          <ToxicResistance>0.6</ToxicResistance>
+          <ToxicEnvironmentResistance>0.5</ToxicEnvironmentResistance>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>0.8</IncomingDamageFactor>
+          <ImmunityGainSpeed>1.6</ImmunityGainSpeed>
+          <LifespanFactor>3.0</LifespanFactor>
+          <StaggerDurationFactor>0.5</StaggerDurationFactor>
+          <MoveSpeed>0.85</MoveSpeed>
+          <GlobalLearningFactor>0.9</GlobalLearningFactor>
+          <CVG_QiMax>1.2</CVG_QiMax>
+          <CVG_QiRegen>1.1</CVG_QiRegen>
+          <MiningSpeed>1.5</MiningSpeed>
+          <MiningYield>1.35</MiningYield>
+          <CarryingCapacity>1.6</CarryingCapacity>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>4</minSeverity>
+        <label>ancestral</label>
+        <statOffsets>
+          <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+          <PainShockThreshold>0.5</PainShockThreshold>
+          <ToxicResistance>1.0</ToxicResistance>
+          <ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>0.6</IncomingDamageFactor>
+          <ImmunityGainSpeed>2.0</ImmunityGainSpeed>
+          <LifespanFactor>5.0</LifespanFactor>
+          <StaggerDurationFactor>0</StaggerDurationFactor>
+          <MoveSpeed>0.9</MoveSpeed>
+          <CVG_QiMax>1.4</CVG_QiMax>
+          <CVG_QiRegen>1.2</CVG_QiRegen>
+          <MiningSpeed>1.8</MiningSpeed>
+          <MiningYield>1.5</MiningYield>
+          <CarryingCapacity>2.0</CarryingCapacity>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <AbilityDef ParentName="CVG_InnateAbilityBase">
+    <defName>CVG_Ability_XuanwuShell</defName>
+    <label>xuanwu's shell</label>
+    <description>A wave of black stone around you or an ally. Wounds forget to open.\n\nFor 30 seconds (longer with the realm): +50% sharp and blunt armor and half damage taken, but 30% slower. Costs qi if the user cultivates.</description>
+    <iconPath>UI/Abilities/CVG_XuanwuShell</iconPath>
+    <cooldownTicksRange>10000</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>5.9</range>
+      <warmupTime>0.4</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetLocations>false</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityQiCost">
+        <qiCost>25</qiCost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityGiveHediffInRadius">
+        <hediffDef>CVG_XuanwuShell</hediffDef>
+        <radius>0.5</radius>
+        <affectAllies>true</affectAllies>
+        <affectSelf>true</affectSelf>
+        <fleckDef>PsycastAreaEffect</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <HediffDef>
+    <defName>CVG_XuanwuShell</defName>
+    <label>xuanwu's shell</label>
+    <description>A shell of black stone covers the body: blows slide off, but movement is heavy.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.45, 0.6, 0.5)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1800</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>0.5</IncomingDamageFactor>
+          <MoveSpeed>0.7</MoveSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <XenotypeDef>
+    <defName>CVG_Xeno_Tortoise</defName>
+    <label>pillar guardian</label>
+    <description>Guardians of the Northern Abyss: pure black tortoise blood, shell-patterned skin, heavy ridges and a serpent tail. Nearly impossible to wound, immune to most poisons, and never in a hurry.</description>
+    <descriptionShort>Pure black tortoise blood: shell skin and a serpent tail. Armored, enduring and slow.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Neanderthal</iconPath>
+    <inheritable>true</inheritable>
+    <nameMaker>CVG_NamerPerson_Tortoise</nameMaker>
+    <nameMakerFemale>CVG_NamerPerson_Tortoise_Female</nameMakerFemale>
+    <chanceToUseNameMaker>0.8</chanceToUseNameMaker>
+    <genes>
+      <li>CVG_Blood_Tortoise_Pure</li>
+      <li>CVG_Tortoise_Ridges</li>
+      <li>CVG_Tortoise_Eyes</li>
+      <li>CVG_Tortoise_Shell</li>
+      <li>CVG_Tortoise_Hair</li>
+      <li>CVG_Tortoise_Build</li>
+      <li>Robust</li>
+      <li>ToxResist_Partial</li>
+      <li>Immunity_Strong</li>
+      <li>CVG_BloodGene_BeastVitality_III</li>
+      <li>CVG_BloodGene_KeenSenses_III</li>
+      <li>CVG_BloodGene_BloodLongevity_III</li>
+      <li>CVG_BloodGene_BeastInstinct_III</li>
+      <li>CVG_BloodGene_QiResonance_III</li>
+      <li>CVG_BloodGene_Shell_III</li>
+      <li>CVG_BloodGene_StoneSleep_III</li>
+      <li>CVG_BloodGene_GuardianSerpent_III</li>
+    </genes>
+  </XenotypeDef>
+
+  <!-- Pawn kind for the vanilla "Spawn pawn" debug action and future factions/scenarios. -->
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>CVG_Kind_Tortoise</defName>
+    <initialResistanceRange>13~20</initialResistanceRange>
+    <initialWillRange>1~3</initialWillRange>
+    <label>pillar guardian</label>
+    <defaultFactionDef>PlayerColony</defaultFactionDef>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelMoney>350~600</apparelMoney>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>CVG_Bloodline_Tortoise</li>
+        </categories>
+        <commonality>0.7</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+        <commonality>0.3</commonality>
+      </li>
+    </backstoryFiltersOverride>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <xenotypeSet>
+      <xenotypeChances>
+        <CVG_Xeno_Tortoise>1</CVG_Xeno_Tortoise>
+      </xenotypeChances>
+    </xenotypeSet>
+  </PawnKindDef>
+
+</Defs>

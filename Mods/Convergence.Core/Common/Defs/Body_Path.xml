@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Path of the body (M4b): blood qi, training equipment and the work type "Temper the body".
+    Blood qi has NO passive regeneration: it only comes from spirit-beast products (meat, blood, core, spirit soup).
+    Training spends it and turns it into realm progress.
+  -->
+  <Convergence.CultivationPathDef>
+    <defName>CVG_Path_Body</defName>
+    <label>path of the body</label>
+    <description>Those without a spirit root can still cultivate: they temper skin, flesh, bone, marrow and blood with the blood of spirit beasts and endless training, until the body itself becomes a treasure.</description>
+    <order>2</order>
+    <workerClass>Convergence.CultivationPathWorker_Body</workerClass>
+    <resourceClass>Convergence.StatResource</resourceClass>
+    <resourceMaxStat>CVG_BloodQiMax</resourceMaxStat>
+    <resourceRegenStat>CVG_BloodQiRegen</resourceRegenStat>
+    <resourceLabel>blood qi</resourceLabel>
+    <resourceDescription>Blood qi does not regenerate on its own: it comes from eating spirit-beast meat, drinking beast blood or spirit soup. Training on tempering equipment spends it to advance; a breakthrough needs it full.</resourceDescription>
+    <resourceColor>(0.75, 0.25, 0.25)</resourceColor>
+    <requiresSpiritRoot>false</requiresSpiritRoot>
+    <usesQiConcentration>false</usesQiConcentration>
+    <autoStart>false</autoStart>
+    <foundationQualityCurve>
+      <points>
+        <li>(0.1, 0.8)</li>
+        <li>(0.5, 1)</li>
+        <li>(0.8, 1.15)</li>
+        <li>(0.95, 1.25)</li>
+      </points>
+    </foundationQualityCurve>
+    <foundationAidPenalty>0.15</foundationAidPenalty>
+    <foundationQualityRange>0.5~1.3</foundationQualityRange>
+  </Convergence.CultivationPathDef>
+
+  <!-- Left by a failed body breakthrough: the blood qi flows back and tears the meridians of the flesh. -->
+  <HediffDef>
+    <defName>CVG_BloodBackflow</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>blood qi backflow</label>
+    <description>The breakthrough failed and the blood qi surged back through the body, tearing muscle and vessel. It heals on its own, slowly.</description>
+    <defaultLabelColor>(0.9, 0.45, 0.4)</defaultLabelColor>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>90000~150000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <painOffset>0.2</painOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <CVG_BodyTemperingSpeed>0.5</CVG_BodyTemperingSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ================= Work ================= -->
+  <WorkTypeDef>
+    <defName>CVG_BodyTempering</defName>
+    <labelShort>temper body</labelShort>
+    <pawnLabel>Body tempering</pawnLabel>
+    <gerundLabel>tempering the body</gerundLabel>
+    <description>Train on tempering equipment, spending blood qi to advance on the path of the body. Only colonists without a spirit root who started that path (by eating spirit-beast meat or blood) can do it.</description>
+    <verb>Temper</verb>
+    <naturalPriority>245</naturalPriority>
+    <workTags>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
+  <WorkGiverDef>
+    <defName>CVG_TemperBody</defName>
+    <label>temper the body</label>
+    <giverClass>Convergence.WorkGiver_TemperBody</giverClass>
+    <workType>CVG_BodyTempering</workType>
+    <verb>train at</verb>
+    <gerund>training at</gerund>
+    <priorityInType>100</priorityInType>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+
+  <JobDef>
+    <defName>CVG_TemperBody</defName>
+    <driverClass>Convergence.JobDriver_TemperBody</driverClass>
+    <reportString>tempering the body at TargetA.</reportString>
+    <casualInterruptible>true</casualInterruptible>
+  </JobDef>
+
+  <!-- ================= Training equipment (no electricity) ================= -->
+  <ThingDef Name="CVG_TrainingEquipmentBase" ParentName="BuildingBase" Abstract="True">
+    <designationCategory>CVG_Cultivation</designationCategory>
+    <researchPrerequisites>
+      <li>CVG_Research_BodyTempering</li>
+    </researchPrerequisites>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <rotatable>true</rotatable>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <pathCost>42</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <building>
+      <isSittable>false</isSittable>
+    </building>
+  </ThingDef>
+
+  <!-- Provisional graphics: vanilla horseshoe pin and hoopstone ring, tinted. Own art: Things/Building/CVG/WoodenDummy, StoneWeights. -->
+  <ThingDef ParentName="CVG_TrainingEquipmentBase">
+    <defName>CVG_WoodenDummy</defName>
+    <label>wooden training dummy</label>
+    <description>A post with wooden arms to strike and block, the classic way to harden the forearms. A body cultivator spends blood qi here to temper the body, and practices melee at the same time.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/WoodenDummy</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(1.2, 1.2)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>1200</WorkToBuild>
+      <Mass>15</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <WoodLog>40</WoodLog>
+    </costList>
+    <uiOrder>2460</uiOrder>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BodyTrainingSpot">
+        <progressFactor>1</progressFactor>
+        <bloodQiPerHour>10</bloodQiPerHour>
+        <skill>Melee</skill>
+        <skillXpPerHour>150</skillXpPerHour>
+        <extraRestFallPerHour>0.04</extraRestFallPerHour>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_TrainingEquipmentBase">
+    <defName>CVG_StoneWeights</defName>
+    <label>stone weights</label>
+    <description>Stone locks and boulders of increasing size to lift and carry. Faster tempering than the dummy, but exhausting.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/StoneWeights</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(1.2, 1.2)</drawSize>
+    </graphicData>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>60</costStuffCount>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>40</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <uiOrder>2461</uiOrder>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BodyTrainingSpot">
+        <progressFactor>1.3</progressFactor>
+        <bloodQiPerHour>13</bloodQiPerHour>
+        <extraRestFallPerHour>0.08</extraRestFallPerHour>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

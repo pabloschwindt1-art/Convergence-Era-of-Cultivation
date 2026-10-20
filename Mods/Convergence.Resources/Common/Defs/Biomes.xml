@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Biome materials (vanilla biomes). Veins use DefModExtension_ConvergenceMineable.allowedBiomes (Core). Odyssey biomes: Mods/Odyssey. -->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_SolarGoldSand</defName>
+    <tradeability>Sellable</tradeability>
+    <label>solar gold sand</label>
+    <description>Golden sand that drank the desert sun for ten thousand years: pure yang. The refining furnace burns it hotter than wood and can smelt gold out of it.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_SolarGoldSand</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Grain_Drop</soundInteract>
+    <soundDrop>Grain_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MarketValue>3</MarketValue>
+      <Mass>0.5</Mass>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <deepCommonality>0</deepCommonality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.02</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>CVG_MineableSolarGold</defName>
+    <label>solar gold vein</label>
+    <description>A seam of sun-soaked golden sand, found only in deserts. Desert nomads say the sun buried its spare light here, and dig it out to pay their debts to the sects.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(160,130,90)</color>
+      <colorTwo>(255,210,120)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1500</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>CVG_SolarGoldSand</mineableThing>
+      <mineableYield>30</mineableYield>
+      <mineableScatterCommonality>0.05</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+      <veinMineable>true</veinMineable>
+    </building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ConvergenceMineable">
+        <eventLumps>2~3</eventLumps>
+        <eventLumpSize>2~6</eventLumpSize>
+        <allowedBiomes>
+          <li>Desert</li>
+          <li>ExtremeDesert</li>
+          <li>AridShrubland</li>
+        </allowedBiomes>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>CVG_SmeltSolarGold</defName>
+    <label>smelt solar gold</label>
+    <description>Smelts 30 solar gold sand into 8 gold.</description>
+    <jobString>Smelting solar gold.</jobString>
+    <workAmount>1200</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SolarGoldSand</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>CVG_SolarGoldSand</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Gold>8</Gold>
+    </products>
+    <recipeUsers>
+      <li>CVG_RefiningFurnace</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <HediffDef>
+    <defName>CVG_BloodFruitWarmth</defName>
+    <label>blood fruit vigor</label>
+    <description>The blood fruit fills the body with warm blood qi: wounds close a little faster.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.9, 0.4, 0.4)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>30000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <InjuryHealingFactor>1.15</InjuryHealingFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>CVG_BloodFruit</defName>
+    <label>blood fruit</label>
+    <description>A dark red fruit of the deep jungle. Nourishing, and it feeds blood qi to those who temper the body.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/BloodFruit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>4</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <foodType>VegetableOrFruit</foodType>
+      <outcomeDoers>
+        <li Class="Convergence.IngestionOutcomeDoer_GainCultivationResource">
+          <path>CVG_Path_Body</path>
+          <amount>4</amount>
+          <startsPath>false</startsPath>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_BloodFruitWarmth</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>CVG_Plant_BloodFruitBush</defName>
+    <label>blood fruit bush</label>
+    <description>A thorny jungle bush with dark red fruit that feeds blood qi. The Blood Moon Cult plants it around its temples and claims every fruit is a drop the moon let fall.</description>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Nutrition>0.15</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/CVG/BloodFruitBush</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <growDays>9</growDays>
+      <harvestedThingDef>CVG_BloodFruit</harvestedThingDef>
+      <harvestYield>8</harvestYield>
+      <harvestWork>400</harvestWork>
+      <dieIfLeafless>false</dieIfLeafless>
+      <visualSizeRange>0.5~0.9</visualSizeRange>
+      <harvestTag>Standard</harvestTag>
+      <wildOrder>2</wildOrder>
+      <allowAutoCut>false</allowAutoCut>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <sowMinSkill>6</sowMinSkill>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_SpiritWood</defName>
+    <label>spirit wood</label>
+    <description>Wood of a tree that grew where qi pools. Furniture, floors and walls of spirit wood raise qi concentration.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_SpiritWood</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Wood_Drop</soundInteract>
+    <soundDrop>Wood_Drop</soundDrop>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>3</MarketValue>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>0.4</Mass>
+      <Flammability>0.8</Flammability>
+      <DeteriorationRate>0.4</DeteriorationRate>
+      <StuffPower_Armor_Sharp>0.6</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.6</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.45</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>4</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.45</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.95</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>true</burnableByRecipe>
+    <stuffProps>
+      <stuffAdjective>spirit wood</stuffAdjective>
+      <categories>
+        <li>Woody</li>
+      </categories>
+      <commonality>0.02</commonality>
+      <!-- deep moss green: darker than bamboo (straw) and jade bamboo (bright jade), so the three read apart -->
+      <color>(84, 112, 74)</color>
+      <constructEffect>ConstructWood</constructEffect>
+      <appearance>Planks</appearance>
+      <soundImpactBullet>BulletImpact_Wood</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Wood</soundImpactMelee>
+      <statFactors>
+        <MaxHitPoints>0.8</MaxHitPoints>
+        <Beauty>1.4</Beauty>
+        <Flammability>0.8</Flammability>
+        <WorkToMake>0.8</WorkToMake>
+        <WorkToBuild>0.8</WorkToBuild>
+        <DoorOpenSpeed>1.2</DoorOpenSpeed>
+      </statFactors>
+      <canSuggestUseDefaultStuff>false</canSuggestUseDefaultStuff>
+    </stuffProps>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.03</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="TreeBase">
+    <defName>CVG_Plant_SpiritTree</defName>
+    <label>spirit tree</label>
+    <description>An ancient tree that drank qi through its roots. Yields spirit wood.</description>
+    <minifiedDef IsNull="True" />
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Nutrition>1.5</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/CVG/SpiritTree</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.6,1.6)</drawSize>
+    </graphicData>
+    <plant>
+      <growDays>40</growDays>
+      <harvestedThingDef>CVG_SpiritWood</harvestedThingDef>
+      <harvestYield>30</harvestYield>
+      <harvestWork>900</harvestWork>
+      <dieIfLeafless>false</dieIfLeafless>
+      <visualSizeRange>1.2~1.8</visualSizeRange>
+      <wildClusterRadius>-1</wildClusterRadius>
+    </plant>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>CVG_PoisonTempered</defName>
+    <label>poison-tempered</label>
+    <description>A small dose of swamp poison trains the body against toxins.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.6, 0.85, 0.4)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>120000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <ToxicResistance>0.3</ToxicResistance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_PoisonHerb</defName>
+    <label>venom herb</label>
+    <description>A purple swamp herb. Chewed in small doses it trains the body against toxins (toxic resistance for two days), at the cost of a little toxic buildup.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/PoisonHerb</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>5</MarketValue>
+      <Mass>0.05</Mass>
+      <DeteriorationRate>2</DeteriorationRate>
+    </statBases>
+    <stackLimit>75</stackLimit>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <preferability>NeverForNutrition</preferability>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestCommandString>Take {0}</ingestCommandString>
+      <ingestReportString>Taking {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_PoisonTempered</hediffDef>
+          <severity>1.0</severity>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>ToxicBuildup</hediffDef>
+          <severity>0.06</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>CVG_Plant_PoisonHerb</defName>
+    <label>venom herb</label>
+    <description>A purple herb that grows in swamps, full of poison. Body cultivators of the Silent Lotus chew a leaf a day for a year, and the ones who survive fear no poison again.</description>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Nutrition>0.15</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/CVG/PoisonHerb</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(200, 150, 230)</color>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <growDays>7</growDays>
+      <harvestedThingDef>CVG_PoisonHerb</harvestedThingDef>
+      <harvestYield>5</harvestYield>
+      <harvestWork>400</harvestWork>
+      <dieIfLeafless>false</dieIfLeafless>
+      <visualSizeRange>0.5~0.9</visualSizeRange>
+      <harvestTag>Standard</harvestTag>
+      <wildOrder>2</wildOrder>
+      <allowAutoCut>false</allowAutoCut>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <sowMinSkill>5</sowMinSkill>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_SpiritPearl</defName>
+    <label>spirit pearl</label>
+    <description>A pearl grown around a drop of qi. Very valuable; a few placed in a room raise its qi concentration. With Odyssey, a rare catch when fishing.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_SpiritPearl</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <soundInteract>ChunkRock_Drop</soundInteract>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MarketValue>60</MarketValue>
+      <Mass>0.02</Mass>
+      <Beauty>6</Beauty>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <deepCommonality>0</deepCommonality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.15</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

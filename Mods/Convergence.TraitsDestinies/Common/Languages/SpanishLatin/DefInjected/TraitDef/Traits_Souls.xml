@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Soul_ReincarnatedCultivator.degreeDatas.0.label>alma de cultivador</CVG_Soul_ReincarnatedCultivator.degreeDatas.0.label>
+  <CVG_Soul_ReincarnatedCultivator.degreeDatas.0.description>Reencarna a alguien que ya cultivó en otra vida: el camino de vuelta a su viejo reino le resulta familiar, y el cultivo y los avances llegan mucho más fácil. Muchas de esas almas cayeron en la Calamidad de Hierro y regresan ahora que la Convergencia volvió a despertar el qi.</CVG_Soul_ReincarnatedCultivator.degreeDatas.0.description>
+  <CVG_Soul_Ancient.degreeDatas.0.label>alma antigua</CVG_Soul_Ancient.degreeDatas.0.label>
+  <CVG_Soul_Ancient.degreeDatas.0.description>Con una sabiduría y una calma que superan la edad del cuerpo, aunque con el paso algo torpe. Los monjes del Loto Silencioso aseguran que estas almas giraron tantas veces la rueda del renacer que ya no tienen apuro por llegar a ningún lado.</CVG_Soul_Ancient.degreeDatas.0.description>
+  <CVG_Soul_Strong.degreeDatas.0.label>alma fuerte</CVG_Soul_Strong.degreeDatas.0.label>
+  <CVG_Soul_Strong.degreeDatas.0.description>Las ilusiones, los encantos y la presión psíquica resbalan sobre {PAWN_nameDef}, y la mente se mantiene firme. Shi Gu, anciano de almas del Culto de la Luna Sangrienta, guarda almas en sus farolas; las almas como esta son las que nunca logra atrapar.</CVG_Soul_Strong.degreeDatas.0.description>
+  <CVG_Soul_Divided.degreeDatas.0.label>alma dividida</CVG_Soul_Divided.degreeDatas.0.label>
+  <CVG_Soul_Divided.degreeDatas.0.description>Dos personas en un cuerpo: con facilidad para aprender e inestabilidad bajo presión. Los ritos de la Luna Sangrienta a veces dejan a un discípulo con dos almas, pero esta nació así, y nadie sabe cuál de las dos llegó primero.</CVG_Soul_Divided.degreeDatas.0.description>
+  <CVG_Soul_Sealed.degreeDatas.0.label>alma sellada</CVG_Soul_Sealed.degreeDatas.0.label>
+  <CVG_Soul_Sealed.degreeDatas.0.description>Algo duerme dentro de {PAWN_nameDef}, y el alma que lo rodea queda expuesta a las corrientes psíquicas. Quien lo selló, sea un anciano, un demonio o el propio Dao, no dejó registro, y el sello todavía no se agrietó.</CVG_Soul_Sealed.degreeDatas.0.description>
+</LanguageData>

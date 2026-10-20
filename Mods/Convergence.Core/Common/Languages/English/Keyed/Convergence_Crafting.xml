@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Leveled workbenches, pills and runes (Core hooks used by Convergence: Alchemy) -->
+  <CVG_Pill_Effect>Pill effect</CVG_Pill_Effect>
+  <CVG_Pill_QualityScales>The quality of the pill scales its effect: better pills are stronger, cleaner or more likely to work.</CVG_Pill_QualityScales>
+  <CVG_Pill_PurifyChance>Chance to purify the bloodline</CVG_Pill_PurifyChance>
+  <CVG_Pill_NoBloodline>{PAWN_nameDef} has no beast blood to purify: the pill only leaves a burning aftertaste.</CVG_Pill_NoBloodline>
+  <CVG_Pill_PurifyFailed>The pill was not enough to purify the blood of {PAWN_nameDef}.</CVG_Pill_PurifyFailed>
+  <CVG_Workbench_Upgrade>Upgrade to level {0}</CVG_Workbench_Upgrade>
+  <CVG_Workbench_UpgradeDesc>Upgrade the {0} to level {1}. It works faster and unlocks better recipes.
+
+Cost (within 8 cells of the bench): {2}.</CVG_Workbench_UpgradeDesc>
+  <CVG_Workbench_Missing>Missing materials within 8 cells of the bench: {0}.</CVG_Workbench_Missing>
+  <CVG_Workbench_Upgraded>The {0} has been upgraded to level {1}.</CVG_Workbench_Upgraded>
+  <CVG_Workbench_Level>Level {0}/{1}</CVG_Workbench_Level>
+  <CVG_Workbench_RequiresResearch>Requires comprehending {0} (Cultivation research tab).</CVG_Workbench_RequiresResearch>
+</LanguageData>

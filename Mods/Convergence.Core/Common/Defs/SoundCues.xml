@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Sound cues of the mod. Each one points to a vanilla SoundDef for now; to use an own sound, define a SoundDef and change `sound`.
+    Wish list of own sounds: docs/ARTE_BACKLOG.md (section "Sonidos").
+  -->
+  <Convergence.SoundCueDef>
+    <defName>CVG_Cue_Convergence</defName>
+    <label>the Convergence</label>
+    <sound>PsychicPulseGlobal</sound>
+  </Convergence.SoundCueDef>
+  <Convergence.SoundCueDef>
+    <defName>CVG_Cue_BreakthroughStart</defName>
+    <label>retreat for a breakthrough begins</label>
+    <sound>PsychicSootheGlobal</sound>
+  </Convergence.SoundCueDef>
+  <Convergence.SoundCueDef>
+    <defName>CVG_Cue_BreakthroughSuccess</defName>
+    <label>breakthrough succeeds</label>
+    <sound>Quest_Succeded</sound>
+  </Convergence.SoundCueDef>
+  <Convergence.SoundCueDef>
+    <defName>CVG_Cue_BreakthroughFail</defName>
+    <label>breakthrough fails</label>
+    <sound>EnergyShield_Broken</sound>
+  </Convergence.SoundCueDef>
+  <Convergence.SoundCueDef>
+    <defName>CVG_Cue_StageReached</defName>
+    <label>stage reached</label>
+    <sound>TinyBell</sound>
+  </Convergence.SoundCueDef>
+  <Convergence.SoundCueDef>
+    <defName>CVG_Cue_TribulationWarning</defName>
+    <label>tribulation approaches</label>
+    <sound>Thunder_OffMap</sound>
+  </Convergence.SoundCueDef>
+  <Convergence.SoundCueDef>
+    <defName>CVG_Cue_BloodlinePurified</defName>
+    <label>bloodline purified</label>
+    <sound>Psycast_Skip_Entry</sound>
+  </Convergence.SoundCueDef>
+  <Convergence.SoundCueDef>
+    <defName>CVG_Cue_MentorArrival</defName>
+    <label>the Master arrives</label>
+    <sound>Psycast_Skip_Entry</sound>
+  </Convergence.SoundCueDef>
+  <Convergence.SoundCueDef>
+    <defName>CVG_Cue_MentorFarewell</defName>
+    <label>the Master leaves</label>
+    <sound>RitualConclusion_Positive</sound>
+  </Convergence.SoundCueDef>
+  <Convergence.SoundCueDef>
+    <defName>CVG_Cue_MentorDeath</defName>
+    <label>the Master dies</label>
+    <sound>RitualConclusion_Negative</sound>
+  </Convergence.SoundCueDef>
+  <Convergence.SoundCueDef>
+    <defName>CVG_Cue_ManualLearned</defName>
+    <label>manual learned</label>
+    <sound>LetterArrive_Good</sound>
+  </Convergence.SoundCueDef>
+  <Convergence.SoundCueDef>
+    <defName>CVG_Cue_RankUp</defName>
+    <label>sect rank up</label>
+    <sound>Quest_Accepted</sound>
+  </Convergence.SoundCueDef>
+</Defs>

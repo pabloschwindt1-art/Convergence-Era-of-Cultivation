@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_SkyBreathArray.label>formación de respiración del cielo</CVG_SkyBreathArray.label>
+  <CVG_SkyBreathArray.description>Un anillo de tablillas de pizarra abierto al cielo, tallado para que el propio viento tenga que pasar por la rueda de los cinco elementos. No quema nada: respira el qi del aire, más donde el qi es denso y mucho más con la Marea de Qi, y casi nada durante el Reflujo. Un techo lo ahoga. Las Sectas de las Nubes tenían terrazas enteras de estas en las cumbres de Jiuxiao y las llamaban los pulmones de la montaña.</CVG_SkyBreathArray.description>
+  <CVG_ThunderRod.label>pararrayos del trueno celestial</CVG_ThunderRod.label>
+  <CVG_ThunderRod.description>Un pilar de bronce coronado por un dragón enroscado y colgado de talismanes del trueno. Los rayos de tormenta que caerían cerca caen sobre él, y el dragón se los traga: nada de fuego, solo qi, que guarda en su núcleo y pasa a los cristales acumuladores de su red. Cuando un cultivador enfrenta una tribulación cerca, el pararrayos también bebe del rayo del Cielo. La secta del Pico del Trueno decía que una tribulación desperdiciada es una tribulación sufrida dos veces.</CVG_ThunderRod.description>
+  <CVG_SunLantern.label>farol del sol</CVG_SunLantern.label>
+  <CVG_SunLantern.description>Un farol de piedra con una esfera de luz de sol atrapada en el corazón, alimentado por la red de qi. Ilumina el suelo lo suficiente para que los cultivos crezcan bajo techo y descansa de noche, como las plantas. Las sectas campesinas de las llanuras los levantaban en sus graneros para que el arroz madurara incluso en los largos inviernos de la Calamidad.</CVG_SunLantern.description>
+  <CVG_SunLantern.comps.CompSchedule.offMessage>Apagado: descanso de las plantas</CVG_SunLantern.comps.CompSchedule.offMessage>
+  <CVG_SpiritBrazier.label>brasero espiritual</CVG_SpiritBrazier.label>
+  <CVG_SpiritBrazier.description>Un caldero de bronce de tres patas que arde con un fuego pálido que come qi en vez de leña. Calienta la habitación hasta la temperatura que le pidas y nunca echa humo. En las salas heladas de la Secta de la Espada del Norte, el primer deber de un discípulo cada mañana era inclinarse ante el brasero, porque lo había mantenido vivo durante la noche.</CVG_SpiritBrazier.description>
+  <CVG_FrostFormation.label>formación de escarcha</CVG_FrostFormation.label>
+  <CVG_FrostFormation.description>Un disco de piedra encastrado en el suelo, con incrustaciones de cristales de hielo de las cumbres del Loto de Nieve y tallado con runas de agua. Bebe qi y exhala frío: enfría la habitación donde está hasta la temperatura que le pidas, sin escape de calor, porque el calor no se mueve a otro lado, simplemente se rechaza. Los alquimistas construyen bodegas a su alrededor para conservar las hierbas espirituales frescas durante años.</CVG_FrostFormation.description>
+</LanguageData>

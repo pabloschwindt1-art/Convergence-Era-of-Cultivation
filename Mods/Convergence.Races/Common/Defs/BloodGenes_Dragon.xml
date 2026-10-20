@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_DragonScales</defName>
+    <label>dragon scales</label>
+    <description>Hard scales turn blades and resist fire.</description>
+    <bloodline>CVG_Bloodline_Dragon</bloodline>
+    <order>5</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_DragonScales_I</defName>
+    <label>dragon scales I</label>
+    <description>Hard scales turn blades and resist fire. Each scale is a memory of the dragons who signed the Pact of the Four Points.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_DragonScales</iconPath>
+    <iconColor>(0.7, 0.7, 0.7)</iconColor>
+    <displayOrderInCategory>51</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_DragonScales</li>
+    </exclusionTags>
+    <statOffsets>
+      <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+    </statOffsets>
+    <damageFactors>
+      <Flame>0.9</Flame>
+    </damageFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_DragonScales</group>
+        <tier>1</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_DragonScales_II</defName>
+    <label>dragon scales II</label>
+    <description>Hard scales turn blades and resist fire. Each scale is a memory of the dragons who signed the Pact of the Four Points.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_DragonScales</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>52</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_DragonScales</li>
+    </exclusionTags>
+    <statOffsets>
+      <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+    </statOffsets>
+    <damageFactors>
+      <Flame>0.8</Flame>
+    </damageFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_DragonScales</group>
+        <tier>2</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_DragonScales_III</defName>
+    <label>dragon scales III</label>
+    <description>Hard scales turn blades and resist fire. Each scale is a memory of the dragons who signed the Pact of the Four Points.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_DragonScales</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>53</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_DragonScales</li>
+    </exclusionTags>
+    <statOffsets>
+      <ArmorRating_Sharp>0.08</ArmorRating_Sharp>
+    </statOffsets>
+    <damageFactors>
+      <Flame>0.65</Flame>
+    </damageFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_DragonScales</group>
+        <tier>3</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_DragonScales_IV</defName>
+    <label>dragon scales IV</label>
+    <description>Hard scales turn blades and resist fire. Each scale is a memory of the dragons who signed the Pact of the Four Points.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_DragonScales</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>54</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_DragonScales</li>
+    </exclusionTags>
+    <statOffsets>
+      <ArmorRating_Sharp>0.12</ArmorRating_Sharp>
+    </statOffsets>
+    <damageFactors>
+      <Flame>0.5</Flame>
+    </damageFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_DragonScales</group>
+        <tier>4</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_DragonLungs</defName>
+    <label>dragon lungs</label>
+    <description>Lungs that breathe storm and sea: toxic air barely touches them.</description>
+    <bloodline>CVG_Bloodline_Dragon</bloodline>
+    <order>6</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_DragonLungs_II</defName>
+    <label>dragon lungs II</label>
+    <description>Lungs that breathe storm and sea: toxic air barely touches them. Dragons once breathed the storm clouds over Jiuxiao, and a thread of that breath survives in their heirs.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_DragonLungs</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>62</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_DragonLungs</li>
+    </exclusionTags>
+    <statOffsets>
+      <ToxicEnvironmentResistance>0.3</ToxicEnvironmentResistance>
+    </statOffsets>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_DragonLungs</group>
+        <tier>2</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_DragonLungs_III</defName>
+    <label>dragon lungs III</label>
+    <description>Lungs that breathe storm and sea: toxic air barely touches them. Dragons once breathed the storm clouds over Jiuxiao, and a thread of that breath survives in their heirs.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_DragonLungs</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>63</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_DragonLungs</li>
+    </exclusionTags>
+    <statOffsets>
+      <ToxicEnvironmentResistance>0.6</ToxicEnvironmentResistance>
+    </statOffsets>
+    <immuneToToxGasExposure>true</immuneToToxGasExposure>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_DragonLungs</group>
+        <tier>3</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_DragonLungs_IV</defName>
+    <label>dragon lungs IV</label>
+    <description>Lungs that breathe storm and sea: toxic air barely touches them. Dragons once breathed the storm clouds over Jiuxiao, and a thread of that breath survives in their heirs.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_DragonLungs</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>64</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_DragonLungs</li>
+    </exclusionTags>
+    <statOffsets>
+      <ToxicEnvironmentResistance>1.0</ToxicEnvironmentResistance>
+    </statOffsets>
+    <immuneToToxGasExposure>true</immuneToToxGasExposure>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_DragonLungs</group>
+        <tier>4</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_DragonVitality</defName>
+    <label>dragon vitality</label>
+    <description>After the Convergence, lost limbs and old scars grow back over time.</description>
+    <bloodline>CVG_Bloodline_Dragon</bloodline>
+    <order>7</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_DragonVitality_III</defName>
+    <label>dragon vitality III</label>
+    <description>After the Convergence, lost limbs and old scars grow back over time. The Clan keeps a register of every limb its elders have regrown, and some entries are older than the Iron Calamity.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_DragonVitality</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>73</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_DragonVitality</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_DragonVitality</group>
+        <tier>3</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_BloodRegeneration">
+        <intervalDays>15</intervalDays>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_DragonVitality_IV</defName>
+    <label>dragon vitality IV</label>
+    <description>After the Convergence, lost limbs and old scars grow back over time. The Clan keeps a register of every limb its elders have regrown, and some entries are older than the Iron Calamity.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_DragonVitality</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>74</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_DragonVitality</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_DragonVitality</group>
+        <tier>4</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_BloodRegeneration">
+        <intervalDays>6</intervalDays>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+</Defs>

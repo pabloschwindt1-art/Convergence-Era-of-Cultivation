@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Passive_LightningReflexes.label>reflejos de relámpago</CVG_Passive_LightningReflexes.label>
+  <CVG_Passive_LightningReflexes.description>El qi del trueno corre por los nervios más rápido que el pensamiento.</CVG_Passive_LightningReflexes.description>
+  <CVG_Passive_StormHeart.label>corazón de la tormenta</CVG_Passive_StormHeart.label>
+  <CVG_Passive_StormHeart.description>Un ojo de tormenta quieto late en el pecho.</CVG_Passive_StormHeart.description>
+  <CVG_Passive_LightningBody.label>cuerpo de relámpago</CVG_Passive_LightningBody.label>
+  <CVG_Passive_LightningBody.description>El cuerpo recuerda el rayo.</CVG_Passive_LightningBody.description>
+  <CVG_Passive_TribulationBorn.label>nacido de la tribulación</CVG_Passive_TribulationBorn.label>
+  <CVG_Passive_TribulationBorn.description>El rayo reconoce a los suyos.</CVG_Passive_TribulationBorn.description>
+</LanguageData>

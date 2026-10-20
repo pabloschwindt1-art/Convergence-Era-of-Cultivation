@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- The inner demon wanders like the vanilla psychotic wandering (same think-tree branch). -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThinkTreeDef[defName="MentalStateNonCritical"]//li[@Class="ThinkNode_ConditionalMentalStates"][states/li="Wander_Psychotic"]/states</xpath>
+    <value>
+      <li>CVG_InnerDemon</li>
+    </value>
+  </Operation>
+</Patch>

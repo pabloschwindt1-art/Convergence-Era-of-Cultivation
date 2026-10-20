@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Formation_NeedFlags>Faltan banderas: {0}/{1}</CVG_Formation_NeedFlags>
+  <CVG_Formation_TooBig>Área demasiado grande: acerca las banderas.</CVG_Formation_TooBig>
+  <CVG_Formation_Status>Formación {0}: área de {1} casillas, nivel {2}</CVG_Formation_Status>
+  <CVG_Formation_On>activa</CVG_Formation_On>
+  <CVG_Formation_Off>inactiva (sin piedras espirituales)</CVG_Formation_Off>
+  <CVG_Formation_ProtectiveDesc>Absorbe {0} de daño de proyectiles enemigos por piedra espiritual.</CVG_Formation_ProtectiveDesc>
+  <CVG_Formation_SwordsDesc>Lanza {0} espada(s) de qi por andanada contra los enemigos de dentro.</CVG_Formation_SwordsDesc>
+  <CVG_Formation_BindingDesc>Inmoviliza al enemigo más fuerte durante {0} segundos.</CVG_Formation_BindingDesc>
+  <CVG_Formation_QiDesc>+{0} de concentración de qi dentro del área.</CVG_Formation_QiDesc>
+</LanguageData>

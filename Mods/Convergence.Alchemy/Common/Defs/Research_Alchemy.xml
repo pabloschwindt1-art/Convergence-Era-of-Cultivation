@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Dao Comprehension projects of the alchemy & forge branch (Core: DefModExtension_DaoResearch, Cultivation tab).
+    They gate the upgrades of the spirit forge and the alchemy furnace (WorkbenchLevel.requiredResearch).
+  -->
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_SpiritForge2</defName>
+    <label>folding with qi</label>
+    <description>How to fold spirit steel with qi without cracking it. Gan Jiang is said to have failed for three years until Mo Ye taught him to breathe with the bellows. Allows upgrading the spirit forge to level 2 (spears and bows).</description>
+    <baseCost>2000</baseCost>
+    <prerequisites>
+      <li>CVG_Research_QiBreathing</li>
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>6</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>6</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_SpiritForge3</defName>
+    <label>spirit treasures</label>
+    <description>How to give a weapon a spirit of its own. The Azure Peak Sword Sect believes a treasure is never forged, only awakened, and that its spirit chooses its master. Allows upgrading the spirit forge to level 3 (treasures such as the flying sword).</description>
+    <baseCost>4500</baseCost>
+    <prerequisites>
+      <li>CVG_Research_SpiritForge2</li>
+      <li>CVG_Research_Foundation</li>
+    </prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>6</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>14</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_AlchemyFurnace2</defName>
+    <label>controlled fire</label>
+    <description>How to hold the fire of the furnace steady for days. The Heavenly Cauldron Pavilion makes its apprentices watch a single flame for a whole season before they may touch the bellows. Allows upgrading the alchemy furnace to level 2 (mid-grade pills).</description>
+    <baseCost>2000</baseCost>
+    <prerequisites>
+      <li>CVG_Research_QiBreathing</li>
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>7</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>6</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_AlchemyFurnace3</defName>
+    <label>pill tribulation</label>
+    <description>The greatest pills call down a small tribulation of their own when they form. Shennong's last disciple is said to have survived it by holding the furnace lid down with his own hands. Allows upgrading the alchemy furnace to level 3 (high-grade pills such as the nine-turns pill).</description>
+    <baseCost>4500</baseCost>
+    <prerequisites>
+      <li>CVG_Research_AlchemyFurnace2</li>
+      <li>CVG_Research_Foundation</li>
+    </prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>7</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>14</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+</Defs>

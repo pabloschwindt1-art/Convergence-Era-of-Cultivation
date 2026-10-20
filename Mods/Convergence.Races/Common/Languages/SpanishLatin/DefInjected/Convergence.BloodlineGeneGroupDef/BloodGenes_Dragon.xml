@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_GeneGroup_DragonScales.label>escamas de dragón</CVG_GeneGroup_DragonScales.label>
+  <CVG_GeneGroup_DragonScales.description>Escamas duras que desvían filos y resisten el fuego.</CVG_GeneGroup_DragonScales.description>
+  <CVG_GeneGroup_DragonLungs.label>pulmones de dragón</CVG_GeneGroup_DragonLungs.label>
+  <CVG_GeneGroup_DragonLungs.description>Pulmones que respiran tormenta y mar: el aire tóxico apenas los toca.</CVG_GeneGroup_DragonLungs.description>
+  <CVG_GeneGroup_DragonVitality.label>vitalidad del dragón</CVG_GeneGroup_DragonVitality.label>
+  <CVG_GeneGroup_DragonVitality.description>Tras la Convergencia, los miembros perdidos y las viejas cicatrices vuelven a crecer con el tiempo.</CVG_GeneGroup_DragonVitality.description>
+</LanguageData>

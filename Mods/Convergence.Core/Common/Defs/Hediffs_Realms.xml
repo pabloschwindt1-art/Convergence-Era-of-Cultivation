@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef Name="CVG_RealmHediffBase" Abstract="True">
+    <hediffClass>Convergence.Hediff_CultivationRealm</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <initialSeverity>1</initialSeverity>
+    <minSeverity>1</minSeverity>
+    <maxSeverity>4</maxSeverity>
+    <defaultLabelColor>(0.55, 0.8, 1)</defaultLabelColor>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+  </HediffDef>
+
+  <!--
+    Severity = realm stage (1-4); RealmTracker sets it. Each realm MULTIPLIES power (speed, melee damage, damage taken,
+    lifespan, armor): a Golden Core is several times stronger than a mortal. The foundation quality of the tracker
+    scales every value (Hediff_CultivationRealm). Max qi / regen are offsets on top of the stat base (100 / 4 per hour).
+  -->
+  <HediffDef ParentName="CVG_RealmHediffBase">
+    <defName>CVG_Hediff_QiRefining</defName>
+    <label>Qi Refining</label>
+    <description>This cultivator is in the Qi Refining realm: qi flows through the opened meridians and slowly strengthens the body.</description>
+    <stages>
+      <li>
+        <minSeverity>1</minSeverity>
+        <label>stage 1</label>
+        <statOffsets>
+          <CVG_EnvironmentResistance>0.04</CVG_EnvironmentResistance>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>1.05</MoveSpeed>
+          <MeleeDamageFactor>1.1</MeleeDamageFactor>
+          <IncomingDamageFactor>0.95</IncomingDamageFactor>
+          <LifespanFactor>1.2</LifespanFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <label>stage 2</label>
+        <statOffsets>
+          <CVG_EnvironmentResistance>0.06</CVG_EnvironmentResistance>
+          <CVG_QiMax>20</CVG_QiMax>
+          <CVG_QiRegen>1</CVG_QiRegen>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>1.083</MoveSpeed>
+          <MeleeDamageFactor>1.167</MeleeDamageFactor>
+          <IncomingDamageFactor>0.917</IncomingDamageFactor>
+          <LifespanFactor>1.2</LifespanFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <label>stage 3</label>
+        <statOffsets>
+          <CVG_EnvironmentResistance>0.08</CVG_EnvironmentResistance>
+          <CVG_QiMax>40</CVG_QiMax>
+          <CVG_QiRegen>2</CVG_QiRegen>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>1.117</MoveSpeed>
+          <MeleeDamageFactor>1.233</MeleeDamageFactor>
+          <IncomingDamageFactor>0.883</IncomingDamageFactor>
+          <LifespanFactor>1.2</LifespanFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>4</minSeverity>
+        <label>stage 4</label>
+        <statOffsets>
+          <CVG_EnvironmentResistance>0.1</CVG_EnvironmentResistance>
+          <CVG_QiMax>60</CVG_QiMax>
+          <CVG_QiRegen>3</CVG_QiRegen>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>1.15</MoveSpeed>
+          <MeleeDamageFactor>1.3</MeleeDamageFactor>
+          <IncomingDamageFactor>0.85</IncomingDamageFactor>
+          <LifespanFactor>1.2</LifespanFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="CVG_RealmHediffBase">
+    <defName>CVG_Hediff_Foundation</defName>
+    <label>Foundation Establishment</label>
+    <description>This cultivator has established a foundation: a pool of liquid qi in the dantian. The body is far sturdier and faster, heals quickly and ages slowly.</description>
+    <!-- Bigu (辟谷): from Foundation on, the body feeds more on qi and less on grain. -->
+    <stages>
+      <li>
+        <minSeverity>1</minSeverity>
+        <hungerRateFactor>0.9</hungerRateFactor>
+        <label>stage 1</label>
+        <statOffsets>
+          <CVG_EnvironmentResistance>0.15</CVG_EnvironmentResistance>
+          <CVG_QiMax>200</CVG_QiMax>
+          <CVG_QiRegen>8</CVG_QiRegen>
+          <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+          <PainShockThreshold>0.15</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>1.3</MoveSpeed>
+          <MeleeDamageFactor>1.7</MeleeDamageFactor>
+          <IncomingDamageFactor>0.65</IncomingDamageFactor>
+          <LifespanFactor>2.0</LifespanFactor>
+          <InjuryHealingFactor>1.5</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.3</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <hungerRateFactor>0.85</hungerRateFactor>
+        <label>stage 2</label>
+        <statOffsets>
+          <CVG_EnvironmentResistance>0.18</CVG_EnvironmentResistance>
+          <CVG_QiMax>240</CVG_QiMax>
+          <CVG_QiRegen>9</CVG_QiRegen>
+          <ArmorRating_Sharp>0.167</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.167</ArmorRating_Blunt>
+          <PainShockThreshold>0.15</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>1.333</MoveSpeed>
+          <MeleeDamageFactor>1.8</MeleeDamageFactor>
+          <IncomingDamageFactor>0.633</IncomingDamageFactor>
+          <LifespanFactor>2.0</LifespanFactor>
+          <InjuryHealingFactor>1.5</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.3</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <hungerRateFactor>0.8</hungerRateFactor>
+        <label>stage 3</label>
+        <statOffsets>
+          <CVG_EnvironmentResistance>0.21</CVG_EnvironmentResistance>
+          <CVG_QiMax>280</CVG_QiMax>
+          <CVG_QiRegen>10</CVG_QiRegen>
+          <ArmorRating_Sharp>0.183</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.183</ArmorRating_Blunt>
+          <PainShockThreshold>0.15</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>1.367</MoveSpeed>
+          <MeleeDamageFactor>1.9</MeleeDamageFactor>
+          <IncomingDamageFactor>0.617</IncomingDamageFactor>
+          <LifespanFactor>2.0</LifespanFactor>
+          <InjuryHealingFactor>1.5</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.3</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>4</minSeverity>
+        <hungerRateFactor>0.75</hungerRateFactor>
+        <label>stage 4</label>
+        <statOffsets>
+          <CVG_EnvironmentResistance>0.25</CVG_EnvironmentResistance>
+          <CVG_QiMax>320</CVG_QiMax>
+          <CVG_QiRegen>11</CVG_QiRegen>
+          <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+          <PainShockThreshold>0.15</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>1.4</MoveSpeed>
+          <MeleeDamageFactor>2.0</MeleeDamageFactor>
+          <IncomingDamageFactor>0.6</IncomingDamageFactor>
+          <LifespanFactor>2.0</LifespanFactor>
+          <InjuryHealingFactor>1.5</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.3</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="CVG_RealmHediffBase">
+    <defName>CVG_Hediff_GoldenCore</defName>
+    <label>Golden Core</label>
+    <description>This cultivator has condensed a golden core. Qi is vast, the body moves like the wind, shrugs off blows and can live for centuries.</description>
+    <!-- Bigu (辟谷): from Foundation on, the body feeds more on qi and less on grain. -->
+    <stages>
+      <li>
+        <minSeverity>1</minSeverity>
+        <hungerRateFactor>0.6</hungerRateFactor>
+        <label>stage 1</label>
+        <statOffsets>
+          <CVG_EnvironmentResistance>0.5</CVG_EnvironmentResistance>
+          <CVG_QiMax>500</CVG_QiMax>
+          <CVG_QiRegen>20</CVG_QiRegen>
+          <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+          <PainShockThreshold>0.3</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>1.6</MoveSpeed>
+          <MeleeDamageFactor>3.0</MeleeDamageFactor>
+          <IncomingDamageFactor>0.4</IncomingDamageFactor>
+          <LifespanFactor>4.0</LifespanFactor>
+          <InjuryHealingFactor>2.2</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.6</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <hungerRateFactor>0.55</hungerRateFactor>
+        <label>stage 2</label>
+        <statOffsets>
+          <CVG_EnvironmentResistance>0.55</CVG_EnvironmentResistance>
+          <CVG_QiMax>600</CVG_QiMax>
+          <CVG_QiRegen>24</CVG_QiRegen>
+          <ArmorRating_Sharp>0.383</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.383</ArmorRating_Blunt>
+          <PainShockThreshold>0.3</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>1.65</MoveSpeed>
+          <MeleeDamageFactor>3.167</MeleeDamageFactor>
+          <IncomingDamageFactor>0.383</IncomingDamageFactor>
+          <LifespanFactor>4.0</LifespanFactor>
+          <InjuryHealingFactor>2.2</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.6</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <hungerRateFactor>0.5</hungerRateFactor>
+        <label>stage 3</label>
+        <statOffsets>
+          <CVG_EnvironmentResistance>0.6</CVG_EnvironmentResistance>
+          <CVG_QiMax>700</CVG_QiMax>
+          <CVG_QiRegen>28</CVG_QiRegen>
+          <ArmorRating_Sharp>0.417</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.417</ArmorRating_Blunt>
+          <PainShockThreshold>0.3</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>1.7</MoveSpeed>
+          <MeleeDamageFactor>3.333</MeleeDamageFactor>
+          <IncomingDamageFactor>0.367</IncomingDamageFactor>
+          <LifespanFactor>4.0</LifespanFactor>
+          <InjuryHealingFactor>2.2</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.6</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>4</minSeverity>
+        <hungerRateFactor>0.4</hungerRateFactor>
+        <label>stage 4</label>
+        <statOffsets>
+          <CVG_EnvironmentResistance>0.65</CVG_EnvironmentResistance>
+          <CVG_QiMax>800</CVG_QiMax>
+          <CVG_QiRegen>32</CVG_QiRegen>
+          <ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+          <PainShockThreshold>0.3</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>1.75</MoveSpeed>
+          <MeleeDamageFactor>3.5</MeleeDamageFactor>
+          <IncomingDamageFactor>0.35</IncomingDamageFactor>
+          <LifespanFactor>4.0</LifespanFactor>
+          <InjuryHealingFactor>2.2</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.6</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

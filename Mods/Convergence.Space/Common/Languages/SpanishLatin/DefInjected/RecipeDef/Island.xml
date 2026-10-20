@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Make_FlightCore_Gravcore.label>ligar núcleo de vuelo (con gravnúcleo)</CVG_Make_FlightCore_Gravcore.label>
+  <CVG_Make_FlightCore_Gravcore.description>Enseñar a flotar a un gravnúcleo con una formación de vuelo y dos núcleos de bestia.</CVG_Make_FlightCore_Gravcore.description>
+  <CVG_Make_FlightCore_Gravcore.jobString>Ligando un núcleo de vuelo.</CVG_Make_FlightCore_Gravcore.jobString>
+  <CVG_Make_FlightCore_Beasts.label>ligar núcleo de vuelo (con núcleos de bestia)</CVG_Make_FlightCore_Beasts.label>
+  <CVG_Make_FlightCore_Beasts.description>La forma cara, para sectas sin gravnúcleo: seis núcleos de bestia, una montaña de jade y piedras espirituales.</CVG_Make_FlightCore_Beasts.description>
+  <CVG_Make_FlightCore_Beasts.jobString>Ligando un núcleo de vuelo.</CVG_Make_FlightCore_Beasts.jobString>
+</LanguageData>

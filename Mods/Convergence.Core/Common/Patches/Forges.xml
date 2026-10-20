@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Vanilla metal benches are forges (Core forge hook: CVG_ForgeSpeed / CVG_ForgeQuality). -->
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="FueledSmithy" or defName="ElectricSmithy" or defName="FabricationBench"]</xpath>
+    <value>
+      <li Class="Convergence.DefModExtension_Forge" />
+    </value>
+  </Operation>
+</Patch>

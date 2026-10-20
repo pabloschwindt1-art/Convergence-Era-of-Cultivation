@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Island wording for the vanilla gravship texts: used while the map has a flying island (IslandText.cs). -->
+  <CVG_IslandText_Gravship>Flying island</CVG_IslandText_Gravship>
+  <CVG_IslandText_CannotLaunchNoEngine>no island heart</CVG_IslandText_CannotLaunchNoEngine>
+  <CVG_IslandText_CannotLaunchNotEnoughFuel>not enough spirit stones</CVG_IslandText_CannotLaunchNotEnoughFuel>
+  <CVG_IslandText_ConnectedSubstructure>Connected cloud rock</CVG_IslandText_ConnectedSubstructure>
+  <CVG_IslandText_SubstructureBlueprintsCount>Cloud rock blueprints placed</CVG_IslandText_SubstructureBlueprintsCount>
+  <CVG_IslandText_CannotLaunchDisconnected>not connected to the island heart</CVG_IslandText_CannotLaunchDisconnected>
+  <CVG_IslandText_CannotLaunchNoSubstructure>no cloud rock</CVG_IslandText_CannotLaunchNoSubstructure>
+  <CVG_IslandText_CannotLaunchNoThrusters>no unblocked qi thrusters or wind sails</CVG_IslandText_CannotLaunchNoThrusters>
+  <CVG_IslandText_CannotLaunchOnCooldown>the heart is still resting: {0}</CVG_IslandText_CannotLaunchOnCooldown>
+  <CVG_IslandText_CannotPilotGravship>Cannot cast off</CVG_IslandText_CannotPilotGravship>
+  <CVG_IslandText_PilotGravship>Steer the island</CVG_IslandText_PilotGravship>
+  <CVG_IslandText_GravshipName>island name</CVG_IslandText_GravshipName>
+  <CVG_IslandText_GravshipRange>island range</CVG_IslandText_GravshipRange>
+  <CVG_IslandText_StoredChemfuel>spirit stones stored</CVG_IslandText_StoredChemfuel>
+  <CVG_IslandText_FuelConsumption>spirit stone consumption</CVG_IslandText_FuelConsumption>
+  <CVG_IslandText_FuelPerTile>{0} spirit stones per tile</CVG_IslandText_FuelPerTile>
+  <CVG_IslandText_FuelAmount>{0} spirit stones</CVG_IslandText_FuelAmount>
+  <CVG_IslandText_GravshipLandingSite>{0} mooring</CVG_IslandText_GravshipLandingSite>
+  <CVG_IslandText_ConfirmGravEngineLaunch>Are you sure you want to cast off?\n\nYour current map, and everything that is not on cloud rock, will be lost: the island does not come back for what it leaves behind. Build a sky stake to keep this map from being destroyed.</CVG_IslandText_ConfirmGravEngineLaunch>
+  <CVG_IslandText_GravEngineWarning>Warning</CVG_IslandText_GravEngineWarning>
+  <CVG_IslandText_PeopleWillBeLeftBehind>The following people will stay on the ground</CVG_IslandText_PeopleWillBeLeftBehind>
+  <CVG_IslandText_AnimalsWillBeLeftBehind>The following will stay on the ground</CVG_IslandText_AnimalsWillBeLeftBehind>
+  <CVG_IslandText_PawnsKidnappedOnGravship>The following people and animals from another faction will be carried off with the island. Their faction will not forgive it</CVG_IslandText_PawnsKidnappedOnGravship>
+  <CVG_IslandText_BuildingsWillBeLeftBehind>The following buildings are not fully on cloud rock and will stay on the ground</CVG_IslandText_BuildingsWillBeLeftBehind>
+  <CVG_IslandText_SubstructureWillBeLeftBehind>Some cloud rock is badly placed and will stay on the ground</CVG_IslandText_SubstructureWillBeLeftBehind>
+  <CVG_IslandText_DisconnectedSubstructure>Disconnected from the island heart</CVG_IslandText_DisconnectedSubstructure>
+  <CVG_IslandText_SubstructureOutsideFootprint>Beyond the heart's reach</CVG_IslandText_SubstructureOutsideFootprint>
+  <CVG_IslandText_SubstructureUnderRockRoof>Under a rock roof</CVG_IslandText_SubstructureUnderRockRoof>
+  <CVG_IslandText_NamePlayerGravshipMessage>{0} has high hopes for the new island and wants to christen it with a good name. What shall the island be called?</CVG_IslandText_NamePlayerGravshipMessage>
+  <CVG_IslandText_PlayerGravshipGainsName>The island is now known as {0}.</CVG_IslandText_PlayerGravshipGainsName>
+  <CVG_IslandText_OrbitalWarning_Gravship>Prepare your island for the high sky:\n- Close the walls with cloud rock or jade, which hold the air.\n- Cover the settlement with a celestial dome formation.\n- Plant breath formations where people sleep and work.\n- Cultivators resist the void by realm; the rest need the dome.</CVG_IslandText_OrbitalWarning_Gravship>
+  <CVG_IslandText_CommandLaunchGravship>Cast off</CVG_IslandText_CommandLaunchGravship>
+  <CVG_IslandText_CommandLaunchGravshipDesc>Choose a cultivator or colonist to steer the island. Everything on cloud rock will travel to a new map. Your current map will be abandoned if you do not have a sky stake.</CVG_IslandText_CommandLaunchGravshipDesc>
+  <CVG_IslandText_ConfirmLandGravship>Confirm mooring</CVG_IslandText_ConfirmLandGravship>
+  <CVG_IslandText_ConfirmLandGravshipDesc>Land the island at the chosen mooring.</CVG_IslandText_ConfirmLandGravshipDesc>
+  <CVG_IslandText_AbortLandGravship>Abort mooring</CVG_IslandText_AbortLandGravship>
+  <CVG_IslandText_AbortLandGravshipDesc>Cancel the landing on this map and let the island drift down nearby on the world map. Useful if you cannot find a place to moor.\n\nWarning: this raises the chance of a mishap.</CVG_IslandText_AbortLandGravshipDesc>
+  <CVG_IslandText_AbortLandConfirmation>Cancelling will let the island drift down in a random place nearby on the world map. That raises the chance of a mishap.\n\nAre you sure?</CVG_IslandText_AbortLandConfirmation>
+  <CVG_IslandText_GravshipLandingMarkerNotPlaced>You must choose a mooring for the island.</CVG_IslandText_GravshipLandingMarkerNotPlaced>
+  <CVG_IslandText_CommandShowSubstructureOverlay>Show cloud rock overlay</CVG_IslandText_CommandShowSubstructureOverlay>
+  <CVG_IslandText_CommandShowSubstructureOverlayDesc>Shows valid cloud rock in blue and invalid cloud rock in red.</CVG_IslandText_CommandShowSubstructureOverlayDesc>
+  <CVG_IslandText_MessageMustBePlacedOnSubstructure>Must be placed on cloud rock.</CVG_IslandText_MessageMustBePlacedOnSubstructure>
+  <CVG_IslandText_MessageMustBePlacedInRangeOfGravEngineOrExtender>Must be placed within reach of the island heart or a gravity core mount.</CVG_IslandText_MessageMustBePlacedInRangeOfGravEngineOrExtender>
+  <CVG_IslandText_MessageCannotPlaceOverSubstructure>Cannot be placed on cloud rock.</CVG_IslandText_MessageCannotPlaceOverSubstructure>
+  <CVG_IslandText_MessageSubstructureBlocked>The cloud rock is blocked.</CVG_IslandText_MessageSubstructureBlocked>
+  <CVG_IslandText_MessageMustBePlacedInRangeOfGravEngine>Must be placed within reach of the island heart.</CVG_IslandText_MessageMustBePlacedInRangeOfGravEngine>
+  <CVG_IslandText_GravshipReadyToLaunch>{0} is ready to sail again.</CVG_IslandText_GravshipReadyToLaunch>
+  <CVG_IslandText_MessageConfirmLandingAreaFirst>Confirm the island's mooring to continue.</CVG_IslandText_MessageConfirmLandingAreaFirst>
+  <CVG_IslandText_DesignatorMoveGravship>Move mooring</CVG_IslandText_DesignatorMoveGravship>
+  <CVG_IslandText_DesignatorMoveGravshipDesc>Reposition the island's landing spot.</CVG_IslandText_DesignatorMoveGravshipDesc>
+  <CVG_IslandText_DesignatorRemoveFoundationDesc>Remove bridges or cloud rock to reveal the terrain underneath.</CVG_IslandText_DesignatorRemoveFoundationDesc>
+  <CVG_IslandText_GeneratingGravship>The island rises</CVG_IslandText_GeneratingGravship>
+  <CVG_IslandText_GravshipForceVisitorsToLeaveLabel>Make visitors leave</CVG_IslandText_GravshipForceVisitorsToLeaveLabel>
+  <CVG_IslandText_GravshipBoardColonyAnimalsLabel>Bring colony animals aboard</CVG_IslandText_GravshipBoardColonyAnimalsLabel>
+  <CVG_IslandText_StatsReport_GravshipRangeOffset>Island range offset</CVG_IslandText_StatsReport_GravshipRangeOffset>
+  <CVG_IslandText_StatsReport_GravshipRangeOffset_Desc>How much further this building lets the island sail over the world map.</CVG_IslandText_StatsReport_GravshipRangeOffset_Desc>
+  <CVG_IslandText_StatsReport_GravshipFuelSavings>Spirit stone savings</CVG_IslandText_StatsReport_GravshipFuelSavings>
+  <CVG_IslandText_StatsReport_GravshipFuelSavings_Desc>How much this building reduces the spirit stones the island needs to travel.</CVG_IslandText_StatsReport_GravshipFuelSavings_Desc>
+  <CVG_IslandText_StatsReport_GravEngineFuelConsumption>Spirit stone consumption</CVG_IslandText_StatsReport_GravEngineFuelConsumption>
+  <CVG_IslandText_StatsReport_GravEngineFuelConsumption_Desc>A multiplier on how many spirit stones the island needs to travel.</CVG_IslandText_StatsReport_GravEngineFuelConsumption_Desc>
+</LanguageData>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Wuxia, electricity-free counterparts of the mechanitor gear. No industrial components. Textures: tinted vanilla (final-art paths in the comments; docs/modulos/BIOTECH_WUXIA.md). -->
+
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_PuppetMasters</defName>
+    <label>puppet master's regalia</label>
+    <description>The masters of the Thousand Strings Valley wore their art: masks that hid which hand moved which thread, crowns that gathered a hundred strings behind the ear. Comprehending it unlocks the puppeteer's mask, the crown of a thousand threads, the grand puppeteer's robe and the thread totem.</description>
+    <baseCost>5000</baseCost>
+    <prerequisites>
+      <li>CVG_Research_Puppetry</li>
+    </prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>5</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>8</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ThingDef Name="CVG_PuppetHelmetBase" ParentName="ArmorHelmetMakeableBase" Abstract="True">
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_PuppetMasters</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>CraftingSpot</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+    </recipeMaker>
+    <tradeability>Sellable</tradeability>
+    <apparel>
+      <layers><li>Overhead</li></layers>
+      <bodyPartGroups><li>UpperHead</li></bodyPartGroups>
+      <mechanitorApparel>true</mechanitorApparel>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <defaultOutfitTags Inherit="False"/>
+      <scoreOffset>4</scoreOffset>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options><li><weight>10</weight><only>(0.62, 0.78, 0.72)</only></li></options>
+    </colorGenerator>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_PuppetHelmetBase">
+    <defName>CVG_Apparel_PuppeteerMask</defName>
+    <label>puppeteer's mask</label>
+    <description>A lacquered half-mask of spirit wood, worn so that an opponent cannot tell which hand moves which thread. Its inner lining of spirit thread listens for the puppets near its wearer and lets the master hold a few more of them. It needs no power and no machines.</description>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <!-- Final art: Things/Pawn/Humanlike/Apparel/CVG/PuppeteerMask -->
+      <texPath>Things/Item/CVG/PuppeteerMask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <apparel>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/PuppeteerMask</wornGraphicPath>
+    </apparel>
+    <statBases>
+      <WorkToMake>9000</WorkToMake>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Mass>0.6</Mass>
+      <Flammability>0.8</Flammability>
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.05</ArmorRating_Heat>
+      <Insulation_Cold>0.5</Insulation_Cold>
+    </statBases>
+    <equippedStatOffsets>
+      <MechBandwidth>6</MechBandwidth>
+    </equippedStatOffsets>
+    <costList>
+      <CVG_SpiritWood>25</CVG_SpiritWood>
+      <CVG_SpiritThread>20</CVG_SpiritThread>
+      <CVG_SpiritStone>2</CVG_SpiritStone>
+    </costList>
+    <recipeMaker>
+      <displayPriority>520</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_PuppetHelmetBase">
+    <defName>CVG_Apparel_ThousandThreadsCrown</defName>
+    <label>crown of a thousand threads</label>
+    <description>A circlet of jade from which a thousand threads of spirit silk rise like a halo. The Valley's grand masters were buried wearing one; the threads were said to keep moving for a year. It widens the wearer's reach over their puppets more than any other piece of headgear, and it consumes nothing.</description>
+    <techLevel>Medieval</techLevel>
+    <graphicData>
+      <!-- Final art: Things/Pawn/Humanlike/Apparel/CVG/ThousandThreadsCrown -->
+      <texPath>Things/Item/CVG/ThousandThreadsCrown</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.9</drawSize>
+    </graphicData>
+    <apparel>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/ThousandThreadsCrown</wornGraphicPath>
+      <renderSkipFlags>
+        <li>None</li>
+      </renderSkipFlags>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+    </apparel>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <MaxHitPoints>110</MaxHitPoints>
+      <Mass>0.8</Mass>
+      <Flammability>0.6</Flammability>
+      <ArmorRating_Sharp>0</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0</ArmorRating_Blunt>
+      <ArmorRating_Heat>0</ArmorRating_Heat>
+      <Insulation_Cold>0</Insulation_Cold>
+    </statBases>
+    <equippedStatOffsets>
+      <MechBandwidth>9</MechBandwidth>
+    </equippedStatOffsets>
+    <costList>
+      <Jade>20</Jade>
+      <CVG_SpiritThread>60</CVG_SpiritThread>
+      <CVG_SpiritStone>6</CVG_SpiritStone>
+    </costList>
+    <recipeMaker>
+      <skillRequirements Inherit="False"><Crafting>9</Crafting></skillRequirements>
+      <displayPriority>530</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <!-- Thread totem: counts as a band node (+1 bandwidth for the tuned master) via Convergence.DefModExtension_BandNodeSubstitute.
+       The zero-consumption CompPowerTrader gives it its own net (like the puppet workshop): no electricity. It burns spirit stones. -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_ThreadTotem</defName>
+    <label>thread totem</label>
+    <description>A pillar of spirit wood with a jade eye, strung with threads that hum when a puppet master is near. Tuned to one master, it adds 1 bandwidth to them, like a band node, but it runs on spirit stones instead of electricity. Retuning to another master takes much longer than the first tuning.\n\nWhen the stones run out the threads go slack and it stops helping.</description>
+    <tickerType>Normal</tickerType>
+    <rotatable>false</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <fillPercent>0.4</fillPercent>
+    <graphicData>
+      <texPath>Things/Building/Misc/CVG_ThreadTotem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(1.5, 0.35, 1.2)</volume>
+        <offset>(0, 0, -0.15)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <designationCategory>Biotech</designationCategory>
+    <uiOrder>2441</uiOrder>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>8000</WorkToBuild>
+      <Mass>25</Mass>
+      <Flammability>0.8</Flammability>
+    </statBases>
+    <size>(2,2)</size>
+    <costList>
+      <CVG_SpiritWood>120</CVG_SpiritWood>
+      <CVG_SpiritThread>40</CVG_SpiritThread>
+      <Jade>4</Jade>
+    </costList>
+    <researchPrerequisites>
+      <li>CVG_Research_PuppetMasters</li>
+    </researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>0</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>1.5</fuelConsumptionRate>
+        <fuelCapacity>10</fuelCapacity>
+        <initialFuelPercent>0.5</initialFuelPercent>
+        <fuelFilter>
+          <thingDefs>
+            <li>CVG_SpiritStone</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+        <fuelLabel>Spirit stones</fuelLabel>
+        <fuelGizmoLabel>Spirit stones</fuelGizmoLabel>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="CompProperties_BandNode">
+        <hediff>BandNode</hediff>
+        <untunedEffect>BandNodeUntuned</untunedEffect>
+        <tuningEffect>BandNodeTuning</tuningEffect>
+        <tunedEffect>BandNodeTuned</tunedEffect>
+        <retuningEffect>BandNodeRetuning</retuningEffect>
+        <tuningCompleteSound>BandNodeTuning_Complete</tuningCompleteSound>
+        <powerConsumptionIdle>0</powerConsumptionIdle>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_BandNode</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BandNodeSubstitute" />
+    </modExtensions>
+  </ThingDef>
+</Defs>

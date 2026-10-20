@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- The realm of the strongest cultivator adds gravship range to the Island Heart (StatPart_HelmsmanRealm, Core). -->
+  <Operation MayRequire="Ludeon.RimWorld.Odyssey" Class="PatchOperationAdd">
+    <xpath>/Defs/StatDef[defName="GravshipRange"]</xpath>
+    <value>
+      <parts>
+        <li Class="Convergence.StatPart_HelmsmanRealm">
+          <perRealmLevel>3</perRealmLevel>
+        </li>
+      </parts>
+    </value>
+  </Operation>
+</Patch>

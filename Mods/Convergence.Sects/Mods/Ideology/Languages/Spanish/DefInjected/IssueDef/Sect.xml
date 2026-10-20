@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Issue_Cultivation.label>cultivo</CVG_Issue_Cultivation.label>
+  <CVG_Issue_Alchemy.label>alquimia y píldoras</CVG_Issue_Alchemy.label>
+  <CVG_Issue_Essence.label>extracción de esencias</CVG_Issue_Essence.label>
+  <CVG_Issue_Demonic.label>artes demoníacas</CVG_Issue_Demonic.label>
+  <CVG_Issue_Duels.label>duelos entre discípulos</CVG_Issue_Duels.label>
+  <CVG_Issue_Hierarchy.label>jerarquía de la secta</CVG_Issue_Hierarchy.label>
+  <CVG_Issue_Retreat.label>retiro de cultivo</CVG_Issue_Retreat.label>
+</LanguageData>

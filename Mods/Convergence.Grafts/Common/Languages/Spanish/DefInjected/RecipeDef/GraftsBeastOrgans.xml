@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Install_DragonLungs.label>instalar pulmón de dragón</CVG_Install_DragonLungs.label>
+  <CVG_Install_DragonLungs.description>Instala un pulmón de dragón. Necesita un altar de injerto del Dao.</CVG_Install_DragonLungs.description>
+  <CVG_Install_DragonLungs.jobString>Instalando pulmón de dragón.</CVG_Install_DragonLungs.jobString>
+  <CVG_Install_JadeKidneys.label>instalar riñón de jade</CVG_Install_JadeKidneys.label>
+  <CVG_Install_JadeKidneys.description>Instala un riñón de jade. Necesita un altar de injerto del Dao.</CVG_Install_JadeKidneys.description>
+  <CVG_Install_JadeKidneys.jobString>Instalando riñón de jade.</CVG_Install_JadeKidneys.jobString>
+  <CVG_Install_WindHearingEars.label>instalar oreja que oye con el viento</CVG_Install_WindHearingEars.label>
+  <CVG_Install_WindHearingEars.description>Instala una oreja que oye con el viento. Necesita un altar de injerto del Dao.</CVG_Install_WindHearingEars.description>
+  <CVG_Install_WindHearingEars.jobString>Instalando oreja que oye con el viento.</CVG_Install_WindHearingEars.jobString>
+  <CVG_Install_QilinSkin.label>instalar piel del qilin</CVG_Install_QilinSkin.label>
+  <CVG_Install_QilinSkin.description>Instala la piel del qilin. Necesita un altar de injerto del Dao.</CVG_Install_QilinSkin.description>
+  <CVG_Install_QilinSkin.jobString>Instalando piel del qilin.</CVG_Install_QilinSkin.jobString>
+  <CVG_Remove_QilinSkin.label>extraer piel del qilin</CVG_Remove_QilinSkin.label>
+  <CVG_Remove_QilinSkin.description>Extrae la piel del qilin. Las escamas doradas se desprenden una a una y vuelven a su estuche lacado.</CVG_Remove_QilinSkin.description>
+  <CVG_Remove_QilinSkin.jobString>Extrayendo piel del qilin.</CVG_Remove_QilinSkin.jobString>
+</LanguageData>

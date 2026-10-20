@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Ingredientes de Fauna y Flora: recetas alternativas de las mismas píldoras (el nivel de horno lo hereda del producto). -->
+  <RecipeDef>
+    <defName>CVG_MakeQiRecoveryPill_MoonAntler</defName>
+    <label>refine qi recovery pills from moon antler</label>
+    <description>Grind a moon antler with a spirit stone into two qi recovery pills. The moon deer's antler grows back every season, so the Pavilion keeps herds instead of herb gardens for its humblest pill.</description>
+    <jobString>Refining qi recovery pills from moon antler.</jobString>
+    <workAmount>2500</workAmount>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <recipeUsers><li>CVG_AlchemyFurnace</li></recipeUsers>
+    <skillRequirements><Intellectual>4</Intellectual></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_MoonAntler</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_MoonAntler</li><li>CVG_SpiritStone</li></thingDefs></fixedIngredientFilter>
+    <products><CVG_QiRecoveryPill>2</CVG_QiRecoveryPill></products>
+    <displayPriority>2215</displayPriority>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>CVG_MakePurificationPill_SpiritFungus</defName>
+    <label>refine blood purification pill from spirit fungus</label>
+    <description>Refine a blood purification pill with spirit fungus from the caves in place of spirit herbs. Miners swear the fungus that shows the way out of the dark also shows the blood the way out of its impurities. Needs a level 2 alchemy furnace.</description>
+    <jobString>Refining a blood purification pill from spirit fungus.</jobString>
+    <workAmount>1500</workAmount>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <recipeUsers><li>CVG_AlchemyFurnace</li></recipeUsers>
+    <skillRequirements><Intellectual>8</Intellectual></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritFungus</li></thingDefs></filter>
+        <count>6</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_BeastCore</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritJade</li></thingDefs></filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_SpiritFungus</li><li>CVG_BeastCore</li><li>CVG_SpiritJade</li><li>CVG_SpiritStone</li></thingDefs></fixedIngredientFilter>
+    <products><CVG_PurificationPill>1</CVG_PurificationPill></products>
+    <displayPriority>2215</displayPriority>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>CVG_MakeNineTurnsPill_TribulationMushroom</defName>
+    <label>refine nine-turns pill with a tribulation mushroom</label>
+    <description>Refine a nine-turns pill with a tribulation mushroom in place of the spirit crystal. The lightning still trapped in the mushroom does the ninth turn on its own, and the furnace only has to survive it. Needs a level 3 alchemy furnace.</description>
+    <jobString>Refining a nine-turns pill with a tribulation mushroom.</jobString>
+    <workAmount>6000</workAmount>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <recipeUsers><li>CVG_AlchemyFurnace</li></recipeUsers>
+    <skillRequirements><Intellectual>12</Intellectual></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritGinsengRoot</li></thingDefs></filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SnowLotusPetal</li></thingDefs></filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_TribulationMushroom</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_SpiritGinsengRoot</li><li>CVG_SnowLotusPetal</li><li>CVG_TribulationMushroom</li><li>CVG_SpiritStone</li></thingDefs></fixedIngredientFilter>
+    <products><CVG_NineTurnsPill>1</CVG_NineTurnsPill></products>
+    <displayPriority>2215</displayPriority>
+  </RecipeDef>
+</Defs>

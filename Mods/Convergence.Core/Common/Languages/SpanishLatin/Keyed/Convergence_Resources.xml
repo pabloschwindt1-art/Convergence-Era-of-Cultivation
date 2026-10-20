@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Setting_WuxiaRocks>Mundo wuxia: las casillas solo usan rocas wuxia</CVG_Setting_WuxiaRocks>
+  <CVG_Setting_WuxiaRocksTip>Con un módulo de recursos que añada rocas wuxia (roca de las diez tribulaciones, jade negro, piedra nube…), cada casilla del mundo elige sus tipos de roca solo entre ellas. Desactivado: se mezclan con las rocas vanilla. Se aplica a los mapas que se generen después.</CVG_Setting_WuxiaRocksTip>
+</LanguageData>

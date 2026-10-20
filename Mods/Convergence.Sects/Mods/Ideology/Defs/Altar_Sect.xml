@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Ancestral hall altar: the ritual focus of the sect. Final art: Things/Building/CVG/Sect/AncestralAltar (provisional: tinted vanilla altar). -->
+  <ThingDef ParentName="AltarBase">
+    <defName>CVG_AncestralAltar</defName>
+    <label>ancestral altar</label>
+    <description>A long table of dark wood where the tablets of the sect's dead masters are set in order of seniority, with three bowls for incense, tea and rice. Disciples are admitted before it, and the ones who ascend a realm are shown to it. The oldest tablet has no name, only a date, and nobody remembers why.</description>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/Building/CVG/AncestralAltar</texPath>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(2.4, 1, 0.8)</volume>
+      </shadowData>
+    </graphicData>
+    <size>(3,1)</size>
+    <castEdgeShadows>true</castEdgeShadows>
+    <costStuffCount>80</costStuffCount>
+    <costList>
+      <CVG_SpiritStone>5</CVG_SpiritStone>
+    </costList>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>12000</WorkToBuild>
+      <Beauty>12</Beauty>
+      <StyleDominance>15</StyleDominance>
+    </statBases>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>1</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

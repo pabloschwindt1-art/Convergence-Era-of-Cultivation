@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Day to day, part 4 (docs/modulos/DIA_A_DIA.md): food, medicine and daily consumption, each one the wuxia version of
+    a vanilla thing with the same structure (meal bases, CookMealBase recipes, Pemmican, MedicineBase, DrugBase).
+    Meals cook at any stove (the sect kitchen copies the stove recipes); medicine, the fasting pill and incense are
+    made at the alchemy furnace. Vanilla textures tinted until the own art exists.
+  -->
+
+  <!-- ================= Meals ================= -->
+  <ThingDef ParentName="MealCooked">
+    <defName>CVG_MealSteamedBuns</defName>
+    <label>steamed buns</label>
+    <description>Soft white buns stuffed with whatever the kitchen had, steamed in bamboo baskets. Every outer disciple of every sect has eaten ten thousand of them; Zhuge Liang, the old stories say, invented them to appease a river spirit without killing anyone.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/CVG_MealSteamedBuns</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>15</MarketValue>
+      <WorkToMake>300</WorkToMake>
+      <Nutrition>0.9</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+  </ThingDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>CVG_CookSteamedBuns</defName>
+    <label>steam buns</label>
+    <description>Steam a basket of stuffed buns from one main ingredient.</description>
+    <jobString>Steaming buns.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.5</count>
+      </li>
+    </ingredients>
+    <products>
+      <CVG_MealSteamedBuns>1</CVG_MealSteamedBuns>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <displayPriority>105</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>CVG_CookSteamedBunsBulk</defName>
+    <label>steam buns x4</label>
+    <description>Steam four baskets of stuffed buns at once.</description>
+    <jobString>Steaming buns.</jobString>
+    <workAmount>1200</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+        </filter>
+        <count>2.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <CVG_MealSteamedBuns>4</CVG_MealSteamedBuns>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <displayPriority>115</displayPriority>
+  </RecipeDef>
+
+  <ThingDef ParentName="MealFineBase">
+    <defName>CVG_MealSpiritRice</defName>
+    <label>rice with spirit meat</label>
+    <description>A bowl of rice crowned with slices of spirit beast meat, glazed in its own juices. Cultivators feel a thread of qi settle in the dantian, and body cultivators a little warmth in the blood. The Heavenly Cauldron Pavilion served it to disciples who passed their first trial.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/CVG_MealSpiritRice</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>35</MarketValue>
+    </statBases>
+    <ingestible>
+      <ingestEffect>EatMeat</ingestEffect>
+      <outcomeDoers>
+        <li Class="Convergence.IngestionOutcomeDoer_GainCultivationResource">
+          <path>CVG_Path_Qi</path>
+          <amount>10</amount>
+          <startsPath>false</startsPath>
+        </li>
+        <li Class="Convergence.IngestionOutcomeDoer_GainCultivationResource">
+          <path>CVG_Path_Body</path>
+          <amount>10</amount>
+          <startsPath>false</startsPath>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <noIngredientsFoodKind>Meat</noIngredientsFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <RecipeDef ParentName="CookMealFineBase">
+    <defName>CVG_CookSpiritRice</defName>
+    <label>cook rice with spirit meat</label>
+    <description>Cook rice and glaze slices of spirit beast meat over it.</description>
+    <jobString>Cooking rice with spirit meat.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritMeat</li>
+          </thingDefs>
+        </filter>
+        <count>0.25</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawRice</li>
+            <li MayRequire="prospero1088.convergence.faunaflora">CVG_GlutinousRice</li>
+          </thingDefs>
+        </filter>
+        <count>0.25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>CVG_SpiritMeat</li>
+        <li>RawRice</li>
+            <li MayRequire="prospero1088.convergence.faunaflora">CVG_GlutinousRice</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_MealSpiritRice>1</CVG_MealSpiritRice>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <displayPriority>205</displayPriority>
+  </RecipeDef>
+
+  <ThingDef ParentName="MealLavishBase">
+    <defName>CVG_MealSectBanquet</defName>
+    <label>sect banquet</label>
+    <description>Eight dishes on a lacquered tray, with spirit herbs in the broth and a peach-shaped bun for longevity. Sects serve it when an elder breaks through or a guest of rank arrives. The body takes a little of the qi of the herbs for a day.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/CVG_MealSectBanquet</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>60</MarketValue>
+    </statBases>
+    <ingestible>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_SpiritNourished</hediffDef>
+          <severity>1</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Ingredients">
+        <splitTransferableFoodKind>true</splitTransferableFoodKind>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <RecipeDef ParentName="CookMealFineBase">
+    <defName>CVG_CookSectBanquet</defName>
+    <label>cook sect banquet</label>
+    <description>Cook eight dishes for a sect banquet, with spirit herbs in the broth.</description>
+    <jobString>Cooking a sect banquet.</jobString>
+    <workAmount>800</workAmount>
+    <skillRequirements Inherit="False">
+      <Cooking>8</Cooking>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <customSummary>protein</customSummary>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>0.5</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>0.5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritHerb</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <thingDefs>
+        <li>CVG_SpiritHerb</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_MealSectBanquet>1</CVG_MealSectBanquet>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <displayPriority>305</displayPriority>
+  </RecipeDef>
+
+  <!-- ================= Travel ration (pemmican) ================= -->
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>CVG_BiguPill</defName>
+    <label>fasting pill</label>
+    <description>A grain pill pressed from rice and spirit herb. Bigu, the Taoist art of living without grain, starts with these: one pill quiets hunger for a while, and a pouch of them lasts a caravan for weeks without rotting.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_BiguPill</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>1.6</MarketValue>
+      <Mass>0.012</Mass>
+      <Flammability>0.6</Flammability>
+      <WorkToMake>700</WorkToMake>
+      <DeteriorationRate>1</DeteriorationRate>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Meal</foodType>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>6</optimalityOffsetHumanlikes>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_BiguCalm</hediffDef>
+          <severity>0.25</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>120</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>CVG_BiguCalm</defName>
+    <label>fasting calm</label>
+    <description>The fasting pill keeps the stomach quiet: hunger comes more slowly for a while.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <hungerRateFactor>0.75</hungerRateFactor>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <RecipeDef>
+    <defName>CVG_MakeBiguPills</defName>
+    <label>press fasting pills</label>
+    <description>Press rice and a spirit herb into grain pills that keep for months.</description>
+    <jobString>Pressing fasting pills.</jobString>
+    <workAmount>700</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawRice</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritHerb</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawRice</li>
+        <li>CVG_SpiritHerb</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_BiguPill>20</CVG_BiguPill>
+    </products>
+    <recipeUsers>
+      <li>CVG_AlchemyFurnace</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <!-- ================= Medicine (herbal / industrial / glitterworld) ================= -->
+  <ThingDef ParentName="MedicineBase">
+    <defName>CVG_HerbalOintment</defName>
+    <label>herbal ointment</label>
+    <description>A jar of spirit herb paste with a strip of clean cloth. Every wandering cultivator carries one; Hua Tuo, the divine physician, is said to have mixed the first under a pine on Mount Song. Better than common herbal medicine, worse than a real medical kit.</description>
+    <possessionCount>4</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_HerbalOintment</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <MarketValue>13</MarketValue>
+      <Mass>0.35</Mass>
+      <Flammability>1.3</Flammability>
+      <MedicalPotency>0.65</MedicalPotency>
+      <MedicalQualityMax>0.75</MedicalQualityMax>
+      <DeteriorationRate>4</DeteriorationRate>
+      <WorkToMake>500</WorkToMake>
+    </statBases>
+    <costList>
+      <CVG_SpiritHerb>2</CVG_SpiritHerb>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Medicine</workSkill>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+        <li>CVG_AlchemyFurnace</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Medicine>3</Medicine>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="MedicineBase">
+    <defName>CVG_HealingPill</defName>
+    <label>healing pill</label>
+    <description>A red pill refined in the alchemy furnace from herb ointment, spirit herb and a spirit stone. Crushed into a wound or swallowed, it does what a kit of modern medicine does. The alchemists of the Heavenly Cauldron sold them by the thousand to sects at war.</description>
+    <possessionCount>3</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/CVG/HealingPill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <techLevel>Medieval</techLevel>
+    <statBases>
+      <MarketValue>20</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>0.7</Flammability>
+      <MedicalPotency>1.00</MedicalPotency>
+      <MedicalQualityMax>1.00</MedicalQualityMax>
+      <DeteriorationRate>2</DeteriorationRate>
+      <WorkToMake>700</WorkToMake>
+    </statBases>
+    <costList>
+      <CVG_HerbalOintment>1</CVG_HerbalOintment>
+      <CVG_SpiritHerb>1</CVG_SpiritHerb>
+      <CVG_SpiritStone>1</CVG_SpiritStone>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <recipeUsers>
+        <li>CVG_AlchemyFurnace</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="MedicineBase">
+    <defName>CVG_JadeElixir</defName>
+    <label>jade elixir</label>
+    <description>A green elixir in a sealed jade vial, distilled from a healing pill, spirit jade and herbs over many days. It knits flesh like a glitterworld kit. Emperors of the old world poisoned themselves chasing elixirs like this one; this one, at least, works. Needs a level 2 alchemy furnace.</description>
+    <possessionCount>2</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_JadeElixir</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <techLevel>Medieval</techLevel>
+    <statBases>
+      <MarketValue>55</MarketValue>
+      <Mass>0.25</Mass>
+      <Flammability>0.2</Flammability>
+      <MedicalPotency>1.35</MedicalPotency>
+      <MedicalQualityMax>1.15</MedicalQualityMax>
+      <DeteriorationRate>1</DeteriorationRate>
+      <WorkToMake>2500</WorkToMake>
+    </statBases>
+    <costList>
+      <CVG_HealingPill>1</CVG_HealingPill>
+      <CVG_SpiritJade>1</CVG_SpiritJade>
+      <CVG_SpiritHerb>2</CVG_SpiritHerb>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <recipeUsers>
+        <li>CVG_AlchemyFurnace</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RequiresWorkbenchLevel">
+        <level>2</level>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- ================= Cloud tea (social drink, no alcohol) ================= -->
+  <ThingDef ParentName="DrugBase">
+    <defName>CVG_CloudTea</defName>
+    <label>cloud tea</label>
+    <description>Spirit herb leaves rolled and steamed the way the tea masters of the Wudang slopes did, until the cup smells of mist. Shared over a go board it loosens tongues and clears the mind, without the fog of wine. It does not addict.</description>
+    <possessionCount>6</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_CloudTea</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <MarketValue>4</MarketValue>
+      <Mass>0.2</Mass>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.04</Nutrition>
+      <WorkToMake>400</WorkToMake>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+      <foodType>Fluid, Processed</foodType>
+      <joyKind>Social</joyKind>
+      <joy>0.15</joy>
+      <drugCategory>Social</drugCategory>
+      <ingestSound>Ingest_Beer</ingestSound>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <chairSearchRadius>25</chairSearchRadius>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      <tableDesired>false</tableDesired>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_CloudTeaClarity</hediffDef>
+          <severity>0.5</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>11</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>CVG_CloudTeaClarity</defName>
+    <label>tea clarity</label>
+    <description>A cup of cloud tea: the mind is clear and qi gathers a little faster for a few hours.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-2</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <CVG_QiRegen>1.1</CVG_QiRegen>
+        </statFactors>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.03</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <RecipeDef>
+    <defName>CVG_BrewCloudTea</defName>
+    <label>prepare cloud tea</label>
+    <description>Roll and steam cloud tea leaves (or, lacking them, spirit herb) into cloud tea.</description>
+    <jobString>Preparing cloud tea.</jobString>
+    <workAmount>400</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li MayRequire="prospero1088.convergence.faunaflora">CVG_CloudTeaLeaf</li>
+            <li>CVG_SpiritHerb</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li MayRequire="prospero1088.convergence.faunaflora">CVG_CloudTeaLeaf</li>
+            <li>CVG_SpiritHerb</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_CloudTea>6</CVG_CloudTea>
+    </products>
+    <recipeUsers>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <!-- ================= Incense (soft meditation drug) ================= -->
+  <ThingDef ParentName="DrugBase">
+    <defName>CVG_Incense</defName>
+    <label>incense</label>
+    <description>Sticks of sandalwood dust and spirit herb that burn slow and blue. Breathing the smoke before cultivating quiets the heart and lets qi flow a little faster, but it dulls the senses. The Silent Lotus Temple burns a stick for every disciple who meditates there.</description>
+    <possessionCount>6</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_Incense</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <stackLimit>50</stackLimit>
+    <statBases>
+      <DeteriorationRate>1</DeteriorationRate>
+      <MarketValue>3</MarketValue>
+      <Mass>0.03</Mass>
+      <Flammability>1.2</Flammability>
+      <WorkToMake>450</WorkToMake>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <joyKind>Meditative</joyKind>
+      <joy>0.1</joy>
+      <drugCategory>Social</drugCategory>
+      <baseIngestTicks>420</baseIngestTicks>
+      <ingestSound>Ingest_Smoke</ingestSound>
+      <ingestCommandString>Burn {0}</ingestCommandString>
+      <ingestReportString>Burning {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <chairSearchRadius>8</chairSearchRadius>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      <tableDesired>false</tableDesired>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_IncenseCalm</hediffDef>
+          <severity>0.5</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>12</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>CVG_IncenseCalm</defName>
+    <label>incense calm</label>
+    <description>Incense smoke: a quiet heart and freer qi, but slower senses.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-2</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <CVG_CultivationSpeed>1.1</CVG_CultivationSpeed>
+        </statFactors>
+        <statOffsets>
+          <MentalBreakThreshold>-0.03</MentalBreakThreshold>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <RecipeDef>
+    <defName>CVG_MakeIncense</defName>
+    <label>roll incense</label>
+    <description>Grind wood and spirit herb into a paste and roll it into incense sticks.</description>
+    <jobString>Rolling incense.</jobString>
+    <workAmount>450</workAmount>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritHerb</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>CVG_SpiritHerb</li>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_Incense>8</CVG_Incense>
+    </products>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+      <li>CVG_AlchemyFurnace</li>
+    </recipeUsers>
+  </RecipeDef>
+</Defs>

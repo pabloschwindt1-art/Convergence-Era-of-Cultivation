@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Cultivation bonds (docs/modulos/RASGOS.md §8). DefModExtension_DualCultivation (Core): cultivating near each other is faster. -->
+  <PawnRelationDef>
+    <defName>CVG_DaoPartner</defName>
+    <label>Dao partner</label>
+    <importance>160</importance>
+    <reflexive>true</reflexive>
+    <opinionOffset>40</opinionOffset>
+    <generationChanceFactor>0</generationChanceFactor>
+    <diedThought>CVG_Thought_DaoPartnerDied</diedThought>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DualCultivation">
+        <factor>1.3</factor>
+        <radius>8</radius>
+        <vowFromRelations>
+          <li>Lover</li>
+          <li>Fiance</li>
+          <li>Spouse</li>
+        </vowFromRelations>
+      </li>
+    </modExtensions>
+  </PawnRelationDef>
+
+  <PawnRelationDef>
+    <defName>CVG_SwornSibling</defName>
+    <label>sworn sibling</label>
+    <labelFemale>sworn sibling</labelFemale>
+    <importance>90</importance>
+    <reflexive>true</reflexive>
+    <opinionOffset>30</opinionOffset>
+    <generationChanceFactor>0</generationChanceFactor>
+    <diedThought>CVG_Thought_SwornSiblingDied</diedThought>
+  </PawnRelationDef>
+
+  <PawnRelationDef>
+    <defName>CVG_LifelongRival</defName>
+    <label>lifelong rival</label>
+    <importance>60</importance>
+    <reflexive>true</reflexive>
+    <opinionOffset>-35</opinionOffset>
+    <generationChanceFactor>0</generationChanceFactor>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DualCultivation">
+        <factor>1.15</factor>
+        <radius>20</radius>
+        <requireBothCultivating>false</requireBothCultivating>
+      </li>
+    </modExtensions>
+  </PawnRelationDef>
+
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>CVG_Thought_DaoPartnerDied</defName>
+    <durationDays>40</durationDays>
+    <stages>
+      <li>
+        <label>my Dao partner {0} died</label>
+        <description>Half of my Dao has been torn away. We cultivated side by side, breath for breath; now I breathe alone.</description>
+        <baseMoodEffect>-25</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>CVG_Thought_SwornSiblingDied</defName>
+    <stages>
+      <li>
+        <label>my sworn sibling {0} died</label>
+        <description>We swore to die on the same day. I am still here. The Oath of the Road says nothing about what to do with the half that remains.</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

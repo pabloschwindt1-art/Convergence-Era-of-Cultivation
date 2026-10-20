@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Make_CVG_JadeSculptureSmall.label>tallar escultura de jade pequeña</Make_CVG_JadeSculptureSmall.label>
+  <Make_CVG_JadeSculptureSmall.description>Tallar escultura de jade pequeña.</Make_CVG_JadeSculptureSmall.description>
+  <Make_CVG_JadeSculptureSmall.jobString>Tallando escultura de jade pequeña.</Make_CVG_JadeSculptureSmall.jobString>
+  <Make_CVG_JadeSculptureLarge.label>tallar escultura de jade grande</Make_CVG_JadeSculptureLarge.label>
+  <Make_CVG_JadeSculptureLarge.description>Tallar escultura de jade grande.</Make_CVG_JadeSculptureLarge.description>
+  <Make_CVG_JadeSculptureLarge.jobString>Tallando escultura de jade grande.</Make_CVG_JadeSculptureLarge.jobString>
+  <Make_CVG_JadeSculptureGrand.label>tallar gran escultura de jade</Make_CVG_JadeSculptureGrand.label>
+  <Make_CVG_JadeSculptureGrand.description>Tallar gran escultura de jade.</Make_CVG_JadeSculptureGrand.description>
+  <Make_CVG_JadeSculptureGrand.jobString>Tallando gran escultura de jade.</Make_CVG_JadeSculptureGrand.jobString>
+</LanguageData>

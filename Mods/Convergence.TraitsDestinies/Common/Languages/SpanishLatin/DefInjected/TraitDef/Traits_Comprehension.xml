@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Comprehension.degreeDatas.0.label>comprensión torpe</CVG_Comprehension.degreeDatas.0.label>
+  <CVG_Comprehension.degreeDatas.0.description>El Dao llega despacio a {PAWN_nameDef}: el cultivo, el estudio y las técnicas le cuestan. Aun así, el Loto Silencioso cuenta que un jardinero de pocas luces llegó a abad después de ver caer una sola hoja. Mejora con las iluminaciones súbitas.</CVG_Comprehension.degreeDatas.0.description>
+  <CVG_Comprehension.degreeDatas.1.label>comprensión aguda</CVG_Comprehension.degreeDatas.1.label>
+  <CVG_Comprehension.degreeDatas.1.description>{PAWN_nameDef} capta el Dao rápido: cultivo más veloz y técnicas más baratas. Los reclutadores del Pico Azur muestran a los chicos una sola forma de espada; buscan a quienes la repiten esa misma noche. Mejora todavía más con las iluminaciones súbitas.</CVG_Comprehension.degreeDatas.1.description>
+  <CVG_Comprehension.degreeDatas.2.label>prodigio</CVG_Comprehension.degreeDatas.2.label>
+  <CVG_Comprehension.degreeDatas.2.description>Un prodigio del Dao, de los que se ven una vez por generación: el cultivo, el aprendizaje y las técnicas llegan con una facilidad que asusta. Cualquier secta de Jiuxiao iría a la guerra por un discípulo así, y más de una lo hizo.</CVG_Comprehension.degreeDatas.2.description>
+  <CVG_LateBloomer.degreeDatas.0.label>floración tardía</CVG_LateBloomer.degreeDatas.0.label>
+  <CVG_LateBloomer.degreeDatas.0.description>Las grandes vasijas tardan en llenarse: el avance es lento en los primeros reinos y cada vez más rápido en los altos. El proverbio está tallado sobre la puerta del Clan del Dragón Antiguo, que cuenta su juventud en siglos.</CVG_LateBloomer.degreeDatas.0.description>
+  <CVG_EphemeralGenius.degreeDatas.0.label>genio efímero</CVG_EphemeralGenius.degreeDatas.0.label>
+  <CVG_EphemeralGenius.degreeDatas.0.description>Velocidad cegadora en los primeros reinos; en los altos, el avance se estanca. Los cultivadores errantes los llaman fuegos artificiales: todos recuerdan el destello, nadie recuerda dónde cayeron.</CVG_EphemeralGenius.degreeDatas.0.description>
+</LanguageData>

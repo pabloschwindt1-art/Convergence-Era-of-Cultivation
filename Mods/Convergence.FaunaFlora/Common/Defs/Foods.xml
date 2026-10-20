@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Part 4 of docs/modulos/DIA_A_DIA.md (food): the pressed rice cake (the plain cousin of the bigu pill). The rest of part 4 (meals, bigu pill, tea) lives in Convergence: Alchemy. Art provisional (tinted vanilla meal sprites); final art Things/Item/Meal/CVG/<Name>. -->
+
+  <!-- ================= Rice cake (travel ration: the weaker cousin of the bigu pill) ================= -->
+  <ThingDef ParentName="MealCooked">
+    <defName>CVG_RiceCake</defName>
+    <label>pressed rice cake</label>
+    <description>Glutinous rice pressed and dried into a hard grey brick that keeps for weeks and weighs almost nothing. It is the ration of disciples on long errands and of cultivators who will not stop on the road. It tastes of rice and perseverance, in that order.</description>
+    <graphicData>
+      <texPath>Things/Item/Meal/CVG_RiceCake</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>19</MarketValue>
+      <WorkToMake>300</WorkToMake>
+      <Nutrition>0.9</Nutrition>
+      <Mass>0.25</Mass>
+    </statBases>
+    <comps Inherit="False">
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>45</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <optimalityOffsetHumanlikes>-10</optimalityOffsetHumanlikes>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetFeedingAnimals>-50</optimalityOffsetFeedingAnimals>
+    </ingestible>
+  </ThingDef>
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>CVG_CookRiceCake</defName>
+    <label>press rice cakes</label>
+    <description>Press glutinous rice into long-lasting cakes.</description>
+    <jobString>Pressing rice cakes.</jobString>
+    <workAmount>300</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>false</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_GlutinousRice</li></thingDefs></filter>
+        <count>0.5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs><li>CVG_GlutinousRice</li></thingDefs>
+    </fixedIngredientFilter>
+    <products><CVG_RiceCake>1</CVG_RiceCake></products>
+    <workSkill>Cooking</workSkill>
+    <displayPriority>86</displayPriority>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+      <li MayRequire="prospero1088.convergence.furniture">CVG_SectKitchen</li>
+    </recipeUsers>
+  </RecipeDef>
+</Defs>

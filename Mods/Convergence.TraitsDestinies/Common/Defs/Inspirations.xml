@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Wuxia inspirations (docs/revision/REVISION_TraitsDestinies.md): the vanilla inspiration system (high mood → a
+    chance; restless heart: after a breakdown). Only awakened cultivators after the Convergence
+    (Convergence.InspirationWorker_Cultivator).
+  -->
+  <InspirationDef>
+    <defName>CVG_Inspired_Enlightenment</defName>
+    <label>sudden enlightenment</label>
+    <workerClass>Convergence.InspirationWorker_Cultivator</workerClass>
+    <baseCommonality>0.6</baseCommonality>
+    <baseDurationDays>3</baseDurationDays>
+    <beginLetter>[PAWN_pronoun] has glimpsed the Dao. For the next 3 days [PAWN_pronoun] cultivates much faster and breaks through more surely.\n\nThe old masters called it dunwu, sudden awakening: years of patience paid in a single breath.</beginLetter>
+    <beginLetterDef>PositiveEvent</beginLetterDef>
+    <endMessage>{0} is no longer inspired (sudden enlightenment).</endMessage>
+    <baseInspectLine>Inspired: sudden enlightenment</baseInspectLine>
+    <minAge>13</minAge>
+      <statFactors>
+        <CVG_CultivationSpeed>2.5</CVG_CultivationSpeed>
+      </statFactors>
+      <statOffsets>
+        <CVG_BreakthroughChance>0.1</CVG_BreakthroughChance>
+      </statOffsets>
+
+  </InspirationDef>
+
+  <InspirationDef>
+    <defName>CVG_Inspired_SwordIntent</defName>
+    <label>sword intent</label>
+    <workerClass>Convergence.InspirationWorker_Cultivator</workerClass>
+    <baseCommonality>0.6</baseCommonality>
+    <baseDurationDays>4</baseDurationDays>
+    <beginLetter>A sword intent has awakened in [PAWN_objective]. For the next 4 days [PAWN_possessive] blows land more often and cut deeper.\n\nSword cultivators say the intent chooses the swordsman, not the other way around.</beginLetter>
+    <beginLetterDef>PositiveEvent</beginLetterDef>
+    <endMessage>{0} is no longer inspired (sword intent).</endMessage>
+    <baseInspectLine>Inspired: sword intent</baseInspectLine>
+    <minAge>13</minAge>
+      <statOffsets>
+        <MeleeHitChance>6</MeleeHitChance>
+      </statOffsets>
+      <statFactors>
+        <MeleeDamageFactor>1.2</MeleeDamageFactor>
+      </statFactors>
+      <associatedSkills>
+        <li>Melee</li>
+      </associatedSkills>
+  </InspirationDef>
+
+  <InspirationDef>
+    <defName>CVG_Inspired_ForgeFire</defName>
+    <label>forge fire</label>
+    <workerClass>Convergence.InspirationWorker_Cultivator</workerClass>
+    <baseCommonality>0.6</baseCommonality>
+    <baseDurationDays>4</baseDurationDays>
+    <beginLetter>The fire of Gan Jiang and Mo Ye burns in [PAWN_possessive] hands. For the next 4 days [PAWN_pronoun] forges and works much faster.\n\nThe legendary smiths threw themselves into their furnace to finish a pair of swords; this fire asks less.</beginLetter>
+    <beginLetterDef>PositiveEvent</beginLetterDef>
+    <endMessage>{0} is no longer inspired (forge fire).</endMessage>
+    <baseInspectLine>Inspired: forge fire</baseInspectLine>
+    <minAge>13</minAge>
+      <statFactors>
+        <CVG_ForgeSpeed>1.8</CVG_ForgeSpeed>
+        <WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+      </statFactors>
+      <associatedSkills>
+        <li>Crafting</li>
+      </associatedSkills>
+      <requiredNonDisabledWorkTags>Crafting</requiredNonDisabledWorkTags>
+  </InspirationDef>
+
+</Defs>

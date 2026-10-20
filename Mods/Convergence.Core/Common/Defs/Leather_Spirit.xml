@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Left by awakened spirit beasts when butchered (DefModExtension_SpiritBeast.leatherDef). The Convergence: Apparel mod makes clothes and armor from it. -->
+  <ThingDef ParentName="LeatherBase">
+    <defName>CVG_SpiritLeather</defName>
+    <label>spirit leather</label>
+    <description>Hide of a beast that drank the returned qi. Tougher and warmer than ordinary leather, and it carries qi well. The higher the level of the beast, the more of it you get.</description>
+    <graphicData>
+      <color>(110,150,170)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>9</MarketValue>
+      <StuffPower_Armor_Sharp>1.25</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.4</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.7</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>26</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>20</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(110,150,170)</color>
+      <commonality>0.02</commonality>
+      <statFactors>
+        <MaxHitPoints>1.6</MaxHitPoints>
+        <Beauty>2</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+</Defs>

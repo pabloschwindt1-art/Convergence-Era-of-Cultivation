@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Spirit materials (docs/modulos/RECURSOS.md). Stuff: walls, doors, furniture and weapons can be made of them. -->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_SpiritSteel</defName>
+    <label>spirit steel</label>
+    <description>Steel tempered with spirit stones in a refining furnace. Stronger and lighter than steel, and it carries qi well: the metal of choice for sect weapons and gates.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_SpiritSteel</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>6</MarketValue>
+      <Mass>0.4</Mass>
+      <StuffPower_Armor_Sharp>1.1</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.55</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.75</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.2</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.1</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <deepCommonality>0</deepCommonality>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <appearance>Metal</appearance>
+      <commonality>0.02</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <isAirtight>true</isAirtight>
+      <color>(120,150,175)</color>
+      <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+      <statFactors>
+        <MaxHitPoints>1.6</MaxHitPoints>
+        <Beauty>1.5</Beauty>
+        <Flammability>0.2</Flammability>
+        <WorkToMake>1.3</WorkToMake>
+        <WorkToBuild>1.3</WorkToBuild>
+        <MeleeWeapon_CooldownMultiplier>0.9</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_MoonSilver</defName>
+    <label>moon silver</label>
+    <description>Silver refined with spirit jade under the moon. Very light and beautiful; the old sects said it burns what comes from the void.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_MoonSilver</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>8</MarketValue>
+      <Mass>0.25</Mass>
+      <StuffPower_Armor_Sharp>0.8</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.4</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.0</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.0</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.9</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <deepCommonality>0</deepCommonality>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <appearance>Metal</appearance>
+      <commonality>0.02</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <isAirtight>true</isAirtight>
+      <color>(185,200,235)</color>
+      <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+      <statOffsets>
+        <Beauty>4</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>0.9</MaxHitPoints>
+        <Beauty>4</Beauty>
+        <Flammability>0</Flammability>
+        <WorkToMake>1.2</WorkToMake>
+        <WorkToBuild>1.2</WorkToBuild>
+        <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_ChaosGold</defName>
+    <label>chaos gold</label>
+    <description>Gold fused with spirit crystal until it remembers the chaos before the world. Absurdly valuable; used for high artifacts and for showing off.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_ChaosGold</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>40</MarketValue>
+      <Mass>0.4</Mass>
+      <StuffPower_Armor_Sharp>0.6</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.3</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.8</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.8</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <deepCommonality>0</deepCommonality>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <appearance>Metal</appearance>
+      <commonality>0.02</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <isAirtight>true</isAirtight>
+      <color>(200,160,230)</color>
+      <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+      <statOffsets>
+        <Beauty>20</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>0.7</MaxHitPoints>
+        <Beauty>8</Beauty>
+        <Flammability>0</Flammability>
+        <WorkToMake>1.6</WorkToMake>
+        <WorkToBuild>1.6</WorkToBuild>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_ColdIron</defName>
+    <tradeability>Sellable</tradeability>
+    <label>thousand-year cold iron</label>
+    <description>Iron that lay in the deep cold for a thousand years and woke with the Convergence. It cannot be smelted, only found; its edges are extreme.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_ColdIron</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>12</MarketValue>
+      <Mass>0.6</Mass>
+      <StuffPower_Armor_Sharp>1.3</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.6</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.5</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.3</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.2</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <deepCommonality>0</deepCommonality>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <appearance>Metal</appearance>
+      <commonality>0.02</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <isAirtight>true</isAirtight>
+      <color>(150,185,215)</color>
+      <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+      <statFactors>
+        <MaxHitPoints>1.8</MaxHitPoints>
+        <Beauty>1</Beauty>
+        <Flammability>0</Flammability>
+        <WorkToMake>1.8</WorkToMake>
+        <WorkToBuild>1.6</WorkToBuild>
+        <MeleeWeapon_CooldownMultiplier>1.0</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_SpiritCrystal</defName>
+    <tradeability>Sellable</tradeability>
+    <label>spirit crystal</label>
+    <description>Clear crystal grown from dense qi. It feeds formations and high pills, and as a building material it is fragile but radiant.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_SpiritCrystal</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>ChunkRock_Drop</soundInteract>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MarketValue>15</MarketValue>
+      <Mass>0.3</Mass>
+      <StuffPower_Armor_Sharp>0.7</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.35</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.8</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.1</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <deepCommonality>0</deepCommonality>
+    <stuffProps>
+      <categories>
+        <li>Stony</li>
+      </categories>
+      <commonality>0.02</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(150,220,240)</color>
+      <soundImpactBullet>BulletImpact_Ground</soundImpactBullet>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Stone</soundImpactMelee>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <statOffsets>
+        <Beauty>15</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>0.6</MaxHitPoints>
+        <Beauty>5</Beauty>
+        <Flammability>0</Flammability>
+        <WorkToMake>1.5</WorkToMake>
+        <WorkToBuild>3.0</WorkToBuild>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.05</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>CVG_MineableSpiritCrystal</defName>
+    <label>spirit crystal vein</label>
+    <description>Rock threaded with spirit crystal that grew when qi returned. Miners of Jiuxiao leave an offering of rice before breaking a seam, so the crystal does not remember who took it.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(90,100,110)</color>
+      <colorTwo>(170,240,255)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>2000</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>CVG_SpiritCrystal</mineableThing>
+      <mineableYield>30</mineableYield>
+      <mineableScatterCommonality>0.02</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>2~5</mineableScatterLumpSizeRange>
+      <veinMineable>true</veinMineable>
+    </building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ConvergenceMineable">
+        <eventLumps>1~2</eventLumps>
+        <eventLumpSize>2~5</eventLumpSize>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>CVG_MineableColdIron</defName>
+    <label>cold iron vein</label>
+    <description>Deep, freezing iron that slept for a thousand years. Only found in cold lands.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(70,80,90)</color>
+      <colorTwo>(160,200,235)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>4000</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>CVG_ColdIron</mineableThing>
+      <mineableYield>30</mineableYield>
+      <mineableScatterCommonality>0.01</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>2~4</mineableScatterLumpSizeRange>
+      <veinMineable>true</veinMineable>
+    </building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ConvergenceMineable">
+        <eventLumps>1~1</eventLumps>
+        <eventLumpSize>2~4</eventLumpSize>
+        <maxTileTemperature>0</maxTileTemperature>
+        <allowedBiomes>
+          <li>Tundra</li>
+          <li>IceSheet</li>
+          <li>SeaIce</li>
+          <li>BorealForest</li>
+          <li>ColdBog</li>
+        </allowedBiomes>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

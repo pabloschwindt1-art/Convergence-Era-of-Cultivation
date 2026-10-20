@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Guía dentro del juego: conceptos del Ayudante de aprendizaje vanilla (se enseñan cuando aparece la ocasión). -->
+  <ConceptDef Abstract="True" Name="CVG_ConceptBase">
+    <priority>60</priority>
+    <needsOpportunity>true</needsOpportunity>
+  </ConceptDef>
+
+  <ConceptDef ParentName="CVG_ConceptBase">
+    <defName>CVG_Concept_Cultivation</defName>
+    <label>Cultivation</label>
+    <helpText>Since the Convergence, qi flows again. Colonists with a SPIRIT ROOT can gather it.\n\nSelect a colonist and open the CULTIVATION tab: root, realm, stage, qi and what the realm grants.\n\nBuild a cultivation spot or cushion and enable the CULTIVATE job in the Work tab. Cultivating there fills the realm's progress bar. Stage by stage, the colonist reaches a bottleneck.\n\nColonists without a root can still TEMPER THE BODY: eat spirit-beast meat and train.</helpText>
+  </ConceptDef>
+
+  <ConceptDef ParentName="CVG_ConceptBase">
+    <defName>CVG_Concept_Techniques</defName>
+    <label>Cultivation techniques</label>
+    <helpText>Each new stage gives comprehension points; each realm gives more.\n\nSpend them with the TECHNIQUES command of the colonist, or the TECHNIQUES AND DEVELOPMENT button at the top of the Cultivation tab. Unlock paths (one per element of the root, plus martial arts) and learn techniques.\n\nDrag active techniques into a COMBAT SET: those are the abilities the colonist shows when drafted. Jade slips and manuals open more paths.</helpText>
+  </ConceptDef>
+
+  <ConceptDef ParentName="CVG_ConceptBase">
+    <defName>CVG_Concept_Breakthrough</defName>
+    <label>Bottlenecks and tribulation</label>
+    <helpText>At the last stage of a realm the cultivator hits a BOTTLENECK: progress stops.\n\nThe BREAKTHROUGH command appears on the colonist (only when not drafted). Requirements are listed on the button. Pills and a solid foundation help.\n\nBreaking into a great realm calls down a HEAVENLY TRIBULATION. Implants add celestial dissonance and make it harsher.</helpText>
+  </ConceptDef>
+
+  <ConceptDef ParentName="CVG_ConceptBase">
+    <defName>CVG_Concept_QiNetwork</defName>
+    <label>Qi network</label>
+    <helpText>Formations and qi buildings work like power: GENERATORS feed the network, CONDUITS carry it, and consumers draw it.\n\nThe first generators burn spirit stones. Later ones draw qi from the air, from storms or from veins under the ground.\n\nThe QI OVERLAY button (bottom right, next to the other map overlays) shows where qi gathers. Build on bright ground.</helpText>
+  </ConceptDef>
+</Defs>

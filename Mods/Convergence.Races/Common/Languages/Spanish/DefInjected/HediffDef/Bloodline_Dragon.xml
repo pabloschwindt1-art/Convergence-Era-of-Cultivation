@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Bloodline_Dragon.label>sangre de dragón</CVG_Bloodline_Dragon.label>
+  <CVG_Bloodline_Dragon.description>Sangre de dragón despierta: escamas, fuerza y una vida muy larga. Con ella vienen su orgullo y su hambre.</CVG_Bloodline_Dragon.description>
+  <CVG_Bloodline_Dragon.stages.0.label>rastro</CVG_Bloodline_Dragon.stages.0.label>
+  <CVG_Bloodline_Dragon.stages.1.label>diluida</CVG_Bloodline_Dragon.stages.1.label>
+  <CVG_Bloodline_Dragon.stages.2.label>pura</CVG_Bloodline_Dragon.stages.2.label>
+  <CVG_Bloodline_Dragon.stages.3.label>ancestral</CVG_Bloodline_Dragon.stages.3.label>
+</LanguageData>

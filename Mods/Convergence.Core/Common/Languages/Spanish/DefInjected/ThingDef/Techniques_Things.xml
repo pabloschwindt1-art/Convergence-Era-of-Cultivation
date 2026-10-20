@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Projectile_MetalNeedle.label>aguja dorada</CVG_Projectile_MetalNeedle.label>
+  <CVG_Projectile_Thorn.label>espina venenosa</CVG_Projectile_Thorn.label>
+  <CVG_Projectile_FrostShard.label>esquirla de escarcha</CVG_Projectile_FrostShard.label>
+  <CVG_Projectile_Fireball.label>bola de fuego</CVG_Projectile_Fireball.label>
+  <CVG_Projectile_StoneBullet.label>bala de piedra</CVG_Projectile_StoneBullet.label>
+  <CVG_JadeSlip.label>tablilla de jade</CVG_JadeSlip.label>
+  <CVG_JadeSlip.description>Una tablilla de jade verde grabada con un manual de cultivo. Un cultivador que se la apoya en la frente recibe el manual directamente en la mente y aprende su primera técnica. La tablilla no se gasta: puede enseñar a otros discípulos. Para leerla hace falta la investigación «manuales de técnica» (pestaña Cultivo).</CVG_JadeSlip.description>
+  <CVG_JadeSlip.comps.CompUsable.useLabel>Leer {0_label}</CVG_JadeSlip.comps.CompUsable.useLabel>
+</LanguageData>

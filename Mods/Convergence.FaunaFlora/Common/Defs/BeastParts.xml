@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Beast parts by type (docs/modulos/CONTENIDO_TOI_ACS.md): feathers, fangs and chitin as butchery products and ingredients. Art provisional; final art Things/Item/Resource/CVG_<Name>. -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_CraneFeather</defName>
+    <label>crane feather</label>
+    <description>A long white feather with a thread of red at the quill, light enough to float on its own breath. The fan-makers of Jiuxiao pay by the feather, and sword saints stuff pillows with them to keep their qi from souring at night.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_CraneFeather</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>12</MarketValue>
+      <Mass>0.01</Mass>
+      <MaxHitPoints>20</MaxHitPoints>
+      <Flammability>1.2</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+    </statBases>
+    <stackLimit>100</stackLimit>
+    <thingCategories><li>ResourcesRaw</li></thingCategories>
+    <healthAffectsPrice>false</healthAffectsPrice>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_WolfFang</defName>
+    <label>wind wolf fang</label>
+    <description>A curved fang that hums faintly in the wind. Hunters string them into necklaces, believing they keep wolves away; the wolves do not agree. Collectors from the cities pay for them as if each fang were a talisman.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_WolfFang</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>18</MarketValue>
+      <Mass>0.05</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <stackLimit>75</stackLimit>
+    <thingCategories><li>ResourcesRaw</li></thingCategories>
+    <healthAffectsPrice>false</healthAffectsPrice>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_NetherChitin</defName>
+    <label>nether chitin</label>
+    <description>Black, glossy plates stripped from the carapace of a nine nether spider. They shed blades like water and carry a trace of the poison that grew them. Traders pay well for them and wash their hands twice.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_NetherChitin</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>22</MarketValue>
+      <Mass>0.2</Mass>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Flammability>0.1</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <stackLimit>50</stackLimit>
+    <thingCategories><li>ResourcesRaw</li></thingCategories>
+    <healthAffectsPrice>false</healthAffectsPrice>
+  </ThingDef>
+
+  <!-- Black tortoise shell: a metallic stuff for armor (plate armor, helmets...): top sharp protection, insulates against frost and fire. -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_XuanwuShell</defName>
+    <label>black tortoise shell</label>
+    <description>A plate from the carapace of a black tortoise, dark as deep water and carved by nature with protective runes. Smiths forge it into armor that turns blades and keeps out both frost and fire; the finest pieces end up in the vaults of sect elders, who say the runes still remember the cold of the northern sea.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_XuanwuShell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MarketValue>18</MarketValue>
+      <Mass>0.6</Mass>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+      <StuffPower_Armor_Sharp>1.3</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.6</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.9</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>18</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>18</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.7</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.1</BluntDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <categories><li>Metallic</li></categories>
+      <commonality>0</commonality>
+      <color>(52,78,70)</color>
+      <constructEffect>ConstructMetal</constructEffect>
+      <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>2.2</MaxHitPoints>
+        <Beauty>1.4</Beauty>
+        <WorkToMake>1.6</WorkToMake>
+        <WorkToBuild>1.6</WorkToBuild>
+        <Mass>1.2</Mass>
+        <MeleeWeapon_CooldownMultiplier>1.1</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+    </stuffProps>
+    <stackLimit>75</stackLimit>
+    <smallVolume>true</smallVolume>
+    <thingCategories><li>ResourcesRaw</li></thingCategories>
+    <healthAffectsPrice>false</healthAffectsPrice>
+  </ThingDef>
+</Defs>

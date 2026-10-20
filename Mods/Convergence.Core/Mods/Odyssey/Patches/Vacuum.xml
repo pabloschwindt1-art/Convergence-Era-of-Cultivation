@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Odyssey: a cultivator breathes qi, not air, and the body learns to hold its breath in the void as the realm rises:
+       realm 1 (Qi Refining / Skin Tempering) 4-10 %, realm 2 (Foundation / Blood Refining) 15-30 %, realm 3 (Golden Core / Golden Body)
+       35-50 %. Golden Core tops out at 50 %. The resistance adds to vanilla gear (vacsuits...) and is capped at 100 % by the stat. Full
+       immunity is left for the realms above (Nascent Soul). -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_QiRefining"]/stages/li[1]/statOffsets</xpath>
+    <value><VacuumResistance>0.04</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_QiRefining"]/stages/li[2]/statOffsets</xpath>
+    <value><VacuumResistance>0.06</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_QiRefining"]/stages/li[3]/statOffsets</xpath>
+    <value><VacuumResistance>0.08</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_QiRefining"]/stages/li[4]/statOffsets</xpath>
+    <value><VacuumResistance>0.10</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_SkinTempering"]/stages/li[1]/statOffsets</xpath>
+    <value><VacuumResistance>0.04</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_SkinTempering"]/stages/li[2]/statOffsets</xpath>
+    <value><VacuumResistance>0.06</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_SkinTempering"]/stages/li[3]/statOffsets</xpath>
+    <value><VacuumResistance>0.08</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_SkinTempering"]/stages/li[4]/statOffsets</xpath>
+    <value><VacuumResistance>0.10</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_Foundation"]/stages/li[1]/statOffsets</xpath>
+    <value><VacuumResistance>0.15</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_Foundation"]/stages/li[2]/statOffsets</xpath>
+    <value><VacuumResistance>0.20</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_Foundation"]/stages/li[3]/statOffsets</xpath>
+    <value><VacuumResistance>0.25</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_Foundation"]/stages/li[4]/statOffsets</xpath>
+    <value><VacuumResistance>0.30</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_BloodRefining"]/stages/li[1]/statOffsets</xpath>
+    <value><VacuumResistance>0.15</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_BloodRefining"]/stages/li[2]/statOffsets</xpath>
+    <value><VacuumResistance>0.20</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_BloodRefining"]/stages/li[3]/statOffsets</xpath>
+    <value><VacuumResistance>0.25</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_BloodRefining"]/stages/li[4]/statOffsets</xpath>
+    <value><VacuumResistance>0.30</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenCore"]/stages/li[1]/statOffsets</xpath>
+    <value><VacuumResistance>0.35</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenCore"]/stages/li[2]/statOffsets</xpath>
+    <value><VacuumResistance>0.40</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenCore"]/stages/li[3]/statOffsets</xpath>
+    <value><VacuumResistance>0.45</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenCore"]/stages/li[4]/statOffsets</xpath>
+    <value><VacuumResistance>0.50</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenBody"]/stages/li[1]/statOffsets</xpath>
+    <value><VacuumResistance>0.35</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenBody"]/stages/li[2]/statOffsets</xpath>
+    <value><VacuumResistance>0.40</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenBody"]/stages/li[3]/statOffsets</xpath>
+    <value><VacuumResistance>0.45</VacuumResistance></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/HediffDef[defName="CVG_Hediff_GoldenBody"]/stages/li[4]/statOffsets</xpath>
+    <value><VacuumResistance>0.50</VacuumResistance></value>
+  </Operation>
+</Patch>

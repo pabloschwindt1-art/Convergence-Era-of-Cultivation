@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- The millennial pine grows wild in the cold and temperate forests; lotus and the other crops are farmed only. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/BiomeDef[defName="TemperateForest" or defName="BorealForest"]/wildPlants</xpath>
+    <value>
+      <CVG_Plant_MillennialPine>0.4</CVG_Plant_MillennialPine>
+    </value>
+  </Operation>
+</Patch>

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>Convergence</RootNamespace>
+    <AssemblyName>Convergence.Core</AssemblyName>
+    <OutputPath>..\..\Mods\Convergence.Core\1.6\Assemblies\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <Nullable>disable</Nullable>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Ensamblados de referencia de RimWorld (no se copian a la salida) -->
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4871" />
+    <!-- Harmony lo provee el mod Harmony: no copiar 0Harmony.dll -->
+    <PackageReference Include="Lib.Harmony" Version="2.4.3" ExcludeAssets="runtime" />
+  </ItemGroup>
+
+</Project>

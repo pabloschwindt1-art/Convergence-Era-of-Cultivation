@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_SpiritRoot.degreeDatas.0.label>raíz espiritual inferior</CVG_SpiritRoot.degreeDatas.0.label>
+  <CVG_SpiritRoot.degreeDatas.0.description>{PAWN_nameDef} lleva una raíz espiritual débil y turbia. Por ahora duerme; cuando fluya el qi, el camino será lento pero estará abierto.</CVG_SpiritRoot.degreeDatas.0.description>
+  <CVG_SpiritRoot.degreeDatas.1.label>raíz espiritual común</CVG_SpiritRoot.degreeDatas.1.label>
+  <CVG_SpiritRoot.degreeDatas.1.description>{PAWN_nameDef} lleva una raíz espiritual corriente, como la mayoría de los discípulos de secta. Duerme hasta que fluya el qi.</CVG_SpiritRoot.degreeDatas.1.description>
+  <CVG_SpiritRoot.degreeDatas.2.label>raíz espiritual superior</CVG_SpiritRoot.degreeDatas.2.label>
+  <CVG_SpiritRoot.degreeDatas.2.description>{PAWN_nameDef} lleva una raíz espiritual brillante y clara. Las sectas se pelearán por {PAWN_objective} cuando fluya el qi.</CVG_SpiritRoot.degreeDatas.2.description>
+  <CVG_SpiritRoot.degreeDatas.3.label>raíz espiritual celestial</CVG_SpiritRoot.degreeDatas.3.label>
+  <CVG_SpiritRoot.degreeDatas.3.description>{PAWN_nameDef} lleva una raíz espiritual que se ve una vez por generación. El propio cielo {PAWN_objective} vigilará cuando fluya el qi.</CVG_SpiritRoot.degreeDatas.3.description>
+  <CVG_Body_PureYin.degreeDatas.0.label>cuerpo yin puro</CVG_Body_PureYin.degreeDatas.0.label>
+  <CVG_Body_PureYin.degreeDatas.0.description>El cuerpo de {PAWN_nameDef} está impregnado de yin puro. Cuando fluya el qi, cultivará mucho mejor de noche y resonará con el agua y la escarcha.</CVG_Body_PureYin.degreeDatas.0.description>
+  <CVG_Body_PureYang.degreeDatas.0.label>cuerpo yang puro</CVG_Body_PureYang.degreeDatas.0.label>
+  <CVG_Body_PureYang.degreeDatas.0.description>El cuerpo de {PAWN_nameDef} arde con yang puro. Cuando fluya el qi, cultivará mucho mejor de día y resonará con el fuego.</CVG_Body_PureYang.degreeDatas.0.description>
+  <CVG_Body_NineYang.degreeDatas.0.label>cuerpo de los nueve yang</CVG_Body_NineYang.degreeDatas.0.label>
+  <CVG_Body_NineYang.degreeDatas.0.description>Nueve soles parecen arder dentro de {PAWN_nameDef}. Un cuerpo raro de fuego extremo: poder inmenso, pero el calor debe liberarse cultivando.</CVG_Body_NineYang.degreeDatas.0.description>
+  <CVG_Body_CelestialSword.degreeDatas.0.label>cuerpo de espada celestial</CVG_Body_CelestialSword.degreeDatas.0.label>
+  <CVG_Body_CelestialSword.degreeDatas.0.description>{PAWN_nameDef} nació para empuñar la espada. Cuando fluya el qi, las técnicas de espada le saldrán tan fácil como respirar.</CVG_Body_CelestialSword.degreeDatas.0.description>
+  <CVG_Body_Immortal.degreeDatas.0.label>cuerpo inmortal de jade</CVG_Body_Immortal.degreeDatas.0.label>
+  <CVG_Body_Immortal.degreeDatas.0.description>La carne de {PAWN_nameDef} es densa como el jade. Un cuerpo hecho para el templado: aguanta heridas y sana rápido.</CVG_Body_Immortal.degreeDatas.0.description>
+  <CVG_Body_Chaos.degreeDatas.0.label>cuerpo del caos</CVG_Body_Chaos.degreeDatas.0.label>
+  <CVG_Body_Chaos.degreeDatas.0.description>El más raro de los cuerpos. {PAWN_nameDef} puede usar todos los elementos a la vez, pero cada paso en el camino es más lento.</CVG_Body_Chaos.degreeDatas.0.description>
+  <CVG_Body_Venom.degreeDatas.0.label>cuerpo venenoso</CVG_Body_Venom.degreeDatas.0.label>
+  <CVG_Body_Venom.degreeDatas.0.description>El veneno no daña a {PAWN_nameDef}: lo alimenta. Los demás guardan distancia por instinto.</CVG_Body_Venom.degreeDatas.0.description>
+  <CVG_Body_InnateSpirit.degreeDatas.0.label>cuerpo espiritual innato</CVG_Body_InnateSpirit.degreeDatas.0.label>
+  <CVG_Body_InnateSpirit.degreeDatas.0.description>{PAWN_nameDef} no tiene raíz espiritual, pero su propio cuerpo respira el mundo. Puede recorrer el camino del cuerpo mucho más lejos que otros mortales.</CVG_Body_InnateSpirit.degreeDatas.0.description>
+  <CVG_Body_Steel.degreeDatas.0.label>cuerpo de acero</CVG_Body_Steel.degreeDatas.0.label>
+  <CVG_Body_Steel.degreeDatas.0.description>La piel y los huesos de {PAWN_nameDef} son duros como el metal. No puede reunir qi, pero su cuerpo puede templarse hasta ser un arma.</CVG_Body_Steel.degreeDatas.0.description>
+  <CVG_Body_Tribulation.degreeDatas.0.label>cuerpo de tribulación</CVG_Body_Tribulation.degreeDatas.0.label>
+  <CVG_Body_Tribulation.degreeDatas.0.description>Los rayos celestiales no destruyen a {PAWN_nameDef}: lo forjan. No puede reunir qi, pero las tribulaciones lo hacen más fuerte.</CVG_Body_Tribulation.degreeDatas.0.description>
+  <CVG_Body_Sword.degreeDatas.0.label>cuerpo de espada</CVG_Body_Sword.degreeDatas.0.label>
+  <CVG_Body_Sword.degreeDatas.0.description>El cuerpo de {PAWN_nameDef} es la hoja. No puede reunir qi, pero cada golpe corta como una espada templada.</CVG_Body_Sword.degreeDatas.0.description>
+</LanguageData>

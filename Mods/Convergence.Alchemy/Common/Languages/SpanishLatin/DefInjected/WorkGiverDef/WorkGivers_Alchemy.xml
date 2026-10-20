@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_DoBillsRuneTable.label>grabar runas en la mesa de runas</CVG_DoBillsRuneTable.label>
+  <CVG_DoBillsRuneTable.verb>grabar en</CVG_DoBillsRuneTable.verb>
+  <CVG_DoBillsRuneTable.gerund>grabando en</CVG_DoBillsRuneTable.gerund>
+  <CVG_DoBillsTalismanTable.label>escribir talismanes en la mesa de talismanes</CVG_DoBillsTalismanTable.label>
+  <CVG_DoBillsTalismanTable.verb>escribir en</CVG_DoBillsTalismanTable.verb>
+  <CVG_DoBillsTalismanTable.gerund>escribiendo en</CVG_DoBillsTalismanTable.gerund>
+</LanguageData>

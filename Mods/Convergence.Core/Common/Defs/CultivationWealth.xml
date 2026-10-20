@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Parallel economy (docs/DISENO.md §8, round 3). Things from the Convergence mods (packageId prefix) count only a
+    fraction (difficulty: vanillaWealthFactor) in the vanilla wealth that sets raid points; their market and trade value
+    does not change. Their full value plus the realms and techniques of the colonists is the cultivation wealth, which
+    adds threat points to raids of cultivation factions (sects) and to the events of the mod.
+    A ThingDef can opt in or out with Convergence.DefModExtension_CultivationWealth; a FactionDef can opt in with
+    Convergence.DefModExtension_CultivationThreat (factions of the Convergence already do).
+  -->
+  <Convergence.CultivationWealthDef>
+    <defName>CVG_CultivationWealth</defName>
+    <label>cultivation wealth</label>
+    <packageIdPrefixes>
+      <li>prospero1088.convergence</li>
+    </packageIdPrefixes>
+    <realmWealth>
+      <points>
+        <li>(1, 1500)</li>
+        <li>(2, 8000)</li>
+        <li>(3, 30000)</li>
+        <li>(4, 90000)</li>
+        <li>(5, 250000)</li>
+        <li>(6, 600000)</li>
+      </points>
+    </realmWealth>
+    <perStageFraction>0.25</perStageFraction>
+    <perTechnique>200</perTechnique>
+    <manhunterFactor>0.5</manhunterFactor>
+    <pointsPerWealth>
+      <points>
+        <li>(0, 0)</li>
+        <li>(10000, 0)</li>
+        <li>(100000, 600)</li>
+        <li>(400000, 1800)</li>
+        <li>(1000000, 3500)</li>
+        <li>(3000000, 6000)</li>
+      </points>
+    </pointsPerWealth>
+  </Convergence.CultivationWealthDef>
+</Defs>

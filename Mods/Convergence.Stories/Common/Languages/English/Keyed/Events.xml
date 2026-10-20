@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Ev_WanderingSwordsman_Label>A swordsman on the road</CVG_Ev_WanderingSwordsman_Label>
+  <CVG_Ev_WanderingSwordsman_Text>A wandering swordsman stops at the edge of your land, tired and sword-sheathed. He says he has crossed three fragments of Jiuxiao and has not lost a duel since the Convergence, and he would like to leave something to someone worthy before his luck runs out.</CVG_Ev_WanderingSwordsman_Text>
+  <CVG_Ev_WanderingSwordsman_Opt_spar>Spar with him</CVG_Ev_WanderingSwordsman_Opt_spar>
+  <CVG_Ev_WanderingSwordsman_Res_spar>Your best fighter learns more in an afternoon than in a month.</CVG_Ev_WanderingSwordsman_Res_spar>
+  <CVG_Ev_WanderingSwordsman_Opt_feed>Feed him and let him go</CVG_Ev_WanderingSwordsman_Opt_feed>
+  <CVG_Ev_WanderingSwordsman_Res_feed>He leaves a pouch of herbs and a story behind.</CVG_Ev_WanderingSwordsman_Res_feed>
+  <CVG_Ev_HermitTeaches_Label>A hermit at the door</CVG_Ev_HermitTeaches_Label>
+  <CVG_Ev_HermitTeaches_Text>An old hermit with a face like a dried plum walks into the colony as if he lived there. He does not say his name. He watches your cultivators breathe, clicks his tongue, and offers to correct them for the price of a bowl of rice.</CVG_Ev_HermitTeaches_Text>
+  <CVG_Ev_HermitTeaches_Opt_accept>Give him the rice</CVG_Ev_HermitTeaches_Opt_accept>
+  <CVG_Ev_HermitTeaches_Res_accept>The hermit rearranges a hand here, a breath there. By evening your cultivator's qi runs smoother.</CVG_Ev_HermitTeaches_Res_accept>
+  <CVG_Ev_HermitTeaches_Opt_decline>Send him away</CVG_Ev_HermitTeaches_Opt_decline>
+  <CVG_Ev_HermitTeaches_Res_decline>He shrugs and walks into the dusk, whistling.</CVG_Ev_HermitTeaches_Res_decline>
+  <CVG_Ev_HungryBeggar_Label>The beggar who was not a beggar</CVG_Ev_HungryBeggar_Label>
+  <CVG_Ev_HungryBeggar_Text>An old beggar in rags asks for food at the gate, and nobody hurries to open it. Those who have lived in Jiuxiao say that a beggar in rags may be a Nascent Soul elder testing the hearts of the young. Those who have not say he smells.</CVG_Ev_HungryBeggar_Text>
+  <CVG_Ev_HungryBeggar_Opt_feed>Feed him</CVG_Ev_HungryBeggar_Opt_feed>
+  <CVG_Ev_HungryBeggar_Res_feed>He eats in silence, thanks you with a bow too deep for a beggar, and is gone before morning.</CVG_Ev_HungryBeggar_Res_feed>
+  <CVG_Ev_HungryBeggar_Opt_refuse>Turn him away</CVG_Ev_HungryBeggar_Opt_refuse>
+  <CVG_Ev_HungryBeggar_Res_refuse>The beggar looks at the gate for a long moment. No one in the colony sleeps well that night.</CVG_Ev_HungryBeggar_Res_refuse>
+  <CVG_Ev_LostDiscipleChild_Label>A lost young disciple</CVG_Ev_LostDiscipleChild_Label>
+  <CVG_Ev_LostDiscipleChild_Text>A boy in a robe too big for him sits at the roadside, holding a sword he cannot lift. His sect fell in the Calamity and he has been walking for weeks. He does not ask for anything: he only asks which direction is the east.</CVG_Ev_LostDiscipleChild_Text>
+  <CVG_Ev_LostDiscipleChild_Opt_keep>Take him in</CVG_Ev_LostDiscipleChild_Opt_keep>
+  <CVG_Ev_LostDiscipleChild_Res_keep>He bows to every member of the colony, in turn, and will not be dissuaded.</CVG_Ev_LostDiscipleChild_Res_keep>
+  <CVG_Ev_LostDiscipleChild_Opt_direct>Point him east</CVG_Ev_LostDiscipleChild_Opt_direct>
+  <CVG_Ev_LostDiscipleChild_Res_direct>He thanks you and sets off, a very small figure on a very large road.</CVG_Ev_LostDiscipleChild_Res_direct>
+  <CVG_Ev_PeddlerInTheMist_Label>The peddler in the mist</CVG_Ev_PeddlerInTheMist_Label>
+  <CVG_Ev_PeddlerInTheMist_Text>A mist rolls in from nowhere, and in it a peddler with a pack twice his size appears. He sells nothing in particular. He sells what he found, and what he found is always something you did not know you needed.</CVG_Ev_PeddlerInTheMist_Text>
+  <CVG_Ev_PeddlerInTheMist_Opt_buy>Buy something (60 silver)</CVG_Ev_PeddlerInTheMist_Opt_buy>
+  <CVG_Ev_PeddlerInTheMist_Res_buy>The peddler weighs the silver, hums, and leaves you a bag whose content you will find out later.</CVG_Ev_PeddlerInTheMist_Res_buy>
+  <CVG_Ev_PeddlerInTheMist_Opt_pass>Let him pass</CVG_Ev_PeddlerInTheMist_Opt_pass>
+  <CVG_Ev_PeddlerInTheMist_Res_pass>He tips a hat he does not have and walks back into the mist.</CVG_Ev_PeddlerInTheMist_Res_pass>
+  <CVG_Ev_LotusPilgrims_Label>Pilgrims of the Lotus</CVG_Ev_LotusPilgrims_Label>
+  <CVG_Ev_LotusPilgrims_Text>A line of pilgrims in grey robes walks past the colony, carrying a lotus in a clay pot. They ask for water and a place to pray, and offer in return a blessing that, according to the Silent Lotus Temple, has never harmed anyone.</CVG_Ev_LotusPilgrims_Text>
+  <CVG_Ev_LotusPilgrims_Opt_welcome>Welcome them</CVG_Ev_LotusPilgrims_Opt_welcome>
+  <CVG_Ev_LotusPilgrims_Res_welcome>The pilgrims pray all night. The colony sleeps in peace.</CVG_Ev_LotusPilgrims_Res_welcome>
+  <CVG_Ev_LotusPilgrims_Opt_water>Give water and move on</CVG_Ev_LotusPilgrims_Opt_water>
+  <CVG_Ev_LotusPilgrims_Res_water>They bow, drink and continue their walk.</CVG_Ev_LotusPilgrims_Res_water>
+  <CVG_Ev_StrandedAlchemist_Label>A stranded alchemist</CVG_Ev_StrandedAlchemist_Label>
+  <CVG_Ev_StrandedAlchemist_Text>An alchemist of the Heavenly Cauldron Pavilion lies by the road with a broken leg and a cart of cracked jars. He mumbles about debts and exclusive contracts. When he sees you, he smiles with all the charm of a man who has never had to ask for help.</CVG_Ev_StrandedAlchemist_Text>
+  <CVG_Ev_StrandedAlchemist_Opt_help>Tend his leg</CVG_Ev_StrandedAlchemist_Opt_help>
+  <CVG_Ev_StrandedAlchemist_Res_help>He leaves a reward and a promise to remember the favor, which for the Pavilion is almost a contract.</CVG_Ev_StrandedAlchemist_Res_help>
+  <CVG_Ev_StrandedAlchemist_Opt_rob>Take what survived</CVG_Ev_StrandedAlchemist_Opt_rob>
+  <CVG_Ev_StrandedAlchemist_Res_rob>The Pavilion keeps ledgers of everything, including this.</CVG_Ev_StrandedAlchemist_Res_rob>
+  <CVG_Ev_TravelingStorytellers_Label>Traveling storytellers</CVG_Ev_TravelingStorytellers_Label>
+  <CVG_Ev_TravelingStorytellers_Text>A troupe of storytellers sets up a mat under a tree and begins to recite the legend of the Iron Calamity as it is told in a fragment of Jiuxiao you have never heard of. By the third act, even your most serious cultivator is leaning in.</CVG_Ev_TravelingStorytellers_Text>
+  <CVG_Ev_RunawayDisciple_Label>A disciple on the run</CVG_Ev_RunawayDisciple_Label>
+  <CVG_Ev_RunawayDisciple_Text>A young disciple of the Azure Peak arrives wounded and begs for shelter. He says he saw something in the Sword Graveyard that the elders do not want known, and that the sect's enforcers are two days behind him. His story has a hole in it, but his wounds do not.</CVG_Ev_RunawayDisciple_Text>
+  <CVG_Ev_RunawayDisciple_Opt_hide>Hide him</CVG_Ev_RunawayDisciple_Opt_hide>
+  <CVG_Ev_RunawayDisciple_Res_hide>The disciple collapses in relief. Two days is not much time.</CVG_Ev_RunawayDisciple_Res_hide>
+  <CVG_Ev_RunawayDisciple_Opt_hand>Hand him over</CVG_Ev_RunawayDisciple_Opt_hand>
+  <CVG_Ev_RunawayDisciple_Res_hand>The enforcers thank you coldly and take him. Nobody in the colony meets his eyes.</CVG_Ev_RunawayDisciple_Res_hand>
+  <CVG_Ev_RunawayEnforcers_Label>The enforcers of the Peak</CVG_Ev_RunawayEnforcers_Label>
+  <CVG_Ev_RunawayEnforcers_Text>The enforcers of the Azure Peak have arrived, sword-hands resting on their hilts. They do not threaten: they only ask, politely, where the disciple is. They have the patience of men who know that the answer always comes.</CVG_Ev_RunawayEnforcers_Text>
+  <CVG_Ev_RunawayEnforcers_Opt_protect>Refuse to tell</CVG_Ev_RunawayEnforcers_Opt_protect>
+  <CVG_Ev_RunawayEnforcers_Res_protect>Swords come out. The disciple, from a loft, finally understands that he has chosen his side.</CVG_Ev_RunawayEnforcers_Res_protect>
+  <CVG_Ev_RunawayEnforcers_Opt_give>Give him up now</CVG_Ev_RunawayEnforcers_Opt_give>
+  <CVG_Ev_RunawayEnforcers_Res_give>The enforcers lead him away. He does not resist, which is worse.</CVG_Ev_RunawayEnforcers_Res_give>
+  <CVG_Ev_RunawayThanks_Label>What the disciple saw</CVG_Ev_RunawayThanks_Label>
+  <CVG_Ev_RunawayThanks_Text>When the dust settles the disciple tells his story to the end. In the Sword Graveyard, one of the swords had begun to whisper in the voice of the Iron Calamity. He has the proof wrapped in a cloth: a splinter of black metal that hums, and that he cannot bring himself to touch.</CVG_Ev_RunawayThanks_Text>
+  <CVG_Ev_BeastTamerWanders_Label>A beast tamer</CVG_Ev_BeastTamerWanders_Label>
+  <CVG_Ev_BeastTamerWanders_Text>A woman in furs with a wind wolf asleep at her feet sits by your fire and talks about the language of beasts: not words, she says, but weather. She will teach what she can in a night, for a fair price.</CVG_Ev_BeastTamerWanders_Text>
+  <CVG_Ev_BeastTamerWanders_Opt_learn>Learn from her (80 silver)</CVG_Ev_BeastTamerWanders_Opt_learn>
+  <CVG_Ev_BeastTamerWanders_Res_learn>By morning your handler can calm animals that would have bitten them last week.</CVG_Ev_BeastTamerWanders_Res_learn>
+  <CVG_Ev_BeastTamerWanders_Opt_decline>Thank her and decline</CVG_Ev_BeastTamerWanders_Opt_decline>
+  <CVG_Ev_StolenManual_Label>The stolen manual</CVG_Ev_StolenManual_Label>
+  <CVG_Ev_StolenManual_Text>One of your people has been seen with a manual of the Silent Lotus Temple that nobody remembers buying. A monk from the temple arrives that same afternoon, looking, with good manners, for a stolen manual. The two things are going to meet at supper.</CVG_Ev_StolenManual_Text>
+  <CVG_Ev_StolenManual_Opt_return>Return it</CVG_Ev_StolenManual_Opt_return>
+  <CVG_Ev_StolenManual_Res_return>The monk bows, deeper than the manual deserves.</CVG_Ev_StolenManual_Res_return>
+  <CVG_Ev_StolenManual_Opt_keep>Keep it and deny</CVG_Ev_StolenManual_Opt_keep>
+  <CVG_Ev_StolenManual_Res_keep>The monk does not argue. He only looks at the person who stole it for a long time.</CVG_Ev_StolenManual_Res_keep>
+  <CVG_Ev_CursedBlade_Label>A sword in the stream</CVG_Ev_CursedBlade_Label>
+  <CVG_Ev_CursedBlade_Text>Your people find a long sword lying in a stream, perfect, unrusted, humming faintly. The old tales warn against any weapon that no one remembers losing. The old tales also say that the best swords were found, not made.</CVG_Ev_CursedBlade_Text>
+  <CVG_Ev_CursedBlade_Opt_take>Take the sword</CVG_Ev_CursedBlade_Opt_take>
+  <CVG_Ev_CursedBlade_Res_take>It fits the hand like it was waiting for it.</CVG_Ev_CursedBlade_Res_take>
+  <CVG_Ev_CursedBlade_Opt_bury>Bury it on the bank</CVG_Ev_CursedBlade_Opt_bury>
+  <CVG_Ev_CursedBlade_Res_bury>The stream goes on murmuring where the sword was.</CVG_Ev_CursedBlade_Res_bury>
+  <CVG_Ev_BladeWhispers_Label>The blade whispers</CVG_Ev_BladeWhispers_Label>
+  <CVG_Ev_BladeWhispers_Text>Since the sword came to the colony, the sleepers talk in their sleep, always the same phrase in a language no one speaks. The one who carries it says the blade has asked for a name. It is not a good sign when a blade asks for a name.</CVG_Ev_BladeWhispers_Text>
+  <CVG_Ev_BladeWhispers_Opt_name>Give it a name</CVG_Ev_BladeWhispers_Opt_name>
+  <CVG_Ev_BladeWhispers_Res_name>The blade is pleased. That is the problem.</CVG_Ev_BladeWhispers_Res_name>
+  <CVG_Ev_BladeWhispers_Opt_silence>Silence it in a chest</CVG_Ev_BladeWhispers_Opt_silence>
+  <CVG_Ev_BladeWhispers_Res_silence>The chest hums for three nights, then goes still.</CVG_Ev_BladeWhispers_Res_silence>
+  <CVG_Ev_BladeExorcism_Label>Ridding the sword of its voice</CVG_Ev_BladeExorcism_Label>
+  <CVG_Ev_BladeExorcism_Text>A monk of the Silent Lotus who happens to be passing says that a voice in a blade is just a memory, and that all memories can be consoled. For the fee of a simple meal he will sit with the blade for a night, and it will either forget or be forgotten.</CVG_Ev_BladeExorcism_Text>
+  <CVG_Ev_BladeExorcism_Opt_sit>Let him sit with it</CVG_Ev_BladeExorcism_Opt_sit>
+  <CVG_Ev_BladeExorcism_Res_sit>At dawn the sword is just a sword, and the monk looks twenty years older.</CVG_Ev_BladeExorcism_Res_sit>
+  <CVG_Ev_BladeExorcism_Opt_refuse>Keep the voice</CVG_Ev_BladeExorcism_Opt_refuse>
+  <CVG_Ev_BladeExorcism_Res_refuse>The blade will sing again. Pray it does not sing for blood.</CVG_Ev_BladeExorcism_Res_refuse>
+  <CVG_Ev_DemonBargain_Label>A bargain at dusk</CVG_Ev_DemonBargain_Label>
+  <CVG_Ev_DemonBargain_Text>A woman in crimson is waiting at the edge of the camp. She introduces herself as Su Lanyin, the Saint of Blood, and says that her Venerable would like to make an offer to a cultivator of exceptional promise. It involves a night, a bowl and a very small amount of blood.</CVG_Ev_DemonBargain_Text>
+  <CVG_Ev_DemonBargain_Opt_accept>Accept the bargain</CVG_Ev_DemonBargain_Opt_accept>
+  <CVG_Ev_DemonBargain_Res_accept>The bowl fills. The cultivator's qi rolls like a tide for a night.</CVG_Ev_DemonBargain_Res_accept>
+  <CVG_Ev_DemonBargain_Opt_refuse>Refuse</CVG_Ev_DemonBargain_Opt_refuse>
+  <CVG_Ev_DemonBargain_Res_refuse>She smiles. 'The offer remains', she says.</CVG_Ev_DemonBargain_Res_refuse>
+  <CVG_Ev_BloodPactDue_Label>The debt is due</CVG_Ev_BloodPactDue_Label>
+  <CVG_Ev_BloodPactDue_Text>The bowl was only the first payment. Su Lanyin returns exactly as she said she would, with six disciples who are not interested in conversation. The Blood Moon Cult never forgets a debt, and has never once explained its interest rate.</CVG_Ev_BloodPactDue_Text>
+  <CVG_Ev_BloodPactDue_Opt_pay>Pay in spirit stones</CVG_Ev_BloodPactDue_Opt_pay>
+  <CVG_Ev_BloodPactDue_Res_pay>The cult takes the stones and leaves. The pact is still in the blood.</CVG_Ev_BloodPactDue_Res_pay>
+  <CVG_Ev_BloodPactDue_Opt_fight>Refuse to pay</CVG_Ev_BloodPactDue_Opt_fight>
+  <CVG_Ev_BloodPactDue_Res_fight>The disciples draw. 'Then in blood', says Su Lanyin.</CVG_Ev_BloodPactDue_Res_fight>
+  <CVG_Ev_WoundedEnemyBegs_Label>A wounded cultivator begs</CVG_Ev_WoundedEnemyBegs_Label>
+  <CVG_Ev_WoundedEnemyBegs_Text>After a skirmish your people find a Blood Moon disciple crawling in the grass. He is young. He says he never wanted to be there, that the cult took him from a village, that he can cook, and that he will tell you everything. All of it is possibly true.</CVG_Ev_WoundedEnemyBegs_Text>
+  <CVG_Ev_WoundedEnemyBegs_Opt_spare>Spare and heal him</CVG_Ev_WoundedEnemyBegs_Opt_spare>
+  <CVG_Ev_WoundedEnemyBegs_Res_spare>He weeps. He cooks very well.</CVG_Ev_WoundedEnemyBegs_Res_spare>
+  <CVG_Ev_WoundedEnemyBegs_Opt_execute>Execute him</CVG_Ev_WoundedEnemyBegs_Opt_execute>
+  <CVG_Ev_WoundedEnemyBegs_Res_execute>A cold quiet falls over the colony. It will pass.</CVG_Ev_WoundedEnemyBegs_Res_execute>
+  <CVG_Ev_WoundedEnemyBegs_Opt_release>Let him go</CVG_Ev_WoundedEnemyBegs_Opt_release>
+  <CVG_Ev_WoundedEnemyBegs_Res_release>He runs. You will not see him again, or you will.</CVG_Ev_WoundedEnemyBegs_Res_release>
+  <CVG_Ev_PavilionTaxmen_Label>The Pavilion's collectors</CVG_Ev_PavilionTaxmen_Label>
+  <CVG_Ev_PavilionTaxmen_Text>Two collectors in immaculate silk arrive with a ledger. They claim that the land beneath your colony was 'pre-sold in a dimension of origin' and that the Heavenly Cauldron Pavilion is, regrettably, the legitimate owner. They are willing to settle for a reasonable sum of spirit stones.</CVG_Ev_PavilionTaxmen_Text>
+  <CVG_Ev_PavilionTaxmen_Opt_pay>Pay (80 spirit stones)</CVG_Ev_PavilionTaxmen_Opt_pay>
+  <CVG_Ev_PavilionTaxmen_Res_pay>The collectors smile and write something in the ledger. They are very pleased about the ledger.</CVG_Ev_PavilionTaxmen_Res_pay>
+  <CVG_Ev_PavilionTaxmen_Opt_haggle>Haggle</CVG_Ev_PavilionTaxmen_Opt_haggle>
+  <CVG_Ev_PavilionTaxmen_Res_haggle>The collectors agree to half the sum in silver, and to forget they ever saw you laugh.</CVG_Ev_PavilionTaxmen_Res_haggle>
+  <CVG_Ev_PavilionTaxmen_Opt_refuse>Throw them out</CVG_Ev_PavilionTaxmen_Opt_refuse>
+  <CVG_Ev_PavilionTaxmen_Res_refuse>The Pavilion will remember your lack of sense of humor.</CVG_Ev_PavilionTaxmen_Res_refuse>
+  <CVG_Ev_AllianceProposal_Label>A marriage of sects</CVG_Ev_AllianceProposal_Label>
+  <CVG_Ev_AllianceProposal_Text>An emissary of a righteous sect proposes to join families: his master's grand-niece for one of your cultivators. It is not about love. It is about two peoples who may one day need each other's swords. She is, he says, remarkably well read.</CVG_Ev_AllianceProposal_Text>
+  <CVG_Ev_AllianceProposal_Opt_accept>Accept the alliance</CVG_Ev_AllianceProposal_Opt_accept>
+  <CVG_Ev_AllianceProposal_Res_accept>The wedding is modest and the feast is not. A new member joins the colony.</CVG_Ev_AllianceProposal_Res_accept>
+  <CVG_Ev_AllianceProposal_Opt_decline>Decline politely</CVG_Ev_AllianceProposal_Opt_decline>
+  <CVG_Ev_AllianceProposal_Res_decline>The emissary says that the offer was a courtesy. He does not seem to think so.</CVG_Ev_AllianceProposal_Res_decline>
+  <CVG_Ev_RivalChallenge_Label>A challenge for honor</CVG_Ev_RivalChallenge_Label>
+  <CVG_Ev_RivalChallenge_Text>A disciple of the Azure Peak rides in, bows exactly the right amount and challenges your strongest fighter to a duel 'in the spirit of friendship'. Everyone present understands that the spirit of friendship has a very sharp edge.</CVG_Ev_RivalChallenge_Text>
+  <CVG_Ev_RivalChallenge_Opt_duel>Accept the duel</CVG_Ev_RivalChallenge_Opt_duel>
+  <CVG_Ev_RivalChallenge_Res_duel>It ends with a tie and a respectful nod. Both leave limping.</CVG_Ev_RivalChallenge_Res_duel>
+  <CVG_Ev_RivalChallenge_Opt_decline>Bow and decline</CVG_Ev_RivalChallenge_Opt_decline>
+  <CVG_Ev_RivalChallenge_Res_decline>The disciple is not offended. He is merely disappointed, which is worse.</CVG_Ev_RivalChallenge_Res_decline>
+  <CVG_Ev_JadeSlipTemptation_Label>A slip in the roots</CVG_Ev_JadeSlipTemptation_Label>
+  <CVG_Ev_JadeSlipTemptation_Text>A jade slip lies tangled in the roots of an old tree, glowing with a color jade should not glow. A technique of unknown origin is carved into it. The shape of the characters is not one you recognize. Some of your people want to read it. Some of them would like not to.</CVG_Ev_JadeSlipTemptation_Text>
+  <CVG_Ev_JadeSlipTemptation_Opt_read>Read it</CVG_Ev_JadeSlipTemptation_Opt_read>
+  <CVG_Ev_JadeSlipTemptation_Res_read>The characters rearrange themselves in the reader's head. It was worth it, mostly.</CVG_Ev_JadeSlipTemptation_Res_read>
+  <CVG_Ev_JadeSlipTemptation_Opt_leave>Leave it</CVG_Ev_JadeSlipTemptation_Opt_leave>
+  <CVG_Ev_JadeSlipTemptation_Res_leave>The tree seems to sigh as the group walks away.</CVG_Ev_JadeSlipTemptation_Res_leave>
+  <CVG_Ev_PoorVillageFamine_Label>A village in want</CVG_Ev_PoorVillageFamine_Label>
+  <CVG_Ev_PoorVillageFamine_Text>A delegation from a nearby village stands in the rain, not asking for anything. A cold harvest and no cultivators to bless the fields. The oldest woman says only that she would not have come if there were another door.</CVG_Ev_PoorVillageFamine_Text>
+  <CVG_Ev_PoorVillageFamine_Opt_feed>Give them food</CVG_Ev_PoorVillageFamine_Opt_feed>
+  <CVG_Ev_PoorVillageFamine_Res_feed>The village sends back a few coins, a basket and a boy to help in the fields.</CVG_Ev_PoorVillageFamine_Res_feed>
+  <CVG_Ev_PoorVillageFamine_Opt_bless>Send a cultivator to bless their fields</CVG_Ev_PoorVillageFamine_Opt_bless>
+  <CVG_Ev_PoorVillageFamine_Res_bless>Their fields thrive. The cultivator learns patience.</CVG_Ev_PoorVillageFamine_Res_bless>
+  <CVG_Ev_PoorVillageFamine_Opt_refuse>Turn them away</CVG_Ev_PoorVillageFamine_Opt_refuse>
+  <CVG_Ev_PoorVillageFamine_Res_refuse>They bow and leave. You hear the rain a long time.</CVG_Ev_PoorVillageFamine_Res_refuse>
+  <CVG_Ev_SacrificeOffer_Label>The offering that should not be accepted</CVG_Ev_SacrificeOffer_Label>
+  <CVG_Ev_SacrificeOffer_Text>A shrine appears overnight in the forest, with a bowl and a note: 'a heart for a gift'. The bowl glows. The note is signed by no one. Some of your people think the shrine is a trap. Others think a trap would not bother to be polite.</CVG_Ev_SacrificeOffer_Text>
+  <CVG_Ev_SacrificeOffer_Opt_offer>Offer an animal heart</CVG_Ev_SacrificeOffer_Opt_offer>
+  <CVG_Ev_SacrificeOffer_Res_offer>The bowl accepts. Something shifts in the forest, satisfied.</CVG_Ev_SacrificeOffer_Res_offer>
+  <CVG_Ev_SacrificeOffer_Opt_smash>Smash the shrine</CVG_Ev_SacrificeOffer_Opt_smash>
+  <CVG_Ev_SacrificeOffer_Res_smash>The shrine breaks like glass. The forest goes very quiet.</CVG_Ev_SacrificeOffer_Res_smash>
+  <CVG_Ev_QiDeviationPlague_Label>A fever of misrun qi</CVG_Ev_QiDeviationPlague_Label>
+  <CVG_Ev_QiDeviationPlague_Text>A damp wind drifts over the colony and several people wake with their meridians burning: their qi is running backwards, as the old physicians say. It is no demon, only the land adjusting itself. The land is not gentle when it adjusts.</CVG_Ev_QiDeviationPlague_Text>
+  <CVG_Ev_QiMeteor_Label>A star falls dim</CVG_Ev_QiMeteor_Label>
+  <CVG_Ev_QiMeteor_Text>A dim star falls at the edge of the colony and breaks into three pieces. Folk say it was part of Jiuxiao and that its metal still remembers heaven. Your cultivators find it bitter to the tongue and hot to the hand. It also left a crater where the vegetable garden used to be.</CVG_Ev_QiMeteor_Text>
+  <CVG_Ev_DemonicFog_Label>The red fog</CVG_Ev_DemonicFog_Label>
+  <CVG_Ev_DemonicFog_Text>A red fog creeps up from the low ground at dusk. It smells of iron and of old incense. Cultivators who breathe it say they hear their own name, spoken from the wrong direction. It will last a few days, say the old almanacs, and then it will leave the way it came.</CVG_Ev_DemonicFog_Text>
+  <CVG_Ev_BeastTideSmall_Label>The beasts come down the mountain</CVG_Ev_BeastTideSmall_Label>
+  <CVG_Ev_BeastTideSmall_Text>The qi in the high valleys has thickened, and what lived there is moving down. Wolves, bears and things with too many eyes, pressed together by hunger and by some pressure no one can name. They have not decided yet whether to kill or to flee, and neither have you.</CVG_Ev_BeastTideSmall_Text>
+  <CVG_Ev_ThievingSpirits_Label>Thieving spirits</CVG_Ev_ThievingSpirits_Label>
+  <CVG_Ev_ThievingSpirits_Text>Things are going missing from the storeroom: silver by the handful, a candle, a pair of boots. Nobody has seen anything. On the third night someone finds a tiny footprint in the flour, with six toes. The elders recommend a saucer of rice wine and a cat.</CVG_Ev_ThievingSpirits_Text>
+  <CVG_Ev_ThievingSpirits_Opt_appease>Leave a saucer of wine</CVG_Ev_ThievingSpirits_Opt_appease>
+  <CVG_Ev_ThievingSpirits_Res_appease>In the morning the saucer is empty and a few coins are back where they belong.</CVG_Ev_ThievingSpirits_Res_appease>
+  <CVG_Ev_ThievingSpirits_Opt_hunt>Set a trap</CVG_Ev_ThievingSpirits_Opt_hunt>
+  <CVG_Ev_ThievingSpirits_Res_hunt>The trap catches nothing but a lot of silver gets lost in the commotion.</CVG_Ev_ThievingSpirits_Res_hunt>
+  <CVG_Ev_QiLightning_Label>A storm without clouds</CVG_Ev_QiLightning_Label>
+  <CVG_Ev_QiLightning_Text>Lightning strikes out of a clear sky three times, in a pattern. The old almanac calls it 'Heaven rehearsing'. The air smells of ozone and sweet peaches, and everyone's hair stands on end. One of your people is standing very still, as if someone were speaking to her.</CVG_Ev_QiLightning_Text>
+  <CVG_Ev_PoisonedWell_Label>The water tastes of coins</CVG_Ev_PoisonedWell_Label>
+  <CVG_Ev_PoisonedWell_Text>The well has been tasting of copper for three days. Someone has dropped something in it, or something has crawled out of it. A cultivator can tell by the qi: this is a slow, patient poison, the kind that is made to be unnoticed. Whoever did it wanted you gently ill.</CVG_Ev_PoisonedWell_Text>
+  <CVG_Ev_CorruptedQiLeak_Label>The seep</CVG_Ev_CorruptedQiLeak_Label>
+  <CVG_Ev_CorruptedQiLeak_Text>In a cave under the colony, a seam of corrupted qi has opened, black and slow like old oil. Cultivators sleeping above it begin to dream of closets that open on to the sea. The stones of the walls hum in a key that makes the teeth ache.</CVG_Ev_CorruptedQiLeak_Text>
+  <CVG_Ev_CollapsingCave_Label>The old tunnel gives way</CVG_Ev_CollapsingCave_Label>
+  <CVG_Ev_CollapsingCave_Text>A tunnel dug by someone long before you collapses with a sound like a sigh. Dust, a few bones, and a rough gate with a seal you recognize from the older stories. Something was walled up here, and now there is a hole to its left.</CVG_Ev_CollapsingCave_Text>
+  <CVG_Ev_CollapsingCave_Opt_enter>Go in</CVG_Ev_CollapsingCave_Opt_enter>
+  <CVG_Ev_CollapsingCave_Res_enter>What was walled up was a cache. Probably a cache.</CVG_Ev_CollapsingCave_Res_enter>
+  <CVG_Ev_CollapsingCave_Opt_seal>Seal it again</CVG_Ev_CollapsingCave_Opt_seal>
+  <CVG_Ev_RiftTremor_Label>The ground opens a hand</CVG_Ev_RiftTremor_Label>
+  <CVG_Ev_RiftTremor_Text>The earth shudders and a shallow rift opens across the meadow, no deeper than a man's arm. From it comes the sound of a distant city: bells, voices, carts. It closes in an hour. Something comes out of it before it does, and something else goes in.</CVG_Ev_RiftTremor_Text>
+  <CVG_Ev_NightOfTheHungryGhosts_Label>A night for the hungry ghosts</CVG_Ev_NightOfTheHungryGhosts_Label>
+  <CVG_Ev_NightOfTheHungryGhosts_Text>The seventh moon rises thin and low. Paper lanterns drift through the camp by themselves, bearing names that no one remembers writing. The old customs say to leave a bowl of rice and a stick of incense for each of the hungry dead, and to keep one's own name quiet. This one is going to be a long night.</CVG_Ev_NightOfTheHungryGhosts_Text>
+  <CVG_Ev_NightOfTheHungryGhosts_Opt_offer>Leave offerings</CVG_Ev_NightOfTheHungryGhosts_Opt_offer>
+  <CVG_Ev_NightOfTheHungryGhosts_Res_offer>By dawn the bowls are empty and the lanterns are gone. The camp feels lighter.</CVG_Ev_NightOfTheHungryGhosts_Res_offer>
+  <CVG_Ev_NightOfTheHungryGhosts_Opt_ignore>Ignore the custom</CVG_Ev_NightOfTheHungryGhosts_Opt_ignore>
+  <CVG_Ev_NightOfTheHungryGhosts_Res_ignore>The night is long. Several people sleep with their shoes on.</CVG_Ev_NightOfTheHungryGhosts_Res_ignore>
+  <CVG_Ev_SuddenEnlightenment_Label>A moment of understanding</CVG_Ev_SuddenEnlightenment_Label>
+  <CVG_Ev_SuddenEnlightenment_Text>While carrying water, one of your cultivators stops. A leaf falls into the bucket and floats in a circle. For no reason at all, she understands something about the Dao that her teachers had talked about for years. She finishes carrying the water, because that is part of it too.</CVG_Ev_SuddenEnlightenment_Text>
+  <CVG_Ev_SpringOfJade_Label>A spring that runs green</CVG_Ev_SpringOfJade_Label>
+  <CVG_Ev_SpringOfJade_Text>A spring has opened at the foot of a boulder, and the water carries a green sediment that glitters in the sun. A cultivator tastes it and sits down very suddenly. It is full of jade dust, as fine as flour, and it keeps coming.</CVG_Ev_SpringOfJade_Text>
+  <CVG_Ev_AncientCacheMap_Label>A map in a bottle</CVG_Ev_AncientCacheMap_Label>
+  <CVG_Ev_AncientCacheMap_Text>A bottle floats down the river and gets caught in the reeds. Inside there is a map, drawn with a trembling hand, to a cache 'for the one who finds this'. A date in an old calendar, a warning to bring someone who can run, and the outline of a mountain that does not look like any mountain nearby.</CVG_Ev_AncientCacheMap_Text>
+  <CVG_Ev_AncientCacheMap_Opt_go>Send an expedition</CVG_Ev_AncientCacheMap_Opt_go>
+  <CVG_Ev_AncientCacheMap_Res_go>The expedition leaves at dawn with rope, lanterns and low expectations.</CVG_Ev_AncientCacheMap_Res_go>
+  <CVG_Ev_AncientCacheMap_Opt_keep>Keep the map</CVG_Ev_AncientCacheMap_Opt_keep>
+  <CVG_Ev_CacheGuardian_Label>The guardian of the cache</CVG_Ev_CacheGuardian_Label>
+  <CVG_Ev_CacheGuardian_Text>At the foot of the mountain there is something that was left to guard. It has been guarding for a long time, and in that time it has forgotten what it was supposed to guard and also what it is. It has not forgotten how to guard.</CVG_Ev_CacheGuardian_Text>
+  <CVG_Ev_CacheGuardian_Opt_fight>Hunt the guardian</CVG_Ev_CacheGuardian_Opt_fight>
+  <CVG_Ev_CacheGuardian_Res_fight>Somewhere in the hills, the guardian is waiting.</CVG_Ev_CacheGuardian_Res_fight>
+  <CVG_Ev_CacheGuardian_Opt_leave>Turn back</CVG_Ev_CacheGuardian_Opt_leave>
+  <CVG_Ev_CacheVault_Label>The vault opens</CVG_Ev_CacheVault_Label>
+  <CVG_Ev_CacheVault_Text>With the guardian down, the stone door swings open with a sigh. Inside: dust, three chests, and a skeleton in an old sect robe sitting upright, holding a slip as if it had fallen asleep reading. Perhaps it did.</CVG_Ev_CacheVault_Text>
+  <CVG_Ev_CacheLost_Label>The cache is lost</CVG_Ev_CacheLost_Label>
+  <CVG_Ev_CacheLost_Text>Weeks later, the mountain slides and the cache goes with it. Maybe it was never there. The map is still on the wall, a bit faded.</CVG_Ev_CacheLost_Text>
+  <CVG_Ev_SpiritHerbBloom_Label>The herbs bloom out of season</CVG_Ev_SpiritHerbBloom_Label>
+  <CVG_Ev_SpiritHerbBloom_Text>A meadow behind the colony has burst into bloom, in the wrong season, in colors that are not the colors of any flower in this world. Beneath the flowers are spirit herbs, thick and fragrant. Old herbalists say this happens only once in a generation, and that the herbs wilt in a week.</CVG_Ev_SpiritHerbBloom_Text>
+  <CVG_Ev_FallenSilver_Label>Moonlight on the ground</CVG_Ev_FallenSilver_Label>
+  <CVG_Ev_FallenSilver_Text>On a clear night a sliver of the moon seems to fall in the hills, silver and slow. In the morning a handful of cold bright metal is lying among the grass. It is lighter than silver and colder than iron, and it hums when touched with a qi finger.</CVG_Ev_FallenSilver_Text>
+  <CVG_Ev_GoodOmen_Label>A good omen</CVG_Ev_GoodOmen_Label>
+  <CVG_Ev_GoodOmen_Text>Nine cranes fly over the colony in a perfect line, and a pale rainbow bends over the well. The oldest person in the camp says this is the kind of omen that only comes when the Dao is looking elsewhere, and that it would be bad manners to ask it anything.</CVG_Ev_GoodOmen_Text>
+  <CVG_Ev_BeastGift_Label>A gift from the forest</CVG_Ev_BeastGift_Label>
+  <CVG_Ev_BeastGift_Text>A great wind wolf steps out of the trees, looks at the colony for a long minute, and leaves something at the edge of the clearing: a core, still warm. Whatever it means, it is not a threat. It might be a debt paid, or a debt incurred.</CVG_Ev_BeastGift_Text>
+  <CVG_Ev_LostCaravanReward_Label>A caravan comes back for its lost goods</CVG_Ev_LostCaravanReward_Label>
+  <CVG_Ev_LostCaravanReward_Text>A caravan master arrives with a tired face and a promise. Months ago one of his carts went into a gully near your land, and he assumed it was lost. Your people did not touch it. He is, to put it mildly, moved by their honesty.</CVG_Ev_LostCaravanReward_Text>
+  <CVG_Ev_VisitAzurePeak_Label>Swords at the gate</CVG_Ev_VisitAzurePeak_Label>
+  <CVG_Ev_VisitAzurePeak_Text>A party of the Azure Peak Sword Sect arrives at the gate, not to fight but to be seen. They carry swords with blue tassels and the disciplined idleness of people who have never been asked to wait. They are here, they say, to observe.</CVG_Ev_VisitAzurePeak_Text>
+  <CVG_Ev_VisitCauldron_Label>The auction caravan</CVG_Ev_VisitCauldron_Label>
+  <CVG_Ev_VisitCauldron_Text>Qian Wanli's auction caravan rolls to a stop at the edge of your land. Twelve carts, thirty guards, one smiling master and a banner that reads 'EVERYTHING HAS A PRICE, EVEN THIS BANNER'. The Pavilion sells pills, slips, jade and rumors, and buys everything.</CVG_Ev_VisitCauldron_Text>
+  <CVG_Ev_VisitLotus_Label>The healers of the Lotus</CVG_Ev_VisitLotus_Label>
+  <CVG_Ev_VisitLotus_Text>A small group of the Silent Lotus Temple arrives with baskets of herbs and no weapons. The abbess has sent them to see who in the colony is sick and has not said so. They will heal anyone who asks, and they will ask nothing, which is a little unsettling.</CVG_Ev_VisitLotus_Text>
+  <CVG_Ev_VisitDragon_Label>A guest of the Dragon Clan</CVG_Ev_VisitDragon_Label>
+  <CVG_Ev_VisitDragon_Text>A young man with the faint gleam of scales along his wrists stands at your gate and does not knock. Ao Ming of the Ancient Dragon Clan has been told to see how people on the Rim live. He is polite, curious and a little disappointed that nobody screamed.</CVG_Ev_VisitDragon_Text>
+  <CVG_Ev_VisitRogueMarket_Label>A night market</CVG_Ev_VisitRogueMarket_Label>
+  <CVG_Ev_VisitRogueMarket_Text>At dusk lanterns light up along the road and, as if they had been there forever, a night market of rogue cultivators sets itself up in your meadow. They sell maps, half-finished slips, a bit of everything. They leave before dawn. They always leave before dawn.</CVG_Ev_VisitRogueMarket_Text>
+  <CVG_Ev_VisitEmpireInquisitor_Label>A registration order</CVG_Ev_VisitEmpireInquisitor_Label>
+  <CVG_Ev_VisitEmpireInquisitor_Text>An officer of the Empire arrives with a scroll and a very new uniform. She would like to register 'the individuals exercising unlicensed psychic arts' on this land. She is polite and very, very patient. She mentions that the Empire is always willing to reward cooperation.</CVG_Ev_VisitEmpireInquisitor_Text>
+  <CVG_Ev_VisitEmpireInquisitor_Opt_register>Register the cultivators</CVG_Ev_VisitEmpireInquisitor_Opt_register>
+  <CVG_Ev_VisitEmpireInquisitor_Res_register>She files the scroll and tips her cap. 'The Empire thanks you', she says. Nobody thanks the Empire.</CVG_Ev_VisitEmpireInquisitor_Res_register>
+  <CVG_Ev_VisitEmpireInquisitor_Opt_refuse>Refuse</CVG_Ev_VisitEmpireInquisitor_Opt_refuse>
+  <CVG_Ev_VisitEmpireInquisitor_Res_refuse>She smiles for exactly one second. 'Noted', she says.</CVG_Ev_VisitEmpireInquisitor_Res_refuse>
+  <CVG_Ev_MissionWindWolf_Label>A bounty on the wind wolf</CVG_Ev_MissionWindWolf_Label>
+  <CVG_Ev_MissionWindWolf_Text>A notice nailed to a stake by the road offers a reward to anyone who can bring down the wind wolf of the northern ridge. It has been killing flocks, and the notice is signed by a shepherd who cannot write: she made a drawing of the wolf. It is a very good drawing.</CVG_Ev_MissionWindWolf_Text>
+  <CVG_Ev_MissionWindWolf_Opt_hunt>Take the bounty</CVG_Ev_MissionWindWolf_Opt_hunt>
+  <CVG_Ev_MissionWindWolf_Res_hunt>The tracks go north.</CVG_Ev_MissionWindWolf_Res_hunt>
+  <CVG_Ev_MissionWindWolf_Opt_pass>Not our problem</CVG_Ev_MissionWindWolf_Opt_pass>
+  <CVG_Ev_MissionWolfDone_Label>The wolf is down</CVG_Ev_MissionWolfDone_Label>
+  <CVG_Ev_MissionWolfDone_Text>The shepherd arrives with her flock and a basket of cheese. She says the pasture is quiet again. She also leaves a pouch with a wind wolf's core, which the hunters of her village keep for people who do the job properly.</CVG_Ev_MissionWolfDone_Text>
+  <CVG_Ev_MissionWolfFail_Label>The wolf is still out there</CVG_Ev_MissionWolfFail_Label>
+  <CVG_Ev_MissionWolfFail_Text>The notice has been taken down and replaced with a new one: fewer sheep, more sorrow. Nobody mentions your name, which is somehow worse.</CVG_Ev_MissionWolfFail_Text>
+  <CVG_Ev_MissionSpider_Label>A bounty for the Mother of Nine Hells</CVG_Ev_MissionSpider_Label>
+  <CVG_Ev_MissionSpider_Text>The Heavenly Cauldron Pavilion posts a bounty on a black spider that has been dissolving caravans in the pass. They want its poison gland intact, which is a very precise thing to ask. The reward is enormous. The footnote reads 'no refunds for dead hunters'.</CVG_Ev_MissionSpider_Text>
+  <CVG_Ev_MissionSpider_Opt_hunt>Hunt the spider</CVG_Ev_MissionSpider_Opt_hunt>
+  <CVG_Ev_MissionSpider_Res_hunt>The pass is a day's walk away. Bring rope.</CVG_Ev_MissionSpider_Res_hunt>
+  <CVG_Ev_MissionSpider_Opt_pass>Too dangerous</CVG_Ev_MissionSpider_Opt_pass>
+  <CVG_Ev_MissionSpiderDone_Label>The spider falls</CVG_Ev_MissionSpiderDone_Label>
+  <CVG_Ev_MissionSpiderDone_Text>The Pavilion's representative looks at the gland, at the carcass, at you, and writes a figure on a slip. The figure has many zeroes. 'The Pavilion honors its debts', he says, with the sweetness of a man who has just made a lot of money.</CVG_Ev_MissionSpiderDone_Text>
+  <CVG_Ev_MissionSpiderFail_Label>The spider keeps its web</CVG_Ev_MissionSpiderFail_Label>
+  <CVG_Ev_MissionSpiderFail_Text>Another caravan vanishes in the pass. The Pavilion strikes the contract from the ledger without bitterness. Bitterness is not a line item.</CVG_Ev_MissionSpiderFail_Text>
+  <CVG_Ev_MissionLotusHerbs_Label>An outbreak at the temple</CVG_Ev_MissionLotusHerbs_Label>
+  <CVG_Ev_MissionLotusHerbs_Text>A novice from the Silent Lotus Temple arrives, out of breath, with a one-line message: 'the cough is spreading and the herb store is empty'. The abbess does not ask for charity. She asks for twenty-five doses of herbal medicine and promises a blessing of the lotus in return.</CVG_Ev_MissionLotusHerbs_Text>
+  <CVG_Ev_MissionLotusHerbs_Opt_send>Send the herbs</CVG_Ev_MissionLotusHerbs_Opt_send>
+  <CVG_Ev_MissionLotusHerbs_Res_send>A month later the temple sends a basket of tea, a pill and a very long letter of thanks.</CVG_Ev_MissionLotusHerbs_Res_send>
+  <CVG_Ev_MissionLotusHerbs_Opt_decline>We can't spare them</CVG_Ev_MissionLotusHerbs_Opt_decline>
+  <CVG_Ev_MissionCauldronCores_Label>A commission for beast cores</CVG_Ev_MissionCauldronCores_Label>
+  <CVG_Ev_MissionCauldronCores_Text>Mo Qinghua, Grand Alchemist, sends a note on perfumed paper. She needs two beast cores for an experiment she refuses to describe. She will pay in slips and favors and has attached a list of every favor the Pavilion has ever granted you, in case you have forgotten them.</CVG_Ev_MissionCauldronCores_Text>
+  <CVG_Ev_MissionCauldronCores_Opt_send>Send two cores</CVG_Ev_MissionCauldronCores_Opt_send>
+  <CVG_Ev_MissionCauldronCores_Res_send>Two weeks later a messenger leaves a small crate. The experiment, apparently, went well.</CVG_Ev_MissionCauldronCores_Res_send>
+  <CVG_Ev_MissionCauldronCores_Opt_decline>Decline</CVG_Ev_MissionCauldronCores_Opt_decline>
+  <CVG_Ev_MissionCaravanEscort_Label>Hold the road</CVG_Ev_MissionCaravanEscort_Label>
+  <CVG_Ev_MissionCaravanEscort_Text>A Pavilion caravan will camp one night near your colony and asks for your people to stand watch. Bandits have been seen. The caravan master smiles too widely, which usually means the bandits have been seen a lot closer than he says.</CVG_Ev_MissionCaravanEscort_Text>
+  <CVG_Ev_MissionCaravanEscort_Opt_guard>Stand watch</CVG_Ev_MissionCaravanEscort_Opt_guard>
+  <CVG_Ev_MissionCaravanEscort_Res_guard>The night is quiet until it isn't.</CVG_Ev_MissionCaravanEscort_Res_guard>
+  <CVG_Ev_MissionCaravanEscort_Opt_decline>Decline</CVG_Ev_MissionCaravanEscort_Opt_decline>
+  <CVG_Ev_MissionEscortReward_Label>The caravan pays</CVG_Ev_MissionEscortReward_Label>
+  <CVG_Ev_MissionEscortReward_Text>In the morning the caravan master counts his carts, finds them all, and pays double what he promised. A man who has been saved from bandits is generous for exactly one day.</CVG_Ev_MissionEscortReward_Text>
+  <CVG_Ev_MissionAzureTournament_Label>The Tournament of Sects</CVG_Ev_MissionAzureTournament_Label>
+  <CVG_Ev_MissionAzureTournament_Text>Lin Wuchen has declared a tournament at the foot of the Peak and invites every sect and every person who can stand upright and swing a sword. Fighting is not compulsory. Honor is. The prize is a sword of spirit steel and, much more valuable, the right to be remembered.</CVG_Ev_MissionAzureTournament_Text>
+  <CVG_Ev_MissionAzureTournament_Opt_send>Send your best fighter</CVG_Ev_MissionAzureTournament_Opt_send>
+  <CVG_Ev_MissionAzureTournament_Res_send>Your fighter comes back limping, with a ribbon, a bruise and the respect of three sects.</CVG_Ev_MissionAzureTournament_Res_send>
+  <CVG_Ev_MissionAzureTournament_Opt_skip>Skip the tournament</CVG_Ev_MissionAzureTournament_Opt_skip>
+  <CVG_Ev_MissionDragonTribute_Label>The tribute to the Dragon</CVG_Ev_MissionDragonTribute_Label>
+  <CVG_Ev_MissionDragonTribute_Text>The Ancient Dragon Clan lets it be known that it will entertain petitions from lesser people, if accompanied by a gift worthy of a dragon's hoard. It does not specify what is worthy. It would be impolite to ask.</CVG_Ev_MissionDragonTribute_Text>
+  <CVG_Ev_MissionDragonTribute_Opt_pay>Send 100 spirit stones</CVG_Ev_MissionDragonTribute_Opt_pay>
+  <CVG_Ev_MissionDragonTribute_Res_pay>Ao Lian examines the stones for exactly as long as is polite, then accepts.</CVG_Ev_MissionDragonTribute_Res_pay>
+  <CVG_Ev_MissionDragonTribute_Opt_pass>Not now</CVG_Ev_MissionDragonTribute_Opt_pass>
+  <CVG_Ev_MissionStolenManual_Label>Thieves with a manual</CVG_Ev_MissionStolenManual_Label>
+  <CVG_Ev_MissionStolenManual_Text>A message from a righteous sect: a gang of rogue thieves has stolen a manual from their library and is hiding in the hills south of your land. They ask you to retrieve it and offer you a copy of the manual's lesser chapters in return.</CVG_Ev_MissionStolenManual_Text>
+  <CVG_Ev_MissionStolenManual_Opt_go>Take the job</CVG_Ev_MissionStolenManual_Opt_go>
+  <CVG_Ev_MissionStolenManual_Res_go>The thieves are waiting. They always are.</CVG_Ev_MissionStolenManual_Res_go>
+  <CVG_Ev_MissionStolenManual_Opt_no>Decline</CVG_Ev_MissionStolenManual_Opt_no>
+  <CVG_Ev_MissionManualReward_Label>The manual returns</CVG_Ev_MissionManualReward_Label>
+  <CVG_Ev_MissionManualReward_Text>You have retrieved the manual, slightly stained with tea and slightly used as a tray. The sect receives it with a grave bow and keeps their word: here are the lesser chapters, in a copy as careful as any scribe could make.</CVG_Ev_MissionManualReward_Text>
+  <CVG_Ev_TravelingHealer_Label>A healer without a temple</CVG_Ev_TravelingHealer_Label>
+  <CVG_Ev_TravelingHealer_Text>A woman with a satchel of dried herbs says she was a healer at the Silent Lotus Temple until her doubts got louder than her prayers. She does not want money. She wants a place to stay for the winter and a reason to stop walking.</CVG_Ev_TravelingHealer_Text>
+  <CVG_Ev_TravelingHealer_Opt_welcome>Give her shelter</CVG_Ev_TravelingHealer_Opt_welcome>
+  <CVG_Ev_TravelingHealer_Res_welcome>She looks around the colony for a long time and finally sets her satchel down.</CVG_Ev_TravelingHealer_Res_welcome>
+  <CVG_Ev_TravelingHealer_Opt_food>Give her a meal and let her go</CVG_Ev_TravelingHealer_Opt_food>
+  <CVG_Ev_OldMasterRiddle_Label>A riddle at the well</CVG_Ev_OldMasterRiddle_Label>
+  <CVG_Ev_OldMasterRiddle_Text>An old man draws water from your well and says, to no one in particular, 'What is heavy to carry and light to forget?' Then he waits. Several people answer. He shakes his head at each answer with infinite kindness.</CVG_Ev_OldMasterRiddle_Text>
+  <CVG_Ev_OldMasterRiddle_Opt_humility>'A grudge'</CVG_Ev_OldMasterRiddle_Opt_humility>
+  <CVG_Ev_OldMasterRiddle_Res_humility>He smiles for the first time. 'Almost', he says, and walks away, leaving a feeling like a door that has been propped open.</CVG_Ev_OldMasterRiddle_Res_humility>
+  <CVG_Ev_OldMasterRiddle_Opt_silence>Say nothing</CVG_Ev_OldMasterRiddle_Opt_silence>
+  <CVG_Ev_OldMasterRiddle_Res_silence>The old man nods, as if that were the right answer, and goes.</CVG_Ev_OldMasterRiddle_Res_silence>
+  <CVG_Ev_PhoenixFeather_Label>A feather that never cools</CVG_Ev_PhoenixFeather_Label>
+  <CVG_Ev_PhoenixFeather_Text>A red-gold feather drifts down from the sky and lands on the roof of the storehouse, where it warms the room and refuses to be moved. The old people say it belongs to the Vermilion Bird, who moults once a century. The Pavilion would pay a lot for one. Nobody will tell them.</CVG_Ev_PhoenixFeather_Text>
+  <CVG_Ev_RainbowBridge_Label>A bridge of seven colors</CVG_Ev_RainbowBridge_Label>
+  <CVG_Ev_RainbowBridge_Text>A rainbow touches the ground at the edge of the meadow and does not fade. For one afternoon it holds, thick as a road. People who step on it feel like they are standing on the back of something kind. Cultivators who sit on it find their qi unusually calm.</CVG_Ev_RainbowBridge_Text>
+  <CVG_Ev_OldGraveOpened_Label>A grave opened by rain</CVG_Ev_OldGraveOpened_Label>
+  <CVG_Ev_OldGraveOpened_Text>A week of rain has washed the topsoil off an old mound, and there is a coffin of lacquered wood, intact. The name on the lid is that of a disciple who died in the Great Rupture. In the coffin: a sword, a pouch of stones, and a short note: 'to whoever, kindly'.</CVG_Ev_OldGraveOpened_Text>
+  <CVG_Ev_OldGraveOpened_Opt_take>Take the gifts</CVG_Ev_OldGraveOpened_Opt_take>
+  <CVG_Ev_OldGraveOpened_Res_take>The gifts are taken. The rain does not stop for three days.</CVG_Ev_OldGraveOpened_Res_take>
+  <CVG_Ev_OldGraveOpened_Opt_rebury>Rebury him with honors</CVG_Ev_OldGraveOpened_Opt_rebury>
+  <CVG_Ev_OldGraveOpened_Res_rebury>A small funeral. A very quiet night. Somebody leaves an offering on the mound.</CVG_Ev_OldGraveOpened_Res_rebury>
+  <CVG_Ev_OrphanOfTheCalamity_Label>A child among the ashes</CVG_Ev_OrphanOfTheCalamity_Label>
+  <CVG_Ev_OrphanOfTheCalamity_Text>Searching the ruins of a burned shrine, your people find a girl of seven who has not spoken in days. She clutches a small bronze mirror and does not let go. When someone approaches she looks past them, as if there were somebody standing behind.</CVG_Ev_OrphanOfTheCalamity_Text>
+  <CVG_Ev_OrphanOfTheCalamity_Opt_adopt>Take her in</CVG_Ev_OrphanOfTheCalamity_Opt_adopt>
+  <CVG_Ev_OrphanOfTheCalamity_Res_adopt>She sleeps in the corner of the kitchen with the mirror under her cheek.</CVG_Ev_OrphanOfTheCalamity_Res_adopt>
+  <CVG_Ev_OrphanOfTheCalamity_Opt_lotus>Send her to the Lotus</CVG_Ev_OrphanOfTheCalamity_Opt_lotus>
+  <CVG_Ev_OrphanOfTheCalamity_Res_lotus>The Temple receives her with gentleness and a bowl of rice.</CVG_Ev_OrphanOfTheCalamity_Res_lotus>
+  <CVG_Ev_OrphanSpeaks_Label>The girl speaks</CVG_Ev_OrphanSpeaks_Label>
+  <CVG_Ev_OrphanSpeaks_Text>One morning the girl asks, in a small clear voice, for tea. Then she tells you that the mirror shows the dead as they were. She does not ask what it means. She asks whether she may keep it.</CVG_Ev_OrphanSpeaks_Text>
+  <CVG_Ev_OrphanSpeaks_Opt_keep>Of course</CVG_Ev_OrphanSpeaks_Opt_keep>
+  <CVG_Ev_OrphanSpeaks_Res_keep>She smiles for the first time. The mirror glints.</CVG_Ev_OrphanSpeaks_Res_keep>
+  <CVG_Ev_OrphanSpeaks_Opt_study>Look into the mirror together</CVG_Ev_OrphanSpeaks_Opt_study>
+  <CVG_Ev_OrphanSpeaks_Res_study>What the mirror shows takes some time to digest.</CVG_Ev_OrphanSpeaks_Res_study>
+  <CVG_Ev_OrphanLegacy_Label>A name that was hers</CVG_Ev_OrphanLegacy_Label>
+  <CVG_Ev_OrphanLegacy_Text>A stranger arrives with a letter from a sect that no longer exists. It names the girl as the last heir of a small lineage of mirror-smiths. There is a hidden workshop and a debt that follows the name. The girl listens to all of it, patiently, holding your hand.</CVG_Ev_OrphanLegacy_Text>
+  <CVG_Ev_FeudProvocation_Label>Insults across the border</CVG_Ev_FeudProvocation_Label>
+  <CVG_Ev_FeudProvocation_Text>A message arrives from a nearby sect, written in a style that is polite until it is not. It claims that your people have 'diluted the dignity of the way' and suggests that things be settled in public. It is signed by a disciple who is clearly not the one in charge.</CVG_Ev_FeudProvocation_Text>
+  <CVG_Ev_FeudProvocation_Opt_answer>Answer in kind</CVG_Ev_FeudProvocation_Opt_answer>
+  <CVG_Ev_FeudProvocation_Res_answer>Your reply is two lines long and uses no adjectives. Their reply is a bruise on the horizon.</CVG_Ev_FeudProvocation_Res_answer>
+  <CVG_Ev_FeudProvocation_Opt_apologize>Send tea and an apology</CVG_Ev_FeudProvocation_Opt_apologize>
+  <CVG_Ev_FeudProvocation_Res_apologize>They accept the tea. It is not clear if they accept the apology.</CVG_Ev_FeudProvocation_Res_apologize>
+  <CVG_Ev_FeudChallenge_Label>The formal challenge</CVG_Ev_FeudChallenge_Label>
+  <CVG_Ev_FeudChallenge_Text>The rival sect appears at dawn in formation, banners high. A herald reads a challenge so long that two of the horses fall asleep. The terms: a public duel between champions, or a fight between everyone. The herald hopes, loudly, for the former.</CVG_Ev_FeudChallenge_Text>
+  <CVG_Ev_FeudChallenge_Opt_champion>Send a champion</CVG_Ev_FeudChallenge_Opt_champion>
+  <CVG_Ev_FeudChallenge_Res_champion>The champion returns on their own two feet. Mostly.</CVG_Ev_FeudChallenge_Res_champion>
+  <CVG_Ev_FeudChallenge_Opt_all>Let everyone fight</CVG_Ev_FeudChallenge_Opt_all>
+  <CVG_Ev_FeudChallenge_Res_all>Banners fall, steel rings, and nobody remembers the herald's speech.</CVG_Ev_FeudChallenge_Res_all>
+  <CVG_Ev_FeudAftermath_Label>Peace at a price</CVG_Ev_FeudAftermath_Label>
+  <CVG_Ev_FeudAftermath_Text>The rival sect sends a final message: an invitation to share tea in neutral territory. The tea is not good. The conversation is the best you have had in months. Peace, you realize, is mostly a matter of someone being willing to pour first.</CVG_Ev_FeudAftermath_Text>
+  <CVG_Ev_PreOddLights_Label>Strange lights</CVG_Ev_PreOddLights_Label>
+  <CVG_Ev_PreOddLights_Text>At night, faint colored lights shimmer over the northern hills, with no storm and no aurora to explain them. One of the watchers swears the lights flickered in the pattern of a song. No one knows which song.</CVG_Ev_PreOddLights_Text>
+  <CVG_Ev_PreRestlessAnimals_Label>Restless animals</CVG_Ev_PreRestlessAnimals_Label>
+  <CVG_Ev_PreRestlessAnimals_Text>Every animal in the colony is awake at midnight and all of them are facing the same direction. They do not make noise. They watch. The dogs growl at the empty air, then lie down, then get up again. In the morning, everything seems normal, except that the sheep will not graze to the north.</CVG_Ev_PreRestlessAnimals_Text>
+  <CVG_Ev_PreStrangeDreams_Label>The same dream</CVG_Ev_PreStrangeDreams_Label>
+  <CVG_Ev_PreStrangeDreams_Text>Three people in the colony tell the same dream at breakfast: a door that opens on a city of towers and a voice that asks, patiently, if they are ready. None of them remembers answering. All of them woke up hungry.</CVG_Ev_PreStrangeDreams_Text>
+  <CVG_Ev_PreStrangeDreams_Opt_listen>Write the dream down</CVG_Ev_PreStrangeDreams_Opt_listen>
+  <CVG_Ev_PreStrangeDreams_Res_listen>The pages are, for some reason, in a handwriting not your own.</CVG_Ev_PreStrangeDreams_Res_listen>
+  <CVG_Ev_PreStrangeDreams_Opt_dismiss>Dismiss it</CVG_Ev_PreStrangeDreams_Opt_dismiss>
+  <CVG_Ev_CauldronCreditors_Label>The Pavilion's creditors</CVG_Ev_CauldronCreditors_Label>
+  <CVG_Ev_CauldronCreditors_Text>The Pavilion remembers its debts, including those of an alchemist who fled with the formula for a pill that never worked. Two collectors in silk arrive with a ledger, a polite smile and an extremely long list of fees for 'administration of the debt'.</CVG_Ev_CauldronCreditors_Text>
+  <CVG_Ev_CauldronCreditors_Opt_pay>Pay (150 silver)</CVG_Ev_CauldronCreditors_Opt_pay>
+  <CVG_Ev_CauldronCreditors_Res_pay>The ledger closes like a mouth.</CVG_Ev_CauldronCreditors_Res_pay>
+  <CVG_Ev_CauldronCreditors_Opt_flee>Refuse</CVG_Ev_CauldronCreditors_Opt_flee>
+  <CVG_Ev_CauldronCreditors_Res_flee>The collectors take off their silk gloves.</CVG_Ev_CauldronCreditors_Res_flee>
+  <CVG_Ev_DragonHeirTrial_Label>The Dragon's trial</CVG_Ev_DragonHeirTrial_Label>
+  <CVG_Ev_DragonHeirTrial_Text>An elder of the Ancient Dragon Clan arrives to see whether the blood of the descendant has thickened or thinned. He asks nothing, takes nothing and, for an entire afternoon, circles the colony in silence. Then he leaves a scale on the doorstep, which may be a gift or an invoice.</CVG_Ev_DragonHeirTrial_Text>
+  <CVG_Ev_LotusWelcome_Label>The Lotus remembers its own</CVG_Ev_LotusWelcome_Label>
+  <CVG_Ev_LotusWelcome_Text>A small procession of the Silent Lotus Temple arrives, with a lotus in a pot and a quiet song. They bring news that the abbess has heard of the refugees and has decided that the temple has a place for them, whenever they wish it. She sends tea.</CVG_Ev_LotusWelcome_Text>
+  <CVG_Ev_BeastGuildOffer_Label>The hunters' guild</CVG_Ev_BeastGuildOffer_Label>
+  <CVG_Ev_BeastGuildOffer_Text>A guild of beast hunters sends a representative who wants to meet people capable of tracking a mountain wolf. The guild is not rich, but pays in cores. He shakes your hand too long and, when you ask what's wrong, says only: 'it's the third wolf this month'.</CVG_Ev_BeastGuildOffer_Text>
+  <CVG_Ev_BeastGuildOffer_Opt_hunt>Take the contract</CVG_Ev_BeastGuildOffer_Opt_hunt>
+  <CVG_Ev_BeastGuildOffer_Opt_decline>Decline</CVG_Ev_BeastGuildOffer_Opt_decline>
+  <CVG_Ev_TeaMaster_Label>A tea master at the gate</CVG_Ev_TeaMaster_Label>
+  <CVG_Ev_TeaMaster_Text>An old man with a bamboo pole and two baskets asks for hot water, no more. He sets a clay pot on your fire, drops in a pinch of leaves and waits. When the tea is ready he pours it for everyone who is nearby, in order of age, himself last. Nobody speaks. When the pot is empty the tension of the whole week has gone somewhere.</CVG_Ev_TeaMaster_Text>
+  <CVG_Ev_TeaMaster_Opt_share>Share the pot</CVG_Ev_TeaMaster_Opt_share>
+  <CVG_Ev_TeaMaster_Res_share>He leaves before dawn without a word, and the pot washed.</CVG_Ev_TeaMaster_Res_share>
+  <CVG_Ev_TeaMaster_Opt_buy>Buy his leaves</CVG_Ev_TeaMaster_Opt_buy>
+  <CVG_Ev_TeaMaster_Res_buy>He sells you two handfuls and tells you where the tea grows best.</CVG_Ev_TeaMaster_Res_buy>
+  <CVG_Ev_RiverToll_Label>The toll of the river</CVG_Ev_RiverToll_Label>
+  <CVG_Ev_RiverToll_Text>A river runs through the edge of your land, and a river spirit has decided it is time you paid for it. A boy comes to tell you, because the spirit speaks through the village children when it is tired. It wants a bowl of rice, a bowl of wine and an apology to the water. In exchange it will keep its floods inside its banks.</CVG_Ev_RiverToll_Text>
+  <CVG_Ev_RiverToll_Opt_pay>Pay the toll</CVG_Ev_RiverToll_Opt_pay>
+  <CVG_Ev_RiverToll_Res_pay>The bowls are empty in the morning, and the river is calm.</CVG_Ev_RiverToll_Res_pay>
+  <CVG_Ev_RiverToll_Opt_refuse>Refuse</CVG_Ev_RiverToll_Opt_refuse>
+  <CVG_Ev_RiverToll_Res_refuse>The boy shrugs. 'It was only a message', he says.</CVG_Ev_RiverToll_Res_refuse>
+  <CVG_Ev_SilkPeddler_Label>A silk peddler</CVG_Ev_SilkPeddler_Label>
+  <CVG_Ev_SilkPeddler_Text>A peddler arrives with a mule loaded with bolts of fabric the colour of rain. He sells spirit silk by the arm, never by the weight, because he says weighing silk is an insult to the worm. He is not in a hurry to sell. He is in a hurry to be somewhere else.</CVG_Ev_SilkPeddler_Text>
+  <CVG_Ev_SilkPeddler_Opt_buy>Buy silk</CVG_Ev_SilkPeddler_Opt_buy>
+  <CVG_Ev_SilkPeddler_Res_buy>He counts the arms with great care and leaves a small knot of thread as a receipt.</CVG_Ev_SilkPeddler_Res_buy>
+  <CVG_Ev_SilkPeddler_Opt_pass>Let him go</CVG_Ev_SilkPeddler_Opt_pass>
+  <CVG_Ev_FieldsGlow_Label>The fields glow at night</CVG_Ev_FieldsGlow_Label>
+  <CVG_Ev_FieldsGlow_Text>One night the crops in the farthest field begin to glow, faintly, like a breath held in the dark. By morning the qi has pooled in the soil; the old farmers say it will fade in a few days, and that anything planted in it will remember. It is an opportunity, and a quiet one.</CVG_Ev_FieldsGlow_Text>
+  <CVG_Ev_FieldsGlow_Opt_harvest>Harvest the glow</CVG_Ev_FieldsGlow_Opt_harvest>
+  <CVG_Ev_FieldsGlow_Res_harvest>The harvest is small and exceptionally tasty.</CVG_Ev_FieldsGlow_Res_harvest>
+  <CVG_Ev_FieldsGlow_Opt_leave>Let it be</CVG_Ev_FieldsGlow_Opt_leave>
+  <CVG_Ev_BrokenStele_Label>A broken stele</CVG_Ev_BrokenStele_Label>
+  <CVG_Ev_BrokenStele_Text>A stone tablet by the road that nobody had ever read splits down the middle in the night. The crack runs straight through the first line, as if the stone had chosen what to break. The villagers go quiet. Somebody says it was holding something in, and nobody asks what.</CVG_Ev_BrokenStele_Text>
+  <CVG_Ev_BrokenStele_Opt_repair>Try to repair it</CVG_Ev_BrokenStele_Opt_repair>
+  <CVG_Ev_BrokenStele_Res_repair>It takes three nights and a lot of glue made from rice. The line comes back, a little different.</CVG_Ev_BrokenStele_Res_repair>
+  <CVG_Ev_BrokenStele_Opt_ignore>Leave it broken</CVG_Ev_BrokenStele_Opt_ignore>
+  <CVG_Ev_HonestThief_Label>The honest thief</CVG_Ev_HonestThief_Label>
+  <CVG_Ev_HonestThief_Text>A thin man is caught with a sack of rice from your stores. He does not run. He says he took exactly what his children needed for a week and not a grain more, and offers his services as a servant until the debt is cleared. Nobody has ever seen a thief so precise about his own crime.</CVG_Ev_HonestThief_Text>
+  <CVG_Ev_HonestThief_Opt_hire>Take him as a servant</CVG_Ev_HonestThief_Opt_hire>
+  <CVG_Ev_HonestThief_Res_hire>He works hard and sleeps by the door, and checks it twice every night.</CVG_Ev_HonestThief_Res_hire>
+  <CVG_Ev_HonestThief_Opt_forgive>Let him go with the rice</CVG_Ev_HonestThief_Opt_forgive>
+  <CVG_Ev_MonkInTheRain_Label>A monk in the rain</CVG_Ev_MonkInTheRain_Label>
+  <CVG_Ev_MonkInTheRain_Text>A monk sits unmoving at the edge of your land in a downpour. He has been there since dawn. He says he is waiting for the rain to finish, so he can ask it what it wanted. He accepts no shelter. He asks if you would like to wait with him.</CVG_Ev_MonkInTheRain_Text>
+  <CVG_Ev_MonkInTheRain_Opt_wait>Wait with him</CVG_Ev_MonkInTheRain_Opt_wait>
+  <CVG_Ev_MonkInTheRain_Res_wait>The rain stops at dusk. He says it wanted to be listened to. He leaves with the dry end of the sunset.</CVG_Ev_MonkInTheRain_Res_wait>
+  <CVG_Ev_MonkInTheRain_Opt_shelter>Offer a dry blanket</CVG_Ev_MonkInTheRain_Opt_shelter>
+  <CVG_Ev_FoundersDay_Label>Founders' day</CVG_Ev_FoundersDay_Label>
+  <CVG_Ev_FoundersDay_Text>Someone remembers that today is the anniversary of the day this settlement first lit a fire. Nobody knows who counted. A small procession forms by itself, with a banner somebody sewed in secret, to put an incense stick on the first hearth. It costs very little and means a great deal.</CVG_Ev_FoundersDay_Text>
+  <CVG_Ev_FoundersDay_Opt_celebrate>Hold the ceremony</CVG_Ev_FoundersDay_Opt_celebrate>
+  <CVG_Ev_FoundersDay_Res_celebrate>The incense burns straight up, which the old ones read as a very good sign.</CVG_Ev_FoundersDay_Res_celebrate>
+  <CVG_Ev_FoundersDay_Opt_skip>Let it pass</CVG_Ev_FoundersDay_Opt_skip>
+  <CVG_Ev_SpiritBoarSow_Label>The sow of the red hills</CVG_Ev_SpiritBoarSow_Label>
+  <CVG_Ev_SpiritBoarSow_Text>A boar sow with a ring of pale light around her tusks comes out of the hills. She does not want your food. She wants her piglets, which she believes you have. You do not. She does not believe you.</CVG_Ev_SpiritBoarSow_Text>
+  <CVG_Ev_SpiritBoarSow_Opt_fight>Drive her off</CVG_Ev_SpiritBoarSow_Opt_fight>
+  <CVG_Ev_SpiritBoarSow_Res_fight>She charges. Somebody finally says the piglets are on the other side of the hill.</CVG_Ev_SpiritBoarSow_Res_fight>
+  <CVG_Ev_SpiritBoarSow_Opt_help>Help her look</CVG_Ev_SpiritBoarSow_Opt_help>
+  <CVG_Ev_SpiritBoarSow_Res_help>Three hours of searching. The piglets were in a ditch. She grunts once at you, with something very like gratitude.</CVG_Ev_SpiritBoarSow_Res_help>
+  <CVG_Ev_ScriptureTrade_Label>A scholar with a trunk</CVG_Ev_ScriptureTrade_Label>
+  <CVG_Ev_ScriptureTrade_Text>A scholar in a dusty robe arrives pulling a trunk on two wheels. In the trunk are jade slips he has been collecting for years, because he cannot make himself read them: he says reading is the death of a collection. He will sell some, if the buyer promises to actually read them.</CVG_Ev_ScriptureTrade_Text>
+  <CVG_Ev_ScriptureTrade_Opt_buy>Buy two slips</CVG_Ev_ScriptureTrade_Opt_buy>
+  <CVG_Ev_ScriptureTrade_Res_buy>'Read them', he says at the door. 'And write to me.' He never gave an address.</CVG_Ev_ScriptureTrade_Res_buy>
+  <CVG_Ev_ScriptureTrade_Opt_pass>Let him pass</CVG_Ev_ScriptureTrade_Opt_pass>
+  <CVG_Ev_SectWarAppeal_Label>Two sects at war</CVG_Ev_SectWarAppeal_Label>
+  <CVG_Ev_SectWarAppeal_Text>The old quarrel between {FACTION_name} and {OTHER_name} has finally come to blows. Messengers from both gates reach your colony within the same hour, each with a different version of the same story and the same request: do not leave this to the other side. The war will burn itself out in a couple of weeks, but how it ends may depend on a small thing.</CVG_Ev_SectWarAppeal_Text>
+  <CVG_Ev_SectWarAppeal_Opt_aidA>Send supplies to {FACTION_name}</CVG_Ev_SectWarAppeal_Opt_aidA>
+  <CVG_Ev_SectWarAppeal_Res_aidA>Their messenger bows to the ground. The other gate will not forget.</CVG_Ev_SectWarAppeal_Res_aidA>
+  <CVG_Ev_SectWarAppeal_Opt_aidB>Send supplies to {OTHER_name}</CVG_Ev_SectWarAppeal_Opt_aidB>
+  <CVG_Ev_SectWarAppeal_Res_aidB>Their messenger bows to the ground. The other gate will not forget.</CVG_Ev_SectWarAppeal_Res_aidB>
+  <CVG_Ev_SectWarAppeal_Opt_mediate>Offer to mediate</CVG_Ev_SectWarAppeal_Opt_mediate>
+  <CVG_Ev_SectWarAppeal_Res_mediate>The elders agree to sit at the same table. Whether they stay seated is another matter.</CVG_Ev_SectWarAppeal_Res_mediate>
+  <CVG_Ev_SectWarAppeal_Opt_stay>Stay out of it</CVG_Ev_SectWarAppeal_Opt_stay>
+  <CVG_Ev_SectTradePact_Label>A pact between sects</CVG_Ev_SectTradePact_Label>
+  <CVG_Ev_SectTradePact_Text>{FACTION_name} and {OTHER_name} have signed a trade pact after years of looking at each other across the pass. As a courtesy, both send a small caravan to your gate: they want the pact to be seen by a third party, and they want to be seen eating your rice.</CVG_Ev_SectTradePact_Text>
+  <CVG_Ev_SectTradePact_Opt_host>Host the caravans</CVG_Ev_SectTradePact_Opt_host>
+  <CVG_Ev_SectTradePact_Res_host>Two banners at the same table. It does not happen twice in a lifetime.</CVG_Ev_SectTradePact_Res_host>
+  <CVG_Ev_SectTradePact_Opt_decline>Send gifts and decline</CVG_Ev_SectTradePact_Opt_decline>
+  <CVG_Ev_SectTradePact_Res_decline>Polite and cheap, the best kind of refusal.</CVG_Ev_SectTradePact_Res_decline>
+  <CVG_Ev_SectRivalry_Label>Insults between sects</CVG_Ev_SectRivalry_Label>
+  <CVG_Ev_SectRivalry_Text>A disciple of {FACTION_name} said something about the masters of {OTHER_name} at a wedding. Nobody agrees on what it was, only that three people left and one chair was broken. Both sects have asked your colony to say who was right, which is a request that cannot be answered without losing someone.</CVG_Ev_SectRivalry_Text>
+  <CVG_Ev_SectRivalry_Opt_sideA>Side with {FACTION_name}</CVG_Ev_SectRivalry_Opt_sideA>
+  <CVG_Ev_SectRivalry_Res_sideA>{FACTION_name} bows. The other gate closes.</CVG_Ev_SectRivalry_Res_sideA>
+  <CVG_Ev_SectRivalry_Opt_sideB>Side with {OTHER_name}</CVG_Ev_SectRivalry_Opt_sideB>
+  <CVG_Ev_SectRivalry_Res_sideB>{OTHER_name} bows. The other gate closes.</CVG_Ev_SectRivalry_Res_sideB>
+  <CVG_Ev_SectRivalry_Opt_broker>Broker a quiet apology</CVG_Ev_SectRivalry_Opt_broker>
+  <CVG_Ev_SectRivalry_Res_broker>It takes a jar of wine and three evenings. The chair is paid for.</CVG_Ev_SectRivalry_Res_broker>
+  <CVG_Ev_SectRivalry_Opt_ignore>Say nothing</CVG_Ev_SectRivalry_Opt_ignore>
+  <CVG_Ev_SectTournament_Label>A tournament of sects</CVG_Ev_SectTournament_Label>
+  <CVG_Ev_SectTournament_Text>{FACTION_name} and {OTHER_name} are holding a tournament on neutral ground and have sent you a banner with an invitation: send a champion, or at least a witness. The winner takes the season's mountain pass tolls. The loser takes a story to tell about it.</CVG_Ev_SectTournament_Text>
+  <CVG_Ev_SectTournament_Opt_champion>Send a champion</CVG_Ev_SectTournament_Opt_champion>
+  <CVG_Ev_SectTournament_Res_champion>Win or lose, the champion comes back with a bruise and a better stance.</CVG_Ev_SectTournament_Res_champion>
+  <CVG_Ev_SectTournament_Opt_watch>Send a witness</CVG_Ev_SectTournament_Opt_watch>
+  <CVG_Ev_SectTournament_Res_watch>The witness returns with a very long story and a very short report.</CVG_Ev_SectTournament_Res_watch>
+  <CVG_Ev_SectTournament_Opt_decline>Decline politely</CVG_Ev_SectTournament_Opt_decline>
+  <CVG_Ev_SectTribute_Label>A tribute is demanded</CVG_Ev_SectTribute_Label>
+  <CVG_Ev_SectTribute_Text>Envoys of {FACTION_name} arrive under a banner of good manners. They remind you that the mountain is theirs by old right and that those who graze under it pay a tithe, only a little, only this once. They say it the way you say things that will be said again.</CVG_Ev_SectTribute_Text>
+  <CVG_Ev_SectTribute_Opt_pay>Pay the tithe</CVG_Ev_SectTribute_Opt_pay>
+  <CVG_Ev_SectTribute_Res_pay>They count the silver twice and leave without hurry.</CVG_Ev_SectTribute_Res_pay>
+  <CVG_Ev_SectTribute_Opt_bargain>Bargain it down</CVG_Ev_SectTribute_Opt_bargain>
+  <CVG_Ev_SectTribute_Res_bargain>Half the price and a promise it will not be repeated. Both parties know how much that promise weighs.</CVG_Ev_SectTribute_Res_bargain>
+  <CVG_Ev_SectTribute_Opt_refuse>Refuse</CVG_Ev_SectTribute_Opt_refuse>
+  <CVG_Ev_SectTribute_Res_refuse>They bow, correctly, and leave without a word. Correctly is a bad sign.</CVG_Ev_SectTribute_Res_refuse>
+  <CVG_Ev_DisciplesTransfer_Label>A disciple asks to transfer</CVG_Ev_DisciplesTransfer_Label>
+  <CVG_Ev_DisciplesTransfer_Text>A young disciple of {FACTION_name} stands at your gate with a sealed letter from his master: the sect cannot teach him what he needs, and the master hopes your colony can. It is an honorable arrangement, with a price, and the master would like to be remembered for it. The boy would like to be fed.</CVG_Ev_DisciplesTransfer_Text>
+  <CVG_Ev_DisciplesTransfer_Opt_accept>Take him in</CVG_Ev_DisciplesTransfer_Opt_accept>
+  <CVG_Ev_DisciplesTransfer_Res_accept>He bows to the colony, to the master's letter and to the rice, in that order.</CVG_Ev_DisciplesTransfer_Res_accept>
+  <CVG_Ev_DisciplesTransfer_Opt_decline>Decline kindly</CVG_Ev_DisciplesTransfer_Opt_decline>
+  <CVG_Ev_DisciplesTransfer_Res_decline>The boy takes the letter back and the road with it.</CVG_Ev_DisciplesTransfer_Res_decline>
+  <CVG_Ev_Starfall_Label>A night of falling stars</CVG_Ev_Starfall_Label>
+  <CVG_Ev_Starfall_Text>The stars fall all night over the western ridge, thin and silent, and the dogs refuse to go outside. At first light the foothills are strewn with small black stones, still warm, that hum when touched. The old smiths say the sky is paying a debt. They are already at the ridge with baskets.</CVG_Ev_Starfall_Text>
+  <CVG_Ev_Starfall_Opt_gather>Gather the stones</CVG_Ev_Starfall_Opt_gather>
+  <CVG_Ev_Starfall_Res_gather>The baskets are heavy and the night is remembered.</CVG_Ev_Starfall_Res_gather>
+  <CVG_Ev_Starfall_Opt_sell>Sell the claim to the smiths</CVG_Ev_Starfall_Opt_sell>
+  <CVG_Ev_Starfall_Res_sell>The smiths pay in coin and grumble in prayer.</CVG_Ev_Starfall_Res_sell>
+  <CVG_Ev_DawnSands_Label>The sand-gatherers of dawn</CVG_Ev_DawnSands_Label>
+  <CVG_Ev_DawnSands_Text>Two women with sieves and a silent boy arrive at your ridge before sunrise. They are the sand-gatherers: they collect the glittering silt that settles where the dew of the highest peaks runs off. They ask for permission, not because they need it, but because the last one who did not ask was the cause of a long feud.</CVG_Ev_DawnSands_Text>
+  <CVG_Ev_DawnSands_Opt_permit>Give them leave</CVG_Ev_DawnSands_Opt_permit>
+  <CVG_Ev_DawnSands_Res_permit>They leave a small bag on the doorstep, and do not say what for.</CVG_Ev_DawnSands_Res_permit>
+  <CVG_Ev_DawnSands_Opt_deny>Send them away</CVG_Ev_DawnSands_Opt_deny>
+  <CVG_Ev_CraneMolt_Label>The cranes molt</CVG_Ev_CraneMolt_Label>
+  <CVG_Ev_CraneMolt_Text>The celestial cranes that roost on the pond have begun to molt, and the water is white with feathers. The old keepers say a crane will accept gifts from those who do not grab at her. If you wade in gently and take only what falls, they will let you.</CVG_Ev_CraneMolt_Text>
+  <CVG_Ev_CraneMolt_Opt_gather>Gather what falls</CVG_Ev_CraneMolt_Opt_gather>
+  <CVG_Ev_CraneMolt_Res_gather>A heron looks on, offended. The feathers weigh nothing and are worth much.</CVG_Ev_CraneMolt_Res_gather>
+  <CVG_Ev_CraneMolt_Opt_leave>Let them be</CVG_Ev_CraneMolt_Opt_leave>
+  <CVG_Ev_EndgameStep1_Label>The jade remembers a door</CVG_Ev_EndgameStep1_Label>
+  <CVG_Ev_EndgameStep1_Text>The jade that the Master left in your care has been warm for three nights. Tonight it speaks, not in words, but in the weight of a hand on your shoulder: a door, at the edge of your land, that was closed by a man who wanted to be remembered. The jade does not say whether it wants you to open it. It only says that it is time.</CVG_Ev_EndgameStep1_Text>
+  <CVG_Ev_EndgameStep2_Label>The seal remembers the sky</CVG_Ev_EndgameStep2_Label>
+  <CVG_Ev_EndgameStep2_Text>The founder's seal glows in your hand, and the glow points upward. The old man who closed the tomb left a word on the back of the disc, and the word is a place: a fragment of the broken Celestial Realm, high above the clouds. Those who have a way to rise will find its door. Those who do not will find that the sky, in time, comes down to meet them.</CVG_Ev_EndgameStep2_Text>
+  <CVG_Ev_EndgameStep3_Label>The shard points to the field</CVG_Ev_EndgameStep3_Label>
+  <CVG_Ev_EndgameStep3_Text>The shard of Jiuxiao, once carried back to earth, turns slowly in its cradle like a compass looking for north. North is a place the chronicles do not name: the field where the sky was broken. The old sects say nobody has walked it in a thousand years, and that the metal there still remembers how to move.</CVG_Ev_EndgameStep3_Text>
+  <CVG_Ev_EndgameStep4_Label>The core falls silent</CVG_Ev_EndgameStep4_Label>
+  <CVG_Ev_EndgameStep4_Text>The core of the Rupture was humming when you took it. Now it is silent, and the silence has a shape: a staircase down, deeper than any realm you have walked. At the bottom, the heavens have kept a room for those who would sit in their seat. The jade, finally, stops being warm. It has done what it was made to do.</CVG_Ev_EndgameStep4_Text>
+  <CVG_Ev_EndgameChoice_Label>The four keys</CVG_Ev_EndgameChoice_Label>
+  <CVG_Ev_EndgameChoice_Text>The seal, the shard, the core and the key lie on one table, and the table is very quiet. Whoever holds them can end the story in one of three ways. One can rise: the highest cultivator among you crosses the last tribulation and ascends, and the colony watches the light go up. One can seal: close the rift above the world for good, so that the storms of qi and the sky of Jiuxiao are forgotten, and the Rimworld goes back to being only the Rimworld. One can rule: sit in the empty Celestial seat and make the old sects bow, at the price of waking what the Rupture put to sleep. Take your time. The keys will not spoil.</CVG_Ev_EndgameChoice_Text>
+  <CVG_Ev_EndgameChoice_Opt_ascend>Ascend</CVG_Ev_EndgameChoice_Opt_ascend>
+  <CVG_Ev_EndgameChoice_Opt_seal>Seal the rift</CVG_Ev_EndgameChoice_Opt_seal>
+  <CVG_Ev_EndgameChoice_Opt_rule>Rule from the Celestial seat</CVG_Ev_EndgameChoice_Opt_rule>
+  <CVG_Ev_PuppetHeirs_Label>The heirs of the valley</CVG_Ev_PuppetHeirs_Label>
+  <CVG_Ev_PuppetHeirs_Text>Three travellers in the grey of the Thousand Strings Valley arrive at your gate, and they do not look at you. They look at the puppets. They say the valley's workshop belongs to the valley, and that the puppets are its apprentices, and that a thread tied around a living heart is a theft if no one in the valley knows it. The eldest says it flatly, like a fact they are tired of repeating. The youngest has a puppet's hand tattooed on her wrist.</CVG_Ev_PuppetHeirs_Text>
+  <CVG_Ev_PuppetHeirs_Opt_share>Share the craft</CVG_Ev_PuppetHeirs_Opt_share>
+  <CVG_Ev_PuppetHeirs_Res_share>They stay three days and teach you the knot that the valley kept for itself.</CVG_Ev_PuppetHeirs_Res_share>
+  <CVG_Ev_PuppetHeirs_Opt_refuse>Refuse them</CVG_Ev_PuppetHeirs_Opt_refuse>
+  <CVG_Ev_PuppetHeirs_Res_refuse>The youngest turns at the gate and says, quietly, that the valley has a crypt, and that the crypt remembers.</CVG_Ev_PuppetHeirs_Res_refuse>
+  <CVG_Ev_PuppetHeirs_Opt_pay>Pay for the thread</CVG_Ev_PuppetHeirs_Opt_pay>
+  <CVG_Ev_PuppetHeirs_Res_pay>They count the silver as if it were a funeral fee, and thank you in the same tone.</CVG_Ev_PuppetHeirs_Res_pay>
+  <CVG_Ev_PuppetCrypt_Label>The crypt wakes</CVG_Ev_PuppetCrypt_Label>
+  <CVG_Ev_PuppetCrypt_Text>In the night the ground near your colony settles with a sound like a held breath. At dawn a stone door stands open in the hillside, and the first puppets of the valley, wood stained black with centuries, are lined up in the dark with their hands at their sides. They are not hostile. They are waiting for someone to tell them what to do.</CVG_Ev_PuppetCrypt_Text>
+  <CVG_Ev_PuppetCrypt_Opt_claim>Claim them</CVG_Ev_PuppetCrypt_Opt_claim>
+  <CVG_Ev_PuppetCrypt_Res_claim>The oldest puppet bows and offers you a roll of silk the thickness of a finger: a blueprint.</CVG_Ev_PuppetCrypt_Res_claim>
+  <CVG_Ev_PuppetCrypt_Opt_seal>Seal the door</CVG_Ev_PuppetCrypt_Opt_seal>
+  <CVG_Ev_PuppetCrypt_Res_seal>The door closes like a mouth. For a week, the puppets in your colony stand a little straighter.</CVG_Ev_PuppetCrypt_Res_seal>
+  <CVG_Story_NeedItems>Needs {0} {1}</CVG_Story_NeedItems>
+</LanguageData>

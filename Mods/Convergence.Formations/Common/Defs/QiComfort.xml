@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Day-to-day, part 1 (docs/modulos/DIA_A_DIA.md): the wuxia versions of the solar/wind generator, the sun lamp, the heater and
+    the cooler, plus the thunder rod. All of them hang on the qi network (docs/modulos/RED_QI.md). Vanilla buildings that need a
+    power comp keep a zero-draw CompPowerTrader whose on/off state is decided by the qi network.
+  -->
+
+  <!-- Middle tier generator, like solar/wind: no fuel, takes qi from the air -->
+  <ThingDef ParentName="CVG_QiNetBuildingBase">
+    <defName>CVG_SkyBreathArray</defName>
+    <label>sky-breath array</label>
+    <description>A ring of slate tablets open to the sky, carved so that the wind itself has to pass through the five-element wheel. It burns nothing: it breathes the qi of the air, more where the qi is thick and much more under the Qi Tide, and almost nothing during the Ebb. A roof chokes it. The Cloud Sects kept whole terraces of these on the peaks of Jiuxiao, and called them the lungs of the mountain.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiNet/SkyBreathArray</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <size>(2,2)</size>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.2</fillPercent>
+    <uiOrder>2564</uiOrder>
+    <statBases>
+      <WorkToBuild>4000</WorkToBuild>
+      <Beauty>2</Beauty>
+    </statBases>
+    <costList>
+      <CVG_SpiritStone>28</CVG_SpiritStone>
+      
+      <WoodLog>40</WoodLog>
+    </costList>
+    <placeWorkers>
+      <li>Convergence.PlaceWorker_QiNodeRadius</li>
+    </placeWorkers>
+    <comps>
+      <li Class="Convergence.CompProperties_QiNode">
+        <produceDay>85</produceDay>
+        <!-- a source also links what stands close to it (like a short conduit); pillars carry qi further -->
+        <radius>5.9</radius>
+        <scaleWithConcentration>true</scaleWithConcentration>
+        <concentrationRef>1.5</concentrationRef>
+        <needsOpenSky>true</needsOpenSky>
+        <celestialTides>true</celestialTides>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Thunder rod: bursts of qi from storms and tribulations -->
+  <ThingDef ParentName="CVG_QiNetBuildingBase">
+    <defName>CVG_ThunderRod</defName>
+    <label>celestial thunder rod</label>
+    <description>A bronze pillar crowned by a coiled dragon and hung with thunder talismans. Storm lightning that would fall nearby falls on it instead, and the dragon swallows it: no fire, only qi, stored in its core and passed on to the accumulator crystals of its network. When a cultivator faces a tribulation close by, the rod drinks from heaven's lightning too. The Thunder Peak sect said that a tribulation wasted is a tribulation twice suffered.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiNet/ThunderRod</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(1.6,1.6)</drawSize>
+      <drawOffset>(0,0,0.3)</drawOffset>
+    </graphicData>
+    <size>(1,1)</size>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.3</fillPercent>
+    <uiOrder>2565</uiOrder>
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <CVG_SpiritStone>15</CVG_SpiritStone>
+    </costList>
+    <comps>
+      <li Class="Convergence.CompProperties_QiNode">
+        <storageCapacity>300</storageCapacity>
+        <leakPerDay>0.1</leakPerDay>
+      </li>
+      <li Class="Convergence.CompProperties_QiLightningRod">
+        <attractRadius>12</attractRadius>
+        <qiPerStrike>200</qiPerStrike>
+        <qiPerTribulationStrike>120</qiPerTribulationStrike>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Sun lamp -->
+  <ThingDef ParentName="CVG_QiNetBuildingBase">
+    <defName>CVG_SunLantern</defName>
+    <label>sun lantern</label>
+    <description>A stone lantern with a sphere of captured sunlight in its heart, fed by the qi network. It lights the ground brightly enough for crops to grow indoors and rests at night, as the plants do. The farmer sects of the plains raised them in their granary halls, so that rice would ripen even through the long winters of the Calamity.</description>
+    <thingClass>Building_SunLamp</thingClass>
+    <tickerType>Rare</tickerType>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiNet/SunLantern</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(1.3,1.3)</drawSize>
+      <drawOffset>(0,0,0.2)</drawOffset>
+    </graphicData>
+    <size>(1,1)</size>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.3</fillPercent>
+    <blockWind>true</blockWind>
+    <uiOrder>2566</uiOrder>
+    <statBases>
+      <WorkToBuild>1500</WorkToBuild>
+      <Beauty>3</Beauty>
+    </statBases>
+    <costList>
+      <Steel>15</Steel>
+      <CVG_SpiritStone>8</CVG_SpiritStone>
+    </costList>
+    <specialDisplayRadius>5.8</specialDisplayRadius>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <overlightRadius>7.0</overlightRadius>
+        <glowRadius>14</glowRadius>
+        <glowColor>(370,355,300,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>0</basePowerConsumption>
+        <idlePowerDraw>0</idlePowerDraw>
+        <showPowerNeededIfOff>false</showPowerNeededIfOff>
+      </li>
+      <li Class="Convergence.CompProperties_QiNode">
+        <compClass>Convergence.CompQiConsumer</compClass>
+        <consumeDay>60</consumeDay>
+      </li>
+      <li Class="CompProperties_Schedule">
+        <startTime>0.25</startTime>
+        <endTime>0.8</endTime>
+        <offMessage>Off for plant resting period</offMessage>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>2</heatPerSecond>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Heater -->
+  <ThingDef ParentName="CVG_QiNetBuildingBase">
+    <defName>CVG_SpiritBrazier</defName>
+    <designationCategory>Temperature</designationCategory>
+    <label>spirit brazier</label>
+    <description>A bronze tripod cauldron burning with a pale fire that eats qi instead of wood. It warms the room to the temperature you ask of it and never smokes. In the cold halls of the Northern Sword Sect, a disciple's first duty each morning was to bow to the brazier, for it had kept them alive through the night.</description>
+    <thingClass>Building_Heater</thingClass>
+    <tickerType>Rare</tickerType>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiNet/SpiritBrazier</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(1.3,1.3)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <blockWind>true</blockWind>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories><li>BuildingsTemperature</li></thingCategories>
+    <uiOrder>2567</uiOrder>
+    <statBases>
+      <WorkToBuild>1000</WorkToBuild>
+      <Mass>6</Mass>
+      <Beauty>2</Beauty>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+      <CVG_SpiritStone>5</CVG_SpiritStone>
+    </costList>
+    <placeWorkers Inherit="False">
+      <li>PlaceWorker_Heater</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>0</basePowerConsumption>
+        <idlePowerDraw>0</idlePowerDraw>
+        <showPowerNeededIfOff>false</showPowerNeededIfOff>
+      </li>
+      <li Class="Convergence.CompProperties_QiNode">
+        <compClass>Convergence.CompQiConsumer</compClass>
+        <consumeDay>20</consumeDay>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_TempControl">
+        <energyPerSecond>21</energyPerSecond>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(150,200,255,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- Cooler -->
+  <ThingDef ParentName="CVG_QiNetBuildingBase">
+    <defName>CVG_FrostFormation</defName>
+    <designationCategory>Temperature</designationCategory>
+    <label>frost formation</label>
+    <description>A stone disk set into the floor, inlaid with ice crystals from the Snow Lotus peaks and carved with water runes. It drinks qi and breathes out cold, cooling the room it lies in to the temperature you ask, with no hot exhaust: the heat is not moved elsewhere, it is simply refused. Alchemists build cellars around them to keep spirit herbs fresh for years.</description>
+    <thingClass>Convergence.Building_FrostFormation</thingClass>
+    <tickerType>Rare</tickerType>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiNet/FrostFormation</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(1.2,1.2)</drawSize>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <size>(1,1)</size>
+    <passability>Standable</passability>
+    <fillPercent>0</fillPercent>
+    <uiOrder>2568</uiOrder>
+    <statBases>
+      <WorkToBuild>1600</WorkToBuild>
+      <Beauty>3</Beauty>
+    </statBases>
+    <costList>
+      <Steel>12</Steel>
+      <CVG_SpiritStone>12</CVG_SpiritStone>
+    </costList>
+    <placeWorkers Inherit="False"/>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>0</basePowerConsumption>
+        <idlePowerDraw>0</idlePowerDraw>
+        <showPowerNeededIfOff>false</showPowerNeededIfOff>
+      </li>
+      <li Class="Convergence.CompProperties_QiNode">
+        <compClass>Convergence.CompQiConsumer</compClass>
+        <consumeDay>30</consumeDay>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_TempControl">
+        <energyPerSecond>-21</energyPerSecond>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(120,190,255,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

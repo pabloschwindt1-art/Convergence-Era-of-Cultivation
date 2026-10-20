@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Qi network buildings (docs/modulos/RED_QI.md; code in Convergence.Core QiNetwork). Textures: tinted vanilla; final art Things/Building/CVG/QiNet/<Name>. -->
+
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_QiNetwork</defName>
+    <label>qi network</label>
+    <description>Qi moves best when it is not asked to move far. Pillars carved with the five-element wheel pass it from one array to the next across open ground, no cable needed. Unlocks the qi vein well, the qi gathering array, the formation pillar and the accumulator crystal. The sects of Jiuxiao ran their whole mountains on pillars and wells, and the first thing the Calamity broke was the pillars.</description>
+    <baseCost>2400</baseCost>
+    <prerequisites><li>CVG_Research_QiGathering</li></prerequisites>
+    <researchViewX>4</researchViewX>
+    <researchViewY>4</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>5</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ThingDef Name="CVG_QiNetBuildingBase" ParentName="BuildingBase" Abstract="True">
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <designationCategory>Power</designationCategory>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0.4</Flammability>
+    </statBases>
+    <researchPrerequisites><li>CVG_Research_QiNetwork</li></researchPrerequisites>
+    <placeWorkers>
+      <li>Convergence.PlaceWorker_QiNodeRadius</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_QiNetBuildingBase">
+    <defName>CVG_QiVeinWell</defName>
+    <label>qi vein well</label>
+    <description>A stone collar sunk into a qi vein, with a jade core at the bottom that lets the qi rise instead of spill. It needs no fuel and never stops, which is why sects fought over the ground before they fought over anything else. It must be built on a qi vein, and connected to the rest by pillars.</description>
+    <graphicData>
+      <!-- Final art: Things/Building/CVG/QiNet/QiVeinWell -->
+      <texPath>Things/Building/CVG/QiNet/QiVeinWell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(2,2)</drawSize>
+      <shadowData><volume>(1.8, 0.8, 1.6)</volume></shadowData>
+    </graphicData>
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <size>(2,2)</size>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+    <uiOrder>2560</uiOrder>
+    <statBases>
+      <WorkToBuild>6000</WorkToBuild>
+      <Beauty>4</Beauty>
+    </statBases>
+    <costList>
+      
+      <CVG_SpiritStone>60</CVG_SpiritStone>
+      <WoodLog>50</WoodLog>
+    </costList>
+    <comps>
+      <li Class="Convergence.CompProperties_QiNode">
+        <produceDay>200</produceDay>
+        <!-- a source also links what stands close to it (like a short conduit); pillars carry qi further -->
+        <radius>5.9</radius>
+        <needsVein>true</needsVein>
+      </li>
+      <li Class="CompProperties_Glower"><glowRadius>4</glowRadius><glowColor>(110,200,190,0)</glowColor></li>
+    </comps>
+    <placeWorkers Inherit="False">
+      <li>Convergence.PlaceWorker_OnQiVein</li>
+      <li>Convergence.PlaceWorker_QiNodeRadius</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_QiNetBuildingBase">
+    <defName>CVG_QiGatherArray</defName>
+    <label>qi gathering array</label>
+    <description>A brazier of spirit stones ringed by slate tablets, the small sister of the vein well: it cannot draw qi from the ground, only from the stones it burns, but it makes the most of whatever qi already lingers in the air. It yields more where the qi is thick, and nothing without stones.</description>
+    <graphicData>
+      <!-- Final art: Things/Building/CVG/QiNet/QiGatherArray -->
+      <texPath>Things/Building/CVG/QiNet/QiGatherArray</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(1.4,1.4)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.3</fillPercent>
+    <uiOrder>2561</uiOrder>
+    <statBases>
+      <WorkToBuild>2500</WorkToBuild>
+    </statBases>
+    <costList>
+      <CVG_SpiritStone>30</CVG_SpiritStone>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <placeWorkers>
+      <li>Convergence.PlaceWorker_QiNodeRadius</li>
+    </placeWorkers>
+    <comps>
+      <li Class="Convergence.CompProperties_QiNode">
+        <produceDay>70</produceDay>
+        <!-- a source also links what stands close to it (like a short conduit); pillars carry qi further -->
+        <radius>5.9</radius>
+        <needsFuel>true</needsFuel>
+        <scaleWithConcentration>true</scaleWithConcentration>
+        <concentrationRef>2</concentrationRef>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.5</fuelConsumptionRate>
+        <fuelCapacity>20</fuelCapacity>
+        <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
+        <initialFuelPercent>0.5</initialFuelPercent>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <autoRefuelPercent>0.4</autoRefuelPercent>
+        <fuelLabel>Spirit stones</fuelLabel>
+        <fuelGizmoLabel>Spirit stones</fuelGizmoLabel>
+      </li>
+      <li Class="CompProperties_Glower"><glowRadius>5</glowRadius><glowColor>(120,200,170,0)</glowColor></li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_QiNetBuildingBase">
+    <defName>CVG_FormationPillar</defName>
+    <label>formation pillar</label>
+    <description>A flat matrix stone set flush into the ground, carved with the five-element wheel around a jade eye, which hums when another stone with the same wheel lies within sight. Everything inside its circle shares one network of qi: wells, arrays, crystals and the buildings that drink from them. No cable, no gap, no fuss.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiNet/FormationPillar</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(1.2,1.2)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+    <uiOrder>2562</uiOrder>
+    <statBases>
+      <WorkToBuild>900</WorkToBuild>
+      <MaxHitPoints>120</MaxHitPoints>
+    </statBases>
+    <costList>
+      <CVG_SpiritStone>3</CVG_SpiritStone>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <comps>
+      <li Class="Convergence.CompProperties_QiNode">
+        <radius>9.9</radius>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_QiNetBuildingBase">
+    <defName>CVG_QiCrystal</defName>
+    <label>accumulator crystal</label>
+    <description>A raw jade crystal that soaks up the qi the network does not need and gives it back when the network runs dry. It leaks a little each day, like all things that hold qi. A cultivator can also pour their own qi into it by hand.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiNet/QiCrystal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(1.3,1.3)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <uiOrder>2563</uiOrder>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <Beauty>3</Beauty>
+    </statBases>
+    <costList>
+      
+      <CVG_SpiritStone>32</CVG_SpiritStone>
+    </costList>
+    <comps>
+      <li Class="Convergence.CompProperties_QiNode">
+        <storageCapacity>1000</storageCapacity>
+        <leakPerDay>0.05</leakPerDay>
+      </li>
+      <li Class="CompProperties_Glower"><glowRadius>3</glowRadius><glowColor>(110,220,190,0)</glowColor></li>
+    </comps>
+  </ThingDef>
+
+  <!-- Estanque de condensación: el qi que ya no cabe en los cristales se condensa en piedras espirituales (idea del usuario). -->
+  <ThingDef ParentName="CVG_QiNetBuildingBase">
+    <defName>CVG_CondensationPool</defName>
+    <label>condensation pool</label>
+    <description>A shallow basin of jade-lined stone where surplus qi, with nowhere left to go, slowly rains down and crystallizes. It only drinks what the accumulators can no longer hold, and every so often a fresh spirit stone settles at the bottom. The old sects dug these under their veins, and the elders say every spirit stone in the world was once qi that nobody needed.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiNet/CondensationPool</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <size>(2,2)</size>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.3</fillPercent>
+    <uiOrder>2565</uiOrder>
+    <statBases>
+      <WorkToBuild>4000</WorkToBuild>
+      <Beauty>3</Beauty>
+    </statBases>
+    <stuffCategories><li>Stony</li></stuffCategories>
+    <costStuffCount>60</costStuffCount>
+    <costList>
+      
+      <CVG_SpiritStone>25</CVG_SpiritStone>
+    </costList>
+    <comps>
+      <li Class="Convergence.CompProperties_QiNode">
+        <condenseDay>120</condenseDay>
+        <condenseCost>60</condenseCost>
+        <condenseProduct>CVG_SpiritStone</condenseProduct>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

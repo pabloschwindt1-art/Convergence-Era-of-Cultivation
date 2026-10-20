@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Low tier: spirit-wood and jade limbs, the wuxia take on PegLeg / WoodenHand / WoodenFoot / Denture / simple prosthetics.
+       Made at a crafting spot or the bone refining furnace after Body Tempering; installed with the vanilla worker (no altar needed). -->
+  <ThingDef Name="CVG_GraftSpiritWoodBase" ParentName="CVG_GraftBase" Abstract="True">
+    <thingCategories Inherit="False"><li>BodyPartsProsthetic</li></thingCategories>
+    <statBases><WorkToMake>3000</WorkToMake></statBases>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+      <skillRequirements Inherit="False"><Crafting>3</Crafting></skillRequirements>
+      <recipeUsers><li>CraftingSpot</li></recipeUsers>
+      <researchPrerequisite>CVG_Research_BodyTempering</researchPrerequisite>
+      <displayPriority>300</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef Name="CVG_InstallSpiritWoodBase" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="True">
+    <workAmount>2000</workAmount>
+    <skillRequirements><Medicine>3</Medicine></skillRequirements>
+  </RecipeDef>
+
+  <!-- Spirit-wood leg -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_SpiritWoodLeg</defName>
+    <label>spirit-wood leg</label>
+    <labelNoun>a spirit-wood leg</labelNoun>
+    <description>In the villages under the sect mountains, an old carver of spirit bamboo makes legs for those the beasts have maimed. He soaks the wood for forty nights in spring water touched by a spirit stone, so the grain remembers how to bend like a living knee. It is not a beast's leg, he says, but it will carry you home.\n\nLeg efficiency x0.8. Any healer can fit it; no altar needed.\nCelestial dissonance +0.02.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_SpiritWoodLeg</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_SpiritWoodLeg</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.8</partEfficiency>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><CVG_CelestialDissonance>0.02</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftSpiritWoodBase">
+    <defName>CVG_Graft_SpiritWoodLeg</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_SpiritWoodLeg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>spirit-wood leg</label>
+    <description>In the villages under the sect mountains, an old carver of spirit bamboo makes legs for those the beasts have maimed. He soaks the wood for forty nights in spring water touched by a spirit stone, so the grain remembers how to bend like a living knee. It is not a beast's leg, he says, but it will carry you home.\n\nLeg efficiency x0.8. Any healer can fit it; no altar needed.\nCelestial dissonance +0.02.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_SpiritWoodLeg</RecipeDef></descriptionHyperlinks>
+    
+    <costList><WoodLog>30</WoodLog><CVG_SpiritStone>3</CVG_SpiritStone></costList>
+  </ThingDef>
+
+  <RecipeDef ParentName="CVG_InstallSpiritWoodBase">
+    <defName>CVG_Install_SpiritWoodLeg</defName>
+    <label>install spirit-wood leg</label>
+    <description>Install a spirit-wood leg. It needs no altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_SpiritWoodLeg</ThingDef><HediffDef>CVG_Graft_SpiritWoodLeg</HediffDef></descriptionHyperlinks>
+    <jobString>Installing spirit-wood leg.</jobString>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_SpiritWoodLeg</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_SpiritWoodLeg</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Leg</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_SpiritWoodLeg</addsHediff>
+  </RecipeDef>
+
+  <!-- Spirit-wood arm -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_SpiritWoodArm</defName>
+    <label>spirit-wood arm</label>
+    <labelNoun>a spirit-wood arm</labelNoun>
+    <description>The carvers of the outer villages learned their trade mending disciples who lost an arm in their first sword trial. A spirit-wood arm, lashed to the shoulder with qi-soaked cord, is clumsy but honest: it lifts what it is asked to lift and never tires of trying.\n\nArm efficiency x0.75. Replaces the whole arm, hand included. Any healer can fit it; no altar needed.\nCelestial dissonance +0.02.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_SpiritWoodArm</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_SpiritWoodArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.75</partEfficiency>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><CVG_CelestialDissonance>0.02</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftSpiritWoodBase">
+    <defName>CVG_Graft_SpiritWoodArm</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_SpiritWoodArm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>spirit-wood arm</label>
+    <description>The carvers of the outer villages learned their trade mending disciples who lost an arm in their first sword trial. A spirit-wood arm, lashed to the shoulder with qi-soaked cord, is clumsy but honest: it lifts what it is asked to lift and never tires of trying.\n\nArm efficiency x0.75. Replaces the whole arm, hand included. Any healer can fit it; no altar needed.\nCelestial dissonance +0.02.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_SpiritWoodArm</RecipeDef></descriptionHyperlinks>
+    
+    <costList><WoodLog>30</WoodLog><CVG_SpiritStone>3</CVG_SpiritStone></costList>
+  </ThingDef>
+
+  <RecipeDef ParentName="CVG_InstallSpiritWoodBase">
+    <defName>CVG_Install_SpiritWoodArm</defName>
+    <label>install spirit-wood arm</label>
+    <description>Install a spirit-wood arm. It needs no altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_SpiritWoodArm</ThingDef><HediffDef>CVG_Graft_SpiritWoodArm</HediffDef></descriptionHyperlinks>
+    <jobString>Installing spirit-wood arm.</jobString>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_SpiritWoodArm</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_SpiritWoodArm</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Shoulder</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_SpiritWoodArm</addsHediff>
+  </RecipeDef>
+
+  <!-- Spirit-wood hand -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_SpiritWoodHand</defName>
+    <label>spirit-wood hand</label>
+    <labelNoun>a spirit-wood hand</labelNoun>
+    <description>Every novice of the Silent Lotus Temple carves one wooden hand before being taught to heal, and gives it to a stranger. A spirit stone set in the palm lends the wood a sliver of qi: enough to hold a bowl or a hoe, if not a brush.\n\nHand efficiency x0.8. Replaces only the hand. Any healer can fit it; no altar needed.\nCelestial dissonance +0.02.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_SpiritWoodHand</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_SpiritWoodHand</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.8</partEfficiency>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><CVG_CelestialDissonance>0.02</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftSpiritWoodBase">
+    <defName>CVG_Graft_SpiritWoodHand</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_SpiritWoodHand</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>spirit-wood hand</label>
+    <description>Every novice of the Silent Lotus Temple carves one wooden hand before being taught to heal, and gives it to a stranger. A spirit stone set in the palm lends the wood a sliver of qi: enough to hold a bowl or a hoe, if not a brush.\n\nHand efficiency x0.8. Replaces only the hand. Any healer can fit it; no altar needed.\nCelestial dissonance +0.02.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_SpiritWoodHand</RecipeDef></descriptionHyperlinks>
+    
+    <costList><WoodLog>30</WoodLog><CVG_SpiritStone>3</CVG_SpiritStone></costList>
+  </ThingDef>
+
+  <RecipeDef ParentName="CVG_InstallSpiritWoodBase">
+    <defName>CVG_Install_SpiritWoodHand</defName>
+    <label>install spirit-wood hand</label>
+    <description>Install a spirit-wood hand. It needs no altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_SpiritWoodHand</ThingDef><HediffDef>CVG_Graft_SpiritWoodHand</HediffDef></descriptionHyperlinks>
+    <jobString>Installing spirit-wood hand.</jobString>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_SpiritWoodHand</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_SpiritWoodHand</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Hand</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_SpiritWoodHand</addsHediff>
+  </RecipeDef>
+
+  <!-- Spirit-wood foot -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_SpiritWoodFoot</defName>
+    <label>spirit-wood foot</label>
+    <labelNoun>a spirit-wood foot</labelNoun>
+    <description>Peddlers on the mountain roads swear the best feet are cut from a tree struck by tribulation lightning, for that wood never rots and never slips. A spirit stone in the heel keeps the grain warm through the winter passes.\n\nFoot efficiency x0.85. Any healer can fit it; no altar needed.\nCelestial dissonance +0.02.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_SpiritWoodFoot</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_SpiritWoodFoot</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.85</partEfficiency>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><CVG_CelestialDissonance>0.02</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftSpiritWoodBase">
+    <defName>CVG_Graft_SpiritWoodFoot</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_SpiritWoodFoot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>spirit-wood foot</label>
+    <description>Peddlers on the mountain roads swear the best feet are cut from a tree struck by tribulation lightning, for that wood never rots and never slips. A spirit stone in the heel keeps the grain warm through the winter passes.\n\nFoot efficiency x0.85. Any healer can fit it; no altar needed.\nCelestial dissonance +0.02.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_SpiritWoodFoot</RecipeDef></descriptionHyperlinks>
+    
+    <costList><WoodLog>30</WoodLog><CVG_SpiritStone>3</CVG_SpiritStone></costList>
+  </ThingDef>
+
+  <RecipeDef ParentName="CVG_InstallSpiritWoodBase">
+    <defName>CVG_Install_SpiritWoodFoot</defName>
+    <label>install spirit-wood foot</label>
+    <description>Install a spirit-wood foot. It needs no altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_SpiritWoodFoot</ThingDef><HediffDef>CVG_Graft_SpiritWoodFoot</HediffDef></descriptionHyperlinks>
+    <jobString>Installing spirit-wood foot.</jobString>
+    <workAmount>1500</workAmount>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_SpiritWoodFoot</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_SpiritWoodFoot</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Foot</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_SpiritWoodFoot</addsHediff>
+  </RecipeDef>
+
+  <!-- Jade denture -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_JadeDenture</defName>
+    <label>jade denture</label>
+    <labelNoun>a jade denture</labelNoun>
+    <description>Court physicians of the old dynasties carved dentures from jade offcuts so that toothless lords could still enjoy a banquet. Jade cools the breath, and a jade mouth, the saying goes, never lies — mostly because it never quite closes.\n\nJaw efficiency x0.9. Any healer can fit it; no altar needed.\nCelestial dissonance +0.02.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_JadeDenture</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_JadeDenture</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.9</partEfficiency>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><CVG_CelestialDissonance>0.02</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftSpiritWoodBase">
+    <defName>CVG_Graft_JadeDenture</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_JadeDenture</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>jade denture</label>
+    <description>Court physicians of the old dynasties carved dentures from jade offcuts so that toothless lords could still enjoy a banquet. Jade cools the breath, and a jade mouth, the saying goes, never lies — mostly because it never quite closes.\n\nJaw efficiency x0.9. Any healer can fit it; no altar needed.\nCelestial dissonance +0.02.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_JadeDenture</RecipeDef></descriptionHyperlinks>
+    
+    <costList><Jade>5</Jade><WoodLog>10</WoodLog><CVG_SpiritStone>3</CVG_SpiritStone></costList>
+  </ThingDef>
+
+  <RecipeDef ParentName="CVG_InstallSpiritWoodBase">
+    <defName>CVG_Install_JadeDenture</defName>
+    <label>install jade denture</label>
+    <description>Install a jade denture. It needs no altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_JadeDenture</ThingDef><HediffDef>CVG_Graft_JadeDenture</HediffDef></descriptionHyperlinks>
+    <jobString>Installing jade denture.</jobString>
+    <workAmount>1500</workAmount>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_JadeDenture</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_JadeDenture</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Jaw</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_JadeDenture</addsHediff>
+  </RecipeDef>
+</Defs>

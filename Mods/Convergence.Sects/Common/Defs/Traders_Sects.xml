@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TraderKindDef>
+    <defName>CVG_Trader_AzurePeak</defName>
+    <label>azure peak sword sect merchant</label>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>300~900</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>20~80</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>WeaponMelee</tradeTag><thingDefCountRange>4~8</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>Steel</thingDef><countRange>300~700</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritJade</thingDef><countRange>0~6</countRange></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>WeaponMelee</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Armor</tag></li>
+    </stockGenerators>
+  </TraderKindDef>
+
+  <TraderKindDef>
+    <defName>CVG_Trader_SilentLotus</defName>
+    <label>silent lotus temple merchant</label>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>300~900</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>20~80</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>MedicineHerbal</thingDef><countRange>30~80</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>Cloth</thingDef><countRange>100~300</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_FoundationPill</thingDef><countRange>0~3</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>Clothing</tradeTag><thingDefCountRange>3~6</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Clothing</tag></li>
+    </stockGenerators>
+  </TraderKindDef>
+
+  <TraderKindDef>
+    <defName>CVG_Trader_HeavenlyCauldron</defName>
+    <label>heavenly cauldron pavilion merchant</label>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>300~900</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>150~400</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritJade</thingDef><countRange>5~25</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_FoundationPill</thingDef><countRange>1~4</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_JadeSlip</thingDef><countRange>1~3</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>MedicineHerbal</thingDef><countRange>20~60</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>MedicineIndustrial</thingDef><countRange>10~30</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>ComponentIndustrial</thingDef><countRange>20~60</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>ExoticMisc</tradeTag><thingDefCountRange>1~3</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>Artifact</tradeTag><thingDefCountRange>0~1</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>ExoticMisc</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Artifact</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>WeaponMelee</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>WeaponRanged</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>HiTechArmor</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Armor</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Clothing</tag></li>
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+    </stockGenerators>
+  </TraderKindDef>
+
+  <TraderKindDef>
+    <defName>CVG_Trader_AncientDragon</defName>
+    <label>ancient dragon clan merchant</label>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>300~900</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>20~80</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritJade</thingDef><countRange>10~40</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>Gold</thingDef><countRange>20~80</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>ExoticMisc</tradeTag><thingDefCountRange>1~2</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>ExoticMisc</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Artifact</tag></li>
+    </stockGenerators>
+  </TraderKindDef>
+
+  <TraderKindDef>
+    <defName>CVG_Trader_RogueCultivators</defName>
+    <label>rogue cultivators merchant</label>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>300~900</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>20~80</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_JadeSlip</thingDef><countRange>0~2</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>MedicineHerbal</thingDef><countRange>10~30</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>ExoticMisc</tradeTag><thingDefCountRange>1~2</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>WeaponMelee</tradeTag><thingDefCountRange>1~3</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>WeaponRanged</tradeTag><thingDefCountRange>1~2</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>ExoticMisc</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>WeaponMelee</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>WeaponRanged</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Clothing</tag></li>
+    </stockGenerators>
+  </TraderKindDef>
+
+</Defs>

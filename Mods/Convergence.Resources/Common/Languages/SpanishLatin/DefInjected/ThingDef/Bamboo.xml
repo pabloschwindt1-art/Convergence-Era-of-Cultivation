@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Bamboo.label>bambú</CVG_Bamboo.label>
+  <CVG_Bamboo.description>Tallos huecos y con nudos que se doblan en la tormenta y no se rompen. Livianos y flexibles: los muros y muebles de bambú se levantan rápido pero arden fácil, y un bastón de bambú pega más fuerte de lo que parece. Dice el refrán que el bambú es el caballero de las plantas, recto y vacío por dentro; por eso todo patio de secta tiene un bosquecillo.</CVG_Bamboo.description>
+  <CVG_Bamboo.stuffProps.stuffAdjective>de bambú</CVG_Bamboo.stuffProps.stuffAdjective>
+  <CVG_JadeBamboo.label>bambú de jade espiritual</CVG_JadeBamboo.label>
+  <CVG_JadeBamboo.description>Bambú color jade que creció donde se acumula el qi, con cada nudo rodeado de vetas tenues de luz. Es duro como el hierro y aun así se dobla, suena como una campana al golpearlo y guarda qi en su corazón hueco. Los forjadores hacen con él espadas de práctica y vainas de espadas voladoras, los alquimistas sus varas de remover, y las flautas del Templo del Loto Silencioso no se tallan de otra cosa.</CVG_JadeBamboo.description>
+  <CVG_JadeBamboo.stuffProps.stuffAdjective>de bambú de jade</CVG_JadeBamboo.stuffProps.stuffAdjective>
+  <CVG_Plant_Bamboo.label>bosquecillo de bambú</CVG_Plant_Bamboo.label>
+  <CVG_Plant_Bamboo.description>Una mata de bambú que crece un palmo por día y manda raíces bajo tierra en todas direcciones. Si se la deja, se traga un campo en una estación; si se la poda, da tallos livianos y flexibles casi sin fin.</CVG_Plant_Bamboo.description>
+  <CVG_Plant_JadeBamboo.label>bambú de jade espiritual</CVG_Plant_JadeBamboo.label>
+  <CVG_Plant_JadeBamboo.description>Bambú verde jade con vetas de luz en cada nudo. Solo arraiga en suelo rico o espiritual, crece lento para ser bambú y nunca se desboca; un bosquecillo es un tesoro que las sectas protegen con formaciones.</CVG_Plant_JadeBamboo.description>
+  <CVG_PeachTimber.label>madera de duraznero</CVG_PeachTimber.label>
+  <CVG_PeachTimber.description>Troncos pardo rosados del duraznero. Desde los tiempos del Emperador Amarillo, el duraznero está en la puerta entre los vivos y los muertos: con él se tallaban los dioses de las puertas y todavía se hacen las espadas de los exorcistas. Para un carpintero es madera común; curada con ceniza de talismán, es un arma que temen los muertos inquietos.</CVG_PeachTimber.description>
+  <CVG_PeachTimber.stuffProps.stuffAdjective>de duraznero</CVG_PeachTimber.stuffProps.stuffAdjective>
+  <CVG_Plant_PeachTree.label>duraznero</CVG_Plant_PeachTree.label>
+  <CVG_Plant_PeachTree.description>Un melocotonero retorcido que florece rosa en primavera. Si se cosecha da melocotones y vuelve a dar fruta; si se corta, también da madera de melocotonero, la que los exorcistas tallan en espadas contra los muertos inquietos. Plantan uno junto a cada portón.</CVG_Plant_PeachTree.description>
+  <CVG_Plant_CelestialPeach.label>duraznero celestial</CVG_Plant_CelestialPeach.label>
+  <CVG_Plant_CelestialPeach.description>Un duraznero de los jardines de Jiuxiao, que se dice desciende del huerto de la Reina Madre del Oeste. Solo arraiga en suelo rico en espíritu y da fruto muy de vez en cuando; sus duraznos alargan la vida y aquietan el aliento de los cultivadores. Hubo sectas que fueron a la guerra por un solo árbol.</CVG_Plant_CelestialPeach.description>
+  <CVG_ImmortalPeach.label>durazno de la inmortalidad</CVG_ImmortalPeach.label>
+  <CVG_ImmortalPeach.description>Un durazno que brilla tenuemente rosado y huele a lluvia de primavera. La Reina Madre del Oeste los servía en su banquete cada tres mil años; un mortal que come uno sana y vive mejor, y el qi de un cultivador fluye como un río crecido durante días.</CVG_ImmortalPeach.description>
+  <CVG_Peach.label>melocotones</CVG_Peach.label>
+  <CVG_Peach.description>Melocotones rosados de piel aterciopelada, tan dulces que se comen directo de la rama. En Jiuxiao el melocotón significaba larga vida, así que cada niño recibía uno en su cumpleaños; estos, los comunes, solo prometen una buena tarde.</CVG_Peach.description>
+</LanguageData>

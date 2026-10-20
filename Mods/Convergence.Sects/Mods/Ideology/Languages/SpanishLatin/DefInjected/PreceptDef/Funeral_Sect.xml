@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Ritual_DaoFuneral.label>funeral del Dao</CVG_Ritual_DaoFuneral.label>
+  <CVG_Ritual_DaoFuneral.description>Cuando muere un discípulo la secta no llora: quema papel moneda y llama su nombre tres veces para que el qi que reunió vuelva al Dao. La tumba se cava mirando a la montaña.</CVG_Ritual_DaoFuneral.description>
+  <CVG_Ritual_DaoFuneral.extraTextPawnDeathLetter>{PAWN_nameDef} debería ser enterrado y recibir un funeral del Dao, para que el qi que reunió vuelva a los cielos.</CVG_Ritual_DaoFuneral.extraTextPawnDeathLetter>
+</LanguageData>

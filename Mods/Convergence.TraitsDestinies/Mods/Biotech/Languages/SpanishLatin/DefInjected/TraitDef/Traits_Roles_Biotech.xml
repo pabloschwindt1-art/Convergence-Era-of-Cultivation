@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Role_PuppetMaster.degreeDatas.0.label>aprendiz de marionetas</CVG_Role_PuppetMaster.degreeDatas.0.label>
+  <CVG_Role_PuppetMaster.degreeDatas.0.description>El vínculo con las marionetas de metal y qi le sale natural: si {PAWN_nameDef} es mecanitor, gana ancho de banda extra. Mejora supervisando mecanoides. Los titiriteros de Jiuxiao tallaban guerreros de madera mucho antes de que la Calamidad de Hierro les mostrara de qué era capaz el metal.</CVG_Role_PuppetMaster.degreeDatas.0.description>
+  <CVG_Role_PuppetMaster.degreeDatas.1.label>maestro de marionetas</CVG_Role_PuppetMaster.degreeDatas.1.label>
+  <CVG_Role_PuppetMaster.degreeDatas.1.labelFemale>maestra de marionetas</CVG_Role_PuppetMaster.degreeDatas.1.labelFemale>
+  <CVG_Role_PuppetMaster.degreeDatas.1.description>Dirige marionetas de metal y qi con soltura: si es mecanitor, {PAWN_nameDef} gana más ancho de banda y un grupo de control extra. Mejora supervisando mecanoides. Tras la Calamidad, algunas sectas juraron no volver a animar el metal; solo los titiriteros mantuvieron vivo el arte.</CVG_Role_PuppetMaster.degreeDatas.1.description>
+  <CVG_Role_PuppetMaster.degreeDatas.2.label>gran maestro de marionetas</CVG_Role_PuppetMaster.degreeDatas.2.label>
+  <CVG_Role_PuppetMaster.degreeDatas.2.labelFemale>gran maestra de marionetas</CVG_Role_PuppetMaster.degreeDatas.2.labelFemale>
+  <CVG_Role_PuppetMaster.degreeDatas.2.description>Todo un ejército de marionetas se mueve como un solo cuerpo: si es mecanitor, {PAWN_nameDef} tiene el mayor ancho de banda y un grupo de control extra. La leyenda dice que el último gran maestro titiritero de Jiuxiao volvió contra la Calamidad de Hierro sus propios cascarones.</CVG_Role_PuppetMaster.degreeDatas.2.description>
+  <CVG_Role_BloodChild.degreeDatas.0.label>hijo de la sangre</CVG_Role_BloodChild.degreeDatas.0.label>
+  <CVG_Role_BloodChild.degreeDatas.0.labelFemale>hija de la sangre</CVG_Role_BloodChild.degreeDatas.0.labelFemale>
+  <CVG_Role_BloodChild.degreeDatas.0.description>La sangre llama a {PAWN_nameDef}: el hemogén llega con facilidad y las heridas cierran rápido. El camino de la sangre lo abrieron los chamanes de guerra de Chiyou mucho antes de que el Culto de la Luna Sangrienta lo reclamara, y su eco late en estas venas desde el nacimiento.</CVG_Role_BloodChild.degreeDatas.0.description>
+</LanguageData>

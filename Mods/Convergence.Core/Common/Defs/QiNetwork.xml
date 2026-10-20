@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Qi network (docs/modulos/RED_QI.md). Code: Source/Convergence.Core/QiNetwork. Buildings that produce, connect, store or consume qi live in Convergence: Formations. -->
+
+  <JobDef>
+    <defName>CVG_InfuseQi</defName>
+    <driverClass>Convergence.JobDriver_InfuseQi</driverClass>
+    <reportString>Infusing qi into TargetA.</reportString>
+    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+  </JobDef>
+
+  <!-- Qi vein: natural ground where the qi of the land wells up. Appears on the home map after the Convergence (QiNetworkUtility.EnsureVeins).
+       A qi vein well can only be built on it. It also concentrates qi for cultivation. Final art: Terrain/Surfaces/CVG_QiVein -->
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>CVG_QiVein</defName>
+    <label>qi vein</label>
+    <description>Ground where the qi of the land wells up like a spring. Frost never settles here, the grass grows faster and the air tastes of rain. The sects built their first halls on ground like this, and the Iron Calamity could not wholly bury it.</description>
+    <texturePath>Terrain/Surfaces/Gravel</texturePath>
+    <color>(0.55, 0.95, 0.85)</color>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>325</renderPrecedence>
+    <pathCost>1</pathCost>
+    <statBases>
+      <Beauty>3</Beauty>
+      <BeautyOutdoors>3</BeautyOutdoors>
+      <Cleanliness>0</Cleanliness>
+    </statBases>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <fertility>1.0</fertility>
+    <generatedFilth>Filth_Dirt</generatedFilth>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>1</qi>
+      </li>
+    </modExtensions>
+  </TerrainDef>
+</Defs>

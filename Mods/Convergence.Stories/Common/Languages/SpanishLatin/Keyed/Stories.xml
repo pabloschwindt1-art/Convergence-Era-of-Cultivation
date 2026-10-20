@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Story_Dantian_Mended>El dantian de {PAWN_labelShort} vuelve a estar entero. El qi fluye de nuevo.</CVG_Story_Dantian_Mended>
+  <CVG_Story_Cultists_Label>Cultistas huyen de la Calamidad</CVG_Story_Cultists_Label>
+  <CVG_Story_Cultists_Text>Un grupo harapiento de cultistas de la Luna Sangrienta llega tambaleándose a los lindes de tu tierra, huyendo de algo peor que ellos. Su líder pide cobijo en nombre de los viejos juramentos: son manos fuertes, saben cultivar y juran no ocultar nada.\n\nCualquier anciano te dirá que un refugiado demasiado agradecido suele cargar algo detrás de la gratitud.</CVG_Story_Cultists_Text>
+  <CVG_Story_Cultists_Opt_accept>Acogerlos</CVG_Story_Cultists_Opt_accept>
+  <CVG_Story_Cultists_Opt_refuse>Rechazarlos</CVG_Story_Cultists_Opt_refuse>
+  <CVG_Story_Cultists_Result_accept>{0} cultistas se unen a la colonia. Algo los sigue.</CVG_Story_Cultists_Result_accept>
+  <CVG_Story_Cultists_Result_refuse>Los cultistas se marchan al anochecer sin decir palabra.</CVG_Story_Cultists_Result_refuse>
+  <CVG_Story_CultistsPursuit_Label>Los que cazan a los cultistas</CVG_Story_CultistsPursuit_Label>
+  <CVG_Story_CultistsPursuit_Text>Los perseguidores de los refugiados han dado con la colonia. No preguntan quién cobija a quién: solo preguntan dónde están los cultistas. ({FACTION_name})</CVG_Story_CultistsPursuit_Text>
+  <CVG_Story_CultistsCurse_Label>Una maldición sigue a los refugiados</CVG_Story_CultistsCurse_Label>
+  <CVG_Story_CultistsCurse_Text>Los cultistas llevaban una maldición cosida en el dobladillo de sus túnicas. El aire de la colonia se vuelve pesado, los sueños se agrian y nadie duerme bien. Pasará, dicen los ancianos, pero no hoy.</CVG_Story_CultistsCurse_Text>
+  <CVG_Thought_Cursed_Label>maldecido por los refugiados</CVG_Thought_Cursed_Label>
+  <CVG_Thought_Cursed_Desc>Algo frío se me ha instalado en la nuca desde que llegaron los cultistas.</CVG_Thought_Cursed_Desc>
+  <CVG_Story_AllyPlea_Label>{ALLY_name} pide ayuda</CVG_Story_AllyPlea_Label>
+  <CVG_Story_AllyPlea_Text>Un mensajero de {ALLY_name} llega sin aliento: cultistas de la Luna Sangrienta asedian uno de sus puestos y la secta te pide que mantengas la línea. Si ayudas, los cultistas vendrán a tu colonia y la secta peleará a tu lado. Si te niegas, lo recordarán.</CVG_Story_AllyPlea_Text>
+  <CVG_Story_AllyPlea_Opt_help>Enviar ayuda</CVG_Story_AllyPlea_Opt_help>
+  <CVG_Story_AllyPlea_Opt_decline>Declinar</CVG_Story_AllyPlea_Opt_decline>
+  <CVG_Story_AllyRaid_Label>La Luna Sangrienta ataca</CVG_Story_AllyRaid_Label>
+  <CVG_Story_AllyRaid_Text>Los cultistas que asediaban el puesto de {ALLY_name} se vuelven contra ti. {FACTION_name} manda a sus discípulos cruzando la cresta.</CVG_Story_AllyRaid_Text>
+  <CVG_Story_AllyPlea_Reinforcements>Discípulos de {ALLY_name} llegan para luchar a tu lado.</CVG_Story_AllyPlea_Reinforcements>
+  <CVG_Story_Beasts_Label>Bestias feroces</CVG_Story_Beasts_Label>
+  <CVG_Story_Beasts_Text>Una manada de {0} cruza la tierra, empujada por el qi que regresó al mundo. Solo van de paso; no las provoques.</CVG_Story_Beasts_Text>
+  <CVG_Story_Treasure_Label>Un pilar de luz</CVG_Story_Treasure_Label>
+  <CVG_Story_Treasure_Text>Una columna de luz se alza de la tierra. Los viejos pergaminos lo llaman un tesoro naciendo: piedra espiritual, jade y una tablilla de técnica empujados por la propia tierra. Todas las sectas a cien li a la redonda también lo han visto.</CVG_Story_Treasure_Text>
+  <CVG_Story_TreasureRivals_Label>Rivales por el tesoro</CVG_Story_TreasureRivals_Label>
+  <CVG_Story_TreasureRivals_Text>{FACTION_name} vino por el tesoro que nació en tu tierra. No se marchará sin él.</CVG_Story_TreasureRivals_Text>
+  <CVG_Story_Vengeance_Label>La venganza del clan</CVG_Story_Vengeance_Label>
+  <CVG_Story_Vengeance_Text>La sangre pide sangre. Los parientes de {VICTIM}, que cayó por tu mano, se han reunido en {FACTION_name} y ahora vienen a por ti.</CVG_Story_Vengeance_Text>
+  <CVG_Story_Vengeance_SomeoneName>un viejo enemigo</CVG_Story_Vengeance_SomeoneName>
+  <CVG_Story_Assassin_Label>El asesino de la secta</CVG_Story_Assassin_Label>
+  <CVG_Story_Assassin_Text>Quien destruyó tu secta dejó un superviviente, y eso es un cabo suelto. El asesino ha dado por fin con el rastro y viene con sus discípulos a cortarlo.</CVG_Story_Assassin_Text>
+  <CVG_Story_Pursuers_Label>Los perseguidores de la secta</CVG_Story_Pursuers_Label>
+  <CVG_Story_Pursuers_Text>Los cazadores que destruyeron tu secta no se han rendido. Una nueva oleada viene a terminar lo que empezaron.</CVG_Story_Pursuers_Text>
+  <CVG_Story_MasterOffer_Label>Un viejo maestro ofrece un camino</CVG_Story_MasterOffer_Label>
+  <CVG_Story_MasterOffer_Text>Un ermitaño pasa de noche y deja una vasija en la puerta: un elixir para reparar un dantian roto. «El cuerpo recuerda lo que el corazón se niega a olvidar», dice, y desaparece. Quien lo beba volverá a cultivar.</CVG_Story_MasterOffer_Text>
+  <CVG_Story_ClanReturns_Label>El clan regresa</CVG_Story_ClanReturns_Label>
+  <CVG_Story_ClanReturns_Text>El clan que los expulsó se enteró de que viven y de que su dantian se repone. Vienen a recuperar lo que dicen que nunca dieron.</CVG_Story_ClanReturns_Text>
+  <CVG_Story_Emissaries_Label>Emisarios de la secta</CVG_Story_Emissaries_Label>
+  <CVG_Story_Emissaries_Text>Emisarios de {FACTION_name} llegan. Buscaban a los discípulos que cayeron por la grieta, y ahora ven cómo los habéis tratado.</CVG_Story_Emissaries_Text>
+  <CVG_Story_EmissariesHostile_Label>La secta viene por sus discípulos</CVG_Story_EmissariesHostile_Label>
+  <CVG_Story_EmissariesHostile_Text>{FACTION_name} encontró a sus discípulos perdidos y no le gusta lo que ve. Vienen a llevárselos por la fuerza.</CVG_Story_EmissariesHostile_Text>
+  <CVG_Story_CollectiveDemon_Label>El experimento sale mal</CVG_Story_CollectiveDemon_Label>
+  <CVG_Story_CollectiveDemon_Text>La muestra de qi fue demasiado para el equipo, y para las mentes a su alrededor. Los demonios internos despiertan en varios cultivadores a la vez.</CVG_Story_CollectiveDemon_Text>
+  <CVG_Story_CollectiveDemon_Reason>el experimento sobrecargó el qi</CVG_Story_CollectiveDemon_Reason>
+  <CVG_Story_CollectiveDemonNone_Label>El experimento está en calma</CVG_Story_CollectiveDemonNone_Label>
+  <CVG_Story_CollectiveDemonNone_Text>La muestra de qi de la corporación zumba en su contenedor y no hace nada. Por ahora.</CVG_Story_CollectiveDemonNone_Text>
+  <CVG_Story_SectOffer_Label>Una secta recta tiende la mano</CVG_Story_SectOffer_Label>
+  <CVG_Story_SectOffer_Text>Emisarios del Pico Azur y del Loto Silencioso oyeron hablar de su pueblo. Ofrecen su amistad y un regalo: los aceptarían como secta menor bajo su protección.</CVG_Story_SectOffer_Text>
+  <CVG_Scenario_LoneSurvivor_Start>La secta es ceniza. Tienes una túnica, una espada y el poco qi que llevas en el dantian.\n\nTarde o temprano alguien vendrá a por ti.</CVG_Scenario_LoneSurvivor_Start>
+  <CVG_Scenario_SectFlight_Start>Las puertas cayeron en una sola noche. Ustedes cuatro son todo lo que queda de la secta.
+
+Otros podrían encontrarlos. Los cazadores también.</CVG_Scenario_SectFlight_Start>
+  <CVG_Scenario_DestroyedFamily_Start>El clan les rompió el dantian y los echó. Ahora no pueden cultivar.
+
+Busquen la forma de reparar lo que se rompió.</CVG_Scenario_DestroyedFamily_Start>
+  <CVG_Scenario_LostDisciples_Start>El suelo se abrió bajo sus pies y cayeron a un mundo de metal y cristal.
+
+Su secta los busca.</CVG_Scenario_LostDisciples_Start>
+  <CVG_Scenario_AscensionProject_Start>La corporación los mandó a estudiar una muestra de qi, lejos de todo testigo.
+
+La muestra zumba por las noches.</CVG_Scenario_AscensionProject_Start>
+  <CVG_Scenario_ClassicalEra_Start>El qi volvió hace una generación y los jóvenes cultivan junto al fuego.
+
+Un día una secta recta se va a fijar en ustedes.</CVG_Scenario_ClassicalEra_Start>
+  <CVG_Scenario_ExiledAlchemist_Start>Dejaron el Pabellón con una deuda, una fórmula a medio escribir y un carro de frascos.
+
+Los cobradores los van a encontrar.</CVG_Scenario_ExiledAlchemist_Start>
+  <CVG_Scenario_BeastHunters_Start>Cazan lo que otros evitan.
+
+Un gremio estuvo preguntando por ustedes.</CVG_Scenario_BeastHunters_Start>
+  <CVG_Scenario_LotusRefugees_Start>El templo se partió por una cuestión que nadie recuerda. Salieron con hierbas y un sutra.
+
+La abadesa los vio irse.</CVG_Scenario_LotusRefugees_Start>
+  <CVG_Scenario_DragonHeir_Start>Llevas un hilo de sangre de dragón, fino como un cabello.\n\nEl clan lo ha notado.</CVG_Scenario_DragonHeir_Start>
+  <CVG_SectWorld_Peace>Paz entre {0} y {1}: ambas sectas envainan sus espadas.</CVG_SectWorld_Peace>
+  <CVG_SectWorld_WarEnded>La guerra entre sectas terminó: {0} venció a {1}.</CVG_SectWorld_WarEnded>
+  <CVG_Scenario_PuppetMaster_Start>Llevas un hilo atado al corazón.
+
+Te siguen tres aprendices, un cargador de madera, un albañil y un minero, y el camino detrás de ti no está vacío.
+
+CÓMO FUNCIONAN TUS MARIONETAS
+1. Las marionetas funcionan con qi como los mecas con electricidad: si se les acaba, se quedan quietas. Construye una formación de respiración del cielo (Formaciones, a cielo abierto) y un cargador espiritual (pestaña Biotech) a pocos pasos; los pilares de formación llevan el qi más lejos. La investigación ya está hecha.
+2. Marionetas de trabajo, las tres desde el inicio: de madera (acarrear, limpiar, sembrar, cortar plantas, curar), albañil (construir, fabricar, sastrería, cocinar) y minera (minar, herrería, apagar incendios). Entre las tres hacen todo menos cultivar qi e investigar. Trabajan más rápido a medida que sube tu reino.
+3. Marionetas de guerra, se desbloquean con investigación y con tu reino: bronce (guardiana cuerpo a cuerpo, Fundación), filo (dos hojas, Núcleo Dorado) y jade (agujas, cima del Núcleo Dorado). Pelean con la fuerza de tu reino, nunca por encima de ti: tres le ganan a un cultivador de su nivel.
+4. Tus hilos son tu ancho de banda: el hilo del corazón da 4 y cada reino uno más. Las de trabajo y la de bronce ocupan 1, la de filo 2, la de jade 3.
+5. Las marionetas se hacen en el taller de marionetas con un plano (se dibuja en el puesto de fabricación), hilo espiritual y su material. Desarmar una no cuesta nada; si te la rompen en combate, lo sientes.</CVG_Scenario_PuppetMaster_Start>
+</LanguageData>

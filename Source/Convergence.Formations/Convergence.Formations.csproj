@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>Convergence.Formations</RootNamespace>
+    <AssemblyName>Convergence.Formations</AssemblyName>
+    <OutputPath>..\..\Mods\Convergence.Formations\1.6\Assemblies\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <DebugType>portable</DebugType>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4871" />
+    <PackageReference Include="Lib.Harmony" Version="2.4.3" ExcludeAssets="runtime" />
+    <!-- Core: se referencia pero no se copia (lo carga el mod Core) -->
+    <Reference Include="Convergence.Core">
+      <HintPath>..\..\Mods\Convergence.Core\1.6\Assemblies\Convergence.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

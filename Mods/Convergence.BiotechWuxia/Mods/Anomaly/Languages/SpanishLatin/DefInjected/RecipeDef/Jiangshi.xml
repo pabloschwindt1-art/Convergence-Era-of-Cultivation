@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_MakePeachWood.label>curar madera de duraznero</CVG_MakePeachWood.label>
+  <CVG_MakePeachWood.description>Empapar madera en ceniza de talismán y curarla sobre una piedra espiritual, como preparaban sus espadas los exorcistas del Salón de los Nueve Talismanes.</CVG_MakePeachWood.description>
+  <CVG_MakePeachWood.jobString>Curando madera de duraznero.</CVG_MakePeachWood.jobString>
+  <Make_CVG_PeachWoodSword.label>hacer espada de madera de duraznero</Make_CVG_PeachWoodSword.label>
+  <Make_CVG_PeachWoodSword.description>Hacer una espada de madera de duraznero.</Make_CVG_PeachWoodSword.description>
+  <Make_CVG_PeachWoodSword.jobString>Haciendo espada de madera de duraznero.</Make_CVG_PeachWoodSword.jobString>
+  <CVG_MakeGlutinousRicePoultice.label>hacer cataplasmas de arroz glutinoso</CVG_MakeGlutinousRicePoultice.label>
+  <CVG_MakeGlutinousRicePoultice.description>Cocinar arroz al vapor y prensarlo en cataplasmas de tela que sacan el qi cadavérico.</CVG_MakeGlutinousRicePoultice.description>
+  <CVG_MakeGlutinousRicePoultice.jobString>Haciendo cataplasmas de arroz.</CVG_MakeGlutinousRicePoultice.jobString>
+  <CVG_DrawCorpseQi.label>sacar el qi cadavérico</CVG_DrawCorpseQi.label>
+  <CVG_DrawCorpseQi.description>Poner cataplasmas de arroz glutinoso sobre las heridas de jiangshi hasta que dejen de ennegrecerse.</CVG_DrawCorpseQi.description>
+  <CVG_DrawCorpseQi.jobString>sacando el qi cadavérico de TargetA.</CVG_DrawCorpseQi.jobString>
+  <CVG_DrawCorpseQi.successfullyRemovedHediffMessage>{0} ha sacado el qi cadavérico de {1}.</CVG_DrawCorpseQi.successfullyRemovedHediffMessage>
+</LanguageData>

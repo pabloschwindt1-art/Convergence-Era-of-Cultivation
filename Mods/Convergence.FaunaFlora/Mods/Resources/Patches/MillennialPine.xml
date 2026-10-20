@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- With Convergence: Resources, the millennial pine is felled for spirit wood (its needles hold the mountain's qi):
+       slower than the spirit tree (75 days against 40) but a bigger yield. Without Resources it gives ordinary wood. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="CVG_Plant_MillennialPine"]/plant/harvestedThingDef</xpath>
+    <value><harvestedThingDef>CVG_SpiritWood</harvestedThingDef></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="CVG_Plant_MillennialPine"]/plant/harvestYield</xpath>
+    <value><harvestYield>45</harvestYield></value>
+  </Operation>
+</Patch>

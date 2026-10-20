@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/BiomeDef[defName="LavaField"]/wildPlants</xpath>
+    <value>
+        <CVG_Plant_FlameLotus>0.05</CVG_Plant_FlameLotus>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/BiomeDef[defName="Glowforest"]/wildPlants</xpath>
+    <value>
+        <CVG_Plant_GlowMushroom>0.08</CVG_Plant_GlowMushroom>
+    </value>
+  </Operation>
+
+  <!-- Dragon obsidian is a rock type of lava fields (biome-specific rock, also forced in by DefModExtension_WuxiaRock.preferredBiomes). -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/BiomeDef[defName="LavaField"]/extraRockTypes</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="LavaField"]/extraRockTypes</xpath>
+      <value>
+        <li>CVG_DragonObsidian</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/BiomeDef[defName="LavaField"]</xpath>
+      <value>
+        <extraRockTypes>
+          <li>CVG_DragonObsidian</li>
+        </extraRockTypes>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Fire crystal also burns in the refining furnace. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="CVG_RefiningFurnace"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+    <value>
+      <li>CVG_FireCrystal</li>
+    </value>
+  </Operation>
+
+  <!-- Spirit pearls: rare fishing catch on coasts and lakes. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingSetMakerDef[defName="RareFishingCatches_Temperate" or defName="RareFishingCatches_Tropical" or defName="RareFishingCatches_Hot"]/root/options</xpath>
+    <value>
+      <li>
+        <weight>1</weight>
+        <thingSetMaker Class="ThingSetMaker_Count">
+          <fixedParams>
+            <filter>
+              <thingDefs>
+                <li>CVG_SpiritPearl</li>
+              </thingDefs>
+            </filter>
+            <countRange>1~2</countRange>
+          </fixedParams>
+        </thingSetMaker>
+      </li>
+    </value>
+  </Operation>
+</Patch>

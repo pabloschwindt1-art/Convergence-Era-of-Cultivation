@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_RighteousHero.degreeDatas.0.label>héroe recto</CVG_RighteousHero.degreeDatas.0.label>
+  <CVG_RighteousHero.degreeDatas.0.labelFemale>heroína recta</CVG_RighteousHero.degreeDatas.0.labelFemale>
+  <CVG_RighteousHero.degreeDatas.0.description>Vive según el código del jianghu: ayuda al débil, inspira a los demás y golpea un poco más fuerte por una causa justa. Los cuentacuentos de las casas de té de Jiuxiao viven de estas historias, y juran que la mitad son ciertas.</CVG_RighteousHero.degreeDatas.0.description>
+  <CVG_ArrogantYoungMaster.degreeDatas.0.label>joven maestro arrogante</CVG_ArrogantYoungMaster.degreeDatas.0.label>
+  <CVG_ArrogantYoungMaster.degreeDatas.0.labelFemale>joven señorita arrogante</CVG_ArrogantYoungMaster.degreeDatas.0.labelFemale>
+  <CVG_ArrogantYoungMaster.degreeDatas.0.description>"¿Sabes quién es mi padre?" Busca pelea, mira a todos por encima del hombro y, cuando estalla, estalla a los gritos. Yan Zhao, discípulo núcleo del Pico Azur, es el modelo que todo joven maestro de Jiuxiao intenta imitar.</CVG_ArrogantYoungMaster.degreeDatas.0.description>
+  <CVG_HiddenExpert.degreeDatas.0.label>experto oculto</CVG_HiddenExpert.degreeDatas.0.label>
+  <CVG_HiddenExpert.degreeDatas.0.labelFemale>experta oculta</CVG_HiddenExpert.degreeDatas.0.labelFemale>
+  <CVG_HiddenExpert.degreeDatas.0.description>Barre los suelos y esconde un gran poder: pocos ven venir el esquive, y menos aún el golpe. Dicen que el Viejo Zhao, un mendigo entre los cultivadores errantes, pasó un siglo en el reino del Alma Naciente sin que nadie lo notara.</CVG_HiddenExpert.degreeDatas.0.description>
+  <CVG_ThirstForVengeance.degreeDatas.0.label>sed de venganza</CVG_ThirstForVengeance.degreeDatas.0.label>
+  <CVG_ThirstForVengeance.degreeDatas.0.description>Cada golpe es por una deuda aún no pagada: pega más fuerte, y el rencor desgasta la mente. En el jianghu, una deuda de sangre pasa de padres a hijos, y hay algunas que se cargan desde la Gran Ruptura.</CVG_ThirstForVengeance.degreeDatas.0.description>
+  <CVG_LoyalDisciple.degreeDatas.0.label>discípulo leal</CVG_LoyalDisciple.degreeDatas.0.label>
+  <CVG_LoyalDisciple.degreeDatas.0.labelFemale>discípula leal</CVG_LoyalDisciple.degreeDatas.0.labelFemale>
+  <CVG_LoyalDisciple.degreeDatas.0.description>Aprende con ganas y mantiene la serenidad bajo la mirada de un maestro. El Pico Azur todavía honra a quien bajó a cuestas de la montaña a un anciano moribundo durante la Calamidad de Hierro, desobedeciendo cada orden de abandonarlo.</CVG_LoyalDisciple.degreeDatas.0.description>
+  <CVG_SecludedCultivator.degreeDatas.0.label>amante del retiro</CVG_SecludedCultivator.degreeDatas.0.label>
+  <CVG_SecludedCultivator.degreeDatas.0.description>Es más feliz en el retiro a puerta cerrada: cultiva más rápido a solas, pero las multitudes agotan su paciencia. Los ermitaños de Jiuxiao sellaban sus cuevas con una roca y la corrían una década después.</CVG_SecludedCultivator.degreeDatas.0.description>
+</LanguageData>

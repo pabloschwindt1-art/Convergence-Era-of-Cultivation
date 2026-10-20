@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_RootGrade_Inferior.label>raíz espiritual inferior</CVG_RootGrade_Inferior.label>
+  <CVG_RootGrade_Inferior.description>Una raíz débil y turbia. El cultivo es lento, pero el camino sigue abierto.</CVG_RootGrade_Inferior.description>
+  <CVG_RootGrade_Common.label>raíz espiritual común</CVG_RootGrade_Common.label>
+  <CVG_RootGrade_Common.description>Una raíz corriente, como la de la mayoría de los discípulos de secta.</CVG_RootGrade_Common.description>
+  <CVG_RootGrade_Superior.label>raíz espiritual superior</CVG_RootGrade_Superior.label>
+  <CVG_RootGrade_Superior.description>Una raíz brillante y clara. Las sectas se pelearían por este discípulo.</CVG_RootGrade_Superior.description>
+  <CVG_RootGrade_Heavenly.label>raíz espiritual celestial</CVG_RootGrade_Heavenly.label>
+  <CVG_RootGrade_Heavenly.description>Una raíz que aparece una vez por generación. El propio cielo vigila a quien la tiene.</CVG_RootGrade_Heavenly.description>
+</LanguageData>

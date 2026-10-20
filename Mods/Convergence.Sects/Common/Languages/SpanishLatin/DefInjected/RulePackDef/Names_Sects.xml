@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_NamerSettlement_AzurePeak.rulePack.rulesStrings>
+    <li>r_name->[kind] [place]</li>
+    <li>place->Qingfeng</li>
+    <li>place->Jianshan</li>
+    <li>place->Cangjian</li>
+    <li>place->Baifeng</li>
+    <li>place->Tianya</li>
+    <li>place->Yunling</li>
+    <li>kind->Pico</li>
+    <li>kind->Cresta</li>
+    <li>kind->Túmulo de la Espada</li>
+    <li>kind->Acantilado</li>
+    <li>kind->Salón</li>
+  </CVG_NamerSettlement_AzurePeak.rulePack.rulesStrings>
+  <CVG_NamerSettlement_SilentLotus.rulePack.rulesStrings>
+    <li>r_name->[kind] [place]</li>
+    <li>place->Jinglian</li>
+    <li>place->Zhulin</li>
+    <li>place->Baita</li>
+    <li>place->Qinghu</li>
+    <li>place->Wuyin</li>
+    <li>place->Fahua</li>
+    <li>kind->Templo</li>
+    <li>kind->Claustro</li>
+    <li>kind->Pagoda</li>
+    <li>kind->Santuario</li>
+    <li>kind->Ermita</li>
+  </CVG_NamerSettlement_SilentLotus.rulePack.rulesStrings>
+  <CVG_NamerSettlement_HeavenlyCauldron.rulePack.rulesStrings>
+    <li>r_name->[kind] [place]</li>
+    <li>place->Tianding</li>
+    <li>place->Danlu</li>
+    <li>place->Qianjin</li>
+    <li>place->Baobao</li>
+    <li>place->Jinhu</li>
+    <li>place->Yaowang</li>
+    <li>kind->Pabellón</li>
+    <li>kind->Mercado</li>
+    <li>kind->Casa de Subastas</li>
+    <li>kind->Salón del Caldero</li>
+    <li>kind->Almacén</li>
+  </CVG_NamerSettlement_HeavenlyCauldron.rulePack.rulesStrings>
+  <CVG_NamerSettlement_AncientDragon.rulePack.rulesStrings>
+    <li>r_name->[kind] [place]</li>
+    <li>place->Panlong</li>
+    <li>place->Longxue</li>
+    <li>place->Aoyun</li>
+    <li>place->Canglong</li>
+    <li>place->Jinlin</li>
+    <li>place->Longya</li>
+    <li>kind->Guarida</li>
+    <li>kind->Cordillera</li>
+    <li>kind->Nido</li>
+    <li>kind->Salón del Tesoro</li>
+    <li>kind->Pico</li>
+  </CVG_NamerSettlement_AncientDragon.rulePack.rulesStrings>
+  <CVG_NamerSettlement_BloodMoon.rulePack.rulesStrings>
+    <li>r_name->[kind] [place]</li>
+    <li>place->Xueyue</li>
+    <li>place->Youmin</li>
+    <li>place->Hongsha</li>
+    <li>place->Heiyuan</li>
+    <li>place->Guhai</li>
+    <li>place->Yaosha</li>
+    <li>kind->Altar</li>
+    <li>kind->Cripta</li>
+    <li>kind->Pozo de la Luna</li>
+    <li>kind->Patio de los Huesos</li>
+    <li>kind->Madriguera</li>
+  </CVG_NamerSettlement_BloodMoon.rulePack.rulesStrings>
+  <CVG_NamerSettlement_RogueCultivators.rulePack.rulesStrings>
+    <li>r_name->[kind] [place]</li>
+    <li>place->Fuyun</li>
+    <li>place->Kezhan</li>
+    <li>place->Yeshi</li>
+    <li>place->Langji</li>
+    <li>place->Piaomiao</li>
+    <li>place->Xiaoyao</li>
+    <li>kind->Posada</li>
+    <li>kind->Mercado Nocturno</li>
+    <li>kind->Campamento</li>
+    <li>kind->Encrucijada</li>
+    <li>kind->Parador</li>
+  </CVG_NamerSettlement_RogueCultivators.rulePack.rulesStrings>
+</LanguageData>

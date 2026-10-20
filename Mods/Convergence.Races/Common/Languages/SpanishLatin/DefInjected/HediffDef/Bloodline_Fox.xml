@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Bloodline_Fox.label>sangre de zorro</CVG_Bloodline_Fox.label>
+  <CVG_Bloodline_Fox.description>Sangre de zorro despierta: belleza, encanto y una mente psíquica aguda. En purezas bajas el cuerpo es frágil, y nadie confía del todo en un zorro.</CVG_Bloodline_Fox.description>
+  <CVG_Bloodline_Fox.stages.0.label>rastro</CVG_Bloodline_Fox.stages.0.label>
+  <CVG_Bloodline_Fox.stages.1.label>diluida</CVG_Bloodline_Fox.stages.1.label>
+  <CVG_Bloodline_Fox.stages.2.label>pura</CVG_Bloodline_Fox.stages.2.label>
+  <CVG_Bloodline_Fox.stages.3.label>ancestral</CVG_Bloodline_Fox.stages.3.label>
+  <CVG_FoxCharmed.label>embelesado</CVG_FoxCharmed.label>
+  <CVG_FoxCharmed.description>Embelesado por la mirada de un zorro.</CVG_FoxCharmed.description>
+</LanguageData>

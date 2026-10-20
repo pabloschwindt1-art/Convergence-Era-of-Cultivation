@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Pills with quality (CompQuality: alchemist skill + furnace level) and toxicity. -->
+
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>CVG_TemperingPill</defName>
+    <label>tempering pill</label>
+    <description>Beast blood and spirit herbs boiled down into a red pill. The body cultivators of the Silent Lotus Temple swallow one before beating their flesh against stone, saying that the blood remembers what the bones forget. Restores blood qi for the path of the body (more with higher quality). Every pill leaves some toxicity.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/TemperingPill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <WorkToMake>1500</WorkToMake>
+      <MarketValue>30</MarketValue>
+      <Mass>0.01</Mass>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="Convergence.IngestionOutcomeDoer_GainResourceByQuality">
+          <path>CVG_Path_Body</path>
+          <amount>40</amount>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_PillToxicity</hediffDef>
+          <severity>0.12</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>CVG_AlchemyFurnace</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
+      <displayPriority>2210</displayPriority>
+      <bulkRecipeCount>4</bulkRecipeCount>
+    </recipeMaker>
+    <costList>
+      <CVG_SpiritHerb>3</CVG_SpiritHerb>
+      <CVG_BeastBlood>1</CVG_BeastBlood>
+      <CVG_SpiritStone>1</CVG_SpiritStone>
+    </costList>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <!-- Drug policies and Ideology drug precepts (pattern: vanilla Penoxycyline). No addiction or overdose: CVG_PillToxicity is the brake. -->
+      <li Class="CompProperties_Drug">
+        <listOrder>1100</listOrder>
+        <overdoseSeverityOffset>0~0</overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>CVG_QiRecoveryPill</defName>
+    <label>qi recovery pill</label>
+    <description>A pale pill that refills the dantian quickly (more with higher quality). It is the humblest recipe of the Heavenly Cauldron Pavilion, and every apprentice must refine it a hundred times before being allowed to touch a rarer herb. Every pill leaves some toxicity.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/QiRecoveryPill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <WorkToMake>1500</WorkToMake>
+      <MarketValue>25</MarketValue>
+      <Mass>0.01</Mass>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="Convergence.IngestionOutcomeDoer_GainResourceByQuality">
+          <path>CVG_Path_Qi</path>
+          <amount>50</amount>
+          <startsPath>false</startsPath>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_PillToxicity</hediffDef>
+          <severity>0.1</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>CVG_AlchemyFurnace</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
+      <displayPriority>2210</displayPriority>
+      <bulkRecipeCount>4</bulkRecipeCount>
+    </recipeMaker>
+    <costList>
+      <CVG_SpiritHerb>2</CVG_SpiritHerb>
+      <CVG_SpiritStone>1</CVG_SpiritStone>
+    </costList>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <!-- Drug policies and Ideology drug precepts (pattern: vanilla Penoxycyline). No addiction or overdose: CVG_PillToxicity is the brake. -->
+      <li Class="CompProperties_Drug">
+        <listOrder>1110</listOrder>
+        <overdoseSeverityOffset>0~0</overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>CVG_PurificationPill</defName>
+    <label>blood purification pill</label>
+    <description>A pill of beast core and spirit jade that burns impurities out of the blood. The Ancient Dragon Clan claims the formula was stolen from its archives, and the Blood Moon Cult brews a darker version with human blood. Chance to raise the purity of a bloodline by one level (higher with quality); if it fails, or there is no bloodline, it poisons. Needs a level 2 alchemy furnace.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/PurificationPill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <WorkToMake>1500</WorkToMake>
+      <MarketValue>250</MarketValue>
+      <Mass>0.01</Mass>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="Convergence.IngestionOutcomeDoer_PurifyBloodline">
+          <baseChance>0.6</baseChance>
+          <failHediff>CVG_PillToxicity</failHediff>
+          <failSeverity>0.35</failSeverity>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_PillToxicity</hediffDef>
+          <severity>0.2</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>CVG_AlchemyFurnace</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
+      <displayPriority>2210</displayPriority>
+      <bulkRecipeCount>4</bulkRecipeCount>
+    </recipeMaker>
+    <costList>
+      <CVG_SpiritHerb>4</CVG_SpiritHerb>
+      <CVG_BeastCore>1</CVG_BeastCore>
+      <CVG_SpiritJade>2</CVG_SpiritJade>
+      <CVG_SpiritStone>3</CVG_SpiritStone>
+    </costList>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <!-- Drug policies and Ideology drug precepts (pattern: vanilla Penoxycyline). No addiction or overdose: CVG_PillToxicity is the brake. -->
+      <li Class="CompProperties_Drug">
+        <listOrder>1120</listOrder>
+        <overdoseSeverityOffset>0~0</overdoseSeverityOffset>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RequiresWorkbenchLevel">
+        <level>2</level>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Nine-turns pill: the high-grade recipe of the level 3 furnace (rare ingredients from Herbs.xml). -->
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>CVG_NineTurnsPill</defName>
+    <label>nine-turns pill</label>
+    <description>A golden pill turned in the furnace nine times over nine days. Legend says Shennong's last disciple refined the first one, and that the ninth turn calls down a small tribulation that only a level 3 alchemy furnace can withstand. Brewed from spirit ginseng root, snow lotus petals and a spirit crystal, it floods the dantian with qi (much more with higher quality) and leaves heavy toxicity.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/NineTurnsPill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <WorkToMake>6000</WorkToMake>
+      <MarketValue>400</MarketValue>
+      <Mass>0.01</Mass>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="Convergence.IngestionOutcomeDoer_GainResourceByQuality">
+          <path>CVG_Path_Qi</path>
+          <amount>300</amount>
+          <startsPath>false</startsPath>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_PillToxicity</hediffDef>
+          <severity>0.3</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>CVG_AlchemyFurnace</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Intellectual>12</Intellectual>
+      </skillRequirements>
+      <displayPriority>2215</displayPriority>
+      <bulkRecipeCount>0</bulkRecipeCount>
+    </recipeMaker>
+    <costList>
+      <CVG_SpiritGinsengRoot>2</CVG_SpiritGinsengRoot>
+      <CVG_SnowLotusPetal>3</CVG_SnowLotusPetal>
+      <CVG_SpiritCrystal>1</CVG_SpiritCrystal>
+      <CVG_SpiritStone>5</CVG_SpiritStone>
+    </costList>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Drug">
+        <listOrder>1130</listOrder>
+        <overdoseSeverityOffset>0~0</overdoseSeverityOffset>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RequiresWorkbenchLevel">
+        <level>3</level>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Pill toxicity: every pill adds some; it fades slowly. Abusing pills stalls cultivation and sickens the body. -->
+  <HediffDef>
+    <defName>CVG_PillToxicity</defName>
+    <label>pill toxicity</label>
+    <description>Residue of medicinal power that the body has not yet cleansed. The alchemists of Jiuxiao call it pill poison and say that more cultivators were killed by greed for pills than by tribulations. A little is harmless; too many pills in a row clog the meridians.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 0.9, 0.4)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.1</initialSeverity>
+    <maxSeverity>1.2</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.08</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>trace</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <label>buildup</label>
+        <statFactors>
+          <CVG_CultivationSpeed>0.85</CVG_CultivationSpeed>
+        </statFactors>
+        <statOffsets>
+          <MentalBreakThreshold>0.03</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.7</minSeverity>
+        <label>poisoning</label>
+        <painOffset>0.1</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <CVG_CultivationSpeed>0.6</CVG_CultivationSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.0</minSeverity>
+        <label>severe poisoning</label>
+        <painOffset>0.25</painOffset>
+        <vomitMtbDays>0.5</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.35</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <CVG_CultivationSpeed>0.3</CVG_CultivationSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

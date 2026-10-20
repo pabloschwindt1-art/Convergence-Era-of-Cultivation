@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Cultivation paths (the Three Treasures). Every realm belongs to one path; a colonist keeps one tracker per path
+    (dual cultivation is possible later). CVG_Path_Body (blood qi) comes with M4b, Shen later.
+  -->
+  <Convergence.CultivationPathDef>
+    <defName>CVG_Path_Qi</defName>
+    <label>path of qi</label>
+    <description>Cultivators with a spirit root draw qi from the world, refine it in the dantian and climb the realms of qi.</description>
+    <order>1</order>
+    <workerClass>Convergence.CultivationPathWorker</workerClass>
+    <resourceClass>Convergence.StatResource</resourceClass>
+    <resourceMaxStat>CVG_QiMax</resourceMaxStat>
+    <resourceRegenStat>CVG_QiRegen</resourceRegenStat>
+    <resourceLabel>qi</resourceLabel>
+    <resourceDescription>Qi regenerates on its own and much faster while cultivating on a cultivation spot. A breakthrough needs a full dantian.</resourceDescription>
+    <resourceColor>(0.25, 0.55, 0.75)</resourceColor>
+    <requiresSpiritRoot>true</requiresSpiritRoot>
+    <usesQiConcentration>true</usesQiConcentration>
+    <!-- Breakthrough chance without pills -> foundation quality (multiplies the realm hediff). Pills: -0.15 (unstable). -->
+    <foundationQualityCurve>
+      <points>
+        <li>(0.1, 0.8)</li>
+        <li>(0.5, 1)</li>
+        <li>(0.8, 1.15)</li>
+        <li>(0.95, 1.25)</li>
+      </points>
+    </foundationQualityCurve>
+    <foundationAidPenalty>0.15</foundationAidPenalty>
+    <foundationQualityRange>0.5~1.3</foundationQualityRange>
+  </Convergence.CultivationPathDef>
+</Defs>

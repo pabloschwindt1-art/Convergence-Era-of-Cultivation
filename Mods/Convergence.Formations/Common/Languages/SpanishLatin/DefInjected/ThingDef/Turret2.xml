@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Projectile_QiBolt.label>virote de qi</CVG_Projectile_QiBolt.label>
+  <CVG_Gun_ThunderBallista.label>ballesta del trueno</CVG_Gun_ThunderBallista.label>
+  <CVG_Gun_ThunderBallista.description>Una ballesta cuyo virote va envuelto en una bola de qi de trueno. Pega fuerte, llega lejos y tarda en apuntar.</CVG_Gun_ThunderBallista.description>
+  <CVG_ThunderBallistaTurret.label>torreta de ballesta del trueno</CVG_ThunderBallistaTurret.label>
+  <CVG_ThunderBallistaTurret.description>La ballesta de las murallas altas de las viejas sectas, la que terminaba los asedios antes de que empezaran. Alcanza casi el doble que una ballesta rúnica y golpea mucho más fuerte, pero es lenta y no puede acertar a quien se acerca. Quema piedras espirituales para el trueno. La primera se construyó para detener a un enemigo en concreto, y cada uno de sus virotes parece recordar cuál.</CVG_ThunderBallistaTurret.description>
+</LanguageData>

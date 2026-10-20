@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Needs Convergence: Apparel (spirit silk, spirit loom). Texture: tinted vanilla; final art Things/Pawn/Humanlike/Apparel/CVG/GrandPuppeteerRobe -->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>CVG_Apparel_GrandPuppeteerRobe</defName>
+    <label>grand puppeteer's robe</label>
+    <description>A long robe woven from spirit silk with spirit thread sewn along the sleeves, so that every gesture of the wearer lengthens the reach of their strings. The Thousand Strings Valley reserved it for those who had bound a hundred puppets. It needs no power, only a patient loom.</description>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_PuppetMasters</researchPrerequisite>
+      <recipeUsers Inherit="False"><li>CVG_SpiritLoom</li><li>HandTailoringBench</li></recipeUsers>
+      <skillRequirements><Crafting>8</Crafting></skillRequirements>
+      <displayPriority>540</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <!-- Provisional: Core robe texture tinted; final art Things/Pawn/Humanlike/Apparel/CVG/GrandPuppeteerRobe -->
+      <texPath>Things/Pawn/Humanlike/Apparel/CVG/RobeOuter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(0.62, 0.78, 0.72)</color>
+      <drawSize>1.05</drawSize>
+    </graphicData>
+    <costList>
+      <CVG_SpiritSilk>30</CVG_SpiritSilk>
+      <CVG_SpiritThread>40</CVG_SpiritThread>
+    </costList>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToMake>14000</WorkToMake>
+      <Mass>1.5</Mass>
+      <EquipDelay>3</EquipDelay>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.25</ArmorRating_Heat>
+      <Insulation_Cold>10</Insulation_Cold>
+      <Insulation_Heat>6</Insulation_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <MechBandwidth>9</MechBandwidth>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>Torso</li><li>Neck</li><li>Shoulders</li><li>Arms</li><li>Legs</li></bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/RobeOuter</wornGraphicPath>
+      <layers><li>Shell</li></layers>
+      <mechanitorApparel>true</mechanitorApparel>
+      <scoreOffset>4</scoreOffset>
+      <defaultOutfitTags Inherit="False"/>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options><li><weight>10</weight><only>(0.62, 0.78, 0.72)</only></li></options>
+    </colorGenerator>
+  </ThingDef>
+</Defs>

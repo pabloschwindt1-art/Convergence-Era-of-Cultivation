@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/GenStepDef[defName="Asteroid" or defName="Asteroid_NoRuins" or defName="AsteroidBasic"]/genStep/mineableCounts</xpath>
+    <value>
+      <CVG_MineableGalacticSteel>8~14</CVG_MineableGalacticSteel>
+    </value>
+  </Operation>
+</Patch>

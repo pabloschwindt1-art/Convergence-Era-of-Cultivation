@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Rune table (engrave ordinary weapons to spirit grade 1) and single-use talismans. -->
+
+  <SpecialThingFilterDef>
+    <defName>CVG_SpiritGradedWeapons</defName>
+    <label>already spirit grade</label>
+    <description>Weapons that already have spirit grade 1 or more.</description>
+    <parentCategory>Weapons</parentCategory>
+    <allowedByDefault>false</allowedByDefault>
+    <configurable>false</configurable>
+    <workerClass>Convergence.SpecialThingFilterWorker_SpiritGraded</workerClass>
+  </SpecialThingFilterDef>
+
+  <RecipeDef>
+    <defName>CVG_EngraveRunes</defName>
+    <label>engrave runes</label>
+    <description>Engrave formation runes on an ordinary weapon (spirit grade 0): it keeps everything it had and rises to spirit grade 1, enough to wound cultivators of the first realm. The same three lines were cut into millions of mortal blades during the Iron Calamity, and veterans still call them the war runes. Weapons that already have spirit grade 1 or more are not accepted.</description>
+    <jobString>Engraving runes.</jobString>
+    <workerClass>Convergence.RecipeWorker_EngraveRunes</workerClass>
+    <workAmount>3000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Weapons</li>
+          </categories>
+          <specialFiltersToDisallow>
+            <li>CVG_SpiritGradedWeapons</li>
+          </specialFiltersToDisallow>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritStone</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Weapons</li>
+      </categories>
+      <thingDefs>
+        <li>CVG_SpiritStone</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Crafting>5</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CVG_RuneTable</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_ThunderTalisman</defName>
+    <label>thunder talisman</label>
+    <description>A yellow talisman written with the five thunder seal of Longhushan, where Zhang Daoling is said to have bound the thunder gods to his brush. Rogue cultivators sew a few into their sleeves for emergencies. Single use: tear it and lightning strikes every hostile within 5 cells (20 burn damage).</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/ThunderTalisman</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <statBases>
+      <MarketValue>60</MarketValue>
+      <Mass>0.02</Mass>
+      <Flammability>1</Flammability>
+      <WorkToMake>1200</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <tradeability>All</tradeability>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use {0_label}</useLabel>
+        <useDuration>60</useDuration>
+      </li>
+      <li Class="Convergence.CompProperties_UseEffectSpiritBurst">
+        <damageDef>Burn</damageDef>
+        <amount>20</amount>
+        <radius>4.9</radius>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Artistic</workSkill>
+      <recipeUsers>
+        <li>CVG_TalismanTable</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Artistic>4</Artistic>
+      </skillRequirements>
+      <displayPriority>500</displayPriority>
+    </recipeMaker>
+    <costList>
+      <Cloth>2</Cloth>
+      <CVG_SpiritStone>2</CVG_SpiritStone>
+      <CVG_SpiritJade>1</CVG_SpiritJade>
+    </costList>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_HealingTalisman</defName>
+    <label>healing talisman</label>
+    <description>A talisman of the Celestial Master tradition, which began when Zhang Daoling healed the sick with charms burned and dissolved in water. The Silent Lotus Temple gives them away to anyone who asks, though each one costs its scribes a week of fasting and a beast core. Single use: heals the worst health condition of whoever uses it.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/HealingTalisman</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <statBases>
+      <MarketValue>600</MarketValue>
+      <Mass>0.02</Mass>
+      <Flammability>1</Flammability>
+      <WorkToMake>6000</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <tradeability>All</tradeability>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use {0_label}</useLabel>
+        <useDuration>60</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_FixWorstHealthCondition</compClass>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Artistic</workSkill>
+      <recipeUsers>
+        <li>CVG_TalismanTable</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Artistic>10</Artistic>
+      </skillRequirements>
+      <displayPriority>500</displayPriority>
+    </recipeMaker>
+    <costList>
+      <Cloth>2</Cloth>
+      <CVG_BeastCore>1</CVG_BeastCore>
+      <CVG_SpiritJade>5</CVG_SpiritJade>
+      <CVG_SpiritStone>5</CVG_SpiritStone>
+    </costList>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_SwiftTalisman</defName>
+    <label>swift wind talisman</label>
+    <description>A talisman of the swift wind, the first one a novice of the talisman arts learns to write. Messengers of the old sects of Jiuxiao crossed a mountain range in a day with one pasted on each leg. Single use: light as the wind, +40% movement speed for 6 hours.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/SwiftTalisman</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <statBases>
+      <MarketValue>40</MarketValue>
+      <Mass>0.02</Mass>
+      <Flammability>1</Flammability>
+      <WorkToMake>1200</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <tradeability>All</tradeability>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use {0_label}</useLabel>
+        <useDuration>60</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffectAddHediff">
+        <hediffDef>CVG_SwiftWind</hediffDef>
+        <allowRepeatedUse>true</allowRepeatedUse>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Artistic</workSkill>
+      <recipeUsers>
+        <li>CVG_TalismanTable</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Artistic>4</Artistic>
+      </skillRequirements>
+      <displayPriority>500</displayPriority>
+    </recipeMaker>
+    <costList>
+      <Cloth>2</Cloth>
+      <CVG_SpiritStone>1</CVG_SpiritStone>
+    </costList>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>CVG_SwiftWind</defName>
+    <label>swift wind</label>
+    <description>A talisman of the swift wind carries the body. The feet barely touch the ground, as the old messengers of the sects of Jiuxiao used to run.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.9, 1)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>15000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>1.4</MoveSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

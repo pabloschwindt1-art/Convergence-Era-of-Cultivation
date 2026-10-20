@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Flying ship of the Heavenly Cauldron Pavilion: orbital trader (vanilla orbital-trader incident; only once the Pavilion exists). -->
+  <TraderKindDef>
+    <defName>CVG_Trader_CauldronShip</defName>
+    <label>Heavenly Cauldron flying ship</label>
+    <orbital>true</orbital>
+    <faction>CVG_Faction_HeavenlyCauldron</faction>
+    <commonality>1</commonality>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>200~600</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritJade</thingDef><countRange>10~40</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_FoundationPill</thingDef><countRange>2~6</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_JadeSlip</thingDef><countRange>2~5</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>MedicineHerbal</thingDef><countRange>30~80</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>MedicineIndustrial</thingDef><countRange>20~50</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>800~2500</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>ExoticMisc</tradeTag><thingDefCountRange>2~4</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>Artifact</tradeTag><thingDefCountRange>0~2</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>CVG_BeastCore</thingDef></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>ExoticMisc</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Artifact</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>WeaponMelee</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>WeaponRanged</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Clothing</tag></li>
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+    </stockGenerators>
+  </TraderKindDef>
+
+  <!-- Wandering cultivator merchants (visitors and caravans of the Rogue Cultivators): rare goods and slips; they buy beast cores. -->
+  <TraderKindDef>
+    <defName>CVG_Trader_RogueWanderer</defName>
+    <label>wandering cultivator merchant</label>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>200~600</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_JadeSlip</thingDef><countRange>1~4</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>20~100</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_BeastBlood</thingDef><countRange>0~4</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>ExoticMisc</tradeTag><thingDefCountRange>2~3</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>Artifact</tradeTag><thingDefCountRange>0~1</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>CVG_BeastCore</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>CVG_BeastBlood</thingDef></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>ExoticMisc</tag></li>
+    </stockGenerators>
+  </TraderKindDef>
+</Defs>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Graft_DragonLungs.label>pulmón de dragón</CVG_Graft_DragonLungs.label>
+  <CVG_Graft_DragonLungs.description>Los dragones respiran tormentas y tragan humo como si fuera aire de primavera. Sus pulmones convierten el gas venenoso en una simple molestia.\n\nEficiencia respiratoria x1,15, resistencia a entornos tóxicos +60%, resistencia tóxica +20%. Impide la podredumbre pulmonar en este pulmón.\nDisonancia celestial +0,1.</CVG_Graft_DragonLungs.description>
+  <CVG_Graft_JadeKidneys.label>riñón de jade</CVG_Graft_JadeKidneys.label>
+  <CVG_Graft_JadeKidneys.description>El Yin se acumula en los riñones, enseñaban los viejos maestros. Unos riñones de jade lunar beben la noche y la devuelven en forma de qi.\n\nEficiencia renal x1,1, resistencia tóxica +30%, regeneración de qi +0,4.\nDisonancia celestial +0,15.</CVG_Graft_JadeKidneys.description>
+  <CVG_Graft_WindHearingEars.label>oreja que oye con el viento</CVG_Graft_WindHearingEars.label>
+  <CVG_Graft_WindHearingEars.description>Shunfeng'er oía cada susurro que llevaba el viento. Estas orejas captan los pasos de los asaltantes mucho antes de que lleguen a las murallas.\n\nEficiencia auditiva x1,5.\nDisonancia celestial +0,1.</CVG_Graft_WindHearingEars.description>
+  <CVG_Graft_QilinSkin.label>piel del qilin</CVG_Graft_QilinSkin.label>
+  <CVG_Graft_QilinSkin.description>La piel de un qilin fue alguna vez la armadura de los emperadores, porque ni el fuego ni el veneno la atravesaban. Las escamas doradas injertadas en la espalda mantienen viva aquella bendición antigua.\n\nArmadura cortante +20%, contundente +10%, térmica +40%, resistencia tóxica +10%. No se acumula con las glándulas de armadura.\nDisonancia celestial +0,15.</CVG_Graft_QilinSkin.description>
+</LanguageData>

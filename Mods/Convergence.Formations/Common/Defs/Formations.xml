@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Formation flag: the cores use the flags around them to mark the area (convex polygon). Stuff decides element via feng shui. -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_FormationFlag</defName>
+    <label>formation flag</label>
+    <description>A tall flag on a stake, inscribed with runes. Place at least three around a formation core (within 16 cells): the area enclosed by the flags is where the formation works. More flags raise its level. The first formation masters of Jiuxiao planted red flags on the corners of a field to tell the land where one qi ended and another began. Sect disciples still sew each rune by hand, because a flag stitched in a hurry lets the formation breathe out.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Formations/FormationFlag</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(1.3,1.3)</drawSize>
+    </graphicData>
+    <category>Building</category>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>14</pathCost>
+    <fillPercent>0.1</fillPercent>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <designationCategory>Security</designationCategory>
+    <uiOrder>2520</uiOrder>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>400</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <costList>
+      <WoodLog>10</WoodLog>
+      <Cloth>5</Cloth>
+      <CVG_SpiritStone>1</CVG_SpiritStone>
+    </costList>
+    <researchPrerequisites><li>CVG_Research_FiveElements</li></researchPrerequisites>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>1</qi>
+      </li>
+    </modExtensions>
+    <placeWorkers><li>Convergence.Formations.PlaceWorker_FormationRange</li></placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_QiGatheringCore</defName>
+    <label>qi gathering formation core</label>
+    <description>The heart of a Qi Gathering Formation. Burns spirit stones slowly and, with flags enclosing an area, raises the qi concentration of every cell inside (+1 per level), indoors or outdoors. Azure Peak records say the Gathering Array was drawn by a sword saint who was tired of chasing qi across mountains and decided to make the mountain come to him. Its stone brazier never smokes, but the air around it tastes of rain. Formation flags are in the Security tab.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Formations/QiGatheringCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(1.3,1.3)</drawSize>
+    </graphicData>
+    <category>Building</category>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.3</fillPercent>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <designationCategory>CVG_Cultivation</designationCategory>
+    <uiOrder>2530</uiOrder>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>0.3</Flammability>
+      <Beauty>2</Beauty>
+      <MeditationFocusStrength>0.0</MeditationFocusStrength>
+    </statBases>
+    <costList>
+      <CVG_SpiritStone>10</CVG_SpiritStone>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <researchPrerequisites><li>CVG_Research_QiGathering</li></researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.4</fuelConsumptionRate>
+        <fuelCapacity>20</fuelCapacity>
+        <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
+        <initialFuelPercent>0.5</initialFuelPercent>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <autoRefuelPercent>0.4</autoRefuelPercent>
+        <fuelLabel>Spirit stones</fuelLabel>
+        <fuelGizmoLabel>Spirit stones</fuelGizmoLabel>
+      </li>
+      <li Class="Convergence.Formations.CompProperties_FormationCore">
+        <workerClass>Convergence.Formations.FormationWorker_QiGather</workerClass>
+        <flagDef>CVG_FormationFlag</flagDef>
+        <minFlags>3</minFlags>
+        <maxLinkRange>15.9</maxLinkRange>
+        <maxCells>600</maxCells>
+        <power>1</power>
+        <intervalTicks>240</intervalTicks>
+        <fuelPerEvent>0</fuelPerEvent>
+        <color>(0.45,0.9,0.6)</color>
+      </li>
+      <li Class="CompProperties_Glower"><glowRadius>5</glowRadius><glowColor>(120,180,255,0)</glowColor></li>
+    </comps>
+    <placeWorkers><li>PlaceWorker_GlowRadius</li><li>Convergence.Formations.PlaceWorker_FormationRange</li></placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_SwordFormationCore</defName>
+    <label>killing swords formation core</label>
+    <description>Core of the Formation of Killing Swords. Every two seconds it launches qi swords (one per level) at the enemies inside the flags' area. Each volley uses a little spirit stone. The Formation of Killing Swords is the oldest defense of the Azure Peak Sword Sect: ten thousand swords sleeping in the Sword Graveyard answer the call of a single core. Elders warn that the swords do not tell friend from foe, only the array's edge.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Formations/SwordFormationCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(1.3,1.3)</drawSize>
+    </graphicData>
+    <category>Building</category>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.3</fillPercent>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <designationCategory>Security</designationCategory>
+    <uiOrder>2531</uiOrder>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>0.3</Flammability>
+      <Beauty>2</Beauty>
+      <MeditationFocusStrength>0.0</MeditationFocusStrength>
+    </statBases>
+    <costList>
+      <CVG_SpiritStone>12</CVG_SpiritStone>
+      <Steel>40</Steel>
+    </costList>
+    <researchPrerequisites><li>CVG_Research_DefensiveFormations</li></researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.0</fuelConsumptionRate>
+        <fuelCapacity>15</fuelCapacity>
+        <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
+        <initialFuelPercent>0.5</initialFuelPercent>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <autoRefuelPercent>0.4</autoRefuelPercent>
+        <fuelLabel>Spirit stones</fuelLabel>
+        <fuelGizmoLabel>Spirit stones</fuelGizmoLabel>
+      </li>
+      <li Class="Convergence.Formations.CompProperties_FormationCore">
+        <workerClass>Convergence.Formations.FormationWorker_Swords</workerClass>
+        <flagDef>CVG_FormationFlag</flagDef>
+        <minFlags>3</minFlags>
+        <maxLinkRange>15.9</maxLinkRange>
+        <maxCells>600</maxCells>
+        <power>1</power>
+        <intervalTicks>120</intervalTicks>
+        <fuelPerEvent>0.05</fuelPerEvent>
+        <projectile>CVG_Projectile_MetalNeedle</projectile>
+        <color>(1,0.85,0.4)</color>
+      </li>
+      <li Class="CompProperties_Glower"><glowRadius>5</glowRadius><glowColor>(120,180,255,0)</glowColor></li>
+    </comps>
+    <placeWorkers><li>PlaceWorker_GlowRadius</li><li>Convergence.Formations.PlaceWorker_FormationRange</li></placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_BindingFormationCore</defName>
+    <label>binding formation core</label>
+    <description>Core of the Formation of Binding. Every ten seconds it immobilizes the strongest enemy inside the area for 5 seconds per level (a cultivator of higher realm first). Each binding uses half a spirit stone. The Binding Formation comes from the chains the Silent Lotus Temple used to hold a mad demon-cultivator for three hundred years, until the monks learned to forge the chains out of qi alone. It only holds one prisoner at a time, but it chooses the most dangerous.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Formations/BindingFormationCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(1.3,1.3)</drawSize>
+    </graphicData>
+    <category>Building</category>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.3</fillPercent>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <designationCategory>Security</designationCategory>
+    <uiOrder>2532</uiOrder>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>0.3</Flammability>
+      <Beauty>2</Beauty>
+      <MeditationFocusStrength>0.0</MeditationFocusStrength>
+    </statBases>
+    <costList>
+      <CVG_SpiritStone>15</CVG_SpiritStone>
+      <Steel>40</Steel>
+    </costList>
+    <researchPrerequisites><li>CVG_Research_DefensiveFormations</li></researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.0</fuelConsumptionRate>
+        <fuelCapacity>15</fuelCapacity>
+        <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
+        <initialFuelPercent>0.5</initialFuelPercent>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <autoRefuelPercent>0.4</autoRefuelPercent>
+        <fuelLabel>Spirit stones</fuelLabel>
+        <fuelGizmoLabel>Spirit stones</fuelGizmoLabel>
+      </li>
+      <li Class="Convergence.Formations.CompProperties_FormationCore">
+        <workerClass>Convergence.Formations.FormationWorker_Binding</workerClass>
+        <flagDef>CVG_FormationFlag</flagDef>
+        <minFlags>3</minFlags>
+        <maxLinkRange>15.9</maxLinkRange>
+        <maxCells>600</maxCells>
+        <power>1</power>
+        <intervalTicks>600</intervalTicks>
+        <fuelPerEvent>0.5</fuelPerEvent>
+        <color>(0.7,0.5,1)</color>
+      </li>
+      <li Class="CompProperties_Glower"><glowRadius>5</glowRadius><glowColor>(120,180,255,0)</glowColor></li>
+    </comps>
+    <placeWorkers><li>PlaceWorker_GlowRadius</li><li>Convergence.Formations.PlaceWorker_FormationRange</li></placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_ProtectiveFormationCore</defName>
+    <label>grand protective formation core</label>
+    <description>Core of the Grand Protective Formation. A dome over the area enclosed by at least four flags that absorbs every enemy projectile that enters it. Each hit costs spirit stones in proportion to its damage (120 damage per stone per level) and it burns half a stone a day just by being up. If it runs dry, the dome falls. In the Calamity of Iron the Heavenly Cauldron Pavilion bought the lives of its alchemists with a single dome of qi, paid for with spirit stones until the vaults ran dry. Since then every sect measures its wealth by how long its Grand Protective Formation could last.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Formations/ProtectiveFormationCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(1.3,1.3)</drawSize>
+    </graphicData>
+    <category>Building</category>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.3</fillPercent>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <designationCategory>Security</designationCategory>
+    <uiOrder>2533</uiOrder>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Flammability>0.3</Flammability>
+      <Beauty>2</Beauty>
+      <MeditationFocusStrength>0.0</MeditationFocusStrength>
+    </statBases>
+    <costList>
+      <CVG_SpiritStone>25</CVG_SpiritStone>
+      <CVG_SpiritJade>5</CVG_SpiritJade>
+      <Steel>60</Steel>
+    </costList>
+    <researchPrerequisites><li>CVG_Research_GreatProtective</li></researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.5</fuelConsumptionRate>
+        <fuelCapacity>40</fuelCapacity>
+        <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
+        <initialFuelPercent>0.5</initialFuelPercent>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <autoRefuelPercent>0.4</autoRefuelPercent>
+        <fuelLabel>Spirit stones</fuelLabel>
+        <fuelGizmoLabel>Spirit stones</fuelGizmoLabel>
+      </li>
+      <li Class="Convergence.Formations.CompProperties_FormationCore">
+        <workerClass>Convergence.Formations.FormationWorker_Protective</workerClass>
+        <flagDef>CVG_FormationFlag</flagDef>
+        <minFlags>4</minFlags>
+        <maxLinkRange>19.9</maxLinkRange>
+        <maxCells>900</maxCells>
+        <power>120</power>
+        <intervalTicks>120</intervalTicks>
+        <fuelPerEvent>0</fuelPerEvent>
+        <color>(0.5,0.8,1)</color>
+      </li>
+      <li Class="CompProperties_Glower"><glowRadius>5</glowRadius><glowColor>(120,180,255,0)</glowColor></li>
+    </comps>
+    <placeWorkers><li>PlaceWorker_GlowRadius</li><li>Convergence.Formations.PlaceWorker_FormationRange</li></placeWorkers>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>CVG_Gun_GuardianStatue</defName>
+    <label>guardian statue sword</label>
+    <description>The qi sword that the guardian statue throws. Every guardian statue swears to guard a gate until it turns to dust, and keeps the oath with a sword of qi.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Formations/GuardianStatue_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.7</AccuracyMedium>
+      <AccuracyLong>0.5</AccuracyLong>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>CVG_Projectile_MetalNeedle</defaultProjectile>
+        <warmupTime>0.6</warmupTime>
+        <range>24.9</range>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>Shot_NeedleGun</soundCast>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <consumeFuelPerShot>0.05</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>CVG_Gun_RuneCrossbow</defName>
+    <label>rune crossbow</label>
+    <description>A crossbow whose bolts are carved with runes. Rune-carved bolts were first used by wandering cultivators who could not afford a flying sword.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Formations/RuneCrossbowTurret_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.8</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.6</AccuracyMedium>
+      <AccuracyLong>0.45</AccuracyLong>
+      <RangedWeapon_Cooldown>3.2</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>5</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>Arrow_Recurve</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>30.9</range>
+        <soundCast>Bow_Recurve</soundCast>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <consumeFuelPerShot>0.1</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_GuardianStatue</defName>
+    <label>guardian statue</label>
+    <description>A statue of spirit stone that comes to life when enemies get close and throws qi swords at them. Uses a little spirit stone per shot. Needs no power. At the gates of the Ancient Dragon Clan stand guardians carved from a single block of spirit stone, with eyes left unfinished on purpose: the sculptors say an open eye would never close again. When an enemy crosses the threshold the stone remembers it was once a mountain.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawHighlight>true</drawHighlight>
+    <drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
+    <uiIconPath>Things/Building/CVG/Formations/GuardianStatue_MenuIcon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/CVG/Formations/GuardianStatue</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(1.57,1.57)</drawSize>
+      <damageData><rect>(0.2,0.2,0.6,0.6)</rect></damageData>
+    </graphicData>
+    <category>Building</category>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <WorkToBuild>3500</WorkToBuild>
+      <Mass>40</Mass>
+      <Beauty>3</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0</fuelConsumptionRate>
+        <fuelCapacity>10</fuelCapacity>
+        <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
+        <initialFuelPercent>0.5</initialFuelPercent>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <autoRefuelPercent>0.4</autoRefuelPercent>
+        <fuelLabel>Spirit stones</fuelLabel>
+        <fuelGizmoLabel>Spirit stones</fuelGizmoLabel>
+      </li>
+      <li Class="CompProperties_Stunnable"><affectedDamageDefs><li>Stun</li><li>EMP</li></affectedDamageDefs></li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <costList>
+      <CVG_SpiritStone>20</CVG_SpiritStone>
+      <Steel>30</Steel>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <uiOrder>2540</uiOrder>
+    <building>
+      <combatPower>90</combatPower>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>CVG_Gun_GuardianStatue</turretGunDef>
+      <turretTopDrawSize>1.8</turretTopDrawSize>
+      <turretBurstCooldownTime>3.5</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <researchPrerequisites><li>CVG_Research_DefensiveFormations</li></researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_RuneCrossbowTurret</defName>
+    <label>rune crossbow turret</label>
+    <description>A classic fixed defense: a big crossbow with rune-carved bolts. Needs no power; it uses a little spirit stone for the runes. Border villages of Jiuxiao raised these crossbows on towers long before any sect offered them protection. Each bolt carries the rune of a family that has long since died, and the runes still remember how to fly straight.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawHighlight>true</drawHighlight>
+    <drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
+    <uiIconPath>Things/Building/CVG/Formations/RuneCrossbowTurret_MenuIcon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/CVG/Formations/RuneCrossbowTurret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(1.131,1.131)</drawSize>
+      <damageData><rect>(0.2,0.2,0.6,0.6)</rect></damageData>
+    </graphicData>
+    <category>Building</category>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <WorkToBuild>3500</WorkToBuild>
+      <Mass>40</Mass>
+      <Beauty>3</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0</fuelConsumptionRate>
+        <fuelCapacity>10</fuelCapacity>
+        <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
+        <initialFuelPercent>0.5</initialFuelPercent>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <autoRefuelPercent>0.4</autoRefuelPercent>
+        <fuelLabel>Spirit stones</fuelLabel>
+        <fuelGizmoLabel>Spirit stones</fuelGizmoLabel>
+      </li>
+      <li Class="CompProperties_Stunnable"><affectedDamageDefs><li>Stun</li><li>EMP</li></affectedDamageDefs></li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <costList>
+      <WoodLog>60</WoodLog>
+      <Steel>40</Steel>
+      <CVG_SpiritStone>5</CVG_SpiritStone>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Security</designationCategory>
+    <uiOrder>2541</uiOrder>
+    <building>
+      <combatPower>55</combatPower>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>CVG_Gun_RuneCrossbow</turretGunDef>
+      <turretBurstCooldownTime>3.2</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <researchPrerequisites><li>CVG_Research_DefensiveFormations</li></researchPrerequisites>
+  </ThingDef>
+
+</Defs>

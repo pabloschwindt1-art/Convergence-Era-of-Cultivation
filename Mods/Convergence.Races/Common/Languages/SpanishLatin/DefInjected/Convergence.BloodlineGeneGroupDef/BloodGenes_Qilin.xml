@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_GeneGroup_AuspiciousPresence.label>presencia auspiciosa</CVG_GeneGroup_AuspiciousPresence.label>
+  <CVG_GeneGroup_AuspiciousPresence.description>Tras la Convergencia, los aliados cercanos se sienten más tranquilos y afortunados (ánimo).</CVG_GeneGroup_AuspiciousPresence.description>
+  <CVG_GeneGroup_PureHooves.label>pezuñas puras</CVG_GeneGroup_PureHooves.label>
+  <CVG_GeneGroup_PureHooves.description>El qilin camina entre fuego y veneno sin daño.</CVG_GeneGroup_PureHooves.description>
+  <CVG_GeneGroup_EvilRepellent.label>repelente del mal</CVG_GeneGroup_EvilRepellent.label>
+  <CVG_GeneGroup_EvilRepellent.description>Tras la Convergencia, las entidades hostiles del vacío cerca del qilin quedan debilitadas.</CVG_GeneGroup_EvilRepellent.description>
+</LanguageData>

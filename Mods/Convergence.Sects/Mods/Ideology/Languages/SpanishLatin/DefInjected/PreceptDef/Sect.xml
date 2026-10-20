@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Cultivation_Obligatory.label>obligatorio</CVG_Cultivation_Obligatory.label>
+  <CVG_Cultivation_Obligatory.description>Todo discípulo debe sentarse a cultivar cada día. Un día sin cultivo es un día robado al Dao.</CVG_Cultivation_Obligatory.description>
+  <CVG_Cultivation_Venerated.label>venerado</CVG_Cultivation_Venerated.label>
+  <CVG_Cultivation_Venerated.description>El cultivo es la más alta de las artes; un discípulo que se sienta durante horas es admirado por ello.</CVG_Cultivation_Venerated.description>
+  <CVG_Cultivation_Free.label>libre</CVG_Cultivation_Free.label>
+  <CVG_Cultivation_Free.description>Cada discípulo cultiva cuando y como quiera.</CVG_Cultivation_Free.description>
+  <CVG_Cultivation_Frowned.label>mal visto</CVG_Cultivation_Frowned.label>
+  <CVG_Cultivation_Frowned.description>Pasar horas sentado es holgazanería. Los verdaderos discípulos trabajan, luchan y viven; el Dao los encontrará de todos modos.</CVG_Cultivation_Frowned.description>
+  <CVG_Alchemy_Venerated.label>venerada</CVG_Alchemy_Venerated.label>
+  <CVG_Alchemy_Venerated.description>Las píldoras son la sabiduría destilada de mil años de alquimistas. Rechazar una es arrogancia.</CVG_Alchemy_Venerated.description>
+  <CVG_Alchemy_Accepted.label>aceptada</CVG_Alchemy_Accepted.label>
+  <CVG_Alchemy_Accepted.description>Las píldoras son una herramienta como cualquier otra, para usar cuando haga falta.</CVG_Alchemy_Accepted.description>
+  <CVG_Alchemy_Frowned.label>mal vista</CVG_Alchemy_Frowned.label>
+  <CVG_Alchemy_Frowned.description>Una píldora es una muleta. El cuerpo y la voluntad deben ascender por sí solos.</CVG_Alchemy_Frowned.description>
+  <CVG_Essence_Abhorrent.comps.2.description>Alguien extrajo la esencia de un ser vivo.</CVG_Essence_Abhorrent.comps.2.description>
+  <CVG_Essence_Abhorrent.label>aborrecible</CVG_Essence_Abhorrent.label>
+  <CVG_Essence_Abhorrent.description>Drenar la esencia a un ser vivo es asesinato, por mucho que se disfrace.</CVG_Essence_Abhorrent.description>
+  <CVG_Essence_Accepted.label>aceptada</CVG_Essence_Accepted.label>
+  <CVG_Essence_Accepted.description>Las esencias son una dura realidad del mundo nuevo; quien extrae una debe al menos hacerlo con respeto.</CVG_Essence_Accepted.description>
+  <CVG_Essence_Honored.label>honrada</CVG_Essence_Honored.label>
+  <CVG_Essence_Honored.description>Una vida entregada por una esencia es una vida que continúa en otra. Se honra al donante, y el receptor carga con una deuda.</CVG_Essence_Honored.description>
+  <CVG_Demonic_Forbidden.comps.2.description>Alguien usó un arte demoníaco.</CVG_Demonic_Forbidden.comps.2.description>
+  <CVG_Demonic_Forbidden.label>prohibidas</CVG_Demonic_Forbidden.label>
+  <CVG_Demonic_Forbidden.description>Las artes demoníacas desangran el mundo y a quien las usa. Quien las practica es expulsado.</CVG_Demonic_Forbidden.description>
+  <CVG_Demonic_Tolerated.label>toleradas</CVG_Demonic_Tolerated.label>
+  <CVG_Demonic_Tolerated.description>Las artes demoníacas son una herramienta peligrosa, pero una herramienta.</CVG_Demonic_Tolerated.description>
+  <CVG_Demonic_Embraced.label>abrazadas</CVG_Demonic_Embraced.label>
+  <CVG_Demonic_Embraced.description>El poder es poder; los rectos solo lo llaman demoníaco porque no supieron empuñarlo.</CVG_Demonic_Embraced.description>
+  <CVG_Duels_Encouraged.label>fomentados</CVG_Duels_Encouraged.label>
+  <CVG_Duels_Encouraged.description>Los discípulos resuelven sus diferencias con la espada a la vista de todos, y el torneo es el orgullo de la secta.</CVG_Duels_Encouraged.description>
+  <CVG_Duels_Allowed.label>permitidos</CVG_Duels_Allowed.label>
+  <CVG_Duels_Allowed.description>Un duelo está permitido si ambos aceptan y nadie muere.</CVG_Duels_Allowed.description>
+  <CVG_Duels_Forbidden.label>prohibidos</CVG_Duels_Forbidden.label>
+  <CVG_Duels_Forbidden.description>Los discípulos no alzan la mano contra los discípulos. Quien desenvaina en la secta responde ante los ancianos.</CVG_Duels_Forbidden.description>
+  <CVG_Hierarchy_Elders.comps.0.description>Alguien de la secta subió de reino. La jerarquía crece.</CVG_Hierarchy_Elders.comps.0.description>
+  <CVG_Hierarchy_Elders.label>mandan los ancianos</CVG_Hierarchy_Elders.label>
+  <CVG_Hierarchy_Elders.description>Los ancianos deciden; los jóvenes escuchan. Cada ascenso de rango lo celebra toda la secta.</CVG_Hierarchy_Elders.description>
+  <CVG_Hierarchy_Equals.label>todos iguales</CVG_Hierarchy_Equals.label>
+  <CVG_Hierarchy_Equals.description>Ningún discípulo está por encima de otro solo por antigüedad. La fuerza es asunto de cada uno.</CVG_Hierarchy_Equals.description>
+  <CVG_Retreat_Revered.label>venerado</CVG_Retreat_Revered.label>
+  <CVG_Retreat_Revered.description>Un discípulo en retiro es intocable. Nadie lo molesta, y su regreso es una fiesta.</CVG_Retreat_Revered.description>
+  <CVG_Retreat_Ordinary.label>ordinario</CVG_Retreat_Ordinary.label>
+  <CVG_Retreat_Ordinary.description>Un retiro es solo un tiempo de trabajo como cualquier otro.</CVG_Retreat_Ordinary.description>
+  <CVG_Role_SectMaster.label>maestro de la secta</CVG_Role_SectMaster.label>
+  <CVG_Role_SectMaster.description>El maestro de la secta: quien enseñó a los primeros discípulos y aún decide quién puede entrar. Aconseja, tranquiliza y da rumbo a la secta. Una secta tiene uno, y el puesto nunca se hereda por casualidad.</CVG_Role_SectMaster.description>
+  <CVG_Role_GrandElder.label>gran anciano</CVG_Role_GrandElder.label>
+  <CVG_Role_GrandElder.description>El anciano más antiguo, guardián de la memoria de la secta y de sus rencores. No dirige la secta, pero ningún maestro ha obrado mucho tiempo contra su voluntad.</CVG_Role_GrandElder.description>
+  <CVG_Role_SwordElder.label>anciano de la espada</CVG_Role_SwordElder.label>
+  <CVG_Role_SwordElder.description>El anciano a cargo de la disciplina de las armas. Combate cuerpo a cuerpo, entrena a los jóvenes con espada de madera y jamás perdió un duelo que le importara.</CVG_Role_SwordElder.description>
+  <CVG_Role_AlchemistMaster.label>maestro alquimista</CVG_Role_AlchemistMaster.label>
+  <CVG_Role_AlchemistMaster.description>El maestro de los calderos de la secta. Sabe qué hierba mata y cuál cura, y nunca ha contado todo a nadie.</CVG_Role_AlchemistMaster.description>
+  <CVG_Role_FormationMaster.label>maestro de formaciones</CVG_Role_FormationMaster.label>
+  <CVG_Role_FormationMaster.description>Quien traza las formaciones de la secta, desde las banderas de la reunión de qi hasta los pilares de su red. Un error suyo cuesta una montaña.</CVG_Role_FormationMaster.description>
+  <CVG_Role_ScriptureKeeper.label>guardián de las escrituras</CVG_Role_ScriptureKeeper.label>
+  <CVG_Role_ScriptureKeeper.description>Vela la biblioteca de tablillas de jade, cuida de que ningún manual salga del pabellón y sabe qué prohíbe cada uno. Presta solo a quien los devuelve.</CVG_Role_ScriptureKeeper.description>
+  <CVG_Role_PuppetMaster.label>maestro de marionetas</CVG_Role_PuppetMaster.label>
+  <CVG_Role_PuppetMaster.description>El discípulo que manda las marionetas de la secta desde detrás de un telón de hilos. No necesita ser fuerte; necesita ser paciente, y haber olvidado cómo estar solo.</CVG_Role_PuppetMaster.description>
+  <CVG_Ritual_Admission.label>ceremonia de admisión de discípulos</CVG_Ritual_Admission.label>
+  <CVG_Ritual_Admission.description>Un nuevo discípulo se arrodilla ante el altar, ofrece té al maestro y recibe el nombre de la secta. La secta gana un miembro; el miembro gana una familia.</CVG_Ritual_Admission.description>
+  <CVG_Ritual_Ascension.label>ceremonia de ascensión</CVG_Ritual_Ascension.label>
+  <CVG_Ritual_Ascension.description>Cuando un discípulo sube de reino, la secta se reúne en el salón para presenciarlo. El maestro enciende tres varillas de incienso por el Dao, tres por los ancianos y una por el discípulo.</CVG_Ritual_Ascension.description>
+  <CVG_Ritual_Tournament.label>torneo de la secta</CVG_Ritual_Tournament.label>
+  <CVG_Ritual_Tournament.description>Una vez al año la secta despeja el patio y deja que sus discípulos crucen las hojas a la vista de todos. Nadie muere, nadie olvida, y el ganador se sienta a la derecha del maestro por una noche.</CVG_Ritual_Tournament.description>
+</LanguageData>

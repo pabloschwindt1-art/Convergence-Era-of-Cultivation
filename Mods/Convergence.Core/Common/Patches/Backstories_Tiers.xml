@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Tiered cultivation backstories (see Defs/Backstories_Cultivation.xml).
+       For every vanilla human faction, six extra backstoryFilters: for each tier T in 2..4, one filter with a tier-T childhood and a base
+       adulthood and one with a base childhood and a tier-T adulthood. Base = the categories the faction already uses + CVG_Cultivation.
+       Two high tiers therefore never meet on the same pawn. Base weights: tier 2 = 0.25, tier 3 = 0.08, tier 4 = 0.02 (the vanilla
+       filter keeps weight 1); the mod settings rescale them at load time.
+       PawnKinds_Player (Colonist, Tribesperson) have no backstoryFiltersOverride, so starting colonists use the PlayerColony / PlayerTribe
+       filters patched here; Slave, WildMan and StrangerInBlack keep their own overrides on purpose. -->
+
+  <!-- PlayerColony -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/FactionDef[defName="PlayerColony"]/backstoryFilters</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/FactionDef[defName="PlayerColony"]/backstoryFilters</xpath>
+      <value>
+        <li>
+          <categoriesChildhood><li>CVG_Tier2</li></categoriesChildhood>
+          <categoriesAdulthood><li>Offworld</li><li>CVG_Cultivation</li></categoriesAdulthood>
+          <commonality>0.12</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>Offworld</li><li>CVG_Cultivation</li></categoriesChildhood>
+          <categoriesAdulthood><li>CVG_Tier2</li></categoriesAdulthood>
+          <commonality>0.12</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>CVG_Tier3</li></categoriesChildhood>
+          <categoriesAdulthood><li>Offworld</li><li>CVG_Cultivation</li></categoriesAdulthood>
+          <commonality>0.08</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>Offworld</li><li>CVG_Cultivation</li></categoriesChildhood>
+          <categoriesAdulthood><li>CVG_Tier3</li></categoriesAdulthood>
+          <commonality>0.08</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>CVG_Tier4</li></categoriesChildhood>
+          <categoriesAdulthood><li>Offworld</li><li>CVG_Cultivation</li></categoriesAdulthood>
+          <commonality>0.02</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>Offworld</li><li>CVG_Cultivation</li></categoriesChildhood>
+          <categoriesAdulthood><li>CVG_Tier4</li></categoriesAdulthood>
+          <commonality>0.02</commonality>
+        </li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/FactionDef[defName="PlayerColony"]</xpath>
+      <value>
+        <backstoryFilters>
+          <li>
+            <categoriesChildhood><li>CVG_Tier2</li></categoriesChildhood>
+            <categoriesAdulthood><li>Offworld</li><li>CVG_Cultivation</li></categoriesAdulthood>
+            <commonality>0.12</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>Offworld</li><li>CVG_Cultivation</li></categoriesChildhood>
+            <categoriesAdulthood><li>CVG_Tier2</li></categoriesAdulthood>
+            <commonality>0.12</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>CVG_Tier3</li></categoriesChildhood>
+            <categoriesAdulthood><li>Offworld</li><li>CVG_Cultivation</li></categoriesAdulthood>
+            <commonality>0.08</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>Offworld</li><li>CVG_Cultivation</li></categoriesChildhood>
+            <categoriesAdulthood><li>CVG_Tier3</li></categoriesAdulthood>
+            <commonality>0.08</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>CVG_Tier4</li></categoriesChildhood>
+            <categoriesAdulthood><li>Offworld</li><li>CVG_Cultivation</li></categoriesAdulthood>
+            <commonality>0.02</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>Offworld</li><li>CVG_Cultivation</li></categoriesChildhood>
+            <categoriesAdulthood><li>CVG_Tier4</li></categoriesAdulthood>
+            <commonality>0.02</commonality>
+          </li>
+        </backstoryFilters>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- PlayerTribe -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/FactionDef[defName="PlayerTribe"]/backstoryFilters</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/FactionDef[defName="PlayerTribe"]/backstoryFilters</xpath>
+      <value>
+        <li>
+          <categoriesChildhood><li>CVG_Tier2</li></categoriesChildhood>
+          <categoriesAdulthood><li>Tribal</li><li>CVG_Cultivation</li></categoriesAdulthood>
+          <commonality>0.12</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>Tribal</li><li>CVG_Cultivation</li></categoriesChildhood>
+          <categoriesAdulthood><li>CVG_Tier2</li></categoriesAdulthood>
+          <commonality>0.12</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>CVG_Tier3</li></categoriesChildhood>
+          <categoriesAdulthood><li>Tribal</li><li>CVG_Cultivation</li></categoriesAdulthood>
+          <commonality>0.08</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>Tribal</li><li>CVG_Cultivation</li></categoriesChildhood>
+          <categoriesAdulthood><li>CVG_Tier3</li></categoriesAdulthood>
+          <commonality>0.08</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>CVG_Tier4</li></categoriesChildhood>
+          <categoriesAdulthood><li>Tribal</li><li>CVG_Cultivation</li></categoriesAdulthood>
+          <commonality>0.02</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>Tribal</li><li>CVG_Cultivation</li></categoriesChildhood>
+          <categoriesAdulthood><li>CVG_Tier4</li></categoriesAdulthood>
+          <commonality>0.02</commonality>
+        </li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/FactionDef[defName="PlayerTribe"]</xpath>
+      <value>
+        <backstoryFilters>
+          <li>
+            <categoriesChildhood><li>CVG_Tier2</li></categoriesChildhood>
+            <categoriesAdulthood><li>Tribal</li><li>CVG_Cultivation</li></categoriesAdulthood>
+            <commonality>0.12</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>Tribal</li><li>CVG_Cultivation</li></categoriesChildhood>
+            <categoriesAdulthood><li>CVG_Tier2</li></categoriesAdulthood>
+            <commonality>0.12</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>CVG_Tier3</li></categoriesChildhood>
+            <categoriesAdulthood><li>Tribal</li><li>CVG_Cultivation</li></categoriesAdulthood>
+            <commonality>0.08</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>Tribal</li><li>CVG_Cultivation</li></categoriesChildhood>
+            <categoriesAdulthood><li>CVG_Tier3</li></categoriesAdulthood>
+            <commonality>0.08</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>CVG_Tier4</li></categoriesChildhood>
+            <categoriesAdulthood><li>Tribal</li><li>CVG_Cultivation</li></categoriesAdulthood>
+            <commonality>0.02</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>Tribal</li><li>CVG_Cultivation</li></categoriesChildhood>
+            <categoriesAdulthood><li>CVG_Tier4</li></categoriesAdulthood>
+            <commonality>0.02</commonality>
+          </li>
+        </backstoryFilters>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- OutlanderCivil + OutlanderRough (both inherit backstoryFilters from the abstract OutlanderFactionBase; list nodes merge on inheritance) -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/backstoryFilters</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/backstoryFilters</xpath>
+      <value>
+        <li>
+          <categoriesChildhood><li>CVG_Tier2</li></categoriesChildhood>
+          <categoriesAdulthood><li>Outlander</li><li>Offworld</li><li>CVG_Cultivation</li></categoriesAdulthood>
+          <commonality>0.12</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>Outlander</li><li>Offworld</li><li>CVG_Cultivation</li></categoriesChildhood>
+          <categoriesAdulthood><li>CVG_Tier2</li></categoriesAdulthood>
+          <commonality>0.12</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>CVG_Tier3</li></categoriesChildhood>
+          <categoriesAdulthood><li>Outlander</li><li>Offworld</li><li>CVG_Cultivation</li></categoriesAdulthood>
+          <commonality>0.08</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>Outlander</li><li>Offworld</li><li>CVG_Cultivation</li></categoriesChildhood>
+          <categoriesAdulthood><li>CVG_Tier3</li></categoriesAdulthood>
+          <commonality>0.08</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>CVG_Tier4</li></categoriesChildhood>
+          <categoriesAdulthood><li>Outlander</li><li>Offworld</li><li>CVG_Cultivation</li></categoriesAdulthood>
+          <commonality>0.02</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>Outlander</li><li>Offworld</li><li>CVG_Cultivation</li></categoriesChildhood>
+          <categoriesAdulthood><li>CVG_Tier4</li></categoriesAdulthood>
+          <commonality>0.02</commonality>
+        </li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]</xpath>
+      <value>
+        <backstoryFilters>
+          <li>
+            <categoriesChildhood><li>CVG_Tier2</li></categoriesChildhood>
+            <categoriesAdulthood><li>Outlander</li><li>Offworld</li><li>CVG_Cultivation</li></categoriesAdulthood>
+            <commonality>0.12</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>Outlander</li><li>Offworld</li><li>CVG_Cultivation</li></categoriesChildhood>
+            <categoriesAdulthood><li>CVG_Tier2</li></categoriesAdulthood>
+            <commonality>0.12</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>CVG_Tier3</li></categoriesChildhood>
+            <categoriesAdulthood><li>Outlander</li><li>Offworld</li><li>CVG_Cultivation</li></categoriesAdulthood>
+            <commonality>0.08</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>Outlander</li><li>Offworld</li><li>CVG_Cultivation</li></categoriesChildhood>
+            <categoriesAdulthood><li>CVG_Tier3</li></categoriesAdulthood>
+            <commonality>0.08</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>CVG_Tier4</li></categoriesChildhood>
+            <categoriesAdulthood><li>Outlander</li><li>Offworld</li><li>CVG_Cultivation</li></categoriesAdulthood>
+            <commonality>0.02</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>Outlander</li><li>Offworld</li><li>CVG_Cultivation</li></categoriesChildhood>
+            <categoriesAdulthood><li>CVG_Tier4</li></categoriesAdulthood>
+            <commonality>0.02</commonality>
+          </li>
+        </backstoryFilters>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- TribeCivil + TribeRough + TribeSavage (inherit from the abstract TribeBase) -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/FactionDef[@Name="TribeBase"]/backstoryFilters</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/FactionDef[@Name="TribeBase"]/backstoryFilters</xpath>
+      <value>
+        <li>
+          <categoriesChildhood><li>CVG_Tier2</li></categoriesChildhood>
+          <categoriesAdulthood><li>Tribal</li><li>CVG_Cultivation</li></categoriesAdulthood>
+          <commonality>0.12</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>Tribal</li><li>CVG_Cultivation</li></categoriesChildhood>
+          <categoriesAdulthood><li>CVG_Tier2</li></categoriesAdulthood>
+          <commonality>0.12</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>CVG_Tier3</li></categoriesChildhood>
+          <categoriesAdulthood><li>Tribal</li><li>CVG_Cultivation</li></categoriesAdulthood>
+          <commonality>0.08</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>Tribal</li><li>CVG_Cultivation</li></categoriesChildhood>
+          <categoriesAdulthood><li>CVG_Tier3</li></categoriesAdulthood>
+          <commonality>0.08</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>CVG_Tier4</li></categoriesChildhood>
+          <categoriesAdulthood><li>Tribal</li><li>CVG_Cultivation</li></categoriesAdulthood>
+          <commonality>0.02</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>Tribal</li><li>CVG_Cultivation</li></categoriesChildhood>
+          <categoriesAdulthood><li>CVG_Tier4</li></categoriesAdulthood>
+          <commonality>0.02</commonality>
+        </li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/FactionDef[@Name="TribeBase"]</xpath>
+      <value>
+        <backstoryFilters>
+          <li>
+            <categoriesChildhood><li>CVG_Tier2</li></categoriesChildhood>
+            <categoriesAdulthood><li>Tribal</li><li>CVG_Cultivation</li></categoriesAdulthood>
+            <commonality>0.12</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>Tribal</li><li>CVG_Cultivation</li></categoriesChildhood>
+            <categoriesAdulthood><li>CVG_Tier2</li></categoriesAdulthood>
+            <commonality>0.12</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>CVG_Tier3</li></categoriesChildhood>
+            <categoriesAdulthood><li>Tribal</li><li>CVG_Cultivation</li></categoriesAdulthood>
+            <commonality>0.08</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>Tribal</li><li>CVG_Cultivation</li></categoriesChildhood>
+            <categoriesAdulthood><li>CVG_Tier3</li></categoriesAdulthood>
+            <commonality>0.08</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>CVG_Tier4</li></categoriesChildhood>
+            <categoriesAdulthood><li>Tribal</li><li>CVG_Cultivation</li></categoriesAdulthood>
+            <commonality>0.02</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>Tribal</li><li>CVG_Cultivation</li></categoriesChildhood>
+            <categoriesAdulthood><li>CVG_Tier4</li></categoriesAdulthood>
+            <commonality>0.02</commonality>
+          </li>
+        </backstoryFilters>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- Pirate -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/FactionDef[defName="Pirate"]/backstoryFilters</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/FactionDef[defName="Pirate"]/backstoryFilters</xpath>
+      <value>
+        <li>
+          <categoriesChildhood><li>CVG_Tier2</li></categoriesChildhood>
+          <categoriesAdulthood><li>Pirate</li><li>CVG_Cultivation</li></categoriesAdulthood>
+          <commonality>0.12</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>Pirate</li><li>CVG_Cultivation</li></categoriesChildhood>
+          <categoriesAdulthood><li>CVG_Tier2</li></categoriesAdulthood>
+          <commonality>0.12</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>CVG_Tier3</li></categoriesChildhood>
+          <categoriesAdulthood><li>Pirate</li><li>CVG_Cultivation</li></categoriesAdulthood>
+          <commonality>0.08</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>Pirate</li><li>CVG_Cultivation</li></categoriesChildhood>
+          <categoriesAdulthood><li>CVG_Tier3</li></categoriesAdulthood>
+          <commonality>0.08</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>CVG_Tier4</li></categoriesChildhood>
+          <categoriesAdulthood><li>Pirate</li><li>CVG_Cultivation</li></categoriesAdulthood>
+          <commonality>0.02</commonality>
+        </li>
+        <li>
+          <categoriesChildhood><li>Pirate</li><li>CVG_Cultivation</li></categoriesChildhood>
+          <categoriesAdulthood><li>CVG_Tier4</li></categoriesAdulthood>
+          <commonality>0.02</commonality>
+        </li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/FactionDef[defName="Pirate"]</xpath>
+      <value>
+        <backstoryFilters>
+          <li>
+            <categoriesChildhood><li>CVG_Tier2</li></categoriesChildhood>
+            <categoriesAdulthood><li>Pirate</li><li>CVG_Cultivation</li></categoriesAdulthood>
+            <commonality>0.12</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>Pirate</li><li>CVG_Cultivation</li></categoriesChildhood>
+            <categoriesAdulthood><li>CVG_Tier2</li></categoriesAdulthood>
+            <commonality>0.12</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>CVG_Tier3</li></categoriesChildhood>
+            <categoriesAdulthood><li>Pirate</li><li>CVG_Cultivation</li></categoriesAdulthood>
+            <commonality>0.08</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>Pirate</li><li>CVG_Cultivation</li></categoriesChildhood>
+            <categoriesAdulthood><li>CVG_Tier3</li></categoriesAdulthood>
+            <commonality>0.08</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>CVG_Tier4</li></categoriesChildhood>
+            <categoriesAdulthood><li>Pirate</li><li>CVG_Cultivation</li></categoriesAdulthood>
+            <commonality>0.02</commonality>
+          </li>
+          <li>
+            <categoriesChildhood><li>Pirate</li><li>CVG_Cultivation</li></categoriesChildhood>
+            <categoriesAdulthood><li>CVG_Tier4</li></categoriesAdulthood>
+            <commonality>0.02</commonality>
+          </li>
+        </backstoryFilters>
+      </value>
+    </nomatch>
+  </Operation>
+
+
+  <!-- Las comunes (tier 1) también para los colonos iniciales: el filtro vanilla de PlayerColony solo pide Offworld y casi
+       ninguna tier 1 la tiene; se suma CVG_Cultivation (solo la llevan las tier 1) a ese filtro. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[defName="PlayerColony"]/backstoryFilters/li[categories/li="Offworld"]/categories</xpath>
+    <value>
+      <li>CVG_Cultivation</li>
+    </value>
+  </Operation>
+</Patch>

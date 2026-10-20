@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Endgame_GateLabel>Se ha abierto una puerta</CVG_Endgame_GateLabel>
+  <CVG_Endgame_Gate1>La puerta del fundador ha respondido al jade. Se alza al borde de tus tierras, negra y silenciosa, y seguirá abierta hasta que alguien entre.</CVG_Endgame_Gate1>
+  <CVG_Endgame_Gate2>El sello ha encontrado su puerta. Una puerta de luz pálida se ha abierto donde el cielo es más fino, y las nubes a su alrededor se inclinan a escuchar.</CVG_Endgame_Gate2>
+  <CVG_Endgame_Gate3>El fragmento ha señalado el camino. Una puerta se ha abierto sobre un campo de vidrio, y algo metálico se mueve al otro lado.</CVG_Endgame_Gate3>
+  <CVG_Endgame_Gate4>El núcleo ha callado, y en su silencio se ha abierto una última puerta. Lo que haya al otro lado ha esperado muchísimo tiempo.</CVG_Endgame_Gate4>
+  <CVG_Endgame_NotReady>Nadie en la colonia ha alcanzado el reino más alto; la elección vuelve mañana.</CVG_Endgame_NotReady>
+  <CVG_Endgame_Ascended>{0} asciende.</CVG_Endgame_Ascended>
+  <CVG_Endgame_CalamityLabel>La Calamidad de Hierro despierta</CVG_Endgame_CalamityLabel>
+  <CVG_Endgame_CalamityText>Las máquinas que sirven a la Calamidad han oído que alguien ocupa el asiento celestial. Llegan en una cantidad que el cielo no veía desde la Ruptura.</CVG_Endgame_CalamityText>
+  <CVG_Endgame_Credits_Ascend>{0} cruzó la última tribulación y se elevó más allá del Noveno Cielo. La colonia vio subir la luz, y nadie lo llamó una pérdida. El Borde sigue, un poco más claro y un poco menos solo.</CVG_Endgame_Credits_Ascend>
+  <CVG_Endgame_Credits_Seal>La grieta se cerró sobre la colonia como un párpado dormido. Las tormentas de qi cesaron, el cielo olvidó a Jiuxiao, y las sectas que quedaron guardaron su propia memoria. Fue el final tranquilo, y bastó.</CVG_Endgame_Credits_Seal>
+  <CVG_Endgame_Credits_Rule>El asiento celestial estaba vacío, y la colonia se sentó en él. Las sectas se inclinaron, porque el viejo orden quería una mano, y la Calamidad de Hierro despertó, porque ella también quería una. El reinado había comenzado.</CVG_Endgame_Credits_Rule>
+  <CVG_ScenPart_ConvergenceOccurred>La Convergencia ya ocurrió: el qi fluye desde el primer día y llega el Maestro.</CVG_ScenPart_ConvergenceOccurred>
+  <CVG_ScenPart_FirstRealm>el primer reino</CVG_ScenPart_FirstRealm>
+  <CVG_ScenPart_AllColonists>Todos los colonos iniciales</CVG_ScenPart_AllColonists>
+  <CVG_ScenPart_SomeColonists>{0} colono(s) inicial(es)</CVG_ScenPart_SomeColonists>
+  <CVG_ScenPart_StartingCultivators>{0} ya cultivan: {1}, etapa {2}.</CVG_ScenPart_StartingCultivators>
+  <CVG_ScenPart_WithTechniques>Traen un manual de técnicas y sus primeras técnicas.</CVG_ScenPart_WithTechniques>
+  <CVG_ScenPart_StartingBloodline>{0} colono(s) inicial(es) llevan el linaje {1}.</CVG_ScenPart_StartingBloodline>
+</LanguageData>

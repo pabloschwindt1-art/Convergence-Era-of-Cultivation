@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_GeneGroup_FieryPlumes.label>plumas ígneas</CVG_GeneGroup_FieryPlumes.label>
+  <CVG_GeneGroup_FieryPlumes.description>Plumas nacidas del fuego: las llamas hieren menos, y en pureza ancestral nada.</CVG_GeneGroup_FieryPlumes.description>
+  <CVG_GeneGroup_AshBorn.label>nacido de las cenizas</CVG_GeneGroup_AshBorn.label>
+  <CVG_GeneGroup_AshBorn.description>Tras la Convergencia, el cuerpo reconstruye partes perdidas y cicatrices desde su propia ceniza.</CVG_GeneGroup_AshBorn.description>
+  <CVG_GeneGroup_Nirvana.label>nirvana</CVG_GeneGroup_Nirvana.label>
+  <CVG_GeneGroup_Nirvana.description>Tras la Convergencia, la muerte arde en vez de terminar: el fénix renace de la pira, curado. Pura: una vez en la vida. Ancestral: de nuevo cada 180 días.</CVG_GeneGroup_Nirvana.description>
+</LanguageData>

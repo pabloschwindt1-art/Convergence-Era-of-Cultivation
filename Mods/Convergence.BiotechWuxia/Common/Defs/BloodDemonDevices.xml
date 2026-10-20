@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Blood pool devices (docs/revision/REVISION_BiotechWuxia.md, item 4): wuxia versions of the vanilla deathrest devices
+    (Hemopump, HemogenAmplifier, DeathrestAccelerator) that bind to CVG_BloodPool or to a deathrest casket through the
+    vanilla CompDeathrestBindable. No electricity: same pattern as CVG_BloodPool (CompPowerTrader with zero draw, its
+    on/off state decided by the qi network through CompQiConsumer). No research needed beyond having a blood demon.
+  -->
+  <ThingDef Name="CVG_BloodDeviceBase" ParentName="DeathrestBuildingBase" Abstract="True">
+    <designationCategory>Biotech</designationCategory>
+    <researchPrerequisites Inherit="False" />
+    <descriptionHyperlinks Inherit="False">
+      <ThingDef>CVG_BloodPool</ThingDef>
+    </descriptionHyperlinks>
+    <building>
+      <relatedBuildCommands Inherit="False">
+        <li>CVG_BloodPool</li>
+      </relatedBuildCommands>
+    </building>
+    <castEdgeShadows>true</castEdgeShadows>
+    <defaultPlacingRot>East</defaultPlacingRot>
+    <size>(1,2)</size>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <comps Inherit="False">
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>0</basePowerConsumption>
+        <idlePowerDraw>0</idlePowerDraw>
+        <showPowerNeededIfOff>false</showPowerNeededIfOff>
+      </li>
+      <li Class="Convergence.CompProperties_QiNode">
+        <compClass>Convergence.CompQiConsumer</compClass>
+        <consumeDay>10</consumeDay>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="CVG_BloodDeviceFueled" ParentName="CVG_BloodDeviceBase" Abstract="True">
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.5</fuelConsumptionRate>
+        <fuelCapacity>5</fuelCapacity>
+        <fuelLabel>Blood essence</fuelLabel>
+        <fuelFilter>
+          <thingDefs>
+            <li>HemogenPack</li>
+            <li>CVG_BloodEssencePill</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <externalTicking>true</externalTicking>
+        <autoRefuelPercent>0.05</autoRefuelPercent>
+        <canEjectFuel>true</canEjectFuel>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- = Hemopump -->
+  <ThingDef ParentName="CVG_BloodDeviceFueled">
+    <defName>CVG_BloodLotusBasin</defName>
+    <label>blood lotus basin</label>
+    <description>The Blood Moon Cult grows a crimson lotus in basins of blood beside its retreat pools; its roots draw the blood up and give it back thicker. Bound to a blood pool, it deepens the reserves of blood essence (hemogen) a blood demon can hold, like a hemopump without electricity.
+
+It must be fed blood essence pills or hemogen packs.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/BloodLotusBasin</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(0.9, 0.3, 1.8)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.1,0.1,0.9,1.8)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Mass>30</Mass>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>60</costStuffCount>
+    <costList>
+      <CVG_SpiritStone>8</CVG_SpiritStone>
+      <CVG_BloodEssencePill>2</CVG_BloodEssencePill>
+    </costList>
+    <comps>
+      <li Class="CompProperties_DeathrestBindable">
+        <hemogenLimitOffset>0.25</hemogenLimitOffset>
+        <soundStart>Hemopump_Start</soundStart>
+        <soundEnd>Hemopump_Stop</soundEnd>
+        <soundWorking>Hemopump_Ambience</soundWorking>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- = HemogenAmplifier -->
+  <ThingDef ParentName="CVG_BloodDeviceFueled">
+    <defName>CVG_BloodMoonCenser</defName>
+    <label>blood moon censer</label>
+    <description>Under the Blood Moon the cultists burn blood instead of incense, and the red smoke opens every pore to the blood qi of the world. Bound to a blood pool, it leaves the sleeper hemogen-amplified until the next retreat: every source of blood essence gives more, like a hemogen amplifier without electricity.
+
+It must be fed blood essence pills or hemogen packs.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/BloodMoonCenser</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(0.85, 0.3, 1.7)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.15,0.15,0.85,1.7)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Mass>30</Mass>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>60</costStuffCount>
+    <costList>
+      <CVG_SpiritStone>10</CVG_SpiritStone>
+      <CVG_BloodEssencePill>2</CVG_BloodEssencePill>
+    </costList>
+    <descriptionHyperlinks>
+      <HediffDef>HemogenAmplified</HediffDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="CompProperties_DeathrestBindable">
+        <hediffToApply>HemogenAmplified</hediffToApply>
+        <soundStart>HemogenAmplifier_Start</soundStart>
+        <soundEnd>HemogenAmplifier_Stop</soundEnd>
+        <soundWorking>HemogenAmplifier_Ambience</soundWorking>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- = DeathrestAccelerator -->
+  <ThingDef ParentName="CVG_BloodDeviceBase">
+    <defName>CVG_BloodDrumOfReturn</defName>
+    <label>blood drum of return</label>
+    <description>Chiyou's war-shamans beat drums of hide stretched over blood-red wood to call their fallen back from the edge of death. Set beside a blood pool, its slow beat keeps time with the sleeper's heart and hurries the retreat to its end, like a deathrest accelerator without electricity.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/BloodDrum</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(1.2,1.2)</drawSize>
+      <shadowData>
+        <volume>(0.6, 0.3, 1.8)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.3,0.2,0.7,1.8)</rect>
+      </damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Mass>40</Mass>
+      <Flammability>0.8</Flammability>
+    </statBases>
+    <stuffCategories>
+      <li>Leathery</li>
+    </stuffCategories>
+    <costStuffCount>40</costStuffCount>
+    <costList>
+      <WoodLog>60</WoodLog>
+      <CVG_SpiritStone>6</CVG_SpiritStone>
+    </costList>
+    <comps>
+      <li Class="CompProperties_DeathrestBindable">
+        <stackLimit>2</stackLimit>
+        <deathrestEffectivenessFactor>1.2</deathrestEffectivenessFactor>
+        <displayTimeActive>false</displayTimeActive>
+        <soundWorking>DeathrestAccelerator_Ambience</soundWorking>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

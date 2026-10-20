@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Puppet_Miner.label>marioneta picapedrera</CVG_Puppet_Miner.label>
+  <CVG_Puppet_Miner.description>Antes de que los titiriteros vivieran en el Valle de los Mil Hilos, las marionetas lo excavaron en su montaña. Esta marioneta achaparrada, de manos de bronce, muerde la roca con un pico de acero espiritual y nunca pregunta qué hay al otro lado. Mina para su maestro y se fortalece a medida que sube su reino.
+
+Trabajo: minar. Se defiende con su pico. Se hace con 35 de acero espiritual, 12 de hilo espiritual y 1 plano. Ancho de banda: 1.\n\nMarioneta de trabajo (escalón 1): minar, herrería y apagar incendios. Se defiende con su pico. Se entumece con el frío (articulaciones de hierro). 1 hilo. Se hace con 35 de acero espiritual, 12 de hilo espiritual y 1 plano.</CVG_Puppet_Miner.description>
+  <CVG_Puppet_Mason.label>marioneta albañil</CVG_Puppet_Mason.label>
+  <CVG_Puppet_Mason.description>Toda secta que alzó un salón tuvo una marioneta albañil que sobrevivió al arquitecto. Cuatro brazos pacientes de madera espiritual colocan piedras, clavan estacas y, entre obra y obra, siembran y siegan el grano que alimenta a la secta. Construye y cuida los campos para su maestro y se fortalece a medida que sube su reino.
+
+Trabajo: construir, sembrar y cortar plantas. Se defiende con su brazo de mazo. Se hace con 40 de madera espiritual, 10 de acero espiritual, 12 de hilo espiritual y 1 plano. Ancho de banda: 1.\n\nMarioneta de trabajo (escalón 1): construir, fabricar, sastrería y cocinar. Se defiende con su brazo de mazo. Se entumece con el frío (articulaciones de hierro). 1 hilo. Se hace con 40 de madera espiritual, 10 de acero espiritual, 12 de hilo espiritual y 1 plano.</CVG_Puppet_Mason.description>
+  <CVG_Puppet_Blade.label>marioneta de doble hoja</CVG_Puppet_Blade.label>
+  <CVG_Puppet_Blade.description>Los duelistas del Valle entrenaban contra una marioneta con dos hojas por brazos antes de poder empuñar una espada, y algunos nunca se graduaron. No tiene arma a distancia ni la necesita: cierra la distancia y no se detiene. Protege a su maestro cuerpo a cuerpo y se fortalece a medida que sube su reino.
+
+Combate: cuerpo a cuerpo, con dos hojas; rápida y blindada, no trabaja. Se hace con 45 de acero espiritual, 15 de hilo espiritual y 1 plano. Ancho de banda: 1.\n\nMarioneta de guerra (escalón 3): cuerpo a cuerpo, con dos hojas; rápida. Pelea con la fuerza del reino de su titiritero, hasta Alma Naciente. El frío apenas la entumece. 2 hilos. Pide la investigación Hilos de acero espiritual y un titiritero en Núcleo Dorado. Se hace con 45 de acero espiritual, 15 de hilo espiritual y 1 plano.</CVG_Puppet_Blade.description>
+  <CVG_Puppet_Miner.tools.pick.label>pico</CVG_Puppet_Miner.tools.pick.label>
+  <CVG_Puppet_Mason.tools.mallet_arm.label>brazo de mazo</CVG_Puppet_Mason.tools.mallet_arm.label>
+  <CVG_Puppet_Blade.tools.twin_blades.label>hojas gemelas</CVG_Puppet_Blade.tools.twin_blades.label>
+</LanguageData>

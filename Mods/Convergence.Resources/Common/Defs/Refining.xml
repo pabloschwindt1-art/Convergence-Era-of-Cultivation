@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>CVG_RefiningFurnace</defName>
+    <defaultPlacingRot>South</defaultPlacingRot><!-- el frente del arte es la vista sur: el trabajador queda del lado del frente -->
+    <label>refining furnace</label>
+    <description>A furnace of stone and clay where metals are tempered with the qi of spirit stones. It needs no electricity: it burns wood, and the spirit stones go into the recipe, not the fire. It counts as a forge.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Building/CVG/RefiningFurnace</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(2.8, 0.35, 0.59)</volume>
+        <offset>(0, 0, 0.08)</offset>
+      </shadowData>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <stuffCategories>
+      <li>Stony</li>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>100</costStuffCount>
+    <costList>
+      <CVG_SpiritStone>10</CVG_SpiritStone>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>3500</WorkToBuild>
+      <MaxHitPoints>220</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <Cleanliness>-3</Cleanliness>
+    </statBases>
+    <size>(3,1)</size>
+    <designationCategory>Production</designationCategory>
+    <uiOrder>2510</uiOrder>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workTableRoomRole>Workshop</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+    </building>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>80.0</fuelConsumptionRate>
+        <fuelCapacity>50.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <canEjectFuel>true</canEjectFuel>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Forge" />
+    </modExtensions>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>CVG_RefineSpiritSteel</defName>
+    <label>refine spirit steel</label>
+    <description>Temper steel with spirit stones: 20 steel and 2 spirit stones become 20 spirit steel. Sect smiths quench it in water drawn from a qi vein, and swear the blade comes out remembering the shape it wants to be.</description>
+    <jobString>Refining spirit steel.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workAmount>1500</workAmount>
+    <workSkill>Crafting</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritStone</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>CVG_SpiritStone</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_SpiritSteel>20</CVG_SpiritSteel>
+    </products>
+    <skillRequirements>
+      <Crafting>4</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CVG_RefiningFurnace</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_RefineMoonSilver</defName>
+    <label>refine moon silver</label>
+    <description>Refine silver with spirit jade: 50 silver and 2 spirit jade become 10 moon silver. It is poured only at night, because moon silver poured by day comes out dull and sulks for a week.</description>
+    <jobString>Refining moon silver.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workAmount>1500</workAmount>
+    <workSkill>Crafting</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritJade</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Silver</li>
+        <li>CVG_SpiritJade</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_MoonSilver>10</CVG_MoonSilver>
+    </products>
+    <skillRequirements>
+      <Crafting>5</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CVG_RefiningFurnace</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_RefineChaosGold</defName>
+    <label>refine chaos gold</label>
+    <description>Melt gold with spirit crystal: 20 gold and 2 spirit crystal become 10 chaos gold. Its surface never settles into a single color, which is how the forges of Jiuxiao tell it from a forgery.</description>
+    <jobString>Refining chaos gold.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workAmount>2500</workAmount>
+    <workSkill>Crafting</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritCrystal</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Gold</li>
+        <li>CVG_SpiritCrystal</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_ChaosGold>10</CVG_ChaosGold>
+    </products>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CVG_RefiningFurnace</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_RefineSpiritJade</defName>
+    <label>refine spirit jade</label>
+    <description>Wake jade with spirit stones: 10 jade and 2 spirit stones become 10 spirit jade. Carvers say ordinary jade is only asleep, and the furnace is the loudest alarm they know.</description>
+    <jobString>Refining spirit jade.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <workAmount>1200</workAmount>
+    <workSkill>Crafting</workSkill>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Jade</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritStone</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Jade</li>
+        <li>CVG_SpiritStone</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_SpiritJade>10</CVG_SpiritJade>
+    </products>
+    <recipeUsers>
+      <li>CVG_RefiningFurnace</li>
+    </recipeUsers>
+  </RecipeDef>
+
+</Defs>

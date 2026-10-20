@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_SpiderCocoon.label>capullo de araña de jade</CVG_SpiderCocoon.label>
+  <CVG_SpiderCocoon.description>Un capullo esponjoso de seda espiritual que suelta la araña tejedora de jade. En un telar espiritual se hila para obtener seda espiritual. Las arañas tejedoras del Pantano de Jade envuelven sus capullos en una seda tan fina que el Pabellón del Caldero Celestial pagó una vez uno solo con una píldora de renacimiento.</CVG_SpiderCocoon.description>
+  <CVG_SevenColorWool.label>lana de siete colores</CVG_SevenColorWool.label>
+  <CVG_SevenColorWool.description>Lana de una oveja de siete colores. Cada esquila sale de un color distinto: uno de los cinco colores de los elementos, dorado o blanco. Aísla muy bien. Los monjes del Templo del Loto Silencioso dicen que la oveja suelta un color cada vez que perdona un pecado del pastor. Los tejedores juran que dos vellones nunca salieron iguales.</CVG_SevenColorWool.description>
+  <CVG_EggPhoenixHenUnfertilized.label>huevo de sangre de fénix (sin fecundar)</CVG_EggPhoenixHenUnfertilized.label>
+  <CVG_EggPhoenixHenUnfertilized.description>Un huevo sin fecundar caliente al tacto. Rico en qi y bueno en cualquier cocina. Los campesinos del sur tienen una gallina en cada casa porque sus huevos mantienen tibio el hogar en invierno. Dicen que la primera gallina fue una pluma que el Ave Bermellón perdió sobre una aldea.</CVG_EggPhoenixHenUnfertilized.description>
+  <CVG_EggPhoenixHenFertilized.label>huevo de sangre de fénix (fecundado)</CVG_EggPhoenixHenFertilized.label>
+  <CVG_EggPhoenixHenFertilized.description>Un huevo fecundado que nunca se enfría. Con suerte, saldrá un pollito de sangre de fénix. El pollito que sale de este huevo nace ya tibio, y la familia le pone el nombre de la estación en que llegó.</CVG_EggPhoenixHenFertilized.description>
+  <CVG_SpiritMilk.label>leche espiritual</CVG_SpiritMilk.label>
+  <CVG_SpiritMilk.description>Leche espesa y dulce de un buey de las nubes. Se bebe cruda o se cocina en cualquier comida. En las tierras de las nubes la leche de los bueyes se vierte como ofrenda antes de que un cultivador entre en reclusión. Dicen que un cuenco enfría el genio antes de un avance.</CVG_SpiritMilk.description>
+  <CVG_MoonAntler.label>asta lunar</CVG_MoonAntler.label>
+  <CVG_MoonAntler.description>Asta plateada que vuelve a crecer cada temporada. Los alquimistas la refinan en píldoras de recuperación de qi, y los comerciantes pagan bien por ella. El conejo de jade de Chang'e muele asta lunar en su mortero para hacer el elixir del palacio de la luna, dicen los viejos cuentos. Los alquimistas del Pabellón compran cada pieza que encuentran con la misma esperanza, y con menos suerte.</CVG_MoonAntler.description>
+  <CVG_JadeWeaverSpider.label>araña tejedora de jade</CVG_JadeWeaverSpider.label>
+  <CVG_JadeWeaverSpider.description>Una araña del tamaño de un perro con patas verde jade que teje capullos de seda espiritual. Tranquila y fácil de criar mientras tenga la panza llena. Los aldeanos del Pantano de Jade cuentan de una araña que tejió un puente de seda para llevar a un niño que se ahogaba al otro lado. Desde entonces sus descendientes solo hilan donde alguien necesita ser rescatado, y nadie ha visto nunca a una hilar para sí misma.</CVG_JadeWeaverSpider.description>
+  <CVG_SevenColorSheep.label>oveja de siete colores</CVG_SevenColorSheep.label>
+  <CVG_SevenColorSheep.description>Una oveja cuya lana cambia de color en cada esquila. Mansa y apacible. Se dice que un pastor del Templo del Loto Silencioso encontró la primera paciendo al pie de un arcoíris. El templo conserva un rebaño y no derrama sangre en sus campos.</CVG_SevenColorSheep.description>
+  <CVG_PhoenixBloodHen.label>gallina de sangre de fénix</CVG_PhoenixBloodHen.label>
+  <CVG_PhoenixBloodHen.description>Una gallina de plumas rojas y doradas con huevos tibios. Resiste el calor y pone a menudo. Sus plumas llevan una chispa del Ave Bermellón, por eso pone huevos tibios y nunca siente el frío. Los cultivadores del sur tienen una como amuleto de buena suerte y como desayuno.</CVG_PhoenixBloodHen.description>
+  <CVG_CloudOx.label>buey de las nubes</CVG_CloudOx.label>
+  <CVG_CloudOx.description>Un buey enorme, lento y pálido que parece caminar sobre la bruma. Da leche espiritual y carga mucho peso. Se dice que Laozi salió del paso montado en un buey pálido, y los Bueyes de las Nubes son sus testarudos descendientes. Caminan despacio porque, dicen, el camino es lo único que vale la pena alcanzar.</CVG_CloudOx.description>
+  <CVG_MoonDeer.label>ciervo lunar</CVG_MoonDeer.label>
+  <CVG_MoonDeer.description>Un ciervo pálido cuyas astas brillan como la luna. Se le cortan las astas cada temporada y vuelven a crecer sin daño. Los ciervos del palacio de la luna bajan la noche de luna llena a mudar las astas en la montaña. Los cazadores que matan uno ven cómo se les acaba la suerte antes de la próxima cosecha.</CVG_MoonDeer.description>
+  <CVG_WindWolf.label>lobo de viento</CVG_WindWolf.label>
+  <CVG_WindWolf.description>Un lobo de pelaje pálido que corre sobre el propio viento. Caza en manadas pequeñas y es difícil de atrapar. Los discípulos del Pico Azur dicen que el lobo de viento es un espíritu de espada que olvidó su hoja y se echó a correr. La manada nunca aúlla: escucha la voz de la tormenta y la sigue.</CVG_WindWolf.description>
+  <CVG_CelestialCrane.label>grulla celestial</CVG_CelestialCrane.label>
+  <CVG_CelestialCrane.description>Una grulla alta y blanca de corona roja, de la que se dice que lleva las almas de los viejos cultivadores. Pacífica salvo que se moleste a su nido. Los Ocho Inmortales cabalgaban grullas entre el cielo y la tierra, y estas son las que nunca regresaron. Donde una anida, dicen los viejos, un inmortal observa desde una nube.</CVG_CelestialCrane.description>
+  <CVG_NineNetherSpider.label>araña de los nueve infiernos</CVG_NineNetherSpider.label>
+  <CVG_NineNetherSpider.description>Una araña negra grande como un jabalí con nueve ojos que ven el qi de los vivos. Su mordida deja un veneno que corroe por igual el qi y la carne. Anida en la oscuridad. El Culto de la Luna Sangrienta la llama la Madre de los Nueve Infiernos y deja ofrendas junto a sus nidos. Los eruditos de Jiuxiao creen que nació de una gota de sangre del señor demonio que cayó sobre el huevo de una araña.</CVG_NineNetherSpider.description>
+  <CVG_TribulationMushroom.label>champiñón de la tribulación</CVG_TribulationMushroom.label>
+  <CVG_TribulationMushroom.description>Un champiñón violeta que brota donde cayó un rayo celestial. Aún zumba con la tribulación. Los alquimistas lo usan en lugar de un cristal espiritual para la píldora de nueve giros. Los cultivadores dicen que el primer champiñón de la tribulación creció de las lágrimas de un hombre que falló su avance. Los alquimistas pagan una fortuna por él porque guarda un rastro del rayo que el Cielo gastó en él.</CVG_TribulationMushroom.description>
+  <CVG_Plant_TribulationMushroom.label>champiñón de la tribulación</CVG_Plant_TribulationMushroom.label>
+  <CVG_Plant_TribulationMushroom.description>Un champiñón violeta que solo brota donde ha caído un rayo celestial. Brilla débilmente y muere pronto si nadie lo recoge. Crece donde el Cielo golpeó y falló, y nunca brota dos veces en el mismo sitio. Los ancianos de las sectas advierten que un champiñón arrancado con ira sabe a ceniza.</CVG_Plant_TribulationMushroom.description>
+  <CVG_SpiritFungus.label>hongo espiritual</CVG_SpiritFungus.label>
+  <CVG_SpiritFungus.description>Un hongo pálido que crece en la oscuridad de las cuevas y bajo techos de roca. Los alquimistas lo usan en píldoras de purificación de sangre. Los mineros de las Montañas de Jade Negro lo llaman la lámpara de lo hondo, porque muestra la salida. Los alquimistas dicen que es simplemente terco, tan terco como la oscuridad.</CVG_SpiritFungus.description>
+  <CVG_Plant_SpiritFungus.label>hongo espiritual</CVG_Plant_SpiritFungus.label>
+  <CVG_Plant_SpiritFungus.description>Un hongo azul pálido que crece en cuevas profundas y bajo las montañas. Da una luz tenue y muere si le da el sol. Se alimenta del qi que se filtra por la piedra, así que crece más espeso donde duerme una vieja veta. Donde brilla, alguien enterró alguna vez un tesoro o un rencor.</CVG_Plant_SpiritFungus.description>
+
+  <CVG_JadeWeaverSpider.race.meatLabel>carne de araña</CVG_JadeWeaverSpider.race.meatLabel>
+  <CVG_SevenColorSheep.race.meatLabel>carne de oveja</CVG_SevenColorSheep.race.meatLabel>
+  <CVG_CloudOx.race.meatLabel>carne de buey</CVG_CloudOx.race.meatLabel>
+  <CVG_MoonDeer.race.meatLabel>carne de ciervo</CVG_MoonDeer.race.meatLabel>
+  <CVG_NineNetherSpider.race.meatLabel>carne de araña</CVG_NineNetherSpider.race.meatLabel>
+  <CVG_WindWolf.race.meatLabel>carne de lobo</CVG_WindWolf.race.meatLabel>
+  <CVG_CelestialCrane.race.meatLabel>carne de grulla</CVG_CelestialCrane.race.meatLabel>
+  <CVG_JadeWeaverSpider.tools.0.label>garra cefálica</CVG_JadeWeaverSpider.tools.0.label>
+  <CVG_JadeWeaverSpider.tools.1.label>cabeza</CVG_JadeWeaverSpider.tools.1.label>
+  <CVG_SevenColorSheep.tools.0.label>cabeza</CVG_SevenColorSheep.tools.0.label>
+  <CVG_SevenColorSheep.tools.1.label>pezuña izquierda</CVG_SevenColorSheep.tools.1.label>
+  <CVG_SevenColorSheep.tools.1.labelNoLocation>pezuña</CVG_SevenColorSheep.tools.1.labelNoLocation>
+  <CVG_SevenColorSheep.tools.2.label>pezuña derecha</CVG_SevenColorSheep.tools.2.label>
+  <CVG_SevenColorSheep.tools.2.labelNoLocation>pezuña</CVG_SevenColorSheep.tools.2.labelNoLocation>
+  <CVG_PhoenixBloodHen.tools.0.label>pico</CVG_PhoenixBloodHen.tools.0.label>
+  <CVG_PhoenixBloodHen.tools.1.label>garras</CVG_PhoenixBloodHen.tools.1.label>
+  <CVG_CloudOx.tools.0.label>cabeza</CVG_CloudOx.tools.0.label>
+  <CVG_CloudOx.tools.1.label>pezuña izquierda</CVG_CloudOx.tools.1.label>
+  <CVG_CloudOx.tools.1.labelNoLocation>pezuña</CVG_CloudOx.tools.1.labelNoLocation>
+  <CVG_CloudOx.tools.2.label>pezuña derecha</CVG_CloudOx.tools.2.label>
+  <CVG_CloudOx.tools.2.labelNoLocation>pezuña</CVG_CloudOx.tools.2.labelNoLocation>
+  <CVG_MoonDeer.tools.0.label>cabeza</CVG_MoonDeer.tools.0.label>
+  <CVG_MoonDeer.tools.1.label>pezuña izquierda</CVG_MoonDeer.tools.1.label>
+  <CVG_MoonDeer.tools.1.labelNoLocation>pezuña</CVG_MoonDeer.tools.1.labelNoLocation>
+  <CVG_MoonDeer.tools.2.label>pezuña derecha</CVG_MoonDeer.tools.2.label>
+  <CVG_MoonDeer.tools.2.labelNoLocation>pezuña</CVG_MoonDeer.tools.2.labelNoLocation>
+  <CVG_CelestialCrane.tools.0.label>garras</CVG_CelestialCrane.tools.0.label>
+  <CVG_CelestialCrane.tools.1.label>pico</CVG_CelestialCrane.tools.1.label>
+  <CVG_NineNetherSpider.tools.0.label>colmillos</CVG_NineNetherSpider.tools.0.label>
+  <CVG_NineNetherSpider.tools.1.label>cabeza</CVG_NineNetherSpider.tools.1.label>
+  <CVG_WindWolf.tools.0.label>garra izquierda</CVG_WindWolf.tools.0.label>
+  <CVG_WindWolf.tools.0.labelNoLocation>garra</CVG_WindWolf.tools.0.labelNoLocation>
+  <CVG_WindWolf.tools.1.label>garra derecha</CVG_WindWolf.tools.1.label>
+  <CVG_WindWolf.tools.1.labelNoLocation>garra</CVG_WindWolf.tools.1.labelNoLocation>
+  <CVG_WindWolf.tools.3.label>cabeza</CVG_WindWolf.tools.3.label>
+  <CVG_Xuanwu.label>tortuga negra</CVG_Xuanwu.label>
+  <CVG_Xuanwu.description>Se dice que la Tortuga Negra del Norte, Xuanwu, carga en el caparazón el pilar del cielo del norte; esta bestia es una de sus descendientes lejanas, lenta como un glaciar e igual de imposible de frenar. El musgo y las runas de protección crecen juntos sobre su caparazón, y los herreros del Pico Azur cambiarían una temporada de espadas por una sola de sus placas. Le dan igual la escarcha y el fuego: las aguas del norte que custodia recuerdan los dos.</CVG_Xuanwu.description>
+  <CVG_Xuanwu.race.meatLabel>carne de tortuga</CVG_Xuanwu.race.meatLabel>
+  <CVG_Xuanwu.tools.0.label>pico</CVG_Xuanwu.tools.0.label>
+  <CVG_Xuanwu.tools.1.label>cabeza</CVG_Xuanwu.tools.1.label>
+  <CVG_LightningTiger.label>tigre del rayo</CVG_LightningTiger.label>
+  <CVG_LightningTiger.description>El Tigre Blanco del Oeste, Baihu, gobierna el metal y el otoño y camina delante de la tormenta; esta bestia es de su linaje, blanca como la escarcha y rayada de qi vivo. Dicen que sus colmillos de sable de jade cortan la armadura espiritual, y el trueno la sigue tan de cerca que de noche le chisporrotea el pelaje. Las sectas que ven sus huellas cerca de las puertas meten a los discípulos adentro y suben a los ancianos a las murallas.</CVG_LightningTiger.description>
+  <CVG_LightningTiger.race.meatLabel>carne de tigre</CVG_LightningTiger.race.meatLabel>
+  <CVG_LightningTiger.tools.0.label>garra de rayo izquierda</CVG_LightningTiger.tools.0.label>
+  <CVG_LightningTiger.tools.0.labelNoLocation>garra de rayo</CVG_LightningTiger.tools.0.labelNoLocation>
+  <CVG_LightningTiger.tools.1.label>garra de rayo derecha</CVG_LightningTiger.tools.1.label>
+  <CVG_LightningTiger.tools.1.labelNoLocation>garra de rayo</CVG_LightningTiger.tools.1.labelNoLocation>
+  <CVG_LightningTiger.tools.2.label>colmillos de jade</CVG_LightningTiger.tools.2.label>
+  <CVG_LightningTiger.tools.3.label>cabeza</CVG_LightningTiger.tools.3.label>
+</LanguageData>

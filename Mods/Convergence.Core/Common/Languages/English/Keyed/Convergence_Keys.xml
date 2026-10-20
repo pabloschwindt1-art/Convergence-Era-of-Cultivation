@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_ModName>Convergence: Era of Cultivation</CVG_ModName>
+
+  <!-- Settings -->
+  <CVG_Setting_WorldMode>World mode</CVG_Setting_WorldMode>
+  <CVG_WorldMode_TechCultivation>Techno-cultivation (technology and cultivation together)</CVG_WorldMode_TechCultivation>
+  <CVG_WorldMode_Classic>Classic cultivation (no technology content)</CVG_WorldMode_Classic>
+  <CVG_Setting_Trigger>How the Convergence begins</CVG_Setting_Trigger>
+  <CVG_Trigger_Storyteller>Vanilla first: the storyteller brings it later</CVG_Trigger_Storyteller>
+  <CVG_Trigger_Research>Research: colonists trigger it by studying an artifact</CVG_Trigger_Research>
+  <CVG_Trigger_Immediate>Immediate: the game starts with the Convergence</CVG_Trigger_Immediate>
+  <CVG_Setting_MinDay>Earliest day: {0}</CVG_Setting_MinDay>
+  <CVG_Setting_MaxDay>Latest day: {0}</CVG_Setting_MaxDay>
+  <CVG_Setting_RootChance>Chance of being born with a spirit root: {0}</CVG_Setting_RootChance>
+  <CVG_Setting_Dissonance>Celestial dissonance strength (implants vs. tribulation): {0}</CVG_Setting_Dissonance>
+  <CVG_Setting_TribulationCanKill>Failed tribulations can kill</CVG_Setting_TribulationCanKill>
+  <CVG_Setting_ScaleEnemyRealms>Cap enemy cultivators by your highest realm</CVG_Setting_ScaleEnemyRealms>
+  <CVG_Setting_ScaleEnemyRealmsTip>Generated hostile cultivators (raids, sect attacks) never exceed the highest realm in your colony by more than the bonus below, so a Golden Core cannot show up in year one.</CVG_Setting_ScaleEnemyRealmsTip>
+  <CVG_Setting_Mentor>The Master arrives with the Convergence</CVG_Setting_Mentor>
+
+  <!-- Cultivation tab -->
+  <CVG_Tab_Cultivation>Cultivation</CVG_Tab_Cultivation>
+  <CVG_Tab_ConvergenceDormant>Qi still sleeps in this world. The Convergence has not happened yet.</CVG_Tab_ConvergenceDormant>
+  <CVG_Tab_ConvergenceActive>The Era of Cultivation has begun.</CVG_Tab_ConvergenceActive>
+  <!-- Spirit root & bodies -->
+  <CVG_NoRoot>none</CVG_NoRoot>
+  <CVG_RootLabel>{0} ({1})</CVG_RootLabel>
+  <CVG_Tab_SpiritRoot>Spirit root</CVG_Tab_SpiritRoot>
+  <CVG_Tab_Awakened>Awakened: qi can now be gathered.</CVG_Tab_Awakened>
+  <CVG_Tab_Latent>Latent: it will awaken when the Convergence comes.</CVG_Tab_Latent>
+  <CVG_Tab_SpecialBody>Special body</CVG_Tab_SpecialBody>
+
+  <!-- The Convergence -->
+  <CVG_Convergence_LetterLabel>The Convergence</CVG_Convergence_LetterLabel>
+  <CVG_Convergence_LetterText>The sky tears open. For a moment, a second sky shows through the rift: floating mountains, rivers of light, palaces among the clouds. A fragment of Jiuxiao, the Realm of the Nine Heavens, has collided with this world.
+
+A wind that is not wind sweeps the land. The air feels thick, alive. Qi, the energy that slept here for ages, begins to flow.
+
+The Era of Cultivation has begun.</CVG_Convergence_LetterText>
+  <CVG_Convergence_Awakened>Something answers inside some of your colonists:</CVG_Convergence_Awakened>
+  <CVG_Convergence_NoneAwakened>None of your colonists feels anything special... yet. Those born with a spirit root may still come to you.</CVG_Convergence_NoneAwakened>
+  <!-- Qi and realms (M3) -->
+  <CVG_Qi>qi</CVG_Qi>
+  <CVG_QiRegenShort>+{0}/h</CVG_QiRegenShort>
+  <CVG_RealmStage>{0}, stage {1}/{2}</CVG_RealmStage>
+  <CVG_RealmStageShort>{0} {1}</CVG_RealmStageShort>
+  <CVG_Tab_Realm>Realm</CVG_Tab_Realm>
+  <CVG_Tab_StageProgress>Stage progress</CVG_Tab_StageProgress>
+  <CVG_Tab_Bottleneck>Bottleneck: the last stage is full. Fill the qi and use "Attempt breakthrough" to reach the next realm.</CVG_Tab_Bottleneck>
+  <CVG_StageReached>{0} has reached {1}, stage {2}.</CVG_StageReached>
+  <CVG_BottleneckReached>{0} has filled the last stage of {1} and hit a bottleneck. Sitting still will not be enough to break through.</CVG_BottleneckReached>
+  <CVG_CultivateReportQi>(qi concentration {0})</CVG_CultivateReportQi>
+  <!-- Breakthrough (M4) -->
+  <CVG_Breakthrough_Label>Attempt breakthrough</CVG_Breakthrough_Label>
+  <CVG_Breakthrough_Desc>{PAWN_nameDef} retreats into seclusion for {2} hours to break the bottleneck and reach {1}. All the {3} is spent in the attempt.</CVG_Breakthrough_Desc>
+  <CVG_Breakthrough_NotBottleneck>Only a cultivator at the bottleneck of a realm can attempt a breakthrough.</CVG_Breakthrough_NotBottleneck>
+  <CVG_Breakthrough_PeakRealm>There is no higher realm to reach (yet).</CVG_Breakthrough_PeakRealm>
+  <CVG_Breakthrough_Incapable>{PAWN_nameDef} is in no condition to attempt a breakthrough.</CVG_Breakthrough_Incapable>
+  <CVG_Breakthrough_NoMap>A breakthrough needs a quiet place on a map.</CVG_Breakthrough_NoMap>
+  <CVG_Breakthrough_InProgress>{PAWN_nameDef} is already attempting a breakthrough.</CVG_Breakthrough_InProgress>
+  <CVG_Breakthrough_InTribulation>The heavenly tribulation is already under way.</CVG_Breakthrough_InTribulation>
+  <CVG_Breakthrough_Cooldown>The meridians are still recovering from the last attempt ({0} left).</CVG_Breakthrough_Cooldown>
+  <CVG_Breakthrough_ChanceBase>Breakthrough chance (stat): {0}</CVG_Breakthrough_ChanceBase>
+  <CVG_Breakthrough_ChanceItem>includes the pill to take: +{0}</CVG_Breakthrough_ChanceItem>
+  <CVG_Breakthrough_ChanceRealm>Difficulty of {0}: x{1}</CVG_Breakthrough_ChanceRealm>
+  <CVG_Breakthrough_ChanceRoot>Spirit root: x{0}</CVG_Breakthrough_ChanceRoot>
+  <CVG_Breakthrough_ChancePlace>Qi concentration of the place ({0}): x{1}</CVG_Breakthrough_ChancePlace>
+  <CVG_Breakthrough_ChanceTotal>Chance of success: {0}</CVG_Breakthrough_ChanceTotal>
+  <CVG_Breakthrough_WillUseSpot>Retreat at: {0}.</CVG_Breakthrough_WillUseSpot>
+  <CVG_Breakthrough_NoSpot>No free cultivation spot: the retreat will happen where the cultivator stands.</CVG_Breakthrough_NoSpot>
+  <CVG_Breakthrough_WillTakeItem>Will take a {0} first (+{1}).</CVG_Breakthrough_WillTakeItem>
+  <CVG_Breakthrough_ItemMissing>No {0} available: the attempt will be harder.</CVG_Breakthrough_ItemMissing>
+  <CVG_Breakthrough_TribulationWarning>WARNING: this realm calls down a heavenly tribulation. Lightning will strike the cultivator; implants (celestial dissonance) make it stronger.</CVG_Breakthrough_TribulationWarning>
+  <CVG_Breakthrough_Started>{PAWN_nameDef} enters seclusion to break through to {1}.</CVG_Breakthrough_Started>
+  <CVG_Breakthrough_Interrupted>{PAWN_nameDef}'s breakthrough retreat was interrupted. The qi spent so far is lost.</CVG_Breakthrough_Interrupted>
+  <CVG_Breakthrough_Report>in breakthrough retreat ({0}).</CVG_Breakthrough_Report>
+  <CVG_Breakthrough_ReportTribulation>enduring the heavenly tribulation.</CVG_Breakthrough_ReportTribulation>
+  <CVG_Breakthrough_SuccessLabel>Breakthrough: {0}</CVG_Breakthrough_SuccessLabel>
+  <CVG_Breakthrough_SuccessText>The bottleneck shatters. {PAWN_nameDef} has reached {1}! Foundation: {3} ({4}).
+
+{2}</CVG_Breakthrough_SuccessText>
+  <CVG_Breakthrough_FailLabel>Breakthrough failed: {0}</CVG_Breakthrough_FailLabel>
+  <CVG_Breakthrough_FailText>{PAWN_nameDef} could not break through to {1} (chance: {2}). The qi ran wild through the meridians: {PAWN_pronoun} suffers a qi deviation and must recover before trying again.</CVG_Breakthrough_FailText>
+
+  <!-- Tribulation (M4) -->
+  <CVG_Tribulation_LetterLabel>Heavenly tribulation</CVG_Tribulation_LetterLabel>
+  <CVG_Tribulation_LetterText>The breakthrough worked, but Heaven will not let {PAWN_nameDef} reach {1} so easily. Black clouds gather above {PAWN_objective}: a heavenly tribulation is coming.
+
+Lightning bolts: {2} (damage {3} each).
+Celestial dissonance: {4}.
+{5}
+
+If {PAWN_pronoun} is still standing when the clouds part, {PAWN_pronoun} will reach {1}.</CVG_Tribulation_LetterText>
+  <CVG_Tribulation_CanKill>The tribulation can kill.</CVG_Tribulation_CanKill>
+  <CVG_Tribulation_CannotKill>The tribulation will not kill (mod settings), but it can leave the cultivator broken.</CVG_Tribulation_CannotKill>
+  <CVG_Tribulation_FailText>{PAWN_nameDef} fell under the heavenly lightning. The tribulation is over and {1} remains out of reach: {PAWN_pronoun} suffers a qi deviation and must recover before trying again.</CVG_Tribulation_FailText>
+  <CVG_Tribulation_DeathLabel>Destroyed by tribulation: {0}</CVG_Tribulation_DeathLabel>
+  <CVG_Tribulation_DeathText>Heaven did not accept {PAWN_nameDef}. The tribulation lightning burned {PAWN_objective} to death on the threshold of {1}.</CVG_Tribulation_DeathText>
+  <!-- Paths and foundation (M4) -->
+  <CVG_ResourceRegen>Regeneration: {0} per hour.</CVG_ResourceRegen>
+  <CVG_Breakthrough_ResourceNotFull>{2} must be full ({0} / {1}). Cultivating refills it quickly.</CVG_Breakthrough_ResourceNotFull>
+  <CVG_Breakthrough_RequiresStat>Requires {0} {1} (now {2}).</CVG_Breakthrough_RequiresStat>
+  <CVG_Breakthrough_RequiresRealm>Requires having reached {0}.</CVG_Breakthrough_RequiresRealm>
+  <CVG_Breakthrough_AidFoundationWarning>Breaking through with the help of pills leaves a less stable foundation.</CVG_Breakthrough_AidFoundationWarning>
+  <CVG_FoundationQualityLine>Foundation: {0} ({1})</CVG_FoundationQualityLine>
+  <CVG_FoundationQualityTip>Foundation quality of this realm. It depends on how safe the breakthrough was: a solid foundation makes every bonus of the realm stronger; forcing the breakthrough with pills leaves it unstable.</CVG_FoundationQualityTip>
+  <CVG_Foundation_Solid>solid</CVG_Foundation_Solid>
+  <CVG_Foundation_Stable>stable</CVG_Foundation_Stable>
+  <CVG_Foundation_Unstable>unstable</CVG_Foundation_Unstable>
+  <!-- Realm bonus (M4) -->
+  <CVG_Tab_RealmBonus>Realm bonus</CVG_Tab_RealmBonus>
+  <CVG_Bonus_Health>Max health (all body parts): x{0}</CVG_Bonus_Health>
+  <CVG_Bonus_HealthCompare>Max health: {0} → {1}</CVG_Bonus_HealthCompare>
+  <CVG_Bonus_Pain>Pain: {0}</CVG_Bonus_Pain>
+  <CVG_Bonus_LetterHeader>The body is reforged:</CVG_Bonus_LetterHeader>
+  <!-- Bloodlines (Races modules) -->
+  <CVG_Setting_BloodlineChance>Chance of being born with beast blood (bloodlines): x{0}</CVG_Setting_BloodlineChance>
+  <CVG_Tab_Bloodline>Bloodline</CVG_Tab_Bloodline>
+  <CVG_Tab_BloodlineAwakened>Awakened: the blood answers the qi.</CVG_Tab_BloodlineAwakened>
+  <CVG_Tab_BloodlineLatent>Latent: only the looks show; its gifts will awaken with the Convergence.</CVG_Tab_BloodlineLatent>
+  <CVG_Bloodline_None>none</CVG_Bloodline_None>
+  <CVG_Bloodline_Label>{0} ({1})</CVG_Bloodline_Label>
+  <CVG_Bloodline_Purified>{PAWN_nameDef}'s {1} blood has been purified: it is now {2}.</CVG_Bloodline_Purified>
+  <CVG_Bloodline_XenotypeName>{0}-blooded ({1})</CVG_Bloodline_XenotypeName>
+  <CVG_Tab_BloodlineAffinityActive>Blood affinity ({0}): cultivation x{1}</CVG_Tab_BloodlineAffinityActive>
+  <CVG_Tab_BloodlineAffinityInactive>Blood affinity ({0}): x{1}, inactive (the spirit root has none of these elements)</CVG_Tab_BloodlineAffinityInactive>
+  <CVG_Tab_BloodlineAffinityTip>The blood resonates with its elements: if the spirit root shares one of them, cultivation is faster. It grows with purity. When the blood becomes ancestral, it refines the spirit root by one grade (once).</CVG_Tab_BloodlineAffinityTip>
+  <CVG_Bloodline_RootRefined>The ancestral blood of {PAWN_nameDef} has cleansed the spirit root: {1}.</CVG_Bloodline_RootRefined>
+  <CVG_Bloodline_EffectsHeader>Awakened gifts of {0} blood ({1}):</CVG_Bloodline_EffectsHeader>
+  <CVG_Bloodline_StatusAwake>Active: the Convergence has awakened the blood.</CVG_Bloodline_StatusAwake>
+  <CVG_Bloodline_StatusLatent>Latent: these effects awaken with the Convergence.</CVG_Bloodline_StatusLatent>
+  <CVG_Bloodline_AbilityLine>Innate ability: {0}</CVG_Bloodline_AbilityLine>
+  <CVG_Bloodline_AffinityLine>Affinity with {0}: cultivation x{1} if the spirit root has that element</CVG_Bloodline_AffinityLine>
+  <CVG_Bloodline_AspectNote>Look of the {0} bloodline: cosmetic. The gifts and flaws come from the purity gene of the blood.</CVG_Bloodline_AspectNote>
+  <CVG_Tab_BloodlineEffects>Gifts of the blood</CVG_Tab_BloodlineEffects>
+  <CVG_Tab_BloodlineEffectsLatent>Its gifts will awaken with the Convergence (hover to see them).</CVG_Tab_BloodlineEffectsLatent>
+  <!-- Techniques (M5) -->
+  <CVG_Setting_RealmSuppression>Realm suppression strength: {0}</CVG_Setting_RealmSuppression>
+  <CVG_Setting_RealmSuppressionOff>Realm suppression: off</CVG_Setting_RealmSuppressionOff>
+  <CVG_Setting_RealmSuppressionTip>Damage from an attack whose spirit grade is lower than the realm of a cultivator is reduced (mortal weapons are grade 0; techniques and fists use the realm of the attacker). 100% uses the curve of the mod; 0% turns it off.</CVG_Setting_RealmSuppressionTip>
+  <CVG_Tab_TechniquePoints>Comprehension points: {0}</CVG_Tab_TechniquePoints>
+  <CVG_Tab_TechniquePointsTip>Comprehension points are spent to learn techniques. +1 with each new stage, +2 with each new realm.</CVG_Tab_TechniquePointsTip>
+  <CVG_Tab_ClickToUnlock>Click to learn it ({0} point(s)).</CVG_Tab_ClickToUnlock>
+  <CVG_Technique_Unlocked>{PAWN_nameDef} has learned {1}.</CVG_Technique_Unlocked>
+  <CVG_Manual_PathLine>Path: {0}</CVG_Manual_PathLine>
+  <CVG_Manual_ElementLine>Element: {0}. A spirit root of this element gives +15% power and faster mastery.</CVG_Manual_ElementLine>
+  <CVG_Manual_Contains>Techniques:</CVG_Manual_Contains>
+  <CVG_Manual_Learned>{PAWN_nameDef} has learned the {1}. First technique: {2}.</CVG_Manual_Learned>
+  <CVG_Manual_WrongPath>{PAWN_nameDef} does not walk the {1}.</CVG_Manual_WrongPath>
+  <CVG_Manual_AlreadyKnown>{PAWN_nameDef} already knows the {1}.</CVG_Manual_AlreadyKnown>
+  <CVG_Manual_RequiresElement>Requires a spirit root of the {0} element.</CVG_Manual_RequiresElement>
+  <CVG_Ability_ResourceCost>{0} cost: {1}</CVG_Ability_ResourceCost>
+  <CVG_Ability_NotEnoughResource>{PAWN_nameDef} needs {1} {3} (has {2}).</CVG_Ability_NotEnoughResource>
+  <CVG_Technique_RequiresRealm>Requires reaching {0}.</CVG_Technique_RequiresRealm>
+  <CVG_Technique_CooldownLine>Cooldown: {0}</CVG_Technique_CooldownLine>
+  <CVG_Technique_RealmLine>Minimum realm: {0}</CVG_Technique_RealmLine>
+  <CVG_Technique_PrerequisitesLine>Requires having learned: {0}</CVG_Technique_PrerequisitesLine>
+  <CVG_Technique_ElementLine>Requires a spirit root of the {0} element</CVG_Technique_ElementLine>
+  <CVG_Technique_PowerLine>Power: {0} (realm x mastery x affinity)</CVG_Technique_PowerLine>
+  <CVG_Technique_MasteryLine>Mastery: {0} ({1})</CVG_Technique_MasteryLine>
+  <CVG_Technique_Affinity>(element affinity)</CVG_Technique_Affinity>
+  <CVG_Technique_SpiritGradeLine>Spirit grade of its damage: {0} (the realm of the caster)</CVG_Technique_SpiritGradeLine>
+  <CVG_Technique_PointsGained>{PAWN_nameDef} gained {1} comprehension point(s) ({2} available). Spend them in the Techniques tab.</CVG_Technique_PointsGained>
+  <CVG_Technique_AlreadyUnlocked>Already learned.</CVG_Technique_AlreadyUnlocked>
+  <CVG_Technique_ManualUnknown>Requires knowing the {0}.</CVG_Technique_ManualUnknown>
+  <CVG_Technique_RequiresPrevious>Requires first learning {0}.</CVG_Technique_RequiresPrevious>
+  <CVG_Technique_NotEnoughPoints>Needs {0} comprehension point(s) (has {1}).</CVG_Technique_NotEnoughPoints>
+  <CVG_Technique_MasteryUp>{PAWN_nameDef} now uses {1} at {2} level.</CVG_Technique_MasteryUp>
+  <CVG_QiShield_Broken>The qi shield of {PAWN_nameDef} has shattered.</CVG_QiShield_Broken>
+  <CVG_SpiritGrade_Explanation>Grade 0: mortal weapons. 1: rune-engraved. 2: spirit weapons. 3 or more: spirit treasures.\n\nAgainst a cultivator of a higher realm, the damage of a lower grade is suppressed by each realm of difference (adjustable in the mod settings).</CVG_SpiritGrade_Explanation>
+  <CVG_BloodGene_TierHeader>{0}: tier {1} of {2}</CVG_BloodGene_TierHeader>
+  <CVG_BloodGene_Common>Blood gene shared by every bloodline. Its gifts are part of the body: they work even before the Convergence.</CVG_BloodGene_Common>
+  <CVG_BloodGene_Signature>Signature gene of the {0} bloodline.</CVG_BloodGene_Signature>
+  <CVG_BloodGene_Upgrade>Purifying the blood raises this gene one tier: more effect, smaller flaw.</CVG_BloodGene_Upgrade>
+  <CVG_BloodGene_Regen>After the Convergence: regrows one lost part or old scar every {0} days</CVG_BloodGene_Regen>
+  <CVG_BloodGene_Lives>After the Convergence: {0} extra life/lives (cheats death, healed)</CVG_BloodGene_Lives>
+  <CVG_BloodGene_LivesRecharge>After the Convergence: {0} extra life, recovered every {1} days</CVG_BloodGene_LivesRecharge>
+  <CVG_BloodGene_Aura>After the Convergence: aura of {0} cells ({1})</CVG_BloodGene_Aura>
+  <CVG_BloodGene_Retaliation>After the Convergence: {0} chance to bite back melee attackers ({1} damage)</CVG_BloodGene_Retaliation>
+  <CVG_ExtraLife_Label>{PAWN_nameDef} cheated death</CVG_ExtraLife_Label>
+  <CVG_ExtraLife_Used>{PAWN_nameDef} should have died, but the blood refused. Extra lives left: {1}.</CVG_ExtraLife_Used>
+  <CVG_Nirvana_Used>{PAWN_nameDef} burned on the threshold of death and rose from the ashes, healed: Nirvana. Lives left: {1}.</CVG_Nirvana_Used>
+  <CVG_NineLives_Used>Death came for {PAWN_nameDef}, and took a tail instead. Lives left: {1}.</CVG_NineLives_Used>
+  <CVG_BloodRegeneration>The blood of {PAWN_nameDef} has regrown: {1}.</CVG_BloodRegeneration>
+  <CVG_Retaliation>Serpent bite!</CVG_Retaliation>
+  <!-- Path of the body and spirit beasts (M4b) -->
+  <CVG_Stat_CultivationResource>Cultivation resource</CVG_Stat_CultivationResource>
+  <CVG_Stat_CultivationResourceDesc>Resource of a cultivation path gained when eating this (blood qi for the path of the body; a beast core gives it to every path the cultivator follows). Those without a spirit root start the path of the body by eating it.</CVG_Stat_CultivationResourceDesc>
+  <CVG_Setting_SpiritBeastChance>Chance of animals awakening as spirit beasts: x{0}</CVG_Setting_SpiritBeastChance>
+  <CVG_Breakthrough_ItemRequired>Requires {0} at hand: it is consumed during the retreat.</CVG_Breakthrough_ItemRequired>
+  <CVG_PathStarted>{PAWN_nameDef} has begun the {1}: {2}. Training on tempering equipment spends blood qi to advance.</CVG_PathStarted>
+  <CVG_Convergence_BeastsAwakened>{0} animal(s) on the map awakened as spirit beasts. Their meat and blood are what those without a spirit root need to temper the body.</CVG_Convergence_BeastsAwakened>
+  <!-- The Master (M6) -->
+  <CVG_Mentor_ArrivalLabel>The Master: {0}</CVG_Mentor_ArrivalLabel>
+  <CVG_Mentor_ArrivalRules>{PAWN_nameDef} will stay about {1} days. While here, {PAWN_pronoun} gives lessons one at a time (see the Cultivation tab) and stands in front of the colony against the first raid of cultivators. When {PAWN_pronoun} leaves, {PAWN_pronoun} will leave something behind.</CVG_Mentor_ArrivalRules>
+  <CVG_Mentor_LessonLabel>Lesson {0}: {1}</CVG_Mentor_LessonLabel>
+  <CVG_Mentor_LessonText>{PAWN_nameDef} has a new lesson for the colony: {1}.
+
+{2}</CVG_Mentor_LessonText>
+  <CVG_Mentor_LessonDone>{PAWN_nameDef} nods: lesson "{1}" learned.</CVG_Mentor_LessonDone>
+  <CVG_Mentor_Rewards>Gifts: {0}.</CVG_Mentor_Rewards>
+  <CVG_Mentor_ProtectionLabel>{0} protects the colony</CVG_Mentor_ProtectionLabel>
+  <CVG_Mentor_FarewellLabel>{0} leaves</CVG_Mentor_FarewellLabel>
+  <CVG_Mentor_DeathLabel>{0} has fallen</CVG_Mentor_DeathLabel>
+  <CVG_Mentor_TabHeader>Master ({0}): leaves in {1} days</CVG_Mentor_TabHeader>
+  <CVG_Mentor_TabLesson>Lesson {0}/{1}: {2}</CVG_Mentor_TabLesson>
+  <CVG_Mentor_TabNoLessons>All lessons learned.</CVG_Mentor_TabNoLessons>
+  <!-- Dao Comprehension and celestial calendar -->
+  <CVG_Breakthrough_RequiresResearch>Requires comprehending {0} (Cultivation research tab).</CVG_Breakthrough_RequiresResearch>
+  <CVG_Manual_RequiresResearch>Requires comprehending {0} (Cultivation research tab).</CVG_Manual_RequiresResearch>
+  <CVG_Dao_SuddenLabel>Sudden enlightenment: {0}</CVG_Dao_SuddenLabel>
+  <CVG_Dao_SuddenText>While {1}, {PAWN_nameDef} suddenly saw through a knot in the Dao (顿悟). A large leap in Dao comprehension.</CVG_Dao_SuddenText>
+  <CVG_Dao_EnlightenmentLabel>Enlightenment: {0}</CVG_Dao_EnlightenmentLabel>
+  <CVG_Dao_EnlightenmentText>{PAWN_nameDef} became enlightened while {1} and comprehended {2}.</CVG_Dao_EnlightenmentText>
+  <CVG_Dao_EnlightenmentTextNoOne>The colony has comprehended {0}.</CVG_Dao_EnlightenmentTextNoOne>
+  <CVG_Dao_Source_Cultivating>cultivating</CVG_Dao_Source_Cultivating>
+  <CVG_Dao_Source_Tempering>tempering the body</CVG_Dao_Source_Tempering>
+  <CVG_Dao_Source_Studying>studying a jade slip</CVG_Dao_Source_Studying>
+  <CVG_Dao_Source_Absorbing>absorbing a beast core</CVG_Dao_Source_Absorbing>
+  <CVG_Dao_Source_Breathing>breathing the qi of the world</CVG_Dao_Source_Breathing>
+  <CVG_Calendar_Deviation>Under the {1}, the qi of {PAWN_nameDef} went astray while cultivating: qi deviation.</CVG_Calendar_Deviation>
+  <CVG_Rank_Label>{0} of {1}</CVG_Rank_Label>
+  <CVG_Rank_Text>The {0} now recognise you as {1}. Their goodwill towards you and the realm of your cultivators open this rank.</CVG_Rank_Text>
+  <CVG_Rank_Reward>The sect sends a gift: {0}.</CVG_Rank_Reward>
+  <!-- Cultivation already begun at generation (DISENO 4.1d) -->
+  <CVG_Setting_PreCultivation>Some pawns are born with cultivation already begun</CVG_Setting_PreCultivation>
+  <CVG_Setting_PreCultivationTip>Rarely, a generated pawn (also in the character selector) already has a realm and stage: fallen through a rift of Jiuxiao or reborn. Before the Convergence it stays latent.</CVG_Setting_PreCultivationTip>
+  <CVG_Setting_PreCultivationChance>Chance of cultivation already begun: x{0}</CVG_Setting_PreCultivationChance>
+  <CVG_Tab_PreCultivated>Cultivated before the Convergence: fell through a rift of Jiuxiao or remembers a past life.</CVG_Tab_PreCultivated>
+  <CVG_Tab_LatentCultivation>Latent: {0} · {1}</CVG_Tab_LatentCultivation>
+  <CVG_Tab_LatentCultivationTip>This cultivation sleeps: it will awaken, with all its power, when the Convergence brings qi to this world (or when this person can follow the path again).</CVG_Tab_LatentCultivationTip>
+  <CVG_Trigger_StorytellerTip>The game starts as plain RimWorld and the Convergence arrives between the days below (by default in the middle of the first year), so the mod comes in little by little.</CVG_Trigger_StorytellerTip>
+  <CVG_Trigger_ImmediateTip>Qi floods the world in the first hour: roots awaken, sects arrive and cultivation starts right away.</CVG_Trigger_ImmediateTip>
+  <CVG_Setting_AskOnNewGame>Ask for difficulty and start mode when a new game begins</CVG_Setting_AskOnNewGame>
+  <CVG_Setting_AskOnNewGameTip>When a new game starts, a window lets you pick the cultivation difficulty and how the Convergence arrives for that game. The values here are its defaults.</CVG_Setting_AskOnNewGameTip>
+  <CVG_Difficulty_Title>Cultivation difficulty</CVG_Difficulty_Title>
+  <CVG_Difficulty_NewGames>Cultivation difficulty (new games)</CVG_Difficulty_NewGames>
+  <CVG_Difficulty_ThisGame>Cultivation difficulty (this game)</CVG_Difficulty_ThisGame>
+  <CVG_Difficulty_Custom>custom</CVG_Difficulty_Custom>
+  <CVG_Difficulty_Current>Preset: {0}</CVG_Difficulty_Current>
+  <CVG_Difficulty_CultivationSpeed>Cultivation and tempering speed: {0}</CVG_Difficulty_CultivationSpeed>
+  <CVG_Difficulty_TribulationDamage>Tribulation lightning damage: {0}</CVG_Difficulty_TribulationDamage>
+  <CVG_Difficulty_EnemyRealmBonus>Enemy cultivators up to your highest realm {0}</CVG_Difficulty_EnemyRealmBonus>
+  <CVG_Difficulty_CultivationThreat>Threat from cultivation wealth: {0}</CVG_Difficulty_CultivationThreat>
+  <CVG_Difficulty_CultivationThreatTip>Extra raid points that sects and other cultivation factions (and, in part, maddened beasts) get from the cultivation wealth of the colony: realms, techniques and treasures.</CVG_Difficulty_CultivationThreatTip>
+  <CVG_Difficulty_EventFrequency>Frequency of the events of the mod: {0}</CVG_Difficulty_EventFrequency>
+  <CVG_Difficulty_VanillaWealth>Cultivation items in vanilla wealth: {0}</CVG_Difficulty_VanillaWealth>
+  <CVG_Difficulty_VanillaWealthTip>How much of the value of pills, spirit stones, treasures, spirit weapons, puppets and cultivation furniture counts in the wealth that sets vanilla raid points. Their trade value does not change; the rest goes to the cultivation wealth.</CVG_Difficulty_VanillaWealthTip>
+  <CVG_Difficulty_StatPart>Cultivation difficulty ({0})</CVG_Difficulty_StatPart>
+  <CVG_StartDialog_Title>The Era of Cultivation</CVG_StartDialog_Title>
+  <CVG_StartDialog_Intro>Choose how hard the path of cultivation will be in this game and when the Convergence pours qi into this world. You can change the difficulty later in the mod settings.</CVG_StartDialog_Intro>
+  <CVG_Tab_CultivationWealth>Cultivation wealth of the colony: {0}</CVG_Tab_CultivationWealth>
+  <CVG_CultivationWealthTip>Cultivation wealth: {0}\n\n  Cultivation items: {1}\n  Cultivation buildings: {2}\n  Puppets and spirit beasts: {3}\n  Realms of the colonists: {4}\n  Techniques: {5}\n\nTaken out of the vanilla wealth: {6} (vanilla raids ignore most of the value of cultivation things).\nExtra threat points for sects and cultivation events: {7}</CVG_CultivationWealthTip>
+  <CVG_Tab_NoFreeSlot>This set is full ({0} techniques): remove one first.</CVG_Tab_NoFreeSlot>
+  <CVG_Technique_PassiveLine>Passive: always active once learned, no button. It grows with realm and mastery.</CVG_Technique_PassiveLine>
+  <CVG_Breakthrough_InCombat>{PAWN_nameDef} cannot retreat into a breakthrough with enemies nearby.</CVG_Breakthrough_InCombat>
+  <CVG_Tab_Aging>Aging speed: {0}</CVG_Tab_Aging>
+  <CVG_Tab_AgingTip>Cultivation slows the aging of the body. Each realm lowers it further and the highest come close to not aging at all, like the ageless of the legends. Children grow normally; rejuvenation still works.</CVG_Tab_AgingTip>
+  <CVG_Dev_Button>Development</CVG_Dev_Button>
+  <CVG_Dev_ButtonTip>Open the paths of techniques and the combat sets of this cultivator.</CVG_Dev_ButtonTip>
+  <CVG_Dev_ButtonWide>Techniques and development</CVG_Dev_ButtonWide>
+  <CVG_Dev_Gizmo>Techniques</CVG_Dev_Gizmo>
+  <CVG_Path_OpenByRoot>Opens with a spirit root of {0}.</CVG_Path_OpenByRoot>
+  <CVG_Path_OpenByFollowing>Opens by following the {0}.</CVG_Path_OpenByFollowing>
+  <CVG_Path_OpenByGene>Opens with the gene {0}.</CVG_Path_OpenByGene>
+  <CVG_Path_OpenByManual>Opens by reading its jade slip.</CVG_Path_OpenByManual>
+  <CVG_Set_Title>Combat sets</CVG_Set_Title>
+  <CVG_Set_DefaultName>Set {0}</CVG_Set_DefaultName>
+  <CVG_Set_Combat>Combat</CVG_Set_Combat>
+  <CVG_Set_RowTip>Click to make this the active set. Its techniques show on the command bar when the colonist is drafted.</CVG_Set_RowTip>
+  <CVG_Set_Gizmo>Set: {0}</CVG_Set_Gizmo>
+  <CVG_Set_GizmoDesc>Switch the combat set: only the techniques of the active set are shown.</CVG_Set_GizmoDesc>
+  <CVG_Set_OpenDevelopment>Edit sets and paths...</CVG_Set_OpenDevelopment>
+  <CVG_Technique_ActiveLine>Active: add it to a combat set to use it.</CVG_Technique_ActiveLine>
+  <CVG_Dev_NoRealm>No realm yet: the qi of the world is still asleep, or this path has not begun.</CVG_Dev_NoRealm>
+  <CVG_Dev_TabTechniques>Techniques</CVG_Dev_TabTechniques>
+  <CVG_Dev_RealmLine>Realm: {0}, stage {1}</CVG_Dev_RealmLine>
+  <CVG_Dev_Bottleneck>Bottleneck: ready for a breakthrough</CVG_Dev_Bottleneck>
+  <CVG_Dev_ProgressHint>Progress by cultivating on a cultivation spot; qi concentration and the root speed it up.</CVG_Dev_ProgressHint>
+  <CVG_Dev_ProgressHintBody>Progress by tempering the body on training equipment.</CVG_Dev_ProgressHintBody>
+  <CVG_Dev_PointsAvailable>Comprehension points available: {0}</CVG_Dev_PointsAvailable>
+  <CVG_Dev_PointsHint>Spend points on unlocking paths and learning techniques. Each new stage gives 1, each realm 2.</CVG_Dev_PointsHint>
+  <CVG_Dev_Stats>Cultivation stats</CVG_Dev_Stats>
+  <CVG_Dev_Root>Spirit root: {0}</CVG_Dev_Root>
+  <CVG_Dev_ElementOwned>In the root: opens its path.</CVG_Dev_ElementOwned>
+  <CVG_Dev_ElementMissing>Not in the root.</CVG_Dev_ElementMissing>
+  <CVG_Dev_SearchTip>Search techniques by name: the rest are dimmed.</CVG_Dev_SearchTip>
+  <CVG_Dev_PathTechniques>Techniques:</CVG_Dev_PathTechniques>
+  <CVG_Dev_Passive>passive</CVG_Dev_Passive>
+  <CVG_Dev_DragToSet>Drag it onto a combat set.</CVG_Dev_DragToSet>
+  <CVG_Path_Unlock>Unlock (1 point)</CVG_Path_Unlock>
+  <CVG_Path_Locked>Locked</CVG_Path_Locked>
+  <CVG_Path_NoPoints>Not enough comprehension points (1 needed).</CVG_Path_NoPoints>
+  <CVG_Path_Opened>{PAWN_nameDef} has opened the {1}.</CVG_Path_Opened>
+  <CVG_Set_Desc>Drag learned active techniques into sets (up to {0} each). Drafted, only the active set shows; a button switches sets. Right click removes.</CVG_Set_Desc>
+  <CVG_Set_Create>Create new set</CVG_Set_Create>
+  <CVG_Set_Remove>Remove</CVG_Set_Remove>
+  <CVG_Set_SlotTip>Right click: remove from this set.</CVG_Set_SlotTip>
+  <CVG_Bloodline_RootElementAwakened>The blood of {PAWN_nameDef} awakens a root of {1}: the qilin in it remembers the storm.</CVG_Bloodline_RootElementAwakened>
+  <CVG_Alert_ReadyToBreakthrough>Ready to break through</CVG_Alert_ReadyToBreakthrough>
+  <CVG_Alert_ReadyToBreakthroughDesc>These cultivators are at the bottleneck of their realm, with full qi, and can attempt a breakthrough now (button on the colonist):\n\n{0}</CVG_Alert_ReadyToBreakthroughDesc>
+  <CVG_Alert_QiDeviation>Qi deviation</CVG_Alert_QiDeviation>
+  <CVG_Alert_QiDeviationDesc>These cultivators suffer a qi deviation or an inner demon. Let them rest; it fades with time:\n\n{0}</CVG_Alert_QiDeviationDesc>
+  <CVG_Alert_NoCultivationSpot>No place to cultivate</CVG_Alert_NoCultivationSpot>
+  <CVG_Alert_NoCultivationSpotDesc>Your cultivators have nowhere to cultivate. Mark a cultivation spot (free) or build a cushion or a meditation platform in the Cultivation tab of the architect menu.</CVG_Alert_NoCultivationSpotDesc>
+  <CVG_Alert_IdleCultivator>Cultivator not cultivating</CVG_Alert_IdleCultivator>
+  <CVG_Alert_IdleCultivatorDesc>These colonists have an awakened spirit root, but the Cultivate work is disabled in their work tab:\n\n{0}</CVG_Alert_IdleCultivatorDesc>
+  <CVG_ElementalResonance>{0} resonates with the {1} root</CVG_ElementalResonance>
+  <CVG_GuideLetterLabel>Cultivator's guide</CVG_GuideLetterLabel>
+  <CVG_GuideLetterText>An old saying of Jiuxiao: the Dao is not far from people; people walk away from the Dao. Here is where to find it.\n\n- SPIRIT ROOT: select a colonist and open the CULTIVATION tab. It shows root, realm, stage, qi and what the realm grants. Only colonists with an awakened root can gather qi; the others can temper the body.\n- CULTIVATING: build a cultivation spot or cushion (Cultivation build menu) and enable the CULTIVATE job in the Work tab (priority 1 or 2, or nobody will have time for it). Qi concentration and the root speed it up.\n- RESEARCH: cultivation research is done at the contemplation desk (Production tab) and lives in the Cultivation tab of the research tree. Reading jade slips needs "technique manuals"; the Foundation realm needs its own research.
+- TECHNIQUES: the TECHNIQUES command on the colonist, or the button at the top of the Cultivation tab. Spend comprehension points there and put abilities in a combat set.\n- BREAKTHROUGH: at the last stage of a realm the BREAKTHROUGH command appears. Great realms bring a heavenly tribulation.\n- QI NETWORK: generators, conduits and formations work like power. The qi overlay (map buttons, bottom right) shows where qi gathers.\n\nThe Learning Helper explains each step when it comes up.</CVG_GuideLetterText>
+  <CVG_QiNet_Condensing>Condensing surplus qi: {0} / {1} for the next {2}.</CVG_QiNet_Condensing>
+  <CVG_Setting_LegendaryBackstories>Rare backstories (tiers 2-4): {0}</CVG_Setting_LegendaryBackstories>
+  <CVG_Setting_LegendaryBackstoriesTip>Backstories come in 4 tiers: common, good, strong and legendary (retired sixth-realm elders, fallen celestial emperors…). This scales how often tiers 2-4 appear (100% = 12% / 8% / 2%). A pawn never gets a high-tier childhood and adulthood together. 0 = only common ones.</CVG_Setting_LegendaryBackstoriesTip>
+  <CVG_Backstory_StatsHeader>Modifiers:</CVG_Backstory_StatsHeader>
+  <CVG_Mentor_NextLessonIn>Next lesson in {0}.</CVG_Mentor_NextLessonIn>
+  <CVG_Mentor_Watching>{PAWN_nameDef} is watching: {1} before the lesson counts.</CVG_Mentor_Watching>
+  <CVG_Backstory_Tier1>Common backstory (tier 1 of 4)</CVG_Backstory_Tier1>
+  <CVG_Backstory_Tier2>Good backstory (tier 2 of 4)</CVG_Backstory_Tier2>
+  <CVG_Backstory_Tier3>Strong backstory (tier 3 of 4)</CVG_Backstory_Tier3>
+  <CVG_Backstory_Tier4>Legendary backstory (tier 4 of 4)</CVG_Backstory_Tier4>
+  <CVG_SectsArrive_Label>The sects arrive</CVG_SectsArrive_Label>
+  <CVG_SectsArrive_Text>Through the rifts of the Convergence, the sects of Jiuxiao have crossed into this world and raised their halls among us:
+
+{0}
+
+Some will trade, some will judge, and one of them hunts. Their goodwill can be earned, and each sect has ranks for those who prove themselves.</CVG_SectsArrive_Text>
+  <CVG_ImplantDissonance>Implants</CVG_ImplantDissonance>
+  <CVG_Setting_ImplantDissonance>Implant dissonance: {0}</CVG_Setting_ImplantDissonance>
+  <CVG_Setting_ImplantDissonanceTip>Celestial dissonance added by implants that do not set their own (vanilla or other mods' bionics), by tech level: crude prosthetics 0.03, industrial 0.08, bionic 0.15, archotech 0.25. 0% turns it off.</CVG_Setting_ImplantDissonanceTip>
+  <CVG_Tab_StageEta>≈ {0} days to the next stage at the current pace</CVG_Tab_StageEta>
+  <CVG_EnvRes_Explain>Environment resistance {0}</CVG_EnvRes_Explain>
+  <CVG_EnvRes_Affinity>Affinity of the {0} root</CVG_EnvRes_Affinity>
+</LanguageData>

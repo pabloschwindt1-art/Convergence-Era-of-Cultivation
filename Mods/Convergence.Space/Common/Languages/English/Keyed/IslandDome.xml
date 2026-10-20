@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Dome_Working>Celestial dome: holding the air and {1}°C within {0} cells</CVG_Dome_Working>
+  <CVG_Dome_Off>Celestial dome: without qi or switched off</CVG_Dome_Off>
+</LanguageData>

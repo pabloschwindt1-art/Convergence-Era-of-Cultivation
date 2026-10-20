@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Island wording for the vanilla gravship texts: used while the map has a flying island (IslandText.cs). -->
+  <CVG_IslandText_Gravship>Isla voladora</CVG_IslandText_Gravship>
+  <CVG_IslandText_CannotLaunchNoEngine>sin Corazón de la Isla</CVG_IslandText_CannotLaunchNoEngine>
+  <CVG_IslandText_CannotLaunchNotEnoughFuel>faltan piedras espirituales</CVG_IslandText_CannotLaunchNotEnoughFuel>
+  <CVG_IslandText_ConnectedSubstructure>Roca de nube conectada</CVG_IslandText_ConnectedSubstructure>
+  <CVG_IslandText_SubstructureBlueprintsCount>Planos de roca de nube colocados</CVG_IslandText_SubstructureBlueprintsCount>
+  <CVG_IslandText_CannotLaunchDisconnected>sin conexión con el Corazón de la Isla</CVG_IslandText_CannotLaunchDisconnected>
+  <CVG_IslandText_CannotLaunchNoSubstructure>sin roca de nube</CVG_IslandText_CannotLaunchNoSubstructure>
+  <CVG_IslandText_CannotLaunchNoThrusters>sin propulsores de qi ni velas de viento libres</CVG_IslandText_CannotLaunchNoThrusters>
+  <CVG_IslandText_CannotLaunchOnCooldown>el corazón aún descansa: {0}</CVG_IslandText_CannotLaunchOnCooldown>
+  <CVG_IslandText_CannotPilotGravship>No se puede zarpar</CVG_IslandText_CannotPilotGravship>
+  <CVG_IslandText_PilotGravship>Gobernar la isla</CVG_IslandText_PilotGravship>
+  <CVG_IslandText_GravshipName>nombre de la isla</CVG_IslandText_GravshipName>
+  <CVG_IslandText_GravshipRange>alcance de la isla</CVG_IslandText_GravshipRange>
+  <CVG_IslandText_StoredChemfuel>piedras espirituales guardadas</CVG_IslandText_StoredChemfuel>
+  <CVG_IslandText_FuelConsumption>consumo de piedras espirituales</CVG_IslandText_FuelConsumption>
+  <CVG_IslandText_FuelPerTile>{0} piedras espirituales por casilla</CVG_IslandText_FuelPerTile>
+  <CVG_IslandText_FuelAmount>{0} piedras espirituales</CVG_IslandText_FuelAmount>
+  <CVG_IslandText_GravshipLandingSite>Atraque de {0}</CVG_IslandText_GravshipLandingSite>
+  <CVG_IslandText_ConfirmGravEngineLaunch>¿Seguro que quieres zarpar?\n\nTu mapa actual, y todo lo que no esté sobre roca de nube, se perderá: la isla no vuelve por lo que deja atrás. Construye un estaca del cielo para que este mapa no se destruya.</CVG_IslandText_ConfirmGravEngineLaunch>
+  <CVG_IslandText_GravEngineWarning>Aviso</CVG_IslandText_GravEngineWarning>
+  <CVG_IslandText_PeopleWillBeLeftBehind>Estas personas se quedarán en tierra</CVG_IslandText_PeopleWillBeLeftBehind>
+  <CVG_IslandText_AnimalsWillBeLeftBehind>Esto se quedará en tierra</CVG_IslandText_AnimalsWillBeLeftBehind>
+  <CVG_IslandText_PawnsKidnappedOnGravship>Estas personas y animales de otra facción se llevarán con la isla. Su facción no lo perdonará</CVG_IslandText_PawnsKidnappedOnGravship>
+  <CVG_IslandText_BuildingsWillBeLeftBehind>Estos edificios no están del todo sobre roca de nube y se quedarán en tierra</CVG_IslandText_BuildingsWillBeLeftBehind>
+  <CVG_IslandText_SubstructureWillBeLeftBehind>Parte de la roca de nube está mal colocada y se quedará en tierra</CVG_IslandText_SubstructureWillBeLeftBehind>
+  <CVG_IslandText_DisconnectedSubstructure>Separada del Corazón de la Isla</CVG_IslandText_DisconnectedSubstructure>
+  <CVG_IslandText_SubstructureOutsideFootprint>Fuera del alcance del corazón</CVG_IslandText_SubstructureOutsideFootprint>
+  <CVG_IslandText_SubstructureUnderRockRoof>Bajo techo de roca</CVG_IslandText_SubstructureUnderRockRoof>
+  <CVG_IslandText_NamePlayerGravshipMessage>{0} tiene grandes esperanzas en la nueva isla y quiere bautizarla con un buen nombre. ¿Cómo se llamará la isla?</CVG_IslandText_NamePlayerGravshipMessage>
+  <CVG_IslandText_PlayerGravshipGainsName>La isla se llamará {0}.</CVG_IslandText_PlayerGravshipGainsName>
+  <CVG_IslandText_OrbitalWarning_Gravship>Prepara tu isla para el cielo alto:\n- Cierra los muros con roca de nube o jade, que retienen el aire.\n- Cubre el asentamiento con una formación de cúpula celestial.\n- Pon formaciones del aliento donde se duerma y se trabaje.\n- Los cultivadores resisten el vacío según su reino; los demás necesitan la cúpula.</CVG_IslandText_OrbitalWarning_Gravship>
+  <CVG_IslandText_CommandLaunchGravship>Zarpar</CVG_IslandText_CommandLaunchGravship>
+  <CVG_IslandText_CommandLaunchGravshipDesc>Elige a un cultivador o colono para gobernar la isla. Todo lo que esté sobre roca de nube viajará a un mapa nuevo. Tu mapa actual se abandonará si no tienes un estaca del cielo.</CVG_IslandText_CommandLaunchGravshipDesc>
+  <CVG_IslandText_ConfirmLandGravship>Confirmar atraque</CVG_IslandText_ConfirmLandGravship>
+  <CVG_IslandText_ConfirmLandGravshipDesc>Posa la isla en el atraque elegido.</CVG_IslandText_ConfirmLandGravshipDesc>
+  <CVG_IslandText_AbortLandGravship>Cancelar el atraque</CVG_IslandText_AbortLandGravship>
+  <CVG_IslandText_AbortLandGravshipDesc>Cancela el aterrizaje en este mapa y deja que la isla descienda cerca, en el mapa del mundo. Útil si no encuentras dónde atracar.\n\nAviso: aumenta la probabilidad de un percance.</CVG_IslandText_AbortLandGravshipDesc>
+  <CVG_IslandText_AbortLandConfirmation>Cancelar dejará que la isla descienda en un lugar al azar cerca, en el mapa del mundo. Aumenta la probabilidad de un percance.\n\n¿Seguro?</CVG_IslandText_AbortLandConfirmation>
+  <CVG_IslandText_GravshipLandingMarkerNotPlaced>Debes elegir un atraque para la isla.</CVG_IslandText_GravshipLandingMarkerNotPlaced>
+  <CVG_IslandText_CommandShowSubstructureOverlay>Mostrar la roca de nube</CVG_IslandText_CommandShowSubstructureOverlay>
+  <CVG_IslandText_CommandShowSubstructureOverlayDesc>Muestra la roca de nube válida en azul y la inválida en rojo.</CVG_IslandText_CommandShowSubstructureOverlayDesc>
+  <CVG_IslandText_MessageMustBePlacedOnSubstructure>Debe colocarse sobre roca de nube.</CVG_IslandText_MessageMustBePlacedOnSubstructure>
+  <CVG_IslandText_MessageMustBePlacedInRangeOfGravEngineOrExtender>Debe colocarse al alcance del Corazón de la Isla o de una montura de núcleo de gravedad.</CVG_IslandText_MessageMustBePlacedInRangeOfGravEngineOrExtender>
+  <CVG_IslandText_MessageCannotPlaceOverSubstructure>No puede colocarse sobre roca de nube.</CVG_IslandText_MessageCannotPlaceOverSubstructure>
+  <CVG_IslandText_MessageSubstructureBlocked>La roca de nube está bloqueada.</CVG_IslandText_MessageSubstructureBlocked>
+  <CVG_IslandText_MessageMustBePlacedInRangeOfGravEngine>Debe colocarse al alcance del Corazón de la Isla.</CVG_IslandText_MessageMustBePlacedInRangeOfGravEngine>
+  <CVG_IslandText_GravshipReadyToLaunch>{0} está lista para zarpar de nuevo.</CVG_IslandText_GravshipReadyToLaunch>
+  <CVG_IslandText_MessageConfirmLandingAreaFirst>Confirma el atraque de la isla para continuar.</CVG_IslandText_MessageConfirmLandingAreaFirst>
+  <CVG_IslandText_DesignatorMoveGravship>Mover el atraque</CVG_IslandText_DesignatorMoveGravship>
+  <CVG_IslandText_DesignatorMoveGravshipDesc>Cambia el sitio donde posará la isla.</CVG_IslandText_DesignatorMoveGravshipDesc>
+  <CVG_IslandText_DesignatorRemoveFoundationDesc>Quita puentes o roca de nube para ver el terreno de debajo.</CVG_IslandText_DesignatorRemoveFoundationDesc>
+  <CVG_IslandText_GeneratingGravship>La isla se eleva</CVG_IslandText_GeneratingGravship>
+  <CVG_IslandText_GravshipForceVisitorsToLeaveLabel>Hacer que los visitantes se vayan</CVG_IslandText_GravshipForceVisitorsToLeaveLabel>
+  <CVG_IslandText_GravshipBoardColonyAnimalsLabel>Subir a los animales de la colonia</CVG_IslandText_GravshipBoardColonyAnimalsLabel>
+  <CVG_IslandText_StatsReport_GravshipRangeOffset>Alcance extra de la isla</CVG_IslandText_StatsReport_GravshipRangeOffset>
+  <CVG_IslandText_StatsReport_GravshipRangeOffset_Desc>Cuánto más lejos deja navegar a la isla por el mapa del mundo.</CVG_IslandText_StatsReport_GravshipRangeOffset_Desc>
+  <CVG_IslandText_StatsReport_GravshipFuelSavings>Ahorro de piedras espirituales</CVG_IslandText_StatsReport_GravshipFuelSavings>
+  <CVG_IslandText_StatsReport_GravshipFuelSavings_Desc>Cuánto reduce este edificio las piedras espirituales que la isla necesita para viajar.</CVG_IslandText_StatsReport_GravshipFuelSavings_Desc>
+  <CVG_IslandText_StatsReport_GravEngineFuelConsumption>Consumo de piedras espirituales</CVG_IslandText_StatsReport_GravEngineFuelConsumption>
+  <CVG_IslandText_StatsReport_GravEngineFuelConsumption_Desc>Un multiplicador de las piedras espirituales que la isla necesita para viajar.</CVG_IslandText_StatsReport_GravEngineFuelConsumption_Desc>
+</LanguageData>

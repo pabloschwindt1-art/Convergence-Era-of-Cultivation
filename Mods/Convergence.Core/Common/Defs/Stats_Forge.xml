@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Forge hook (Core): benches with Convergence.DefModExtension_Forge (smithies, fabrication bench, the future Spirit Forge)
+    multiply the work speed of their recipes by CVG_ForgeSpeed and raise the quality of what is made there by
+    CVG_ForgeQuality levels (decimal part = chance), up to masterwork. Bloodlines, traits or techniques raise them.
+  -->
+  <StatDef>
+    <defName>CVG_ForgeSpeed</defName>
+    <label>forging speed</label>
+    <description>Multiplier to work speed at forges (smithies, fabrication benches, spirit forges).</description>
+    <category>PawnWork</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.1</minValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <hideAtValue>1</hideAtValue>
+    <showOnAnimals>false</showOnAnimals>
+    <showOnMechanoids>false</showOnMechanoids>
+    <displayPriorityInCategory>3000</displayPriorityInCategory>
+  </StatDef>
+
+  <StatDef>
+    <defName>CVG_ForgeQuality</defName>
+    <label>forging quality</label>
+    <description>Quality levels added to everything made at a forge. The decimal part is the chance of one more level. Up to masterwork; legendary still needs inspiration.</description>
+    <category>PawnWork</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <toStringStyle>FloatTwo</toStringStyle>
+    <formatString>+{0} levels</formatString>
+    <hideAtValue>0</hideAtValue>
+    <showOnAnimals>false</showOnAnimals>
+    <showOnMechanoids>false</showOnMechanoids>
+    <displayPriorityInCategory>2999</displayPriorityInCategory>
+  </StatDef>
+</Defs>

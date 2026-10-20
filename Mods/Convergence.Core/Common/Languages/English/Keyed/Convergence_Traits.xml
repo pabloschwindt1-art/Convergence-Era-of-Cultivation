@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_DualCultivation>Dual cultivation with {0}</CVG_DualCultivation>
+  <CVG_Vow_Label>{0} vow with {1}</CVG_Vow_Label>
+  <CVG_Vow_Desc>Swear the {0} vow with {1}. While both cultivate close to each other, each cultivates {2} faster.</CVG_Vow_Desc>
+  <CVG_Vow_LetterLabel>Vow: {0}</CVG_Vow_LetterLabel>
+  <CVG_Vow_LetterText>{A_nameDef} and {B_nameDef} have sworn the {2} vow before Heaven and Earth. From now on their paths are one.</CVG_Vow_LetterText>
+  <CVG_Premonition_Label>Premonition</CVG_Premonition_Label>
+  <CVG_Premonition_Text>{PAWN_nameDef} wakes up shaking: {PAWN_pronoun} has seen this before. {1} will attack in about {2} hours. There is still time to prepare.</CVG_Premonition_Text>
+  <CVG_SonOfHeaven_Used>Heaven is not done with {PAWN_nameDef}. The fatal blow missed by a hair, as if fate had moved it. (Recovers in {1} days.)</CVG_SonOfHeaven_Used>
+  <CVG_TraitUp_Label>{0}: {1}</CVG_TraitUp_Label>
+  <CVG_TraitUp_Text>Practice has paid off. {PAWN_nameDef} is no longer "{1}": {PAWN_pronoun} is now "{2}".</CVG_TraitUp_Text>
+</LanguageData>

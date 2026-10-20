@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Meme_SwordWay.generalRules.rulesStrings>
+    <li>memeAdjective->de la espada</li>
+    <li>memeHyphenPrefix->espada</li>
+    <li>memeConcept->camino de la espada</li>
+    <li>memeLeaderNoun->hoja</li>
+  </CVG_Meme_SwordWay.generalRules.rulesStrings>
+  <CVG_Meme_SwordWay.symbolPacks.0.ideoName>Espadismo</CVG_Meme_SwordWay.symbolPacks.0.ideoName>
+  <CVG_Meme_SwordWay.symbolPacks.0.theme>espada</CVG_Meme_SwordWay.symbolPacks.0.theme>
+  <CVG_Meme_SwordWay.symbolPacks.0.adjective>espadachina</CVG_Meme_SwordWay.symbolPacks.0.adjective>
+  <CVG_Meme_SwordWay.symbolPacks.0.member>espadachín</CVG_Meme_SwordWay.symbolPacks.0.member>
+  <CVG_Meme_LotusPath.generalRules.rulesStrings>
+    <li>memeAdjective->del loto</li>
+    <li>memeHyphenPrefix->loto</li>
+    <li>memeConcept->senda del loto</li>
+    <li>memeLeaderNoun->abadesa</li>
+  </CVG_Meme_LotusPath.generalRules.rulesStrings>
+  <CVG_Meme_LotusPath.symbolPacks.0.ideoName>Lotismo</CVG_Meme_LotusPath.symbolPacks.0.ideoName>
+  <CVG_Meme_LotusPath.symbolPacks.0.theme>loto</CVG_Meme_LotusPath.symbolPacks.0.theme>
+  <CVG_Meme_LotusPath.symbolPacks.0.adjective>lotista</CVG_Meme_LotusPath.symbolPacks.0.adjective>
+  <CVG_Meme_LotusPath.symbolPacks.0.member>monje del loto</CVG_Meme_LotusPath.symbolPacks.0.member>
+  <CVG_Meme_CauldronWay.generalRules.rulesStrings>
+    <li>memeAdjective->del caldero</li>
+    <li>memeHyphenPrefix->caldero</li>
+    <li>memeConcept->camino del caldero</li>
+    <li>memeLeaderNoun->maestro del pabellón</li>
+  </CVG_Meme_CauldronWay.generalRules.rulesStrings>
+  <CVG_Meme_CauldronWay.symbolPacks.0.ideoName>Calderismo</CVG_Meme_CauldronWay.symbolPacks.0.ideoName>
+  <CVG_Meme_CauldronWay.symbolPacks.0.theme>caldero</CVG_Meme_CauldronWay.symbolPacks.0.theme>
+  <CVG_Meme_CauldronWay.symbolPacks.0.adjective>alquímica</CVG_Meme_CauldronWay.symbolPacks.0.adjective>
+  <CVG_Meme_CauldronWay.symbolPacks.0.member>alquimista</CVG_Meme_CauldronWay.symbolPacks.0.member>
+  <CVG_Meme_DragonBlood.generalRules.rulesStrings>
+    <li>memeAdjective->dracónica</li>
+    <li>memeHyphenPrefix->dragón</li>
+    <li>memeConcept->sangre de dragón</li>
+    <li>memeLeaderNoun->patriarca</li>
+  </CVG_Meme_DragonBlood.generalRules.rulesStrings>
+  <CVG_Meme_DragonBlood.symbolPacks.0.ideoName>Draconismo</CVG_Meme_DragonBlood.symbolPacks.0.ideoName>
+  <CVG_Meme_DragonBlood.symbolPacks.0.theme>dragón</CVG_Meme_DragonBlood.symbolPacks.0.theme>
+  <CVG_Meme_DragonBlood.symbolPacks.0.adjective>dracónica</CVG_Meme_DragonBlood.symbolPacks.0.adjective>
+  <CVG_Meme_DragonBlood.symbolPacks.0.member>vástago</CVG_Meme_DragonBlood.symbolPacks.0.member>
+  <CVG_Meme_DemonicWay.generalRules.rulesStrings>
+    <li>memeAdjective->sangrienta</li>
+    <li>memeHyphenPrefix->sangre</li>
+    <li>memeConcept->camino demoníaco</li>
+    <li>memeLeaderNoun->venerable</li>
+  </CVG_Meme_DemonicWay.generalRules.rulesStrings>
+  <CVG_Meme_DemonicWay.symbolPacks.0.ideoName>Lunasangrismo</CVG_Meme_DemonicWay.symbolPacks.0.ideoName>
+  <CVG_Meme_DemonicWay.symbolPacks.0.theme>sangre</CVG_Meme_DemonicWay.symbolPacks.0.theme>
+  <CVG_Meme_DemonicWay.symbolPacks.0.adjective>sangrienta</CVG_Meme_DemonicWay.symbolPacks.0.adjective>
+  <CVG_Meme_DemonicWay.symbolPacks.0.member>discípulo de sangre</CVG_Meme_DemonicWay.symbolPacks.0.member>
+  <CVG_Meme_WanderingPath.generalRules.rulesStrings>
+    <li>memeAdjective->errante</li>
+    <li>memeHyphenPrefix->camino</li>
+    <li>memeConcept->senda errante</li>
+    <li>memeLeaderNoun->anciano errante</li>
+  </CVG_Meme_WanderingPath.generalRules.rulesStrings>
+  <CVG_Meme_WanderingPath.symbolPacks.0.ideoName>Caminantismo</CVG_Meme_WanderingPath.symbolPacks.0.ideoName>
+  <CVG_Meme_WanderingPath.symbolPacks.0.theme>camino</CVG_Meme_WanderingPath.symbolPacks.0.theme>
+  <CVG_Meme_WanderingPath.symbolPacks.0.adjective>errante</CVG_Meme_WanderingPath.symbolPacks.0.adjective>
+  <CVG_Meme_WanderingPath.symbolPacks.0.member>caminante</CVG_Meme_WanderingPath.symbolPacks.0.member>
+  <CVG_Meme_BodyWay.generalRules.rulesStrings>
+    <li>memeAdjective->corporal</li>
+    <li>memeHyphenPrefix->cuerpo</li>
+    <li>memeConcept->camino del cuerpo</li>
+    <li>memeLeaderNoun->monje</li>
+  </CVG_Meme_BodyWay.generalRules.rulesStrings>
+  <CVG_Meme_BodyWay.symbolPacks.0.ideoName>Corporismo</CVG_Meme_BodyWay.symbolPacks.0.ideoName>
+  <CVG_Meme_BodyWay.symbolPacks.0.theme>cuerpo</CVG_Meme_BodyWay.symbolPacks.0.theme>
+  <CVG_Meme_BodyWay.symbolPacks.0.adjective>corporal</CVG_Meme_BodyWay.symbolPacks.0.adjective>
+  <CVG_Meme_BodyWay.symbolPacks.0.member>cultivador del cuerpo</CVG_Meme_BodyWay.symbolPacks.0.member>
+  <CVG_Meme_PuppetPath.generalRules.rulesStrings>
+    <li>memeAdjective->titiritera</li>
+    <li>memeHyphenPrefix->títere</li>
+    <li>memeConcept->senda de las marionetas</li>
+    <li>memeLeaderNoun->titiritero</li>
+  </CVG_Meme_PuppetPath.generalRules.rulesStrings>
+  <CVG_Meme_PuppetPath.symbolPacks.0.ideoName>Titiritería</CVG_Meme_PuppetPath.symbolPacks.0.ideoName>
+  <CVG_Meme_PuppetPath.symbolPacks.0.theme>marioneta</CVG_Meme_PuppetPath.symbolPacks.0.theme>
+  <CVG_Meme_PuppetPath.symbolPacks.0.adjective>titiritera</CVG_Meme_PuppetPath.symbolPacks.0.adjective>
+  <CVG_Meme_PuppetPath.symbolPacks.0.member>titiritero</CVG_Meme_PuppetPath.symbolPacks.0.member>
+  <CVG_Meme_ThunderWay.generalRules.rulesStrings>
+    <li>memeAdjective->tronante</li>
+    <li>memeHyphenPrefix->trueno</li>
+    <li>memeConcept->camino del trueno</li>
+    <li>memeLeaderNoun->portador del trueno</li>
+  </CVG_Meme_ThunderWay.generalRules.rulesStrings>
+  <CVG_Meme_ThunderWay.symbolPacks.0.ideoName>Tronismo</CVG_Meme_ThunderWay.symbolPacks.0.ideoName>
+  <CVG_Meme_ThunderWay.symbolPacks.0.theme>trueno</CVG_Meme_ThunderWay.symbolPacks.0.theme>
+  <CVG_Meme_ThunderWay.symbolPacks.0.adjective>tronante</CVG_Meme_ThunderWay.symbolPacks.0.adjective>
+  <CVG_Meme_ThunderWay.symbolPacks.0.member>tronador</CVG_Meme_ThunderWay.symbolPacks.0.member>
+</LanguageData>

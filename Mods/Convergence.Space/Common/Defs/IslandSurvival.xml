@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Space survival, wuxia version (docs/modulos/ESPACIO.md "Supervivencia en el espacio"): same Odyssey systems, our own pieces.
+      airtight hull walls   -> cloud rock wall / jade wall   (building.isAirtight on Substructure terrain, like the gravship hull)
+      oxygen pump           -> breath formation              (CompOxygenPusher powered by the qi network)
+      vac barrier / sealed  -> celestial dome formation      (area barrier: no vacuum, steady temperature inside its radius; Convergence.CompCelestialDome)
+      grav anchor           -> sky stake                     (counts as ThingDefOf.GravAnchor through DefModExtension_GravAnchorAlias)
+    Cultivators already resist the void by realm (Core: Mods/Odyssey/Patches/Vacuum.xml); these pieces protect everyone else.
+    Art is provisional (tinted vanilla); final art: Things/Building/CVG/Island/<Name>.
+  -->
+
+  <!-- ================= Cloud rock wall ================= -->
+  <ThingDef ParentName="Wall">
+    <defName>CVG_CloudRockWall</defName>
+    <label>cloud rock wall</label>
+    <description>A wall of cloud rock packed so tight that not even a breath leaks through it. The island's masons say the stone remembers the sky it was cut from and refuses to let the sky back in. It can only stand on the island itself, grown into the cloud rock beneath it.</description>
+    <designationCategory>Odyssey</designationCategory>
+    <uiOrder>1801</uiOrder>
+    <uiIconPath>Things/Building/CVG/Island/CloudRockWall_MenuIcon</uiIconPath>
+    <graphicData>
+      <!-- Final art: Things/Building/CVG/Island/CloudRockWall_Atlas -->
+      <texPath>Things/Building/CVG/Island/CloudRockWall_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <researchPrerequisites><li>CVG_Research_FlightArray</li></researchPrerequisites>
+    <statBases>
+      <MaxHitPoints>380</MaxHitPoints>
+      <WorkToBuild>260</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costStuffCount>0</costStuffCount>
+    <costList>
+      <CVG_SpiritWood>3</CVG_SpiritWood>
+      <CVG_SpiritStone>1</CVG_SpiritStone>
+    </costList>
+    <building>
+      <isAirtight>true</isAirtight>
+    </building>
+    <terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded>
+    <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+    <stuffCategories Inherit="False" />
+    <comps Inherit="False" />
+  </ThingDef>
+
+  <!-- ================= Jade wall ================= -->
+  <ThingDef ParentName="Wall">
+    <defName>CVG_JadeWall</defName>
+    <label>jade wall</label>
+    <description>A wall of pale jade that hums very softly when the wind touches it. It holds the air better than any stone, keeps the temperature of the room even, and is so beautiful that the sects of the Heavenly Court built the halls of their immortals out of it. A single course costs more than a pavilion.</description>
+    <designationCategory>Odyssey</designationCategory>
+    <uiOrder>1802</uiOrder>
+    <uiIconPath>Things/Building/CVG/Island/JadeWall_MenuIcon</uiIconPath>
+    <graphicData>
+      <!-- Final art: Things/Building/CVG/Island/JadeWall_Atlas -->
+      <texPath>Things/Building/CVG/Island/JadeWall_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <researchPrerequisites><li>CVG_Research_FlightArray</li></researchPrerequisites>
+    <statBases>
+      <MaxHitPoints>520</MaxHitPoints>
+      <WorkToBuild>420</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>2</Beauty>
+      <MeditationFocusStrength>0.3</MeditationFocusStrength>
+    </statBases>
+    <costStuffCount>0</costStuffCount>
+    <costList>
+      <CVG_SpiritJade>4</CVG_SpiritJade>
+    </costList>
+    <building>
+      <isAirtight>true</isAirtight>
+    </building>
+    <terrainAffordanceNeeded>Substructure</terrainAffordanceNeeded>
+    <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+    <stuffCategories Inherit="False" />
+    <comps Inherit="False" />
+  </ThingDef>
+
+  <!-- ================= Breath formation (the island's oxygen pump) ================= -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_BreathFormation</defName>
+    <label>breath formation</label>
+    <description>A jade tablet carved with the character for "breath" and ringed with lotus petals of pressed silver. It gathers the thin qi of the high sky and breathes it back into the room as air, slowly, the way a sleeper breathes. The monks of the Silent Lotus say it was the first formation ever carved, and that it was meant to keep a single candle lit.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/Island/BreathFormation</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(1.2,1.2)</drawSize>
+    </graphicData>
+    <size>(1,1)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.3</fillPercent>
+    <pathCost>14</pathCost>
+    <rotatable>false</rotatable>
+    <tickerType>Rare</tickerType>
+    <designationCategory>Odyssey</designationCategory>
+    <uiOrder>2506</uiOrder>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>1800</WorkToBuild>
+      <Flammability>0.2</Flammability>
+      <Mass>5</Mass>
+      <Beauty>1</Beauty>
+    </statBases>
+    <costList>
+      <CVG_SpiritJade>6</CVG_SpiritJade>
+      <CVG_SpiritStone>12</CVG_SpiritStone>
+      <Silver>20</Silver>
+    </costList>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <researchPrerequisites><li>CVG_Research_FlightArray</li></researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>0</basePowerConsumption>
+        <idlePowerDraw>0</idlePowerDraw>
+        <showPowerNeededIfOff>false</showPowerNeededIfOff>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="Convergence.CompProperties_QiNode">
+        <compClass>Convergence.CompQiConsumer</compClass>
+        <consumeDay>15</consumeDay>
+      </li>
+      <li Class="CompProperties_OxygenPusher">
+        <requiresPower>true</requiresPower>
+        <airPerSecondPerHundredCells>0.01</airPerSecondPerHundredCells>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(120,255,215,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ================= Qi barrier (the island's airlock: Odyssey's vac barrier, fed by the qi network) ================= -->
+  <!-- Same class and structure as the vanilla VacBarrier (Building_VacBarrier: always passable, airtight while "powered"); the "power" is a zero-draw
+       CompPowerTrader whose on/off state is decided by the qi network through CompQiConsumer, so it needs no electricity.
+       Final art: a pair of jade posts with a veil of qi between them (provisional: the vanilla barrier textures tinted jade). -->
+  <ThingDef ParentName="DoorBase">
+    <defName>CVG_QiBarrier</defName>
+    <label>qi barrier</label>
+    <description>Two jade posts that stretch a veil of qi between them, thin as the skin of a soap bubble. It lets anyone walk through and keeps the air from leaving: the old sects used it on the thresholds of their sky pavilions, so a disciple could step out onto a cloud without the hall exhaling behind them. It stops no intruder, and it dies with the qi that feeds it.
+
+It drinks qi from the network, not electricity. Without qi the veil falls and the room breathes out into the void.</description>
+    <thingClass>Building_VacBarrier</thingClass>
+    <statBases>
+      <WorkToBuild>2400</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <rotatable>false</rotatable>
+    <graphicData>
+      <texPath>Things/Building/VacBarrier/VacBarrier_Barrier</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.5,1.5)</drawSize>
+      <shaderType>TransparentPostLight</shaderType>
+      <damageData><enabled>false</enabled></damageData>
+      <color>(120,235,200)</color>
+    </graphicData>
+    <uiIconPath>Things/Building/VacBarrier/VacBarrier_MenuIcon_south</uiIconPath>
+    <costList>
+      <CVG_SpiritJade>8</CVG_SpiritJade>
+      <CVG_SpiritStone>12</CVG_SpiritStone>
+    </costList>
+    <stuffCategories Inherit="False" />
+    <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    <designationCategory>Odyssey</designationCategory>
+    <building>
+      <isAirtight>true</isAirtight>
+      <isSupportDoor>true</isSupportDoor>
+      <doorTopGraphic>
+        <texPath>Things/Building/VacBarrier/VacBarrier_Top</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(1.5,1.5)</drawSize>
+        <color>(120,235,200)</color>
+      </doorTopGraphic>
+      <blueprintClass>Blueprint_Door</blueprintClass>
+      <blueprintGraphicData>
+        <texPath>Things/Building/VacBarrier/VacBarrier_MenuIcon</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <shaderType>EdgeDetect</shaderType>
+        <drawSize>(1.5,1.5)</drawSize>
+      </blueprintGraphicData>
+    </building>
+    <researchPrerequisites><li>CVG_Research_FlightArray</li></researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <comps>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>0</basePowerConsumption>
+        <idlePowerDraw>0</idlePowerDraw>
+        <showPowerNeededIfOff>false</showPowerNeededIfOff>
+      </li>
+      <li Class="Convergence.CompProperties_QiNode">
+        <compClass>Convergence.CompQiConsumer</compClass>
+        <consumeDay>20</consumeDay>
+      </li>
+    </comps>
+    <designationHotKey>Misc1</designationHotKey>
+    <uiOrder>2507</uiOrder>
+  </ThingDef>
+
+  <!-- ================= Celestial dome formation ================= -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_CelestialDome</defName>
+    <label>celestial dome formation</label>
+    <description>Nine jade pillars that hold a bowl of qi over the settlement, in the shape the Heavenly Court once used to keep a pavilion in the sky: the air stays in, the cold stays out, and the stars stay where they belong. It drinks qi from the network, a great deal of it. It does not cover rooms, it covers the sky, and everything under it breathes.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/Island/CelestialDome</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <size>(3,3)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+    <pathCost>30</pathCost>
+    <rotatable>false</rotatable>
+    <tickerType>Rare</tickerType>
+    <designationCategory>Odyssey</designationCategory>
+    <uiOrder>2507</uiOrder>
+    <specialDisplayRadius>22.9</specialDisplayRadius>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>14000</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Mass>40</Mass>
+      <Beauty>3</Beauty>
+    </statBases>
+    <costList>
+      <CVG_SpiritJade>40</CVG_SpiritJade>
+      <CVG_SpiritSteel>40</CVG_SpiritSteel>
+      <CVG_SpiritStone>80</CVG_SpiritStone>
+    </costList>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <researchPrerequisites><li>CVG_Research_FlightArray</li></researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>0</basePowerConsumption>
+        <idlePowerDraw>0</idlePowerDraw>
+        <showPowerNeededIfOff>false</showPowerNeededIfOff>
+      </li>
+      <li Class="Convergence.CompProperties_QiNode">
+        <compClass>Convergence.CompQiConsumer</compClass>
+        <consumeDay>90</consumeDay>
+      </li>
+      <li Class="Convergence.CompProperties_CelestialDome">
+        <radius>22.9</radius>
+        <temperature>20</temperature>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(150,200,255,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ================= Sky stake (the island's grav anchor) ================= -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_SkyStake</defName>
+    <label>sky stake</label>
+    <description>A pillar of jade and spirit steel driven into the mountain so deep that the earth itself holds it. When the island casts off, the stake keeps the ground from following it: the valley stays where it was, and the island leaves without tearing the world behind it. It cannot be driven into the island itself, or the island would never rise.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/Island/SkyStake</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <size>(4,4)</size>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>24000</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>2</Beauty>
+    </statBases>
+    <costList>
+      <CVG_SpiritSteel>150</CVG_SpiritSteel>
+      <CVG_SpiritJade>60</CVG_SpiritJade>
+      <CVG_SpiritStone>100</CVG_SpiritStone>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.6</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <designationCategory>Odyssey</designationCategory>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <researchPrerequisites><li>CVG_Research_FlightArray</li></researchPrerequisites>
+    <uiOrder>2508</uiOrder>
+    <placeWorkers>
+      <li>PlaceWorker_InvalidOverSubstructure</li>
+    </placeWorkers>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+    </building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_GravAnchorAlias" />
+    </modExtensions>
+  </ThingDef>
+</Defs>

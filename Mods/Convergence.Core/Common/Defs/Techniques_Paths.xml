@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Technique paths in the VPE model (docs/DISENO_CORE.md): five levels per path, one point per technique. Elemental
+    paths (Techniques.xml) open with the spirit root; these extra paths open with a jade slip (Sword, Spirit Sense) or by
+    following the body path (Vajra Body). Level 4 = Golden Core; level 5 waits for the Nascent Soul.
+  -->
+  <Convergence.TechniqueManualDef>
+    <defName>CVG_Manual_SwordHeart</defName>
+    <label>Sword Heart Canon</label>
+    <description>The canon of the Sword Peak of Jiuxiao, where disciples slept with their swords and spoke to no one else. It does not care about the root: any cultivator can walk the way of the sword. Flying swords, a heart sharp as an edge and, at Foundation, a sword intent that cuts before the blade is drawn.</description>
+    <path>CVG_Path_Qi</path>
+    <requiredResearch>CVG_Research_TechniqueManuals</requiredResearch>
+    <order>6</order>
+    <fromJadeSlips>true</fromJadeSlips>
+    <cardTexPath>UI/Paths/CVG_Path_Sword</cardTexPath>
+    <iconPath>UI/Techniques/CVG_Tech_SwordQiSweep</iconPath>
+  </Convergence.TechniqueManualDef>
+  <Convergence.TechniqueManualDef>
+    <defName>CVG_Manual_SpiritSense</defName>
+    <label>Spirit Sense Sutra</label>
+    <description>A sutra of the Silent Lotus Temple on the shen, the spirit sense that a cultivator spreads around like ripples. It trains the mind, not the meridians: a calm heart, eyes that see through the dust of battle.</description>
+    <path>CVG_Path_Qi</path>
+    <requiredResearch>CVG_Research_TechniqueManuals</requiredResearch>
+    <order>7</order>
+    <fromJadeSlips>true</fromJadeSlips>
+    <cardTexPath>UI/Paths/CVG_Path_Soul</cardTexPath>
+    <iconPath>UI/Techniques/CVG_Tech_QiShield</iconPath>
+  </Convergence.TechniqueManualDef>
+  <Convergence.TechniqueManualDef>
+    <defName>CVG_Manual_VajraBody</defName>
+    <label>Vajra Body Method</label>
+    <description>The path of those who temper flesh instead of qi. Buddhist monks of the old world called the indestructible body vajra, diamond; the body cultivators of Jiuxiao made it a method. Every body cultivator walks it from the first day of tempering.</description>
+    <path>CVG_Path_Body</path>
+    <order>8</order>
+    <openedByFollowing>CVG_Path_Body</openedByFollowing>
+    <fromJadeSlips>false</fromJadeSlips>
+    <cardTexPath>UI/Paths/CVG_Path_Body</cardTexPath>
+    <iconPath>UI/Techniques/CVG_Tech_MountainBody</iconPath>
+  </Convergence.TechniqueManualDef>
+  <ThingDef ParentName="CVG_TechniqueBulletBase">
+    <defName>CVG_Projectile_FlyingSword</defName>
+    <label>flying sword</label>
+    <graphicData>
+      <texPath>Things/Projectile/CVG/FlyingSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Cut</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <armorPenetrationBase>0.3</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+
+  <AbilityDef ParentName="CVG_TechniqueBoltBase">
+    <defName>CVG_Tech_FlyingSword</defName>
+    <label>flying sword</label>
+    <description>Send a sliver of sword qi flying like a blade on the wind. The disciples of the Sword Peak fought this way from a hundred paces, and the old stories of Shushan are full of swords that flew home to their masters.\n\nProjectile: 16 sharp damage (armor penetration 30%), scaled by realm and mastery.</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Techniques/CVG_Tech_SwordQiSweep</iconPath>
+    <verbProperties>
+      <soundCast>Shot_NeedleGun</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityResourceCost">
+        <cost>10</cost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityTechniqueProjectile">
+        <projectileDef>CVG_Projectile_FlyingSword</projectileDef>
+        <castFleck>SparkFlash</castFleck>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_SwordHeart</manual>
+        <tier>2</tier>
+        <prerequisites>
+          <li>CVG_Tech_EdgeOfTheHeart</li>
+        </prerequisites>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_UnbreakableEdge</defName>
+    <label>golden core of metal</label>
+    <description>With a Golden Core, metal qi condenses into the body itself: skin rings like a struck blade and fire slides off it. The elders of the Golden Edge said a true master could be thrown into a forge and walk out tempered.\n\nPassive: sharp and heat armor +6% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Metal</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_GoldenEdge</manual>
+        <tier>4</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_GoldenCore</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_SwordQiSweep</li>
+        </prerequisites>
+        <unlockCost>2</unlockCost>
+        <passiveHediff>CVG_Passive_UnbreakableEdge</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_UnbreakableEdge</defName>
+    <label>golden core of metal</label>
+    <description>Metal qi has condensed into the flesh itself.</description>
+    <defaultLabelColor>(0.95,0.85,0.45)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Sharp>0.06</ArmorRating_Sharp>
+          <ArmorRating_Heat>0.06</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>0.09</ArmorRating_Sharp>
+          <ArmorRating_Heat>0.09</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>0.12</ArmorRating_Sharp>
+          <ArmorRating_Heat>0.12</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>0.168</ArmorRating_Sharp>
+          <ArmorRating_Heat>0.168</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>0.216</ArmorRating_Sharp>
+          <ArmorRating_Heat>0.216</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_TenThousandYearPine</defName>
+    <label>ten-thousand-year pine</label>
+    <description>The Golden Core of wood is a seed that never stops sprouting. Like the pine of Mount Huang that has watched emperors come and go, the body renews itself season after season.\n\nPassive: injury healing +20% and immunity gain +10% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Wood</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_EvergreenSutra</manual>
+        <tier>4</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_GoldenCore</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_TreeHeart</li>
+          <li>CVG_Tech_ThornStorm</li>
+        </prerequisites>
+        <unlockCost>2</unlockCost>
+        <passiveHediff>CVG_Passive_TenThousandYearPine</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_TenThousandYearPine</defName>
+    <label>ten-thousand-year pine</label>
+    <description>The body renews itself like an ancient pine.</description>
+    <defaultLabelColor>(0.5,0.9,0.5)</defaultLabelColor>
+    <stages>
+      <li>
+        <statFactors>
+          <InjuryHealingFactor>1.2</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.1</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>1.3</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.15</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>1.4</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.2</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>1.56</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.28</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>1.72</InjuryHealingFactor>
+          <ImmunityGainSpeed>1.36</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_BoundlessSea</defName>
+    <label>boundless sea</label>
+    <description>A Golden Core of water holds as much as the Eastern Sea and is never full. What the cultivator learns flows in and settles; what troubles the heart sinks without a trace.\n\nPassive: global learning +10% and mental break threshold -2% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Water</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_FlowingCloud</manual>
+        <tier>4</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_GoldenCore</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_TideReading</li>
+          <li>CVG_Tech_FrostBreath</li>
+        </prerequisites>
+        <unlockCost>2</unlockCost>
+        <passiveHediff>CVG_Passive_BoundlessSea</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_BoundlessSea</defName>
+    <label>boundless sea</label>
+    <description>The mind is as deep and calm as the Eastern Sea.</description>
+    <defaultLabelColor>(0.55,0.8,1)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MentalBreakThreshold>-0.02</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+          <GlobalLearningFactor>1.1</GlobalLearningFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <MentalBreakThreshold>-0.03</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+          <GlobalLearningFactor>1.15</GlobalLearningFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <MentalBreakThreshold>-0.04</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+          <GlobalLearningFactor>1.2</GlobalLearningFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <MentalBreakThreshold>-0.056</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+          <GlobalLearningFactor>1.28</GlobalLearningFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <MentalBreakThreshold>-0.072</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+          <GlobalLearningFactor>1.36</GlobalLearningFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_PhoenixEmber</defName>
+    <label>phoenix ember</label>
+    <description>The Golden Core of fire keeps an ember of the phoenix, which burns and is born again. Flames feel like a warm bath and wounds close faster, as if the body were remembering its own ashes.\n\nPassive: heat armor +10%, minimum comfortable temperature -4 °C and injury healing +10% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Fire</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_BlazingSun</manual>
+        <tier>4</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_GoldenCore</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_SunHeart</li>
+          <li>CVG_Tech_SeaOfFlames</li>
+        </prerequisites>
+        <unlockCost>2</unlockCost>
+        <passiveHediff>CVG_Passive_PhoenixEmber</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_PhoenixEmber</defName>
+    <label>phoenix ember</label>
+    <description>An ember of the phoenix glows in the Golden Core.</description>
+    <defaultLabelColor>(1,0.6,0.35)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Heat>0.1</ArmorRating_Heat>
+          <ComfyTemperatureMin>-4</ComfyTemperatureMin>
+        </statOffsets>
+        <statFactors>
+          <InjuryHealingFactor>1.1</InjuryHealingFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <ArmorRating_Heat>0.15</ArmorRating_Heat>
+          <ComfyTemperatureMin>-6</ComfyTemperatureMin>
+        </statOffsets>
+        <statFactors>
+          <InjuryHealingFactor>1.15</InjuryHealingFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <ArmorRating_Heat>0.2</ArmorRating_Heat>
+          <ComfyTemperatureMin>-8</ComfyTemperatureMin>
+        </statOffsets>
+        <statFactors>
+          <InjuryHealingFactor>1.2</InjuryHealingFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <ArmorRating_Heat>0.28</ArmorRating_Heat>
+          <ComfyTemperatureMin>-11.2</ComfyTemperatureMin>
+        </statOffsets>
+        <statFactors>
+          <InjuryHealingFactor>1.28</InjuryHealingFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <ArmorRating_Heat>0.36</ArmorRating_Heat>
+          <ComfyTemperatureMin>-14.4</ComfyTemperatureMin>
+        </statOffsets>
+        <statFactors>
+          <InjuryHealingFactor>1.36</InjuryHealingFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_EndlessMountain</defName>
+    <label>mountain without end</label>
+    <description>A Golden Core of earth weighs like Mount Tai. The cultivator no longer falls: blows that would fell an ox only make the ground tremble under the feet.\n\nPassive: blunt armor +6%, pain shock threshold +5% and carrying capacity +10% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Earth</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_MountainHeart</manual>
+        <tier>4</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_GoldenCore</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_RootedMountain</li>
+          <li>CVG_Tech_EarthTremor</li>
+        </prerequisites>
+        <unlockCost>2</unlockCost>
+        <passiveHediff>CVG_Passive_EndlessMountain</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_EndlessMountain</defName>
+    <label>mountain without end</label>
+    <description>The body weighs like Mount Tai.</description>
+    <defaultLabelColor>(0.8,0.7,0.5)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Blunt>0.06</ArmorRating_Blunt>
+          <PainShockThreshold>0.05</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <CarryingCapacity>1.1</CarryingCapacity>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <ArmorRating_Blunt>0.09</ArmorRating_Blunt>
+          <PainShockThreshold>0.075</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <CarryingCapacity>1.15</CarryingCapacity>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+          <PainShockThreshold>0.1</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <CarryingCapacity>1.2</CarryingCapacity>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <ArmorRating_Blunt>0.168</ArmorRating_Blunt>
+          <PainShockThreshold>0.14</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <CarryingCapacity>1.28</CarryingCapacity>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <ArmorRating_Blunt>0.216</ArmorRating_Blunt>
+          <PainShockThreshold>0.18</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <CarryingCapacity>1.36</CarryingCapacity>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_DivineSense</defName>
+    <label>divine sense</label>
+    <description>The shen spreads beyond the eyes like ripples on a pond: the cultivator feels where every arrow will land and every idea will lead. Old masters could count the leaves of a tree with their eyes closed.\n\nPassive: shooting accuracy +2 and research speed +6% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Techniques/CVG_Tech_QiShield</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_SpiritSense</manual>
+        <tier>2</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_StillWaterMind</li>
+        </prerequisites>
+        <passiveHediff>CVG_Passive_DivineSense</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_DivineSense</defName>
+    <label>divine sense</label>
+    <description>The spirit sense spreads like ripples on a pond.</description>
+    <defaultLabelColor>(0.75,0.7,1)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+        </statOffsets>
+        <statFactors>
+          <ResearchSpeed>1.06</ResearchSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+        </statOffsets>
+        <statFactors>
+          <ResearchSpeed>1.09</ResearchSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+        </statOffsets>
+        <statFactors>
+          <ResearchSpeed>1.12</ResearchSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <ShootingAccuracyPawn>5.6</ShootingAccuracyPawn>
+        </statOffsets>
+        <statFactors>
+          <ResearchSpeed>1.168</ResearchSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <ShootingAccuracyPawn>7.2</ShootingAccuracyPawn>
+        </statOffsets>
+        <statFactors>
+          <ResearchSpeed>1.216</ResearchSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_IronShirt</defName>
+    <label>iron shirt</label>
+    <description>The first lesson of the Vajra Body: let the tempered skin take the blow like an iron shirt. Kung fu masters of the old world trained it with sandbags and wooden staves; tempered flesh learns it in weeks.\n\nPassive: blunt armor +5% and sharp armor +3% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Techniques/CVG_Tech_MountainBody</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_VajraBody</manual>
+        <tier>1</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_SkinTempering</minRealm>
+        <passiveHediff>CVG_Passive_IronShirt</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_IronShirt</defName>
+    <label>iron shirt</label>
+    <description>Tempered skin takes blows like an iron shirt.</description>
+    <defaultLabelColor>(0.85,0.6,0.45)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <ArmorRating_Blunt>0.075</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.045</ArmorRating_Sharp>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.06</ArmorRating_Sharp>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <ArmorRating_Blunt>0.14</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.084</ArmorRating_Sharp>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.108</ArmorRating_Sharp>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_DragonElephantMight</defName>
+    <label>dragon-elephant might</label>
+    <description>Monks said the strongest beast in the water is the dragon and on land, the elephant. The Vajra Body gathers the strength of both in tempered muscle.\n\nPassive: melee damage +6% and carrying capacity +10% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Techniques/CVG_Tech_MountainBody</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_VajraBody</manual>
+        <tier>2</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_FleshTempering</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_IronShirt</li>
+        </prerequisites>
+        <passiveHediff>CVG_Passive_DragonElephantMight</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_DragonElephantMight</defName>
+    <label>dragon-elephant might</label>
+    <description>The strength of the dragon and the elephant fills the muscles.</description>
+    <defaultLabelColor>(0.85,0.6,0.45)</defaultLabelColor>
+    <stages>
+      <li>
+        <statFactors>
+          <MeleeDamageFactor>1.06</MeleeDamageFactor>
+          <CarryingCapacity>1.1</CarryingCapacity>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.09</MeleeDamageFactor>
+          <CarryingCapacity>1.15</CarryingCapacity>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.12</MeleeDamageFactor>
+          <CarryingCapacity>1.2</CarryingCapacity>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.168</MeleeDamageFactor>
+          <CarryingCapacity>1.28</CarryingCapacity>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.216</MeleeDamageFactor>
+          <CarryingCapacity>1.36</CarryingCapacity>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_UnbreakableBones</defName>
+    <label>unbreakable bones</label>
+    <description>Forged bones do not break; they bend and come back. Pain that would drop a mortal becomes just a sensation, and the body mends what it can on its own.\n\nPassive: pain shock threshold +5% and injury healing +15% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Techniques/CVG_Tech_MountainBody</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_VajraBody</manual>
+        <tier>3</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_BoneForging</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_DragonElephantMight</li>
+        </prerequisites>
+        <unlockCost>2</unlockCost>
+        <passiveHediff>CVG_Passive_UnbreakableBones</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_UnbreakableBones</defName>
+    <label>unbreakable bones</label>
+    <description>Forged bones bend and come back.</description>
+    <defaultLabelColor>(0.85,0.6,0.45)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <PainShockThreshold>0.05</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <InjuryHealingFactor>1.15</InjuryHealingFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <PainShockThreshold>0.075</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <InjuryHealingFactor>1.225</InjuryHealingFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <PainShockThreshold>0.1</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <InjuryHealingFactor>1.3</InjuryHealingFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <PainShockThreshold>0.14</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <InjuryHealingFactor>1.42</InjuryHealingFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <PainShockThreshold>0.18</PainShockThreshold>
+        </statOffsets>
+        <statFactors>
+          <InjuryHealingFactor>1.54</InjuryHealingFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

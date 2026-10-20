@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Beast organs and skin (batch 1). Structure copied from DetoxifierLung (Biotech), BionicEar (Core) and StoneskinGland (Royalty).
+       Installed only with a Dao Grafting Altar on the map. -->
+
+  <!-- Dragon lung (like DetoxifierLung) -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_DragonLungs</defName>
+    <label>dragon lung</label>
+    <labelNoun>a dragon lung</labelNoun>
+    <description>Dragons breathe storms and swallow smoke as if it were spring air. Their lungs make poison gas a mere annoyance.\n\nBreathing efficiency x1.15, toxic environment resistance +60%, toxic resistance +20%. Prevents lung rot in this lung.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_DragonLungs</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_DragonLungs</spawnThingOnRemoved>
+    <preventsLungRot>true</preventsLungRot>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.15</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><ToxicEnvironmentResistance>0.6</ToxicEnvironmentResistance><ToxicResistance>0.2</ToxicResistance><CVG_CelestialDissonance>0.1</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftBase">
+    <defName>CVG_Graft_DragonLungs</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_DragonLungs</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>dragon lung</label>
+    <description>Dragons breathe storms and swallow smoke as if it were spring air. Their lungs make poison gas a mere annoyance.\n\nBreathing efficiency x1.15, toxic environment resistance +60%, toxic resistance +20%. Prevents lung rot in this lung.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_DragonLungs</RecipeDef></descriptionHyperlinks>
+    
+    <costList><CVG_BeastCore>1</CVG_BeastCore><CVG_BeastBlood>4</CVG_BeastBlood><CVG_SpiritJade>1</CVG_SpiritJade></costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_BeastGrafting</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>CVG_Install_DragonLungs</defName>
+    <label>install dragon lung</label>
+    <description>Install a dragon lung. It needs a Dao grafting altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_DragonLungs</ThingDef><HediffDef>CVG_Graft_DragonLungs</HediffDef></descriptionHyperlinks>
+    <workerClass>Convergence.Grafts.Recipe_InstallGraft</workerClass>
+    <jobString>Installing dragon lung.</jobString>
+    <workAmount>4500</workAmount>
+    <skillRequirements><Medicine>6</Medicine></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_DragonLungs</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_DragonLungs</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Lung</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_DragonLungs</addsHediff>
+  </RecipeDef>
+
+  <!-- Jade kidney -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_JadeKidneys</defName>
+    <label>jade kidney</label>
+    <labelNoun>a jade kidney</labelNoun>
+    <description>Yin gathers in the kidneys, the old masters taught. Kidneys of moon jade drink the night and give it back as qi.\n\nKidney efficiency x1.1, toxic resistance +30%, qi regeneration +0.4.\nCelestial dissonance +0.15.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_JadeKidneys</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_JadeKidneys</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.1</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><ToxicResistance>0.3</ToxicResistance><CVG_QiRegen>0.4</CVG_QiRegen><CVG_CelestialDissonance>0.15</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftBase">
+    <defName>CVG_Graft_JadeKidneys</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_JadeKidneys</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>jade kidney</label>
+    <description>Yin gathers in the kidneys, the old masters taught. Kidneys of moon jade drink the night and give it back as qi.\n\nKidney efficiency x1.1, toxic resistance +30%, qi regeneration +0.4.\nCelestial dissonance +0.15.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_JadeKidneys</RecipeDef></descriptionHyperlinks>
+    
+    <costList><CVG_SpiritJade>4</CVG_SpiritJade><CVG_BeastBlood>2</CVG_BeastBlood></costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_BeastGrafting</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>CVG_Install_JadeKidneys</defName>
+    <label>install jade kidney</label>
+    <description>Install a jade kidney. It needs a Dao grafting altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_JadeKidneys</ThingDef><HediffDef>CVG_Graft_JadeKidneys</HediffDef></descriptionHyperlinks>
+    <workerClass>Convergence.Grafts.Recipe_InstallGraft</workerClass>
+    <jobString>Installing jade kidney.</jobString>
+    <workAmount>4500</workAmount>
+    <skillRequirements><Medicine>6</Medicine></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_JadeKidneys</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_JadeKidneys</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Kidney</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_JadeKidneys</addsHediff>
+  </RecipeDef>
+
+  <!-- Wind-hearing ear (like BionicEar) -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_Graft_WindHearingEars</defName>
+    <label>wind-hearing ear</label>
+    <labelNoun>a wind-hearing ear</labelNoun>
+    <description>Shunfeng'er heard every whisper the wind carried. These ears catch the footsteps of raiders long before they reach the walls.\n\nHearing efficiency x1.5.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_WindHearingEars</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_WindHearingEars</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.5</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets><CVG_CelestialDissonance>0.1</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftBase">
+    <defName>CVG_Graft_WindHearingEars</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_WindHearingEars</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>wind-hearing ear</label>
+    <description>Shunfeng'er heard every whisper the wind carried. These ears catch the footsteps of raiders long before they reach the walls.\n\nHearing efficiency x1.5.\nCelestial dissonance +0.1.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_WindHearingEars</RecipeDef></descriptionHyperlinks>
+    
+    <costList><CVG_BeastCore>1</CVG_BeastCore><CVG_SpiritJade>2</CVG_SpiritJade><CVG_BeastBlood>1</CVG_BeastBlood></costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_BeastGrafting</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>CVG_Install_WindHearingEars</defName>
+    <label>install wind-hearing ear</label>
+    <description>Install a wind-hearing ear. It needs a Dao grafting altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_WindHearingEars</ThingDef><HediffDef>CVG_Graft_WindHearingEars</HediffDef></descriptionHyperlinks>
+    <workerClass>Convergence.Grafts.Recipe_InstallGraft</workerClass>
+    <jobString>Installing wind-hearing ear.</jobString>
+    <workAmount>4500</workAmount>
+    <skillRequirements><Medicine>6</Medicine></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_WindHearingEars</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_WindHearingEars</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Ear</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_WindHearingEars</addsHediff>
+  </RecipeDef>
+
+  <!-- Qilin skin (implant like StoneskinGland; shares the vanilla ArmorGland tag, so it does not stack with armor glands) -->
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>CVG_Graft_QilinSkin</defName>
+    <label>qilin skin</label>
+    <labelNoun>qilin skin</labelNoun>
+    <description>A qilin's hide was once the armor of emperors, for no flame or poison would cross it. Golden scales grafted along the back keep that ancient blessing alive.\n\nSharp armor +20%, blunt armor +10%, heat armor +40%, toxic resistance +10%. Does not stack with armor glands.\nCelestial dissonance +0.15.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_QilinSkin</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_Graft_QilinSkin</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <statOffsets><ArmorRating_Sharp>0.2</ArmorRating_Sharp><ArmorRating_Blunt>0.1</ArmorRating_Blunt><ArmorRating_Heat>0.4</ArmorRating_Heat><ToxicResistance>0.1</ToxicResistance><CVG_CelestialDissonance>0.15</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+    <tags><li>ArmorGland</li></tags>
+  </HediffDef>
+
+  <ThingDef ParentName="CVG_GraftBase">
+    <defName>CVG_Graft_QilinSkin</defName>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/Graft_QilinSkin</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    
+    <label>qilin skin</label>
+    <description>A qilin's hide was once the armor of emperors, for no flame or poison would cross it. Golden scales grafted along the back keep that ancient blessing alive.\n\nSharp armor +20%, blunt armor +10%, heat armor +40%, toxic resistance +10%. Does not stack with armor glands.\nCelestial dissonance +0.15.</description>
+    <descriptionHyperlinks><RecipeDef>CVG_Install_QilinSkin</RecipeDef></descriptionHyperlinks>
+    
+    <costList><CVG_BeastCore>1</CVG_BeastCore><CVG_SpiritLeather>15</CVG_SpiritLeather><CVG_SpiritJade>3</CVG_SpiritJade><CVG_BeastBlood>2</CVG_BeastBlood></costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_BeastGrafting</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>CVG_Install_QilinSkin</defName>
+    <label>install qilin skin</label>
+    <description>Install qilin skin. It needs a Dao grafting altar.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_QilinSkin</ThingDef><HediffDef>CVG_Graft_QilinSkin</HediffDef></descriptionHyperlinks>
+    <workerClass>Convergence.Grafts.Recipe_InstallGraftImplant</workerClass>
+    <jobString>Installing qilin skin.</jobString>
+    <workAmount>4500</workAmount>
+    <skillRequirements><Medicine>6</Medicine></skillRequirements>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_Graft_QilinSkin</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_Graft_QilinSkin</li></thingDefs></fixedIngredientFilter>
+    <appliedOnFixedBodyParts><li>Torso</li></appliedOnFixedBodyParts>
+    <addsHediff>CVG_Graft_QilinSkin</addsHediff>
+    <incompatibleWithHediffTags><li>ArmorGland</li></incompatibleWithHediffTags>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>CVG_Remove_QilinSkin</defName>
+    <label>remove qilin skin</label>
+    <description>Remove the qilin skin. The golden scales are peeled away one by one and laid back in their lacquered case.</description>
+    <descriptionHyperlinks><ThingDef>CVG_Graft_QilinSkin</ThingDef><HediffDef>CVG_Graft_QilinSkin</HediffDef></descriptionHyperlinks>
+    <jobString>Removing qilin skin.</jobString>
+    <removesHediff>CVG_Graft_QilinSkin</removesHediff>
+  </RecipeDef>
+</Defs>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Install_FarmerArm.label>instalar brazo del agricultor divino</CVG_Install_FarmerArm.label>
+  <CVG_Install_FarmerArm.description>Instala un brazo del agricultor divino. Necesita un altar de injerto del Dao.</CVG_Install_FarmerArm.description>
+  <CVG_Install_FarmerArm.jobString>Instalando brazo del agricultor divino.</CVG_Install_FarmerArm.jobString>
+  <CVG_Install_MinerArm.label>instalar brazo del minero del Dao</CVG_Install_MinerArm.label>
+  <CVG_Install_MinerArm.description>Instala un brazo del minero del Dao. Necesita un altar de injerto del Dao.</CVG_Install_MinerArm.description>
+  <CVG_Install_MinerArm.jobString>Instalando brazo del minero del Dao.</CVG_Install_MinerArm.jobString>
+  <CVG_Install_SmithHand.label>instalar mano del forjador celestial</CVG_Install_SmithHand.label>
+  <CVG_Install_SmithHand.description>Instala una mano del forjador celestial. Necesita un altar de injerto del Dao.</CVG_Install_SmithHand.description>
+  <CVG_Install_SmithHand.jobString>Instalando mano del forjador celestial.</CVG_Install_SmithHand.jobString>
+  <CVG_Install_AlchemistHand.label>instalar mano del alquimista</CVG_Install_AlchemistHand.label>
+  <CVG_Install_AlchemistHand.description>Instala una mano del alquimista. Necesita un altar de injerto del Dao.</CVG_Install_AlchemistHand.description>
+  <CVG_Install_AlchemistHand.jobString>Instalando mano del alquimista.</CVG_Install_AlchemistHand.jobString>
+  <CVG_Install_HealerHand.label>instalar mano del sanador</CVG_Install_HealerHand.label>
+  <CVG_Install_HealerHand.description>Instala una mano del sanador. Necesita un altar de injerto del Dao.</CVG_Install_HealerHand.description>
+  <CVG_Install_HealerHand.jobString>Instalando mano del sanador.</CVG_Install_HealerHand.jobString>
+  <CVG_Install_BuilderArm.label>instalar brazo del constructor de montañas</CVG_Install_BuilderArm.label>
+  <CVG_Install_BuilderArm.description>Instala un brazo del constructor de montañas. Necesita un altar de injerto del Dao.</CVG_Install_BuilderArm.description>
+  <CVG_Install_BuilderArm.jobString>Instalando brazo del constructor de montañas.</CVG_Install_BuilderArm.jobString>
+  <CVG_Install_JadeArtistFingers.label>instalar dedos del artista de jade</CVG_Install_JadeArtistFingers.label>
+  <CVG_Install_JadeArtistFingers.description>Instala los dedos del artista de jade. Necesita un altar de injerto del Dao.</CVG_Install_JadeArtistFingers.description>
+  <CVG_Install_JadeArtistFingers.jobString>Instalando dedos del artista de jade.</CVG_Install_JadeArtistFingers.jobString>
+  <CVG_Install_ShepherdArm.label>instalar brazo del pastor de bestias</CVG_Install_ShepherdArm.label>
+  <CVG_Install_ShepherdArm.description>Instala un brazo del pastor de bestias. Necesita un altar de injerto del Dao.</CVG_Install_ShepherdArm.description>
+  <CVG_Install_ShepherdArm.jobString>Instalando brazo del pastor de bestias.</CVG_Install_ShepherdArm.jobString>
+  <CVG_Install_DaoBones.label>instalar huesos del Dao</CVG_Install_DaoBones.label>
+  <CVG_Install_DaoBones.description>Instala los huesos del Dao. Necesita un altar de injerto del Dao.</CVG_Install_DaoBones.description>
+  <CVG_Install_DaoBones.jobString>Instalando huesos del Dao.</CVG_Install_DaoBones.jobString>
+  <CVG_Install_DragonVeins.label>instalar venas de dragón</CVG_Install_DragonVeins.label>
+  <CVG_Install_DragonVeins.description>Instala las venas de dragón. Necesita un altar de injerto del Dao.</CVG_Install_DragonVeins.description>
+  <CVG_Install_DragonVeins.jobString>Instalando venas de dragón.</CVG_Install_DragonVeins.jobString>
+  <CVG_Install_ThousandLiEyes.label>instalar ojo de mil li</CVG_Install_ThousandLiEyes.label>
+  <CVG_Install_ThousandLiEyes.description>Instala un ojo de mil li. Necesita un altar de injerto del Dao.</CVG_Install_ThousandLiEyes.description>
+  <CVG_Install_ThousandLiEyes.jobString>Instalando ojo de mil li.</CVG_Install_ThousandLiEyes.jobString>
+  <CVG_Install_SteedLegs.label>instalar pierna del corcel de mil li</CVG_Install_SteedLegs.label>
+  <CVG_Install_SteedLegs.description>Instala una pierna del corcel de mil li. Necesita un altar de injerto del Dao.</CVG_Install_SteedLegs.description>
+  <CVG_Install_SteedLegs.jobString>Instalando pierna del corcel de mil li.</CVG_Install_SteedLegs.jobString>
+  <CVG_Remove_DaoBones.label>extraer huesos del Dao</CVG_Remove_DaoBones.label>
+  <CVG_Remove_DaoBones.description>Extrae los huesos del Dao. La médula de bestia se retira hueso a hueso y podrá engastarse en otro cuerpo más adelante.</CVG_Remove_DaoBones.description>
+  <CVG_Remove_DaoBones.jobString>Extrayendo huesos del Dao.</CVG_Remove_DaoBones.jobString>
+  <CVG_Remove_DragonVeins.label>extraer venas de dragón</CVG_Remove_DragonVeins.label>
+  <CVG_Remove_DragonVeins.description>Extrae las venas de dragón. Los hilos de qi se desenrollan del corazón y vuelven a enrollarse en su vaina de jade.</CVG_Remove_DragonVeins.description>
+  <CVG_Remove_DragonVeins.jobString>Extrayendo venas de dragón.</CVG_Remove_DragonVeins.jobString>
+</LanguageData>

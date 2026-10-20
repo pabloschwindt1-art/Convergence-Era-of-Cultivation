@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Spirit weapons (docs/modulos/DEFENSA.md §1): made of spirit metal at the spirit forge, with spirit grade (CompSpiritGrade). -->
+
+  <StuffCategoryDef>
+    <defName>CVG_SpiritMetal</defName>
+    <label>spirit metal</label>
+  </StuffCategoryDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>CVG_SpiritSword</defName>
+    <label>spirit sword</label>
+    <description>A straight sword folded with qi in a spirit forge. The Azure Peak Sword Sect teaches that every jian is a distant descendant of Ganjiang and Moye, the twin swords of legend, and that a sword without qi is only a long knife. Spirit grade 2: it cuts through the protection of cultivators of lower realms.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/SpiritSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Medieval</techLevel>
+    <weaponTags>
+      <li>CVG_SpiritWeapon</li>
+    </weaponTags>
+    <costStuffCount>80</costStuffCount>
+    <costList>
+      <CVG_SpiritStone>5</CVG_SpiritStone>
+    </costList>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>1.8</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories>
+      <li>CVG_SpiritMetal</li>
+    </stuffCategories>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>26</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>26</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>CVG_SpiritForge</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <displayPriority>400</displayPriority>
+    </recipeMaker>
+    <comps>
+      <li Class="Convergence.CompProperties_SpiritGrade">
+        <grade>2</grade>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>CVG_SpiritSabre</defName>
+    <label>spirit sabre</label>
+    <description>A curved, heavy-edged sabre forged with qi. It was the weapon of the outer disciples who held the passes during the Iron Calamity, when there was no time to train them in the subtler sword. Spirit grade 2.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/SpiritSabre</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Medieval</techLevel>
+    <weaponTags>
+      <li>CVG_SpiritWeapon</li>
+    </weaponTags>
+    <costStuffCount>80</costStuffCount>
+    <costList>
+      <CVG_SpiritStone>5</CVG_SpiritStone>
+    </costList>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>1.8</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories>
+      <li>CVG_SpiritMetal</li>
+    </stuffCategories>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>29</power>
+        <cooldownTime>2.4</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>CVG_SpiritForge</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <displayPriority>400</displayPriority>
+    </recipeMaker>
+    <comps>
+      <li Class="Convergence.CompProperties_SpiritGrade">
+        <grade>2</grade>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>CVG_SpiritSpear</defName>
+    <label>spirit spear</label>
+    <description>A long spear whose point carries qi. Folding the long shaft without cracking it was the first secret that the smiths of Jiuxiao kept from mortals. Spirit grade 2.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/SpiritSpear</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Medieval</techLevel>
+    <weaponTags>
+      <li>CVG_SpiritWeapon</li>
+    </weaponTags>
+    <costStuffCount>80</costStuffCount>
+    <costList>
+      <CVG_SpiritStone>5</CVG_SpiritStone>
+    </costList>
+    <statBases>
+      <WorkToMake>22000</WorkToMake>
+      <Mass>1.8</Mass>
+    </statBases>
+    <equippedAngleOffset>-20</equippedAngleOffset>
+    <stuffCategories>
+      <li>CVG_SpiritMetal</li>
+    </stuffCategories>
+    <tools>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>31</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>CVG_SpiritForge</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <displayPriority>400</displayPriority>
+    </recipeMaker>
+    <comps>
+      <li Class="Convergence.CompProperties_SpiritGrade">
+        <grade>2</grade>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RequiresWorkbenchLevel">
+        <level>2</level>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>CVG_FlyingSword</defName>
+    <label>flying sword</label>
+    <description>A treasure sword that answers its master's qi. In Jiuxiao the immortals rode such swords between the nine heavens, and the Azure Peak Sword Sect says the art was lost in the Great Rupture. The art of riding it was lost in the Great Rupture; today it is wielded in hand. Spirit grade 3.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/FlyingSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Medieval</techLevel>
+    <weaponTags>
+      <li>CVG_SpiritWeapon</li>
+    </weaponTags>
+    <costStuffCount>80</costStuffCount>
+    <costList>
+      <CVG_SpiritStone>5</CVG_SpiritStone>
+    </costList>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>1.8</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories>
+      <li>CVG_SpiritMetal</li>
+    </stuffCategories>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>34</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>34</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>CVG_SpiritForge</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <displayPriority>400</displayPriority>
+    </recipeMaker>
+    <comps>
+      <li Class="Convergence.CompProperties_SpiritGrade">
+        <grade>3</grade>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RequiresWorkbenchLevel">
+        <level>3</level>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>CVG_SpiritBow</defName>
+    <label>spirit bow</label>
+    <description>A bow of spirit metal and beast sinew. Hunters of spirit beasts made the first ones after learning that a common arrow only angers a beast that has opened its meridians. Its arrows carry qi. Spirit grade 2.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/SpiritBow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Bow_Large</soundInteract>
+    <costStuffCount>60</costStuffCount>
+    <stuffCategories>
+      <li>CVG_SpiritMetal</li>
+    </stuffCategories>
+    <costList>
+      <CVG_SpiritStone>4</CVG_SpiritStone>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <statBases>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>1.6</Mass>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.8</AccuracyShort>
+      <AccuracyMedium>0.7</AccuracyMedium>
+      <AccuracyLong>0.55</AccuracyLong>
+      <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>CVG_SpiritWeapon</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>CVG_SpiritForge</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <displayPriority>410</displayPriority>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>CVG_Arrow_Spirit</defaultProjectile>
+        <warmupTime>1.4</warmupTime>
+        <range>32.9</range>
+        <soundCast>Bow_Large</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <comps>
+      <li Class="Convergence.CompProperties_SpiritGrade">
+        <grade>2</grade>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RequiresWorkbenchLevel">
+        <level>2</level>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>CVG_Arrow_Spirit</defName>
+    <label>spirit arrow</label>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(150, 220, 255)</color>
+    </graphicData>
+    <projectile>
+      <damageDef>Arrow</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+      <armorPenetrationBase>0.3</armorPenetrationBase>
+      <stoppingPower>1.5</stoppingPower>
+      <speed>55</speed>
+    </projectile>
+  </ThingDef>
+
+</Defs>

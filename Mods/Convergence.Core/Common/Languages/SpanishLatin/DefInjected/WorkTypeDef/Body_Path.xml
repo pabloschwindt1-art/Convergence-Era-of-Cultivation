@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_BodyTempering.labelShort>templar cuerpo</CVG_BodyTempering.labelShort>
+  <CVG_BodyTempering.pawnLabel>Templador</CVG_BodyTempering.pawnLabel>
+  <CVG_BodyTempering.gerundLabel>templando el cuerpo</CVG_BodyTempering.gerundLabel>
+  <CVG_BodyTempering.description>Entrenar en los aparatos de templado gastando sangre-qi para avanzar en el camino del cuerpo. Solo pueden hacerlo los colonos sin raíz espiritual que empezaron ese camino (comiendo carne o sangre de bestia espiritual).</CVG_BodyTempering.description>
+  <CVG_BodyTempering.verb>Templar</CVG_BodyTempering.verb>
+</LanguageData>

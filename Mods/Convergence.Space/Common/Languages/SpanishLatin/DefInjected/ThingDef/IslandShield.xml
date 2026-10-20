@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_ArkProtectiveFormation.label>formación protectora del arca</CVG_ArkProtectiveFormation.label>
+  <CVG_ArkProtectiveFormation.description>Un anillo de pilares de jade en torno a un núcleo de acero espiritual que levanta una cúpula de luz fría sobre la isla. Detiene flechas, virotes y proyectiles, pero no a la gente que ya subió a bordo. Hay que cargarla antes de usarla, y bebe de la red de qi en lugar de la red eléctrica. Una isla puede llevar dos. La Corte Celestial hizo sus cúpulas gruesas y aun así perdió, por eso las siguientes se construyeron para poder reconstruirse.</CVG_ArkProtectiveFormation.description>
+  <CVG_ArkProtectiveFormation.comps.CompInteractable_GravshipShieldGenerator.jobString>activar</CVG_ArkProtectiveFormation.comps.CompInteractable_GravshipShieldGenerator.jobString>
+</LanguageData>

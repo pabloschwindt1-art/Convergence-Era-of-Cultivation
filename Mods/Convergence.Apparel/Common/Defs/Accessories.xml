@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Accessories (docs/modulos/CONTENIDO_TOI_ACS.md): pendant, rings, earrings, belt and gourd, inspired by the storage rings and
+       jade pendants of Tale of Immortal and the treasures of ACS. Own layers (CVG_Neck/Finger/Ear/Waist, ApparelLayers.xml), so they
+       never conflict with clothes; no worn graphic, so they are not drawn over the clothes. Rings: the spatial ring goes on the
+       left hand and the others on the right, so two can be worn. Earrings resonate with the root (StatPart_ElementalResonance). -->
+  <ThingDef Name="CVG_AccessoryBase" ParentName="ApparelMakeableBase" Abstract="True">
+    <techLevel>Medieval</techLevel>
+    <tradeTags><li>CVG_Accessory</li><li>Artifact</li></tradeTags>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <tags><li>CVG_Accessory</li></tags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="CVG_AccessoryBase">
+    <defName>CVG_JadePendant</defName>
+    <label>jade pendant</label>
+    <description>A disc of jade carved with a coiled dragon and hung on a red cord. Every child of Jiuxiao received one at their first birthday: jade was believed to drink bad luck and to crack in place of its wearer. Worn against the skin it cools the heart and lets qi settle a little faster.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/Accessory/JadePendant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <thingCategories Inherit="False"><li>ApparelMisc</li></thingCategories>
+    <costList><Jade>8</Jade><CVG_SpiritStone>1</CVG_SpiritStone></costList>
+    <statBases>
+      <WorkToMake>4000</WorkToMake>
+      <Mass>0.1</Mass>
+    </statBases>
+    <equippedStatOffsets><CVG_QiRegen>0.4</CVG_QiRegen><MentalBreakThreshold>-0.02</MentalBreakThreshold></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>Neck</li></bodyPartGroups>
+      <layers><li>CVG_Neck</li></layers>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers Inherit="False"><li>TableSculpting</li><li>CraftingSpot</li></recipeUsers>
+      <workSkill>Artistic</workSkill>
+      <skillRequirements><Artistic>4</Artistic></skillRequirements>
+      <displayPriority>600</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="CVG_AccessoryBase">
+    <defName>CVG_HeartGuardAmulet</defName>
+    <label>Dao heart amulet</label>
+    <description>A silver locket holding a slip of paper with a single character, xin, heart, written by a master on the day of a disciple's first breakthrough. The Buddhist sects call a steady heart the root of every realm; the demonic paths say the same, and that is why they try so hard to break it. It steadies the mind and helps at the bottleneck.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/Accessory/HeartGuardAmulet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <thingCategories Inherit="False"><li>ApparelMisc</li></thingCategories>
+    <costList><Silver>30</Silver><CVG_SpiritStone>3</CVG_SpiritStone></costList>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <Mass>0.15</Mass>
+    </statBases>
+    <equippedStatOffsets><MentalBreakThreshold>-0.05</MentalBreakThreshold><CVG_BreakthroughChance>0.03</CVG_BreakthroughChance></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>Neck</li></bodyPartGroups>
+      <layers><li>CVG_Neck</li></layers>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers Inherit="False"><li>FueledSmithy</li><li>ElectricSmithy</li><li>CraftingSpot</li></recipeUsers>
+      <researchPrerequisite>CVG_Research_QiBreathing</researchPrerequisite>
+      <workSkill>Crafting</workSkill>
+      <skillRequirements><Crafting>6</Crafting></skillRequirements>
+      <displayPriority>600</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="CVG_AccessoryBase">
+    <defName>CVG_SpaceRing</defName>
+    <label>spatial ring</label>
+    <description>A plain ring whose band folds a pocket of space the size of a storeroom. Every cultivator of Jiuxiao carried one, and the first thing a robber did with a fallen cultivator was cut off the finger. Rebuilding the art after the Convergence took the Pavilion of Ten Thousand Treasures a decade; it still only folds a fraction of the old space. Worn on the left hand: it greatly increases how much its wearer can carry.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/Accessory/SpaceRing</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <thingCategories Inherit="False"><li>ApparelMisc</li></thingCategories>
+    <costList><Gold>10</Gold><CVG_SpiritStone>10</CVG_SpiritStone></costList>
+    <statBases>
+      <WorkToMake>16000</WorkToMake>
+      <Mass>0.05</Mass>
+    </statBases>
+    <equippedStatOffsets><CarryingCapacity>60</CarryingCapacity></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>LeftHand</li></bodyPartGroups>
+      <layers><li>CVG_Finger</li></layers>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers Inherit="False"><li>FueledSmithy</li><li>ElectricSmithy</li></recipeUsers>
+      <researchPrerequisite>CVG_Research_Foundation</researchPrerequisite>
+      <workSkill>Crafting</workSkill>
+      <skillRequirements><Crafting>8</Crafting></skillRequirements>
+      <displayPriority>600</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="CVG_AccessoryBase">
+    <defName>CVG_QiGatheringRing</defName>
+    <label>qi gathering ring</label>
+    <description>A silver ring set with a chip of spirit stone and engraved inside with a miniature gathering array. Outer disciples saved for months to buy one at the sect market. Worn on the right hand, so it can be worn with a spatial ring; the dantian holds a little more qi and refills a little faster.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/Accessory/QiGatheringRing</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <thingCategories Inherit="False"><li>ApparelMisc</li></thingCategories>
+    <costList><Silver>20</Silver><CVG_SpiritStone>4</CVG_SpiritStone></costList>
+    <statBases>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>0.05</Mass>
+    </statBases>
+    <equippedStatOffsets><CVG_QiMax>25</CVG_QiMax><CVG_QiRegen>0.3</CVG_QiRegen></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>RightHand</li></bodyPartGroups>
+      <layers><li>CVG_Finger</li></layers>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers Inherit="False"><li>FueledSmithy</li><li>ElectricSmithy</li></recipeUsers>
+      <researchPrerequisite>CVG_Research_QiBreathing</researchPrerequisite>
+      <workSkill>Crafting</workSkill>
+      <skillRequirements><Crafting>6</Crafting></skillRequirements>
+      <displayPriority>600</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="CVG_AccessoryBase">
+    <defName>CVG_TalismanBelt</defName>
+    <label>talisman belt</label>
+    <description>A leather belt hung with yellow paper talismans in lacquered sleeves, each one a ward written in cinnabar. Taoist exorcists of the Longhu mountains wore them on every road at night; the talismans burn out one by one taking the blows meant for the wearer, and are written again at dawn. Slightly reduces the damage its wearer takes.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/Accessory/TalismanBelt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <thingCategories Inherit="False"><li>ApparelUtility</li></thingCategories>
+    <stuffCategories><li>Leathery</li></stuffCategories>
+    <costStuffCount>20</costStuffCount>
+    <costList><CVG_SpiritStone>2</CVG_SpiritStone></costList>
+    <statBases>
+      <WorkToMake>6000</WorkToMake>
+      <Mass>0.5</Mass>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+    <equippedStatOffsets><IncomingDamageFactor>-0.05</IncomingDamageFactor></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>Waist</li></bodyPartGroups>
+      <layers><li>CVG_Waist</li></layers>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers Inherit="False"><li>HandTailoringBench</li><li>ElectricTailoringBench</li></recipeUsers>
+      <workSkill>Crafting</workSkill>
+      <skillRequirements><Crafting>4</Crafting></skillRequirements>
+      <displayPriority>600</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="CVG_AccessoryBase">
+    <defName>CVG_MedicineGourd</defName>
+    <label>medicine gourd</label>
+    <description>A dried bottle gourd lacquered and hung at the hip, the emblem of Li Tieguai, the crippled beggar among the Eight Immortals, whose gourd never ran out of medicine. Healers carry one full of herbal wine and sip from it on the road; it helps the body fight off sickness and holds a few things besides.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/Accessory/MedicineGourd</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <thingCategories Inherit="False"><li>ApparelUtility</li></thingCategories>
+    <costList><WoodLog>15</WoodLog><CVG_SpiritStone>1</CVG_SpiritStone></costList>
+    <statBases>
+      <WorkToMake>3000</WorkToMake>
+      <Mass>0.6</Mass>
+    </statBases>
+    <equippedStatOffsets><ImmunityGainSpeed>0.08</ImmunityGainSpeed><CarryingCapacity>10</CarryingCapacity></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>Waist</li></bodyPartGroups>
+      <layers><li>CVG_Waist</li></layers>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers Inherit="False"><li>CraftingSpot</li></recipeUsers>
+      <workSkill>Crafting</workSkill>
+      <skillRequirements><Crafting>2</Crafting></skillRequirements>
+      <displayPriority>600</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="CVG_AccessoryBase">
+    <defName>CVG_Earrings_Metal</defName>
+    <label>white gold earrings of metal</label>
+    <description>Earrings of white gold cast with the sign of Metal. Metal is the element of the autumn and of the sword, and the smiths of Gengjin say that a Metal root hears a blade's intent the way a musician hears a string; the earrings keep that ear sharp. Cultivation +15% for a spirit root with Metal.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/Accessory/Earrings_Metal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <thingCategories Inherit="False"><li>ApparelMisc</li></thingCategories>
+    <costList><Silver>10</Silver><CVG_SpiritStone>1</CVG_SpiritStone></costList>
+    <statBases>
+      <WorkToMake>5000</WorkToMake>
+      <Mass>0.05</Mass>
+    </statBases>
+    <equippedStatOffsets><CVG_QiRegen>0.1</CVG_QiRegen></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>UpperHead</li></bodyPartGroups>
+      <layers><li>CVG_Ear</li></layers>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers Inherit="False"><li>FueledSmithy</li><li>ElectricSmithy</li><li>CraftingSpot</li></recipeUsers>
+      <researchPrerequisite>CVG_Research_QiBreathing</researchPrerequisite>
+      <workSkill>Crafting</workSkill>
+      <skillRequirements><Crafting>5</Crafting></skillRequirements>
+      <displayPriority>600</displayPriority>
+    </recipeMaker>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ElementalResonance">
+        <element>CVG_Element_Metal</element>
+        <factor>1.15</factor>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="CVG_AccessoryBase">
+    <defName>CVG_Earrings_Wood</defName>
+    <label>green jade earrings of wood</label>
+    <description>Earrings of green jade carved with the sign of Wood. Wood is the element of spring and of growth, and the herbalists of the Qilin Valley wear these while they tend the spirit gardens, so that the life in the plants and the life in their meridians grow in step. Cultivation +15% for a spirit root with Wood.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/Accessory/Earrings_Wood</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <thingCategories Inherit="False"><li>ApparelMisc</li></thingCategories>
+    <costList><Silver>10</Silver><CVG_SpiritStone>1</CVG_SpiritStone></costList>
+    <statBases>
+      <WorkToMake>5000</WorkToMake>
+      <Mass>0.05</Mass>
+    </statBases>
+    <equippedStatOffsets><CVG_QiRegen>0.1</CVG_QiRegen></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>UpperHead</li></bodyPartGroups>
+      <layers><li>CVG_Ear</li></layers>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers Inherit="False"><li>FueledSmithy</li><li>ElectricSmithy</li><li>CraftingSpot</li></recipeUsers>
+      <researchPrerequisite>CVG_Research_QiBreathing</researchPrerequisite>
+      <workSkill>Crafting</workSkill>
+      <skillRequirements><Crafting>5</Crafting></skillRequirements>
+      <displayPriority>600</displayPriority>
+    </recipeMaker>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ElementalResonance">
+        <element>CVG_Element_Wood</element>
+        <factor>1.15</factor>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="CVG_AccessoryBase">
+    <defName>CVG_Earrings_Water</defName>
+    <label>river pearl earrings of water</label>
+    <description>Earrings of river pearl strung with the sign of Water. Water is the element of winter and of patience, and the Black Tortoise lineage says that water does not fight the rock, it outlasts it; a Water root wearing them gathers qi as slowly and as surely as a lake fills. Cultivation +15% for a spirit root with Water.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/Accessory/Earrings_Water</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <thingCategories Inherit="False"><li>ApparelMisc</li></thingCategories>
+    <costList><Silver>10</Silver><CVG_SpiritStone>1</CVG_SpiritStone></costList>
+    <statBases>
+      <WorkToMake>5000</WorkToMake>
+      <Mass>0.05</Mass>
+    </statBases>
+    <equippedStatOffsets><CVG_QiRegen>0.1</CVG_QiRegen></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>UpperHead</li></bodyPartGroups>
+      <layers><li>CVG_Ear</li></layers>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers Inherit="False"><li>FueledSmithy</li><li>ElectricSmithy</li><li>CraftingSpot</li></recipeUsers>
+      <researchPrerequisite>CVG_Research_QiBreathing</researchPrerequisite>
+      <workSkill>Crafting</workSkill>
+      <skillRequirements><Crafting>5</Crafting></skillRequirements>
+      <displayPriority>600</displayPriority>
+    </recipeMaker>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ElementalResonance">
+        <element>CVG_Element_Water</element>
+        <factor>1.15</factor>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="CVG_AccessoryBase">
+    <defName>CVG_Earrings_Fire</defName>
+    <label>cinnabar earrings of fire</label>
+    <description>Earrings of cinnabar set in red gold with the sign of Fire. Fire is the element of summer and of the alchemist's furnace; the Vermilion Bird clans gave them to children whose roots burned too hot, so that the fire would rise steadily instead of all at once. Cultivation +15% for a spirit root with Fire.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/Accessory/Earrings_Fire</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <thingCategories Inherit="False"><li>ApparelMisc</li></thingCategories>
+    <costList><Silver>10</Silver><CVG_SpiritStone>1</CVG_SpiritStone></costList>
+    <statBases>
+      <WorkToMake>5000</WorkToMake>
+      <Mass>0.05</Mass>
+    </statBases>
+    <equippedStatOffsets><CVG_QiRegen>0.1</CVG_QiRegen></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>UpperHead</li></bodyPartGroups>
+      <layers><li>CVG_Ear</li></layers>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers Inherit="False"><li>FueledSmithy</li><li>ElectricSmithy</li><li>CraftingSpot</li></recipeUsers>
+      <researchPrerequisite>CVG_Research_QiBreathing</researchPrerequisite>
+      <workSkill>Crafting</workSkill>
+      <skillRequirements><Crafting>5</Crafting></skillRequirements>
+      <displayPriority>600</displayPriority>
+    </recipeMaker>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ElementalResonance">
+        <element>CVG_Element_Fire</element>
+        <factor>1.15</factor>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="CVG_AccessoryBase">
+    <defName>CVG_Earrings_Earth</defName>
+    <label>yellow agate earrings of earth</label>
+    <description>Earrings of yellow agate cut with the sign of Earth. Earth is the element of the centre, the one that holds the other four, and the mountain sects bury new pairs under the gate stone for a season before wearing them; an Earth root feels the weight of the mountain behind its breathing. Cultivation +15% for a spirit root with Earth.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/Accessory/Earrings_Earth</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <thingCategories Inherit="False"><li>ApparelMisc</li></thingCategories>
+    <costList><Silver>10</Silver><CVG_SpiritStone>1</CVG_SpiritStone></costList>
+    <statBases>
+      <WorkToMake>5000</WorkToMake>
+      <Mass>0.05</Mass>
+    </statBases>
+    <equippedStatOffsets><CVG_QiRegen>0.1</CVG_QiRegen></equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>UpperHead</li></bodyPartGroups>
+      <layers><li>CVG_Ear</li></layers>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers Inherit="False"><li>FueledSmithy</li><li>ElectricSmithy</li><li>CraftingSpot</li></recipeUsers>
+      <researchPrerequisite>CVG_Research_QiBreathing</researchPrerequisite>
+      <workSkill>Crafting</workSkill>
+      <skillRequirements><Crafting>5</Crafting></skillRequirements>
+      <displayPriority>600</displayPriority>
+    </recipeMaker>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ElementalResonance">
+        <element>CVG_Element_Earth</element>
+        <factor>1.15</factor>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

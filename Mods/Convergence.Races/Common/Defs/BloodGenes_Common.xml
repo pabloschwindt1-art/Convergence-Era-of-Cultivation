@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Base of the blood genes by tier (I trace .. IV ancestral). They level up with purification (Core: DefModExtension_BloodlineGeneTier). -->
+  <GeneDef Name="CVG_BloodTierGeneBase" Abstract="True">
+    <displayCategory>CVG_Bloodline</displayCategory>
+    <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    <selectionWeight>0</selectionWeight>
+  </GeneDef>
+
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_BeastVitality</defName>
+    <label>beast vitality</label>
+    <description>The blood of the beast closes wounds and dulls pain, but it burns food.</description>
+    <order>0</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_BeastVitality_I</defName>
+    <label>beast vitality I</label>
+    <description>The blood of the beast closes wounds and dulls pain, but it burns food. Hunters of the Black Jade Mountains say a beast-blooded child never cries over a cut, only over an empty bowl.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_BeastVitality</iconPath>
+    <iconColor>(0.7, 0.7, 0.7)</iconColor>
+    <displayOrderInCategory>1</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <exclusionTags>
+      <li>CVG_BloodGene_BeastVitality</li>
+    </exclusionTags>
+    <statOffsets>
+      <PainShockThreshold>0.03</PainShockThreshold>
+    </statOffsets>
+    <statFactors>
+      <InjuryHealingFactor>1.1</InjuryHealingFactor>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_BeastVitality</group>
+        <tier>1</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_BeastVitality_II</defName>
+    <label>beast vitality II</label>
+    <description>The blood of the beast closes wounds and dulls pain, but it burns food. Hunters of the Black Jade Mountains say a beast-blooded child never cries over a cut, only over an empty bowl.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_BeastVitality</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>2</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <exclusionTags>
+      <li>CVG_BloodGene_BeastVitality</li>
+    </exclusionTags>
+    <statOffsets>
+      <PainShockThreshold>0.06</PainShockThreshold>
+    </statOffsets>
+    <statFactors>
+      <InjuryHealingFactor>1.2</InjuryHealingFactor>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_BeastVitality</group>
+        <tier>2</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_BeastVitality_III</defName>
+    <label>beast vitality III</label>
+    <description>The blood of the beast closes wounds and dulls pain, but it burns food. Hunters of the Black Jade Mountains say a beast-blooded child never cries over a cut, only over an empty bowl.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_BeastVitality</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>3</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_BeastVitality</li>
+    </exclusionTags>
+    <statOffsets>
+      <PainShockThreshold>0.1</PainShockThreshold>
+    </statOffsets>
+    <statFactors>
+      <InjuryHealingFactor>1.35</InjuryHealingFactor>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_BeastVitality</group>
+        <tier>3</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_BeastVitality_IV</defName>
+    <label>beast vitality IV</label>
+    <description>The blood of the beast closes wounds and dulls pain, but it burns food. Hunters of the Black Jade Mountains say a beast-blooded child never cries over a cut, only over an empty bowl.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_BeastVitality</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>4</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_BeastVitality</li>
+    </exclusionTags>
+    <statOffsets>
+      <PainShockThreshold>0.15</PainShockThreshold>
+    </statOffsets>
+    <statFactors>
+      <InjuryHealingFactor>1.5</InjuryHealingFactor>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_BeastVitality</group>
+        <tier>4</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_KeenSenses</defName>
+    <label>keen senses</label>
+    <description>Eyes and ears of a hunter. Low purity leaves the senses raw: noise and glare fray the nerves.</description>
+    <order>1</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_KeenSenses_I</defName>
+    <label>keen senses I</label>
+    <description>Eyes and ears of a hunter. Low purity leaves the senses raw: noise and glare fray the nerves.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_KeenSenses</iconPath>
+    <iconColor>(0.7, 0.7, 0.7)</iconColor>
+    <displayOrderInCategory>11</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_KeenSenses</li>
+    </exclusionTags>
+    <statOffsets>
+      <ShootingAccuracyPawn>1</ShootingAccuracyPawn>
+      <MentalBreakThreshold>0.04</MentalBreakThreshold>
+    </statOffsets>
+    <capMods>
+      <li>
+        <capacity>Sight</capacity>
+        <offset>0.03</offset>
+      </li>
+    </capMods>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_KeenSenses</group>
+        <tier>1</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_KeenSenses_II</defName>
+    <label>keen senses II</label>
+    <description>Eyes and ears of a hunter. Low purity leaves the senses raw: noise and glare fray the nerves.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_KeenSenses</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>12</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_KeenSenses</li>
+    </exclusionTags>
+    <statOffsets>
+      <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
+      <MentalBreakThreshold>0.03</MentalBreakThreshold>
+    </statOffsets>
+    <capMods>
+      <li>
+        <capacity>Sight</capacity>
+        <offset>0.06</offset>
+      </li>
+    </capMods>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_KeenSenses</group>
+        <tier>2</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_KeenSenses_III</defName>
+    <label>keen senses III</label>
+    <description>Eyes and ears of a hunter. Low purity leaves the senses raw: noise and glare fray the nerves.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_KeenSenses</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>13</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_KeenSenses</li>
+    </exclusionTags>
+    <statOffsets>
+      <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+      <MentalBreakThreshold>0.01</MentalBreakThreshold>
+    </statOffsets>
+    <capMods>
+      <li>
+        <capacity>Sight</capacity>
+        <offset>0.1</offset>
+      </li>
+    </capMods>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_KeenSenses</group>
+        <tier>3</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_KeenSenses_IV</defName>
+    <label>keen senses IV</label>
+    <description>Eyes and ears of a hunter. Low purity leaves the senses raw: noise and glare fray the nerves.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_KeenSenses</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>14</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_KeenSenses</li>
+    </exclusionTags>
+    <statOffsets>
+      <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+    </statOffsets>
+    <capMods>
+      <li>
+        <capacity>Sight</capacity>
+        <offset>0.15</offset>
+      </li>
+    </capMods>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_KeenSenses</group>
+        <tier>4</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_BloodLongevity</defName>
+    <label>blood longevity</label>
+    <description>The body ages slowly, as the old beasts did; the price is a weaker line of descendants.</description>
+    <order>2</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_BloodLongevity_I</defName>
+    <label>blood longevity I</label>
+    <description>The body ages slowly, as the old beasts did; the price is a weaker line of descendants. The ancient beasts of Jiuxiao counted their years in centuries, and their blood still remembers the habit.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_BloodLongevity</iconPath>
+    <iconColor>(0.7, 0.7, 0.7)</iconColor>
+    <displayOrderInCategory>21</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_BloodLongevity</li>
+    </exclusionTags>
+    <statFactors>
+      <LifespanFactor>1.1</LifespanFactor>
+      <Fertility>0.7</Fertility>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_BloodLongevity</group>
+        <tier>1</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_BloodLongevity_II</defName>
+    <label>blood longevity II</label>
+    <description>The body ages slowly, as the old beasts did; the price is a weaker line of descendants. The ancient beasts of Jiuxiao counted their years in centuries, and their blood still remembers the habit.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_BloodLongevity</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>22</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_BloodLongevity</li>
+    </exclusionTags>
+    <statFactors>
+      <LifespanFactor>1.2</LifespanFactor>
+      <Fertility>0.8</Fertility>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_BloodLongevity</group>
+        <tier>2</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_BloodLongevity_III</defName>
+    <label>blood longevity III</label>
+    <description>The body ages slowly, as the old beasts did; the price is a weaker line of descendants. The ancient beasts of Jiuxiao counted their years in centuries, and their blood still remembers the habit.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_BloodLongevity</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>23</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_BloodLongevity</li>
+    </exclusionTags>
+    <statFactors>
+      <LifespanFactor>1.35</LifespanFactor>
+      <Fertility>0.9</Fertility>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_BloodLongevity</group>
+        <tier>3</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_BloodLongevity_IV</defName>
+    <label>blood longevity IV</label>
+    <description>The body ages slowly, as the old beasts did; the price is a weaker line of descendants. The ancient beasts of Jiuxiao counted their years in centuries, and their blood still remembers the habit.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_BloodLongevity</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>24</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_BloodLongevity</li>
+    </exclusionTags>
+    <statFactors>
+      <LifespanFactor>1.5</LifespanFactor>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_BloodLongevity</group>
+        <tier>4</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_BeastInstinct</defName>
+    <label>beast instinct</label>
+    <description>Claws in the soul: harder blows and quicker reflexes, and a temper that looks for fights.</description>
+    <order>3</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_BeastInstinct_I</defName>
+    <label>beast instinct I</label>
+    <description>Claws in the soul: harder blows and quicker reflexes, and a temper that looks for fights. The Ancient Dragon Clan calls it the old hunger, and keeps its young apart until they learn to master it.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_BeastInstinct</iconPath>
+    <iconColor>(0.7, 0.7, 0.7)</iconColor>
+    <displayOrderInCategory>31</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_BeastInstinct</li>
+    </exclusionTags>
+    <statOffsets>
+      <MeleeDodgeChance>2</MeleeDodgeChance>
+    </statOffsets>
+    <statFactors>
+      <MeleeDamageFactor>1.05</MeleeDamageFactor>
+    </statFactors>
+    <socialFightChanceFactor>2.0</socialFightChanceFactor>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_BeastInstinct</group>
+        <tier>1</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_BeastInstinct_II</defName>
+    <label>beast instinct II</label>
+    <description>Claws in the soul: harder blows and quicker reflexes, and a temper that looks for fights. The Ancient Dragon Clan calls it the old hunger, and keeps its young apart until they learn to master it.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_BeastInstinct</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>32</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_BeastInstinct</li>
+    </exclusionTags>
+    <statOffsets>
+      <MeleeDodgeChance>4</MeleeDodgeChance>
+    </statOffsets>
+    <statFactors>
+      <MeleeDamageFactor>1.1</MeleeDamageFactor>
+    </statFactors>
+    <socialFightChanceFactor>1.6</socialFightChanceFactor>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_BeastInstinct</group>
+        <tier>2</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_BeastInstinct_III</defName>
+    <label>beast instinct III</label>
+    <description>Claws in the soul: harder blows and quicker reflexes, and a temper that looks for fights. The Ancient Dragon Clan calls it the old hunger, and keeps its young apart until they learn to master it.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_BeastInstinct</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>33</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_BeastInstinct</li>
+    </exclusionTags>
+    <statOffsets>
+      <MeleeDodgeChance>6</MeleeDodgeChance>
+    </statOffsets>
+    <statFactors>
+      <MeleeDamageFactor>1.15</MeleeDamageFactor>
+    </statFactors>
+    <socialFightChanceFactor>1.3</socialFightChanceFactor>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_BeastInstinct</group>
+        <tier>3</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_BeastInstinct_IV</defName>
+    <label>beast instinct IV</label>
+    <description>Claws in the soul: harder blows and quicker reflexes, and a temper that looks for fights. The Ancient Dragon Clan calls it the old hunger, and keeps its young apart until they learn to master it.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_BeastInstinct</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>34</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_BeastInstinct</li>
+    </exclusionTags>
+    <statOffsets>
+      <MeleeDodgeChance>8</MeleeDodgeChance>
+    </statOffsets>
+    <statFactors>
+      <MeleeDamageFactor>1.2</MeleeDamageFactor>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_BeastInstinct</group>
+        <tier>4</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_QiResonance</defName>
+    <label>qi resonance</label>
+    <description>The blood hums with qi: faster cultivation and a larger dantian, though the qi is restless at low purity. Only matters to awakened cultivators.</description>
+    <order>4</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_QiResonance_I</defName>
+    <label>qi resonance I</label>
+    <description>The blood hums with qi: faster cultivation and a larger dantian, though the qi is restless at low purity. Only matters to awakened cultivators.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_QiResonance</iconPath>
+    <iconColor>(0.7, 0.7, 0.7)</iconColor>
+    <displayOrderInCategory>41</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_QiResonance</li>
+    </exclusionTags>
+    <statOffsets>
+      <CVG_BreakthroughChance>-0.05</CVG_BreakthroughChance>
+    </statOffsets>
+    <statFactors>
+      <CVG_CultivationSpeed>1.05</CVG_CultivationSpeed>
+      <CVG_QiMax>1.05</CVG_QiMax>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_QiResonance</group>
+        <tier>1</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_QiResonance_II</defName>
+    <label>qi resonance II</label>
+    <description>The blood hums with qi: faster cultivation and a larger dantian, though the qi is restless at low purity. Only matters to awakened cultivators.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_QiResonance</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>42</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_QiResonance</li>
+    </exclusionTags>
+    <statOffsets>
+      <CVG_BreakthroughChance>-0.03</CVG_BreakthroughChance>
+    </statOffsets>
+    <statFactors>
+      <CVG_CultivationSpeed>1.1</CVG_CultivationSpeed>
+      <CVG_QiMax>1.1</CVG_QiMax>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_QiResonance</group>
+        <tier>2</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_QiResonance_III</defName>
+    <label>qi resonance III</label>
+    <description>The blood hums with qi: faster cultivation and a larger dantian, though the qi is restless at low purity. Only matters to awakened cultivators.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_QiResonance</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>43</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_QiResonance</li>
+    </exclusionTags>
+    <statOffsets>
+      <CVG_BreakthroughChance>-0.01</CVG_BreakthroughChance>
+    </statOffsets>
+    <statFactors>
+      <CVG_CultivationSpeed>1.2</CVG_CultivationSpeed>
+      <CVG_QiMax>1.15</CVG_QiMax>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_QiResonance</group>
+        <tier>3</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_QiResonance_IV</defName>
+    <label>qi resonance IV</label>
+    <description>The blood hums with qi: faster cultivation and a larger dantian, though the qi is restless at low purity. Only matters to awakened cultivators.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_QiResonance</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>44</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_QiResonance</li>
+    </exclusionTags>
+    <statFactors>
+      <CVG_CultivationSpeed>1.3</CVG_CultivationSpeed>
+      <CVG_QiMax>1.25</CVG_QiMax>
+    </statFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_QiResonance</group>
+        <tier>4</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+</Defs>

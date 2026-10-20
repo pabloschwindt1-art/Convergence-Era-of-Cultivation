@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_FieryPlumes</defName>
+    <label>fiery plumes</label>
+    <description>Feathers born of fire: flames hurt less, and at ancestral purity not at all.</description>
+    <bloodline>CVG_Bloodline_Phoenix</bloodline>
+    <order>8</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_FieryPlumes_I</defName>
+    <label>fiery plumes I</label>
+    <description>Feathers born of fire: flames hurt less, and at ancestral purity not at all. The Vermilion Bird shed her feathers over the south, and the families that picked them up never feared a hearth again.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_FieryPlumes</iconPath>
+    <iconColor>(0.7, 0.7, 0.7)</iconColor>
+    <displayOrderInCategory>81</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_FieryPlumes</li>
+    </exclusionTags>
+    <damageFactors>
+      <Flame>0.75</Flame>
+      <Burn>0.75</Burn>
+    </damageFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_FieryPlumes</group>
+        <tier>1</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_FieryPlumes_II</defName>
+    <label>fiery plumes II</label>
+    <description>Feathers born of fire: flames hurt less, and at ancestral purity not at all. The Vermilion Bird shed her feathers over the south, and the families that picked them up never feared a hearth again.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_FieryPlumes</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>82</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_FieryPlumes</li>
+    </exclusionTags>
+    <damageFactors>
+      <Flame>0.5</Flame>
+      <Burn>0.5</Burn>
+    </damageFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_FieryPlumes</group>
+        <tier>2</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_FieryPlumes_III</defName>
+    <label>fiery plumes III</label>
+    <description>Feathers born of fire: flames hurt less, and at ancestral purity not at all. The Vermilion Bird shed her feathers over the south, and the families that picked them up never feared a hearth again.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_FieryPlumes</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>83</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_FieryPlumes</li>
+    </exclusionTags>
+    <damageFactors>
+      <Flame>0.25</Flame>
+      <Burn>0.25</Burn>
+    </damageFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_FieryPlumes</group>
+        <tier>3</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_FieryPlumes_IV</defName>
+    <label>fiery plumes IV</label>
+    <description>Feathers born of fire: flames hurt less, and at ancestral purity not at all. The Vermilion Bird shed her feathers over the south, and the families that picked them up never feared a hearth again.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_FieryPlumes</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>84</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_FieryPlumes</li>
+    </exclusionTags>
+    <damageFactors>
+      <Flame>0</Flame>
+      <Burn>0</Burn>
+    </damageFactors>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_FieryPlumes</group>
+        <tier>4</tier>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_AshBorn</defName>
+    <label>born of ashes</label>
+    <description>After the Convergence, the body rebuilds lost parts and scars from its own ash.</description>
+    <bloodline>CVG_Bloodline_Phoenix</bloodline>
+    <order>9</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_AshBorn_II</defName>
+    <label>born of ashes II</label>
+    <description>After the Convergence, the body rebuilds lost parts and scars from its own ash. A phoenix burns and returns; its descendants only manage the second half, which is still more than most.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_AshBorn</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>92</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_AshBorn</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_AshBorn</group>
+        <tier>2</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_BloodRegeneration">
+        <intervalDays>20</intervalDays>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_AshBorn_III</defName>
+    <label>born of ashes III</label>
+    <description>After the Convergence, the body rebuilds lost parts and scars from its own ash. A phoenix burns and returns; its descendants only manage the second half, which is still more than most.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_AshBorn</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>93</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_AshBorn</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_AshBorn</group>
+        <tier>3</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_BloodRegeneration">
+        <intervalDays>10</intervalDays>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_AshBorn_IV</defName>
+    <label>born of ashes IV</label>
+    <description>After the Convergence, the body rebuilds lost parts and scars from its own ash. A phoenix burns and returns; its descendants only manage the second half, which is still more than most.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_AshBorn</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>94</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_AshBorn</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_AshBorn</group>
+        <tier>4</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_BloodRegeneration">
+        <intervalDays>4</intervalDays>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <Convergence.BloodlineGeneGroupDef>
+    <defName>CVG_GeneGroup_Nirvana</defName>
+    <label>nirvana</label>
+    <description>After the Convergence, death burns instead of ending: the phoenix rises from the pyre, healed. Pure: once in a lifetime. Ancestral: again every 180 days.</description>
+    <bloodline>CVG_Bloodline_Phoenix</bloodline>
+    <order>10</order>
+  </Convergence.BloodlineGeneGroupDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_Nirvana_III</defName>
+    <label>nirvana III</label>
+    <description>After the Convergence, death burns instead of ending: the phoenix rises from the pyre, healed. Pure: once in a lifetime. Ancestral: again every 180 days.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Nirvana</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>103</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_Nirvana</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_Nirvana</group>
+        <tier>3</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_ExtraLives">
+        <lives>1</lives>
+        <fireBurstRadius>3.9</fireBurstRadius>
+        <messageKey>CVG_Nirvana_Used</messageKey>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodTierGeneBase">
+    <defName>CVG_BloodGene_Nirvana_IV</defName>
+    <label>nirvana IV</label>
+    <description>After the Convergence, death burns instead of ending: the phoenix rises from the pyre, healed. Pure: once in a lifetime. Ancestral: again every 180 days.</description>
+    <geneClass>Convergence.Gene_Bloodline</geneClass>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Nirvana</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>104</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <exclusionTags>
+      <li>CVG_BloodGene_Nirvana</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BloodlineGeneTier">
+        <group>CVG_GeneGroup_Nirvana</group>
+        <tier>4</tier>
+      </li>
+      <li Class="Convergence.DefModExtension_ExtraLives">
+        <lives>1</lives>
+        <rechargeDays>180</rechargeDays>
+        <fireBurstRadius>3.9</fireBurstRadius>
+        <messageKey>CVG_Nirvana_Used</messageKey>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+</Defs>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Meme_SwordWay.descriptionMaker.rules.rulesStrings>
+    <li>creation(tag=meme_CVG_Meme_SwordWay)->[deity0_name] enseñó el camino de la espada.</li>
+    <li>episode(uses=1,tag=meme_CVG_Meme_SwordWay)->[deity0_name] le mostró al primer [memberName] el camino de la espada.</li>
+    <li>intro(tag=meme_CVG_Meme_SwordWay)->Los primeros [memberNamePlural] de [place_summary] [place_name] levantaron un gran [altarName] a [deity0_name].</li>
+    <li>conflict(tag=meme_CVG_Meme_SwordWay)->Un poderoso [foeLeader] despreciaba a los [memberNamePlural] y sus costumbres.</li>
+    <li>founderJoin(tag=meme_CVG_Meme_SwordWay)->[founderName], salvador de [memberName], bajó de la montaña sin nada más que el camino de la espada.</li>
+    <li>victory(tag=meme_CVG_Meme_SwordWay)->[founderName] se enfrentó al [foeLeader] y los [foeSoldiers] huyeron.</li>
+    <li>setup(tag=meme_CVG_Meme_SwordWay)->Los creyentes estaban dispersos, así que se reunieron para seguir el camino de la espada.</li>
+    <li>story(uses=1,tag=meme_CVG_Meme_SwordWay)->Los creyentes se extendieron y crecieron en número, cada uno recorriendo el camino de la espada a su manera.</li>
+    <li>lessonIntro(tag=meme_CVG_Meme_SwordWay)->Discípulo, los viejos maestros solían decir:</li>
+    <li>lesson(tag=meme_CVG_Meme_SwordWay)->la espada no es buena ni mala; la mano sí. La maestría se gana cortando y templando la Voluntad de la Espada.</li>
+    <li>lessonReinforcement(tag=meme_CVG_Meme_SwordWay)->Lo entenderás tras muchos años de práctica.</li>
+    <li>archistFact(tag=meme_CVG_Meme_SwordWay)->Los arcotecnólogos observan el camino de la espada como un jardinero observa una parra.</li>
+    <li>archistProphecy(tag=meme_CVG_Meme_SwordWay)->[inTheEnd], los arcotecnólogos se irán, y quienes siguieron el camino de la espada permanecerán.</li>
+    <li>animistFact(tag=meme_CVG_Meme_SwordWay)->Los espíritus de la tierra recorren el camino de la espada con nosotros.</li>
+  </CVG_Meme_SwordWay.descriptionMaker.rules.rulesStrings>
+  <CVG_Meme_LotusPath.descriptionMaker.rules.rulesStrings>
+    <li>creation(tag=meme_CVG_Meme_LotusPath)->[deity0_name] enseñó la senda del loto.</li>
+    <li>episode(uses=1,tag=meme_CVG_Meme_LotusPath)->[deity0_name] le mostró al primer [memberName] la senda del loto.</li>
+    <li>intro(tag=meme_CVG_Meme_LotusPath)->Los primeros [memberNamePlural] de [place_summary] [place_name] levantaron un gran [altarName] a [deity0_name].</li>
+    <li>conflict(tag=meme_CVG_Meme_LotusPath)->Un poderoso [foeLeader] despreciaba a los [memberNamePlural] y sus costumbres.</li>
+    <li>founderJoin(tag=meme_CVG_Meme_LotusPath)->[founderName], salvador de [memberName], bajó de la montaña sin nada más que la senda del loto.</li>
+    <li>victory(tag=meme_CVG_Meme_LotusPath)->[founderName] se enfrentó al [foeLeader] y los [foeSoldiers] huyeron.</li>
+    <li>setup(tag=meme_CVG_Meme_LotusPath)->Los creyentes estaban dispersos, así que se reunieron para seguir la senda del loto.</li>
+    <li>story(uses=1,tag=meme_CVG_Meme_LotusPath)->Los creyentes se extendieron y crecieron en número, cada uno recorriendo la senda del loto a su manera.</li>
+    <li>lessonIntro(tag=meme_CVG_Meme_LotusPath)->Discípulo, los viejos maestros solían decir:</li>
+    <li>lesson(tag=meme_CVG_Meme_LotusPath)->templa el cuerpo como un templo, cura sin preguntar por qué y suelta el deseo.</li>
+    <li>lessonReinforcement(tag=meme_CVG_Meme_LotusPath)->Lo entenderás tras muchos años de práctica.</li>
+    <li>archistFact(tag=meme_CVG_Meme_LotusPath)->Los arcotecnólogos observan la senda del loto como un jardinero observa una parra.</li>
+    <li>archistProphecy(tag=meme_CVG_Meme_LotusPath)->[inTheEnd], los arcotecnólogos se irán, y quienes siguieron la senda del loto permanecerán.</li>
+    <li>animistFact(tag=meme_CVG_Meme_LotusPath)->Los espíritus de la tierra recorren la senda del loto con nosotros.</li>
+  </CVG_Meme_LotusPath.descriptionMaker.rules.rulesStrings>
+  <CVG_Meme_CauldronWay.descriptionMaker.rules.rulesStrings>
+    <li>creation(tag=meme_CVG_Meme_CauldronWay)->[deity0_name] enseñó el camino del caldero.</li>
+    <li>episode(uses=1,tag=meme_CVG_Meme_CauldronWay)->[deity0_name] le mostró al primer [memberName] el camino del caldero.</li>
+    <li>intro(tag=meme_CVG_Meme_CauldronWay)->Los primeros [memberNamePlural] de [place_summary] [place_name] levantaron un gran [altarName] a [deity0_name].</li>
+    <li>conflict(tag=meme_CVG_Meme_CauldronWay)->Un poderoso [foeLeader] despreciaba a los [memberNamePlural] y sus costumbres.</li>
+    <li>founderJoin(tag=meme_CVG_Meme_CauldronWay)->[founderName], salvador de [memberName], bajó de la montaña sin nada más que el camino del caldero.</li>
+    <li>victory(tag=meme_CVG_Meme_CauldronWay)->[founderName] se enfrentó al [foeLeader] y los [foeSoldiers] huyeron.</li>
+    <li>setup(tag=meme_CVG_Meme_CauldronWay)->Los creyentes estaban dispersos, así que se reunieron para seguir el camino del caldero.</li>
+    <li>story(uses=1,tag=meme_CVG_Meme_CauldronWay)->Los creyentes se extendieron y crecieron en número, cada uno recorriendo el camino del caldero a su manera.</li>
+    <li>lessonIntro(tag=meme_CVG_Meme_CauldronWay)->Discípulo, los viejos maestros solían decir:</li>
+    <li>lesson(tag=meme_CVG_Meme_CauldronWay)->todo tiene un precio, y todo precio se puede refinar en una píldora.</li>
+    <li>lessonReinforcement(tag=meme_CVG_Meme_CauldronWay)->Lo entenderás tras muchos años de práctica.</li>
+    <li>archistFact(tag=meme_CVG_Meme_CauldronWay)->Los arcotecnólogos observan el camino del caldero como un jardinero observa una parra.</li>
+    <li>archistProphecy(tag=meme_CVG_Meme_CauldronWay)->[inTheEnd], los arcotecnólogos se irán, y quienes siguieron el camino del caldero permanecerán.</li>
+    <li>animistFact(tag=meme_CVG_Meme_CauldronWay)->Los espíritus de la tierra recorren el camino del caldero con nosotros.</li>
+  </CVG_Meme_CauldronWay.descriptionMaker.rules.rulesStrings>
+  <CVG_Meme_DragonBlood.descriptionMaker.rules.rulesStrings>
+    <li>creation(tag=meme_CVG_Meme_DragonBlood)->[deity0_name] enseñó la sangre del dragón.</li>
+    <li>episode(uses=1,tag=meme_CVG_Meme_DragonBlood)->[deity0_name] le mostró al primer [memberName] la sangre del dragón.</li>
+    <li>intro(tag=meme_CVG_Meme_DragonBlood)->Los primeros [memberNamePlural] de [place_summary] [place_name] levantaron un gran [altarName] a [deity0_name].</li>
+    <li>conflict(tag=meme_CVG_Meme_DragonBlood)->Un poderoso [foeLeader] despreciaba a los [memberNamePlural] y sus costumbres.</li>
+    <li>founderJoin(tag=meme_CVG_Meme_DragonBlood)->[founderName], salvador de [memberName], bajó de la montaña sin nada más que la sangre del dragón.</li>
+    <li>victory(tag=meme_CVG_Meme_DragonBlood)->[founderName] se enfrentó al [foeLeader] y los [foeSoldiers] huyeron.</li>
+    <li>setup(tag=meme_CVG_Meme_DragonBlood)->Los creyentes estaban dispersos, así que se reunieron para seguir la sangre del dragón.</li>
+    <li>story(uses=1,tag=meme_CVG_Meme_DragonBlood)->Los creyentes se extendieron y crecieron en número, cada uno recorriendo la sangre del dragón a su manera.</li>
+    <li>lessonIntro(tag=meme_CVG_Meme_DragonBlood)->Discípulo, los viejos maestros solían decir:</li>
+    <li>lesson(tag=meme_CVG_Meme_DragonBlood)->la sangre de los dragones es un tesoro que guardar y un deber que mantener puro.</li>
+    <li>lessonReinforcement(tag=meme_CVG_Meme_DragonBlood)->Lo entenderás tras muchos años de práctica.</li>
+    <li>archistFact(tag=meme_CVG_Meme_DragonBlood)->Los arcotecnólogos observan la sangre del dragón como un jardinero observa una parra.</li>
+    <li>archistProphecy(tag=meme_CVG_Meme_DragonBlood)->[inTheEnd], los arcotecnólogos se irán, y quienes siguieron la sangre del dragón permanecerán.</li>
+    <li>animistFact(tag=meme_CVG_Meme_DragonBlood)->Los espíritus de la tierra recorren la sangre del dragón con nosotros.</li>
+  </CVG_Meme_DragonBlood.descriptionMaker.rules.rulesStrings>
+  <CVG_Meme_DemonicWay.descriptionMaker.rules.rulesStrings>
+    <li>creation(tag=meme_CVG_Meme_DemonicWay)->[deity0_name] enseñó el camino demoníaco.</li>
+    <li>episode(uses=1,tag=meme_CVG_Meme_DemonicWay)->[deity0_name] le mostró al primer [memberName] el camino demoníaco.</li>
+    <li>intro(tag=meme_CVG_Meme_DemonicWay)->Los primeros [memberNamePlural] de [place_summary] [place_name] levantaron un gran [altarName] a [deity0_name].</li>
+    <li>conflict(tag=meme_CVG_Meme_DemonicWay)->Un poderoso [foeLeader] despreciaba a los [memberNamePlural] y sus costumbres.</li>
+    <li>founderJoin(tag=meme_CVG_Meme_DemonicWay)->[founderName], salvador de [memberName], bajó de la montaña sin nada más que el camino demoníaco.</li>
+    <li>victory(tag=meme_CVG_Meme_DemonicWay)->[founderName] se enfrentó al [foeLeader] y los [foeSoldiers] huyeron.</li>
+    <li>setup(tag=meme_CVG_Meme_DemonicWay)->Los creyentes estaban dispersos, así que se reunieron para seguir el camino demoníaco.</li>
+    <li>story(uses=1,tag=meme_CVG_Meme_DemonicWay)->Los creyentes se extendieron y crecieron en número, cada uno recorriendo el camino demoníaco a su manera.</li>
+    <li>lessonIntro(tag=meme_CVG_Meme_DemonicWay)->Discípulo, los viejos maestros solían decir:</li>
+    <li>lesson(tag=meme_CVG_Meme_DemonicWay)->el cielo es una jaula; rómpela con lo que llevas en las venas.</li>
+    <li>lessonReinforcement(tag=meme_CVG_Meme_DemonicWay)->Lo entenderás tras muchos años de práctica.</li>
+    <li>archistFact(tag=meme_CVG_Meme_DemonicWay)->Los arcotecnólogos observan el camino demoníaco como un jardinero observa una parra.</li>
+    <li>archistProphecy(tag=meme_CVG_Meme_DemonicWay)->[inTheEnd], los arcotecnólogos se irán, y quienes siguieron el camino demoníaco permanecerán.</li>
+    <li>animistFact(tag=meme_CVG_Meme_DemonicWay)->Los espíritus de la tierra recorren el camino demoníaco con nosotros.</li>
+  </CVG_Meme_DemonicWay.descriptionMaker.rules.rulesStrings>
+  <CVG_Meme_WanderingPath.descriptionMaker.rules.rulesStrings>
+    <li>creation(tag=meme_CVG_Meme_WanderingPath)->[deity0_name] enseñó la senda errante.</li>
+    <li>episode(uses=1,tag=meme_CVG_Meme_WanderingPath)->[deity0_name] le mostró al primer [memberName] la senda errante.</li>
+    <li>intro(tag=meme_CVG_Meme_WanderingPath)->Los primeros [memberNamePlural] de [place_summary] [place_name] levantaron un gran [altarName] a [deity0_name].</li>
+    <li>conflict(tag=meme_CVG_Meme_WanderingPath)->Un poderoso [foeLeader] despreciaba a los [memberNamePlural] y sus costumbres.</li>
+    <li>founderJoin(tag=meme_CVG_Meme_WanderingPath)->[founderName], salvador de [memberName], bajó de la montaña sin nada más que la senda errante.</li>
+    <li>victory(tag=meme_CVG_Meme_WanderingPath)->[founderName] se enfrentó al [foeLeader] y los [foeSoldiers] huyeron.</li>
+    <li>setup(tag=meme_CVG_Meme_WanderingPath)->Los creyentes estaban dispersos, así que se reunieron para seguir la senda errante.</li>
+    <li>story(uses=1,tag=meme_CVG_Meme_WanderingPath)->Los creyentes se extendieron y crecieron en número, cada uno recorriendo la senda errante a su manera.</li>
+    <li>lessonIntro(tag=meme_CVG_Meme_WanderingPath)->Discípulo, los viejos maestros solían decir:</li>
+    <li>lesson(tag=meme_CVG_Meme_WanderingPath)->cada camino es un maestro y cada maestro es un camino: sin secta, sin cadenas.</li>
+    <li>lessonReinforcement(tag=meme_CVG_Meme_WanderingPath)->Lo entenderás tras muchos años de práctica.</li>
+    <li>archistFact(tag=meme_CVG_Meme_WanderingPath)->Los arcotecnólogos observan la senda errante como un jardinero observa una parra.</li>
+    <li>archistProphecy(tag=meme_CVG_Meme_WanderingPath)->[inTheEnd], los arcotecnólogos se irán, y quienes siguieron la senda errante permanecerán.</li>
+    <li>animistFact(tag=meme_CVG_Meme_WanderingPath)->Los espíritus de la tierra recorren la senda errante con nosotros.</li>
+  </CVG_Meme_WanderingPath.descriptionMaker.rules.rulesStrings>
+  <CVG_Meme_BodyWay.descriptionMaker.rules.rulesStrings>
+    <li>creation(tag=meme_CVG_Meme_BodyWay)->[deity0_name] enseñó el camino del cuerpo.</li>
+    <li>episode(uses=1,tag=meme_CVG_Meme_BodyWay)->[deity0_name] le mostró al primer [memberName] el camino del cuerpo.</li>
+    <li>intro(tag=meme_CVG_Meme_BodyWay)->Los primeros [memberNamePlural] de [place_summary] [place_name] levantaron un gran [altarName] a [deity0_name].</li>
+    <li>conflict(tag=meme_CVG_Meme_BodyWay)->Un poderoso [foeLeader] despreciaba a los [memberNamePlural] y sus costumbres.</li>
+    <li>founderJoin(tag=meme_CVG_Meme_BodyWay)->[founderName], salvador de [memberName], bajó de la montaña sin nada más que el camino del cuerpo.</li>
+    <li>victory(tag=meme_CVG_Meme_BodyWay)->[founderName] se enfrentó al [foeLeader] y los [foeSoldiers] huyeron.</li>
+    <li>setup(tag=meme_CVG_Meme_BodyWay)->Los creyentes estaban dispersos, así que se reunieron para seguir el camino del cuerpo.</li>
+    <li>story(uses=1,tag=meme_CVG_Meme_BodyWay)->Los creyentes se extendieron y crecieron en número, cada uno recorriendo el camino del cuerpo a su manera.</li>
+    <li>lessonIntro(tag=meme_CVG_Meme_BodyWay)->Discípulo, los viejos maestros solían decir:</li>
+    <li>lesson(tag=meme_CVG_Meme_BodyWay)->el cuerpo es el primer templo. Témplalo con golpes, hambre y frío hasta que ya no necesite el qi para ser un arma.</li>
+    <li>lessonReinforcement(tag=meme_CVG_Meme_BodyWay)->Lo entenderás tras muchos años de práctica.</li>
+    <li>archistFact(tag=meme_CVG_Meme_BodyWay)->Los arcotecnólogos observan el camino del cuerpo como un jardinero observa una parra.</li>
+    <li>archistProphecy(tag=meme_CVG_Meme_BodyWay)->[inTheEnd], los arcotecnólogos se irán, y quienes siguieron el camino del cuerpo permanecerán.</li>
+    <li>animistFact(tag=meme_CVG_Meme_BodyWay)->Los espíritus de la tierra recorren el camino del cuerpo con nosotros.</li>
+  </CVG_Meme_BodyWay.descriptionMaker.rules.rulesStrings>
+  <CVG_Meme_PuppetPath.descriptionMaker.rules.rulesStrings>
+    <li>creation(tag=meme_CVG_Meme_PuppetPath)->[deity0_name] enseñó la senda de las marionetas.</li>
+    <li>episode(uses=1,tag=meme_CVG_Meme_PuppetPath)->[deity0_name] le mostró al primer [memberName] la senda de las marionetas.</li>
+    <li>intro(tag=meme_CVG_Meme_PuppetPath)->Los primeros [memberNamePlural] de [place_summary] [place_name] levantaron un gran [altarName] a [deity0_name].</li>
+    <li>conflict(tag=meme_CVG_Meme_PuppetPath)->Un poderoso [foeLeader] despreciaba a los [memberNamePlural] y sus costumbres.</li>
+    <li>founderJoin(tag=meme_CVG_Meme_PuppetPath)->[founderName], salvador de [memberName], bajó de la montaña sin nada más que la senda de las marionetas.</li>
+    <li>victory(tag=meme_CVG_Meme_PuppetPath)->[founderName] se enfrentó al [foeLeader] y los [foeSoldiers] huyeron.</li>
+    <li>setup(tag=meme_CVG_Meme_PuppetPath)->Los creyentes estaban dispersos, así que se reunieron para seguir la senda de las marionetas.</li>
+    <li>story(uses=1,tag=meme_CVG_Meme_PuppetPath)->Los creyentes se extendieron y crecieron en número, cada uno recorriendo la senda de las marionetas a su manera.</li>
+    <li>lessonIntro(tag=meme_CVG_Meme_PuppetPath)->Discípulo, los viejos maestros solían decir:</li>
+    <li>lesson(tag=meme_CVG_Meme_PuppetPath)->quien tira de los hilos no necesita ser fuerte, solo paciente. Presta un pedazo de tu alma a la madera y al bronce, y deja que luchen en tu lugar.</li>
+    <li>lessonReinforcement(tag=meme_CVG_Meme_PuppetPath)->Lo entenderás tras muchos años de práctica.</li>
+    <li>archistFact(tag=meme_CVG_Meme_PuppetPath)->Los arcotecnólogos observan la senda de las marionetas como un jardinero observa una parra.</li>
+    <li>archistProphecy(tag=meme_CVG_Meme_PuppetPath)->[inTheEnd], los arcotecnólogos se irán, y quienes siguieron la senda de las marionetas permanecerán.</li>
+    <li>animistFact(tag=meme_CVG_Meme_PuppetPath)->Los espíritus de la tierra recorren la senda de las marionetas con nosotros.</li>
+  </CVG_Meme_PuppetPath.descriptionMaker.rules.rulesStrings>
+  <CVG_Meme_ThunderWay.descriptionMaker.rules.rulesStrings>
+    <li>creation(tag=meme_CVG_Meme_ThunderWay)->[deity0_name] enseñó el camino del trueno.</li>
+    <li>episode(uses=1,tag=meme_CVG_Meme_ThunderWay)->[deity0_name] le mostró al primer [memberName] el camino del trueno.</li>
+    <li>intro(tag=meme_CVG_Meme_ThunderWay)->Los primeros [memberNamePlural] de [place_summary] [place_name] levantaron un gran [altarName] a [deity0_name].</li>
+    <li>conflict(tag=meme_CVG_Meme_ThunderWay)->Un poderoso [foeLeader] despreciaba a los [memberNamePlural] y sus costumbres.</li>
+    <li>founderJoin(tag=meme_CVG_Meme_ThunderWay)->[founderName], salvador de [memberName], bajó de la montaña sin nada más que el camino del trueno.</li>
+    <li>victory(tag=meme_CVG_Meme_ThunderWay)->[founderName] se enfrentó al [foeLeader] y los [foeSoldiers] huyeron.</li>
+    <li>setup(tag=meme_CVG_Meme_ThunderWay)->Los creyentes estaban dispersos, así que se reunieron para seguir el camino del trueno.</li>
+    <li>story(uses=1,tag=meme_CVG_Meme_ThunderWay)->Los creyentes se extendieron y crecieron en número, cada uno recorriendo el camino del trueno a su manera.</li>
+    <li>lessonIntro(tag=meme_CVG_Meme_ThunderWay)->Discípulo, los viejos maestros solían decir:</li>
+    <li>lesson(tag=meme_CVG_Meme_ThunderWay)->el rayo es el juicio del propio Cielo. Camina hacia él, sopórtalo, y lo que sobreviva será tuyo.</li>
+    <li>lessonReinforcement(tag=meme_CVG_Meme_ThunderWay)->Lo entenderás tras muchos años de práctica.</li>
+    <li>archistFact(tag=meme_CVG_Meme_ThunderWay)->Los arcotecnólogos observan el camino del trueno como un jardinero observa una parra.</li>
+    <li>archistProphecy(tag=meme_CVG_Meme_ThunderWay)->[inTheEnd], los arcotecnólogos se irán, y quienes siguieron el camino del trueno permanecerán.</li>
+    <li>animistFact(tag=meme_CVG_Meme_ThunderWay)->Los espíritus de la tierra recorren el camino del trueno con nosotros.</li>
+  </CVG_Meme_ThunderWay.descriptionMaker.rules.rulesStrings>
+</LanguageData>

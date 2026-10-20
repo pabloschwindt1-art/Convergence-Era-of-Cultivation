@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_QiTide.label>marea de qi</CVG_QiTide.label>
+  <CVG_QiTide.description>El cielo de Jiuxiao se acerca y el qi inunda la tierra. Cultivar es el doble de rápido, el qi vuelve deprisa y los avances son más fáciles: buen momento para avanzar.</CVG_QiTide.description>
+  <CVG_QiTide.endMessage>La marea de qi se retira.</CVG_QiTide.endMessage>
+  <CVG_QiTide.letterText>El aire reverbera y el suelo zumba: ha llegado una marea de qi. Durante unos días cultivar es el doble de rápido, el qi se regenera más deprisa y los avances son más fáciles.</CVG_QiTide.letterText>
+  <CVG_QiEbb.label>reflujo del qi</CVG_QiEbb.label>
+  <CVG_QiEbb.description>El qi del mundo se retira. Cultivar apenas sirve, el qi vuelve despacio y las técnicas cuestan más.</CVG_QiEbb.description>
+  <CVG_QiEbb.endMessage>El qi vuelve a fluir.</CVG_QiEbb.endMessage>
+  <CVG_QiEbb.letterText>El mundo se siente fino y seco: el qi está en reflujo. Durante unos días cultivar es mucho más lento, el qi se regenera despacio y las técnicas cuestan más.</CVG_QiEbb.letterText>
+  <CVG_InnerDemonMoon.label>luna del demonio interno</CVG_InnerDemonMoon.label>
+  <CVG_InnerDemonMoon.description>Sale una luna roja de Jiuxiao. Las dudas y los deseos se oyen fuerte en la mente de los cultivadores: los avances son más difíciles y cultivar puede desviar el qi.</CVG_InnerDemonMoon.description>
+  <CVG_InnerDemonMoon.endMessage>La luna del demonio interno se pone.</CVG_InnerDemonMoon.endMessage>
+  <CVG_InnerDemonMoon.letterText>Una luna roja como la sangre sale sobre la colonia: la luna del demonio interno. Mientras brille, los avances son más difíciles y cada hora de cultivo arriesga una desviación de qi. Algunos cultivadores prefieren esperar.</CVG_InnerDemonMoon.letterText>
+</LanguageData>

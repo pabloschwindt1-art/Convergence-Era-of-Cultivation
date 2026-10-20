@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Fox_Ears.label>orejas de zorro</CVG_Fox_Ears.label>
+  <CVG_Fox_Ears.description>Orejas puntiagudas de zorro, del color del pelo. En la Corte de Qingqiu eran la mejor herramienta de los espías: captan un susurro en el otro extremo de un banquete.</CVG_Fox_Ears.description>
+  <CVG_Fox_Eyes.label>ojos ámbar</CVG_Fox_Eyes.label>
+  <CVG_Fox_Eyes.description>Ojos ámbar y brillantes que atrapan la luz como el fuego de zorro sobre un cementerio de noche. Ni el Imperio, que lee mentes, encuentra nada detrás de ellos.</CVG_Fox_Eyes.description>
+  <CVG_Fox_Mane.label>pelaje de zorro</CVG_Fox_Mane.label>
+  <CVG_Fox_Mane.description>Pelo rojo anaranjado, como un zorro en otoño. Los cortesanos de Qingqiu lo llevan perfumado y adornado, porque el zorro aprecia la belleza más que el poder bruto.</CVG_Fox_Mane.description>
+  <CVG_Fox_ManeAncestral.label>pelaje de zorro plateado</CVG_Fox_ManeAncestral.label>
+  <CVG_Fox_ManeAncestral.description>Pelo blanco plateado, el pelaje del zorro de nueve colas. El Gran Yu vio un zorro blanco de nueve colas en Tushan y lo tomó como augurio de buen gobierno.</CVG_Fox_ManeAncestral.description>
+  <CVG_Fox_Tail1.label>una cola</CVG_Fox_Tail1.label>
+  <CVG_Fox_Tail1.description>Una esponjosa cola de zorro. Las colas cuentan la edad del alma, no la del cuerpo, y cada nueva se celebra con una fiesta y una mentira pública.</CVG_Fox_Tail1.description>
+  <CVG_Fox_Tail3.label>tres colas</CVG_Fox_Tail3.label>
+  <CVG_Fox_Tail3.description>Tres esponjosas colas de zorro, en abanico. Con tres colas un zorro adopta un nombre social propio y oculta el verdadero a todos salvo a sus íntimos.</CVG_Fox_Tail3.description>
+  <CVG_Fox_Tail6.label>seis colas</CVG_Fox_Tail6.label>
+  <CVG_Fox_Tail6.description>Seis esponjosas colas de zorro, en abanico. Seis colas es el rango de los intermediarios de Qingqiu, que inclinan una cola al saludar.</CVG_Fox_Tail6.description>
+  <CVG_Fox_Tail9.label>nueve colas</CVG_Fox_Tail9.label>
+  <CVG_Fox_Tail9.description>Nueve esponjosas colas de zorro, en abanico. Que se recuerde, solo Hu Jiuyao, Reina de Qingqiu, llegó a nueve, y rechazó ascender para que los secretos de la corte tuvieran guardiana.</CVG_Fox_Tail9.description>
+  <CVG_Blood_Fox_Trace.label>rastro de sangre de zorro</CVG_Blood_Fox_Trace.label>
+  <CVG_Blood_Fox_Trace.description>Una sola cola, oculta por ahora. La gente simplemente termina apreciándote. Un antepasado se coló por la pequeña grieta de la boda del zorro, la lluvia con sol, haciéndose pasar por mercader o bardo; la travesura vino con el encanto, y las bromas a menudo acaban a puñetazos.</CVG_Blood_Fox_Trace.description>
+  <CVG_Blood_Fox_Diluted.label>sangre de zorro diluida</CVG_Blood_Fox_Diluted.label>
+  <CVG_Blood_Fox_Diluted.description>Tres colas se mecen en el borde de la vista. Pocos distinguen tu rostro de una sonrisa. La Corte de Qingqiu engañó a la Calamidad de Hierro con espejismos mientras le vendía planos, y la gente aún no decide si darle las gracias a un zorro o un puñetazo.</CVG_Blood_Fox_Diluted.description>
+  <CVG_Blood_Fox_Pure.label>sangre de zorro pura</CVG_Blood_Fox_Pure.label>
+  <CVG_Blood_Fox_Pure.description>Seis colas, mil rostros. Mientes tan bien que nunca necesitas hacerlo. Los zorros puros sirven a tribus, corporaciones y casas imperiales como intermediarios: cumplen la letra de cada trato y rodean su espíritu.</CVG_Blood_Fox_Pure.description>
+  <CVG_Blood_Fox_Ancestral.label>sangre de zorro ancestral</CVG_Blood_Fox_Ancestral.label>
+  <CVG_Blood_Fox_Ancestral.description>Nueve colas y la perla del zorro. Ni los cielos saben si te inclinas o te ríes. Hu Jiuyao, Reina de Qingqiu, alcanzó las nueve colas y rechazó ascender para que alguien guardara los secretos; en esta pureza las travesuras se han vuelto diplomacia.</CVG_Blood_Fox_Ancestral.description>
+</LanguageData>

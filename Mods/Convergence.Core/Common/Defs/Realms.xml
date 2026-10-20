@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Realms are walked in "order". To add a realm, add another def with a higher order and its hediff.
+    Realms belong to a path (CultivationPathDef) and are walked in "order" inside it.
+    The breakthrough* and tribulation* fields describe the breakthrough INTO that realm.
+    breakthroughRequirements (extensible with Class=), e.g. once the foundation attributes exist:
+      <breakthroughRequirements>
+        <li Class="Convergence.BreakthroughRequirement_Stat"><stat>CVG_QiPurity</stat><min>4</min></li>
+        <li Class="Convergence.BreakthroughRequirement_Realm"><realm>CVG_Realm_BodyBones</realm></li>
+      </breakthroughRequirements>
+  -->
+  <Convergence.CultivationRealmDef>
+    <defName>CVG_Realm_QiRefining</defName>
+    <label>Qi Refining</label>
+    <description>The first realm. The cultivator learns to draw qi from the air and refine it inside the body, opening the meridians one by one.</description>
+    <path>CVG_Path_Qi</path>
+    <order>1</order>
+    <hediff>CVG_Hediff_QiRefining</hediff>
+    <!-- Max health (Pawn.HealthScale) at stage 1 ~ last stage. -->
+    <healthScaleFactor>1.2~1.35</healthScaleFactor>
+    <!-- Aging speed of adults at the first and last stage (longevity). -->
+    <biologicalAgingFactor>0.85~0.7</biologicalAgingFactor>
+    <stages>4</stages>
+    <progressPerStage>1000</progressPerStage>
+    <progressPerHour>50</progressPerHour>
+    <tribulation>false</tribulation>
+  </Convergence.CultivationRealmDef>
+
+  <Convergence.CultivationRealmDef>
+    <defName>CVG_Realm_Foundation</defName>
+    <label>Foundation Establishment</label>
+    <description>The refined qi condenses into a liquid foundation in the dantian. The body becomes sturdier, wounds close faster and the years weigh less.</description>
+    <path>CVG_Path_Qi</path>
+    <order>2</order>
+    <hediff>CVG_Hediff_Foundation</hediff>
+    <!-- Max health (Pawn.HealthScale) at stage 1 ~ last stage. -->
+    <healthScaleFactor>2~2.3</healthScaleFactor>
+    <!-- Aging speed of adults at the first and last stage (longevity). -->
+    <biologicalAgingFactor>0.5~0.35</biologicalAgingFactor>
+    <stages>4</stages>
+    <progressPerStage>2500</progressPerStage>
+    <progressPerHour>50</progressPerHour>
+    <breakthroughItem>CVG_FoundationPill</breakthroughItem>
+    <breakthroughChanceFactor>1</breakthroughChanceFactor>
+    <breakthroughHours>4</breakthroughHours>
+    <breakthroughCooldownDays>2</breakthroughCooldownDays>
+    <breakthroughFailureHediff>CVG_QiDeviation</breakthroughFailureHediff>
+    <breakthroughRequirements>
+      <li Class="Convergence.BreakthroughRequirement_Research">
+        <project>CVG_Research_Foundation</project>
+      </li>
+    </breakthroughRequirements>
+    <tribulation>false</tribulation>
+  </Convergence.CultivationRealmDef>
+
+  <Convergence.CultivationRealmDef>
+    <defName>CVG_Realm_GoldenCore</defName>
+    <label>Golden Core</label>
+    <description>The liquid foundation is compressed into a golden core. Heaven notices: the first heavenly tribulation must be endured. A Golden Core cultivator lives for centuries.</description>
+    <path>CVG_Path_Qi</path>
+    <order>3</order>
+    <hediff>CVG_Hediff_GoldenCore</hediff>
+    <!-- Max health (Pawn.HealthScale) at stage 1 ~ last stage. -->
+    <healthScaleFactor>4~4.6</healthScaleFactor>
+    <!-- Aging speed of adults at the first and last stage (longevity). -->
+    <biologicalAgingFactor>0.15~0.05</biologicalAgingFactor>
+    <stages>4</stages>
+    <progressPerStage>6000</progressPerStage>
+    <progressPerHour>50</progressPerHour>
+    <breakthroughChanceFactor>0.7</breakthroughChanceFactor>
+    <breakthroughHours>6</breakthroughHours>
+    <breakthroughCooldownDays>3</breakthroughCooldownDays>
+    <breakthroughFailureHediff>CVG_QiDeviation</breakthroughFailureHediff>
+    <breakthroughRequirements>
+      <li Class="Convergence.BreakthroughRequirement_Research">
+        <project>CVG_Research_GoldenCore</project>
+      </li>
+    </breakthroughRequirements>
+    <tribulation>true</tribulation>
+    <tribulationStrikes>6</tribulationStrikes>
+    <tribulationStrikesPerDissonance>2</tribulationStrikesPerDissonance>
+    <tribulationDamage>10</tribulationDamage>
+    <tribulationDamagePerDissonance>0.5</tribulationDamagePerDissonance>
+    <tribulationStrikeInterval>60~120</tribulationStrikeInterval>
+  </Convergence.CultivationRealmDef>
+</Defs>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_AuraPressure_Label>Presión de aura</CVG_AuraPressure_Label>
+  <CVG_AuraPressure_Text>El aire se vuelve pesado cuando {0}, de {2}, aparece en el borde del mapa. Es un cultivador del reino {1}, superior a cualquiera de tu colonia. Los corazones aún no templados tiemblan ante un aura así, y los viejos manuales dicen que la mejor respuesta es no enfrentarla a solas.</CVG_AuraPressure_Text>
+</LanguageData>

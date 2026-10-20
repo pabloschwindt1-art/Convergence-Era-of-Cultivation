@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- The interior of the vanilla ancient temple ("ancient danger") becomes the Forgotten Sect Sanctuary (falls back to vanilla before the Convergence). -->
+  <Operation Class="PatchOperationAttributeSet">
+    <xpath>/Defs/RuleDef[defName="Interior_AncientTemple"]/resolvers/li</xpath>
+    <attribute>Class</attribute>
+    <value>Convergence.Stories.SymbolResolver_Interior_ForgottenSanctuary</value>
+  </Operation>
+</Patch>

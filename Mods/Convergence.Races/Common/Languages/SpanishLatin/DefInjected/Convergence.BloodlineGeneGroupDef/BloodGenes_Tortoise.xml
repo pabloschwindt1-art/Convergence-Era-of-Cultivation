@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_GeneGroup_Shell.label>caparazón</CVG_GeneGroup_Shell.label>
+  <CVG_GeneGroup_Shell.description>Espalda y pecho endurecidos, como un caparazón.</CVG_GeneGroup_Shell.description>
+  <CVG_GeneGroup_StoneSleep.label>sueño de piedra</CVG_GeneGroup_StoneSleep.label>
+  <CVG_GeneGroup_StoneSleep.description>Duerme como una piedra: descansa antes y las heridas cierran mientras duerme.</CVG_GeneGroup_StoneSleep.description>
+  <CVG_GeneGroup_GuardianSerpent.label>serpiente guardiana</CVG_GeneGroup_GuardianSerpent.label>
+  <CVG_GeneGroup_GuardianSerpent.description>Tras la Convergencia, quien golpea a la tortuga cuerpo a cuerpo puede recibir la mordida de la serpiente del caparazón.</CVG_GeneGroup_GuardianSerpent.description>
+</LanguageData>

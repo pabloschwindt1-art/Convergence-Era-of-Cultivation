@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Tale_Breakthrough.label>avance de reino</CVG_Tale_Breakthrough.label>
+  <CVG_Tale_SurvivedTribulation.label>tribulación superada</CVG_Tale_SurvivedTribulation.label>
+  <CVG_Tale_DiedInTribulation.label>muerte en la tribulación</CVG_Tale_DiedInTribulation.label>
+  <CVG_Tale_Breakthrough.rulePack.rulesStrings>
+    <li>tale_noun-&gt;el avance de [PAWN_nameDef] a un nuevo reino</li>
+    <li>tale_noun-&gt;el avance de [PAWN_nameDef]</li>
+    <li>image-&gt;[PAWN_nameFull] sentado con las piernas cruzadas mientras el qi gira a su alrededor [circumstance_group]</li>
+    <li>image-&gt;[PAWN_nameFull] abriendo los ojos cuando un nuevo reino se asienta en su dantian [circumstance_group]</li>
+    <li>circumstance_phrase-&gt;bajo un cielo lleno de nubes</li>
+    <li>circumstance_phrase-&gt;mientras el aire brilla de qi</li>
+    <li>desc_sentence-&gt;[Quantity_adjphrase] [ally]s miran asombrados.</li>
+    <li>desc_sentence-&gt;Una grulla vuela en círculos arriba.</li>
+  </CVG_Tale_Breakthrough.rulePack.rulesStrings>
+  <CVG_Tale_SurvivedTribulation.rulePack.rulesStrings>
+    <li>tale_noun-&gt;[PAWN_nameDef] superando la tribulación celestial</li>
+    <li>tale_noun-&gt;la tribulación de [PAWN_nameDef]</li>
+    <li>image-&gt;[PAWN_nameFull] de pie bajo nueve rayos [circumstance_group]</li>
+    <li>image-&gt;[PAWN_nameFull] saliendo del humo de una tribulación [circumstance_group]</li>
+    <li>circumstance_phrase-&gt;con la túnica quemada hasta los jirones</li>
+    <li>circumstance_phrase-&gt;sin doblegarse</li>
+    <li>desc_sentence-&gt;Nubes negras giran arriba.</li>
+    <li>desc_sentence-&gt;[Quantity_adjphrase] [ally]s vitorean a lo lejos.</li>
+  </CVG_Tale_SurvivedTribulation.rulePack.rulesStrings>
+  <CVG_Tale_DiedInTribulation.rulePack.rulesStrings>
+    <li>tale_noun-&gt;la muerte de [PAWN_nameDef] en la tribulación celestial</li>
+    <li>tale_noun-&gt;el cielo abatiendo a [PAWN_nameDef]</li>
+    <li>image-&gt;[PAWN_nameFull] alcanzado por el último rayo de una tribulación [circumstance_group]</li>
+    <li>circumstance_phrase-&gt;con una mano todavía alzada al cielo</li>
+    <li>circumstance_phrase-&gt;mientras se abren las nubes</li>
+    <li>desc_sentence-&gt;[Quantity_adjphrase] [ally]s lloran abajo.</li>
+    <li>desc_sentence-&gt;Un solo loto flota en la lluvia.</li>
+  </CVG_Tale_DiedInTribulation.rulePack.rulesStrings>
+</LanguageData>

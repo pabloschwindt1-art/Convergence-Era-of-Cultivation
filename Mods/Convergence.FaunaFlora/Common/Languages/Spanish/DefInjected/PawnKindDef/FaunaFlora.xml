@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_JadeWeaverSpider.label>araña tejedora de jade</CVG_JadeWeaverSpider.label>
+  <CVG_SevenColorSheep.label>oveja de siete colores</CVG_SevenColorSheep.label>
+  <CVG_PhoenixBloodHen.label>gallina de sangre de fénix</CVG_PhoenixBloodHen.label>
+  <CVG_CloudOx.label>buey de las nubes</CVG_CloudOx.label>
+  <CVG_MoonDeer.label>ciervo lunar</CVG_MoonDeer.label>
+  <CVG_WindWolf.label>lobo de viento</CVG_WindWolf.label>
+  <CVG_CelestialCrane.label>grulla celestial</CVG_CelestialCrane.label>
+  <CVG_NineNetherSpider.label>araña de los nueve infiernos</CVG_NineNetherSpider.label>
+  <CVG_JadeWeaverSpider.labelPlural>araña tejedora de jade</CVG_JadeWeaverSpider.labelPlural>
+  <CVG_SevenColorSheep.labelPlural>oveja de siete colores</CVG_SevenColorSheep.labelPlural>
+  <CVG_PhoenixBloodHen.labelPlural>gallina de sangre de fénix</CVG_PhoenixBloodHen.labelPlural>
+  <CVG_CloudOx.labelPlural>buey de las nubes</CVG_CloudOx.labelPlural>
+  <CVG_MoonDeer.labelPlural>ciervo lunar</CVG_MoonDeer.labelPlural>
+  <CVG_WindWolf.labelPlural>lobo de viento</CVG_WindWolf.labelPlural>
+  <CVG_CelestialCrane.labelPlural>grulla celestial</CVG_CelestialCrane.labelPlural>
+  <CVG_NineNetherSpider.labelPlural>araña de los nueve infiernos</CVG_NineNetherSpider.labelPlural>
+
+  <CVG_SevenColorSheep.lifeStages.0.label>cordero</CVG_SevenColorSheep.lifeStages.0.label>
+  <CVG_SevenColorSheep.lifeStages.0.labelPlural>corderos</CVG_SevenColorSheep.lifeStages.0.labelPlural>
+  <CVG_CloudOx.lifeStages.0.label>ternero</CVG_CloudOx.lifeStages.0.label>
+  <CVG_CloudOx.lifeStages.0.labelPlural>terneros</CVG_CloudOx.lifeStages.0.labelPlural>
+  <CVG_MoonDeer.lifeStages.0.label>cervatillo</CVG_MoonDeer.lifeStages.0.label>
+  <CVG_MoonDeer.lifeStages.0.labelPlural>cervatillos</CVG_MoonDeer.lifeStages.0.labelPlural>
+  <CVG_WindWolf.lifeStages.0.label>cachorro de lobo del viento</CVG_WindWolf.lifeStages.0.label>
+  <CVG_WindWolf.lifeStages.0.labelPlural>cachorros de lobo del viento</CVG_WindWolf.lifeStages.0.labelPlural>
+  <CVG_CelestialCrane.lifeStages.0.label>pichón de grulla</CVG_CelestialCrane.lifeStages.0.label>
+  <CVG_CelestialCrane.lifeStages.0.labelPlural>pichones de grulla</CVG_CelestialCrane.lifeStages.0.labelPlural>
+  <CVG_NineNetherSpider.lifeStages.0.label>arañita de los nueve infiernos</CVG_NineNetherSpider.lifeStages.0.label>
+  <CVG_NineNetherSpider.lifeStages.0.labelPlural>arañitas de los nueve infiernos</CVG_NineNetherSpider.lifeStages.0.labelPlural>
+  <CVG_Xuanwu.label>tortuga negra</CVG_Xuanwu.label>
+  <CVG_Xuanwu.lifeStages.0.label>cría de tortuga negra</CVG_Xuanwu.lifeStages.0.label>
+  <CVG_Xuanwu.lifeStages.0.labelPlural>crías de tortuga negra</CVG_Xuanwu.lifeStages.0.labelPlural>
+  <CVG_LightningTiger.label>tigre del rayo</CVG_LightningTiger.label>
+  <CVG_LightningTiger.lifeStages.0.label>cachorro de tigre del rayo</CVG_LightningTiger.lifeStages.0.label>
+  <CVG_LightningTiger.lifeStages.0.labelPlural>cachorros de tigre del rayo</CVG_LightningTiger.lifeStages.0.labelPlural>
+</LanguageData>

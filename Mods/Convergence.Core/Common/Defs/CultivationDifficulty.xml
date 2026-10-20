@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Cultivation difficulty (docs/DISENO.md §8, round 3). Chosen when a new game starts (and in the mod settings);
+    each game keeps its own values. More presets can be added with XML.
+  -->
+  <Convergence.CultivationDifficultyDef>
+    <defName>CVG_Difficulty_Easy</defName>
+    <label>easy</label>
+    <description>The path of the immortals is open to everyone. Cultivation is fast, heavenly tribulation forgives and the sects that hunt for treasures are few. For those who want to see the realms climb without losing colonists.</description>
+    <order>1</order>
+    <values>
+      <cultivationSpeed>1.5</cultivationSpeed>
+      <tribulationDamage>0.6</tribulationDamage>
+      <tribulationCanKill>false</tribulationCanKill>
+      <suppressionStrength>1.2</suppressionStrength>
+      <enemyRealmBonus>0</enemyRealmBonus>
+      <cultivationThreatFactor>0.5</cultivationThreatFactor>
+      <eventFrequency>0.75</eventFrequency>
+      <vanillaWealthFactor>0.1</vanillaWealthFactor>
+    </values>
+  </Convergence.CultivationDifficultyDef>
+
+  <Convergence.CultivationDifficultyDef>
+    <defName>CVG_Difficulty_Hard</defName>
+    <label>hard</label>
+    <description>The balance the mod was designed around. Each realm costs years, heaven tests every breakthrough with lightning that can kill, and the sects notice when a colony grows strong.</description>
+    <order>2</order>
+    <values>
+      <cultivationSpeed>1</cultivationSpeed>
+      <tribulationDamage>1</tribulationDamage>
+      <tribulationCanKill>true</tribulationCanKill>
+      <suppressionStrength>1</suppressionStrength>
+      <enemyRealmBonus>1</enemyRealmBonus>
+      <cultivationThreatFactor>1</cultivationThreatFactor>
+      <eventFrequency>1</eventFrequency>
+      <vanillaWealthFactor>0.2</vanillaWealthFactor>
+    </values>
+  </Convergence.CultivationDifficultyDef>
+
+  <Convergence.CultivationDifficultyDef>
+    <defName>CVG_Difficulty_Nightmare</defName>
+    <label>nightmare</label>
+    <description>Heaven is jealous and the world is hungry. Cultivation crawls, tribulation strikes hard, realm suppression barely protects you and enemy cultivators can be two realms above your best. In the old stories, only one disciple in a thousand reached Foundation like this.</description>
+    <order>3</order>
+    <values>
+      <cultivationSpeed>0.7</cultivationSpeed>
+      <tribulationDamage>1.5</tribulationDamage>
+      <tribulationCanKill>true</tribulationCanKill>
+      <suppressionStrength>0.6</suppressionStrength>
+      <enemyRealmBonus>2</enemyRealmBonus>
+      <cultivationThreatFactor>1.6</cultivationThreatFactor>
+      <eventFrequency>1.4</eventFrequency>
+      <vanillaWealthFactor>0.35</vanillaWealthFactor>
+    </values>
+  </Convergence.CultivationDifficultyDef>
+</Defs>

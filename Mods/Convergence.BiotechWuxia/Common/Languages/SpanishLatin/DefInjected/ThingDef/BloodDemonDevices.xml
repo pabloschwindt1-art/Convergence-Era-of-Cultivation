@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_BloodLotusBasin.label>pila del loto de sangre</CVG_BloodLotusBasin.label>
+  <CVG_BloodLotusBasin.description>El Culto de la Luna Sangrienta cultiva un loto carmesí en pilas de sangre junto a sus estanques de retiro; sus raíces absorben la sangre y la devuelven más espesa. Vinculada a un estanque de sangre, aumenta la reserva de esencia de sangre (hemógeno) que puede guardar un demonio de sangre, como una hemobomba sin electricidad.
+
+Hay que alimentarla con píldoras de esencia de sangre o paquetes de hemógeno.</CVG_BloodLotusBasin.description>
+  <CVG_BloodLotusBasin.comps.CompRefuelable.fuelLabel>Esencia de sangre</CVG_BloodLotusBasin.comps.CompRefuelable.fuelLabel>
+  <CVG_BloodMoonCenser.label>incensario de la Luna Sangrienta</CVG_BloodMoonCenser.label>
+  <CVG_BloodMoonCenser.description>Bajo la Luna Sangrienta los cultistas queman sangre en lugar de incienso, y el humo rojo abre cada poro al qi de sangre del mundo. Vinculado a un estanque de sangre, deja al durmiente con el hemógeno amplificado hasta el siguiente retiro: toda fuente de esencia de sangre da más, como un amplificador de hemógeno sin electricidad.
+
+Hay que alimentarlo con píldoras de esencia de sangre o paquetes de hemógeno.</CVG_BloodMoonCenser.description>
+  <CVG_BloodMoonCenser.comps.CompRefuelable.fuelLabel>Esencia de sangre</CVG_BloodMoonCenser.comps.CompRefuelable.fuelLabel>
+  <CVG_BloodDrumOfReturn.label>tambor de sangre del retorno</CVG_BloodDrumOfReturn.label>
+  <CVG_BloodDrumOfReturn.description>Los chamanes de guerra de Chiyou tocaban tambores de piel tensada sobre madera rojo sangre para llamar a sus caídos desde el borde de la muerte. Junto a un estanque de sangre, su latido lento sigue el corazón del durmiente y acelera el final del retiro, como un acelerador de sueño de muerte sin electricidad.</CVG_BloodDrumOfReturn.description>
+</LanguageData>

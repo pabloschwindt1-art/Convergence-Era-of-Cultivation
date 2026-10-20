@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Beast parts as butchery products. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="CVG_CelestialCrane"]</xpath>
+    <value><butcherProducts><CVG_CraneFeather>6</CVG_CraneFeather></butcherProducts></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="CVG_WindWolf"]</xpath>
+    <value><butcherProducts><CVG_WolfFang>2</CVG_WolfFang></butcherProducts></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="CVG_NineNetherSpider"]</xpath>
+    <value><butcherProducts><CVG_NetherChitin>6</CVG_NetherChitin></butcherProducts></value>
+  </Operation>
+</Patch>

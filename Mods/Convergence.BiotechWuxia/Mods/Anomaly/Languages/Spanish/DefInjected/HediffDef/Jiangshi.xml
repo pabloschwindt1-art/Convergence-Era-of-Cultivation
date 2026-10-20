@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_CorpseQi.label>qi cadavérico</CVG_CorpseQi.label>
+  <CVG_CorpseQi.description>Yin frío y estancado que dejan en los meridianos las garras de un jiangshi, que bebe el yang de los vivos por la herida. El paciente se siente pesado y somnoliento y se le entumecen los miembros. Los maestros del Salón de los Nueve Talismanes lo sacaban con una cataplasma de arroz glutinoso, que se vuelve negra al absorber el qi cadavérico. También se va solo si el paciente descansa.</CVG_CorpseQi.description>
+  <CVG_CorpseQi.stages.faint.label>leve</CVG_CorpseQi.stages.faint.label>
+  <CVG_CorpseQi.stages.spreading.label>extendiéndose</CVG_CorpseQi.stages.spreading.label>
+  <CVG_CorpseQi.stages.deep.label>profundo</CVG_CorpseQi.stages.deep.label>
+  <CVG_Jiangshi.label>jiangshi</CVG_Jiangshi.label>
+  <CVG_Jiangshi.description>Un cadáver que no descansó. Cuando la Convergencia devolvió el qi al mundo, también despertó el yin que duerme en los cuerpos mal enterrados: se levantan rígidos, con los brazos estirados, y saltan hacia el calor de los vivos para beberles el yang. La luz del sol los quema, la madera de melocotonero los corta como una hoja corta el papel y un espejo bagua les devuelve su propia muerte.</CVG_Jiangshi.description>
+  <CVG_BaguaDazed.label>deslumbrado por el bagua</CVG_BaguaDazed.label>
+  <CVG_BaguaDazed.description>El espejo bagua le devolvió a esta criatura su propia muerte. Se tambalea y golpea mal durante un rato.</CVG_BaguaDazed.description>
+</LanguageData>

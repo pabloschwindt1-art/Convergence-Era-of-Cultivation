@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Qilin bloodline. Design and values: docs/modulos/razas/QILIN.md -->
+
+  <Convergence.BloodlineDef>
+    <defName>CVG_Bloodline_Qilin</defName>
+    <label>qilin</label>
+    <description>The blood of the Arbiter of the Middle Valleys: calm, kindness and good fortune. It heals, and it does not like to kill.\n\nBest as: healer and farmer. The infirmary and the fields, far from the front line.</description>
+    <commonality>0.5</commonality>
+    <color>(1, 0.85, 0.45)</color>
+    <xenotypeIcon>Crescent</xenotypeIcon>
+    <affinities>
+      <li>CVG_Element_Earth</li>
+      <!-- The Thunder Qilin: thunder roots come from this blood (Pure and Ancestral may awaken one). -->
+      <li>CVG_Element_Thunder</li>
+    </affinities>
+    <purities>
+      <li>
+        <purity>CVG_Purity_Trace</purity>
+        <gene>CVG_Blood_Qilin_Trace</gene>
+        <hediff>CVG_Bloodline_Qilin</hediff>
+        <affinityCultivationFactor>1.05</affinityCultivationFactor>
+        <aspectGenes>
+          <li>CVG_Qilin_Mane</li>
+          <li>CVG_Qilin_Eyes</li>
+        </aspectGenes>
+      </li>
+      <li>
+        <purity>CVG_Purity_Diluted</purity>
+        <gene>CVG_Blood_Qilin_Diluted</gene>
+        <hediff>CVG_Bloodline_Qilin</hediff>
+        <affinityCultivationFactor>1.1</affinityCultivationFactor>
+        <abilities>
+          <li>CVG_Ability_QilinBlessing</li>
+        </abilities>
+        <aspectGenes>
+          <li>CVG_Qilin_HornSmall</li>
+          <li>CVG_Qilin_Scales</li>
+        </aspectGenes>
+      </li>
+      <li>
+        <purity>CVG_Purity_Pure</purity>
+        <gene>CVG_Blood_Qilin_Pure</gene>
+        <passion>Minor</passion>
+        <xenotype>CVG_Xeno_Qilin</xenotype>
+        <hediff>CVG_Bloodline_Qilin</hediff>
+        <affinityCultivationFactor>1.2</affinityCultivationFactor>
+        <rootElement>CVG_Element_Thunder</rootElement>
+        <rootElementChance>0.25</rootElementChance>
+        <!-- TODO (M5 techniques): Purifying Hoof (x2 damage to demonic/void, cleanse corruption) -->
+        <aspectGenes>
+          <li>CVG_Qilin_Horn</li>
+        </aspectGenes>
+      </li>
+      <li>
+        <purity>CVG_Purity_Ancestral</purity>
+        <gene>CVG_Blood_Qilin_Ancestral</gene>
+        <passion>Major</passion>
+        <xenotype>CVG_Xeno_Qilin</xenotype>
+        <hediff>CVG_Bloodline_Qilin</hediff>
+        <affinityCultivationFactor>1.35</affinityCultivationFactor>
+        <rootElement>CVG_Element_Thunder</rootElement>
+        <rootElementChance>0.5</rootElementChance>
+        <!-- TODO (M5 techniques): Auspicious Domain (map-wide fortune buff) -->
+      </li>
+    </purities>
+  </Convergence.BloodlineDef>
+
+  <!-- Metabolism of the purity genes: total Trace -1, Diluted -2 (a flaw; beast vitality I/II costs -1 of it); Pure and Ancestral compensate the vanilla genes of the
+       bloodline xenotype (added on reaching Pure, -5 metabolism) so the total is 0 (Pure) and +1 (Ancestral). -->
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Qilin_Trace</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+      <li><def>Delicate</def></li>
+      <li><def>Wimp</def></li>
+      <li><def>Bloodlust</def></li>
+      <li><def>Psychopath</def></li>
+    </suppressedTraits>
+    <forcedTraits>
+      <li><def>Kind</def></li>
+    </forcedTraits>
+    <socialFightChanceFactor>0.3</socialFightChanceFactor>
+    <aggroMentalBreakSelectionChanceFactor>0</aggroMentalBreakSelectionChanceFactor>
+    <label>trace of qilin blood</label>
+    <description>You walk softly, and the grass is grateful. An ancestor shared a forest with the 'sacred deer' of the Four-Footed March, the last qilin hiding on the Rim from the machines; the blood cannot stomach violence, and makes its bearer kind.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Earth</iconPath>
+    <iconColor>(0.7, 0.7, 0.7)</iconColor>
+    <displayOrderInCategory>30</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <aptitudes>
+      <Plants>1</Plants>
+      <Medicine>1</Medicine>
+      <Melee>-2</Melee>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Qilin</bloodline>
+        <purity>CVG_Purity_Trace</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Qilin_Diluted</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+      <li><def>Delicate</def></li>
+      <li><def>Wimp</def></li>
+      <li><def>Bloodlust</def></li>
+      <li><def>Psychopath</def></li>
+    </suppressedTraits>
+    <forcedTraits>
+      <li><def>Kind</def></li>
+    </forcedTraits>
+    <socialFightChanceFactor>0.3</socialFightChanceFactor>
+    <aggroMentalBreakSelectionChanceFactor>0</aggroMentalBreakSelectionChanceFactor>
+    <label>diluted qilin blood</label>
+    <description>The kindness of the Qilin is thin in you, but it still heals what it touches. Children delivered by the qilin midwives, like Jin Zhi, inherited a thread of their blood: gentle hands, and no wish to raise them in anger.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Earth</iconPath>
+    <iconColor>(0.55, 0.8, 1)</iconColor>
+    <displayOrderInCategory>31</displayOrderInCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <aptitudes>
+      <Plants>2</Plants>
+      <Medicine>2</Medicine>
+      <Melee>-2</Melee>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Qilin</bloodline>
+        <purity>CVG_Purity_Diluted</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Qilin_Pure</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+      <li><def>Delicate</def></li>
+      <li><def>Wimp</def></li>
+      <li><def>Bloodlust</def></li>
+      <li><def>Psychopath</def></li>
+    </suppressedTraits>
+    <forcedTraits>
+      <li><def>Kind</def></li>
+    </forcedTraits>
+    <socialFightChanceFactor>0.3</socialFightChanceFactor>
+    <aggroMentalBreakSelectionChanceFactor>0</aggroMentalBreakSelectionChanceFactor>
+    <label>pure qilin blood</label>
+    <description>Gold scales and a small horn: the Arbiter of the Middle Valleys speaks through you. The Silent Lotus Temple would call its bearer a Voice of the Lotus, a witness whose presence certifies oaths and who never starts a fight.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Earth</iconPath>
+    <iconColor>(0.8, 0.6, 1)</iconColor>
+    <displayOrderInCategory>32</displayOrderInCategory>
+    <biostatCpx>3</biostatCpx>
+    <biostatMet>5</biostatMet>
+    <aptitudes>
+      <Plants>3</Plants>
+      <Medicine>3</Medicine>
+      <Melee>-1</Melee>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Qilin</bloodline>
+        <purity>CVG_Purity_Pure</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodIdentityBase">
+    <defName>CVG_Blood_Qilin_Ancestral</defName>
+    <suppressedTraits>
+      <li><def>Immunity</def><degree>-1</degree></li>
+      <li><def>Delicate</def></li>
+      <li><def>Wimp</def></li>
+      <li><def>Bloodlust</def></li>
+      <li><def>Psychopath</def></li>
+    </suppressedTraits>
+    <socialFightChanceFactor>0.3</socialFightChanceFactor>
+    <aggroMentalBreakSelectionChanceFactor>0</aggroMentalBreakSelectionChanceFactor>
+    <label>ancestral qilin blood</label>
+    <description>A sage was born, or a sage has died; either way, the Qilin stands where you stand. Lin Wenshu, the Hoof Without Prints, stopped a war with a single step; at this purity kindness is no longer a bond of the blood but a choice.</description>
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Earth</iconPath>
+    <iconColor>(1, 0.82, 0.35)</iconColor>
+    <displayOrderInCategory>33</displayOrderInCategory>
+    <biostatCpx>4</biostatCpx>
+    <biostatMet>6</biostatMet>
+    <aptitudes>
+      <Plants>4</Plants>
+      <Medicine>4</Medicine>
+      <Melee>-1</Melee>
+    </aptitudes>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Bloodline">
+        <bloodline>CVG_Bloodline_Qilin</bloodline>
+        <purity>CVG_Purity_Ancestral</purity>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Qilin_Mane</defName>
+    <label>pale mane</label>
+    <description>Pale gold-white hair, soft as a deer's coat. In the Silent Lotus Temple it is never cut, only braided, so that it does not brush the living grass.</description>
+    <iconPath>UI/Icons/Genes/Gene_HairColor</iconPath>
+    <iconColor>(245, 232, 195)</iconColor>
+    <displayOrderInCategory>35</displayOrderInCategory>
+    <hairColorOverride>(245, 232, 195)</hairColorOverride>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Qilin_Eyes</defName>
+    <label>serene eyes</label>
+    <description>Calm, pale golden eyes. They say a qilin sees corrupted blood through any disguise, and refuses to keep quiet about it.</description>
+    <iconPath>UI/Icons/Genes/Gene_GrayEyes</iconPath>
+    <iconColor>(240, 220, 150)</iconColor>
+    <displayOrderInCategory>36</displayOrderInCategory>
+    <exclusionTags>
+      <li>EyeColor</li>
+    </exclusionTags>
+    <!-- Own art: Things/Pawn/Humanlike/CVG/Qilin/Eyes (provisional: vanilla Biotech texture). See docs/modulos/razas/README.md. -->
+    <renderNodeProperties>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Male/GrayEyes_Male</texPath>
+        <texPathFemale>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Female/GrayEyes_Female</texPathFemale>
+        <color>(240, 220, 150)</color>
+        <anchorTag>RightEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.2</drawSize>
+        <side>Right</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+          </defaultData>
+        </drawData>
+      </li>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Male/GrayEyes_Male</texPath>
+        <texPathFemale>Things/Pawn/Humanlike/HeadAttachments/GrayEyes/Female/GrayEyes_Female</texPathFemale>
+        <color>(240, 220, 150)</color>
+        <anchorTag>LeftEye</anchorTag>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.2</drawSize>
+        <side>Left</side>
+        <drawData>
+          <defaultData>
+            <layer>54</layer>
+            <offset>(0, 0, -0.25)</offset>
+            <flip>true</flip>
+          </defaultData>
+          <dataWest>
+            <flip>false</flip>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Qilin_Scales</defName>
+    <label>golden scales</label>
+    <description>Skin with a golden sheen of fine scales: the dragon scales the qilin wears on a deer's body. They shimmer when the bearer is near someone in pain.</description>
+    <iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+    <iconColor>(228, 196, 120)</iconColor>
+    <displayOrderInCategory>37</displayOrderInCategory>
+    <exclusionTags>
+      <li>SkinColorOverride</li>
+    </exclusionTags>
+    <skinColorOverride>(228, 196, 120)</skinColorOverride>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Qilin_HornSmall</defName>
+    <label>qilin horn buds</label>
+    <description>Two small golden horn buds, still soft. The horn of the qilin is of flesh and harms no one, a weapon the beast refuses to use.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Qilin_HornSmall</iconPath>
+    <iconColor>(240, 200, 90)</iconColor>
+    <displayOrderInCategory>38</displayOrderInCategory>
+    <exclusionTags>
+      <li>Headbone</li>
+    </exclusionTags>
+    <!-- Own art: Things/Pawn/Humanlike/CVG/Qilin/Horn (provisional: vanilla Biotech texture). See docs/modulos/razas/README.md. -->
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/CVG_QilinHornSmall/QilinHornSmall</texPath>
+        <color>(240, 200, 90)</color>
+        <parentTagDef>Head</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawSize>(0.75, 0.75)</drawSize>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Qilin_Horn</defName>
+    <label>qilin horn</label>
+    <description>A single golden horn on the brow. The horn of Lin Wenshu, the last Arbiter of the Middle Valleys, rests in a temple of the Lotus, and pilgrims pray before it.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Qilin_Horn</iconPath>
+    <iconColor>(240, 200, 90)</iconColor>
+    <displayOrderInCategory>39</displayOrderInCategory>
+    <exclusionTags>
+      <li>Headbone</li>
+    </exclusionTags>
+    <!-- Own art: Things/Pawn/Humanlike/CVG/Qilin/Horn (provisional: vanilla Biotech texture). See docs/modulos/razas/README.md. -->
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/CVG_QilinHorn/QilinHorn</texPath>
+        <color>(240, 200, 90)</color>
+        <parentTagDef>Head</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>80</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>10</layer>
+          </dataNorth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <GeneDef ParentName="CVG_BloodAspectBase">
+    <defName>CVG_Qilin_Ears</defName>
+    <label>deer ears</label>
+    <description>Soft ears like a deer's. During the Four-Footed March the last qilin hid on the Rim as sacred deer, and this is what remains of the disguise.</description>
+    <iconPath>UI/Icons/Genes/CVG/Gene_Qilin_Ears</iconPath>
+    <displayOrderInCategory>40</displayOrderInCategory>
+    <exclusionTags>
+      <li>Ears</li>
+    </exclusionTags>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/CVG_DeerEars/DeerEars</texPath>
+        <colorType>Skin</colorType>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <parentTagDef>Head</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>70</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+  <HediffDef ParentName="CVG_BloodlineHediffBase">
+    <defName>CVG_Bloodline_Qilin</defName>
+    <label>qilin blood</label>
+    <description>Awakened qilin blood: a calm mind, gentle hands and a body that resists sickness. Killing weighs on it.</description>
+    <defaultLabelColor>(1, 0.85, 0.45)</defaultLabelColor>
+    <!-- Done in XML: pacifism as socialFightChanceFactor 0.3, aggroMentalBreakSelectionChanceFactor 0 and forced Kind (Trace-Pure) on the identity genes. TODO (needs code; see docs/modulos/razas/QILIN.md): Dao Heart stability, mood aura, fortune, evil detection, 'killed' and corpse/execution thoughts, demon sensitivity -->
+    <stages>
+      <li>
+        <minSeverity>1</minSeverity>
+        <label>trace</label>
+        <statOffsets>
+          <MentalBreakThreshold>-0.02</MentalBreakThreshold>
+          <MedicalTendQuality>0.15</MedicalTendQuality>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>1.05</MoveSpeed>
+          <PlantHarvestYield>1.1</PlantHarvestYield>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <label>diluted</label>
+        <statOffsets>
+          <MentalBreakThreshold>-0.05</MentalBreakThreshold>
+          <ToxicResistance>0.2</ToxicResistance>
+          <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+          <MedicalTendQuality>0.3</MedicalTendQuality>
+        </statOffsets>
+        <statFactors>
+          <ImmunityGainSpeed>1.1</ImmunityGainSpeed>
+          <LifespanFactor>1.2</LifespanFactor>
+          <MeleeDamageFactor>0.9</MeleeDamageFactor>
+          <CVG_QiMax>1.05</CVG_QiMax>
+          <CVG_QiRegen>1.05</CVG_QiRegen>
+          <MoveSpeed>1.1</MoveSpeed>
+          <PlantHarvestYield>1.2</PlantHarvestYield>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <label>pure</label>
+        <statOffsets>
+          <MentalBreakThreshold>-0.08</MentalBreakThreshold>
+          <ToxicResistance>0.4</ToxicResistance>
+          <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+          <MedicalTendQuality>0.45</MedicalTendQuality>
+        </statOffsets>
+        <statFactors>
+          <ImmunityGainSpeed>1.25</ImmunityGainSpeed>
+          <LifespanFactor>1.5</LifespanFactor>
+          <MeleeDamageFactor>0.95</MeleeDamageFactor>
+          <CVG_QiMax>1.15</CVG_QiMax>
+          <CVG_QiRegen>1.15</CVG_QiRegen>
+          <MoveSpeed>1.15</MoveSpeed>
+          <PlantHarvestYield>1.3</PlantHarvestYield>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>4</minSeverity>
+        <label>ancestral</label>
+        <statOffsets>
+          <MentalBreakThreshold>-0.12</MentalBreakThreshold>
+          <ToxicResistance>0.6</ToxicResistance>
+          <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+          <MedicalTendQuality>0.6</MedicalTendQuality>
+        </statOffsets>
+        <statFactors>
+          <ImmunityGainSpeed>1.4</ImmunityGainSpeed>
+          <LifespanFactor>2.0</LifespanFactor>
+          <CVG_QiMax>1.25</CVG_QiMax>
+          <CVG_QiRegen>1.3</CVG_QiRegen>
+          <MoveSpeed>1.25</MoveSpeed>
+          <PlantHarvestYield>1.5</PlantHarvestYield>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <AbilityDef ParentName="CVG_InnateAbilityBase">
+    <defName>CVG_Ability_QilinBlessing</defName>
+    <label>qilin's blessing</label>
+    <description>A warm calm that mends wounds and softens hearts for a few hours.\n\nAllies within 8 cells: +4 mood, +25% wound healing and +15% tend quality for 4 hours (radius and duration grow with the realm). Costs qi if the user cultivates.</description>
+    <iconPath>UI/Abilities/CVG_QilinBlessing</iconPath>
+    <cooldownTicksRange>20000</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <targetRequired>false</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>7.9</range>
+      <warmupTime>1.5</warmupTime>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Convergence.CompProperties_AbilityQiCost">
+        <qiCost>30</qiCost>
+      </li>
+      <li Class="Convergence.CompProperties_AbilityGiveHediffInRadius">
+        <hediffDef>CVG_QilinBlessed</hediffDef>
+        <radius>7.9</radius>
+        <fleckDef>PsycastAreaEffect</fleckDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <HediffDef>
+    <defName>CVG_QilinBlessed</defName>
+    <label>qilin's blessing</label>
+    <description>The calm of the qilin: wounds close faster and the heart is lighter.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(1, 0.85, 0.45)</defaultLabelColor>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>10000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <InjuryHealingFactor>1.25</InjuryHealingFactor>
+        </statFactors>
+        <statOffsets>
+          <MedicalTendQuality>0.15</MedicalTendQuality>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_QilinBlessed</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>CVG_QilinBlessed</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>qilin's blessing</label>
+        <description>A warm calm, as if the world were kind for a while.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <XenotypeDef>
+    <defName>CVG_Xeno_Qilin</defName>
+    <label>voice of the lotus</label>
+    <description>Monks and healers of the Silent Lotus Temple: pure qilin blood, a golden horn, golden scales and deer ears. Serene and gifted healers, they suffer when they have to kill.</description>
+    <descriptionShort>Pure qilin blood: golden horn and scales. Calm healers who dislike killing.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Genie</iconPath>
+    <inheritable>true</inheritable>
+    <nameMaker>CVG_NamerPerson_Qilin</nameMaker>
+    <nameMakerFemale>CVG_NamerPerson_Qilin_Female</nameMakerFemale>
+    <chanceToUseNameMaker>0.8</chanceToUseNameMaker>
+    <genes>
+      <li>CVG_Blood_Qilin_Pure</li>
+      <li>CVG_Qilin_Mane</li>
+      <li>CVG_Qilin_Eyes</li>
+      <li>CVG_Qilin_Scales</li>
+      <li>CVG_Qilin_Horn</li>
+      <li>Mood_Optimist</li>
+      <li>Pain_Reduced</li>
+      <li>KindInstinct</li>
+      <li>ToxResist_Partial</li>
+      <li>CVG_BloodGene_BeastVitality_III</li>
+      <li>CVG_BloodGene_KeenSenses_III</li>
+      <li>CVG_BloodGene_BloodLongevity_III</li>
+      <li>CVG_BloodGene_BeastInstinct_III</li>
+      <li>CVG_BloodGene_QiResonance_III</li>
+      <li>CVG_BloodGene_AuspiciousPresence_III</li>
+      <li>CVG_BloodGene_PureHooves_III</li>
+      <li>CVG_BloodGene_EvilRepellent_III</li>
+    </genes>
+  </XenotypeDef>
+
+  <!-- Pawn kind for the vanilla "Spawn pawn" debug action and future factions/scenarios. -->
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>CVG_Kind_Qilin</defName>
+    <initialResistanceRange>13~20</initialResistanceRange>
+    <initialWillRange>1~3</initialWillRange>
+    <label>voice of the lotus</label>
+    <defaultFactionDef>PlayerColony</defaultFactionDef>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelMoney>350~600</apparelMoney>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>CVG_Bloodline_Qilin</li>
+        </categories>
+        <commonality>0.7</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+        <commonality>0.3</commonality>
+      </li>
+    </backstoryFiltersOverride>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <xenotypeSet>
+      <xenotypeChances>
+        <CVG_Xeno_Qilin>1</CVG_Xeno_Qilin>
+      </xenotypeChances>
+    </xenotypeSet>
+  </PawnKindDef>
+
+</Defs>

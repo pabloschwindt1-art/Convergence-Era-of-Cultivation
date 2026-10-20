@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_MealSteamedBuns.label>bollos al vapor</CVG_MealSteamedBuns.label>
+  <CVG_MealSteamedBuns.description>Bollos blancos y tiernos rellenos de lo que hubiera en la cocina, cocidos al vapor en cestas de bambú. Todo discípulo externo de cualquier secta comió diez mil; según las viejas historias, Zhuge Liang los inventó para aplacar al espíritu de un río sin matar a nadie.</CVG_MealSteamedBuns.description>
+  <CVG_MealSpiritRice.label>arroz con carne espiritual</CVG_MealSpiritRice.label>
+  <CVG_MealSpiritRice.description>Un cuenco de arroz coronado con láminas de carne de bestia espiritual glaseadas en su jugo. Los cultivadores sienten un hilo de qi asentarse en el dantian, y los del cuerpo, algo de calor en la sangre. El Pabellón del Caldero Celestial se lo servía a los discípulos que pasaban su primera prueba.</CVG_MealSpiritRice.description>
+  <CVG_MealSectBanquet.label>banquete de la secta</CVG_MealSectBanquet.label>
+  <CVG_MealSectBanquet.description>Ocho platos en una bandeja lacada, con hierbas espirituales en el caldo y un bollo con forma de durazno para la longevidad. Las sectas lo sirven cuando un anciano avanza o llega un huésped de rango. El cuerpo toma algo del qi de las hierbas durante un día.</CVG_MealSectBanquet.description>
+  <CVG_BiguPill.label>píldora de ayuno</CVG_BiguPill.label>
+  <CVG_BiguPill.description>Una píldora de grano prensada con arroz e hierba espiritual. El bigu, el arte taoísta de vivir sin cereales, empieza con estas: una píldora calma el hambre un rato, y una bolsa de ellas le dura semanas a una caravana sin pudrirse.</CVG_BiguPill.description>
+  <CVG_HerbalOintment.label>ungüento de hierbas</CVG_HerbalOintment.label>
+  <CVG_HerbalOintment.description>Un tarro de pasta de hierba espiritual con una tira de tela limpia. Todo cultivador errante lleva uno; dicen que Hua Tuo, el médico divino, mezcló el primero bajo un pino del monte Song. Mejor que la medicina herbal común, peor que un botiquín de verdad.</CVG_HerbalOintment.description>
+  <CVG_HealingPill.label>píldora curativa</CVG_HealingPill.label>
+  <CVG_HealingPill.description>Una píldora roja refinada en el horno de alquimia con ungüento de hierbas, hierba espiritual y una piedra espiritual. Machacada en una herida o tragada, hace lo que un botiquín de medicina moderna. Los alquimistas del Caldero Celestial se las vendían por millares a las sectas en guerra.</CVG_HealingPill.description>
+  <CVG_JadeElixir.label>elixir de jade</CVG_JadeElixir.label>
+  <CVG_JadeElixir.description>Un elixir verde en un frasco de jade sellado, destilado durante días con una píldora curativa, jade espiritual e hierbas. Teje la carne como un botiquín de mundo brillante. Los emperadores del viejo mundo se envenenaron persiguiendo elixires como este; este, al menos, funciona. Requiere un horno de alquimia de nivel 2.</CVG_JadeElixir.description>
+  <CVG_CloudTea.label>té de las nubes</CVG_CloudTea.label>
+  <CVG_CloudTea.description>Hojas de hierba espiritual enrolladas y cocidas al vapor como lo hacían los maestros del té de las laderas de Wudang, hasta que la taza huele a niebla. Compartido sobre un tablero de go suelta la lengua y aclara la mente, sin la bruma del vino. No crea adicción.</CVG_CloudTea.description>
+  <CVG_CloudTea.ingestible.ingestCommandString>Beber {0}</CVG_CloudTea.ingestible.ingestCommandString>
+  <CVG_CloudTea.ingestible.ingestReportString>Bebiendo {0}.</CVG_CloudTea.ingestible.ingestReportString>
+  <CVG_Incense.label>incienso</CVG_Incense.label>
+  <CVG_Incense.description>Varitas de polvo de sándalo e hierba espiritual que arden lentas y azules. Respirar el humo antes de cultivar calma el corazón y deja fluir el qi un poco más rápido, pero embota los sentidos. El Templo del Loto Silencioso quema una varita por cada discípulo que medita allí.</CVG_Incense.description>
+  <CVG_Incense.ingestible.ingestCommandString>Quemar {0}</CVG_Incense.ingestible.ingestCommandString>
+  <CVG_Incense.ingestible.ingestReportString>Quemando {0}.</CVG_Incense.ingestible.ingestReportString>
+</LanguageData>

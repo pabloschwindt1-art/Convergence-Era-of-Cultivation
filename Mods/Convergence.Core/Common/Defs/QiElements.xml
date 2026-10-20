@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <Convergence.QiElementDef>
+    <defName>CVG_Element_Metal</defName>
+    <label>metal</label>
+    <description>Sharp and unyielding qi. Favors swords and defense.</description>
+    <color>(0.85, 0.85, 0.80)</color>
+    <order>1</order>
+  </Convergence.QiElementDef>
+  <Convergence.QiElementDef>
+    <defName>CVG_Element_Wood</defName>
+    <label>wood</label>
+    <description>Living, growing qi. Favors healing and spirit farming.</description>
+    <color>(0.35, 0.75, 0.30)</color>
+    <order>2</order>
+  </Convergence.QiElementDef>
+  <Convergence.QiElementDef>
+    <defName>CVG_Element_Water</defName>
+    <label>water</label>
+    <description>Flowing, patient qi. Favors control and endurance.</description>
+    <color>(0.30, 0.55, 0.95)</color>
+    <order>3</order>
+    <!-- affinity at the Golden Core (scaled by environment resistance) -->
+    <affinityOffsets>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+    </affinityOffsets>
+  </Convergence.QiElementDef>
+  <Convergence.QiElementDef>
+    <defName>CVG_Element_Fire</defName>
+    <label>fire</label>
+    <description>Violent, consuming qi. Favors destruction and alchemy.</description>
+    <color>(0.95, 0.35, 0.20)</color>
+    <order>4</order>
+    <!-- affinity at the Golden Core (scaled by environment resistance): a fire root no longer catches flame -->
+    <affinityOffsets>
+      <ComfyTemperatureMax>20</ComfyTemperatureMax>
+    </affinityOffsets>
+    <affinityFactors>
+      <Flammability>0</Flammability>
+    </affinityFactors>
+  </Convergence.QiElementDef>
+  <Convergence.QiElementDef>
+    <defName>CVG_Element_Earth</defName>
+    <label>earth</label>
+    <description>Heavy, stable qi. Favors the body and formations.</description>
+    <color>(0.70, 0.55, 0.30)</color>
+    <order>5</order>
+    <!-- affinity at the Golden Core (scaled by environment resistance) -->
+    <affinityOffsets>
+      <ToxicResistance>0.3</ToxicResistance>
+      <ToxicEnvironmentResistance>0.3</ToxicEnvironmentResistance>
+    </affinityOffsets>
+  </Convergence.QiElementDef>
+  <!--
+    Thunder: a celestial variant root (Tale of Immortal style). It never comes up in the normal roll; it is born, rarely,
+    from a root that has both wood and fire (replacing them), or from the blood of the Thunder Qilin.
+  -->
+  <Convergence.QiElementDef>
+    <defName>CVG_Element_Thunder</defName>
+    <label>thunder</label>
+    <description>Celestial variant qi, the punishment of heaven and its weapon. When wood feeds fire inside a root, once in a long while the flame becomes lightning. The Thunder Qilin carries it in its blood. Heavenly tribulation strikes those born of thunder more gently, as one does not burn fire with fire.</description>
+    <color>(0.65, 0.45, 1)</color>
+    <order>6</order>
+    <variant>true</variant>
+    <variantOf>
+      <li>CVG_Element_Wood</li>
+      <li>CVG_Element_Fire</li>
+    </variantOf>
+    <variantChance>0.15</variantChance>
+    <tribulationDamageFactor>0.6</tribulationDamageFactor>
+  </Convergence.QiElementDef>
+</Defs>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_BuildPuppet_Miner.label>atar marioneta picapedrera</CVG_BuildPuppet_Miner.label>
+  <CVG_BuildPuppet_Miner.description>Fundir y enlazar una marioneta de trabajo minera (minar, herrería y apagar incendios).</CVG_BuildPuppet_Miner.description>
+  <CVG_BuildPuppet_Miner.jobString>Atando una marioneta.</CVG_BuildPuppet_Miner.jobString>
+  <CVG_BuildPuppet_Mason.label>atar marioneta albañil</CVG_BuildPuppet_Mason.label>
+  <CVG_BuildPuppet_Mason.description>Tallar y enlazar una marioneta de trabajo albañil (construir, fabricar, sastrería y cocinar).</CVG_BuildPuppet_Mason.description>
+  <CVG_BuildPuppet_Mason.jobString>Atando una marioneta.</CVG_BuildPuppet_Mason.jobString>
+  <CVG_BuildPuppet_Blade.label>atar marioneta de doble hoja</CVG_BuildPuppet_Blade.label>
+  <CVG_BuildPuppet_Blade.description>Fundir y enlazar una marioneta de guerra de doble hoja (escalón 3: el titiritero tiene que haber llegado al Núcleo Dorado).</CVG_BuildPuppet_Blade.description>
+  <CVG_BuildPuppet_Blade.jobString>Atando una marioneta.</CVG_BuildPuppet_Blade.jobString>
+</LanguageData>

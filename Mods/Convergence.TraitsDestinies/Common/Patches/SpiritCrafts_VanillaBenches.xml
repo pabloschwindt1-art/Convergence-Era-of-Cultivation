@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Los oficios espirituales también progresan en bancos y plantas vanilla, para que funcionen sin Convergence: Alchemy. -->
+  <Operation Class="PatchOperationAddModExtension">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="DrugLab"]</xpath>
+    <value><li Class="Convergence.DefModExtension_ProgressCounter"><counter>Alchemy</counter></li></value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="FueledSmithy" or defName="ElectricSmithy"]</xpath>
+    <value><li Class="Convergence.DefModExtension_ProgressCounter"><counter>Forging</counter></li></value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="TableSculpting"]</xpath>
+    <value><li Class="Convergence.DefModExtension_ProgressCounter"><counter>Talismans</counter></li></value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="Plant_Healroot"]</xpath>
+    <value><li Class="Convergence.DefModExtension_ProgressCounter"><counter>SpiritFarming</counter></li></value>
+  </Operation>
+</Patch>

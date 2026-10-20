@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Convergence: Qi-Tech v0.1 (docs/modulos/QITECH.md). The technological branch of the mod, for those who play with technology:
+    the qi <-> electricity converter, the Qi-Tech exoskeleton and the stabilization chamber. Everything here needs industrial research.
+    Art is provisional (tinted vanilla); final art: Things/Building/CVG/QiTech/<Name>, Things/Pawn/Humanlike/Apparel/CVG/QiTechExosuit.
+  -->
+
+  <ResearchProjectDef>
+    <defName>CVG_Research_QiTech</defName>
+    <tab>CVG_Cultivation</tab>
+    <label>qi-tech</label>
+    <description>The engineers of the Edge never believed in qi until it burned out their meters; then they wanted to measure it. Qi-tech is the result: wire-wound cores that drink qi from an array, converters that turn it into current and back, and an exoskeleton with a core that never sleeps. The sects of Jiuxiao call it "the second forge", with the wariness one gives to a younger brother with a sharp knife.</description>
+    <baseCost>2200</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Electricity</li>
+      <li>CVG_Research_QiNetwork</li>
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>4</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>CVG_Research_QiStabilization</defName>
+    <tab>CVG_Cultivation</tab>
+    <label>celestial stabilization</label>
+    <description>Every metal limb is a small argument with the heavens: the Celestial Dao notices what was not born. A stabilization chamber bathes the body in a field tuned to the five elements, and for about a week the heavens look the other way. It is not forgiveness, only a rest from being measured.</description>
+    <baseCost>1800</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>CVG_Research_QiTech</li>
+    </prerequisites>
+    <researchViewX>7</researchViewX>
+    <researchViewY>4</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>CVG_Research_QiExosuit</defName>
+    <tab>CVG_Cultivation</tab>
+    <label>qi-tech exoskeleton</label>
+    <description>A frame of plasteel and spirit steel around a core of condensed qi. It makes the wearer faster, harder to kill and louder to the sky. The Celestial Dao hates it, and the engineers who built the first one insist that is a feature.</description>
+    <baseCost>2600</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>CVG_Research_QiTech</li>
+      <li>Fabrication</li>
+    </prerequisites>
+    <researchViewX>7</researchViewX>
+    <researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+
+  <!-- ================= Qi <-> electricity converter ================= -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_QiConverter</defName>
+    <label>qi converter</label>
+    <description>A casing of brushed steel around a coil of spirit silver, bolted to a plinth carved with the five-element wheel. In one mode it drinks qi from the network and gives current to the wires; in the other it takes current and presses it into qi. The conversion is lossy either way. A technician who has to explain this to an old master usually says only that "it is a door, and doors have drafts".</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiTech/QiConverter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <size>(2,2)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.5</fillPercent>
+    <pathCost>42</pathCost>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <designationCategory>Power</designationCategory>
+    <statBases>
+      <MaxHitPoints>220</MaxHitPoints>
+      <WorkToBuild>5500</WorkToBuild>
+      <Flammability>0.5</Flammability>
+      <Mass>30</Mass>
+    </statBases>
+    <costList>
+      <Steel>120</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <CVG_SpiritStone>20</CVG_SpiritStone>
+    </costList>
+    <researchPrerequisites><li>CVG_Research_QiTech</li></researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <placeWorkers><li>Convergence.PlaceWorker_QiNodeRadius</li></placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>Convergence.QiTech.CompQiConverterPower</compClass>
+        <basePowerConsumption>1000</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+        <showPowerNeededIfOff>false</showPowerNeededIfOff>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="Convergence.QiTech.CompProperties_QiConverter">
+        <consumeDay>100</consumeDay>
+        <produceDay>55</produceDay>
+        <watts>1000</watts>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ================= Stabilization chamber ================= -->
+  <HediffDef>
+    <defName>CVG_Stabilized</defName>
+    <label>stabilized</label>
+    <description>The field of the stabilization chamber has settled over the body. For a few days the Celestial Dao does not notice the metal.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>360000~480000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <CVG_CelestialDissonance>-0.4</CVG_CelestialDissonance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BedWithQualityBase">
+    <defName>CVG_StabilizationChamber</defName>
+    <tickerType>Rare</tickerType>
+    <label>stabilization chamber</label>
+    <description>A hospital bed under a hood of copper rings and jade glass, where a field tuned to the five elements keeps the body in step with the heavens. Anyone who rests in it with a bionic, graft, exoskeleton or any other dissonant implant, a graft or an exoskeleton comes out with less celestial dissonance for a week. It does not heal, only rests the part of you that the sky keeps counting.</description>
+    <graphicData>
+      <!-- Final art: Things/Building/CVG/QiTech/StabilizationChamber -->
+      <texPath>Things/Building/CVG/QiTech/StabilizationChamber</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <castEdgeShadows>True</castEdgeShadows>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToBuild>6000</WorkToBuild>
+      <Mass>40</Mass>
+      <Flammability>0.5</Flammability>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+      <Comfort>0.80</Comfort>
+      <ImmunityGainSpeedFactor>1.11</ImmunityGainSpeedFactor>
+      <MedicalTendQualityOffset>0.10</MedicalTendQualityOffset>
+      <SurgerySuccessChanceFactor>1.1</SurgerySuccessChanceFactor>
+      <BirthRitualQualityOffset MayRequire="Ludeon.RimWorld.Biotech">5</BirthRitualQualityOffset>
+    </statBases>
+    <size>(1,2)</size>
+    <stuffCategories Inherit="False" />
+    <costStuffCount>0</costStuffCount>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <CVG_SpiritStone>30</CVG_SpiritStone>
+      <Jade>6</Jade>
+    </costList>
+    <building>
+      <bed_showSleeperBody>False</bed_showSleeperBody>
+      <bed_healPerDay>10</bed_healPerDay>
+      <bed_defaultMedical>true</bed_defaultMedical>
+      <buildingSizeCategory>Small</buildingSizeCategory>
+      <paintable>true</paintable>
+    </building>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>42</pathCost>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <techLevel>Industrial</techLevel>
+    <researchPrerequisites><li>CVG_Research_QiStabilization</li></researchPrerequisites>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>VitalsMonitor</li>
+          <li>EndTable</li>
+          <li>Dresser</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>400</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="Convergence.QiTech.CompProperties_StabilizationChamber">
+        <hediff>CVG_Stabilized</hediff>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ================= Qi-Tech exoskeleton ================= -->
+  <ThingDef ParentName="ApparelArmorReconBase">
+    <defName>CVG_Apparel_QiTechExosuit</defName>
+    <label>qi-tech exoskeleton</label>
+    <description>A frame of plasteel and spirit steel locked around a core of condensed qi that the engineers call a battery and the monks call a heart. It lets the wearer recover qi faster, makes them harder to kill and impossible for the Celestial Dao to ignore. The first prototype was shown to a master of the Azure Peak, who looked at it for a long while and asked only whether it could be worn at weddings.</description>
+    <graphicData>
+      <!-- Final art: Things/Pawn/Humanlike/Apparel/CVG/QiTechExosuit -->
+      <texPath>Things/Pawn/Humanlike/Apparel/CVG/QiTechExosuit/QiTechExosuit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <apparel>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/QiTechExosuit/QiTechExosuit</wornGraphicPath>
+      <tags>
+        <li>CVG_QiTech</li>
+      </tags>
+    </apparel>
+    <statBases>
+      <MaxHitPoints>260</MaxHitPoints>
+      <WorkToMake>45000</WorkToMake>
+      <ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.4</ArmorRating_Heat>
+      <Mass>9</Mass>
+      <EquipDelay>6</EquipDelay>
+    </statBases>
+    <costList Inherit="False">
+      <Plasteel>80</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+      <CVG_SpiritStone>12</CVG_SpiritStone>
+    </costList>
+    <equippedStatOffsets>
+      <CVG_QiMax>40</CVG_QiMax>
+      <CVG_QiRegen>0.6</CVG_QiRegen>
+      <CVG_CelestialDissonance>0.9</CVG_CelestialDissonance>
+      <MoveSpeed>0.15</MoveSpeed>
+    </equippedStatOffsets>
+    <recipeMaker>
+      <displayPriority>100</displayPriority>
+      <researchPrerequisite>CVG_Research_QiExosuit</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+</Defs>

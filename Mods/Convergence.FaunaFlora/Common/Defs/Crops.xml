@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Wuxia crops (docs/modulos/DIA_A_DIA.md, part 4b): the version of the vanilla crops. Bamboo and peach trees live in Convergence.Resources.
+       Art: Things/Plant/CVG/<Name>, Things/Item/Resource/CVG_<Name>. -->
+
+  <!-- ================= Glutinous rice ================= -->
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>CVG_GlutinousRice</defName>
+    <label>glutinous rice</label>
+    <description>Short, sticky grains, white as jade, steamed in bamboo leaves for every festival of Jiuxiao. It feeds slightly better than plain rice and keeps its shape when pressed into the rice cakes that cultivators carry on long retreats.</description>
+    <soundInteract>Grain_Drop</soundInteract>
+    <soundDrop>Grain_Drop</soundDrop>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_GlutinousRice</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+      <Nutrition>0.055</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Seed</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>50</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>CVG_Plant_GlutinousRice</defName>
+    <label>glutinous rice plant</label>
+    <description>A short crop with heavy heads that bends toward the sun. It asks for rich soil and gives more grain per plant than rice, in exchange for a day more of growth. Farmers of the Valley say it grows best when someone sings to it, and nobody has proven them wrong.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.175</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/CVG/GlutinousRice</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <dieIfLeafless>true</dieIfLeafless>
+      <maxMeshCount>4</maxMeshCount>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>CVG_GlutinousRice</harvestedThingDef>
+      <harvestYield>8</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>4</growDays>
+      <fertilitySensitivity>1.2</fertilitySensitivity>
+      <visualSizeRange>0.5~0.85</visualSizeRange>
+      <wildOrder>2</wildOrder>
+      <purpose>Food</purpose>
+      <humanFoodPlant>true</humanFoodPlant>
+    </plant>
+  </ThingDef>
+
+  <!-- ================= Cloud tea ================= -->
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>CVG_CloudTeaLeaf</defName>
+    <label>cloud tea leaf</label>
+    <description>Tender leaves of the tea that grows where the clouds touch the mountain, picked before dawn and dried in the shade. Steeped, they make the tea of the clouds, which clears the head and steadies the qi. The Silent Lotus monks say the first cup is for the guest, the second for the host and the third for the mountain.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_CloudTeaLeaf</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories><li>ResourcesRaw</li></thingCategories>
+    <statBases>
+      <MarketValue>3</MarketValue>
+      <Mass>0.02</Mass>
+      <Flammability>1.5</Flammability>
+    </statBases>
+    <stackLimit>75</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>60</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>CVG_Plant_CloudTea</defName>
+    <label>cloud tea bush</label>
+    <description>A glossy, dark-green bush that likes thin air, cool nights and poor stony soil. Slow to grow and slow to die, it gives a modest harvest of leaves worth far more than their weight. Tea farmers prune it by moonlight, and say it cries a little when they forget.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.1</Nutrition>
+      <Beauty>2</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/CVG/CloudTea</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>CVG_CloudTeaLeaf</harvestedThingDef>
+      <harvestYield>7</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <sowMinSkill>3</sowMinSkill>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>9</growDays>
+      <fertilityMin>0.5</fertilityMin>
+      <fertilitySensitivity>0.4</fertilitySensitivity>
+      <visualSizeRange>0.4~0.9</visualSizeRange>
+      <wildOrder>2</wildOrder>
+    </plant>
+  </ThingDef>
+
+  <!-- ================= Lotus (damp soil: vanilla has no crop for shallow water) ================= -->
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>CVG_LotusRoot</defName>
+    <label>lotus root</label>
+    <description>The pale, jointed root of the lotus, crisp and slightly sweet, full of small holes through which, they say, the monks can see the future. Eaten raw it is bland; boiled or fried in a pan it is among the most prized vegetables of the sect kitchens.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_LotusRoot</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.2</MarketValue>
+      <Nutrition>0.06</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>25</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>CVG_Plant_Lotus</defName>
+    <label>lotus</label>
+    <description>A broad-leaved plant with a single pink flower that opens at dawn and closes at dusk. It wants rich, wet ground, so it fares poorly in dry or poor soil. It is beautiful in the field and gives edible roots; in the temples of the Silent Lotus it grows in every pond, and no one remembers who planted the first.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.15</Nutrition>
+      <Beauty>4</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/CVG/Lotus</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <dieIfLeafless>true</dieIfLeafless>
+      <maxMeshCount>1</maxMeshCount>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>CVG_LotusRoot</harvestedThingDef>
+      <harvestYield>11</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>7</growDays>
+      <completelyIgnoreFertility>true</completelyIgnoreFertility><!-- el agua no tiene fertilidad: crece en agua dulce poco profunda y marismas (de rio, estanque o ribera), no en agua profunda ni en el oceano -->
+      <wildTerrainTags><li>WaterFreshShallow</li><li>WaterMarshy</li></wildTerrainTags>
+      <fertilityMin>0.7</fertilityMin>
+      <fertilitySensitivity>1.5</fertilitySensitivity>
+      <visualSizeRange>0.5~0.9</visualSizeRange>
+      <wildOrder>3</wildOrder>
+      <purpose>Food</purpose>
+      <humanFoodPlant>true</humanFoodPlant>
+    </plant>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.1</qi>
+        <element>CVG_Element_Water</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- ================= Mulberry (feeds the silkworms: leaves -> spirit silk) ================= -->
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>CVG_MulberryLeaf</defName>
+    <label>mulberry leaf</label>
+    <description>Broad, rough leaves, the only thing the sect silkworms will eat. Useless as food for people, and a good ration for herbivorous animals. Spread out on bamboo trays in a dark room, twenty bundles of them turn, over a month, into a handful of spirit silk.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_MulberryLeaf</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.9</MarketValue>
+      <Nutrition>0.04</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <preferability>DesperateOnlyForHumanlikes</preferability>
+    </ingestible>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>8</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>CVG_Plant_Mulberry</defName>
+    <label>mulberry bush</label>
+    <description>A leafy, low-pruned bush that gives leaf after leaf for the silkworms. It grows in any decent soil and recovers quickly. Sericulturists say the silkworm and the mulberry are one animal split in two: one eats, the other grows.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.1</Nutrition>
+      <Beauty>1</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/CVG/Mulberry</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>CVG_MulberryLeaf</harvestedThingDef>
+      <harvestYield>14</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>8</growDays>
+      <fertilitySensitivity>0.6</fertilitySensitivity>
+      <visualSizeRange>0.5~1.0</visualSizeRange>
+      <wildOrder>2</wildOrder>
+    </plant>
+  </ThingDef>
+
+  
+
+  <!-- ================= Millennial pine ================= -->
+  <ThingDef ParentName="TreeBase">
+    <defName>CVG_Plant_MillennialPine</defName>
+    <label>millennial pine</label>
+    <description>A crooked, immense pine that takes three generations to reach its full height and is said to have seen the Iron Calamity. Its needles hold the qi of the mountain and its wood is dense and fragrant. Cutting one is a serious matter: in Jiuxiao a woodcutter asked the tree's permission and waited for a sign.</description>
+    <graphicData>
+      <texPath>Things/Plant/CVG/MillennialPine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Beauty>7</Beauty>
+      <BeautyOutdoors>7</BeautyOutdoors>
+      <Nutrition>0.8</Nutrition>
+      <MaxHitPoints>350</MaxHitPoints>
+    </statBases>
+    <plant>
+      <growDays>75</growDays>
+      <harvestedThingDef>WoodLog</harvestedThingDef>
+      <harvestYield>90</harvestYield>
+      <harvestWork>1200</harvestWork>
+      <wildClusterRadius>4</wildClusterRadius>
+      <wildClusterWeight>20</wildClusterWeight>
+      <visualSizeRange>1.3~2.0</visualSizeRange>
+      <fertilityMin>0.5</fertilityMin>
+      <dieIfLeafless>false</dieIfLeafless>
+    </plant>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.4</qi>
+        <element>CVG_Element_Wood</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

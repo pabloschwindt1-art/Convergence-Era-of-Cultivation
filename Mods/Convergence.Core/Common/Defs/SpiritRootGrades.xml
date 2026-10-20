@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <Convergence.SpiritRootGradeDef>
+    <defName>CVG_RootGrade_Inferior</defName>
+    <label>inferior spirit root</label>
+    <description>A weak, muddy root. Cultivation is slow, but the path is still open.</description>
+    <order>1</order>
+    <commonality>50</commonality>
+    <cultivationSpeedFactor>0.6</cultivationSpeedFactor>
+    <traitDegree>1</traitDegree>
+    <breakthroughFactor>0.8</breakthroughFactor>
+  </Convergence.SpiritRootGradeDef>
+  <Convergence.SpiritRootGradeDef>
+    <defName>CVG_RootGrade_Common</defName>
+    <label>common spirit root</label>
+    <description>An ordinary root, like that of most sect disciples.</description>
+    <order>2</order>
+    <commonality>30</commonality>
+    <cultivationSpeedFactor>1.0</cultivationSpeedFactor>
+    <traitDegree>2</traitDegree>
+    <breakthroughFactor>1.0</breakthroughFactor>
+  </Convergence.SpiritRootGradeDef>
+  <Convergence.SpiritRootGradeDef>
+    <defName>CVG_RootGrade_Superior</defName>
+    <label>superior spirit root</label>
+    <description>A bright, clear root. Sects would fight to take this disciple.</description>
+    <order>3</order>
+    <commonality>15</commonality>
+    <cultivationSpeedFactor>1.5</cultivationSpeedFactor>
+    <traitDegree>3</traitDegree>
+    <breakthroughFactor>1.15</breakthroughFactor>
+  </Convergence.SpiritRootGradeDef>
+  <Convergence.SpiritRootGradeDef>
+    <defName>CVG_RootGrade_Heavenly</defName>
+    <label>heavenly spirit root</label>
+    <description>A root that appears once in a generation. Heaven itself watches this one.</description>
+    <order>4</order>
+    <commonality>5</commonality>
+    <cultivationSpeedFactor>2.2</cultivationSpeedFactor>
+    <traitDegree>4</traitDegree>
+    <breakthroughFactor>1.3</breakthroughFactor>
+  </Convergence.SpiritRootGradeDef>
+</Defs>

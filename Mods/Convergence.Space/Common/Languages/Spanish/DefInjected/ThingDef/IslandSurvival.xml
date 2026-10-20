@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_CloudRockWall.label>muro de roca de nube</CVG_CloudRockWall.label>
+  <CVG_CloudRockWall.description>Un muro de roca de nube apretada con tanta fuerza que ni un soplo se filtra. Los canteros de la isla dicen que la piedra recuerda el cielo de donde fue cortada y se niega a dejarlo entrar de nuevo. Solo puede alzarse sobre la propia isla, arraigado en la roca de nube de debajo.</CVG_CloudRockWall.description>
+  <CVG_JadeWall.label>muro de jade</CVG_JadeWall.label>
+  <CVG_JadeWall.description>Un muro de jade pálido que zumba muy bajito cuando el viento lo toca. Retiene el aire mejor que cualquier piedra, mantiene pareja la temperatura de la sala y es tan hermoso que las sectas de la Corte Celestial levantaron con él los salones de sus inmortales. Una sola hilada cuesta más que un pabellón.</CVG_JadeWall.description>
+  <CVG_BreathFormation.label>formación del aliento</CVG_BreathFormation.label>
+  <CVG_BreathFormation.description>Una tablilla de jade tallada con el carácter de «aliento» y rodeada de pétalos de loto de plata prensada. Reúne el qi fino del cielo alto y lo devuelve a la sala como aire, despacio, como respira un durmiente. Los monjes del Loto Silencioso dicen que fue la primera formación que se talló, y que servía para mantener encendida una sola vela.</CVG_BreathFormation.description>
+  <CVG_CelestialDome.label>formación de cúpula celestial</CVG_CelestialDome.label>
+  <CVG_CelestialDome.description>Nueve pilares de jade que sostienen un cuenco de qi sobre el asentamiento, con la forma que la Corte Celestial usaba para mantener un pabellón en el cielo: el aire se queda dentro, el frío se queda fuera y las estrellas siguen donde deben. Bebe qi de la red, mucho. No cubre salas, cubre el cielo, y todo lo que hay debajo respira.</CVG_CelestialDome.description>
+  <CVG_SkyStake.label>estaca del cielo</CVG_SkyStake.label>
+  <CVG_SkyStake.description>Un pilar de jade y acero espiritual clavado en la montaña tan hondo que la propia tierra lo sostiene. Cuando la isla zarpa, la estaca impide que el suelo la siga: el valle se queda donde estaba y la isla se va sin desgarrar el mundo tras de sí. No puede clavarse en la isla misma, o la isla no se elevaría jamás.</CVG_SkyStake.description>
+  <CVG_QiBarrier.label>barrera de qi</CVG_QiBarrier.label>
+  <CVG_QiBarrier.description>Dos postes de jade que tienden entre sí un velo de qi, fino como la piel de una pompa. Deja pasar a cualquiera y no deja salir el aire: las sectas antiguas la usaban en los umbrales de sus pabellones del cielo, para que un discípulo pudiera pisar una nube sin que el salón exhalara a su espalda. No detiene a ningún intruso, y muere con el qi que la alimenta.
+
+Bebe qi de la red, no electricidad. Sin qi el velo cae y la sala respira hacia el vacío.</CVG_QiBarrier.description>
+</LanguageData>

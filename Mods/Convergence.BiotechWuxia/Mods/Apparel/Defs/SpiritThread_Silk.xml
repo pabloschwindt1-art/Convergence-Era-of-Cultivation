@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- With Convergence: Apparel, spirit thread is also spun from spirit silk (the natural source). -->
+  <RecipeDef>
+    <defName>CVG_SpinSpiritThreadFromSilk</defName>
+    <label>spin spirit thread from silk</label>
+    <description>Spin spirit thread from spirit silk.</description>
+    <jobString>Spinning spirit thread.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+      <li>HandTailoringBench</li>
+      <li>ElectricTailoringBench</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritSilk</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>CVG_SpiritSilk</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_SpiritThread>10</CVG_SpiritThread>
+    </products>
+  </RecipeDef>
+</Defs>

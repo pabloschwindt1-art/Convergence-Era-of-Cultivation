@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Souls: one per pawn (exclusionTag CVG_Soul). -->
+
+  <TraitDef>
+    <defName>CVG_Soul_ReincarnatedCultivator</defName>
+    <commonality>0.01</commonality>
+    <exclusionTags>
+      <li>CVG_Soul</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>cultivator's soul</label>
+        <description>The reincarnation of an old cultivator: the way back to the old realm is familiar, so cultivation and breakthroughs come far easier. Many such souls fell in the Iron Calamity and return now that the Convergence has woken the qi again.</description>
+        <statOffsets>
+          <CVG_BreakthroughChance>0.1</CVG_BreakthroughChance>
+        </statOffsets>
+        <statFactors>
+          <CVG_CultivationSpeed>1.5</CVG_CultivationSpeed>
+        </statFactors>
+        <skillGains>
+          <Intellectual>2</Intellectual>
+          <Melee>2</Melee>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Soul_Ancient</defName>
+    <forcedPassions>
+      <li>Intellectual</li>
+    </forcedPassions>
+    <commonality>0.03</commonality>
+    <exclusionTags>
+      <li>CVG_Soul</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>ancient soul</label>
+        <description>Wise and calm beyond the years of the body, if a little slow on the feet. Silent Lotus monks claim such souls have turned the wheel of rebirth so many times that they no longer hurry anywhere.</description>
+        <statOffsets>
+          <MentalBreakThreshold>-0.06</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+          <GlobalLearningFactor>1.15</GlobalLearningFactor>
+          <MoveSpeed>0.95</MoveSpeed>
+        </statFactors>
+        <skillGains>
+          <Intellectual>3</Intellectual>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Soul_Strong</defName>
+    <commonality>0.06</commonality>
+    <exclusionTags>
+      <li>CVG_Soul</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>strong soul</label>
+        <description>Illusions, charms and psychic pressure slide off {PAWN_nameDef}, and the mind holds firm. Shi Gu, Elder of Souls of the Blood Moon Cult, collects souls in his lanterns; souls like this one are the ones he never manages to catch.</description>
+        <statOffsets>
+          <PsychicSensitivity>-0.4</PsychicSensitivity>
+          <MentalBreakThreshold>-0.04</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Soul_Divided</defName>
+    <commonality>0.02</commonality>
+    <exclusionTags>
+      <li>CVG_Soul</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>divided soul</label>
+        <description>Two people in one body: quick to learn, unsteady under pressure. Blood Moon rites sometimes leave a disciple with two souls, but this one was born that way, and nobody knows which soul came first.</description>
+        <statOffsets>
+          <MentalBreakThreshold>0.06</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+          <GlobalLearningFactor>1.1</GlobalLearningFactor>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_Soul_Sealed</defName>
+    <commonality>0.01</commonality>
+    <exclusionTags>
+      <li>CVG_Soul</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>sealed soul</label>
+        <description>Something sleeps inside {PAWN_nameDef}, and the soul around it lies open to psychic currents. Whoever sealed it, an elder, a demon or the Dao itself, left no record, and the seal has not cracked yet.</description>
+        <statOffsets>
+          <PsychicSensitivity>0.3</PsychicSensitivity>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+</Defs>

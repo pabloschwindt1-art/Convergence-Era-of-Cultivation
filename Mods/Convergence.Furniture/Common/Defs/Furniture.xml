@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_CarvedScreen</defName>
+    <label>carved wood screen</label>
+    <description>A folding screen of carved wood that breaks up a room and lets the qi flow around it. Raises the qi concentration of the room a little. The screens of the Azure Peak guest hall are carved with the story of the Peak splitting in a single stroke. Guests are expected to read it in silence before speaking to their host.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/CarvedScreen</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <size>(2,1)</size>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>12</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>6</Beauty>
+    </statBases>
+    <costList>
+      <WoodLog>60</WoodLog>
+    </costList>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>2</qi>
+        <element>CVG_Element_Wood</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_PorcelainVase</defName>
+    <label>porcelain vase</label>
+    <description>A tall vase of fine blue-and-white porcelain. Calms the room and raises its qi concentration a little. Porcelain fired in the kilns of the Silent Lotus Temple is said to hold the echo of the last prayer spoken near it. An empty vase is not empty, monks say, it is only listening.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/PorcelainVase</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <WorkToBuild>800</WorkToBuild>
+      <Mass>2</Mass>
+      <Flammability>0.3</Flammability>
+      <Beauty>4</Beauty>
+    </statBases>
+    <costList>
+      <Steel>10</Steel>
+    </costList>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>2</qi>
+        <element>CVG_Element_Earth</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_BronzeCenser</defName>
+    <label>bronze censer</label>
+    <description>A three-legged bronze censer for burning incense. Its fragrance lifts the mood and it raises the qi concentration of the room a little. Incense of the three-legged censer rises in a straight line when the room is at peace and curls when an enemy is near. Elders of the Heavenly Cauldron Pavilion test their guests by it.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/BronzeCenser</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <WorkToBuild>900</WorkToBuild>
+      <Mass>5</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>3</Beauty>
+    </statBases>
+    <costList>
+      <Steel>25</Steel>
+    </costList>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>2</qi>
+        <element>CVG_Element_Metal</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_KoiPond</defName>
+    <label>koi pond</label>
+    <description>A small stone-edged pond with colorful koi. Very beautiful and it raises the qi concentration of the room a good deal, but it needs space. The koi of the sect ponds are said to be carp that are still waiting for their turn at the Dragon Gate. Disciples feed them each dawn and ask them for nothing.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/KoiPond</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <size>(2,2)</size>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>3500</WorkToBuild>
+      <Mass>12</Mass>
+      <Flammability>0.3</Flammability>
+      <Beauty>10</Beauty>
+    </statBases>
+    <costList>
+      <Steel>30</Steel>
+    </costList>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>4</qi>
+        <element>CVG_Element_Water</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_RitualBrazier</defName>
+    <label>ritual brazier</label>
+    <description>A bronze brazier where a ritual fire burns. Gives light and warmth and raises the qi concentration of the room a little. Burns wood and needs refueling. Before the Blood Moon Cult learned to burn souls, every sect lit a ritual fire to call its ancestors. The flame in a brazier like this one never goes out at the sound of a prayer, only of a lie.</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/RitualBrazier</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>8</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>3</Beauty>
+      <MeditationFocusStrength>0.0</MeditationFocusStrength>
+    </statBases>
+    <costList>
+      <Steel>20</Steel>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <selectable>true</selectable>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>6.0</fuelConsumptionRate>
+        <fuelCapacity>20.0</fuelCapacity>
+        <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+        <fuelFilter><thingDefs><li>WoodLog</li></thingDefs></fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>10</heatPerSecond>
+        <heatPushMaxTemperature>24</heatPushMaxTemperature>
+      </li>
+      <li Class="CompProperties_FireOverlay">
+        <fireSize>0.7</fireSize>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>9</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+    </comps>
+    <placeWorkers><li>PlaceWorker_GlowRadius</li></placeWorkers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>2</qi>
+        <element>CVG_Element_Fire</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_SpiritBonsai</defName>
+    <label>spirit bonsai</label>
+    <description>A pot where a small living tree is trained into a bonsai. Needs tending like any plant. Raises the qi concentration of the room. A cultivator who cannot spare years to grow a forest grows one tree for a lifetime. Sect gardeners say a bonsai remembers the hand that pruned it and leans toward it.</description>
+    <thingClass>Building_PlantGrower</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/SpiritBonsai</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>4</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>5</Beauty>
+    </statBases>
+    <costList>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <fertility>1.0</fertility>
+    <building><defaultPlantToGrow>Plant_Daylily</defaultPlantToGrow><sowTag>Decorative</sowTag></building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>4</qi>
+        <element>CVG_Element_Wood</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_RockGarden</defName>
+    <stuffCategories><li>Stony</li></stuffCategories>
+    <costStuffCount>40</costStuffCount>
+    <label>rock garden</label>
+    <description>Raked white sand around a few carefully placed stones (kare-sansui). Calming to look at and it raises the qi concentration of the room. The raked sand of the kare-sansui garden represents the sea, and the stones the mountains the Silent Lotus monks left behind. Disciples rake it every morning before prayer to rehearse patience.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/RockGarden</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <pathCost>0</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <size>(2,2)</size>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Mass>8</Mass>
+      <Flammability>0.3</Flammability>
+      <Beauty>6</Beauty>
+    </statBases>
+    
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>4</qi>
+        <element>CVG_Element_Earth</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_StatueDragon</defName>
+    <stuffCategories><li>Stony</li></stuffCategories>
+    <costStuffCount>70</costStuffCount>
+    <label>statue of the azure dragon</label>
+    <description>A stone statue of the azure dragon, one of the four sacred beasts. It raises the qi concentration of the room and its element is wood. Of the Four Sacred Beasts, the Azure Dragon is guardian of the east and of spring; the Ancient Dragon Clan carves it facing the sunrise.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/StatueDragon</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Mass>14</Mass>
+      <Flammability>0.3</Flammability>
+      <Beauty>8</Beauty>
+    </statBases>
+    
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>4</qi>
+        <element>CVG_Element_Wood</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_StatuePhoenix</defName>
+    <stuffCategories><li>Stony</li></stuffCategories>
+    <costStuffCount>70</costStuffCount>
+    <label>statue of the vermilion phoenix</label>
+    <description>A stone statue of the vermilion phoenix, one of the four sacred beasts. It raises the qi concentration of the room and its element is fire. Of the Four Sacred Beasts, the Vermilion Bird is guardian of the south and of summer; hearths under its statue are said never to go cold.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/StatuePhoenix</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Mass>14</Mass>
+      <Flammability>0.3</Flammability>
+      <Beauty>8</Beauty>
+    </statBases>
+    
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>4</qi>
+        <element>CVG_Element_Fire</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_StatueQilin</defName>
+    <stuffCategories><li>Stony</li></stuffCategories>
+    <costStuffCount>70</costStuffCount>
+    <label>statue of the golden qilin</label>
+    <description>A stone statue of the golden qilin, one of the four sacred beasts. It raises the qi concentration of the room and its element is earth. Of the Four Sacred Beasts, the Golden Qilin is gentle beast of the center; it appears, say the Silent Lotus monks, only when a just ruler is born.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/StatueQilin</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Mass>14</Mass>
+      <Flammability>0.3</Flammability>
+      <Beauty>8</Beauty>
+    </statBases>
+    
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>4</qi>
+        <element>CVG_Element_Earth</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_StatueTortoise</defName>
+    <stuffCategories><li>Stony</li></stuffCategories>
+    <costStuffCount>70</costStuffCount>
+    <label>statue of the black tortoise</label>
+    <description>A stone statue of the black tortoise, one of the four sacred beasts. It raises the qi concentration of the room and its element is water. Of the Four Sacred Beasts, the Black Tortoise is guardian of the north and of winter; it carries the world on its shell and rests when the rain falls.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/StatueTortoise</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Mass>14</Mass>
+      <Flammability>0.3</Flammability>
+      <Beauty>8</Beauty>
+    </statBases>
+    
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>4</qi>
+        <element>CVG_Element_Water</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_PaintingScroll</defName>
+    <label>painting scroll</label>
+    <description>A hanging scroll with an ink landscape or a line of calligraphy, on a standing frame. Raises the qi concentration of the room a little. The scrolls of the Azure Peak are painted with a brush made of a single sword-qi hair, so the ink holds a little of the painter's intent. Hung in a room, they are said to quiet quarrels.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/PaintingScroll</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <WorkToBuild>1000</WorkToBuild>
+      <Mass>5</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>5</Beauty>
+    </statBases>
+    <costList>
+      <WoodLog>10</WoodLog>
+      <Cloth>15</Cloth>
+    </costList>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>2</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_SectBanner</defName>
+    <label>sect banner</label>
+    <description>A tall banner with the emblem of the sect. Makes the place feel like home. A sect stands as long as its banner does, the saying goes in Jiuxiao. After the Iron Calamity the survivors raised their banners first and their walls second.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/SectBanner</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>7</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>2</Beauty>
+    </statBases>
+    <costList>
+      <WoodLog>10</WoodLog>
+      <Cloth>25</Cloth>
+    </costList>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BedBase">
+    <defName>CVG_SectBed</defName>
+    <label>sect bed</label>
+    <description>A low wooden bed with a hard mat and a rolled pillow, in the style of the cultivation sects. Disciples of the outer sects sleep on hard mats to keep their qi from growing lazy. The founders of the Azure Peak slept on bare stone and are remembered with envy.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/SectBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <fillPercent>0.40</fillPercent>
+    <size>(1,2)</size>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>140</MaxHitPoints>
+      <WorkToBuild>1000</WorkToBuild>
+      <Mass>14</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>2</Beauty>
+      <Comfort>0.6</Comfort>
+      <BedRestEffectiveness>0.95</BedRestEffectiveness>
+      <ImmunityGainSpeedFactor>1.05</ImmunityGainSpeedFactor>
+      <SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+    </statBases>
+    <costList>
+      <WoodLog>50</WoodLog>
+      <Cloth>20</Cloth>
+    </costList>
+    <building><bed_showSleeperBody>False</bed_showSleeperBody><bed_healPerDay>4</bed_healPerDay></building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0</qi>
+      </li>
+    </modExtensions>
+      <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>EndTable</li>
+          <li>CVG_BedsideTray</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_LowTable</defName>
+    <label>low table</label>
+    <description>A low table to eat and drink tea at, with people sitting on stools or cushions around it. In the tea houses of Jiuxiao a table is kept low so that host and guest must kneel, and no one can claim to stand above another. More than one feud has ended over a cup of tea.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/LowTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <fillPercent>0.40</fillPercent>
+    <size>(1,2)</size>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToBuild>800</WorkToBuild>
+      <Mass>7</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <costList>
+      <WoodLog>35</WoodLog>
+    </costList>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <surfaceType>Eat</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+    <replaceTags><li>Table</li></replaceTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_MeditationStool</defName>
+    <label>meditation stool</label>
+    <description>A short round stool for sitting upright for long hours. The round stool teaches the back to be straight, for a cultivator who leans falls off. The Silent Lotus monks say it is the first teacher and the last.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/MeditationStool</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Multi</graphicClass>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToBuild>450</WorkToBuild>
+      <Mass>5</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>0</Beauty>
+      <Comfort>0.55</Comfort>
+    </statBases>
+    <costList>
+      <WoodLog>25</WoodLog>
+    </costList>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <replaceTags><li>Chair</li></replaceTags>
+    <building><isSittable>true</isSittable></building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_RobeWardrobe</defName>
+    <label>robe wardrobe</label>
+    <description>A wardrobe for the robes of the sect. Holds clothes and armor safely and keeps them from deteriorating. Each sect folds its robes in its own way, and a trained eye can tell a disciple's school from the corner of a sleeve. The wardrobe of an old sect hall smells of cedar and of ancestors.</description>
+    <thingClass>Building_Storage</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/RobeWardrobe</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <fillPercent>0.40</fillPercent>
+    <size>(2,1)</size>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>10</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>3</Beauty>
+    </statBases>
+    <costList>
+      <WoodLog>50</WoodLog>
+    </costList>
+    <building>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <maxItemsInCell>3</maxItemsInCell>
+      <blueprintClass>Blueprint_Storage</blueprintClass>
+      <fixedStorageSettings><filter><categories><li>Apparel</li></categories></filter></fixedStorageSettings>
+      <defaultStorageSettings><priority>Preferred</priority><filter><categories><li>Apparel</li></categories></filter></defaultStorageSettings>
+    </building>
+    <inspectorTabs><li>ITab_Storage</li></inspectorTabs>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_ScriptureShelf</defName>
+    <label>scripture pavilion shelf</label>
+    <description>A tall shelf of carved wood for the sect's scriptures. Holds books and tablets. Raises the qi concentration of the room a little. The Pavilion of Scriptures is the heart of every sect: when the Blood Moon Cult burned the library of the Heavenly Origin Sect, its survivors founded a new one in a single night. Each shelf is said to have a guardian spirit who dislikes dust.</description>
+    <thingClass>Building_Storage</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/ScriptureShelf</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <fillPercent>0.40</fillPercent>
+    <size>(2,1)</size>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Mass>12</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>4</Beauty>
+    </statBases>
+    <costList>
+      <WoodLog>60</WoodLog>
+    </costList>
+    <building>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <maxItemsInCell>3</maxItemsInCell>
+      <blueprintClass>Blueprint_Storage</blueprintClass>
+      <fixedStorageSettings><filter><categories><li>Books</li></categories></filter></fixedStorageSettings>
+      <defaultStorageSettings><priority>Preferred</priority><filter><categories><li>Books</li></categories></filter></defaultStorageSettings>
+    </building>
+    <inspectorTabs><li>ITab_Storage</li></inspectorTabs>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>2</qi>
+        <element>CVG_Element_Wood</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_PillCabinet</defName>
+    <label>pill cabinet</label>
+    <description>A cabinet of many small drawers for pills and medicine. Keeps them from deteriorating. Alchemists of the Heavenly Cauldron Pavilion label each drawer with the name of the disciple who died to perfect its pill. A cabinet is never opened without a bow.</description>
+    <thingClass>Building_Storage</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/PillCabinet</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <fillPercent>0.40</fillPercent>
+    <size>(2,1)</size>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>10</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>3</Beauty>
+    </statBases>
+    <costList>
+      <WoodLog>40</WoodLog>
+      <Steel>10</Steel>
+    </costList>
+    <building>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <maxItemsInCell>3</maxItemsInCell>
+      <blueprintClass>Blueprint_Storage</blueprintClass>
+      <fixedStorageSettings><filter><categories><li>Drugs</li><li>Medicine</li></categories></filter></fixedStorageSettings>
+      <defaultStorageSettings><priority>Preferred</priority><filter><categories><li>Drugs</li><li>Medicine</li></categories></filter></defaultStorageSettings>
+    </building>
+    <inspectorTabs><li>ITab_Storage</li></inspectorTabs>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_SpiritWineJar</defName>
+    <label>spirit wine jar</label>
+    <description>A big clay jar where spirit wine is brewed from berries. Raises the qi concentration of the room a little. The wine of the Rogue Cultivators is brewed in jars buried under the roots of a spirit tree for a year and a day. They say one cup makes a wanderer forget the road, and a second remember it.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/SpiritWineJar</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+    </graphicData>
+    <designationCategory>Production</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <WorkToBuild>700</WorkToBuild>
+      <Mass>6</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+      <WorkTableWorkSpeedFactor>0.8</WorkTableWorkSpeedFactor>
+    </statBases>
+    <costList>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <inspectorTabs><li>ITab_Bills</li></inspectorTabs>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <placeWorkers><li>PlaceWorker_PreventInteractionSpotOverlap</li></placeWorkers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>2</qi>
+        <element>CVG_Element_Water</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_PaperLantern</defName>
+    <label>paper lantern</label>
+    <description>A lantern of paper on a bamboo frame. Gives a soft red light. Burns for ever by the grace of the heavens, but is very fragile. During the Lantern Festival the people of Jiuxiao hang a paper lantern for every ancestor, so the dead can find the way home. The paper never burns, they say, because the dead are careful.</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/PaperLantern</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <WorkToBuild>300</WorkToBuild>
+      <Mass>2</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>2</Beauty>
+      <MeditationFocusStrength>0.0</MeditationFocusStrength>
+    </statBases>
+    <costList>
+      <WoodLog>8</WoodLog>
+      <Cloth>5</Cloth>
+    </costList>
+    <selectable>true</selectable>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <drawerType>RealtimeOnly</drawerType>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>8</glowRadius>
+        <glowColor>(255,170,110,0)</glowColor>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_SpiritStoneLantern</defName>
+    <label>spirit stone lantern</label>
+    <description>A stone lantern whose flame is fed by spirit stones. Gives a cold light and raises the qi concentration of the room a little. Stone lanterns lined the road to the Silent Lotus Temple long before the Convergence, and the monks lit them with a single flame carried from the first one. A spirit stone in the cup now makes the light cold and clear.</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/SpiritStoneLantern</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>800</WorkToBuild>
+      <Mass>5</Mass>
+      <Flammability>0.3</Flammability>
+      <Beauty>3</Beauty>
+      <MeditationFocusStrength>0.0</MeditationFocusStrength>
+    </statBases>
+    <costList>
+      <Steel>10</Steel>
+      <WoodLog>10</WoodLog>
+    </costList>
+    <selectable>true</selectable>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.5</fuelConsumptionRate>
+        <fuelCapacity>5.0</fuelCapacity>
+        <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <fuelLabel>Spirit stone</fuelLabel>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(170,230,255,0)</glowColor>
+      </li>
+    </comps>
+    <placeWorkers><li>PlaceWorker_GlowRadius</li></placeWorkers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>2</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_GlowCrystal</defName>
+    <label>glow crystal</label>
+    <description>A crystal that shines on its own with a blue light, with no fuel and no power. Raises the qi concentration of the room a little. Crystals that glow without fuel grew in the caves where the old formation masters had buried their arrays, and the miners believed they were the arrays' dreams. Sect houses buy them for their eerie, patient blue.</description>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/GlowCrystal</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <WorkToBuild>1000</WorkToBuild>
+      <Mass>4</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>4</Beauty>
+      <MeditationFocusStrength>0.0</MeditationFocusStrength>
+    </statBases>
+    <costList>
+      <Steel>15</Steel>
+      <Jade>5</Jade>
+    </costList>
+    <selectable>true</selectable>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <drawerType>RealtimeOnly</drawerType>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>9</glowRadius>
+        <glowColor>(120,200,255,0)</glowColor>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>2</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>CVG_SpiritWine</defName>
+    <label>spirit wine</label>
+    <description>A mild wine brewed with a trace of qi. Drinking it is pleasant and a little intoxicating. Rogue cultivators toast with it to the sects that threw them out, the sword that saved them and the roads that await them. It is drunk quickly and remembered for a long time.</description>
+    <descriptionHyperlinks>
+      <HediffDef>AlcoholHigh</HediffDef>
+      <HediffDef>AlcoholTolerance</HediffDef>
+    </descriptionHyperlinks>
+    <possessionCount>6</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_SpiritWine</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <DeteriorationRate>0.3</DeteriorationRate>
+      <MarketValue>18</MarketValue>
+      <Mass>0.3</Mass>
+      <Flammability>0.5</Flammability>
+      <Nutrition>0.06</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Fluid, Processed, Liquor</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.2</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+      <ingestSound>Ingest_Beer</ingestSound>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <chairSearchRadius>25</chairSearchRadius>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      <tableDesired>false</tableDesired>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AlcoholHigh</hediffDef>
+          <severity>0.10</severity>
+          <toleranceChemical>Alcohol</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AlcoholTolerance</hediffDef>
+          <toleranceChemical>Alcohol</toleranceChemical>
+          <severity>0.010</severity>
+          <divideByBodySize>true</divideByBodySize>
+          <multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <techLevel>Neolithic</techLevel>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Alcohol</chemical>
+        <addictiveness>0.005</addictiveness>
+        <minToleranceToAddict>0.25</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>11</listOrder>
+      </li>
+    </comps>
+    <allowedArchonexusCount>50</allowedArchonexusCount>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>CVG_BrewSpiritWine</defName>
+    <label>brew spirit wine</label>
+    <description>Brew spirit wine from berries.</description>
+    <jobString>Brewing spirit wine.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1200</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawBerries</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawBerries</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_SpiritWine>5</CVG_SpiritWine>
+    </products>
+    <recipeUsers>
+      <li>CVG_SpiritWineJar</li>
+    </recipeUsers>
+  </RecipeDef>
+
+</Defs>

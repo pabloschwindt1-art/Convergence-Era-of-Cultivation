@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Stone heart: a colonist's death does not move it (the trait description promises it). -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThoughtDef[defName="KnowColonistDied"]/nullifyingTraits</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="KnowColonistDied"]/nullifyingTraits</xpath>
+      <value>
+        <li>CVG_Heart_Stone</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName="KnowColonistDied"]</xpath>
+      <value>
+        <nullifyingTraits>
+          <li>CVG_Heart_Stone</li>
+        </nullifyingTraits>
+      </value>
+    </nomatch>
+  </Operation>
+</Patch>

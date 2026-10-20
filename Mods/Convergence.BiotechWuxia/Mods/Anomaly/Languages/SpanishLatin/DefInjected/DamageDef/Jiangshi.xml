@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_YangDrain.label>drenaje de yang</CVG_YangDrain.label>
+  <CVG_YangDrain.deathMessage>A {0} le han drenado el yang.</CVG_YangDrain.deathMessage>
+</LanguageData>

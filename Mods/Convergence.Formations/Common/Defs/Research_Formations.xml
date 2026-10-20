@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Formations branch of the Dao comprehension tree (docs/modulos/INVESTIGACION.md). -->
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_FiveElements</defName>
+    <label>five elements</label>
+    <description>Wood, fire, earth, metal and water, and how they feed and break each other. Unlocks the formation flags. Wood feeds fire, fire makes earth, earth bears metal, metal gathers water and water raises wood. Every child of Jiuxiao learned the wheel before learning to read.</description>
+    <baseCost>1200</baseCost>
+    <prerequisites><li>CVG_Research_QiBreathing</li></prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>3</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>3</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_QiGathering</defName>
+    <label>qi gathering formation</label>
+    <description>Arrange flags so that the qi of the land gathers instead of scattering. Unlocks the Qi Gathering Formation. An old saying of the Azure Peak: a formation does not make qi, it only teaches it where to rest.</description>
+    <baseCost>1800</baseCost>
+    <prerequisites><li>CVG_Research_FiveElements</li></prerequisites>
+    <researchViewX>4</researchViewX>
+    <researchViewY>3</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>4</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_DefensiveFormations</defName>
+    <label>defensive formations</label>
+    <description>Turn the five elements into swords, chains and guardians. Unlocks the Formations of Killing Swords and of Binding, the guardian statue and the rune crossbow. After the Iron Calamity the sects stopped teaching formations as art and began teaching them as war. The manuals of this age are written in a hurry and stained with ink and blood.</description>
+    <baseCost>3000</baseCost>
+    <prerequisites><li>CVG_Research_QiGathering</li></prerequisites>
+    <researchViewX>5</researchViewX>
+    <researchViewY>3</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>7</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_GreatProtective</defName>
+    <label>grand protective formation</label>
+    <description>A dome of qi that no arrow crosses. Unlocks the Grand Protective Formation. They say a Grand Protective Formation once held for nine days over a single village while Heaven itself threw lightning at it. The village survived; the formation master did not.</description>
+    <baseCost>4500</baseCost>
+    <prerequisites><li>CVG_Research_DefensiveFormations</li></prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>3</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch">
+        <knowledgeCost>10</knowledgeCost>
+      </li>
+    </modExtensions>
+  </ResearchProjectDef>
+</Defs>

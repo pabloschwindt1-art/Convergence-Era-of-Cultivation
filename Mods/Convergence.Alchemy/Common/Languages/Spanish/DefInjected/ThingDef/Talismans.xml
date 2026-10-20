@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_ThunderTalisman.label>talismán del trueno</CVG_ThunderTalisman.label>
+  <CVG_ThunderTalisman.description>Un talismán amarillo escrito con el sello de los cinco truenos de Longhushan, donde se dice que Zhang Daoling ató a los dioses del trueno a su pincel. Los cultivadores errantes cosen unos cuantos en las mangas para las emergencias. Un solo uso: al romperlo, el rayo golpea a todos los hostiles a 5 casillas (20 de daño de quemadura).</CVG_ThunderTalisman.description>
+  <CVG_ThunderTalisman.comps.CompUsable.useLabel>Usar {0_label}</CVG_ThunderTalisman.comps.CompUsable.useLabel>
+  <CVG_HealingTalisman.label>talismán de curación</CVG_HealingTalisman.label>
+  <CVG_HealingTalisman.description>Un talismán de la tradición del Maestro Celestial, que empezó cuando Zhang Daoling curaba a los enfermos con amuletos quemados y disueltos en agua. El Templo del Loto Silencioso los regala a quien los pida, aunque cada uno le cuesta a sus escribas una semana de ayuno y un núcleo de bestia. Un solo uso: cura la peor dolencia de quien lo usa.</CVG_HealingTalisman.description>
+  <CVG_HealingTalisman.comps.CompUsable.useLabel>Usar {0_label}</CVG_HealingTalisman.comps.CompUsable.useLabel>
+  <CVG_SwiftTalisman.label>talismán del viento veloz</CVG_SwiftTalisman.label>
+  <CVG_SwiftTalisman.description>Un talismán del viento veloz, el primero que aprende a escribir un novicio de las artes de los talismanes. Los mensajeros de las viejas sectas de Jiuxiao cruzaban una cordillera en un día con uno pegado en cada pierna. Un solo uso: ligero como el viento, +40% de velocidad de movimiento durante 6 horas.</CVG_SwiftTalisman.description>
+  <CVG_SwiftTalisman.comps.CompUsable.useLabel>Usar {0_label}</CVG_SwiftTalisman.comps.CompUsable.useLabel>
+</LanguageData>

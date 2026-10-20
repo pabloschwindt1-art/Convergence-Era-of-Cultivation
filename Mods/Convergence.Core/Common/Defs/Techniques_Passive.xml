@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Passive techniques (docs/DISENO.md §8, round 3): unlocking one gives a permanent hediff (no button) whose severity
+    is the power of the technique (realm x mastery x affinity), so its stages grow by themselves; it gains mastery a
+    little every day. Only active techniques are equipped in the 3-4 slots of the Techniques tab.
+  -->
+  <AbilityDef Name="CVG_TechniquePassiveBase" ParentName="CVG_TechniqueSelfBase" Abstract="True">
+    <aiCanUse>false</aiCanUse>
+  </AbilityDef>
+
+  <HediffDef Name="CVG_TechniquePassiveHediffBase" Abstract="True">
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <everCurableByItem>false</everCurableByItem>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>10</maxSeverity>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <comps>
+      <li Class="Convergence.HediffCompProperties_PassiveTechnique" />
+    </comps>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_GoldenBellSkin</defName>
+    <label>golden bell skin</label>
+    <description>The first lesson of the Golden Edge Scripture: let metal qi settle under the skin like the bronze of a temple bell. Shaolin monks of the old world called it Jin Zhong Zhao and trained it by being struck with staves for years; the scripture does it with qi in months.\n\nPassive: sharp armor +6% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Metal</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_GoldenEdge</manual>
+        <tier>1</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+        <passiveHediff>CVG_Passive_GoldenBellSkin</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_GoldenBellSkin</defName>
+    <label>golden bell skin</label>
+    <description>Metal qi rests under the skin like the bronze of a bell. Blades slide off.</description>
+    <defaultLabelColor>(0.95,0.85,0.45)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Sharp>0.06</ArmorRating_Sharp>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>0.09</ArmorRating_Sharp>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>0.12</ArmorRating_Sharp>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>0.168</ArmorRating_Sharp>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>0.216</ArmorRating_Sharp>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_EdgeOfTheHeart</defName>
+    <label>edge of the heart</label>
+    <description>A sword cultivator does not swing a blade: the heart is the blade and the hand only follows. The Golden Edge disciples of Jiuxiao trained by cutting falling leaves with their eyes closed.\n\nPassive: melee hit chance +2 and melee damage +6% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Techniques/CVG_Tech_SwordQiSweep</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_SwordHeart</manual>
+        <tier>1</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+        <passiveHediff>CVG_Passive_EdgeOfTheHeart</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_EdgeOfTheHeart</defName>
+    <label>edge of the heart</label>
+    <description>The heart cuts before the hand moves.</description>
+    <defaultLabelColor>(0.95,0.85,0.45)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeHitChance>2</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.06</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>3</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.09</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>4</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.12</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>5.6</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.168</MeleeDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>7.2</MeleeHitChance>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.216</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_SwordIntent</defName>
+    <label>sword intent</label>
+    <description>At Foundation the will of the sword leaves the body and presses on everyone nearby. Enemies feel a blade at their throat before any is drawn, and their strikes go wide. Legends say Li Bai could cut clouds with his sword intent alone.\n\nPassive: melee dodge +3 and melee hit chance +2 (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Techniques/CVG_Tech_SwordQiSweep</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_SwordHeart</manual>
+        <tier>3</tier>
+        <prerequisites>
+          <li>CVG_Tech_FlyingSword</li>
+          <li>CVG_Tech_EdgeOfTheHeart</li>
+        </prerequisites>
+        <order>1</order>
+        <minRealm>CVG_Realm_Foundation</minRealm>
+        <unlockCost>2</unlockCost>
+        <passiveHediff>CVG_Passive_SwordIntent</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_SwordIntent</defName>
+    <label>sword intent</label>
+    <description>An invisible blade presses on everyone nearby.</description>
+    <defaultLabelColor>(0.95,0.85,0.45)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeDodgeChance>3</MeleeDodgeChance>
+          <MeleeHitChance>2</MeleeHitChance>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>4.5</MeleeDodgeChance>
+          <MeleeHitChance>3</MeleeHitChance>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>6</MeleeDodgeChance>
+          <MeleeHitChance>4</MeleeHitChance>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>8.4</MeleeDodgeChance>
+          <MeleeHitChance>5.6</MeleeHitChance>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>10.8</MeleeDodgeChance>
+          <MeleeHitChance>7.2</MeleeHitChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_EvergreenBreath</defName>
+    <label>evergreen breath</label>
+    <description>Breathe like the old pines on Mount Huang, which drink fog and live a thousand years. The Evergreen Sutra begins with breath, because wood qi enters with the air and cleans what it touches.\n\nPassive: toxic resistance +8% and immunity gain speed +8% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Wood</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_EvergreenSutra</manual>
+        <tier>1</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+        <passiveHediff>CVG_Passive_EvergreenBreath</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_EvergreenBreath</defName>
+    <label>evergreen breath</label>
+    <description>Wood qi enters with every breath and cleans the body.</description>
+    <defaultLabelColor>(0.5,0.9,0.5)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <ToxicResistance>0.08</ToxicResistance>
+        </statOffsets>
+        <statFactors>
+          <ImmunityGainSpeed>1.08</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <ToxicResistance>0.12</ToxicResistance>
+        </statOffsets>
+        <statFactors>
+          <ImmunityGainSpeed>1.12</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <ToxicResistance>0.16</ToxicResistance>
+        </statOffsets>
+        <statFactors>
+          <ImmunityGainSpeed>1.16</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <ToxicResistance>0.224</ToxicResistance>
+        </statOffsets>
+        <statFactors>
+          <ImmunityGainSpeed>1.224</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <ToxicResistance>0.288</ToxicResistance>
+        </statOffsets>
+        <statFactors>
+          <ImmunityGainSpeed>1.288</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_TreeHeart</defName>
+    <label>heart of the old tree</label>
+    <description>At Foundation the cultivator feels the slow pulse of every living thing, as the hermits of Penglai felt the peach trees of immortality ripen. Hands that know how life grows heal wounds and fields alike.\n\nPassive: tend quality +5% and plant work speed +10% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Wood</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_EvergreenSutra</manual>
+        <tier>3</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_Foundation</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_SpringRejuvenation</li>
+        </prerequisites>
+        <unlockCost>2</unlockCost>
+        <passiveHediff>CVG_Passive_TreeHeart</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_TreeHeart</defName>
+    <label>heart of the old tree</label>
+    <description>The slow pulse of every living thing beats in the hands.</description>
+    <defaultLabelColor>(0.5,0.9,0.5)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MedicalTendQuality>0.05</MedicalTendQuality>
+        </statOffsets>
+        <statFactors>
+          <PlantWorkSpeed>1.1</PlantWorkSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <MedicalTendQuality>0.075</MedicalTendQuality>
+        </statOffsets>
+        <statFactors>
+          <PlantWorkSpeed>1.15</PlantWorkSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <MedicalTendQuality>0.1</MedicalTendQuality>
+        </statOffsets>
+        <statFactors>
+          <PlantWorkSpeed>1.2</PlantWorkSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <MedicalTendQuality>0.14</MedicalTendQuality>
+        </statOffsets>
+        <statFactors>
+          <PlantWorkSpeed>1.28</PlantWorkSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <MedicalTendQuality>0.18</MedicalTendQuality>
+        </statOffsets>
+        <statFactors>
+          <PlantWorkSpeed>1.36</PlantWorkSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_CloudSteps</defName>
+    <label>cloud steps</label>
+    <description>Water qi under the soles makes every step slide like a cloud over a lake. The wandering swordsmen of the Flowing Cloud sect could cross rice paddies without wetting their shoes.\n\nPassive: move speed +5% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Water</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_FlowingCloud</manual>
+        <tier>1</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+        <passiveHediff>CVG_Passive_CloudSteps</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_CloudSteps</defName>
+    <label>cloud steps</label>
+    <description>Every step slides like a cloud over a lake.</description>
+    <defaultLabelColor>(0.55,0.8,1)</defaultLabelColor>
+    <stages>
+      <li>
+        <statFactors>
+          <MoveSpeed>1.05</MoveSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statFactors>
+          <MoveSpeed>1.075</MoveSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statFactors>
+          <MoveSpeed>1.1</MoveSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statFactors>
+          <MoveSpeed>1.14</MoveSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statFactors>
+          <MoveSpeed>1.18</MoveSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_StillWaterMind</defName>
+    <label>still water mind</label>
+    <description>A mind like still water reflects the moon without holding it. Zhuangzi taught that the sage uses his heart like a mirror; the Flowing Cloud makes it a technique, and storms of the heart pass without a ripple.\n\nPassive: mental break threshold -2% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Techniques/CVG_Tech_QiShield</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_SpiritSense</manual>
+        <tier>1</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+        <passiveHediff>CVG_Passive_StillWaterMind</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_StillWaterMind</defName>
+    <label>still water mind</label>
+    <description>Storms of the heart pass without a ripple.</description>
+    <defaultLabelColor>(0.55,0.8,1)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MentalBreakThreshold>-0.02</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <MentalBreakThreshold>-0.03</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <MentalBreakThreshold>-0.04</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <MentalBreakThreshold>-0.056</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <MentalBreakThreshold>-0.072</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_TideReading</defName>
+    <label>reading the tide</label>
+    <description>Water always knows where the ground is lowest. At Foundation the cultivator reads the flow of a fight the same way: the blow that comes, the gap that opens. The old masters of the Eastern Sea called it listening to the tide.\n\nPassive: melee dodge +4 and aiming time -5% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Water</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_FlowingCloud</manual>
+        <tier>3</tier>
+        <prerequisites>
+          <li>CVG_Tech_SwiftStep</li>
+          <li>CVG_Tech_CloudSteps</li>
+        </prerequisites>
+        <order>1</order>
+        <minRealm>CVG_Realm_Foundation</minRealm>
+        <unlockCost>2</unlockCost>
+        <passiveHediff>CVG_Passive_TideReading</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_TideReading</defName>
+    <label>reading the tide</label>
+    <description>The flow of the fight is as clear as a tide.</description>
+    <defaultLabelColor>(0.55,0.8,1)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeDodgeChance>4</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <AimingDelayFactor>0.95</AimingDelayFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>6</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <AimingDelayFactor>0.925</AimingDelayFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>8</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <AimingDelayFactor>0.9</AimingDelayFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>11.2</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <AimingDelayFactor>0.86</AimingDelayFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>14.4</MeleeDodgeChance>
+        </statOffsets>
+        <statFactors>
+          <AimingDelayFactor>0.82</AimingDelayFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_InnerFurnace</defName>
+    <label>inner furnace</label>
+    <description>Fire qi banked in the dantian like coals in an alchemist's furnace. The cold of the mountain passes cannot reach a body that carries its own sun.\n\nPassive: minimum comfortable temperature -5 °C (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Fire</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_BlazingSun</manual>
+        <tier>1</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+        <passiveHediff>CVG_Passive_InnerFurnace</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_InnerFurnace</defName>
+    <label>inner furnace</label>
+    <description>Coals of fire qi glow in the dantian.</description>
+    <defaultLabelColor>(1,0.6,0.35)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <ComfyTemperatureMin>-5</ComfyTemperatureMin>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <ComfyTemperatureMin>-7.5</ComfyTemperatureMin>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <ComfyTemperatureMin>-14</ComfyTemperatureMin>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <ComfyTemperatureMin>-18</ComfyTemperatureMin>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_SunHeart</defName>
+    <label>heart of the sun</label>
+    <description>At Foundation the inner fire burns steady and needs little fuel. Like Kuafu, who chased the sun across the world, the cultivator works long and sleeps little.\n\nPassive: global work speed +4% and rest fall rate -6% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Fire</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_BlazingSun</manual>
+        <tier>3</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_Foundation</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_BlazingMeridians</li>
+        </prerequisites>
+        <unlockCost>2</unlockCost>
+        <passiveHediff>CVG_Passive_SunHeart</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_SunHeart</defName>
+    <label>heart of the sun</label>
+    <description>A steady sun burns at the center of the chest.</description>
+    <defaultLabelColor>(1,0.6,0.35)</defaultLabelColor>
+    <stages>
+      <li>
+        <statFactors>
+          <WorkSpeedGlobal>1.04</WorkSpeedGlobal>
+          <RestFallRateFactor>0.94</RestFallRateFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>1.06</WorkSpeedGlobal>
+          <RestFallRateFactor>0.91</RestFallRateFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>1.08</WorkSpeedGlobal>
+          <RestFallRateFactor>0.88</RestFallRateFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>1.112</WorkSpeedGlobal>
+          <RestFallRateFactor>0.832</RestFallRateFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statFactors>
+          <WorkSpeedGlobal>1.144</WorkSpeedGlobal>
+          <RestFallRateFactor>0.784</RestFallRateFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_StoneMarrow</defName>
+    <label>stone marrow</label>
+    <description>Earth qi sinks into the bones until the marrow is as dense as river stone. The porters of Mount Tai, who carried the emperors' sacrifices up its eighteen bends, were said to have bones like this.\n\nPassive: blunt armor +6% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Earth</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_MountainHeart</manual>
+        <tier>1</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_QiRefining</minRealm>
+        <passiveHediff>CVG_Passive_StoneMarrow</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_StoneMarrow</defName>
+    <label>stone marrow</label>
+    <description>The marrow is dense as river stone.</description>
+    <defaultLabelColor>(0.8,0.7,0.5)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Blunt>0.06</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <ArmorRating_Blunt>0.09</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <ArmorRating_Blunt>0.168</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <ArmorRating_Blunt>0.216</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  <AbilityDef ParentName="CVG_TechniquePassiveBase">
+    <defName>CVG_Tech_RootedMountain</defName>
+    <label>rooted mountain</label>
+    <description>At Foundation the cultivator stands like a mountain with roots in the deep earth. Yu the Great moved mountains to tame the floods; his heirs only need to carry them.\n\nPassive: carrying capacity +15% and mining speed +10% (more with realm and mastery).</description>
+    <!-- Provisional icon of the path; own art: UI/Techniques/<defName>.png is picked up automatically. -->
+    <iconPath>UI/Icons/Genes/CVG_RootElement_Earth</iconPath>
+    <modExtensions>
+      <li Class="Convergence.TechniqueExtension">
+        <manual>CVG_Manual_MountainHeart</manual>
+        <tier>3</tier>
+        <order>1</order>
+        <minRealm>CVG_Realm_Foundation</minRealm>
+        <prerequisites>
+          <li>CVG_Tech_MountainBody</li>
+        </prerequisites>
+        <unlockCost>2</unlockCost>
+        <passiveHediff>CVG_Passive_RootedMountain</passiveHediff>
+      </li>
+    </modExtensions>
+  </AbilityDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_RootedMountain</defName>
+    <label>rooted mountain</label>
+    <description>Roots of earth qi reach deep below the feet.</description>
+    <defaultLabelColor>(0.8,0.7,0.5)</defaultLabelColor>
+    <stages>
+      <li>
+        <statFactors>
+          <CarryingCapacity>1.15</CarryingCapacity>
+          <MiningSpeed>1.1</MiningSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statFactors>
+          <CarryingCapacity>1.225</CarryingCapacity>
+          <MiningSpeed>1.15</MiningSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statFactors>
+          <CarryingCapacity>1.3</CarryingCapacity>
+          <MiningSpeed>1.2</MiningSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statFactors>
+          <CarryingCapacity>1.42</CarryingCapacity>
+          <MiningSpeed>1.28</MiningSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statFactors>
+          <CarryingCapacity>1.54</CarryingCapacity>
+          <MiningSpeed>1.36</MiningSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_SpringRejuvenation</defName>
+    <label>spring rejuvenation</label>
+    <description>Living wood qi knits the flesh without pause.</description>
+    <defaultLabelColor>(0.5,0.9,0.5)</defaultLabelColor>
+    <stages>
+      <li>
+        <statFactors>
+          <InjuryHealingFactor>1.4</InjuryHealingFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>1.6</InjuryHealingFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>1.8</InjuryHealingFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>2.12</InjuryHealingFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statFactors>
+          <InjuryHealingFactor>2.44</InjuryHealingFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_BlazingMeridians</defName>
+    <label>blazing meridians</label>
+    <description>Fire qi runs hot through the meridians.</description>
+    <defaultLabelColor>(1,0.6,0.35)</defaultLabelColor>
+    <stages>
+      <li>
+        <statFactors>
+          <MeleeDamageFactor>1.08</MeleeDamageFactor>
+          <MoveSpeed>1.03</MoveSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.12</MeleeDamageFactor>
+          <MoveSpeed>1.045</MoveSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.16</MeleeDamageFactor>
+          <MoveSpeed>1.06</MoveSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.224</MeleeDamageFactor>
+          <MoveSpeed>1.084</MoveSpeed>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statFactors>
+          <MeleeDamageFactor>1.288</MeleeDamageFactor>
+          <MoveSpeed>1.108</MoveSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
+    <defName>CVG_Passive_MountainBody</defName>
+    <label>mountain body</label>
+    <description>Earth qi hardens skin and bones like rock.</description>
+    <defaultLabelColor>(0.8,0.7,0.5)</defaultLabelColor>
+    <stages>
+      <li>
+        <statOffsets>
+          <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.3</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>0.075</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.075</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>1.8</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2.6</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>0.14</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.14</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3.6</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>0.18</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

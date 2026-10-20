@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Everyday wuxia clothes: the Jiuxiao version of vanilla pants, parka and tuque. No research, made on the spirit loom
+       or the tailoring benches (inherited from ApparelMakeableBase / HatMakeableBase). -->
+
+  <!-- Trousers (裤): clone of Apparel_Pants. Like vanilla pants they have no worn graphic (legs are hidden by the body). -->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>CVG_Apparel_Trousers</defName>
+    <label>wuxia trousers</label>
+    <description>Loose trousers with tied hems, worn under the hanfu or the robe by every man and woman of Jiuxiao who has to work, walk or fight. Sect manuals insist on them: instructors swear that a disciple who trains bare-legged under a robe "leaks qi through the knees". They are the first thing a new disciple sews for themselves.</description>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <recipeUsers><li>CVG_SpiritLoom</li></recipeUsers>
+      <displayPriority>290</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/CVG/Trousers</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories><li>Fabric</li><li>Leathery</li></stuffCategories>
+    <thingCategories><li>ApparelMisc</li></thingCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>1600</WorkToMake>
+      <Mass>0.5</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.20</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.08</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <apparel>
+      <bodyPartGroups><li>Legs</li></bodyPartGroups>
+      <layers><li>OnSkin</li></layers>
+      <tags>
+        <li>CVG_Cultivator</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+    <tradeTags><li>BasicClothing</li></tradeTags>
+  </ThingDef>
+
+  <!-- Padded robe (棉袍): clone of Apparel_Parka, long enough to cover the legs. -->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>CVG_Apparel_PaddedRobe</defName>
+    <label>padded cotton robe</label>
+    <description>A long robe quilted with layers of cloud cotton, the winter dress of the northern sects of Jiuxiao. The Silent Lotus monks of the snow passes wear one for months without fire, saying that warmth is half cotton and half breath. It is bulky and slows the wearer a little.</description>
+    <possessionCount>1</possessionCount>
+    <techLevel>Neolithic</techLevel>
+    <recipeMaker>
+      <recipeUsers><li>CVG_SpiritLoom</li></recipeUsers>
+      <displayPriority>295</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/CVG/PaddedRobe_Male_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.90</drawSize>
+    </graphicData>
+    <costStuffCount>85</costStuffCount>
+    <stuffCategories><li>Fabric</li><li>Leathery</li></stuffCategories>
+    <thingCategories><li>ApparelMisc</li></thingCategories>
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToMake>8000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>1.80</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.00</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.05</MoveSpeed>
+      <WorkSpeedGlobal>-0.02</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups><li>Torso</li><li>Neck</li><li>Shoulders</li><li>Arms</li><li>Legs</li></bodyPartGroups>
+      <!-- Final art: Things/Pawn/Humanlike/Apparel/CVG/PaddedRobe -->
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/PaddedRobe</wornGraphicPath>
+      <anyTechLevelCanUseForWarmth>true</anyTechLevelCanUseForWarmth>
+      <layers><li>Shell</li></layers>
+      <tags>
+        <li>CVG_Cultivator</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li><weight>10</weight><only>(0.35,0.4,0.55)</only></li>
+        <li><weight>10</weight><only>(0.45,0.35,0.25)</only></li>
+        <li><weight>6</weight><only>(0.85,0.85,0.8)</only></li>
+      </options>
+    </colorGenerator>
+    <tradeTags><li>BasicClothing</li></tradeTags>
+  </ThingDef>
+
+  <!-- Fur hood: clone of Apparel_Tuque. -->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>CVG_Apparel_FurHood</defName>
+    <label>lined fur hood</label>
+    <description>A hood lined with fur or thick cloth, tied under the chin with the ear flaps down. Beast hunters of the northern fragments of Jiuxiao wore them while tracking snow beasts, and claim a good hood is worth more than a minor qi technique against the frost. Its shape is copied from the old caps of the Ancient Dragon Clan's mountain guards.</description>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <recipeUsers><li>CVG_SpiritLoom</li></recipeUsers>
+      <displayPriority>296</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <!-- Final art: Things/Pawn/Humanlike/Apparel/CVG/FurHood -->
+      <texPath>Things/Pawn/Humanlike/Apparel/CVG/FurHood_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <costStuffCount>25</costStuffCount>
+    <stuffCategories><li>Fabric</li><li>Leathery</li></stuffCategories>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToMake>1400</WorkToMake>
+      <Mass>0.1</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.8</EquipDelay>
+    </statBases>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups><li>UpperHead</li></bodyPartGroups>
+      <!-- Final art: Things/Pawn/Humanlike/Apparel/CVG/FurHood -->
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/FurHood</wornGraphicPath>
+      <layers><li>Overhead</li></layers>
+      <tags>
+        <li>CVG_Cultivator</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li><weight>10</weight><only>(0.45,0.35,0.25)</only></li>
+        <li><weight>10</weight><only>(0.85,0.85,0.8)</only></li>
+        <li><weight>6</weight><only>(0.33,0.33,0.33)</only></li>
+      </options>
+    </colorGenerator>
+    <tradeTags><li>BasicClothing</li></tradeTags>
+  </ThingDef>
+</Defs>

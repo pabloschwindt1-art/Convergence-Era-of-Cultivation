@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Cultivated.label>cultivó</CVG_Cultivated.label>
+  <CVG_Ascended.label>ascendió de reino</CVG_Ascended.label>
+  <CVG_RetreatCompleted.label>terminó un retiro de avance</CVG_RetreatCompleted.label>
+  <CVG_TookPill.label>tomó una píldora</CVG_TookPill.label>
+  <CVG_DemonicArt.label>usó un arte demoníaco</CVG_DemonicArt.label>
+  <CVG_ExtractedEssence.label>extrajo una esencia</CVG_ExtractedEssence.label>
+  <CVG_DuelFought.label>libró un duelo</CVG_DuelFought.label>
+</LanguageData>

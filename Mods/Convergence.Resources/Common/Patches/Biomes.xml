@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Bamboo: common in warm forests, jade spirit bamboo rare. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/BiomeDef[defName="TemperateForest" or defName="TropicalSwamp"]/wildPlants</xpath>
+    <value>
+        <CVG_Plant_Bamboo>0.25</CVG_Plant_Bamboo>
+        <CVG_Plant_JadeBamboo>0.01</CVG_Plant_JadeBamboo>
+        <CVG_Plant_PeachTree>0.06</CVG_Plant_PeachTree>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/BiomeDef[defName="TropicalRainforest" or defName="TropicalSwamp"]/wildPlants</xpath>
+    <value>
+        <CVG_Plant_BloodFruitBush>0.08</CVG_Plant_BloodFruitBush>
+        <CVG_Plant_SpiritTree>0.04</CVG_Plant_SpiritTree>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/BiomeDef[defName="TemperateSwamp" or defName="TropicalSwamp" or defName="ColdBog"]/wildPlants</xpath>
+    <value>
+        <CVG_Plant_PoisonHerb>0.08</CVG_Plant_PoisonHerb>
+    </value>
+  </Operation>
+
+  <!-- The refining furnace also burns solar gold sand. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="CVG_RefiningFurnace"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+    <value>
+      <li>CVG_SolarGoldSand</li>
+    </value>
+  </Operation>
+
+  <!-- Spirit wood floor now uses real spirit wood. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/TerrainDef[defName="CVG_SpiritWoodFloor"]/costList</xpath>
+    <value>
+      <costList>
+        <CVG_SpiritWood>3</CVG_SpiritWood>
+      </costList>
+    </value>
+  </Operation>
+</Patch>

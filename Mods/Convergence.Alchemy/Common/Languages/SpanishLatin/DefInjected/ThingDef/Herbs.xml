@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_SpiritHerb.label>hierba espiritual</CVG_SpiritHerb.label>
+  <CVG_SpiritHerb.description>Hojas y raíces que bebieron qi mientras crecían. Se dice que Shennong, el Divino Labrador, probó él mismo cada una de las cien hierbas, y las que no lo mataron se volvieron la base de toda la alquimia. El ingrediente básico de toda píldora.</CVG_SpiritHerb.description>
+  <CVG_Plant_SpiritHerb.label>hierba espiritual</CVG_Plant_SpiritHerb.label>
+  <CVG_Plant_SpiritHerb.description>Una hierba espiritual común. Desde la Convergencia brota donde se estanca el qi, a la sombra de árboles viejos y alrededor de ruinas antiguas, y fueron los cultivadores errantes de Jiuxiao quienes enseñaron al Borde a sembrarla. Rara en estado silvestre, la puede sembrar un cultivador hábil; da hierbas espirituales.</CVG_Plant_SpiritHerb.description>
+  <CVG_Plant_SpiritGinseng.label>ginseng espiritual</CVG_Plant_SpiritGinseng.label>
+  <CVG_Plant_SpiritGinseng.description>Un ginseng lento, de raíz profunda, que acumula qi durante años. Los recolectores de Jiuxiao atan un hilo rojo a sus hojas antes de cavar, porque creen que una raíz vieja oye los pasos y se aleja bajo tierra. Muy raro en estado silvestre; da raíces de ginseng espiritual para píldoras de grado alto.</CVG_Plant_SpiritGinseng.description>
+  <CVG_Plant_SnowLotus.label>loto de nieve</CVG_Plant_SnowLotus.label>
+  <CVG_Plant_SnowLotus.description>Un loto blanco que florece en el frío. Las monjas del Templo del Loto Silencioso dicen que el primero creció donde lloró un inmortal congelado sobre un glaciar, y solo toman unos pocos pétalos de cada flor. Raro; da pétalos de loto de nieve para píldoras de grado alto.</CVG_Plant_SnowLotus.description>
+  <CVG_SpiritGinsengRoot.label>raíz de ginseng espiritual</CVG_SpiritGinsengRoot.label>
+  <CVG_SpiritGinsengRoot.description>La raíz de un ginseng espiritual que bebió qi durante años, con forma de hombrecito dormido. En Jiuxiao una raíz de cien años valía una ciudad, y el Pabellón del Caldero Celestial aún subasta las más viejas según sus anillos. Ingrediente de píldoras de grado alto.</CVG_SpiritGinsengRoot.description>
+  <CVG_SnowLotusPetal.label>pétalo de loto de nieve</CVG_SnowLotusPetal.label>
+  <CVG_SnowLotusPetal.description>Un pétalo de loto de nieve, frío al tacto incluso junto al fuego. Los alquimistas dicen que templa la furia del horno, y que sin él no se puede refinar ninguna píldora de las nueve vueltas. Ingrediente de píldoras de grado alto.</CVG_SnowLotusPetal.description>
+</LanguageData>

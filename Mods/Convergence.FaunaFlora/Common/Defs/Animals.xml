@@ -1,0 +1,1145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Spirit farm animals: tameable, produce spirit goods (docs/modulos/FAUNA_FLORA.md). -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_SpiderCocoon</defName>
+    <label>jade spider cocoon</label>
+    <description>A fluffy cocoon of spirit silk shed by a jade weaver spider. At a spirit loom it is spun into spirit silk. The weaver spiders of the Jade Marsh wrap their cocoons in silk so fine that the Heavenly Cauldron Pavilion once paid for a single one with a pill of rebirth.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CVG_SpiderCocoon</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>6</MarketValue>
+      <Mass>0.03</Mass>
+      <Flammability>1.2</Flammability>
+      <DeteriorationRate>1</DeteriorationRate>
+    </statBases>
+    <thingCategories><li>ResourcesRaw</li></thingCategories>
+    <burnableByRecipe>true</burnableByRecipe>
+    <healthAffectsPrice>false</healthAffectsPrice>
+  </ThingDef>
+
+  <ThingDef ParentName="WoolBase">
+    <defName>CVG_SevenColorWool</defName>
+    <label>seven-color wool</label>
+    <description>Wool from a seven-color sheep. Each shearing comes in a different color, one of the five element colors, gold or white. It insulates very well. The monks of the Silent Lotus Temple say the sheep shed one color each time it forgives a sin of the shepherd. Weavers swear no two fleeces ever came out alike.</description>
+    <possessionCount>30</possessionCount>
+    <statBases>
+      <MarketValue>4.2</MarketValue>
+      <StuffPower_Insulation_Cold>30</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>14</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(240,240,240)</color>
+      <commonality>0.05</commonality>
+      <allowColorGenerators>true</allowColorGenerators>
+      <statFactors><Beauty>1.4</Beauty></statFactors>
+    </stuffProps>
+    <graphicData>
+      <color>(240,240,240)</color>
+    </graphicData>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li><weight>10</weight><only>(0.85,0.85,0.9)</only></li>
+        <li><weight>10</weight><only>(0.9,0.75,0.3)</only></li>
+        <li><weight>10</weight><only>(0.35,0.7,0.4)</only></li>
+        <li><weight>10</weight><only>(0.35,0.55,0.9)</only></li>
+        <li><weight>10</weight><only>(0.9,0.35,0.25)</only></li>
+        <li><weight>10</weight><only>(0.65,0.5,0.3)</only></li>
+        <li><weight>10</weight><only>(0.6,0.6,0.65)</only></li>
+      </options>
+    </colorGenerator>
+    <comps>
+      <li><compClass>CompColorable</compClass></li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>CVG_EggPhoenixHenUnfertilized</defName>
+    <label>phoenix-blood egg (unfert.)</label>
+    <description>An unfertilized egg that is warm to the touch. Rich in qi and good in any kitchen. Farmers of the south keep a hen in every house because her eggs keep the hearth warm through winter. They say the first hen was a feather the Vermilion Bird lost over a village.</description>
+    <graphicData><color>(240,150,110)</color></graphicData>
+    <statBases><MarketValue>16.0</MarketValue></statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="EggFertBase">
+    <defName>CVG_EggPhoenixHenFertilized</defName>
+    <label>phoenix-blood egg (fert.)</label>
+    <description>A fertilized egg that never cools. If all goes well, it should hatch into a phoenix-blood chick. A chick that hatches from this egg is born already warm, and the family names it for the season it came in.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData><color>(250,190,150)</color></graphicData>
+    <statBases><MarketValue>16.0</MarketValue></statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>4</hatcherDaystoHatch>
+        <hatcherPawn>CVG_PhoenixBloodHen</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>CVG_SpiritMilk</defName>
+    <label>spirit milk</label>
+    <description>Thick, sweet milk from a cloud ox. Drunk raw or cooked into any meal. In the cloud-lands the milk of the oxen is poured as an offering before a cultivator enters seclusion. A bowl of it is said to cool the temper before a breakthrough.</description>
+    <graphicData><texPath>Things/Item/Resource/CVG_SpiritMilk</texPath><graphicClass>Graphic_StackCount</graphicClass></graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>5.5</MarketValue>
+      <Mass>0.045</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <Nutrition>0.07</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable"><daysToRotStart>14</daysToRotStart><rotDestroys>true</rotDestroys></li>
+    </comps>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <foodType>AnimalProduct, Fluid</foodType>
+      <babiesCanIngest>true</babiesCanIngest>
+    </ingestible>
+    <thingCategories><li>AnimalProductRaw</li></thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_MoonAntler</defName>
+    <label>moon antler</label>
+    <description>Silvery antler that grows back every season. Alchemists refine it into qi recovery pills, and traders pay well for it. Chang'e's jade rabbit grinds moon antler in her mortar to make the elixir of the moon palace, say the old stories. Alchemists of the Pavilion buy every piece they find, hoping for the same, and with less luck.</description>
+    <graphicData><texPath>Things/Item/Resource/CVG_MoonAntler</texPath><graphicClass>Graphic_StackCount</graphicClass></graphicData>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <MarketValue>20</MarketValue>
+      <Mass>0.2</Mass>
+      <Flammability>0.4</Flammability>
+    </statBases>
+    <stackLimit>75</stackLimit>
+    <thingCategories><li>ResourcesRaw</li></thingCategories>
+    <healthAffectsPrice>false</healthAffectsPrice>
+  </ThingDef>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>CVG_JadeWeaverSpider</defName>
+    <label>jade weaver spider</label>
+    <description>A spider the size of a dog with jade-green legs that weaves cocoons of spirit silk. Calm and easy to keep as long as its belly is full. Jade Marsh villagers tell of a spider who wove a bridge of silk to carry a drowning child across the water. Since then its descendants spin only where someone needs rescuing, and nobody has ever seen one spin for itself.</description>
+    <statBases>
+      <MoveSpeed>3.8</MoveSpeed>
+      <MarketValue>600</MarketValue>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <ComfyTemperatureMax>48</ComfyTemperatureMax>
+      <FilthRate>2</FilthRate>
+      <LeatherAmount>0</LeatherAmount>
+      <Wildness>0.45</Wildness>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>CVG_SpiderCocoon</woolDef>
+        <shearIntervalDays>8</shearIntervalDays>
+        <woolAmount>14</woolAmount>
+      </li>
+    </comps>
+    <race>
+      <body>BeetleLikeWithClaw</body>
+      <baseBodySize>0.7</baseBodySize>
+      <baseHealthScale>1.2</baseHealthScale>
+      <baseHungerRate>0.3</baseHungerRate>
+      <foodType>OmnivoreAnimal</foodType>
+      <leatherDef>Leather_Plain</leatherDef>
+      <gestationPeriodDays>6</gestationPeriodDays>
+      <litterSizeCurve><points><li>(0.5, 0)</li><li>(1, 1)</li><li>(1.7, 1)</li><li>(2.0, 0)</li></points></litterSizeCurve>
+      <roamMtbDays>6</roamMtbDays>
+      <trainability>Intermediate</trainability>
+      <lifeExpectancy>8</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.3333</minAge><soundWounded>Pawn_BigInsect_Pain</soundWounded><soundDeath>Pawn_BigInsect_Death</soundDeath><soundCall>Pawn_BigInsect_Call</soundCall><soundAngry>Pawn_BigInsect_Angry</soundAngry></li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.18)</li><li>(0.27, 0, 0.11)</li><li>(0.0, 0, 0.05)</li><li>(-0.27, 0, 0.11)</li>
+      </headPosPerRotation>
+      <meatLabel>spider meat</meatLabel>
+      <manhunterOnDamageChance>0.35</manhunterOnDamageChance>
+      <soundEating>Insectoid_Eat</soundEating>
+          <wildBiomes><TemperateForest>0.004</TemperateForest><TropicalRainforest>0.004</TropicalRainforest><BorealForest>0.002</BorealForest></wildBiomes>
+    </race>
+    <tools>
+      <li><label>head claw</label><capacities><li>Cut</li></capacities><power>9</power><cooldownTime>2.2</cooldownTime>
+        <linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup></li>
+      <li><label>head</label><capacities><li>Blunt</li></capacities><power>6</power><cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup><ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable><chanceFactor>0.2</chanceFactor></li>
+    </tools>
+    <tradeTags><li>AnimalExotic</li></tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>CVG_JadeWeaverSpider</defName>
+    <label>jade weaver spider</label>
+    <labelPlural>jade weaver spiders</labelPlural>
+    <race>CVG_JadeWeaverSpider</race>
+    <combatPower>60</combatPower>
+    <ecoSystemWeight>0.3</ecoSystemWeight>
+    <modExtensions><li Class="Convergence.DefModExtension_PostConvergence" /></modExtensions>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_NineNetherSpider/CVG_NineNetherSpider</texPath>
+          <drawSize>0.5</drawSize>
+          <color>(0.55,0.95,0.7)</color>
+          <shadowData><volume>(0.4, 0.3, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Megaspider/Dessicated_Megaspider</texPath>
+          <drawSize>0.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_NineNetherSpider/CVG_NineNetherSpider</texPath>
+          <drawSize>0.8</drawSize>
+          <color>(0.55,0.95,0.7)</color>
+          <shadowData><volume>(0.4, 0.3, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Megaspider/Dessicated_Megaspider</texPath>
+          <drawSize>0.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_NineNetherSpider/CVG_NineNetherSpider</texPath>
+          <drawSize>1.1</drawSize>
+          <color>(0.55,0.95,0.7)</color>
+          <shadowData><volume>(0.4, 0.3, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Megaspider/Dessicated_Megaspider</texPath>
+          <drawSize>1.1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>CVG_SevenColorSheep</defName>
+    <label>seven-color sheep</label>
+    <description>A sheep whose wool changes color with every shearing. Tame and placid. A shepherd of the Silent Lotus Temple is said to have found the first one grazing at the foot of a rainbow. The temple keeps a flock and sheds no blood in its fields.</description>
+    <statBases>
+      <MoveSpeed>4.8</MoveSpeed>
+      <MarketValue>520</MarketValue>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>45</ComfyTemperatureMax>
+      <FilthRate>8</FilthRate>
+      <Wildness>0.3</Wildness>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>CVG_SevenColorWool</woolDef>
+        <shearIntervalDays>10</shearIntervalDays>
+        <woolAmount>40</woolAmount>
+      </li>
+    </comps>
+    <race>
+      <body>QuadrupedAnimalWithHooves</body>
+      <baseBodySize>0.75</baseBodySize>
+      <baseHealthScale>0.7</baseHealthScale>
+      <baseHungerRate>0.225</baseHungerRate>
+      <foodType>VegetarianRoughAnimal</foodType>
+      <leatherDef>Leather_Plain</leatherDef>
+      <gestationPeriodDays>6</gestationPeriodDays>
+      <litterSizeCurve><points><li>(0.5, 0)</li><li>(1, 1)</li><li>(1.7, 1)</li><li>(2.0, 0)</li></points></litterSizeCurve>
+      <roamMtbDays>6</roamMtbDays>
+      <trainability>Intermediate</trainability>
+      <lifeExpectancy>12</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.3333</minAge><soundWounded>Pawn_Sheep_Wounded</soundWounded><soundDeath>Pawn_Sheep_Death</soundDeath><soundCall>Pawn_Sheep_Call</soundCall><soundAngry>Pawn_Sheep_Angry</soundAngry></li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <soundEating>Herbivore_Eat</soundEating>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.18)</li><li>(0.27, 0, 0.11)</li><li>(0.0, 0, 0.05)</li><li>(-0.27, 0, 0.11)</li>
+      </headPosPerRotation>
+      <herdAnimal>true</herdAnimal>
+      <meatLabel>sheep meat</meatLabel>
+          <wildBiomes><TemperateForest>0.004</TemperateForest><TropicalRainforest>0.004</TropicalRainforest><BorealForest>0.002</BorealForest></wildBiomes>
+    </race>
+    <tools>
+      <li><label>head</label><capacities><li>Blunt</li></capacities><power>12</power><cooldownTime>2.5</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup><ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable></li>
+      <li><label>left hoof</label><labelNoLocation>hoof</labelNoLocation><capacities><li>Blunt</li></capacities><power>7</power><cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup></li>
+      <li><label>right hoof</label><labelNoLocation>hoof</labelNoLocation><capacities><li>Blunt</li></capacities><power>7</power><cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup></li>
+    </tools>
+    <tradeTags><li>AnimalExotic</li></tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>CVG_SevenColorSheep</defName>
+    <label>seven-color sheep</label>
+    <labelPlural>seven-color sheep</labelPlural>
+    <race>CVG_SevenColorSheep</race>
+    <combatPower>55</combatPower>
+    <ecoSystemWeight>0.3</ecoSystemWeight>
+    <modExtensions><li Class="Convergence.DefModExtension_PostConvergence" /></modExtensions>
+    <lifeStages>
+      <li><label>lamb</label><labelPlural>lambs</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_SevenColorSheep/CVG_SevenColorSheep</texPath>
+          <drawSize>0.6</drawSize>
+          <shadowData><volume>(0.4, 0.3, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Sheep/Dessicated_SheepFemale</texPath>
+          <drawSize>0.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_SevenColorSheep/CVG_SevenColorSheep</texPath>
+          <drawSize>1.3</drawSize>
+          <shadowData><volume>(0.4, 0.3, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Sheep/Dessicated_SheepFemale</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_SevenColorSheep/CVG_SevenColorSheep</texPath>
+          <drawSize>1.7</drawSize>
+          <shadowData><volume>(0.4, 0.3, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Sheep/Dessicated_SheepFemale</texPath>
+          <drawSize>1.7</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>CVG_PhoenixBloodHen</defName>
+    <label>phoenix-blood hen</label>
+    <description>A hen with red-gold feathers and warm eggs. It resists heat and lays often. Her feathers carry a spark of the Vermilion Bird, so she lays warm eggs and never feels the cold. Cultivators of the south keep one as a good-luck charm and a breakfast.</description>
+    <statBases>
+      <MoveSpeed>2.3</MoveSpeed>
+      <MarketValue>160</MarketValue>
+      <LeatherAmount>0</LeatherAmount>
+      <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      <ComfyTemperatureMax>55</ComfyTemperatureMax>
+      <FilthRate>4</FilthRate>
+      <Wildness>0.1</Wildness>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggUnfertilizedDef>CVG_EggPhoenixHenUnfertilized</eggUnfertilizedDef>
+        <eggFertilizedDef>CVG_EggPhoenixHenFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>1.5</eggLayIntervalDays>
+        <eggCountRange>1</eggCountRange>
+      </li>
+    </comps>
+    <race>
+      <body>Bird</body>
+      <baseBodySize>0.3</baseBodySize>
+      <baseHealthScale>0.35</baseHealthScale>
+      <baseHungerRate>0.14</baseHungerRate>
+      <foodType>VegetarianRoughAnimal</foodType>
+      <leatherDef>Leather_Bird</leatherDef>
+      <gestationPeriodDays>5</gestationPeriodDays>
+      <litterSizeCurve><points><li>(0.5, 0)</li><li>(1, 1)</li><li>(1.7, 1)</li><li>(2.0, 0)</li></points></litterSizeCurve>
+      <roamMtbDays>6</roamMtbDays>
+      <trainability>None</trainability>
+      <lifeExpectancy>6</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBabyTiny</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.1</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.2222</minAge><soundWounded>Pawn_Chicken_Wounded</soundWounded><soundDeath>Pawn_Chicken_Death</soundDeath><soundCall>Pawn_Chicken_Call</soundCall><soundAngry>Pawn_Chicken_Angry</soundAngry></li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <soundEating>Herbivore_Eat</soundEating>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.18)</li><li>(0.27, 0, 0.11)</li><li>(0.0, 0, 0.05)</li><li>(-0.27, 0, 0.11)</li>
+      </headPosPerRotation>
+      <flightStartChanceOnJobStart>0.05</flightStartChanceOnJobStart>
+          <wildBiomes><TemperateForest>0.004</TemperateForest><TropicalRainforest>0.004</TropicalRainforest><BorealForest>0.002</BorealForest></wildBiomes>
+    </race>
+    <tools>
+      <li><label>beak</label><capacities><li>Bite</li></capacities><power>2.5</power><cooldownTime>2</cooldownTime><linkedBodyPartsGroup>Beak</linkedBodyPartsGroup></li>
+      <li><label>claws</label><capacities><li>Scratch</li></capacities><power>2</power><cooldownTime>2</cooldownTime><linkedBodyPartsGroup>Feet</linkedBodyPartsGroup></li>
+    </tools>
+    <tradeTags><li>AnimalExotic</li></tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>CVG_PhoenixBloodHen</defName>
+    <label>phoenix-blood hen</label>
+    <labelPlural>phoenix-blood hens</labelPlural>
+    <race>CVG_PhoenixBloodHen</race>
+    <combatPower>30</combatPower>
+    <ecoSystemWeight>0.3</ecoSystemWeight>
+    <modExtensions><li Class="Convergence.DefModExtension_PostConvergence" /></modExtensions>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_PhoenixBloodHen/CVG_PhoenixBloodHen</texPath>
+          <drawSize>0.45</drawSize>
+          <shadowData><volume>(0.4, 0.3, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chicken</texPath>
+          <drawSize>0.45</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_PhoenixBloodHen/CVG_PhoenixBloodHen</texPath>
+          <drawSize>0.75</drawSize>
+          <shadowData><volume>(0.4, 0.3, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chicken</texPath>
+          <drawSize>0.75</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_PhoenixBloodHen/CVG_PhoenixBloodHen</texPath>
+          <drawSize>0.87</drawSize>
+          <shadowData><volume>(0.4, 0.3, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chicken</texPath>
+          <drawSize>0.87</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>CVG_CloudOx</defName>
+    <label>cloud ox</label>
+    <description>A huge, slow pale ox that seems to walk on mist. Gives spirit milk and carries heavy loads. Laozi is said to have left the pass riding a pale ox, and the Cloud Ox are its stubborn descendants. They walk slowly because the road, they say, is the only thing worth arriving at.</description>
+    <statBases>
+      <MoveSpeed>3.2</MoveSpeed>
+      <MarketValue>900</MarketValue>
+      <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      <ComfyTemperatureMax>45</ComfyTemperatureMax>
+      <FilthRate>12</FilthRate>
+      <CarryingCapacity>180</CarryingCapacity>
+      <Wildness>0.25</Wildness>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Milkable">
+        <milkDef>CVG_SpiritMilk</milkDef>
+        <milkIntervalDays>2</milkIntervalDays>
+        <milkAmount>18</milkAmount>
+        <milkFemaleOnly>true</milkFemaleOnly>
+      </li>
+    </comps>
+    <race>
+      <body>QuadrupedAnimalWithHooves</body>
+      <baseBodySize>2.0</baseBodySize>
+      <baseHealthScale>2.2</baseHealthScale>
+      <baseHungerRate>0.7</baseHungerRate>
+      <foodType>VegetarianRoughAnimal</foodType>
+      <leatherDef>Leather_Plain</leatherDef>
+      <gestationPeriodDays>12</gestationPeriodDays>
+      <litterSizeCurve><points><li>(0.5, 0)</li><li>(1, 1)</li><li>(1.7, 1)</li><li>(2.0, 0)</li></points></litterSizeCurve>
+      <roamMtbDays>6</roamMtbDays>
+      <trainability>Advanced</trainability>
+      <lifeExpectancy>22</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.3333</minAge><soundWounded>Pawn_Muffalo_Wounded</soundWounded><soundDeath>Pawn_Muffalo_Death</soundDeath><soundCall>Pawn_Muffalo_Call</soundCall><soundAngry>Pawn_Muffalo_Angry</soundAngry></li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <soundEating>Herbivore_Eat</soundEating>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.18)</li><li>(0.27, 0, 0.11)</li><li>(0.0, 0, 0.05)</li><li>(-0.27, 0, 0.11)</li>
+      </headPosPerRotation>
+      <herdAnimal>true</herdAnimal>
+      <packAnimal>true</packAnimal>
+      <meatLabel>ox meat</meatLabel>
+          <wildBiomes><TemperateForest>0.003</TemperateForest><Tundra>0.003</Tundra><BorealForest>0.003</BorealForest></wildBiomes>
+    </race>
+    <tools>
+      <li><label>head</label><capacities><li>Blunt</li></capacities><power>12</power><cooldownTime>2.5</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup><ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable></li>
+      <li><label>left hoof</label><labelNoLocation>hoof</labelNoLocation><capacities><li>Blunt</li></capacities><power>7</power><cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup></li>
+      <li><label>right hoof</label><labelNoLocation>hoof</labelNoLocation><capacities><li>Blunt</li></capacities><power>7</power><cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup></li>
+    </tools>
+    <tradeTags><li>AnimalExotic</li></tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>CVG_CloudOx</defName>
+    <label>cloud ox</label>
+    <labelPlural>cloud oxen</labelPlural>
+    <race>CVG_CloudOx</race>
+    <combatPower>110</combatPower>
+    <ecoSystemWeight>0.7</ecoSystemWeight>
+    <modExtensions><li Class="Convergence.DefModExtension_PostConvergence" /></modExtensions>
+    <lifeStages>
+      <li><label>calf</label><labelPlural>calves</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_CloudOx/CVG_CloudOx</texPath>
+          <drawSize>0.9</drawSize>
+          <shadowData><volume>(0.4, 0.3, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cow/Dessicated_Cow</texPath>
+          <drawSize>0.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_CloudOx/CVG_CloudOx</texPath>
+          <drawSize>1.6</drawSize>
+          <shadowData><volume>(0.4, 0.3, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cow/Dessicated_Cow</texPath>
+          <drawSize>1.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_CloudOx/CVG_CloudOx</texPath>
+          <drawSize>2.2</drawSize>
+          <shadowData><volume>(0.4, 0.3, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cow/Dessicated_Cow</texPath>
+          <drawSize>2.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>CVG_MoonDeer</defName>
+    <label>moon deer</label>
+    <description>A pale deer whose antlers shine like the moon. Its antlers are cut each season and grow back without harm. The deer of the moon palace come down on the night of the full moon to shed their antlers on the mountain. Hunters who kill one find their luck gone by the next harvest.</description>
+    <statBases>
+      <MoveSpeed>6.2</MoveSpeed>
+      <MarketValue>480</MarketValue>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>45</ComfyTemperatureMax>
+      <FilthRate>8</FilthRate>
+      <Wildness>0.4</Wildness>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>CVG_MoonAntler</woolDef>
+        <shearIntervalDays>15</shearIntervalDays>
+        <woolAmount>12</woolAmount>
+      </li>
+    </comps>
+    <race>
+      <body>QuadrupedAnimalWithHooves</body>
+      <baseBodySize>1.0</baseBodySize>
+      <baseHealthScale>1.0</baseHealthScale>
+      <baseHungerRate>0.35</baseHungerRate>
+      <foodType>VegetarianRoughAnimal</foodType>
+      <leatherDef>Leather_Plain</leatherDef>
+      <gestationPeriodDays>6</gestationPeriodDays>
+      <litterSizeCurve><points><li>(0.5, 0)</li><li>(1, 1)</li><li>(1.7, 1)</li><li>(2.0, 0)</li></points></litterSizeCurve>
+      <roamMtbDays>6</roamMtbDays>
+      <trainability>Intermediate</trainability>
+      <lifeExpectancy>18</lifeExpectancy>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.3333</minAge><soundWounded>Pawn_Elk_Wounded</soundWounded><soundDeath>Pawn_Elk_Death</soundDeath><soundCall>Pawn_Elk_Call</soundCall><soundAngry>Pawn_Elk_Angry</soundAngry></li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <soundEating>Herbivore_Eat</soundEating>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.18)</li><li>(0.27, 0, 0.11)</li><li>(0.0, 0, 0.05)</li><li>(-0.27, 0, 0.11)</li>
+      </headPosPerRotation>
+      <herdAnimal>true</herdAnimal>
+      <meatLabel>deer meat</meatLabel>
+          <wildBiomes><TemperateForest>0.004</TemperateForest><BorealForest>0.004</BorealForest><Tundra>0.002</Tundra></wildBiomes>
+    </race>
+    <tools>
+      <li><label>head</label><capacities><li>Blunt</li></capacities><power>12</power><cooldownTime>2.5</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup><ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable></li>
+      <li><label>left hoof</label><labelNoLocation>hoof</labelNoLocation><capacities><li>Blunt</li></capacities><power>7</power><cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup></li>
+      <li><label>right hoof</label><labelNoLocation>hoof</labelNoLocation><capacities><li>Blunt</li></capacities><power>7</power><cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup></li>
+    </tools>
+    <tradeTags><li>AnimalExotic</li></tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>CVG_MoonDeer</defName>
+    <label>moon deer</label>
+    <labelPlural>moon deer</labelPlural>
+    <race>CVG_MoonDeer</race>
+    <combatPower>50</combatPower>
+    <ecoSystemWeight>0.3</ecoSystemWeight>
+    <modExtensions><li Class="Convergence.DefModExtension_PostConvergence" /></modExtensions>
+    <lifeStages>
+      <li><label>fawn</label><labelPlural>fawns</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_MoonDeer/CVG_MoonDeer</texPath>
+          <drawSize>0.6</drawSize>
+          <shadowData><volume>(0.4, 0.3, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Elk/Dessicated_ElkFemale</texPath>
+          <drawSize>0.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_MoonDeer/CVG_MoonDeer</texPath>
+          <drawSize>1.2</drawSize>
+          <shadowData><volume>(0.4, 0.3, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Elk/Dessicated_ElkFemale</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_MoonDeer/CVG_MoonDeer</texPath>
+          <drawSize>1.6</drawSize>
+          <shadowData><volume>(0.4, 0.3, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Elk/Dessicated_ElkFemale</texPath>
+          <drawSize>1.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+
+  <!-- ================= Wild spirit beasts (appear in the wild only after the Convergence; the Core awakens them as spirit beasts by combat power) ================= -->
+  <ThingDef ParentName="ThingBaseWolf">
+    <defName>CVG_WindWolf</defName>
+    <label>wind wolf</label>
+    <description>A pale-furred wolf that runs on the wind itself. It hunts in small packs and is hard to catch. The Azure Peak disciples say the wind wolf is a sword spirit that forgot its blade and took to running. The pack never howls: it listens for the voice of the storm and follows it.</description>
+    <statBases>
+      <MoveSpeed>6.8</MoveSpeed>
+      <MarketValue>800</MarketValue>
+      <Wildness>0.9</Wildness>
+    </statBases>
+    <race>
+      <meatLabel>wolf meat</meatLabel>
+      <wildBiomes>
+        <TemperateForest>0.006</TemperateForest>
+        <BorealForest>0.008</BorealForest>
+        <Tundra>0.006</Tundra>
+        <AridShrubland>0.004</AridShrubland>
+      </wildBiomes>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBaseWolf">
+    <defName>CVG_WindWolf</defName>
+    <label>wind wolf</label>
+    <labelPlural>wind wolves</labelPlural>
+    <race>CVG_WindWolf</race>
+    <combatPower>150</combatPower>
+    <wildGroupSize>1~3</wildGroupSize>
+    <modExtensions><li Class="Convergence.DefModExtension_PostConvergence" /></modExtensions>
+    <lifeStages>
+      <li><label>wind wolf pup</label><labelPlural>wind wolf pups</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_WindWolf/CVG_WindWolf</texPath>
+          <drawSize>1.05</drawSize>
+          <shadowData><volume>(0.3, 0.4, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Wolf_Timber/Dessicated_Wolf_Timber</texPath>
+          <drawSize>1.05</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_WindWolf/CVG_WindWolf</texPath>
+          <drawSize>1.5</drawSize>
+          <shadowData><volume>(0.3, 0.4, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Wolf_Timber/Dessicated_Wolf_Timber</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_WindWolf/CVG_WindWolf</texPath>
+          <drawSize>1.95</drawSize>
+          <shadowData><volume>(0.3, 0.4, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Wolf_Timber/Dessicated_Wolf_Timber</texPath>
+          <drawSize>1.95</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="BigBirdThingBase">
+    <defName>CVG_CelestialCrane</defName>
+    <label>celestial crane</label>
+    <description>A tall white crane with a red crown, said to carry the souls of old cultivators. Peaceful unless its nest is disturbed. The Eight Immortals rode cranes between heaven and earth, and these are the ones that never went home. Where one nests, the old say, an immortal is watching from a cloud.</description>
+    <statBases>
+      <MoveSpeed>5.2</MoveSpeed>
+      <MarketValue>700</MarketValue>
+      <ComfyTemperatureMin>-15</ComfyTemperatureMin>
+      <ComfyTemperatureMax>45</ComfyTemperatureMax>
+      <FilthRate>4</FilthRate>
+      <Wildness>0.9</Wildness>
+    </statBases>
+    <race>
+      <herdAnimal>false</herdAnimal>
+      <baseBodySize>0.8</baseBodySize>
+      <baseHealthScale>1.0</baseHealthScale>
+      <baseHungerRate>0.25</baseHungerRate>
+      <foodType>OmnivoreAnimal</foodType>
+      <roamMtbDays>4</roamMtbDays>
+      <lifeExpectancy>60</lifeExpectancy>
+      <trainability>Intermediate</trainability>
+      <meatLabel>crane meat</meatLabel>
+      <wildBiomes>
+        <TemperateForest>0.005</TemperateForest>
+        <BorealForest>0.004</BorealForest>
+        <TropicalRainforest>0.004</TropicalRainforest>
+      </wildBiomes>
+      <lifeStageAges>
+        <li><def>AnimalBabyTiny</def><minAge>0</minAge><soundWounded>Pawn_Chick_Call</soundWounded><soundDeath>Pawn_Chick_Call</soundDeath><soundCall>Pawn_Chick_Call</soundCall><soundAngry>Pawn_Chick_Call</soundAngry></li>
+        <li><def>AnimalJuvenile</def><minAge>0.1</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.2222</minAge></li>
+      </lifeStageAges>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.385)</li><li>(0.29, 0, 0.31)</li><li>(0.0, 0, 0.27)</li><li>(-0.29, 0, 0.31)</li>
+      </headPosPerRotation>
+    </race>
+    <tools>
+      <li><label>claws</label><capacities><li>Scratch</li></capacities><power>9</power><cooldownTime>1.6</cooldownTime><linkedBodyPartsGroup>Feet</linkedBodyPartsGroup></li>
+      <li><label>beak</label><capacities><li>Stab</li></capacities><power>11</power><cooldownTime>2</cooldownTime><linkedBodyPartsGroup>Beak</linkedBodyPartsGroup></li>
+    </tools>
+    <tradeTags><li>AnimalUncommon</li></tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BigBirdKindBase">
+    <defName>CVG_CelestialCrane</defName>
+    <label>celestial crane</label>
+    <labelPlural>celestial cranes</labelPlural>
+    <race>CVG_CelestialCrane</race>
+    <combatPower>120</combatPower>
+    <wildGroupSize>1~2</wildGroupSize>
+    <modExtensions><li Class="Convergence.DefModExtension_PostConvergence" /></modExtensions>
+    <lifeStages>
+      <li><label>crane chick</label><labelPlural>crane chicks</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_CelestialCrane/CVG_CelestialCrane</texPath>
+          <drawSize>0.6</drawSize>
+          <shadowData><volume>(0.3, 0.4, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Emu/Dessicated_Emu</texPath>
+          <drawSize>0.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_CelestialCrane/CVG_CelestialCrane</texPath>
+          <drawSize>1.0</drawSize>
+          <shadowData><volume>(0.3, 0.4, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Emu/Dessicated_Emu</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_CelestialCrane/CVG_CelestialCrane</texPath>
+          <drawSize>1.3</drawSize>
+          <shadowData><volume>(0.3, 0.4, 0.3)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Emu/Dessicated_Emu</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>CVG_NineNetherSpider</defName>
+    <label>nine-nether spider</label>
+    <description>A black spider as big as a boar with nine eyes that see the qi of the living. Its bite leaves a venom that eats at the qi and the flesh alike. It nests in the dark. The Blood Moon Cult calls it the Mother of Nine Hells and leaves offerings at its nests. Scholars of Jiuxiao believe it hatched from a drop of the demon lord's blood that fell on a spider's egg.</description>
+    <statBases>
+      <MoveSpeed>4.8</MoveSpeed>
+      <MarketValue>1800</MarketValue>
+      <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      <ComfyTemperatureMax>55</ComfyTemperatureMax>
+      <FilthRate>2</FilthRate>
+      <LeatherAmount>0</LeatherAmount>
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+      <ToxicResistance>0.8</ToxicResistance>
+      <Wildness>0.95</Wildness>
+    </statBases>
+    <race>
+      <body>BeetleLikeWithClaw</body>
+      <baseBodySize>1.5</baseBodySize>
+      <baseHealthScale>3.0</baseHealthScale>
+      <baseHungerRate>0.45</baseHungerRate>
+      <foodType>CarnivoreAnimal</foodType>
+      <meatLabel>spider meat</meatLabel>
+      <leatherDef>Leather_Plain</leatherDef>
+      <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>1.0</manhunterOnTameFailChance>
+      <predator>true</predator>
+      <maxPreyBodySize>2.0</maxPreyBodySize>
+      <trainability>None</trainability>
+      <lifeExpectancy>40</lifeExpectancy>
+      <roamMtbDays>10</roamMtbDays>
+      <wildBiomes>
+        <TemperateForest>0.003</TemperateForest>
+        <TropicalRainforest>0.004</TropicalRainforest>
+        <BorealForest>0.002</BorealForest>
+      </wildBiomes>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.25</minAge></li>
+        <li><def>AnimalAdult</def><minAge>0.3333</minAge><soundWounded>Pawn_BigInsect_Pain</soundWounded><soundDeath>Pawn_BigInsect_Death</soundDeath><soundCall>Pawn_BigInsect_Call</soundCall><soundAngry>Pawn_BigInsect_Angry</soundAngry></li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <soundEating>Insectoid_Eat</soundEating>
+    </race>
+    <tools>
+      <li><label>fangs</label><capacities><li>ToxicBite</li></capacities><power>16</power><cooldownTime>2</cooldownTime><linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup></li>
+      <li><label>head</label><capacities><li>Blunt</li></capacities><power>8</power><cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup><ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable><chanceFactor>0.2</chanceFactor></li>
+    </tools>
+    <tradeTags><li>AnimalInsect</li></tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>CVG_NineNetherSpider</defName>
+    <label>nine-nether spider</label>
+    <labelPlural>nine-nether spiders</labelPlural>
+    <race>CVG_NineNetherSpider</race>
+    <combatPower>350</combatPower>
+    <ecoSystemWeight>1.2</ecoSystemWeight>
+    <wildGroupSize>1~1</wildGroupSize>
+    <modExtensions><li Class="Convergence.DefModExtension_PostConvergence" /></modExtensions>
+    <lifeStages>
+      <li><label>nine-nether spiderling</label><labelPlural>nine-nether spiderlings</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_NineNetherSpider/CVG_NineNetherSpider</texPath>
+          <drawSize>0.8</drawSize>
+          <color>(255,255,255)</color>
+          <shadowData><volume>(0.5, 0.4, 0.5)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Megaspider/Dessicated_Megaspider</texPath>
+          <drawSize>0.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_NineNetherSpider/CVG_NineNetherSpider</texPath>
+          <drawSize>1.5</drawSize>
+          <color>(255,255,255)</color>
+          <shadowData><volume>(0.5, 0.4, 0.5)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Megaspider/Dessicated_Megaspider</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_NineNetherSpider/CVG_NineNetherSpider</texPath>
+          <drawSize>2.2</drawSize>
+          <color>(255,255,255)</color>
+          <shadowData><volume>(0.5, 0.4, 0.5)</volume><offset>(0,0,-0.2)</offset></shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Megaspider/Dessicated_Megaspider</texPath>
+          <drawSize>2.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- ================= Black Tortoise of the North (Xuanwu): tank beast, gives shell plates for armor ================= -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>CVG_Xuanwu</defName>
+    <label>black tortoise</label>
+    <description>The Black Tortoise of the North, Xuanwu, is said to carry the pillar of the northern sky on its shell; this beast is one of its far descendants, slow as a glacier and as hard to stop. Moss and protective runes grow together on its carapace, and the Azure Peak smiths would trade a season of swords for a single plate of it. It shrugs off frost and fire alike: the northern waters it guards remember both.</description>
+    <statBases>
+      <MoveSpeed>1.6</MoveSpeed>
+      <MarketValue>1800</MarketValue>
+      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.05</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.9</ArmorRating_Heat>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>120</ComfyTemperatureMax>
+      <Wildness>0.97</Wildness>
+    </statBases>
+    <uiIconScale>1.1</uiIconScale>
+    <tools>
+      <li>
+        <label>beak</label>
+        <capacities><li>Bite</li></capacities>
+        <power>24</power>
+        <cooldownTime>2.8</cooldownTime>
+        <linkedBodyPartsGroup>TurtleBeakAttackTool</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>16</power>
+        <cooldownTime>2.8</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.3</chanceFactor>
+      </li>
+    </tools>
+    <butcherProducts><CVG_XuanwuShell>12</CVG_XuanwuShell></butcherProducts>
+    <race>
+      <body>TurtleLike</body>
+      <baseBodySize>3.2</baseBodySize>
+      <baseHungerRate>0.35</baseHungerRate>
+      <baseHealthScale>4.5</baseHealthScale>
+      <foodType>OmnivoreRoughAnimal</foodType>
+      <leatherDef>Leather_Lizard</leatherDef>
+      <meatLabel>tortoise meat</meatLabel>
+      <lifeExpectancy>500</lifeExpectancy>
+      <wildBiomes>
+        <BorealForest>0.002</BorealForest>
+        <Tundra>0.002</Tundra>
+        <ColdBog>0.004</ColdBog>
+        <TemperateSwamp>0.002</TemperateSwamp>
+      </wildBiomes>
+      <lifeStageAges>
+        <li><def>AnimalBaby</def><minAge>0</minAge></li>
+        <li><def>AnimalJuvenile</def><minAge>0.5</minAge></li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>1.5</minAge>
+          <soundWounded>Pawn_Tortoise_Wounded</soundWounded>
+          <soundDeath>Pawn_Tortoise_Death</soundDeath>
+          <soundCall>Pawn_Tortoise_Call</soundCall>
+          <soundAngry>Pawn_Tortoise_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <soundEating>Reptile_Eat</soundEating>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.11)</li>
+        <li>(0.25, 0, 0.02)</li>
+        <li>(0.01, 0, -0.02)</li>
+        <li>(-0.52, 0, 0.02)</li>
+      </headPosPerRotation>
+    </race>
+    <tradeTags><li>AnimalExotic</li></tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>CVG_Xuanwu</defName>
+    <label>black tortoise</label>
+    <race>CVG_Xuanwu</race>
+    <combatPower>320</combatPower>
+    <ecoSystemWeight>1.2</ecoSystemWeight>
+    <wildGroupSize>1</wildGroupSize>
+    <modExtensions><li Class="Convergence.DefModExtension_PostConvergence" /></modExtensions>
+    <lifeStages>
+      <li>
+        <label>black tortoise hatchling</label>
+        <labelPlural>black tortoise hatchlings</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_Xuanwu/CVG_Xuanwu</texPath>
+          <drawSize>1.3</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Tortoise/Dessicated_Tortoise</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_Xuanwu/CVG_Xuanwu</texPath>
+          <drawSize>2.2</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Tortoise/Dessicated_Tortoise</texPath>
+          <drawSize>2.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_Xuanwu/CVG_Xuanwu</texPath>
+          <drawSize>3.0</drawSize>
+          <shadowData>
+            <volume>(0.9, 0.6, 0.8)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Tortoise/Dessicated_Tortoise</texPath>
+          <drawSize>3.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- ================= White Tiger of Lightning (Baihu): the fastest and deadliest predator of the map ================= -->
+  <ThingDef ParentName="BigCatThingBase">
+    <defName>CVG_LightningTiger</defName>
+    <label>lightning tiger</label>
+    <description>The White Tiger of the West, Baihu, rules metal and autumn and walks ahead of the storm; this beast is a scion of its line, white as frost and striped with living qi. Its jade sabre fangs are said to cut through spirit armor, and thunder follows it close enough that its fur crackles at night. Sects that see its tracks near their gates move their disciples indoors and their elders to the walls.</description>
+    <statBases>
+      <MoveSpeed>6.6</MoveSpeed>
+      <MarketValue>2200</MarketValue>
+      <Wildness>0.97</Wildness>
+      <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+      <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      <ComfyTemperatureMax>50</ComfyTemperatureMax>
+    </statBases>
+    <tools Inherit="False">
+      <li>
+        <label>left lightning claw</label>
+        <labelNoLocation>lightning claw</labelNoLocation>
+        <capacities><li>Scratch</li></capacities>
+        <power>18</power>
+        <cooldownTime>1.4</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages><li><def>Stun</def><amount>14</amount></li></extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right lightning claw</label>
+        <labelNoLocation>lightning claw</labelNoLocation>
+        <capacities><li>Scratch</li></capacities>
+        <power>18</power>
+        <cooldownTime>1.4</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages><li><def>Stun</def><amount>14</amount></li></extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>jade fangs</label>
+        <capacities><li>Bite</li></capacities>
+        <power>28</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <armorPenetration>0.6</armorPenetration>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities><li>Blunt</li></capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <baseBodySize>1.9</baseBodySize>
+      <baseHealthScale>2.6</baseHealthScale>
+      <baseHungerRate>0.6</baseHungerRate>
+      <maxPreyBodySize>3.0</maxPreyBodySize>
+      <manhunterOnTameFailChance>0.5</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <meatLabel>tiger meat</meatLabel>
+      <lifeExpectancy>60</lifeExpectancy>
+      <wildBiomes>
+        <TemperateForest>0.002</TemperateForest>
+        <TropicalRainforest>0.002</TropicalRainforest>
+        <AridShrubland>0.0015</AridShrubland>
+        <BorealForest>0.001</BorealForest>
+      </wildBiomes>
+    </race>
+    <tradeTags Inherit="False"><li>AnimalExotic</li></tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BigCatKindBase">
+    <defName>CVG_LightningTiger</defName>
+    <label>lightning tiger</label>
+    <race>CVG_LightningTiger</race>
+    <combatPower>380</combatPower>
+    <ecoSystemWeight>1.4</ecoSystemWeight>
+    <wildGroupSize>1</wildGroupSize>
+    <modExtensions><li Class="Convergence.DefModExtension_PostConvergence" /></modExtensions>
+    <lifeStages>
+      <li>
+        <label>lightning tiger cub</label>
+        <labelPlural>lightning tiger cubs</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_LightningTiger/CVG_LightningTiger</texPath>
+          <drawSize>1.2</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cougar/Dessicated_Cougar</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_LightningTiger/CVG_LightningTiger</texPath>
+          <drawSize>1.9</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cougar/Dessicated_Cougar</texPath>
+          <drawSize>1.9</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/CVG_LightningTiger/CVG_LightningTiger</texPath>
+          <drawSize>2.7</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.4, 0.5)</volume>
+            <offset>(0,0,-0.15)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Cougar/Dessicated_Cougar</texPath>
+          <drawSize>2.7</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>

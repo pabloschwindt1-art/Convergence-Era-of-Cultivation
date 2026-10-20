@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Bloodline purity levels (shared by every bloodline module). chance = probability that a generated human has SOME
+    bloodline of this purity (split between bloodlines by commonality); the mod setting multiplies it.
+  -->
+  <Convergence.BloodlinePurityDef>
+    <defName>CVG_Purity_Trace</defName>
+    <label>trace</label>
+    <description>A trace of beast blood, dormant for generations. Small gifts, one mild flaw.</description>
+    <order>1</order>
+    <chance>0.03</chance>
+    <color>(0.7, 0.7, 0.7)</color>
+  </Convergence.BloodlinePurityDef>
+
+  <Convergence.BloodlinePurityDef>
+    <defName>CVG_Purity_Diluted</defName>
+    <label>diluted</label>
+    <description>Blood thinned by generations, yet awake: notable gifts, the first innate ability and marked flaws.</description>
+    <order>2</order>
+    <chance>0.01</chance>
+    <color>(0.55, 0.8, 1)</color>
+  </Convergence.BloodlinePurityDef>
+
+  <Convergence.BloodlinePurityDef>
+    <defName>CVG_Purity_Pure</defName>
+    <label>pure</label>
+    <description>The blood runs true: strong gifts, a second innate ability and only light flaws.</description>
+    <order>3</order>
+    <chance>0.003</chance>
+    <color>(0.75, 0.5, 1)</color>
+  </Convergence.BloodlinePurityDef>
+
+  <Convergence.BloodlinePurityDef>
+    <defName>CVG_Purity_Ancestral</defName>
+    <label>ancestral</label>
+    <description>The blood of the first beasts. Enormous gifts, the supreme ability, and almost no flaws left.</description>
+    <order>4</order>
+    <chance>0.0003</chance>
+    <color>(1, 0.8, 0.3)</color>
+  </Convergence.BloodlinePurityDef>
+</Defs>

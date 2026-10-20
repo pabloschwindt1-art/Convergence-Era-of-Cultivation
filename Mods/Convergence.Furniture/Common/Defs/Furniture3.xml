@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Part 3 of docs/modulos/DIA_A_DIA.md ("life furniture"): the wuxia version of each vanilla piece, on the same classes. Textures are tinted vanilla; final art Things/Building/CVG/Furniture/<Name>. -->
+  <ThingDef ParentName="BedBase">
+    <defName>CVG_SectDoubleBed</defName>
+    <label>sect double bed</label>
+    <description>A wide bed of dark wood for two, with a red quilt for the wedding night and a hard pillow for every other. Dao partners of the Silent Lotus share one bed and one retreat, and say the second is the harder. The headboard carries two carved cranes, as the marriage contracts of Jiuxiao require.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/SectDoubleBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <fillPercent>0.40</fillPercent>
+    <size>(2,2)</size>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>1800</WorkToBuild>
+      <Mass>50</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>4</Beauty>
+      <Comfort>0.65</Comfort>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+      <ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+      <SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+    </statBases>
+    <costList>
+      <WoodLog>90</WoodLog>
+      <Cloth>40</Cloth>
+    </costList>
+    <building><bed_showSleeperBody>False</bed_showSleeperBody><bed_healPerDay>4</bed_healPerDay></building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>1</qi>
+      </li>
+    </modExtensions>
+      <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>EndTable</li>
+          <li>CVG_BedsideTray</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BedWithQualityBase">
+    <defName>CVG_HealerBed</defName>
+    <label>healer's bed</label>
+    <description>A bed of pale wood with a bowl of herbs under the pillow and a ring of jade beads on the frame, laid out the way the healers of the Silent Lotus place their patients. The patient lies facing the door, the healer facing the patient, and nobody may speak above a whisper. It mends the sick faster than a plain bed, though nothing there is a machine.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/HealerBed</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <fillPercent>0.40</fillPercent>
+    <size>(1,2)</size>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <WorkToBuild>2500</WorkToBuild>
+      <Mass>30</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>3</Beauty>
+      <Comfort>0.75</Comfort>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+      <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
+      <MedicalTendQualityOffset>0.08</MedicalTendQualityOffset>
+      <SurgerySuccessChanceFactor>1.05</SurgerySuccessChanceFactor>
+    </statBases>
+    <costList>
+      <WoodLog>60</WoodLog>
+      <Cloth>40</Cloth>
+      <CVG_SpiritJade>4</CVG_SpiritJade>
+    </costList>
+    <building>
+      <bed_showSleeperBody>False</bed_showSleeperBody>
+      <bed_healPerDay>9</bed_healPerDay>
+      <bed_defaultMedical>true</bed_defaultMedical>
+    </building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>2</qi>
+        <element>CVG_Element_Wood</element>
+      </li>
+    </modExtensions>
+      <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>EndTable</li>
+          <li>CVG_BedsideTray</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="TableGatherSpotBase">
+    <defName>CVG_BanquetTable</defName>
+    <label>banquet round table</label>
+    <description>A round table big enough for twelve, with a lazy-susan of lacquered wood in the middle so that no guest has to reach for the dish. At a round table nobody sits at the head, which is the point: the sect's masters have been known to hold a council over rice just to avoid giving a seat of honor.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/BanquetTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>3800</WorkToBuild>
+      <Mass>26</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>4</Beauty>
+    </statBases>
+    <size>(3,3)</size>
+    <stuffCategories Inherit="False"><li>Woody</li></stuffCategories>
+    <costStuffCount>110</costStuffCount>
+    <rotatable>false</rotatable>
+    <building>
+      <buildingSizeCategory>Medium</buildingSizeCategory>
+    </building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>1</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>CVG_CarvedChair</defName>
+    <label>carved chair</label>
+    <description>A high-backed chair of dark wood with a dragon carved in the back and a seat just wide enough for one cultivator in a wide-sleeved robe. The elders of the sects sit in it with their hands in their sleeves and their eyes closed, and nobody is quite sure which of the two things they are doing.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/CarvedChair</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.35</fillPercent>
+    <rotatable>true</rotatable>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>2400</WorkToBuild>
+      <Mass>5</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>5</Beauty>
+      <Comfort>0.72</Comfort>
+    </statBases>
+    <costList>
+      <WoodLog>45</WoodLog>
+    </costList>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <replaceTags><li>Chair</li></replaceTags>
+    <building><isSittable>true</isSittable><paintable>true</paintable></building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="StorageShelfBase">
+    <defName>CVG_WarehouseShelf</defName>
+    <label>warehouse shelf</label>
+    <description>A tall shelf of rough planks with stone feet, three arms wide, for the sect's stores: tools, cloth, medicines, anything that does not need a lock or a priest. Things on it do not rot. The Wandering Path cultivators insist that the only real storeroom is a pack, but they all take their things here when it rains.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/WarehouseShelf</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <size>(3,1)</size>
+    <costStuffCount>30</costStuffCount>
+    <stuffCategories Inherit="False"><li>Woody</li></stuffCategories>
+    <statBases>
+      <MaxHitPoints>130</MaxHitPoints>
+      <Mass>12</Mass>
+      <WorkToBuild>800</WorkToBuild>
+    </statBases>
+    <rotatable>true</rotatable>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_GrainJar</defName>
+    <label>grain jar</label>
+    <description>A big, glazed clay jar with a wooden lid and a seal of red paper, for rice, millet and everything else the sect eats through winter. Food kept in it does not spoil and does not attract rats, which the old grain-keepers attribute to a small, bored spirit that lives in each jar and eats only the mice.</description>
+    <thingClass>Building_Storage</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/GrainJar</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.30</fillPercent>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <Flammability>0.4</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <costList>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <building>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <maxItemsInCell>4</maxItemsInCell>
+      <blueprintClass>Blueprint_Storage</blueprintClass>
+      <fixedStorageSettings><filter><categories><li>Foods</li></categories></filter></fixedStorageSettings>
+      <defaultStorageSettings><priority>Preferred</priority><filter><categories><li>Foods</li></categories></filter></defaultStorageSettings>
+    </building>
+    <inspectorTabs><li>ITab_Storage</li></inspectorTabs>
+    <surfaceType>Item</surfaceType>
+    <canOverlapZones>false</canOverlapZones>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0</qi>
+        <element>CVG_Element_Earth</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="StorageShelfBase">
+    <defName>CVG_SectChest</defName>
+    <label>sect chest</label>
+    <description>A heavy chest of camphor wood with brass corners, kept at the foot of the master's bed. Its lid carries the sect's seal, and the lock is a formation: it opens only for those whose qi it remembers. The chest of the Azure Peak was empty when the Calamity struck; the elders say that is how it was protected.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/SectChest</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <size>(1,1)</size>
+    <costStuffCount>20</costStuffCount>
+    <stuffCategories Inherit="False"><li>Woody</li></stuffCategories>
+    <costList>
+      <CVG_SpiritStone>5</CVG_SpiritStone>
+    </costList>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>10</Mass>
+      <WorkToBuild>1500</WorkToBuild>
+      <Beauty>2</Beauty>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <rotatable>true</rotatable>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>1</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef Name="CVG_MoonDoor" ParentName="DoorBase">
+    <defName>CVG_MoonDoor</defName>
+    <label>moon door</label>
+    <description>A round doorway with a double leaf, the kind seen in the gardens of the old Heavenly Court. Stepping through it is said to rid you of one worry, which is why gardeners build it wide: nobody carries only one. A closed moon door looks like a full moon rising out of the wall.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/MoonDoor_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconPath>Things/Building/CVG/Furniture/MoonDoor_MenuIcon</uiIconPath>
+    <designationCategory>Structure</designationCategory>
+    <statBases>
+      <WorkToBuild>1100</WorkToBuild>
+    </statBases>
+    <costStuffCount>30</costStuffCount>
+    <stuffCategories Inherit="False"><li>Woody</li><li>Stony</li></stuffCategories>
+    <building><isStuffableAirtight>true</isStuffableAirtight></building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>1</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="DoorBase">
+    <defName>CVG_LacqueredDoor</defName>
+    <label>lacquered door</label>
+    <description>A double door of red lacquered wood with brass studs and a pair of stone lions on the sill, as the gates of every self-respecting sect since the First Convergence. It is sturdier than a plain door, and it makes visitors lower their voices without being asked.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/LacqueredDoor_Mover</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconPath>Things/Building/CVG/Furniture/LacqueredDoor_MenuIcon</uiIconPath>
+    <designationCategory>Structure</designationCategory>
+    <statBases>
+      <WorkToBuild>1400</WorkToBuild>
+      <MaxHitPoints>260</MaxHitPoints>
+      <Beauty>3</Beauty>
+    </statBases>
+    <costStuffCount>35</costStuffCount>
+    <stuffCategories Inherit="False"><li>Woody</li></stuffCategories>
+    <building><isStuffableAirtight>true</isStuffableAirtight></building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>1</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="Wall" MayRequire="prospero1088.convergence.resources">
+    <defName>CVG_BambooWall</defName>
+    <label>bamboo wall</label>
+    <description>A wall of bamboo poles lashed side by side and plastered with a thin coat of clay. It goes up fast and costs almost nothing, holds a roof, and burns like a candle. The sect outposts of the Wandering Path use it because it can be rebuilt in a day, which they consider more important than lasting a century.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/BambooWall_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconPath>Things/Building/CVG/Furniture/BambooWall_MenuIcon</uiIconPath>
+    <uiIconPathsStuff Inherit="False" />
+    <designationCategory>Structure</designationCategory>
+    <statBases>
+      <MaxHitPoints>240</MaxHitPoints>
+      <WorkToBuild>120</WorkToBuild>
+      <Flammability>1.4</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <stuffCategories Inherit="False" />
+    <costStuffCount>0</costStuffCount>
+    <costList>
+      <CVG_Bamboo>4</CVG_Bamboo>
+    </costList>
+    <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <comps Inherit="False" />
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>1</qi>
+        <element>CVG_Element_Wood</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <TerrainDef ParentName="FloorBase">
+    <defName>CVG_RoofTileFloor</defName>
+    <label>roof-tile floor</label>
+    <description>Grey fired-clay roof tiles laid flat as paving, in the rippling pattern of the sect halls. Cheap, durable and pleasant underfoot in the rain, they are what the lanes between the pavilions are paved with. The first tiles were broken roofs that nobody had the heart to throw away.</description>
+    <texturePath>Terrain/Surfaces/TileStone</texturePath>
+    <color>(0.55,0.6,0.62)</color>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>190</renderPrecedence>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>3</Beauty>
+      <Cleanliness>0.1</Cleanliness>
+    </statBases>
+    <costList>
+      <WoodLog>2</WoodLog>
+      <Cloth>0</Cloth>
+    </costList>
+    <designationCategory>Floors</designationCategory>
+    <uiOrder>2210</uiOrder>
+  </TerrainDef>
+  <JoyKindDef>
+    <defName>CVG_Music</defName>
+    <label>music</label>
+  </JoyKindDef>
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>CVG_MahjongTable</defName>
+    <label>mahjong table</label>
+    <description>A square table with a green felt top, a sliding drawer of tiles carved from bone and a shallow groove for each player's counters. Mahjong is played with a quiet fury: disciples who lose lightly make their friends tea, and those who lose heavily take up swordsmanship out of spite.\n\nThis building requires adjacent chairs or stools to use.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/MahjongTable</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <fillPercent>0.40</fillPercent>
+    <building>
+      <joyKind>Gaming_Cerebral</joyKind>
+      <buildingSizeCategory>Medium</buildingSizeCategory>
+      <paintable>true</paintable>
+    </building>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>6500</WorkToBuild>
+      <Mass>25</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>2</Beauty>
+      <JoyGainFactor>1.25</JoyGainFactor>
+    </statBases>
+    <size>(2,2)</size>
+    <stuffCategories><li>Woody</li><li>Stony</li></stuffCategories>
+    <costStuffCount>50</costStuffCount>
+    <costList>
+      <Cloth>40</Cloth>
+    </costList>
+    <pathCost>42</pathCost>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Joy</designationCategory>
+    <canOverlapZones>false</canOverlapZones>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>CVG_TeaPavilion</defName>
+    <label>tea pavilion</label>
+    <description>A small open pavilion on four pillars, with a low table, a clay stove and a kettle that never quite stops boiling. Disciples come here to say the things they would not say in the hall. The pavilion of the Heavenly Cauldron is where its alchemists settle their arguments: by cup, and in order of rank.\n\nThis building requires adjacent chairs or stools to use.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/TeaPavilion</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <fillPercent>0.35</fillPercent>
+    <building>
+      <joyKind>Social</joyKind>
+      <buildingSizeCategory>Medium</buildingSizeCategory>
+    </building>
+    <statBases>
+      <MaxHitPoints>260</MaxHitPoints>
+      <WorkToBuild>9000</WorkToBuild>
+      <Mass>40</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>6</Beauty>
+      <JoyGainFactor>1.3</JoyGainFactor>
+    </statBases>
+    <size>(3,3)</size>
+    <stuffCategories><li>Woody</li></stuffCategories>
+    <costStuffCount>140</costStuffCount>
+    <costList>
+      <CVG_SpiritStone>5</CVG_SpiritStone>
+    </costList>
+    <pathCost>42</pathCost>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Joy</designationCategory>
+    <canOverlapZones>false</canOverlapZones>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>2</qi>
+        <element>CVG_Element_Water</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>CVG_Guqin</defName>
+    <label>guqin</label>
+    <description>A long, low zither of seven silk strings on a board of paulownia wood, played with the instrument laid on a table and the player sitting upright. The old masters said the guqin is not played to be heard but to hear oneself. The Silent Lotus sing to it at dusk, and even the monks who forbid music do not forbid this.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/Guqin</texPath><drawSize>(1,1)</drawSize>
+      <graphicClass>Graphic_Multi</graphicClass>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>true</rotatable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <fillPercent>0.30</fillPercent>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <tickerType>Rare</tickerType>
+    <building>
+      <joyKind>CVG_Music</joyKind>
+    </building>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Mass>5</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>4</Beauty>
+      <JoyGainFactor>1.1</JoyGainFactor>
+    </statBases>
+    <stuffCategories><li>Woody</li></stuffCategories>
+    <costStuffCount>45</costStuffCount>
+    <costList>
+      <Cloth>20</Cloth>
+    </costList>
+    <pathCost>30</pathCost>
+    <passability>PassThroughOnly</passability>
+    <placeWorkers><li>PlaceWorker_PreventInteractionSpotOverlap</li></placeWorkers>
+    <designationCategory>Joy</designationCategory>
+    <comps>
+      <li Class="Convergence.CompProperties_DaoStudy">
+        <comprehensionPerHour>0.04</comprehensionPerHour>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>1</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <JobDef>
+    <defName>CVG_Play_Mahjong</defName>
+    <driverClass>JobDriver_SitFacingBuilding</driverClass>
+    <reportString>playing mahjong.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>4</joyMaxParticipants>
+    <joySkill>Intellectual</joySkill>
+    <joyXpPerTick>0.002</joyXpPerTick>
+    <joyKind>Gaming_Cerebral</joyKind>
+    <taleOnCompletion>PlayedGame</taleOnCompletion>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>CVG_Take_Tea</defName>
+    <driverClass>JobDriver_SitFacingBuilding</driverClass>
+    <reportString>taking tea.</reportString>
+    <joyDuration>3500</joyDuration>
+    <joyMaxParticipants>4</joyMaxParticipants>
+    <joyKind>Social</joyKind>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>CVG_Play_Guqin</defName>
+    <driverClass>JobDriver_WatchBuilding</driverClass>
+    <reportString>playing the guqin.</reportString>
+    <joyDuration>3500</joyDuration>
+    <joyMaxParticipants>1</joyMaxParticipants>
+    <joySkill>Artistic</joySkill>
+    <joyXpPerTick>0.003</joyXpPerTick>
+    <joyKind>CVG_Music</joyKind>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JoyGiverDef>
+    <defName>CVG_Play_Mahjong</defName>
+    <giverClass>JoyGiver_InteractBuildingSitAdjacent</giverClass>
+    <baseChance>2</baseChance>
+    <thingDefs><li>CVG_MahjongTable</li></thingDefs>
+    <jobDef>CVG_Play_Mahjong</jobDef>
+    <joyKind>Gaming_Cerebral</joyKind>
+    <requiredCapacities><li>Manipulation</li></requiredCapacities>
+  </JoyGiverDef>
+
+  <JoyGiverDef>
+    <defName>CVG_Take_Tea</defName>
+    <giverClass>JoyGiver_InteractBuildingSitAdjacent</giverClass>
+    <baseChance>1.6</baseChance>
+    <thingDefs><li>CVG_TeaPavilion</li></thingDefs>
+    <jobDef>CVG_Take_Tea</jobDef>
+    <joyKind>Social</joyKind>
+    <requiredCapacities><li>Manipulation</li></requiredCapacities>
+  </JoyGiverDef>
+
+  <JoyGiverDef>
+    <defName>CVG_Play_Guqin</defName>
+    <giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
+    <baseChance>1.5</baseChance>
+    <thingDefs><li>CVG_Guqin</li></thingDefs>
+    <jobDef>CVG_Play_Guqin</jobDef>
+    <joyKind>CVG_Music</joyKind>
+    <requiredCapacities><li>Manipulation</li></requiredCapacities>
+  </JoyGiverDef>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_StoneBench</defName>
+    <label>stone bench</label>
+    <description>A long bench of dressed stone under a plum tree, worn smooth at the middle by generations of disciples who came to sit and think. Cold in winter, hot in summer, and exactly as comfortable as a bench needs to be for nobody to stay too long. The elders say the best conversations are held on the shortest benches.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/StoneBench</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.25</fillPercent>
+    <size>(2,1)</size>
+    <rotatable>true</rotatable>
+    <stuffCategories><li>Stony</li></stuffCategories>
+    <costStuffCount>45</costStuffCount>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>1200</WorkToBuild>
+      <Mass>30</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>2</Beauty>
+      <Comfort>0.35</Comfort>
+    </statBases>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <replaceTags><li>Chair</li></replaceTags>
+    <building><isSittable>true</isSittable></building>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0</qi>
+        <element>CVG_Element_Earth</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureBase">
+    <defName>CVG_LotusPlanter</defName>
+    <label>lotus planter</label>
+    <description>A wide stone basin of still water where a single lotus opens each morning and closes at dusk. It grows on its own, needs no tending, and is never found dead. The monks of the Silent Lotus say that is not a miracle but good manners: the flower will not wilt in front of someone who is looking for peace.</description>
+    <graphicData>
+      <texPath>Things/Building/CVG/Furniture/LotusPlanter</texPath>
+      <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <designationCategory>Furniture</designationCategory>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <fillPercent>0.30</fillPercent>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <stuffCategories><li>Stony</li></stuffCategories>
+    <costStuffCount>30</costStuffCount>
+    <costList><CVG_SpiritStone>2</CVG_SpiritStone></costList>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>12</Mass>
+      <Flammability>0</Flammability>
+      <Beauty>6</Beauty>
+    </statBases>
+    <placeWorkers><li>PlaceWorker_Heater</li></placeWorkers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>2</qi>
+        <element>CVG_Element_Water</element>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

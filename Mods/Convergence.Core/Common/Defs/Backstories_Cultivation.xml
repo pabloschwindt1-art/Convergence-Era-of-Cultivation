@@ -1,0 +1,2874 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Cultivation backstories for the world after the Convergence: colonists, visitors and raiders with a past in Jiuxiao or on the Rim.
+       Four tiers per slot:
+         tier 1 (common folk): vanilla spawn categories (Outlander, Offworld, Tribal, Pirate) + CVG_Cultivation, so vanilla pawn generation picks them up on its own;
+         tier 2 / 3 / 4: ONLY CVG_Tier2 / CVG_Tier3 / CVG_Tier4. Patches/Backstories_Tiers.xml adds weighted backstoryFilters to the vanilla factions
+         so a high tier can appear in one slot only (childhood OR adulthood), never in both. Tier 3 and 4 always carry a cost (workDisables, a negative trait). -->
+
+  <!-- ==================== Childhood, tier 1 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_LakeFisherChild</defName>
+    <title>fisher's child</title>
+    <titleShort>fisher's child</titleShort>
+    <description>[PAWN_nameDef] was the child of a fisher of a lake village of Jiuxiao, and learned to mend nets, gut carp and row before [PAWN_pronoun] could read.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Tribal</li>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Animals>2</Animals>
+      <Cooking>2</Cooking>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_PaddyChild</defName>
+    <title>paddy child</title>
+    <titleShort>paddy child</titleShort>
+    <description>[PAWN_nameDef] grew up planting rice in the terraced paddies below a sect mountain, knee-deep in mud, and never once saw a cultivator up close.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Tribal</li>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Plants>3</Plants>
+      <Construction>1</Construction>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <PlantWorkSpeed>1.05</PlantWorkSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_MuleDriverChild</defName>
+    <title>mule driver's child</title>
+    <titleShort>driver's child</titleShort>
+    <description>[PAWN_nameDef]'s parents drove mule caravans along the sect roads of Jiuxiao. [PAWN_pronoun] slept under carts, fed the mules and learned which inns watered the wine.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>Tribal</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Animals>3</Animals>
+      <Social>1</Social>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_TeaHouseChild</defName>
+    <title>teahouse child</title>
+    <titleShort>teahouse child</titleShort>
+    <description>[PAWN_nameDef] carried trays in [PAWN_possessive] family's teahouse on a sect road, where disciples gossiped about elders and elders pretended not to listen.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Cooking>2</Cooking>
+      <Social>2</Social>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_LateRootVillager</defName>
+    <title>late-bloomed villager</title>
+    <titleShort>villager</titleShort>
+    <description>[PAWN_nameDef] was an ordinary child of a rice village until a travelling appraiser of the Heavenly Cauldron Pavilion pressed a jade needle to [PAWN_possessive] wrist and found a spirit root nobody had thought to look for. The village sold two oxen to buy [PAWN_objective] a first manual, and [PAWN_pronoun] spent the rest of [PAWN_possessive] childhood trying to earn them back.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>Tribal</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Plants>2</Plants>
+      <Intellectual>1</Intellectual>
+      <Animals>1</Animals>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <CVG_QiRegen>1.05</CVG_QiRegen>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SectServantChild</defName>
+    <title>sect servant child</title>
+    <titleShort>servant</titleShort>
+    <description>[PAWN_nameDef] grew up as a bound servant in the outer courts of a middling sect, hauling water up nine hundred steps before dawn and scrubbing cauldrons until the moon rose. [PAWN_pronoun] was never allowed into the practice halls, so [PAWN_pronoun] listened through the walls.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>Tribal</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Cooking>2</Cooking>
+      <Crafting>2</Crafting>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_StoneVeinChild</defName>
+    <title>stone-vein child</title>
+    <titleShort>vein child</titleShort>
+    <description>[PAWN_nameDef] was born to spirit stone miners in a vein town of Jiuxiao, pushing carts and sorting stones by their glow before [PAWN_pronoun] could read. [PAWN_pronoun] learned which shade of blue meant money and which meant the gallery was about to come down.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Tribal</li>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Mining>3</Mining>
+      <Construction>1</Construction>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <MiningSpeed>1.05</MiningSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_PillHallRunner</defName>
+    <title>pill hall runner</title>
+    <titleShort>runner</titleShort>
+    <description>[PAWN_nameDef] ran errands in a pill hall of the Heavenly Cauldron Pavilion: carrying orders, counting spirit stones and fetching the wrong elder when the right one was busy. [PAWN_pronoun] learned early that every pill has three prices: the one written, the one asked and the one paid.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>2</Social>
+      <Intellectual>1</Intellectual>
+      <Cooking>1</Cooking>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_InnChild</defName>
+    <title>inn child</title>
+    <titleShort>inn child</titleShort>
+    <description>[PAWN_nameDef] grew up in the Wandering Cloud Inn, where rogue cultivators drink, duel and sleep off their debts. [PAWN_pronoun] learned to pour wine, to hide under tables and to tell a Foundation realm from a Qi Refining by the way they walk through a door.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>Pirate</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Cooking>2</Cooking>
+      <Social>2</Social>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_RangeGoatherd</defName>
+    <title>range goatherd</title>
+    <titleShort>goatherd</titleShort>
+    <description>[PAWN_nameDef] herded goats in the foothills of the Coiled Dragon Range, where the Ancient Dragon Clan forbids anyone to climb above the cloud line. Riders with horns sometimes came down through the mist to count the herds, and the goatherds learned to stand still and let them.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Tribal</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Animals>3</Animals>
+      <Shooting>1</Shooting>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_BellowsChild</defName>
+    <title>bellows child</title>
+    <titleShort>bellows child</titleShort>
+    <description>[PAWN_nameDef] pumped the bellows in a forge that supplied practice swords to the Azure Peak. [PAWN_pronoun] learned the colours of hot steel, that spirit iron sings a half-tone before it cracks, and to keep [PAWN_possessive] forearms away from the quench, mostly.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Crafting>3</Crafting>
+      <Construction>1</Construction>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <GeneralLaborSpeed>1.05</GeneralLaborSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_PeddlersChild</defName>
+    <title>pill peddler's child</title>
+    <titleShort>peddler's child</titleShort>
+    <description>[PAWN_nameDef]'s family travelled from fair to fair selling 'Nine-Turn Golden Pills' that had never been near a cauldron. [PAWN_pronoun] learned the pitch, the escape route and the name of every town that would hang them on sight.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Pirate</li>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>2</Social>
+      <Cooking>2</Cooking>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_NightMarketChild</defName>
+    <title>night market child</title>
+    <titleShort>market child</titleShort>
+    <description>[PAWN_nameDef] grew up in the rift night markets, where rogue cultivators sell half-finished jade slips and Rim scavengers sell batteries, by lantern light and with no questions asked. [PAWN_pronoun] learned to haggle in two languages and to spot a fake spirit stone by its weight.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>Offworld</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>2</Social>
+      <Crafting>2</Crafting>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_HerbTerraceChild</defName>
+    <title>herb terrace child</title>
+    <titleShort>terrace child</titleShort>
+    <description>[PAWN_nameDef] weeded the spirit herb terraces of a sect from the age of five. Some herbs bite, some only grow if you sing to them and moon-grass must be picked at exactly midnight or it turns to dust in your hand.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Tribal</li>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Plants>3</Plants>
+      <Cooking>1</Cooking>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <PlantHarvestYield>1.05</PlantHarvestYield>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_DreamingFarmChild</defName>
+    <title>dreaming farm child</title>
+    <titleShort>farm child</titleShort>
+    <description>[PAWN_nameDef] grew up on an ordinary farm of the Rim and every night dreamed of the same mountain, one that appears on no map, with nine peaks and a gate at the top. [PAWN_pronoun] milked the cows, mended the fences and drew the mountain in the margins of everything.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>Offworld</li>
+      <li>Tribal</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Plants>2</Plants>
+      <Animals>2</Animals>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <CVG_CultivationSpeed>1.05</CVG_CultivationSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_TalismanFolder</defName>
+    <title>talisman folder</title>
+    <titleShort>folder</titleShort>
+    <description>[PAWN_nameDef]'s family painted paper talismans in a back-street workshop: cinnabar, brush, a breath of qi and a prayer that the stroke was right. [PAWN_pronoun] folded them by the thousand and learned that a talisman with one wrong line does nothing, and a talisman with two wrong lines catches fire.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Artistic>2</Artistic>
+      <Crafting>2</Crafting>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_WreckFieldScavenger</defName>
+    <title>wreck-field scavenger</title>
+    <titleShort>wreck scavenger</titleShort>
+    <description>Near [PAWN_nameDef]'s village lay a forbidden field where the shells of the Iron Calamity still rust half-buried in the hills. [PAWN_pronoun] crept in at night to pry loose plates and strange cables, took a beating from the elders for it and sold the parts to the Pavilion's buyers for good money.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Pirate</li>
+      <li>Tribal</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Crafting>2</Crafting>
+      <Mining>2</Mining>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SutraCopyist</defName>
+    <title>sutra copyist</title>
+    <titleShort>copyist</titleShort>
+    <description>[PAWN_nameDef] copied sutras in a temple scriptorium, ten thousand characters a day, including manuals of techniques [PAWN_pronoun] was not supposed to understand. [PAWN_pronoun] understood a few of them anyway.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>2</Intellectual>
+      <Artistic>2</Artistic>
+    </skillGains>
+  </BackstoryDef>
+
+  <!-- ==================== Childhood, tier 2 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_HermitFoundling</defName>
+    <title>hermit's foundling</title>
+    <titleShort>foundling</titleShort>
+    <description>[PAWN_nameDef] was found in a basket at the mouth of a cliff cave by an old rogue cultivator who had long given up on people. He taught [PAWN_objective] to read the wind, to name every herb on the cliff and to sit perfectly still for a whole day.\n\nOne morning he was simply gone, leaving a wooden bowl and a note: 'The world is loud. Be kind to it anyway.'</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Plants>2</Plants>
+      <Medicine>1</Medicine>
+      <Intellectual>1</Intellectual>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <CVG_QiRegen>1.1</CVG_QiRegen>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_AlchemistChild</defName>
+    <title>alchemist's child</title>
+    <titleShort>child</titleShort>
+    <description>[PAWN_nameDef] grew up in the smoke of a family pill furnace that supplied the Heavenly Cauldron Pavilion. [PAWN_pronoun] learned to grind, to weigh, to judge a herb by the bitterness of its root and to run when the furnace lid began to rattle.\n\n[PAWN_pronoun] has no eyebrows to speak of.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Cooking>2</Cooking>
+      <Intellectual>2</Intellectual>
+      <Medicine>1</Medicine>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <DrugCookingSpeed>1.1</DrugCookingSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_IronDayChild</defName>
+    <title>Iron Day child</title>
+    <titleShort>iron child</titleShort>
+    <description>[PAWN_nameDef] was born on the Day of Iron, the night when the villages of Jiuxiao bang pots and hammer anvils to remember the Iron Calamity and frighten away whatever is left of it. [PAWN_possessive] grandmother swore that a child born into such a din would never fear a machine.\n\n[PAWN_pronoun] grew up hammering rather than praying.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Crafting>2</Crafting>
+      <Melee>1</Melee>
+      <Construction>1</Construction>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <GeneralLaborSpeed>1.1</GeneralLaborSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SwordCemeterySweeper</defName>
+    <title>cemetery sweeper</title>
+    <titleShort>sweeper</titleShort>
+    <description>[PAWN_nameDef] swept leaves in the Sword Cemetery of the Azure Peak, where the blades of dead elders stand point-down in the earth and hum when it rains. Touching them was forbidden, so [PAWN_pronoun] learned instead which ones sang in a storm and which stayed silent.\n\n[PAWN_pronoun] has never been able to sleep through thunder since.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>2</Melee>
+      <Artistic>1</Artistic>
+      <Intellectual>1</Intellectual>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statOffsets><MeleeDodgeChance>2</MeleeDodgeChance></statOffsets>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_RiftCrossedChild</defName>
+    <title>rift-crossed child</title>
+    <titleShort>rift child</titleShort>
+    <description>A hairline rift opened in a storm drain of [PAWN_nameDef]'s hometown and [PAWN_pronoun] fell through it into a rice paddy of Jiuxiao. A year later another rift spat [PAWN_objective] back out, speaking two languages and believed by no one.\n\n[PAWN_pronoun] learned two alphabets and trusts neither sky.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>2</Intellectual>
+      <Social>2</Social>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <GlobalLearningFactor>1.1</GlobalLearningFactor>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_RiftScrapScholar</defName>
+    <title>rift-scrap scholar</title>
+    <titleShort>scrapper</titleShort>
+    <description>The junkyard behind [PAWN_nameDef]'s home was downwind of a rift, and strange things leaked into it: jade slips with no writing, bronze plates etched with formations, a bell that rang when nobody touched it. [PAWN_pronoun] collected all of it and tried to make it work.\n\nThe first thing [PAWN_pronoun] ever built was a qi detector out of a broken radio. It did not work. The second one did.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>2</Intellectual>
+      <Crafting>2</Crafting>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <ResearchSpeed>1.1</ResearchSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_ImperialPage</defName>
+    <title>imperial page</title>
+    <titleShort>page</titleShort>
+    <description>[PAWN_nameDef] served as a page in an imperial household on the Rim, pouring wine for psycasters and memorising the order of precedence. One evening a captured rogue cultivator was brought before the lord and refused to kneel; the lord's wine froze in its glass, and the guest kept standing.\n\nThat was the night [PAWN_pronoun] learned what 'unlicensed' means.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>2</Social>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <SocialImpact>1.1</SocialImpact>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_TempleGateChild</defName>
+    <title>temple gate child</title>
+    <titleShort>gate child</titleShort>
+    <description>[PAWN_nameDef] was left at the gate of the Silent Lotus Temple with a name pinned to [PAWN_possessive] blanket. Never a novice, only a lay child, [PAWN_pronoun] rang the hour bells, fed the temple's qilin and carried bitter broth to the pilgrims' ward.\n\nThe monks say the qilin chose [PAWN_objective]. The qilin has not commented.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>2</Medicine>
+      <Plants>1</Plants>
+      <Artistic>1</Artistic>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <MedicalTendSpeed>1.1</MedicalTendSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_ClinicChild</defName>
+    <title>clinic child</title>
+    <titleShort>clinic child</titleShort>
+    <description>[PAWN_nameDef]'s mother ran a clinic in a rift town of the Rim, treating cultivators for qi deviation with bandages, a second-hand scanner and a great deal of patience. [PAWN_pronoun] held the lamp, pressed on wounds and learned that meridians show up quite clearly on a good enough scan.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>2</Medicine>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <MedicalTendQuality>1.1</MedicalTendQuality>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SkyIslandDeckhand</defName>
+    <title>sky-island deckhand</title>
+    <titleShort>deckhand</titleShort>
+    <description>[PAWN_nameDef] was raised aboard a merchant sky island, one of the floating hills that drift between the fragments of Jiuxiao on a lift formation older than any sect. [PAWN_pronoun] tied ropes, patched the formation stones and learned that the ground is just a place the island has not reached yet.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Construction>2</Construction>
+      <Shooting>1</Shooting>
+      <Crafting>1</Crafting>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <ConstructionSpeed>1.1</ConstructionSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_WanderersPorter</defName>
+    <title>wanderer's porter</title>
+    <titleShort>porter</titleShort>
+    <description>A rogue cultivator bought [PAWN_nameDef] from a starving family to carry [PAWN_possessive] packs, and together they walked half of Jiuxiao. He taught [PAWN_objective] to pitch camp, to skin a beast and exactly one fighting stance, 'in case I die'.\n\nHe did. [PAWN_pronoun] kept the packs.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>2</Melee>
+      <Mining>1</Mining>
+      <Animals>1</Animals>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <CarryingCapacity>1.15</CarryingCapacity>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SpiritMarkedChild</defName>
+    <title>spirit-marked child</title>
+    <titleShort>spirit child</titleShort>
+    <description>[PAWN_nameDef] was born with a birthmark shaped like a leaf, and the tribe's shaman declared [PAWN_objective] marked by the spirits of the anima tree. [PAWN_pronoun] sat with the elders, learned the songs that make the tree shiver and was sent, at twelve, to greet the first rift-walkers who came out of the hills.\n\nThey were not spirits. They were hungry.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Plants>2</Plants>
+      <Social>1</Social>
+      <Animals>1</Animals>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <PlantWorkSpeed>1.1</PlantWorkSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <!-- ==================== Childhood, tier 3 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_FallenHouseHeir</defName>
+    <title>fallen house heir</title>
+    <titleShort>heir</titleShort>
+    <description>[PAWN_nameDef] was born the last heir of the Wen house of Jiuxiao, a cultivator clan that once held three mountains and a seat at the councils of the Azure Peak. By the time of [PAWN_possessive] birth, old debts from the Iron Calamity and a feud lost to a rival clan had left the family a single courtyard and a library of techniques nobody could afford to practise.\n\n[PAWN_pronoun] learned etiquette, genealogy and how to sell an heirloom without looking sad. Nobody ever taught [PAWN_objective] to carry [PAWN_possessive] own luggage.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>3</Social>
+      <Intellectual>3</Intellectual>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <SocialImpact>1.15</SocialImpact>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_BeastRaisedChild</defName>
+    <title>beast-raised child</title>
+    <titleShort>wild child</titleShort>
+    <description>When a caravan was scattered in a spirit-beast forest, [PAWN_nameDef] was lost and lived three years with a pack of moon wolves that treated [PAWN_objective] as a slow but loyal cub. A monk of the Silent Lotus Temple later talked [PAWN_objective] back into speech, one word a day, but words never became the language [PAWN_pronoun] thinks in.\n\n[PAWN_pronoun] still growls when startled, and would rather talk to a wolf than to a merchant.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Animals>4</Animals>
+      <Melee>2</Melee>
+    </skillGains>
+    <workDisables>
+      <li>Social</li>
+    </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <TameAnimalChance>1.2</TameAnimalChance>
+          <MoveSpeed>1.15</MoveSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_CultCaptiveChild</defName>
+    <title>cult captive</title>
+    <titleShort>captive</titleShort>
+    <description>[PAWN_nameDef] was taken at nine in a night raid of the Blood Moon Cult and kept in a bone cage to be bled on the next Inner Demon Moon. [PAWN_pronoun] escaped when a rival sect stormed the enclave, by lying very still among the dead.\n\n[PAWN_pronoun] learned to bind [PAWN_possessive] own wounds and never sleeps facing a door. Some nights [PAWN_pronoun] does not sleep at all.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>3</Medicine>
+      <Melee>2</Melee>
+    </skillGains>
+    <forcedTraits>
+      <Nerves>-1</Nerves>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statOffsets><PainShockThreshold>0.08</PainShockThreshold></statOffsets>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_BloodServantChild</defName>
+    <title>blood servant child</title>
+    <titleShort>blood servant</titleShort>
+    <description>[PAWN_nameDef] was raised in an enclave of the Blood Moon Cult, well fed and well taught: that Heaven is a cage, that blood is quicker than breath and that the weak owe the strong. Every red moon [PAWN_pronoun] cut [PAWN_possessive] palm to feed the soul lanterns.\n\nNobody ever taught [PAWN_objective] to tend the sick, only to use them.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>3</Melee>
+      <Social>2</Social>
+    </skillGains>
+    <workDisables>
+      <li>Caring</li>
+    </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <CVG_BloodQiMax>1.2</CVG_BloodQiMax>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_LabRaisedSubject</defName>
+    <title>lab-raised subject</title>
+    <titleShort>subject</titleShort>
+    <description>[PAWN_nameDef] grew up in a habitat of Ascension Dynamics as Subject 14, one of a cohort of children whose 'anomalous psychic field' was measured every morning before breakfast. [PAWN_pronoun] learned to read the scanners, then learned to lie to them.\n\n[PAWN_pronoun] saw [PAWN_possessive] first living plant at fifteen and has never trusted one since. The file says [PAWN_possessive] parents were 'donors'.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>3</Intellectual>
+      <Medicine>2</Medicine>
+      <Social>1</Social>
+    </skillGains>
+    <workDisables>
+      <li>PlantWork</li>
+    </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <ResearchSpeed>1.15</ResearchSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_YoungMaster</defName>
+    <title>young master</title>
+    <titleShort>young master</titleShort>
+    <description>[PAWN_nameDef] was the pampered heir of a wealthy cultivator clan: pills for breakfast, four servants to dress [PAWN_objective] and a father who paid for every window [PAWN_pronoun] broke and every peasant child [PAWN_pronoun] beat. Everyone bowed. [PAWN_pronoun] assumed this was how the world worked.\n\nThe world has since offered a correction. [PAWN_pronoun] still will not carry a sack.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>3</Social>
+      <Melee>2</Melee>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+    <forcedTraits>
+      <Greedy>0</Greedy>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <NegotiationAbility>1.15</NegotiationAbility>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SilentVowChild</defName>
+    <title>silent vow child</title>
+    <titleShort>silent child</titleShort>
+    <description>After a fever at seven, [PAWN_nameDef] took a vow of silence at a mountain shrine and kept it through [PAWN_possessive] whole childhood. [PAWN_pronoun] learned to read, to brew medicine and to answer any question with a brush and a scrap of paper.\n\nPeople stopped asking [PAWN_objective] questions. [PAWN_pronoun] did not mind.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>3</Intellectual>
+      <Medicine>2</Medicine>
+      <Artistic>1</Artistic>
+    </skillGains>
+    <workDisables>
+      <li>Social</li>
+    </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <GlobalLearningFactor>1.15</GlobalLearningFactor>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <!-- ==================== Childhood, tier 4 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_ExpelledProdigy</defName>
+    <title>expelled prodigy</title>
+    <titleShort>prodigy</titleShort>
+    <description>[PAWN_nameDef] entered a sect's youth hall at six, recited the whole Foundation Sutra by eight and was expelled at eleven for correcting an elder in front of his disciples. The elder was wrong; that was the problem.\n\n[PAWN_pronoun] walked out of the gate with the sect's manuals in [PAWN_possessive] head, where they could not be taken back, and with the firm conviction that hauling and digging are for people who cannot recite.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier4</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>4</Intellectual>
+      <Melee>2</Melee>
+      <Artistic>1</Artistic>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+    <forcedTraits>
+      <TooSmart>0</TooSmart>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <GlobalLearningFactor>1.25</GlobalLearningFactor>
+          <ResearchSpeed>1.2</ResearchSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_CaveBornChild</defName>
+    <title>cave-born child</title>
+    <titleShort>cave child</titleShort>
+    <description>[PAWN_nameDef] was born inside a sealed inheritance cave where [PAWN_possessive] parents, rogue cultivators on the run from the Blood Moon Cult, had hidden for years with a dead master's library and a dead master's traps. [PAWN_pronoun] learned to read formations before faces and to dig before walking.\n\n[PAWN_pronoun] did not see the sun until [PAWN_pronoun] was eight, and did not care for it, or for anything that grows under it.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier4</li>
+    </spawnCategories>
+    <skillGains>
+      <Mining>4</Mining>
+      <Intellectual>2</Intellectual>
+      <Melee>2</Melee>
+    </skillGains>
+    <workDisables>
+      <li>PlantWork</li>
+    </workDisables>
+    <forcedTraits>
+      <Undergrounder>0</Undergrounder>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <MiningSpeed>1.3</MiningSpeed>
+          <MiningYield>1.2</MiningYield>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_BeastTideOrphan</defName>
+    <title>beast tide orphan</title>
+    <titleShort>orphan</titleShort>
+    <description>A beast tide swallowed [PAWN_nameDef]'s village in a single night. Hunters found [PAWN_objective] two days later inside a granary, surrounded by the bodies of the things that had tried to get in.\n\n[PAWN_pronoun] was raised in hunter camps and made [PAWN_possessive] first kill at ten, with a borrowed bow and no particular feeling about it. [PAWN_pronoun] has no particular feeling about people, either.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier4</li>
+    </spawnCategories>
+    <skillGains>
+      <Shooting>4</Shooting>
+      <Animals>3</Animals>
+      <Melee>1</Melee>
+    </skillGains>
+    <workDisables>
+      <li>Social</li>
+      <li>Caring</li>
+    </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <AimingDelayFactor>0.8</AimingDelayFactor>
+          <HuntingStealth>1.25</HuntingStealth>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 1 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_LakeFisher</defName>
+    <title>lake fisher</title>
+    <titleShort>fisher</titleShort>
+    <description>[PAWN_nameDef] fished the lakes of Jiuxiao with nets and cormorants, selling carp to the sect kitchens and salting the rest.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Tribal</li>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Animals>3</Animals>
+      <Cooking>3</Cooking>
+    </skillGains>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_RiceFarmer</defName>
+    <title>rice farmer</title>
+    <titleShort>farmer</titleShort>
+    <description>[PAWN_nameDef] farmed rice on the terraces below a sect mountain and paid a tenth of the harvest to the sect, as [PAWN_possessive] parents had and their parents before them.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Tribal</li>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Plants>5</Plants>
+      <Construction>1</Construction>
+    </skillGains>
+    <requiredWorkTags>
+      <li>PlantWork</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <PlantWorkSpeed>1.05</PlantWorkSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_MuleCaravaneer</defName>
+    <title>mule caravaneer</title>
+    <titleShort>caravaneer</titleShort>
+    <description>[PAWN_nameDef] drove mule caravans between the sect towns of Jiuxiao, carrying grain one way and pills the other, and never once asked what was in the sealed crates.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>Tribal</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Animals>4</Animals>
+      <Social>2</Social>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <CarryingCapacity>1.1</CarryingCapacity>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_TeaHouseServer</defName>
+    <title>teahouse server</title>
+    <titleShort>server</titleShort>
+    <description>[PAWN_nameDef] served tea in a teahouse on the road to the Azure Peak, and heard every rumour of the sect a day before the sect did.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Cooking>4</Cooking>
+      <Social>3</Social>
+    </skillGains>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_ExpelledOuterDisciple</defName>
+    <title>expelled disciple</title>
+    <titleShort>disciple</titleShort>
+    <description>For ten years [PAWN_nameDef] was an outer disciple of a righteous sect: sweeping, planting, standing guard, waiting for a promotion to the inner courts that never came. [PAWN_pronoun] was expelled for breaking the jaw of a core disciple who had mocked [PAWN_possessive] spirit root, and left with a wooden practice sword and a grudge.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>Pirate</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>4</Melee>
+      <Plants>2</Plants>
+    </skillGains>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SpiritStoneMiner</defName>
+    <title>spirit stone miner</title>
+    <titleShort>miner</titleShort>
+    <description>[PAWN_nameDef] dug spirit stone veins for a mining guild of Jiuxiao, following the glow through the rock by the ache in [PAWN_possessive] teeth. Years of glowing dust have left [PAWN_possessive] lungs a little luminous and [PAWN_possessive] pick a little wiser.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Tribal</li>
+      <li>Outlander</li>
+      <li>Pirate</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Mining>6</Mining>
+      <Construction>1</Construction>
+    </skillGains>
+    <requiredWorkTags>
+      <li>ManualDumb</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <MiningSpeed>1.05</MiningSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SectGateGuard</defName>
+    <title>sect gate guard</title>
+    <titleShort>gate guard</titleShort>
+    <description>[PAWN_nameDef] stood at the mountain gate of a righteous sect for twelve years, asking every visitor the three questions and turning away those who answered too quickly. Twice the Blood Moon Cult came up the steps at night, and twice the gate held.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>Pirate</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>4</Melee>
+      <Shooting>3</Shooting>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SpiritHerbFarmer</defName>
+    <title>spirit herb farmer</title>
+    <titleShort>herb farmer</titleShort>
+    <description>[PAWN_nameDef] farmed spirit herbs on the terraces of a sect's medicine valley, where every plant wants a different qi, a different song and a different hour of the night. [PAWN_pronoun] lost a finger to a blood-lotus and learned the rest the slow way.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Tribal</li>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Plants>6</Plants>
+      <Cooking>1</Cooking>
+    </skillGains>
+    <requiredWorkTags>
+      <li>PlantWork</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <PlantHarvestYield>1.05</PlantHarvestYield>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SectCook</defName>
+    <title>sect kitchen cook</title>
+    <titleShort>cook</titleShort>
+    <description>[PAWN_nameDef] ran the kitchen of a sect of three hundred disciples, steaming spirit rice in a cauldron the size of a pond and seasoning it with the exact amount of qi a Qi Refining stomach can take. Ten thousand bowls a season, and the elders' Dao, [PAWN_pronoun] says, rests entirely on the kitchen's.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>Tribal</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Cooking>6</Cooking>
+      <Plants>1</Plants>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Cooking</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <CookSpeed>1.1</CookSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Fat</bodyTypeMale>
+    <bodyTypeFemale>Fat</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_CloudInnkeeper</defName>
+    <title>Cloud innkeeper</title>
+    <titleShort>innkeeper</titleShort>
+    <description>[PAWN_nameDef] kept a branch of the Wandering Cloud Inn, where rogue cultivators of every realm drink under one rule: no fighting inside. [PAWN_pronoun] enforced it with soup, patience and a cleaver, and knows every wanderer's favourite dish and most of their real names.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Cooking>4</Cooking>
+      <Social>4</Social>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Cooking</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Fat</bodyTypeMale>
+    <bodyTypeFemale>Fat</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_RiftSmuggler</defName>
+    <title>rift smuggler</title>
+    <titleShort>smuggler</titleShort>
+    <description>[PAWN_nameDef] ran Rim technology through the rifts to the Heavenly Cauldron Pavilion and Jiuxiao pills back the other way, in crates labelled 'ceramics'. The Empire's Qi Conformity Edict made one end of the route illegal and the Pavilion's contracts made the other end very profitable.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Pirate</li>
+      <li>Offworld</li>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>3</Social>
+      <Crafting>3</Crafting>
+      <Shooting>1</Shooting>
+    </skillGains>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SectCourier</defName>
+    <title>sect courier</title>
+    <titleShort>courier</titleShort>
+    <description>[PAWN_nameDef] carried sealed letters between the sects of Jiuxiao, running a thousand li in three days on a pair of qi-lightened legs. Couriers survive because killing one starts a war, and [PAWN_pronoun] never opened a letter in [PAWN_possessive] life.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>2</Social>
+      <Animals>2</Animals>
+      <Shooting>2</Shooting>
+    </skillGains>
+    <forcedTraits>
+      <SpeedOffset>1</SpeedOffset>
+    </forcedTraits>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_MechWatcher</defName>
+    <title>mechanoid watcher</title>
+    <titleShort>watcher</titleShort>
+    <description>[PAWN_nameDef] manned a Rim listening post that tracked mechanoid activity, and watched the signals thicken month by month after the Convergence, always towards the places where people had begun to cultivate. [PAWN_pronoun] filed a report on it, and kept the rifle.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Offworld</li>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Shooting>5</Shooting>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_CultivatorCatcher</defName>
+    <title>cultivator catcher</title>
+    <titleShort>catcher</titleShort>
+    <description>[PAWN_nameDef] ran with a pirate crew that specialised in low-realm cultivators: weighted nets, shock collars and a buyer waiting at either end, the Pavilion for the talented and Ascension Dynamics for the rest. A Qi Refining disciple fetches more than a mech core and is easier to carry; patching them up afterwards was somebody else's job.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Pirate</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Shooting>3</Shooting>
+      <Melee>3</Melee>
+      <Social>1</Social>
+    </skillGains>
+    <workDisables>
+      <li>Caring</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_BeggarDisciple</defName>
+    <title>beggar's disciple</title>
+    <titleShort>beggar</titleShort>
+    <description>[PAWN_nameDef] followed Old Zhao, the beggar of the Wandering Cloud Inn who is said to hide a Nascent Soul under his rags, for six years of begging, brawling and sleeping under bridges. The old man taught one stance in every city and never the same one twice, and [PAWN_nameDef] came away with forty stances and a bowl.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>Pirate</li>
+      <li>Tribal</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>4</Melee>
+      <Social>3</Social>
+      <Cooking>1</Cooking>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statOffsets><MeleeDodgeChance>2</MeleeDodgeChance></statOffsets>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_TalismanPainter</defName>
+    <title>talisman painter</title>
+    <titleShort>painter</titleShort>
+    <description>[PAWN_nameDef] painted talismans for a living: cinnabar on yellow paper, a breath of qi in every stroke, and the knowledge that one wrong line burns the hand that holds the brush. After the Convergence [PAWN_pronoun] started painting them on circuit boards, and found that they work there too.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Artistic>5</Artistic>
+      <Crafting>2</Crafting>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Artistic</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_InheritanceCaveRaider</defName>
+    <title>cave raider</title>
+    <titleShort>raider</titleShort>
+    <description>[PAWN_nameDef] broke into the inheritance caves of dead cultivators, past the formations, the puppets and the occasional ghost, to sell whatever manuals were left inside. Half the manuals were fakes left by the previous raider and a quarter were cursed, but the rest paid well enough to keep going.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Pirate</li>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Mining>3</Mining>
+      <Shooting>2</Shooting>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_FakePillMerchant</defName>
+    <title>fake pill merchant</title>
+    <titleShort>merchant</titleShort>
+    <description>[PAWN_nameDef] sold Foundation Pills from town to town, always one step ahead of the Pavilion's debt collectors. The pills were mostly sugar, but the testimonials were real: people who have bought hope rarely admit it was fake.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Pirate</li>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>5</Social>
+      <Cooking>1</Cooking>
+    </skillGains>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 2 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SpiritBeastHunter</defName>
+    <title>spirit beast hunter</title>
+    <titleShort>hunter</titleShort>
+    <description>[PAWN_nameDef] hunted spirit beasts for their cores and hides and sold them to the buyers of the Heavenly Cauldron Pavilion. [PAWN_pronoun] kept the hunters' three rules: never kill a qilin, never hunt under a red moon and never trust a beast that talks.\n\n[PAWN_pronoun] broke the third one once. There is a scar.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Shooting>5</Shooting>
+      <Animals>3</Animals>
+      <Melee>1</Melee>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <HuntingStealth>1.1</HuntingStealth>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_LotusMonk</defName>
+    <title>Lotus monk</title>
+    <titleShort>monk</titleShort>
+    <titleFemale>Lotus nun</titleFemale>
+    <titleShortFemale>nun</titleShortFemale>
+    <description>[PAWN_nameDef] took full vows at the Silent Lotus Temple: tempering the body in the cold springs each dawn, setting the bones of pilgrims each noon and sitting with the dying each night. The Temple does not teach how to kill, only how to endure and how to mend.\n\n[PAWN_pronoun] owns a bowl, a robe and nothing else, and considers that one thing too many.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>4</Medicine>
+      <Melee>4</Melee>
+      <Social>1</Social>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Caring</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Ascetic>0</Ascetic>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <CVG_BodyTemperingSpeed>1.15</CVG_BodyTemperingSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 3 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SwordForger</defName>
+    <title>master sword forger</title>
+    <titleShort>master forger</titleShort>
+    <description>[PAWN_nameDef] was a master forger of the Azure Peak, one of the few whose blades the Sword Elders carry, folding spirit iron a hundred times and listening to it between folds. After the Convergence [PAWN_pronoun] folded plasteel the same way, to the horror of the old smiths and the delight of the Sword Elders.\n\n'A blade,' [PAWN_pronoun] says, 'is the forger's second spine.' It is about the only thing [PAWN_pronoun] says; [PAWN_pronoun] talks to steel more easily than to people.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Crafting>7</Crafting>
+      <Melee>3</Melee>
+      <Artistic>1</Artistic>
+    </skillGains>
+    <workDisables>
+      <li>Social</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Crafting</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <GeneralLaborSpeed>1.15</GeneralLaborSpeed>
+          <CVG_QiRegen>1.1</CVG_QiRegen>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 2 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_FormationMason</defName>
+    <title>formation mason</title>
+    <titleShort>mason</titleShort>
+    <description>[PAWN_nameDef] laid formation arrays: stones placed so that the qi of a place bends around them, walls that hum, gates that will not open for the wrong name. After the Convergence [PAWN_pronoun] learned to run a copper wire through the same stones, and the walls hummed louder.\n\nThe old masters called it heresy. The walls did not seem to mind.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Construction>6</Construction>
+      <Artistic>2</Artistic>
+      <Intellectual>1</Intellectual>
+    </skillGains>
+    <requiredWorkTags>
+      <li>ManualSkilled</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <ConstructionSpeed>1.1</ConstructionSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_BloodMoonRecruiter</defName>
+    <title>Blood Moon recruiter</title>
+    <titleShort>recruiter</titleShort>
+    <description>[PAWN_nameDef] recruited for the Blood Moon Cult under the Blood Saint Su Lanyin, finding the desperate, the expelled and the ambitious and promising them a cultivation without ceilings. [PAWN_pronoun] brought in forty disciples. Thirty ended as soul lanterns.\n\n[PAWN_pronoun] learned to never ask what happens to the sick. It was bad for recruitment.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>6</Social>
+      <Melee>2</Melee>
+    </skillGains>
+    <workDisables>
+      <li>Caring</li>
+    </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <NegotiationAbility>1.1</NegotiationAbility>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_CorporateHunter</defName>
+    <title>corporate retriever</title>
+    <titleShort>retriever</titleShort>
+    <description>[PAWN_nameDef] was a retrieval contractor for Ascension Dynamics, tracking carriers of the bloodlines with field sensors and bringing them in alive in cryptosleep caskets. The contract said 'no questions', and the bonus for a live specimen was very good.\n\n[PAWN_pronoun] stopped counting after thirty. The caskets had numbers anyway.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Shooting>6</Shooting>
+      <Medicine>1</Medicine>
+      <Social>1</Social>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <AimingDelayFactor>0.9</AimingDelayFactor>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_ImperialRegistrar</defName>
+    <title>qi registrar</title>
+    <titleShort>registrar</titleShort>
+    <description>[PAWN_nameDef] was a clerk of the Empire's Office of Psychic Order, stamping the registration of every cultivator who submitted to the Qi Conformity Edict and filing the names of those who did not. The non-conforming list was long, and [PAWN_pronoun] has an excellent memory.\n\n[PAWN_pronoun] was never trained to fight. The Office had other people for that.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>5</Social>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+    <workDisables>
+      <li>Violent</li>
+    </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <ResearchSpeed>1.1</ResearchSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_TribalSpiritSpeaker</defName>
+    <title>spirit speaker</title>
+    <titleShort>spirit speaker</titleShort>
+    <description>When the rift-walkers first came down from the hills, [PAWN_nameDef]'s tribe sent its spirit speaker to meet them, and [PAWN_pronoun] called them spirits, made offerings and listened. The cultivators were polite enough not to correct [PAWN_objective] for a whole season.\n\nBy the time they did, [PAWN_pronoun] had learned to breathe the way they breathed, and the anima tree had begun to shiver when [PAWN_pronoun] sat beneath it.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>3</Social>
+      <Medicine>3</Medicine>
+      <Plants>3</Plants>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <CVG_QiRegen>1.1</CVG_QiRegen>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_RiftCartographer</defName>
+    <title>rift cartographer</title>
+    <titleShort>cartographer</titleShort>
+    <description>[PAWN_nameDef] mapped the rifts and the secret realms behind them, walking into places that were not on any chart and walking out, usually, with a chart. A map, [PAWN_pronoun] says, is a promise that the ground will still be there tomorrow, and rifts are bad at keeping promises.\n\nThe Pavilion bought the maps. The Empire bought the Pavilion's copies.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>5</Intellectual>
+      <Shooting>2</Shooting>
+      <Construction>2</Construction>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <MoveSpeed>1.1</MoveSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_BeastTamer</defName>
+    <title>spirit beast tamer</title>
+    <titleShort>tamer</titleShort>
+    <description>[PAWN_nameDef] tamed spirit beasts for the beast garden of a Jiuxiao sect: thunder hawks, stone boars and one iron-maned lion that nobody else would go near. A bond, [PAWN_pronoun] says, is not a leash; the beast decides every morning whether it still holds.\n\nThe lion followed [PAWN_objective] through the rift. It is somewhere on this planet.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Animals>7</Animals>
+      <Medicine>1</Medicine>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Animals</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <TameAnimalChance>1.15</TameAnimalChance>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_PillTester</defName>
+    <title>pill tester</title>
+    <titleShort>tester</titleShort>
+    <description>The Heavenly Cauldron Pavilion paid [PAWN_nameDef] to swallow every new pill before it went to auction and describe, in writing, what happened next. [PAWN_pronoun] survived three hundred and twelve of them, including one that turned [PAWN_possessive] hair white for a month and one that should not have been survivable at all.\n\n[PAWN_possessive] body no longer trusts anything, including illness.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>4</Medicine>
+      <Cooking>4</Cooking>
+    </skillGains>
+    <forcedTraits>
+      <Immunity>1</Immunity>
+    </forcedTraits>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_DragonHunter</defName>
+    <title>dragon hunter</title>
+    <titleShort>dragon hunter</titleShort>
+    <description>[PAWN_nameDef] hunted the dragon-blooded for their scales, which sell to the Pavilion by weight and to Ascension Dynamics by the gram. The Ancient Dragon Clan hunts those who sell scales, so [PAWN_pronoun] learned to shoot first, skin fast and never sleep in the same valley twice.\n\n[PAWN_pronoun] is still alive. The Clan has a list, and [PAWN_pronoun] is on it.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Shooting>5</Shooting>
+      <Melee>3</Melee>
+      <Animals>1</Animals>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statOffsets><PainShockThreshold>0.06</PainShockThreshold></statOffsets>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 3 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SutraLibrarian</defName>
+    <title>sutra library guardian</title>
+    <titleShort>librarian</titleShort>
+    <description>[PAWN_nameDef] guarded the Hall of Ten Thousand Scrolls of a Jiuxiao sect against moths, damp and thieves, in that order of urgency. [PAWN_pronoun] memorised the catalogue, then the margins, then the scrolls themselves.\n\n[PAWN_pronoun] has never practised a single technique in them, nor lifted anything sharper than a paper knife. Reading them was enough.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>7</Intellectual>
+      <Artistic>2</Artistic>
+    </skillGains>
+    <workDisables>
+      <li>Violent</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <ResearchSpeed>1.2</ResearchSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_RepentantAssassin</defName>
+    <title>repentant assassin</title>
+    <titleShort>assassin</titleShort>
+    <description>[PAWN_nameDef] was a Red Thread of the Blood Moon Cult, one of the knives sent to fill the soul lanterns. The last target was a child under the protection of a monk of the Silent Lotus, and the monk did not raise a hand; he only asked [PAWN_nameDef]'s name.\n\n[PAWN_pronoun] dropped the blade there. [PAWN_pronoun] carries the list of names instead, and it is heavy.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>7</Melee>
+      <Medicine>2</Medicine>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <NaturalMood>-1</NaturalMood>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statOffsets><MeleeDodgeChance>3</MeleeDodgeChance></statOffsets>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_ShellEngineer</defName>
+    <title>shell engineer</title>
+    <titleShort>engineer</titleShort>
+    <description>[PAWN_nameDef] was one of the engineers of the Iron Age, as Jiuxiao calls the scholars who study the fallen shells of the Iron Calamity instead of burning them. [PAWN_pronoun] built water hammers and lift formations from the bones of the machines and sold the designs to whoever could pay.\n\n[PAWN_pronoun] knows those shells better than anyone alive, is sure they are not all empty, and checks the locks three times every night.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Construction>5</Construction>
+      <Crafting>4</Crafting>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+    <forcedTraits>
+      <Neurotic>1</Neurotic>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <ConstructionSpeed>1.2</ConstructionSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_QiTechnologist</defName>
+    <title>qi technologist</title>
+    <titleShort>technologist</titleShort>
+    <description>[PAWN_nameDef] was a Rim physicist who, after the Convergence, pointed every psychic-field sensor [PAWN_pronoun] could borrow at a meditating cultivator and found that the readings changed when the cultivator was angry. [PAWN_possessive] paper, 'The Field Has a Will', was laughed out of two universities and bought in full by Ascension Dynamics.\n\n[PAWN_pronoun] still thinks the title was accurate. [PAWN_pronoun] belongs in a lab, not a quarry or a firing line, and both sides agree.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>7</Intellectual>
+      <Crafting>2</Crafting>
+    </skillGains>
+    <workDisables>
+      <li>Violent</li>
+      <li>ManualDumb</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <ResearchSpeed>1.15</ResearchSpeed>
+          <CVG_CultivationSpeed>1.15</CVG_CultivationSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_ReformedDemonic</defName>
+    <title>reformed cultivator</title>
+    <titleShort>reformed</titleShort>
+    <description>[PAWN_nameDef] walked the blood path alone for years, taking qi from whatever bled and climbing faster than any sect disciple. Then one night the inner demon spoke to [PAWN_objective] in [PAWN_possessive] mother's voice, and [PAWN_pronoun] understood what it would cost to keep climbing.\n\n[PAWN_pronoun] sealed it, lost half [PAWN_possessive] cultivation and now trains slowly, with great care and very few words; [PAWN_pronoun] no longer trusts [PAWN_possessive] own voice around other people.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>6</Melee>
+      <Intellectual>2</Intellectual>
+      <Medicine>2</Medicine>
+    </skillGains>
+    <workDisables>
+      <li>Social</li>
+    </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <CVG_QiRegen>1.2</CVG_QiRegen>
+          <MeleeDamageFactor>1.15</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_ImplantTechnician</defName>
+    <title>implant technician</title>
+    <titleShort>technician</titleShort>
+    <description>[PAWN_nameDef] installed meridian-forcing implants for Ascension Dynamics: filaments of plasteel and psychic alloy that drive qi through a body that was never meant to hold it. [PAWN_pronoun] watched subjects reach Foundation in a month and burn out in a year, and filed every report.\n\n[PAWN_pronoun] still believes the design can be fixed. [PAWN_pronoun] has notes, and no patience for anything that grows on its own.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>5</Medicine>
+      <Crafting>3</Crafting>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+    <workDisables>
+      <li>PlantWork</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>ManualSkilled</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Transhumanist>0</Transhumanist>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <MedicalTendSpeed>1.2</MedicalTendSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_MeridianDoctor</defName>
+    <title>meridian doctor</title>
+    <titleShort>doctor</titleShort>
+    <description>[PAWN_nameDef] opened meridians for a living: silver needles, moxa and, after the Convergence, a second-hand ultrasound probe that showed the channels better than any master's palm. [PAWN_pronoun] treated qi deviation, blocked roots and the burns of over-ambitious disciples, and charged by the realm.\n\n[PAWN_pronoun] has stopped more inner demons with a needle than most sects have with a sutra, and has sworn never to use one to harm.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>7</Medicine>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+    <workDisables>
+      <li>Violent</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Caring</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <MedicalTendQuality>1.2</MedicalTendQuality>
+          <CVG_BreakthroughChance>1.15</CVG_BreakthroughChance>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 4 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_MinisterAlchemist</defName>
+    <title>minister alchemist</title>
+    <titleShort>minister</titleShort>
+    <description>[PAWN_nameDef] served as first minister of a small kingdom of Jiuxiao that paid its tribute to the Heavenly Cauldron Pavilion in grain and silence. After years of running the court, [PAWN_pronoun] resigned to study the pill arts, insisting that governing a kingdom and governing a furnace are the same discipline.\n\nThe court was relieved. The furnace has yet to agree. A minister's hands sign and pour tea; they do not dig, and they have never held a weapon.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier4</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>6</Social>
+      <Intellectual>5</Intellectual>
+      <Cooking>2</Cooking>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+      <li>Violent</li>
+    </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <NegotiationAbility>1.25</NegotiationAbility>
+          <DrugCookingSpeed>1.2</DrugCookingSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Fat</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_AuctionCaller</defName>
+    <title>auction caller</title>
+    <titleShort>auctioneer</titleShort>
+    <description>[PAWN_nameDef] called auctions for the Heavenly Cauldron Pavilion, selling jade slips, beast cores and once, memorably, a rogue cultivator's own sword back to him. Every lot came with a secret and every secret with a price, and [PAWN_pronoun] remembers all of them.\n\nThe Pavilion insures an auctioneer's voice, not [PAWN_possessive] hands; [PAWN_pronoun] has never built, mended or hauled anything, and regards tools as other people's furniture.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier4</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>7</Social>
+      <Intellectual>3</Intellectual>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+      <li>ManualSkilled</li>
+    </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <SocialImpact>1.25</SocialImpact>
+          <NegotiationAbility>1.2</NegotiationAbility>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Fat</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_FailedTribulant</defName>
+    <title>tribulation survivor</title>
+    <titleShort>survivor</titleShort>
+    <description>[PAWN_nameDef] attempted the Golden Core tribulation too early, with borrowed pills and no master, on a hill outside a town that still talks about it. The ninth bolt took [PAWN_possessive] cultivation and left the lightning scars that run from [PAWN_possessive] neck to [PAWN_possessive] wrist.\n\n[PAWN_pronoun] stood up afterwards, which nobody expected, and now teaches patience to anyone who will sit still for it. [PAWN_pronoun] cannot carry much with those arms, and will not go near a fire.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier4</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>5</Melee>
+      <Intellectual>4</Intellectual>
+      <Medicine>3</Medicine>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+      <li>Firefighting</li>
+    </workDisables>
+    <forcedTraits>
+      <Tough>0</Tough>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors><CVG_BreakthroughChance>1.2</CVG_BreakthroughChance></statFactors><statOffsets><PainShockThreshold>0.1</PainShockThreshold></statOffsets>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_RetiredAscensionElder</defName>
+    <title>retired elder</title>
+    <titleShort>old elder</titleShort>
+    <description>[PAWN_nameDef] reached the sixth realm, the Gate of Ascension, and stood before the final tribulation for three days before turning around and walking back down the mountain. 'The sky was open,' [PAWN_pronoun] told the sect, 'and I found I did not want to leave.'\n\n[PAWN_pronoun] gave [PAWN_possessive] cultivation to the sect's formation and kept only what [PAWN_pronoun] had learned. A cultivator's flesh keeps the age of its first breakthrough, not the years that follow, so the face is young; the joints and the patience are not. [PAWN_pronoun] walks slowly and does nothing with [PAWN_possessive] hands that an apprentice could do instead.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier4</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>8</Intellectual>
+      <Melee>5</Melee>
+      <Social>3</Social>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+      <li>ManualSkilled</li>
+    </workDisables>
+    <forcedTraits>
+      <SpeedOffset>-1</SpeedOffset>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <CVG_CultivationSpeed>1.3</CVG_CultivationSpeed>
+          <CVG_BreakthroughChance>1.25</CVG_BreakthroughChance>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_FallenCelestialEmperor</defName>
+    <title>fallen emperor</title>
+    <titleShort>emperor</titleShort>
+    <titleFemale>fallen empress</titleFemale>
+    <titleShortFemale>empress</titleShortFemale>
+    <description>[PAWN_nameDef] sat on the Jade Throne of a fragment of Jiuxiao and was called the Celestial Emperor by nine sects and a hundred kingdoms, until a rift opened under the throne room and took the throne, the fragment and most of the kingdoms with it. Cultivation slowed the years to a crawl; the reign lasted far longer than the face suggests.\n\n[PAWN_pronoun] still speaks as if the hall were full, wants everything [PAWN_pronoun] sees, and has servants for cooking, sweeping and carrying, even when there are no servants.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier4</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>8</Social>
+      <Intellectual>6</Intellectual>
+      <Melee>4</Melee>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+      <li>Cooking</li>
+      <li>Cleaning</li>
+    </workDisables>
+    <forcedTraits>
+      <Greedy>0</Greedy>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <SocialImpact>1.3</SocialImpact>
+          <NegotiationAbility>1.25</NegotiationAbility>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_HeavenlyOriginHeir</defName>
+    <title>Heavenly Origin heir</title>
+    <titleShort>last heir</titleShort>
+    <description>[PAWN_nameDef] is the last disciple of the Heavenly Origin Sect, the orthodox sect that once ruled the cultivation of Jiuxiao and was exterminated by order of the Dao after Xue Jiuyou, one of its own, founded the Blood Moon Cult. [PAWN_pronoun] carries its complete inheritance: the sutras, the sword forms and the healing arts of a sect that no longer exists.\n\n[PAWN_pronoun] also carries its grief. [PAWN_pronoun] does not speak of it, or of much else, and some mornings does not get up at all.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier4</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>6</Intellectual>
+      <Melee>5</Melee>
+      <Medicine>4</Medicine>
+    </skillGains>
+    <workDisables>
+      <li>Social</li>
+    </workDisables>
+    <forcedTraits>
+      <NaturalMood>-2</NaturalMood>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <CVG_QiMax>1.25</CVG_QiMax>
+          <CVG_CultivationSpeed>1.2</CVG_CultivationSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_IronCalamityVeteran</defName>
+    <title>Iron Calamity veteran</title>
+    <titleShort>veteran</titleShort>
+    <description>[PAWN_nameDef] fought in the last war of the Iron Calamity, when the machine intelligence from beyond the sky devoured the qi of Jiuxiao, and is one of the few still walking who saw it. The Calamity is ages gone by Jiuxiao's count, but [PAWN_nameDef] broke through on that battlefield, and since then the years have only walked. At the Fallen Pillar [PAWN_pronoun] tore an ancient war-shell open with [PAWN_possessive] bare hands, and the hands have never fully closed since.\n\n[PAWN_pronoun] built the walls of three sects afterwards, because walls do not think. [PAWN_pronoun] cannot abide a book, a lecture or a sudden noise.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier4</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>8</Melee>
+      <Construction>4</Construction>
+      <Crafting>3</Crafting>
+    </skillGains>
+    <workDisables>
+      <li>Intellectual</li>
+    </workDisables>
+    <forcedTraits>
+      <Nerves>-2</Nerves>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors><MeleeDamageFactor>1.3</MeleeDamageFactor></statFactors><statOffsets><PainShockThreshold>0.1</PainShockThreshold></statOffsets>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_GrandAlchemist</defName>
+    <title>grand alchemist</title>
+    <titleShort>grand alchemist</titleShort>
+    <description>[PAWN_nameDef] was a Grand Alchemist of the Heavenly Cauldron Pavilion, one of the handful alive who can refine a pill of the fourth grade, and did not leave the furnace hall for longer than most people live. The Nine-Turn fire answers to [PAWN_possessive] voice, and so does half the Pavilion's debt ledger.\n\nThe Pavilion keeps its Grand Alchemists away from anything that bleeds or weighs more than a ladle; it is bad for the hands, and the hands are the asset.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier4</li>
+    </spawnCategories>
+    <skillGains>
+      <Cooking>7</Cooking>
+      <Medicine>6</Medicine>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+    <workDisables>
+      <li>Violent</li>
+      <li>ManualDumb</li>
+    </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <DrugCookingSpeed>1.3</DrugCookingSpeed>
+          <MedicalTendQuality>1.2</MedicalTendQuality>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Fat</bodyTypeMale>
+    <bodyTypeFemale>Fat</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SwordSaintHermit</defName>
+    <title>sword saint hermit</title>
+    <titleShort>sword saint</titleShort>
+    <description>[PAWN_nameDef] is one of the three living people whom the Azure Peak calls a Sword Saint, and the only one who refused the title. [PAWN_pronoun] lived alone on a peak of the Sword Cemetery, cutting rain, and came down only when the Convergence tore the formation open.\n\n[PAWN_pronoun] has not spoken a full sentence in years. Cooking, nursing and conversation are things other people do; [PAWN_pronoun] has a sword.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier4</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>8</Melee>
+      <Artistic>4</Artistic>
+      <Shooting>1</Shooting>
+    </skillGains>
+    <workDisables>
+      <li>Social</li>
+      <li>Caring</li>
+      <li>Cooking</li>
+    </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statOffsets><MeleeDodgeChance>4</MeleeDodgeChance><MeleeHitChance>3</MeleeHitChance></statOffsets>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SealedDemonLord</defName>
+    <title>sealed demon lord</title>
+    <titleShort>demon lord</titleShort>
+    <description>[PAWN_nameDef] was a Demon Lord of the blood path, feared by five sects and courted by the Blood Moon Cult, until an abbess of the Silent Lotus sealed the demon inside [PAWN_objective] with a single touch and let [PAWN_objective] walk away. The seal holds. The hunger it holds back does not sleep.\n\n[PAWN_pronoun] cannot be trusted with the sick or with animals, and knows it better than anyone.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier4</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>7</Melee>
+      <Social>5</Social>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+    <workDisables>
+      <li>Caring</li>
+      <li>Animals</li>
+    </workDisables>
+    <forcedTraits>
+      <Bloodlust>0</Bloodlust>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <CVG_BloodQiMax>1.3</CVG_BloodQiMax>
+          <MeleeDamageFactor>1.2</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_ExiledDragonPatriarch</defName>
+    <title>exiled patriarch</title>
+    <titleShort>patriarch</titleShort>
+    <titleFemale>exiled matriarch</titleFemale>
+    <titleShortFemale>matriarch</titleShortFemale>
+    <description>[PAWN_nameDef] led a branch house of the Ancient Dragon Clan for longer than most kingdoms last, until a lost war with the Blood Moon Cult cost the house its hoard and the Clan's law cost [PAWN_objective] [PAWN_possessive] horns. Dragon blood keeps the body at the age of its first moult, so the exile looks young; the voice of command, the memory of every treaty and the taste for treasure are much older.\n\nThe Clan raises its heirs to rule, not to sweep, cook or carry, and the exile has never seen a reason to learn.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier4</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>6</Melee>
+      <Social>5</Social>
+      <Construction>4</Construction>
+      <Animals>2</Animals>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+      <li>Cooking</li>
+      <li>Cleaning</li>
+    </workDisables>
+    <forcedTraits>
+      <Greedy>0</Greedy>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <CVG_BodyTemperingSpeed>1.3</CVG_BodyTemperingSpeed>
+          <CarryingCapacity>1.25</CarryingCapacity>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_FormationGrandmaster</defName>
+    <title>formation grandmaster</title>
+    <titleShort>grandmaster</titleShort>
+    <description>[PAWN_nameDef] was one of the twelve formation grandmasters who held the Great Rupture together, laying the arrays that keep the fragments of Jiuxiao from drifting apart entirely. Eleven of the twelve are dead. [PAWN_nameDef] carries more realms than wrinkles; the dreams in geometry are far older than the face.\n\n[PAWN_pronoun] has never fought, because a grandmaster's hands are worth more than a sword, and has never been good with people, because people do not stay where they are placed.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier4</li>
+    </spawnCategories>
+    <skillGains>
+      <Construction>8</Construction>
+      <Intellectual>6</Intellectual>
+      <Artistic>3</Artistic>
+    </skillGains>
+    <workDisables>
+      <li>Violent</li>
+      <li>Social</li>
+    </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <ConstructionSpeed>1.3</ConstructionSpeed>
+          <ResearchSpeed>1.2</ResearchSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_ImmortalPhysician</defName>
+    <title>immortal physician</title>
+    <titleShort>physician</titleShort>
+    <description>[PAWN_nameDef] walked Jiuxiao as the Immortal Physician, curing plagues with a basket of herbs and a needle and refusing every sect that offered a seat and every king who offered a palace. The Silent Lotus keeps a register of everyone [PAWN_pronoun] has healed; it fills a room, and the face above the basket has not aged a day since the register was begun, as a cultivator's face does not.\n\n[PAWN_pronoun] took a vow never to harm and a vow of poverty that leaves no room for tools, and has kept both.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier4</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>8</Medicine>
+      <Plants>5</Plants>
+      <Social>3</Social>
+    </skillGains>
+    <workDisables>
+      <li>Violent</li>
+      <li>ManualDumb</li>
+    </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <MedicalTendQuality>1.3</MedicalTendQuality>
+          <MedicalTendSpeed>1.25</MedicalTendSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 1 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SwordApprentice</defName>
+    <title>sword apprentice</title>
+    <titleShort>sword apprentice</titleShort>
+    <description>[PAWN_nameDef] was a Sword Apprentice of the Azure Peak, the outer rank that sweeps the training yards and makes a thousand cuts before breakfast and a thousand after. Eight years of the same three forms, until the elders stopped correcting them.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>Pirate</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>5</Melee>
+      <Artistic>1</Artistic>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 2 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SwordBearer</defName>
+    <title>sword bearer</title>
+    <titleShort>sword bearer</titleShort>
+    <description>[PAWN_nameDef] rose to Sword Bearer of the Azure Peak, the inner rank entrusted with a named blade from the Sword Cemetery and the duty of standing in the first line when the Blood Moon Cult comes up the steps. The blade has a name; [PAWN_pronoun] does not say it aloud.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>6</Melee>
+      <Artistic>2</Artistic>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statOffsets><MeleeHitChance>2</MeleeHitChance></statOffsets>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 3 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_BladeOfThePeak</defName>
+    <title>blade of the Peak</title>
+    <titleShort>blade</titleShort>
+    <description>[PAWN_nameDef] was a Blade of the Peak, one of the core disciples of the Azure Peak Sword Sect who carry the sect's signature technique, Sword Qi Rain, and the right to challenge an elder. [PAWN_pronoun] won three sect tournaments and lost the fourth to Yan Zhao, the young prodigy, which the Peak has not let [PAWN_objective] forget.\n\nA Blade does not plant, haul or cook; the sect has apprentices for that, and [PAWN_pronoun] never learned.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>7</Melee>
+      <Social>2</Social>
+      <Artistic>2</Artistic>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors><CVG_QiRegen>1.15</CVG_QiRegen></statFactors><statOffsets><MeleeHitChance>2</MeleeHitChance></statOffsets>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 1 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_LotusLayApprentice</defName>
+    <title>lay apprentice</title>
+    <titleShort>lay apprentice</titleShort>
+    <description>[PAWN_nameDef] served as a lay apprentice of the Silent Lotus Temple, the rank below the vows: changing dressings in the pilgrims' ward, boiling bitter broth and holding the hands of those the monks could not save.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>Tribal</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>4</Medicine>
+      <Cooking>2</Cooking>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Caring</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 3 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_VajraGuardian</defName>
+    <title>Vajra guardian</title>
+    <titleShort>guardian</titleShort>
+    <description>[PAWN_nameDef] was a Guardian of the Silent Lotus Temple, one of the monks who temper their bodies until a fist can stop a sword and whose palm, the Vajra Palm, can stun a bull. Guardians stand at the pagoda gates so that the healers inside never have to raise a hand.\n\n[PAWN_pronoun] took the Temple's vows in full: no killing for pleasure, no weapon, no possessions, no explanations.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>6</Melee>
+      <Medicine>3</Medicine>
+      <Social>1</Social>
+    </skillGains>
+    <workDisables>
+      <li>Shooting</li>
+    </workDisables>
+    <forcedTraits>
+      <Ascetic>0</Ascetic>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors><CVG_BodyTemperingSpeed>1.2</CVG_BodyTemperingSpeed></statFactors><statOffsets><PainShockThreshold>0.06</PainShockThreshold></statOffsets>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 1 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_CauldronApprentice</defName>
+    <title>cauldron apprentice</title>
+    <titleShort>apprentice</titleShort>
+    <description>[PAWN_nameDef] was a Cauldron Apprentice of the Heavenly Cauldron Pavilion: grinding herbs, feeding the furnace and tasting every failed batch so the alchemist would not have to. There were many failed batches.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Cooking>3</Cooking>
+      <Medicine>2</Medicine>
+      <Intellectual>1</Intellectual>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <DrugCookingSpeed>1.05</DrugCookingSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 2 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_PavilionAlchemist</defName>
+    <title>Pavilion alchemist</title>
+    <titleShort>alchemist</titleShort>
+    <description>[PAWN_nameDef] refined pills of the first and second grade for the Heavenly Cauldron Pavilion: Qi Gathering, Foundation, the cheap healing pills the sects buy by the crate. A good alchemist, the Pavilion said, and a profitable one, which it valued more.\n\n[PAWN_pronoun] still signs every pill with a tiny mark on the shell. Nobody has ever noticed.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Cooking>4</Cooking>
+      <Medicine>3</Medicine>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <DrugCookingSpeed>1.15</DrugCookingSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 3 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_CauldronMaster</defName>
+    <title>cauldron master</title>
+    <titleShort>cauldron master</titleShort>
+    <description>[PAWN_nameDef] held the rank of Cauldron Master in the Heavenly Cauldron Pavilion, with a furnace of [PAWN_possessive] own, three apprentices and the right to refine third-grade pills for auction. The Nine-Turn fire does not answer to [PAWN_objective] yet, but it listens.\n\nThe Pavilion's contract forbids a Cauldron Master to fight, dig or haul, on pain of forfeiting the furnace. [PAWN_pronoun] has read the contract carefully.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Cooking>6</Cooking>
+      <Medicine>4</Medicine>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+      <li>Violent</li>
+    </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <DrugCookingSpeed>1.2</DrugCookingSpeed>
+          <MedicalTendQuality>1.15</MedicalTendQuality>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Fat</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 2 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_VeinFinder</defName>
+    <title>vein-finder</title>
+    <titleShort>vein-finder</titleShort>
+    <description>[PAWN_nameDef] was a vein-finder, walking the hills ahead of the mining guilds of Jiuxiao with a forked rod of peach wood and a toothache that gets worse the closer the spirit stone lies. The guilds pay by the vein, the Pavilion pays for the map and the Dragon Clan pays [PAWN_objective] not to come near its mountains.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Mining>5</Mining>
+      <Intellectual>2</Intellectual>
+      <Construction>2</Construction>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Mining</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <MiningYield>1.15</MiningYield>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 3 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_MountainOpener</defName>
+    <title>mountain-opener</title>
+    <titleShort>mountain-opener</titleShort>
+    <description>[PAWN_nameDef] was a mountain-opener, one of the earth-path cultivators the mining guilds of Jiuxiao hire to split a hillside with a single strike where forty picks would take a season. The Azure Peak calls the technique Mountain-Splitting Strike and teaches it for war; the guilds pay better.\n\nYears of it burned the earth qi into [PAWN_possessive] bones and the silence of the galleries into [PAWN_possessive] manner. [PAWN_pronoun] speaks to rock more readily than to people.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Mining>7</Mining>
+      <Melee>3</Melee>
+    </skillGains>
+    <workDisables>
+      <li>Social</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Mining</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <MiningSpeed>1.2</MiningSpeed>
+          <MeleeDamageFactor>1.15</MeleeDamageFactor>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 1 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_JadeSlipEngraver</defName>
+    <title>jade slip engraver</title>
+    <titleShort>engraver</titleShort>
+    <description>[PAWN_nameDef] engraved jade slips, the tablets on which Jiuxiao records its techniques: a needle, a steady breath of qi and ten thousand characters a slip. [PAWN_pronoun] engraved manuals [PAWN_pronoun] was not allowed to read, and read them anyway, one character at a time.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Artistic>4</Artistic>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Artistic</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 2 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_SlipAppraiser</defName>
+    <title>slip appraiser</title>
+    <titleShort>appraiser</titleShort>
+    <description>[PAWN_nameDef] appraised jade slips for the auctions of the Heavenly Cauldron Pavilion: which manuals were complete, which had been copied with a missing stroke that would twist a meridian, which were outright fakes from the night markets. Rogue cultivators brought [PAWN_objective] slips they had dug out of inheritance caves, and [PAWN_pronoun] told them, gently, what they were worth.\n\nMost were worth the jade.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>6</Intellectual>
+      <Social>2</Social>
+      <Artistic>1</Artistic>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <ResearchSpeed>1.15</ResearchSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Childhood, tier 2 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_AppraisersApprentice</defName>
+    <title>appraiser's apprentice</title>
+    <titleShort>apprentice</titleShort>
+    <description>[PAWN_nameDef] was apprenticed at eight to a slip appraiser of the Heavenly Cauldron Pavilion, polishing jade slips and learning to tell a true manual from a night-market fake by the depth of the strokes. By twelve [PAWN_pronoun] could spot a missing character faster than the master, and was careful never to say so.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>2</Intellectual>
+      <Social>2</Social>
+      <Artistic>1</Artistic>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <GlobalLearningFactor>1.1</GlobalLearningFactor>
+        </statFactors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 1 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_BellowsStriker</defName>
+    <title>bellows striker</title>
+    <titleShort>striker</titleShort>
+    <description>[PAWN_nameDef] was a striker in a forge of the foothills below the Azure Peak, swinging the big hammer where the smith pointed, making practice blades and horseshoes and, once a year, being allowed to hold the tongs while the master folded spirit iron.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>Tribal</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Crafting>4</Crafting>
+      <Construction>2</Construction>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Crafting</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 2 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_ShellSmith</defName>
+    <title>shell-smith</title>
+    <titleShort>shell-smith</titleShort>
+    <description>[PAWN_nameDef] was a shell-smith of the Azure Peak, one of the smiths who work the fallen shells of the Iron Calamity into blades, as the sect has done since the Swords of the Broken Sky were forged from the first dead machines. The metal fights the hammer and remembers what it was.\n\nSince the Convergence [PAWN_pronoun] has had plasteel to compare it with, and says the shells are still harder.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Crafting>6</Crafting>
+      <Construction>2</Construction>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Crafting</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <GeneralLaborSpeed>1.1</GeneralLaborSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Childhood, tier 1 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_BeastGardenChild</defName>
+    <title>beast garden child</title>
+    <titleShort>garden child</titleShort>
+    <description>[PAWN_nameDef] mucked out the beast garden of a sect from the age of six, feeding thunder hawks and stone boars and learning which ones bite.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Tribal</li>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Animals>3</Animals>
+      <Cooking>1</Cooking>
+    </skillGains>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 1 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_BeastGardenHand</defName>
+    <title>beast garden hand</title>
+    <titleShort>garden hand</titleShort>
+    <description>[PAWN_nameDef] worked the beast garden of a Jiuxiao sect: feeding, grooming, hauling dung and keeping the stone boars from eating the thunder hawks' perches. [PAWN_pronoun] never tamed anything, but [PAWN_pronoun] knows what every beast in a garden eats and when it is about to bite.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Tribal</li>
+      <li>Outlander</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Animals>4</Animals>
+      <Plants>2</Plants>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Animals</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 3 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_BeastTideWalker</defName>
+    <title>beast-tide walker</title>
+    <titleShort>tide walker</titleShort>
+    <description>[PAWN_nameDef] was a beast-tide walker: a cultivator who goes out to meet a beast tide alone and comes back with the tide walking behind. The sects pay for it, the villages pray for it, and the beasts, bound by contracts of blood and patience rather than cages, follow [PAWN_objective] because they chose to.\n\n[PAWN_pronoun] understands beasts far better than people, and has stopped pretending otherwise.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier3</li>
+    </spawnCategories>
+    <skillGains>
+      <Animals>7</Animals>
+      <Melee>3</Melee>
+      <Medicine>1</Medicine>
+    </skillGains>
+    <workDisables>
+      <li>Social</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Animals</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <TameAnimalChance>1.2</TameAnimalChance>
+          <TrainAnimalChance>1.15</TrainAnimalChance>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 1 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_ArrayApprentice</defName>
+    <title>array apprentice</title>
+    <titleShort>apprentice</titleShort>
+    <description>[PAWN_nameDef] carried stones for a formation master, setting each one exactly where the master's foot pointed and learning, slowly, why. The walls of four sect outposts stand on stones [PAWN_pronoun] placed.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Outlander</li>
+      <li>Tribal</li>
+      <li>CVG_Cultivation</li>
+    </spawnCategories>
+    <skillGains>
+      <Construction>4</Construction>
+      <Artistic>2</Artistic>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Constructing</li>
+    </requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- ==================== Adulthood, tier 2 ==================== -->
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_CloudStepMessenger</defName>
+    <title>cloud-step messenger</title>
+    <titleShort>messenger</titleShort>
+    <description>[PAWN_nameDef] was a cloud-step messenger, one of the couriers the sects trust with the letters that start or stop wars, trained in the Wandering Step until a day's run became a morning's. [PAWN_pronoun] has outrun arrows, beast tides and, once, a debt collector of the Pavilion, which was harder.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>3</Social>
+      <Animals>3</Animals>
+      <Shooting>2</Shooting>
+    </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <MoveSpeed>1.15</MoveSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_EldersTableCook</defName>
+    <title>elders' table cook</title>
+    <titleShort>elders' cook</titleShort>
+    <description>[PAWN_nameDef] cooked for the elders' table of a great sect, where a bowl of rice must carry exactly the qi a Golden Core stomach wants and a wrong seasoning can cost a breakthrough. The elders never complained. The elders never complain; they simply stop coming.\n\nThey kept coming.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Cooking>6</Cooking>
+      <Plants>2</Plants>
+      <Social>1</Social>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Cooking</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statFactors>
+          <CookSpeed>1.15</CookSpeed>
+        </statFactors>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Fat</bodyTypeMale>
+    <bodyTypeFemale>Fat</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CVG_Backstory_RenownedWanderer</defName>
+    <title>renowned wanderer</title>
+    <titleShort>wanderer</titleShort>
+    <description>[PAWN_nameDef] was a renowned name among the rogue cultivators of Jiuxiao, the kind the Wandering Cloud Inn hangs a plaque for: twelve duels won on the inn's own floor, a borrowed technique from every sect [PAWN_pronoun] ever annoyed and a reputation that arrives a day before [PAWN_pronoun] does.\n\n[PAWN_pronoun] owes money in four towns and is welcome in all of them.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>CVG_Tier2</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>5</Melee>
+      <Social>3</Social>
+      <Shooting>1</Shooting>
+    </skillGains>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statOffsets><MeleeDodgeChance>2</MeleeDodgeChance></statOffsets>
+      </li>
+    </modExtensions>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+</Defs>

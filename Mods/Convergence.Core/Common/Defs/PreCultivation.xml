@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Cultivation already begun when a pawn is generated (docs/DISENO.md §4.1d), also when randomizing in the character
+    selector. chance x the mod setting, then an option by weight. realmOrder = order of the realm in the path; if the
+    path has no realm of that order, the highest available one is used (Nascent Soul falls back to Golden Core today).
+    Before the Convergence the realm stays latent (no hediff, no effects) and awakens with it.
+    Qi (pawns with a spirit root): ~12% begun; of those ~80% Qi Refining stage 2-4, ~15% Foundation, ~4% Golden Core,
+    ~0.5% Nascent Soul. Body (rootless pawns with a special body): ~30% begun, same shape.
+  -->
+  <Convergence.PreCultivationDef>
+    <defName>CVG_PreCultivation_Qi</defName>
+    <label>cultivation before the Convergence</label>
+    <description>Not everyone who cultivates was taught on this rimworld. Some fell through the small rifts that opened long before the Convergence, half-remembering the sects of Jiuxiao; others carry the meridians of a past life. Their realm sleeps until the qi of the world wakes up.</description>
+    <path>CVG_Path_Qi</path>
+    <chance>0.12</chance>
+    <foundationQuality>0.8~1.2</foundationQuality>
+    <options>
+      <li>
+        <realmOrder>1</realmOrder>
+        <stage>2~4</stage>
+        <weight>80</weight>
+      </li>
+      <li>
+        <realmOrder>2</realmOrder>
+        <stage>1~4</stage>
+        <weight>15</weight>
+      </li>
+      <li>
+        <realmOrder>3</realmOrder>
+        <stage>1~3</stage>
+        <weight>4</weight>
+      </li>
+      <li>
+        <realmOrder>4</realmOrder>
+        <stage>1~2</stage>
+        <weight>0.5</weight>
+      </li>
+    </options>
+  </Convergence.PreCultivationDef>
+
+  <Convergence.PreCultivationDef>
+    <defName>CVG_PreCultivation_Body</defName>
+    <label>body tempered before the Convergence</label>
+    <description>Bodies of steel, sword and lightning are not born every century. Those who have one often spent their youth breaking stones and drinking strange blood, tempering the flesh long before they knew the word for it.</description>
+    <path>CVG_Path_Body</path>
+    <chance>0.3</chance>
+    <requiresSpecialBody>true</requiresSpecialBody>
+    <foundationQuality>0.8~1.2</foundationQuality>
+    <options>
+      <li>
+        <realmOrder>1</realmOrder>
+        <stage>2~4</stage>
+        <weight>80</weight>
+      </li>
+      <li>
+        <realmOrder>2</realmOrder>
+        <stage>1~4</stage>
+        <weight>15</weight>
+      </li>
+      <li>
+        <realmOrder>3</realmOrder>
+        <stage>1~3</stage>
+        <weight>4</weight>
+      </li>
+      <li>
+        <realmOrder>4</realmOrder>
+        <stage>1~2</stage>
+        <weight>0.8</weight>
+      </li>
+    </options>
+  </Convergence.PreCultivationDef>
+</Defs>

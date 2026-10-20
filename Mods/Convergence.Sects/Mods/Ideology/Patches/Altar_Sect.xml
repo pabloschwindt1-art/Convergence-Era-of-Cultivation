@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- The ancestral altar is one more building an ideoligion can have (alongside the vanilla altars). -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PreceptDef[defName="IdeoBuilding"]/buildingDefChances</xpath>
+    <value>
+      <CVG_AncestralAltar>1.5</CVG_AncestralAltar>
+    </value>
+  </Operation>
+</Patch>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Sect rituals built on the vanilla celebration pattern (DateRitual behavior): they start at an altar or gathering spot. Admission and ascension also create an obligation when a disciple joins or ascends (Core: SectRituals.cs). -->
+  <RitualOutcomeEffectDef>
+    <defName>CVG_Outcome_Admission</defName>
+    <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days.</description>
+    <workerClass>RitualOutcomeEffectWorker_FromQuality</workerClass>
+    <comps>
+      <li Class="RitualOutcomeComp_RitualSeatPresent">
+        <qualityOffset>0.15</qualityOffset>
+      </li>
+      <li Class="RitualOutcomeComp_RolePresentNotSubstituted">
+        <roleId>leader</roleId>
+        <label>leader present</label>
+        <qualityOffset>0.25</qualityOffset>
+      </li>
+      <li Class="RitualOutcomeComp_ParticipantCount">
+        <label>participant count</label>
+        <curve>
+          <points>
+            <li>(1,  0.0)</li>
+            <li>(5,  0.15)</li>
+            <li>(10, 0.25)</li>
+          </points>
+        </curve>
+      </li>
+      <li Class="RitualOutcomeComp_BuildingOfDefUsed">
+        <def>CVG_AncestralAltar</def>
+        <qualityOffset>0.25</qualityOffset>
+        <maxHorDistFromTarget>5</maxHorDistFromTarget>
+      </li>
+      <li Class="RitualOutcomeComp_RitualTargetDefs">
+        <allowAltars>true</allowAltars>
+        <label>started at altar</label>
+        <qualityOffset>0.2</qualityOffset>
+        <expectedThingLabelTip>an altar</expectedThingLabelTip>
+      </li>
+    </comps>
+    <outcomeChances>
+      <li>
+        <label>Terrible</label>
+        <chance>0.05</chance>
+        <memory>TerribleFestival</memory>
+        <description>The {0} was terrible! Everyone wished it would end.</description>
+        <positivityIndex>-2</positivityIndex>
+      </li>
+      <li>
+        <label>Dull</label>
+        <chance>0.15</chance>
+        <memory>BoringFestival</memory>
+        <description>The {0} was dull. The words were right and the heart absent.</description>
+        <positivityIndex>-1</positivityIndex>
+      </li>
+      <li>
+        <label>Solemn</label>
+        <chance>0.6</chance>
+        <memory>FunFestival</memory>
+        <description>The {0} was solemn and well done. Everyone felt part of something older than themselves.</description>
+        <positivityIndex>1</positivityIndex>
+      </li>
+      <li>
+        <label>Unforgettable</label>
+        <chance>0.2</chance>
+        <memory>UnforgettableFestival</memory>
+        <description>The {0} was unforgettable! For one hour the sect was exactly what its founders dreamed.</description>
+        <positivityIndex>2</positivityIndex>
+      </li>
+    </outcomeChances>
+  </RitualOutcomeEffectDef>
+
+  <RitualPatternDef ParentName="CelebrationPartyChat">
+    <defName>CVG_Pattern_Admission</defName>
+    <nameMaker>NamerRitualFestival</nameMaker>
+    <ritualOutcomeEffect>CVG_Outcome_Admission</ritualOutcomeEffect>
+    <ritualObligationTriggers Inherit="False">
+      <li Class="Convergence.RitualObligationTrigger_AdmissionProperties">
+        <mustBePlayerIdeo>true</mustBePlayerIdeo>
+      </li>
+    </ritualObligationTriggers>
+    <ritualExpectedDesc>When a new disciple joins the sect, a ceremony of admission can be held.</ritualExpectedDesc>
+  </RitualPatternDef>
+
+  <PreceptDef>
+    <defName>CVG_Ritual_Admission</defName>
+    <label>admission ceremony</label>
+    <description>A new disciple kneels before the altar, offers tea to the master and receives the name of the sect. The sect gains a member; the member gains a family.</description>
+    <issue>Ritual</issue>
+    <impact>Medium</impact>
+    <iconPath>UI/Icons/Rituals/CVG/Admission</iconPath>
+    <preceptClass>Precept_Ritual</preceptClass>
+    <ritualPatternBase>CVG_Pattern_Admission</ritualPatternBase>
+    <allowDuplicates>false</allowDuplicates>
+    <countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+    <ignoreLimitsInEditMode>true</ignoreLimitsInEditMode>
+    <receivesExpectationsQualityOffset>true</receivesExpectationsQualityOffset>
+    <selectionWeight>1.0</selectionWeight>
+    <requiredMemes><li>CVG_Meme_SwordWay</li><li>CVG_Meme_LotusPath</li><li>CVG_Meme_CauldronWay</li><li>CVG_Meme_DragonBlood</li><li>CVG_Meme_DemonicWay</li><li>CVG_Meme_WanderingPath</li><li>CVG_Meme_BodyWay</li><li>CVG_Meme_ThunderWay</li><li MayRequire="Ludeon.RimWorld.Biotech">CVG_Meme_PuppetPath</li></requiredMemes>
+  </PreceptDef>
+  <RitualOutcomeEffectDef>
+    <defName>CVG_Outcome_Ascension</defName>
+    <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days.</description>
+    <workerClass>RitualOutcomeEffectWorker_FromQuality</workerClass>
+    <comps>
+      <li Class="RitualOutcomeComp_RitualSeatPresent">
+        <qualityOffset>0.15</qualityOffset>
+      </li>
+      <li Class="RitualOutcomeComp_RolePresentNotSubstituted">
+        <roleId>leader</roleId>
+        <label>leader present</label>
+        <qualityOffset>0.25</qualityOffset>
+      </li>
+      <li Class="RitualOutcomeComp_ParticipantCount">
+        <label>participant count</label>
+        <curve>
+          <points>
+            <li>(1,  0.0)</li>
+            <li>(5,  0.15)</li>
+            <li>(10, 0.25)</li>
+          </points>
+        </curve>
+      </li>
+      <li Class="RitualOutcomeComp_BuildingOfDefUsed">
+        <def>CVG_AncestralAltar</def>
+        <qualityOffset>0.25</qualityOffset>
+        <maxHorDistFromTarget>5</maxHorDistFromTarget>
+      </li>
+      <li Class="RitualOutcomeComp_RitualTargetDefs">
+        <allowAltars>true</allowAltars>
+        <label>started at altar</label>
+        <qualityOffset>0.2</qualityOffset>
+        <expectedThingLabelTip>an altar</expectedThingLabelTip>
+      </li>
+    </comps>
+    <outcomeChances>
+      <li>
+        <label>Terrible</label>
+        <chance>0.05</chance>
+        <memory>TerribleFestival</memory>
+        <description>The {0} was terrible! Everyone wished it would end.</description>
+        <positivityIndex>-2</positivityIndex>
+      </li>
+      <li>
+        <label>Dull</label>
+        <chance>0.15</chance>
+        <memory>BoringFestival</memory>
+        <description>The {0} was dull. The words were right and the heart absent.</description>
+        <positivityIndex>-1</positivityIndex>
+      </li>
+      <li>
+        <label>Solemn</label>
+        <chance>0.6</chance>
+        <memory>FunFestival</memory>
+        <description>The {0} was solemn and well done. Everyone felt part of something older than themselves.</description>
+        <positivityIndex>1</positivityIndex>
+      </li>
+      <li>
+        <label>Unforgettable</label>
+        <chance>0.2</chance>
+        <memory>UnforgettableFestival</memory>
+        <description>The {0} was unforgettable! For one hour the sect was exactly what its founders dreamed.</description>
+        <positivityIndex>2</positivityIndex>
+      </li>
+    </outcomeChances>
+  </RitualOutcomeEffectDef>
+
+  <RitualPatternDef ParentName="CelebrationPartyChat">
+    <defName>CVG_Pattern_Ascension</defName>
+    <nameMaker>NamerRitualFestival</nameMaker>
+    <ritualOutcomeEffect>CVG_Outcome_Ascension</ritualOutcomeEffect>
+    <ritualObligationTriggers Inherit="False">
+      <li Class="Convergence.RitualObligationTrigger_AscensionProperties">
+        <mustBePlayerIdeo>true</mustBePlayerIdeo>
+      </li>
+    </ritualObligationTriggers>
+    <ritualExpectedDesc>When a disciple ascends to a new realm, the sect can hold an ascension ceremony.</ritualExpectedDesc>
+  </RitualPatternDef>
+
+  <PreceptDef>
+    <defName>CVG_Ritual_Ascension</defName>
+    <label>ascension ceremony</label>
+    <description>When a disciple climbs a realm, the sect gathers at the hall to witness it. The master lights three sticks of incense for the Dao, three for the elders and one for the disciple.</description>
+    <issue>Ritual</issue>
+    <impact>Medium</impact>
+    <iconPath>UI/Icons/Rituals/CVG/Ascension</iconPath>
+    <preceptClass>Precept_Ritual</preceptClass>
+    <ritualPatternBase>CVG_Pattern_Ascension</ritualPatternBase>
+    <allowDuplicates>false</allowDuplicates>
+    <countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+    <ignoreLimitsInEditMode>true</ignoreLimitsInEditMode>
+    <receivesExpectationsQualityOffset>true</receivesExpectationsQualityOffset>
+    <selectionWeight>1.0</selectionWeight>
+    <requiredMemes><li>CVG_Meme_SwordWay</li><li>CVG_Meme_LotusPath</li><li>CVG_Meme_CauldronWay</li><li>CVG_Meme_DragonBlood</li><li>CVG_Meme_DemonicWay</li><li>CVG_Meme_WanderingPath</li><li>CVG_Meme_BodyWay</li><li>CVG_Meme_ThunderWay</li><li MayRequire="Ludeon.RimWorld.Biotech">CVG_Meme_PuppetPath</li></requiredMemes>
+  </PreceptDef>
+  <RitualOutcomeEffectDef>
+    <defName>CVG_Outcome_Tournament</defName>
+    <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days.</description>
+    <workerClass>RitualOutcomeEffectWorker_FromQuality</workerClass>
+    <comps>
+      <li Class="RitualOutcomeComp_RitualSeatPresent">
+        <qualityOffset>0.15</qualityOffset>
+      </li>
+      <li Class="RitualOutcomeComp_RolePresentNotSubstituted">
+        <roleId>leader</roleId>
+        <label>leader present</label>
+        <qualityOffset>0.25</qualityOffset>
+      </li>
+      <li Class="RitualOutcomeComp_ParticipantCount">
+        <label>participant count</label>
+        <curve>
+          <points>
+            <li>(1,  0.0)</li>
+            <li>(5,  0.15)</li>
+            <li>(10, 0.25)</li>
+          </points>
+        </curve>
+      </li>
+      <li Class="RitualOutcomeComp_BuildingOfDefUsed">
+        <def>CVG_AncestralAltar</def>
+        <qualityOffset>0.25</qualityOffset>
+        <maxHorDistFromTarget>5</maxHorDistFromTarget>
+      </li>
+      <li Class="RitualOutcomeComp_RitualTargetDefs">
+        <allowAltars>true</allowAltars>
+        <label>started at altar</label>
+        <qualityOffset>0.2</qualityOffset>
+        <expectedThingLabelTip>an altar</expectedThingLabelTip>
+      </li>
+    </comps>
+    <outcomeChances>
+      <li>
+        <label>Terrible</label>
+        <chance>0.05</chance>
+        <memory>TerribleFestival</memory>
+        <description>The {0} was terrible! Everyone wished it would end.</description>
+        <positivityIndex>-2</positivityIndex>
+      </li>
+      <li>
+        <label>Dull</label>
+        <chance>0.15</chance>
+        <memory>BoringFestival</memory>
+        <description>The {0} was dull. The words were right and the heart absent.</description>
+        <positivityIndex>-1</positivityIndex>
+      </li>
+      <li>
+        <label>Solemn</label>
+        <chance>0.6</chance>
+        <memory>FunFestival</memory>
+        <description>The {0} was solemn and well done. Everyone felt part of something older than themselves.</description>
+        <positivityIndex>1</positivityIndex>
+      </li>
+      <li>
+        <label>Unforgettable</label>
+        <chance>0.2</chance>
+        <memory>UnforgettableFestival</memory>
+        <description>The {0} was unforgettable! For one hour the sect was exactly what its founders dreamed.</description>
+        <positivityIndex>2</positivityIndex>
+      </li>
+    </outcomeChances>
+  </RitualOutcomeEffectDef>
+
+  <RitualPatternDef ParentName="CelebrationPartyChat">
+    <defName>CVG_Pattern_Tournament</defName>
+    <nameMaker>NamerRitualFestival</nameMaker>
+    <ritualOutcomeEffect>CVG_Outcome_Tournament</ritualOutcomeEffect>
+  </RitualPatternDef>
+
+  <PreceptDef>
+    <defName>CVG_Ritual_Tournament</defName>
+    <label>sect tournament</label>
+    <description>Once a year the sect clears the courtyard and lets its disciples cross blades in the open. Nobody dies, nobody forgets, and the winner sits at the master's right hand for a night.</description>
+    <issue>Ritual</issue>
+    <impact>Medium</impact>
+    <iconPath>UI/Icons/Rituals/CVG/Tournament</iconPath>
+    <preceptClass>Precept_Ritual</preceptClass>
+    <ritualPatternBase>CVG_Pattern_Tournament</ritualPatternBase>
+    <allowDuplicates>false</allowDuplicates>
+    <countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+    <ignoreLimitsInEditMode>true</ignoreLimitsInEditMode>
+    <receivesExpectationsQualityOffset>true</receivesExpectationsQualityOffset>
+    <selectionWeight>1.0</selectionWeight>
+    <requiredMemes><li>CVG_Meme_SwordWay</li><li>CVG_Meme_LotusPath</li><li>CVG_Meme_CauldronWay</li><li>CVG_Meme_DragonBlood</li><li>CVG_Meme_DemonicWay</li><li>CVG_Meme_WanderingPath</li><li>CVG_Meme_BodyWay</li><li>CVG_Meme_ThunderWay</li><li MayRequire="Ludeon.RimWorld.Biotech">CVG_Meme_PuppetPath</li></requiredMemes>
+  </PreceptDef>
+</Defs>

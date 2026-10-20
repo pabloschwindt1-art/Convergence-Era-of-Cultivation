@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_QiConcentration.label>concentración de qi</CVG_QiConcentration.label>
+  <CVG_QiConcentration.scoreStages.0.label>yermo</CVG_QiConcentration.scoreStages.0.label>
+  <CVG_QiConcentration.scoreStages.1.label>tenue</CVG_QiConcentration.scoreStages.1.label>
+  <CVG_QiConcentration.scoreStages.2.label>acumulándose</CVG_QiConcentration.scoreStages.2.label>
+  <CVG_QiConcentration.scoreStages.3.label>denso</CVG_QiConcentration.scoreStages.3.label>
+  <CVG_QiConcentration.scoreStages.4.label>rico</CVG_QiConcentration.scoreStages.4.label>
+  <CVG_QiConcentration.scoreStages.5.label>desbordante</CVG_QiConcentration.scoreStages.5.label>
+</LanguageData>

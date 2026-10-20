@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_FoundationPill.label>píldora de fundación</CVG_FoundationPill.label>
+  <CVG_FoundationPill.description>Una píldora refinada con hierbas medicinales y polvo de plata. Tomada antes de un retiro de avance, estabiliza el qi mientras se condensa la fundación y aumenta la probabilidad de alcanzar el Establecimiento de Fundación. Un cultivador que intenta ese avance toma una por su cuenta si hay alguna a mano.\n\nSu efecto dura un día y se gasta en el intento de avance.</CVG_FoundationPill.description>
+  <CVG_FoundationPill.ingestible.ingestCommandString>Tomar {0}</CVG_FoundationPill.ingestible.ingestCommandString>
+  <CVG_FoundationPill.ingestible.ingestReportString>Tomando {0}.</CVG_FoundationPill.ingestible.ingestReportString>
+</LanguageData>

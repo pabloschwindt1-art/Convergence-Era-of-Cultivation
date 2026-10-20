@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Dragon vein: rich earth over a vein of qi. Good land for a sect. (A vein of spirit stone is not forced: use the mineral mutators.) -->
+  <TileMutatorDef ParentName="BasePatch">
+    <defName>CVG_DragonVein</defName>
+    <label>dragon vein</label>
+    <description>The land lies on a dragon vein: qi runs just under the soil, so the earth is rich and the stones sing at night. The old geomancers built their sects on places like this one.</description>
+    <chanceOnNonLandmarkTile>0.003</chanceOnNonLandmarkTile>
+    <pollutionRange>0~0.25</pollutionRange>
+    <biomeWhitelist>
+      <li>BorealForest</li>
+      <li>Grasslands</li>
+      <li>TemperateForest</li>
+      <li>TropicalRainforest</li>
+      <li>AridShrubland</li>
+    </biomeWhitelist>
+    <terrainPatchMakers>
+      <li>
+        <perlinFrequency>0.03</perlinFrequency>
+        <thresholds>
+          <li><terrain>SoilRich</terrain><min>0.5</min><max>999</max></li>
+        </thresholds>
+      </li>
+    </terrainPatchMakers>
+  </TileMutatorDef>
+
+  <RulePackDef>
+    <defName>CVG_NamerLandmark_DragonVein</defName>
+    <include><li>WorldFeatureNamerCommon</li></include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=4)->dragon vein</li>
+        <li>terrain_word->longmai</li>
+        <li>terrain_word->coiled ridge</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>CVG_NamerLandmark_SectRuins</defName>
+    <include><li>WorldFeatureNamerCommon</li></include>
+    <rulePack>
+      <rulesStrings>
+        <li>terrain_word(p=4)->sect ruins</li>
+        <li>terrain_word->fallen gates</li>
+        <li>terrain_word->forgotten hall</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <LandmarkDef>
+    <defName>CVG_DragonVeinLandmark</defName>
+    <label>dragon vein</label>
+    <iconTexturePath>World/Landmarks/Oasis</iconTexturePath>
+    <atlasSize>(2, 2)</atlasSize>
+    <commonality>0.3</commonality>
+    <nameMaker>CVG_NamerLandmark_DragonVein</nameMaker>
+    <category>mountain</category>
+    <mutatorChances>
+      <CVG_DragonVein Required="True"/>
+      <MineralRich>0.6</MineralRich>
+      <Fertile>0.5</Fertile>
+      <AnimalLife_Increased>0.4</AnimalLife_Increased>
+      <PlantLife_Increased>0.3</PlantLife_Increased>
+    </mutatorChances>
+  </LandmarkDef>
+
+  <LandmarkDef ParentName="BaseRuins">
+    <defName>CVG_SectRuins</defName>
+    <label>ruins of an old sect</label>
+    <commonality>0.08</commonality>
+    <nameMaker>CVG_NamerLandmark_SectRuins</nameMaker>
+    <category>structure</category>
+    <mutatorChances Inherit="False">
+      <AncientRuins Required="True"/>
+      <Stockpile>0.3</Stockpile>
+      <AncientUplink>0.05</AncientUplink>
+      <AnimalLife_Decreased>0.2</AnimalLife_Decreased>
+    </mutatorChances>
+  </LandmarkDef>
+</Defs>

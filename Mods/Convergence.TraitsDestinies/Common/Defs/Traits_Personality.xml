@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Wuxia personalities: active from the start. -->
+
+  <TraitDef>
+    <defName>CVG_RighteousHero</defName>
+    <commonality>0.08</commonality>
+    <degreeDatas>
+      <li>
+        <label>righteous hero</label>
+        <labelFemale>righteous heroine</labelFemale>
+        <description>Lives by the code of the jianghu: helps the weak, inspires others and strikes a little harder for a just cause. The storytellers of Jiuxiao's teahouses live off such heroes, and swear half their tales are true.</description>
+        <statOffsets>
+          <SocialImpact>0.15</SocialImpact>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.05</MeleeDamageFactor>
+        </statFactors>
+        <skillGains>
+          <Melee>2</Melee>
+          <Social>1</Social>
+        </skillGains>
+      </li>
+    </degreeDatas>
+      <modExtensions>
+      <li Class="Convergence.DefModExtension_TraitConflicts">
+        <conflicts>
+          <li><trait>Psychopath</trait></li>
+          <li><trait>Bloodlust</trait></li>
+          <li><trait>Cannibal</trait></li>
+        </conflicts>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_ArrogantYoungMaster</defName>
+    <commonality>0.08</commonality>
+    <degreeDatas>
+      <li>
+        <label>arrogant young master</label>
+        <labelFemale>arrogant young miss</labelFemale>
+        <description>"Do you know who my father is?" Picks fights, looks down on everyone and, when the temper snaps, snaps loudly. Yan Zhao, core disciple of Azure Peak, is the model every young master of Jiuxiao tries to imitate.</description>
+        <statOffsets>
+          <NegotiationAbility>-0.1</NegotiationAbility>
+        </statOffsets>
+        <socialFightChanceFactor>2.5</socialFightChanceFactor>
+        <!-- His breakdowns are loud: tantrums, insults or a rage, never quiet ones. -->
+        <theOnlyAllowedMentalBreaks>
+          <li>Tantrum</li>
+          <li>InsultingSpree</li>
+          <li>TargetedInsultingSpree</li>
+          <li>Berserk</li>
+        </theOnlyAllowedMentalBreaks>
+        <skillGains>
+          <Melee>2</Melee>
+        </skillGains>
+      </li>
+    </degreeDatas>
+      <modExtensions>
+      <li Class="Convergence.DefModExtension_TraitConflicts">
+        <conflicts>
+          <li><trait>Kind</trait></li>
+          <li><trait>Ascetic</trait></li>
+        </conflicts>
+      </li>
+    </modExtensions>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_HiddenExpert</defName>
+    <conflictingTraits>
+      <li>CVG_ArrogantYoungMaster</li>
+    </conflictingTraits>
+    <commonality>0.05</commonality>
+    <degreeDatas>
+      <li>
+        <label>hidden expert</label>
+        <labelFemale>hidden expert</labelFemale>
+        <description>Sweeps the floors and hides a great power: few see the dodge coming, and fewer see the blow. Old Zhao, a beggar among the rogue cultivators, is said to have sat at the Nascent Soul realm for a century without anyone noticing.</description>
+        <statOffsets>
+          <MeleeDodgeChance>5</MeleeDodgeChance>
+          <MeleeHitChance>3</MeleeHitChance>
+        </statOffsets>
+        <skillGains>
+          <Intellectual>2</Intellectual>
+          <Melee>2</Melee>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_ThirstForVengeance</defName>
+    <commonality>0.06</commonality>
+    <degreeDatas>
+      <li>
+        <label>thirst for vengeance</label>
+        <description>Every blow is for a debt not yet paid: strikes land harder, and the grudge wears at the mind. In the jianghu a blood debt passes from parent to child, and some have been carried since the Great Rupture.</description>
+        <statOffsets>
+          <MentalBreakThreshold>0.03</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.1</MeleeDamageFactor>
+        </statFactors>
+        <skillGains>
+          <Shooting>2</Shooting>
+          <Melee>2</Melee>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_LoyalDisciple</defName>
+    <commonality>0.08</commonality>
+    <degreeDatas>
+      <li>
+        <label>loyal disciple</label>
+        <labelFemale>loyal disciple</labelFemale>
+        <description>Learns eagerly and stays calm under a master's eye. Azure Peak still honors the disciple who carried a dying elder down the mountain during the Iron Calamity, refusing every order to leave.</description>
+        <statOffsets>
+          <MentalBreakThreshold>-0.03</MentalBreakThreshold>
+        </statOffsets>
+        <statFactors>
+          <GlobalLearningFactor>1.1</GlobalLearningFactor>
+        </statFactors>
+        <skillGains>
+          <Social>2</Social>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>CVG_SecludedCultivator</defName>
+    <commonality>0.06</commonality>
+    <degreeDatas>
+      <li>
+        <label>lover of seclusion</label>
+        <description>Happiest in closed-door cultivation: cultivates faster alone, but crowds wear {PAWN_objective} down. The hermits of Jiuxiao sealed their caves with a boulder and rolled it back a decade later.</description>
+        <statOffsets>
+          <SocialImpact>-0.15</SocialImpact>
+        </statOffsets>
+        <statFactors>
+          <CVG_CultivationSpeed>1.2</CVG_CultivationSpeed>
+        </statFactors>
+        <skillGains>
+          <Intellectual>2</Intellectual>
+        </skillGains>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+</Defs>
