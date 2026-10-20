@@ -37,12 +37,14 @@ Portions of the materials used to create this content/mod are trademarks and/or 
     <li>
       <packageId>prospero1088.convergence.resources</packageId>
       <displayName>Convergence: Resources</displayName>
-      <downloadUrl>https://steamcommunity.com/app/294100/workshop/</downloadUrl>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/3823680471</steamWorkshopUrl>
+      <downloadUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3823680471</downloadUrl>
     </li>
     <li>
       <packageId>prospero1088.convergence.formations</packageId>
       <displayName>Convergence: Formations</displayName>
-      <downloadUrl>https://steamcommunity.com/app/294100/workshop/</downloadUrl>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/3823677994</steamWorkshopUrl>
+      <downloadUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3823677994</downloadUrl>
     </li>
   </modDependencies>
   <loadAfter>
