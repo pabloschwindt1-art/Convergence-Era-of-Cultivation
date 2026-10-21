@@ -10,7 +10,13 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 ## Sin publicar
 
-### Convergence: Qi-Tech → 0.2.1
+(nada pendiente)
+
+---
+
+## Publicadas
+
+### Convergence: Qi-Tech 0.2.1 — subida 2026-10-21
 - El exoesqueleto ya no se tiñe de gris: heredaba el `colorGenerator` de la armadura de reconocimiento vanilla (gris 0,33-0,9).
   Ahora se ve con los colores del arte (`ColorGenerator_White`). Los exoesqueletos ya fabricados conservan su color guardado.
 
@@ -19,10 +25,6 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 0.2.1
 - Fixed: the Qi-Tech exoskeleton no longer comes out tinted grey; it shows its real colours.
 ```
-
----
-
-## Publicadas
 
 ### Convergence: Core 0.1.1 — subida 2026-10-21
 - Nuevo material **cristal primordial** (`CVG_PrimordialCrystal`): 10 piedras espirituales en la mesa de cantero. Material común para
