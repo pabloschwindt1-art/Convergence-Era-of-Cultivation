@@ -281,6 +281,25 @@
     <placeWorkers><li>PlaceWorker_GlowRadius</li><li>Convergence.Formations.PlaceWorker_FormationRange</li></placeWorkers>
   </ThingDef>
 
+  <!-- The qi sword the guardian statue throws (the flying-sword art of the Core technique, smaller and quicker). -->
+  <ThingDef ParentName="CVG_TechniqueBulletBase">
+    <defName>CVG_Projectile_GuardianQiSword</defName>
+    <label>guardian qi sword</label>
+    <graphicData>
+      <texPath>Things/Projectile/CVG/FlyingSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Cut</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <armorPenetrationBase>0.4</armorPenetrationBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>80</speed>
+    </projectile>
+  </ThingDef>
+
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>CVG_Gun_GuardianStatue</defName>
     <label>guardian statue sword</label>
@@ -302,12 +321,12 @@
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
-        <defaultProjectile>CVG_Projectile_MetalNeedle</defaultProjectile>
+        <defaultProjectile>CVG_Projectile_GuardianQiSword</defaultProjectile>
         <warmupTime>0.6</warmupTime>
         <range>24.9</range>
         <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <burstShotCount>3</burstShotCount>
-        <soundCast>Shot_NeedleGun</soundCast>
+        <soundCast>Shot_ChargeBlaster</soundCast>
         <muzzleFlashScale>0</muzzleFlashScale>
         <consumeFuelPerShot>0.05</consumeFuelPerShot>
       </li>
