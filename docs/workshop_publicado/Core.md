@@ -74,8 +74,6 @@ No electricity or industrial research is required.
 
 Convergence is playable and undergoing additional testing and balancing. Nascent Soul and higher cultivation realms are not implemented yet.
 
-Community feedback, bug reports and contributions are welcome.
-
 [i]What's new in 0.1.1: a new material, the primordial crystal.[/i]
 
 [h2]Community & Contributions[/h2]
