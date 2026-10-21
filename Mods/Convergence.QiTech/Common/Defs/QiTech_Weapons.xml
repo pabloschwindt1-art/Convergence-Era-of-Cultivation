@@ -68,6 +68,9 @@
       <!-- Two variants (_a plain, _b ornate): each rifle picks one at random and keeps it. -->
       <texPath>Things/Item/Equipment/CVG/QiTech/InductionRifle</texPath>
       <graphicClass>Graphic_Random</graphicClass>
+      <!-- No random tilt on the ground: it wraps the graphic in Graphic_RandomRotated, and Character Editor
+           (TextureTool.GetGraphicForRandom) expects a bare Graphic_Random and throws every frame. -->
+      <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
     </graphicData>
     <soundInteract>Interact_Rifle</soundInteract>
     <statBases>

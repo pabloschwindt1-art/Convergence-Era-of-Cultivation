@@ -10,7 +10,15 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 ## Sin publicar
 
-(nada pendiente)
+### Convergence: Qi-Tech → 0.2.2
+- Compatibilidad con Character Editor: el rifle de inducción (dos variantes, `Graphic_Random`) hacía fallar su ventana de objetos
+  (`TextureTool.GetGraphicForRandom`, miles de "GUI Error"). Ahora no se inclina al azar en el suelo, que era lo que envolvía su gráfico.
+
+**Change notes (Steam):**
+```
+0.2.2
+- Fixed: compatibility with Character Editor (the qi induction rifle broke its item window).
+```
 
 ---
 

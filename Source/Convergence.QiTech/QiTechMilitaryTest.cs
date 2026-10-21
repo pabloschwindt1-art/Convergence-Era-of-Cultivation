@@ -157,6 +157,8 @@ namespace Convergence.QiTech
                 Check(d.weaponTags.All(t => !tags.Contains(t)), name + ": no pawnkind carries it (raids unchanged): " + string.Join(",", d.weaponTags));
                 Check(!d.tradeTags.Contains("WeaponRanged"), name + ": not in vanilla trader stock");
                 Tex(d.graphicData.texPath, name);
+                if (d.graphicData.graphicClass == typeof(Graphic_Random))
+                    Check(d.graphicData.Graphic is Graphic_Random, name + ": bare Graphic_Random (Character Editor casts it; Graphic_RandomRotated breaks its window)");
                 Tex(d.Verbs[0].defaultProjectile.graphicData.texPath, d.Verbs[0].defaultProjectile.defName);
             }
             mortal.Destroy();
