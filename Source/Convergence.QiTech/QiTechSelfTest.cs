@@ -165,6 +165,8 @@ namespace Convergence.QiTech
             Check(!instr.CanBeResearchedAt(bench, true), "without a resonator advanced instrumentation cannot be researched");
             var res = Spawn("CVG_SpiritResonator", map, at + new IntVec3(3, 0, 0));
             Check(res.def.costList.Any(cc => cc.thingDef.defName == "CVG_PrimordialCrystal") && res.def.HasComp(typeof(CompPowerTrader)), "resonator needs power and primordial crystals");
+            Check(ContentFinder<UnityEngine.Texture2D>.Get(res.def.graphicData.texPath, false) != null && res.def.graphicData.texPath.Contains("SpiritResonator"),
+                "resonator has its own art: " + res.def.graphicData.texPath);
             var power = res.TryGetComp<CompPowerTrader>();
             power.PowerOn = true;
             bool linked = bench.TryGetComp<CompAffectedByFacilities>().LinkedFacilitiesListForReading.Contains(res);
@@ -179,6 +181,8 @@ namespace Convergence.QiTech
             var recipe = DefDatabase<RecipeDef>.GetNamedSilentFail("CVG_MakePrimordialCrystal");
             Check(recipe != null && recipe.ProducedThingDef?.defName == "CVG_PrimordialCrystal" && recipe.AllRecipeUsers.Any(u => u.defName == "TableStonecutter")
                 && recipe.ingredients[0].GetBaseCount() == 10, "primordial crystal: 10 spirit stones at the stonecutter's table");
+            var crystalTex = DefDatabase<ThingDef>.GetNamed("CVG_PrimordialCrystal").graphicData.texPath;
+            Check(ContentFinder<UnityEngine.Texture2D>.GetAllInFolder(crystalTex).Count() == 3, "primordial crystal has its own 3 stack textures: " + crystalTex);
 
             conv.SetValue(wasActive);
             res.Destroy();

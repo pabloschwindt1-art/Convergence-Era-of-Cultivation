@@ -12,7 +12,7 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 ### Convergence: Core → 0.1.1
 - Nuevo material **cristal primordial** (`CVG_PrimordialCrystal`): 10 piedras espirituales en la mesa de cantero. Material común para
-  los módulos (primer uso: el resonador espiritual de Qi-Tech). Arte provisional (jade vanilla).
+  los módulos (primer uso: el resonador espiritual de Qi-Tech). Arte del usuario.
 
 **Change notes (Steam):**
 ```
@@ -36,7 +36,7 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 - **Ingeniería Espiritual:** nueva pestaña de investigación con todas las investigaciones de Qi-Tech; investigación científica en el banco
   avanzado, sin cultivadores ni Dao. Todo bloqueado hasta la Convergencia (bloqueo real). Tres investigaciones nuevas: Fundamentos del Qi,
   Resonancia Espiritual, Instrumentación Espiritual Avanzada.
-- **Resonador espiritual** (2×2, 250 W): instalación del banco avanzado, necesaria para la Instrumentación Espiritual Avanzada. Arte provisional.
+- **Resonador espiritual** (2×2, 250 W): instalación del banco avanzado, necesaria para la Instrumentación Espiritual Avanzada. Arte del usuario.
 - `CVG_Research_QiTech` (mismo defName) ahora requiere Microelectrónica y Fundamentos del Qi en vez de la red de qi de Formations.
 - **Armas:** rifle de inducción de qi (grado 1, dos variantes), rifle de qi concentrado (grado 2), cañón de compresión de qi (grado 3).
 - **Torretas:** torreta de inducción de qi (grado 2) y cañón de contención de qi (grado 3), con energía y piedras espirituales por disparo;

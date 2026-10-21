@@ -64,10 +64,10 @@ Diseño del usuario: la vía científica al qi, independiente del Dao (sin culti
   base para tecnologías futuras). `CVG_Research_QiTech` (mismo defName) ahora cuelga de Fundamentos del Qi.
 - **Resonador espiritual** (`CVG_SpiritResonator`, 2×2): el multianalizador del qi. 250 W, interruptor, instalación del banco
   avanzado (parche a `linkableFacilities`), máx. 1 por banco, sin bonus de velocidad. No genera, almacena, convierte ni consume qi.
-  Costo: acero 80, plastiacero 30, componentes 6, **cristal primordial 4**. Arte **provisional**: textura del multianalizador vanilla
-  (falta el sprite del usuario: `Things/Building/CVG/QiTech/SpiritResonator`).
+  Costo: acero 80, plastiacero 30, componentes 6, **cristal primordial 4**. Arte del usuario (`Things/Building/CVG/QiTech/SpiritResonator`,
+  `drawSize` 2: el dibujo llena las 2×2 casillas).
 - **Cristal primordial** (Core, `CVG_PrimordialCrystal`): 10 piedras espirituales en la mesa de cantero; material común para los
-  módulos. Arte provisional (jade vanilla).
+  módulos. Arte del usuario (pilas `_a`/`_b`/`_c`).
 - Prueba: `-cvgqitechtest` comprueba la pestaña, el bloqueo con la Convergencia apagada y encendida, el avance de un colono sin raíz,
   el resonador como instalación (con y sin energía) y la receta del cristal.
 - Fuera de alcance por ahora: recolectores, baterías, convertidores nuevos, mesas Qi-Tech, más armas o torretas, barreras, eventos.

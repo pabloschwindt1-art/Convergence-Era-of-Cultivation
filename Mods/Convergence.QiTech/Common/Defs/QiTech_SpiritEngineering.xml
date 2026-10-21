@@ -74,12 +74,13 @@
     <label>spirit resonator</label>
     <description>A ring of copper coils around four primordial crystals, driven by grid power until the crystals ring at a frequency the instruments can follow. Placed next to a hi-tech research bench, it creates a controlled resonance field for experiments with qi. It does not make, store or convert qi; it only lets it be measured. Technicians keep the room quiet while it runs, because the crystals pick up voices and, they swear, sometimes answer.</description>
     <graphicData>
-      <!-- Provisional: vanilla multi-analyzer. Final art (pending, by the user): Things/Building/CVG/QiTech/SpiritResonator -->
-      <texPath>Things/Building/Misc/MultiAnalyzer</texPath>
+      <!-- User's art; fills the 2x2 footprint (the vanilla multi-analyzer art has a margin, hence its 2.47). -->
+      <texPath>Things/Building/CVG/QiTech/SpiritResonator</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>2.46875</drawSize>
+      <drawSize>(2,2)</drawSize>
+      <damageData><rect>(0.2,0.2,1.6,1.6)</rect></damageData>
     </graphicData>
-    <uiIconScale>0.85</uiIconScale>
+    <uiIconScale>0.9</uiIconScale>
     <researchPrerequisites><li>CVG_Research_SpiritResonance</li></researchPrerequisites>
     <size>(2,2)</size>
     <rotatable>false</rotatable>

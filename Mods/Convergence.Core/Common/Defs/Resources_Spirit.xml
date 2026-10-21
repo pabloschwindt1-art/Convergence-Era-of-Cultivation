@@ -155,14 +155,14 @@
   <!--
     Primordial crystal: spirit stones pressed into a stable lattice. A shared Core material for any module that needs qi in a solid,
     measurable form (first user: the spirit resonator of Qi-Tech). Made from spirit stones, so it only exists after the Convergence.
-    Art is provisional (vanilla jade); final art: Things/Item/Resource/CVG_PrimordialCrystal (Graphic_StackCount).
+    Art by the user: Things/Item/Resource/CVG_PrimordialCrystal/ (_a one crystal, _b a few, _c a heap).
   -->
   <ThingDef ParentName="ResourceBase">
     <defName>CVG_PrimordialCrystal</defName>
     <label>primordial crystal</label>
     <description>Ten spirit stones ground, pressed and cut until their qi settles into a single clear lattice that no longer leaks. Sect artisans call it "primordial" because, unlike a raw stone, it holds the same amount of qi from one day to the next, as the world supposedly did before the Calamity. Engineers of the Edge value it for a plainer reason: it is the first thing touched by qi that gives the same reading twice.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Jade</texPath>
+      <texPath>Things/Item/Resource/CVG_PrimordialCrystal</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <soundInteract>ChunkRock_Drop</soundInteract>
