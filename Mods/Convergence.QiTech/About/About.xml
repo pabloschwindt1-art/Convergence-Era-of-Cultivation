@@ -3,13 +3,13 @@
   <name>Convergence: Qi-Tech</name>
   <author>Prospero1088</author>
   <packageId>prospero1088.convergence.qitech</packageId>
-  <modVersion>0.1.0</modVersion>
+  <modVersion>0.2.0</modVersion>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
-  <description>Qi-Tech for Convergence: Era of Cultivation (v0.1), only for those who play with technology.
+  <description>Qi-Tech for Convergence: Era of Cultivation (v0.2), only for those who play with technology.
 
-A qi converter that joins the qi network with the vanilla power grid (qi to electricity or electricity to qi, by mode), a Qi-Tech exoskeleton with a qi core and high celestial dissonance, and a stabilization chamber that lowers the celestial dissonance of mechanical implants for a week. Requires industrial research; the base mod never does.
+Spiritual Engineering: a research tab for the scientific road to qi, researched at the hi-tech bench with no cultivators needed and locked until the Convergence, with a spirit resonator as its research facility. Qi weapons (induction rifle, concentrated rifle, compression cannon) and powered turrets that burn spirit stones per shot, graded so that they wound cultivators that ordinary guns barely scratch. A qi converter that joins the qi network with the vanilla power grid, a Qi-Tech exoskeleton with a qi core and high celestial dissonance, and a stabilization chamber that lowers the celestial dissonance of mechanical implants for a week. Requires industrial research; the base mod never does.
 
 Requires Convergence: Era of Cultivation and Convergence: Formations.
 
