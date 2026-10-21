@@ -13,7 +13,7 @@ namespace Convergence.QiTech
     public class GameComponent_QiTechTest : GameComponent
     {
         private static readonly bool Enabled = GenCommandLine.CommandLineArgPassed("cvgqitechtest");
-        private bool done;
+        private static bool done; // estático: no repetir tras cargar la partida del autotest militar
         private readonly StringBuilder sb = new StringBuilder("[Convergence] Qi-Tech self-test");
         private int fails;
 

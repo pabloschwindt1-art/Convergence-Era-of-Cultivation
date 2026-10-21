@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Qi-Tech v0.2: qi turrets (docs/modulos/QITECH.md). Wuxia version of the vanilla autocannon turret (same abstract parent, AutocannonTurret):
+    Building_TurretGun + grid power (CompPowerTrader, flickable, breakdowns) + spirit stones as fuel per shot (consumeFuelPerShot, the
+    Formations pattern: fuelConsumptionRate 0 + consumeFuelOnlyWhenUsed). Vanilla stops firing without power (Active), switched off
+    (FlickedOff -> PowerOn false) or without fuel for one shot (Verb.Available). The spirit grade is on the turret gun (turretGunDef).
+    Art: Things/Building/CVG/QiTech/<Name> (base), <Name>_Top (points east, centred on its pivot), <Name>_MenuIcon; made by tools/art/recorte/turret_sheet.py.
+  -->
+
+  <!-- ================= Qi induction turret (grade 2) ================= -->
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>CVG_QT_Gun_InductionTurret</defName>
+    <label>qi induction turret emitter</label>
+    <description>The emitter of a qi induction turret: three coils that fold the qi of a spirit stone around each bolt.</description>
+    <graphicData>
+      <!-- Points east like Ludeon _Top art (TurretTop.ArtworkRotation -90); centred on its pivot (the qi core) by tools/art/recorte/turret_sheet.py -->
+      <texPath>Things/Building/CVG/QiTech/QiInductionTurret_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.66</AccuracyMedium>
+      <AccuracyLong>0.50</AccuracyLong>
+      <RangedWeapon_Cooldown>3.0</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>10</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>CVG_QT_InductionBolt</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <range>30.9</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <consumeFuelPerShot>0.1</consumeFuelPerShot>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Convergence.CompProperties_SpiritGrade">
+        <grade>2</grade>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="AutocannonTurret">
+    <defName>CVG_QT_InductionTurret</defName>
+    <label>qi induction turret</label>
+    <description>A heavy automatic turret that runs on two things at once: current from the grid and qi from the spirit stones in its capacitor. Each burst spends a little stone, and without either the coils go cold. No cultivator is needed to man it. The first ones guarded the warehouses where the Edge stored the spirit stones it bought from the sects, which the sects considered a joke in poor taste.</description>
+    <uiIconPath>Things/Building/CVG/QiTech/QiInductionTurret_MenuIcon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiTech/QiInductionTurret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.96,1.96)</drawSize>
+      <drawOffset>(0,0,0)</drawOffset>
+      <damageData><rect>(0.2,0.2,1.6,1.6)</rect></damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>320</MaxHitPoints>
+      <WorkToBuild>12000</WorkToBuild>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <CVG_SpiritStone>20</CVG_SpiritStone>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>450</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0</fuelConsumptionRate>
+        <fuelCapacity>12</fuelCapacity>
+        <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
+        <initialFuelPercent>0</initialFuelPercent>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <autoRefuelPercent>0.4</autoRefuelPercent>
+        <fuelLabel>Spirit stones</fuelLabel>
+        <fuelGizmoLabel>Spirit stones</fuelGizmoLabel>
+      </li>
+    </comps>
+    <building>
+      <combatPower>90</combatPower>
+      <turretGunDef>CVG_QT_Gun_InductionTurret</turretGunDef>
+      <turretTopOffset>(0,0)</turretTopOffset>
+      <turretBurstCooldownTime>3.0</turretBurstCooldownTime>
+    </building>
+    <uiOrder>2560</uiOrder>
+    <modExtensions>
+      <!-- Projectile and flash leave from the tip of the barrel, not from the centre of the base (Convergence.QiTech.TurretMuzzle). -->
+      <li Class="Convergence.QiTech.DefModExtension_TurretMuzzle">
+        <muzzleDistance>1.15</muzzleDistance>
+        <flashScale>9</flashScale>
+      </li>
+    </modExtensions>
+    <researchPrerequisites><li>CVG_Research_QiDefense</li></researchPrerequisites>
+  </ThingDef>
+
+  <!-- ================= Qi containment cannon (grade 3) ================= -->
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>CVG_QT_Gun_ContainmentTurret</defName>
+    <label>qi containment cannon emitter</label>
+    <description>The emitter of a qi containment cannon: a magnetic bottle that holds a compressed qi bolt until it is let go.</description>
+    <graphicData>
+      <!-- Points east like Ludeon _Top art (TurretTop.ArtworkRotation -90); centred on its pivot (the qi core) by tools/art/recorte/turret_sheet.py -->
+      <texPath>Things/Building/CVG/QiTech/QiContainmentTurret_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.30</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.80</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>5.0</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>15</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <defaultProjectile>CVG_QT_CompressedBolt</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <minRange>3.9</minRange>
+        <range>43.9</range>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <consumeFuelPerShot>0.4</consumeFuelPerShot>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Convergence.CompProperties_SpiritGrade">
+        <grade>3</grade>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="AutocannonTurret">
+    <defName>CVG_QT_ContainmentTurret</defName>
+    <label>qi containment cannon</label>
+    <description>A long-range turret that fires one compressed qi bolt at a time, each worth almost half a spirit stone, dense enough to wound a Golden Core cultivator as if they were mortal. It draws a great deal of power and cannot hit what stands right next to it. The Azure Peak sent an envoy to ask that it not be pointed at their mountain, and the envoy was the first person it was pointed at.</description>
+    <uiIconPath>Things/Building/CVG/QiTech/QiContainmentTurret_MenuIcon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiTech/QiContainmentTurret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.96,1.96)</drawSize>
+      <drawOffset>(0,0,0)</drawOffset>
+      <damageData><rect>(0.2,0.2,1.6,1.6)</rect></damageData>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>380</MaxHitPoints>
+      <WorkToBuild>18000</WorkToBuild>
+      <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
+    </statBases>
+    <costList>
+      <Steel>150</Steel>
+      <Plasteel>120</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+      <CVG_SpiritStone>45</CVG_SpiritStone>
+    </costList>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1200</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0</fuelConsumptionRate>
+        <fuelCapacity>12</fuelCapacity>
+        <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
+        <initialFuelPercent>0</initialFuelPercent>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <autoRefuelPercent>0.4</autoRefuelPercent>
+        <fuelLabel>Spirit stones</fuelLabel>
+        <fuelGizmoLabel>Spirit stones</fuelGizmoLabel>
+      </li>
+    </comps>
+    <building>
+      <combatPower>130</combatPower>
+      <turretGunDef>CVG_QT_Gun_ContainmentTurret</turretGunDef>
+      <turretTopOffset>(0,0)</turretTopOffset>
+      <turretTopDrawSize>3.2</turretTopDrawSize> <!-- heavier than the induction turret (2.7, inherited) -->
+      <turretBurstCooldownTime>5.0</turretBurstCooldownTime>
+    </building>
+    <uiOrder>2561</uiOrder>
+    <modExtensions>
+      <!-- Projectile and flash leave from the tip of the barrel, not from the centre of the base (Convergence.QiTech.TurretMuzzle). -->
+      <li Class="Convergence.QiTech.DefModExtension_TurretMuzzle">
+        <muzzleDistance>1.4</muzzleDistance>
+        <flashScale>12</flashScale>
+      </li>
+    </modExtensions>
+    <researchPrerequisites><li>CVG_Research_QiAdvancedMilitary</li></researchPrerequisites>
+  </ThingDef>
+</Defs>
