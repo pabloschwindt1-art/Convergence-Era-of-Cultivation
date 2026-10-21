@@ -10,7 +10,21 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 ## Sin publicar
 
-### Convergence: Core → 0.1.1
+### Convergence: Qi-Tech → 0.2.1
+- El exoesqueleto ya no se tiñe de gris: heredaba el `colorGenerator` de la armadura de reconocimiento vanilla (gris 0,33-0,9).
+  Ahora se ve con los colores del arte (`ColorGenerator_White`). Los exoesqueletos ya fabricados conservan su color guardado.
+
+**Change notes (Steam):**
+```
+0.2.1
+- Fixed: the Qi-Tech exoskeleton no longer comes out tinted grey; it shows its real colours.
+```
+
+---
+
+## Publicadas
+
+### Convergence: Core 0.1.1 — subida 2026-10-21
 - Nuevo material **cristal primordial** (`CVG_PrimordialCrystal`): 10 piedras espirituales en la mesa de cantero. Material común para
   los módulos (primer uso: el resonador espiritual de Qi-Tech). Arte del usuario.
 
@@ -20,7 +34,7 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 - New material: primordial crystal, made from 10 spirit stones at the stonecutter's table. Shared by the modules (first used by Qi-Tech's spirit resonator).
 ```
 
-### Convergence: Formations → 0.1.1
+### Convergence: Formations 0.1.1 — subida 2026-10-21
 - Torretas: los cabezales de la estatua guardiana, la ballesta rúnica y la ballesta del trueno estaban girados 90° respecto del disparo;
   ahora apuntan al blanco (como el arte de Ludeon, al este).
 - La estatua guardiana lanza **espadas de qi** (nuevo proyectil `CVG_Projectile_GuardianQiSword`, sonido de energía) en vez de agujas.
@@ -32,7 +46,7 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 - The guardian statue now throws qi swords instead of golden needles, as its lore says.
 ```
 
-### Convergence: Qi-Tech → 0.2.0
+### Convergence: Qi-Tech 0.2.0 — subida 2026-10-21
 - **Ingeniería Espiritual:** nueva pestaña de investigación con todas las investigaciones de Qi-Tech; investigación científica en el banco
   avanzado, sin cultivadores ni Dao. Todo bloqueado hasta la Convergencia (bloqueo real). Tres investigaciones nuevas: Fundamentos del Qi,
   Resonancia Espiritual, Instrumentación Espiritual Avanzada.
@@ -55,9 +69,4 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 - Qi-Tech no longer needs the Formations qi network research to start.
 - New art for the converter, the exoskeleton, the weapons, the turrets and the qi bolts.
 ```
-
----
-
-## Publicadas
-
 ### 0.1.0 — los 15 mods (primera publicación, oculta)

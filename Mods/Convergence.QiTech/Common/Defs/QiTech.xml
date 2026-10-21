@@ -212,6 +212,8 @@
       <texPath>Things/Pawn/Humanlike/Apparel/CVG/QiTechExosuit/QiTechExosuit</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <!-- The recon armor base tints its art grey (0.9 or 0.33): the exoskeleton keeps the user's colours. -->
+    <colorGenerator Class="ColorGenerator_White" Inherit="False" />
     <apparel>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/QiTechExosuit/QiTechExosuit</wornGraphicPath>
       <tags>
