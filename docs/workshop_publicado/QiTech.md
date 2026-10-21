@@ -65,7 +65,7 @@ English, Spanish and Spanish (Latin America).
 
 ## Development Status
 
-Version 0.2.1 — Early Release.
+Version 0.2.2 — Early Release.
 
 **What's new in 0.2.0:** the Spiritual Engineering research tab, the spirit resonator, qi weapons, qi turrets and new art for the whole module. Your existing research is kept.
 
