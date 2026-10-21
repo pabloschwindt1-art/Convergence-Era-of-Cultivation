@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- The spirit resonator links to the hi-tech research bench as a facility, like the vanilla multi-analyzer. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="HiTechResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+    <value>
+      <li>CVG_SpiritResonator</li>
+    </value>
+  </Operation>
+</Patch>

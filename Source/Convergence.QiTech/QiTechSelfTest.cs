@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Text;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -108,6 +109,80 @@ namespace Convergence.QiTech
             pawn.apparel.Remove(suit);
             suit.Destroy();
             foreach (var t in new[] { pillar, crystal, conv, chamber }) t.Destroy();
+            RunSpiritEngineering(map, c + new IntVec3(0, 0, -6));
+        }
+
+        /// <summary>Ingeniería Espiritual: pestaña, bloqueo real por la Convergencia, investigación de un mortal, resonador y cristal.</summary>
+        private void RunSpiritEngineering(Map map, IntVec3 at)
+        {
+            var tab = DefDatabase<ResearchTabDef>.GetNamedSilentFail("CVG_SpiritualEngineering");
+            var inTab = DefDatabase<ResearchProjectDef>.AllDefs.Where(p => p.tab == tab).ToList();
+            Check(tab != null && inTab.Count == 10, "spiritual engineering tab with its 10 projects (" + inTab.Count + ")");
+            Check(inTab.All(p => p.HasModExtension<DefModExtension_RequiresConvergence>()), "every project of the tab needs the Convergence");
+            var fund = DefDatabase<ResearchProjectDef>.GetNamed("CVG_Research_QiFundamentals");
+            var reso = DefDatabase<ResearchProjectDef>.GetNamed("CVG_Research_SpiritResonance");
+            var instr = DefDatabase<ResearchProjectDef>.GetNamed("CVG_Research_AdvancedSpiritInstrumentation");
+            Check(DefDatabase<ResearchProjectDef>.GetNamed("CVG_Research_QiTech").prerequisites.Contains(fund), "qi-tech (same defName) now hangs from qi fundamentals");
+            Check(fund.requiredResearchBuilding?.defName == "HiTechResearchBench" && instr.requiredResearchFacilities.Any(f => f.defName == "CVG_SpiritResonator"),
+                "hi-tech bench for the branch; the resonator for advanced instrumentation");
+
+            // Banco avanzado y prerrequisitos vanilla terminados; el bloqueo se prueba con la Convergencia apagada y encendida.
+            foreach (var cell in GenRadial.RadialCellsAround(at, 5f, true).Where(x => x.InBounds(map)))
+                foreach (var t in cell.GetThingList(map).ToList()) if (t.def.destroyable && t.def.category != ThingCategory.Pawn) t.Destroy();
+            var bench = (Building_ResearchBench)Spawn("HiTechResearchBench", map, at, "Steel");
+            var rm = Find.ResearchManager;
+            void FinishWithPrereqs(ResearchProjectDef p)
+            {
+                if (p.IsFinished) return;
+                foreach (var q in (p.prerequisites ?? new System.Collections.Generic.List<ResearchProjectDef>()).Concat(p.hiddenPrerequisites ?? new System.Collections.Generic.List<ResearchProjectDef>()))
+                    FinishWithPrereqs(q);
+                rm.FinishProject(p, doCompletionDialog: false, null, doCompletionLetter: false);
+            }
+            FinishWithPrereqs(DefDatabase<ResearchProjectDef>.GetNamed("MicroelectronicsBasics"));
+            var conv = Traverse.Create(GameComponent_Convergence.Instance).Field("occurred");
+            bool wasActive = conv.GetValue<bool>();
+            conv.SetValue(false);
+            Check(!fund.CanStartNow, "before the Convergence qi fundamentals cannot be started");
+            conv.SetValue(true);
+            Check(fund.CanStartNow, "after the Convergence it can");
+
+            // Un colono sin raíz espiritual investiga de forma convencional.
+            var mortal = map.mapPawns.FreeColonistsSpawned.FirstOrDefault(p => CompCultivator.For(p) == null || !CompCultivator.For(p).HasRoot);
+            if (mortal != null)
+            {
+                rm.SetCurrentProject(fund);
+                float before = rm.GetProgress(fund);
+                rm.ResearchPerformed(100f, mortal);
+                Check(rm.GetProgress(fund) > before, "a colonist without a spirit root advances qi fundamentals (" + before.ToString("0") + " -> " + rm.GetProgress(fund).ToString("0") + ")");
+                rm.StopProject(fund);
+            }
+            else sb.Append("\n    (no colonist without a spirit root to research with)");
+            rm.FinishProject(fund, false, null, false);
+            Check(reso.CanStartNow, "spirit resonance opens after qi fundamentals");
+            rm.FinishProject(reso, false, null, false);
+
+            // Resonador: instalación del banco avanzado; sin él, o sin energía, no hay instrumentación avanzada.
+            Check(!instr.CanBeResearchedAt(bench, true), "without a resonator advanced instrumentation cannot be researched");
+            var res = Spawn("CVG_SpiritResonator", map, at + new IntVec3(3, 0, 0));
+            Check(res.def.costList.Any(cc => cc.thingDef.defName == "CVG_PrimordialCrystal") && res.def.HasComp(typeof(CompPowerTrader)), "resonator needs power and primordial crystals");
+            var power = res.TryGetComp<CompPowerTrader>();
+            power.PowerOn = true;
+            bool linked = bench.TryGetComp<CompAffectedByFacilities>().LinkedFacilitiesListForReading.Contains(res);
+            Check(linked, "the resonator links to the hi-tech bench as a facility");
+            Check(instr.CanBeResearchedAt(bench, true), "with a powered resonator advanced instrumentation can be researched");
+            power.PowerOn = false;
+            Check(!instr.CanBeResearchedAt(bench, true), "with the resonator unpowered it cannot");
+            power.PowerOn = true;
+            Check(!res.def.HasComp(typeof(CompQiNode)) && res.def.GetCompProperties<CompProperties_Refuelable>() == null, "the resonator neither makes, stores nor burns qi");
+
+            // Cristal primordial (Core): 10 piedras espirituales en la mesa de cantero.
+            var recipe = DefDatabase<RecipeDef>.GetNamedSilentFail("CVG_MakePrimordialCrystal");
+            Check(recipe != null && recipe.ProducedThingDef?.defName == "CVG_PrimordialCrystal" && recipe.AllRecipeUsers.Any(u => u.defName == "TableStonecutter")
+                && recipe.ingredients[0].GetBaseCount() == 10, "primordial crystal: 10 spirit stones at the stonecutter's table");
+
+            conv.SetValue(wasActive);
+            res.Destroy();
+            bench.Destroy();
         }
     }
 }

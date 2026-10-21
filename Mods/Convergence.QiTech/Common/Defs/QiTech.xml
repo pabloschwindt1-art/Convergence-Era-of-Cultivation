@@ -8,7 +8,7 @@
 
   <ResearchProjectDef>
     <defName>CVG_Research_QiTech</defName>
-    <tab>CVG_Cultivation</tab>
+    <tab>CVG_SpiritualEngineering</tab>
     <label>qi-tech</label>
     <description>The engineers of the Edge never believed in qi until it burned out their meters; then they wanted to measure it. Qi-tech is the result: wire-wound cores that drink qi from an array, converters that turn it into current and back, and an exoskeleton with a core that never sleeps. The sects of Jiuxiao call it "the second forge", with the wariness one gives to a younger brother with a sharp knife.</description>
     <baseCost>2200</baseCost>
@@ -16,14 +16,18 @@
     <prerequisites>
       <li>Electricity</li>
       <li>MicroelectronicsBasics</li>
+      <li>CVG_Research_QiFundamentals</li>
     </prerequisites>
-    <researchViewX>6</researchViewX>
-    <researchViewY>4</researchViewY>
+    <researchViewX>1</researchViewX>
+    <researchViewY>3</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
     <defName>CVG_Research_QiStabilization</defName>
-    <tab>CVG_Cultivation</tab>
+    <tab>CVG_SpiritualEngineering</tab>
     <label>celestial stabilization</label>
     <description>Every metal limb is a small argument with the heavens: the Celestial Dao notices what was not born. A stabilization chamber bathes the body in a field tuned to the five elements, and for about a week the heavens look the other way. It is not forgiveness, only a rest from being measured.</description>
     <baseCost>1800</baseCost>
@@ -31,13 +35,16 @@
     <prerequisites>
       <li>CVG_Research_QiTech</li>
     </prerequisites>
-    <researchViewX>7</researchViewX>
-    <researchViewY>4</researchViewY>
+    <researchViewX>2</researchViewX>
+    <researchViewY>3</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
     <defName>CVG_Research_QiExosuit</defName>
-    <tab>CVG_Cultivation</tab>
+    <tab>CVG_SpiritualEngineering</tab>
     <label>qi-tech exoskeleton</label>
     <description>A frame of plasteel and spirit steel around a core of condensed qi. It makes the wearer faster, harder to kill and louder to the sky. The Celestial Dao hates it, and the engineers who built the first one insist that is a feature.</description>
     <baseCost>2600</baseCost>
@@ -46,8 +53,11 @@
       <li>CVG_Research_QiTech</li>
       <li>Fabrication</li>
     </prerequisites>
-    <researchViewX>7</researchViewX>
-    <researchViewY>5</researchViewY>
+    <researchViewX>2</researchViewX>
+    <researchViewY>4</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
   </ResearchProjectDef>
 
   <!-- ================= Qi <-> electricity converter ================= -->

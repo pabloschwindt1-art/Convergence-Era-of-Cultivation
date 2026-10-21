@@ -151,4 +151,65 @@
       </li>
     </modExtensions>
   </ThingDef>
+
+  <!--
+    Primordial crystal: spirit stones pressed into a stable lattice. A shared Core material for any module that needs qi in a solid,
+    measurable form (first user: the spirit resonator of Qi-Tech). Made from spirit stones, so it only exists after the Convergence.
+    Art is provisional (vanilla jade); final art: Things/Item/Resource/CVG_PrimordialCrystal (Graphic_StackCount).
+  -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_PrimordialCrystal</defName>
+    <label>primordial crystal</label>
+    <description>Ten spirit stones ground, pressed and cut until their qi settles into a single clear lattice that no longer leaks. Sect artisans call it "primordial" because, unlike a raw stone, it holds the same amount of qi from one day to the next, as the world supposedly did before the Calamity. Engineers of the Edge value it for a plainer reason: it is the first thing touched by qi that gives the same reading twice.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Jade</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>ChunkRock_Drop</soundInteract>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <MarketValue>150</MarketValue>
+      <Mass>0.5</Mass>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <deepCommonality>0</deepCommonality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_FengShui">
+        <qi>0.3</qi>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>CVG_MakePrimordialCrystal</defName>
+    <label>make primordial crystal</label>
+    <description>Grind and press ten spirit stones into one primordial crystal.</description>
+    <jobString>Making primordial crystal.</jobString>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <requiredGiverWorkType>Crafting</requiredGiverWorkType>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fixedIngredientFilter>
+    <products>
+      <CVG_PrimordialCrystal>1</CVG_PrimordialCrystal>
+    </products>
+    <recipeUsers>
+      <li>TableStonecutter</li>
+    </recipeUsers>
+  </RecipeDef>
 </Defs>

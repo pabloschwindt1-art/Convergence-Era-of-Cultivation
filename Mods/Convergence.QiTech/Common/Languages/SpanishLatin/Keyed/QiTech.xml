@@ -6,4 +6,5 @@
   <CVG_QiConverter_Toggle_PowerToQi>Cambiar a qi a electricidad</CVG_QiConverter_Toggle_PowerToQi>
   <CVG_QiConverter_ToggleDesc>Cambia el sentido de la conversión. Qi a electricidad: consume {1} de qi/día de la red y entrega {0} W. Electricidad a qi: toma {0} W y entrega {2} de qi/día.</CVG_QiConverter_ToggleDesc>
   <CVG_QiConverter_Watts>Electricidad: {0} W</CVG_QiConverter_Watts>
+  <CVG_QT_RequiresConvergence>Requiere la Convergencia: antes de ella el qi no se puede medir y este proyecto no se puede empezar.</CVG_QT_RequiresConvergence>
 </LanguageData>

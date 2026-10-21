@@ -57,6 +57,10 @@ sus propios multiplicadores.
 
 Se refinan en un **horno de refinado** (combustible: carbón, madera o piedras espirituales) para no requerir electricidad.
 
+- **Cristal primordial** (`CVG_PrimordialCrystal`, Core, 2026-10-21): 10 piedras espirituales prensadas en la mesa de cantero
+  (`CVG_MakePrimordialCrystal`). Qi sólido y estable, material común para los módulos; primer uso: el resonador espiritual de Qi-Tech.
+  Arte provisional (jade vanilla), falta el propio: `Things/Item/Resource/CVG_PrimordialCrystal`.
+
 ## 3. Madera y fibras espirituales
 - **Madera espiritual:** se obtiene talando árboles espirituales (ver Fauna y Flora). Muebles que suben la concentración de qi.
 - **Seda de gusano espiritual:** tela para túnicas de secta.

@@ -51,6 +51,27 @@ Borrador externo (`QiTech_v02_integracion.zip`) revisado e integrado. El **grado
 ## Pendiente
 Escudo tecnológico contra técnicas, almacenamiento, sensores, tecnología contra Anomaly y mecanoides, baterías de qi eléctricas, espadas voladoras con circuitos, constructo de qi (androide), compatibilidad con Medieval Overhaul; arte propio de armas y torretas.
 
+## Ingeniería Espiritual (pestaña de investigación, 2026-10-21)
+Diseño del usuario: la vía científica al qi, independiente del Dao (sin cultivadores, raíces, epifanías ni inspiración). Pestaña
+`CVG_SpiritualEngineering` («Ingeniería Espiritual»), visible desde el inicio; **todas** las investigaciones de Qi-Tech viven en ella.
+
+- **Bloqueo por la Convergencia:** `DefModExtension_RequiresConvergence` (en los 10 proyectos de la pestaña) + parche a
+  `ResearchProjectDef.CanStartNow`: antes de la Convergencia no se pueden empezar, y por eso no se completan. Es un bloqueo real; la
+  descripción lo avisa (Keyed `CVG_QT_RequiresConvergence`). Lo ya investigado en partidas guardadas sigue terminado.
+- **Primera progresión** (banco de investigación avanzada, `HiTechResearchBench`):
+  `CVG_Research_QiFundamentals` (2000, requiere Microelectrónica) → `CVG_Research_SpiritResonance` (2500, desbloquea el resonador)
+  → `CVG_Research_AdvancedSpiritInstrumentation` (3500, requiere un **resonador espiritual con energía** conectado al banco;
+  base para tecnologías futuras). `CVG_Research_QiTech` (mismo defName) ahora cuelga de Fundamentos del Qi.
+- **Resonador espiritual** (`CVG_SpiritResonator`, 2×2): el multianalizador del qi. 250 W, interruptor, instalación del banco
+  avanzado (parche a `linkableFacilities`), máx. 1 por banco, sin bonus de velocidad. No genera, almacena, convierte ni consume qi.
+  Costo: acero 80, plastiacero 30, componentes 6, **cristal primordial 4**. Arte **provisional**: textura del multianalizador vanilla
+  (falta el sprite del usuario: `Things/Building/CVG/QiTech/SpiritResonator`).
+- **Cristal primordial** (Core, `CVG_PrimordialCrystal`): 10 piedras espirituales en la mesa de cantero; material común para los
+  módulos. Arte provisional (jade vanilla).
+- Prueba: `-cvgqitechtest` comprueba la pestaña, el bloqueo con la Convergencia apagada y encendida, el avance de un colono sin raíz,
+  el resonador como instalación (con y sin energía) y la receta del cristal.
+- Fuera de alcance por ahora: recolectores, baterías, convertidores nuevos, mesas Qi-Tech, más armas o torretas, barreras, eventos.
+
 ## Prueba
 `-cvgqitechtest`: investigaciones y prerrequisito industrial, convertidor en los dos modos con red de qi real (pilar + cristal), cámara y exoesqueleto (dissonancia +0,9 y −0,4).
 

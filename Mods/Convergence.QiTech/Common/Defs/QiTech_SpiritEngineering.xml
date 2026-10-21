@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Qi-Tech: Spiritual Engineering (docs/modulos/QITECH.md). The scientific road to qi, independent of the Dao: normal research at a
+    hi-tech research bench, no cultivators, roots or epiphanies. Every project of this tab carries DefModExtension_RequiresConvergence
+    (Convergence.QiTech.SpiritEngineering): it cannot be started, and so cannot be completed, before the Convergence.
+  -->
+
+  <ResearchTabDef>
+    <defName>CVG_SpiritualEngineering</defName>
+    <label>spiritual engineering</label>
+  </ResearchTabDef>
+
+  <ResearchProjectDef>
+    <defName>CVG_Research_QiFundamentals</defName>
+    <tab>CVG_SpiritualEngineering</tab>
+    <label>qi fundamentals</label>
+    <description>Since the Convergence, every instrument on the Edge has been picking up something it was not built to measure. Qi fundamentals turns that noise into units: how much qi a stone holds, how fast it leaks, how it bends a magnetic field. The sects learned the same things in a cave over a lifetime; the engineers learned them in a lab over a season, and both still argue about which way was cheating.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>0</researchViewX>
+    <researchViewY>2</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>CVG_Research_SpiritResonance</defName>
+    <tab>CVG_SpiritualEngineering</tab>
+    <label>spirit resonance</label>
+    <description>A primordial crystal placed in a tuned field rings like a bell, and the ring can be read. Spirit resonance is the study of that ring: how crystals of condensed qi answer controlled currents and fields. Unlocks the spirit resonator. The first resonance chamber was a borrowed microwave and a crystal stolen from a sect envoy, and neither was ever returned.</description>
+    <baseCost>2500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>CVG_Research_QiFundamentals</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>1</researchViewX>
+    <researchViewY>0</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>CVG_Research_AdvancedSpiritInstrumentation</defName>
+    <tab>CVG_SpiritualEngineering</tab>
+    <label>advanced spirit instrumentation</label>
+    <description>With a working resonator next to the bench, an experiment with stabilized qi can finally be repeated and give the same answer. That is the whole of science, the engineers say, and the beginning of every higher qi technology. Requires a powered spirit resonator linked to the research bench. The sects call it "the day the mortals learned to listen", and not as a compliment.</description>
+    <baseCost>3500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>CVG_Research_SpiritResonance</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>CVG_SpiritResonator</li>
+    </requiredResearchFacilities>
+    <researchViewX>2</researchViewX>
+    <researchViewY>0</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <!-- ================= Spirit resonator: the multi-analyzer of qi ================= -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_SpiritResonator</defName>
+    <label>spirit resonator</label>
+    <description>A ring of copper coils around four primordial crystals, driven by grid power until the crystals ring at a frequency the instruments can follow. Placed next to a hi-tech research bench, it creates a controlled resonance field for experiments with qi. It does not make, store or convert qi; it only lets it be measured. Technicians keep the room quiet while it runs, because the crystals pick up voices and, they swear, sometimes answer.</description>
+    <graphicData>
+      <!-- Provisional: vanilla multi-analyzer. Final art (pending, by the user): Things/Building/CVG/QiTech/SpiritResonator -->
+      <texPath>Things/Building/Misc/MultiAnalyzer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2.46875</drawSize>
+    </graphicData>
+    <uiIconScale>0.85</uiIconScale>
+    <researchPrerequisites><li>CVG_Research_SpiritResonance</li></researchPrerequisites>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <designationCategory>Misc</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <canOverlapZones>false</canOverlapZones>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>9000</WorkToBuild>
+      <Mass>55</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>80</Steel>
+      <Plasteel>30</Plasteel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <CVG_PrimordialCrystal>4</CVG_PrimordialCrystal>
+    </costList>
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>250</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Facility">
+        <maxSimultaneous>1</maxSimultaneous>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+  </ThingDef>
+</Defs>

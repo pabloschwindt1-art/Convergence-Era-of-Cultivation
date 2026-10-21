@@ -2,13 +2,13 @@
 <Defs>
   <!--
     Qi-Tech v0.2: military research (docs/modulos/QITECH.md). Scientific research at a normal research bench: no Dao project, no
-    contemplation desk and no spirit root anywhere in the chain (checked by -cvgqitechtest). It stays in the cultivation tab, next to
-    CVG_Research_QiTech; prerequisites from the vanilla tab show up as usual.
+    contemplation desk and no spirit root anywhere in the chain (checked by -cvgqitechtest). It lives in the Spiritual Engineering tab with the rest of
+    Qi-Tech; prerequisites from the vanilla tab show up as usual.
   -->
 
   <ResearchProjectDef>
     <defName>CVG_Research_QiInduction</defName>
-    <tab>CVG_Cultivation</tab>
+    <tab>CVG_SpiritualEngineering</tab>
     <label>qi induction engineering</label>
     <description>Engineered electromagnetic fields can push qi the way a cultivator's meridians do, if the coils are wound to the five-element ratios carved on old sect pillars. No spirit root or meditation is needed, only patience and a lot of burned-out instruments. The first engineer to get a reading laughed for a full minute, then asked for a raise and a cultivator to shoot at.</description>
     <baseCost>3000</baseCost>
@@ -17,13 +17,16 @@
       <li>CVG_Research_QiTech</li>
       <li>Fabrication</li>
     </prerequisites>
-    <researchViewX>8</researchViewX>
-    <researchViewY>4</researchViewY>
+    <researchViewX>2</researchViewX>
+    <researchViewY>2</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
     <defName>CVG_Research_QiWeapons</defName>
-    <tab>CVG_Cultivation</tab>
+    <tab>CVG_SpiritualEngineering</tab>
     <label>qi induction weapons</label>
     <description>Rifles that wrap each round in a coherent qi field, so that it strikes a cultivator as a spirit weapon would. Unlocks the qi induction rifle and the concentrated qi rifle at the fabrication bench. The sects first called them toys, then "mortal swords", and finally stopped calling them anything in front of the Edge.</description>
     <baseCost>4000</baseCost>
@@ -32,13 +35,16 @@
       <li>CVG_Research_QiInduction</li>
       <li>PrecisionRifling</li>
     </prerequisites>
-    <researchViewX>9</researchViewX>
-    <researchViewY>4</researchViewY>
+    <researchViewX>3</researchViewX>
+    <researchViewY>2</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
     <defName>CVG_Research_QiDefense</defName>
-    <tab>CVG_Cultivation</tab>
+    <tab>CVG_SpiritualEngineering</tab>
     <label>automated qi defense</label>
     <description>A heavy turret frame fitted with induction coils and a spirit stone capacitor: it needs grid power and spends a little stone with every burst. Unlocks the qi induction turret. It is the Edge's answer to the guardian statues of the sects, and like them it never sleeps; unlike them, it sends a bill.</description>
     <baseCost>4400</baseCost>
@@ -47,13 +53,16 @@
       <li>CVG_Research_QiInduction</li>
       <li>HeavyTurrets</li>
     </prerequisites>
-    <researchViewX>9</researchViewX>
-    <researchViewY>5</researchViewY>
+    <researchViewX>3</researchViewX>
+    <researchViewY>3</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
     <defName>CVG_Research_QiAdvancedMilitary</defName>
-    <tab>CVG_Cultivation</tab>
+    <tab>CVG_SpiritualEngineering</tab>
     <label>qi containment</label>
     <description>Magnetic bottles that compress almost half a spirit stone of qi into a single bolt, dense enough to wound a Golden Core cultivator as if they were mortal. Unlocks the qi compression cannon and the qi containment cannon turret. Expensive, dangerous and, the Heavenly Cauldron Pavilion notes, extremely good for the price of spirit stones.</description>
     <baseCost>6500</baseCost>
@@ -62,7 +71,10 @@
       <li>CVG_Research_QiWeapons</li>
       <li>CVG_Research_QiDefense</li>
     </prerequisites>
-    <researchViewX>10</researchViewX>
-    <researchViewY>4</researchViewY>
+    <researchViewX>4</researchViewX>
+    <researchViewY>2</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
   </ResearchProjectDef>
 </Defs>

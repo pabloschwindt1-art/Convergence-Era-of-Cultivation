@@ -121,7 +121,8 @@ namespace Convergence.QiTech
         {
             // Investigación: el defName de la v0.1 sigue (partidas guardadas) y nada de la cadena exige el Dao.
             var ours = new[] { "CVG_Research_QiTech", "CVG_Research_QiStabilization", "CVG_Research_QiExosuit", "CVG_Research_QiInduction",
-                "CVG_Research_QiWeapons", "CVG_Research_QiDefense", "CVG_Research_QiAdvancedMilitary" };
+                "CVG_Research_QiWeapons", "CVG_Research_QiDefense", "CVG_Research_QiAdvancedMilitary",
+                "CVG_Research_QiFundamentals", "CVG_Research_SpiritResonance", "CVG_Research_AdvancedSpiritInstrumentation" };
             foreach (var r in ours)
             {
                 var proj = DefDatabase<ResearchProjectDef>.GetNamedSilentFail(r);
