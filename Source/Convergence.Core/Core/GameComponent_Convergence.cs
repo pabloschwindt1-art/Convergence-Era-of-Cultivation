@@ -100,6 +100,7 @@ namespace Convergence
             TranslationReportShot.Update();
             FloorShot.Update();
             ArtShots.Update();
+            WorkshopShot.Update();
         }
 
         public override void GameComponentTick()
@@ -107,6 +108,7 @@ namespace Convergence
             BloodlineSelfTest.CheckCommandLine();
             DevelopmentShot.CheckCommandLine();
             TabShot.CheckCommandLine();
+            WorkshopShot.CheckCommandLine();
             if (guideTick >= 0 && Find.TickManager.TicksGame >= guideTick)
             {
                 guideTick = -1;

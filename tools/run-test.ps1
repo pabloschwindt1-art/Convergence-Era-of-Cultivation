@@ -12,7 +12,9 @@ param(
     # Tamaño de la ventana de prueba (pequeña por defecto; más grande solo para capturas de interfaz, p. ej. -cvgdevshot)
     [switch]$Visible,   # ventana normal (no minimizada) para capturas de pantalla (-cvgshowcase)
     [int]$Width = 640,
-    [int]$Height = 360
+    [int]$Height = 360,
+    # Idioma del juego de prueba: Spanish (por defecto) o English (capturas para Workshop)
+    [ValidateSet("Spanish", "English")][string]$Language = "Spanish"
 )
 
 # Pausa pedida por el usuario (está usando Steam/el juego): tools/.pausa-rimworld existe => no lanzar
@@ -60,11 +62,12 @@ $active
 </ModsConfigData>
 "@ | Set-Content -Encoding UTF8 (Join-Path $cfg "ModsConfig.xml")
 
-# Prefs aislado: español, modo desarrollador, seguir corriendo minimizado
+$lang = if ($Language -eq "English") { "English" } else { "Spanish (Español(Castellano))" }
+# Prefs aislado: idioma (español por defecto), modo desarrollador, seguir corriendo minimizado
 @"
 <?xml version="1.0" encoding="utf-8"?>
 <PrefsData>
-  <langFolderName>Spanish (Español(Castellano))</langFolderName>
+  <langFolderName>$lang</langFolderName>
   <devMode>True</devMode>
   <runInBackground>True</runInBackground>
   <resetModsConfigOnCrash>False</resetModsConfigOnCrash>
