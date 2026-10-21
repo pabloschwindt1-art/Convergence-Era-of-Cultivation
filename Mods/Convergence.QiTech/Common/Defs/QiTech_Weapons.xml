@@ -5,15 +5,16 @@
     Core SpiritGradeUtility.AttackGrade reads DamageInfo.Weapon (the equipped gun or the turretGunDef).
     No spirit root needed: any colonist with the research and the crafting skill makes and fires them.
     weaponTags/tradeTags are our own (Inherit="False") so no vanilla pawnkind or trader picks them up: raids and early game stay as they were.
-    Art is provisional (vanilla textures); final art: Things/Item/Equipment/CVG/QiTech/<Name>.
+    Art by the user: Things/Item/Equipment/CVG/QiTech/<Name> (weapons) and Things/Projectile/CVG/QiTech/<Name> (bolts, pointing north).
   -->
 
   <ThingDef ParentName="BaseBullet">
     <defName>CVG_QT_InductionBolt</defName>
     <label>induction bolt</label>
     <graphicData>
-      <texPath>Things/Projectile/Charge_Small</texPath>
+      <texPath>Things/Projectile/CVG/QiTech/InductionBolt</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
@@ -27,8 +28,9 @@
     <defName>CVG_QT_FocusedBolt</defName>
     <label>concentrated induction bolt</label>
     <graphicData>
-      <texPath>Things/Projectile/Charge_Small</texPath>
+      <texPath>Things/Projectile/CVG/QiTech/ConcentratedBolt</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.9</drawSize>
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
@@ -43,8 +45,9 @@
     <defName>CVG_QT_CompressedBolt</defName>
     <label>compressed qi bolt</label>
     <graphicData>
-      <texPath>Things/Projectile/ChargeLanceShot</texPath>
+      <texPath>Things/Projectile/CVG/QiTech/CompressedBolt</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>

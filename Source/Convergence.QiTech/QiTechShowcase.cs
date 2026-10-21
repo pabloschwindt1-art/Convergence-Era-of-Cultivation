@@ -54,6 +54,7 @@ namespace Convergence.QiTech
                 var p = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Colonist, Faction.OfPlayer, forceGenerateNewPawn: true));
                 p.equipment.DestroyAllEquipment();
                 p.equipment.AddEquipment((ThingWithComps)ThingMaker.MakeThing(DefDatabase<ThingDef>.GetNamed(guns[i])));
+                p.apparel.Wear((Apparel)ThingMaker.MakeThing(DefDatabase<ThingDef>.GetNamed("CVG_Apparel_QiTechExosuit")), dropReplacedApparel: false);
                 GenSpawn.Spawn(p, center + new IntVec3(-4, 0, 3 - i * 3), map);
                 p.drafter.Drafted = true;
             }

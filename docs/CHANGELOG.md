@@ -41,7 +41,7 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 - **Armas:** rifle de inducción de qi (grado 1, dos variantes), rifle de qi concentrado (grado 2), cañón de compresión de qi (grado 3).
 - **Torretas:** torreta de inducción de qi (grado 2) y cañón de contención de qi (grado 3), con energía y piedras espirituales por disparo;
   el disparo sale de la punta del cañón.
-- Arte del usuario para las 3 armas y las 2 torretas. Lore y traducción (Spanish, SpanishLatin).
+- Arte del usuario para las 3 armas, las 2 torretas, los 3 proyectiles de qi, el resonador, el convertidor de qi y el exoesqueleto (puesto, 5 cuerpos × 3 vistas, e ícono). Lore y traducción (Spanish, SpanishLatin).
 - Partidas guardadas: se conserva lo ya investigado; las investigaciones de Qi-Tech pasan de la pestaña Cultivo a Ingeniería Espiritual.
 
 **Change notes (Steam):**
@@ -53,6 +53,7 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 - New weapons: qi induction rifle (grade 1), concentrated qi rifle (grade 2), qi compression cannon (grade 3). Any colonist can make and use them.
 - New turrets: qi induction turret (grade 2) and qi containment cannon (grade 3). They need power and burn spirit stones per shot.
 - Qi-Tech no longer needs the Formations qi network research to start.
+- New art for the converter, the exoskeleton, the weapons, the turrets and the qi bolts.
 ```
 
 ---

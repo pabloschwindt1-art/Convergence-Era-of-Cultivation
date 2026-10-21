@@ -62,8 +62,8 @@ DERIVED = {
         'paths': ['Common/Textures/Things/Pawn/Humanlike/Apparel/CVG/'],
     },
     'Convergence.QiTech': {
-        'what': 'the Qi-Tech exoskeleton textures (worn, 5 body types x 3 views, and its icon)',
-        'source': 'the silhouette and shading of the RimWorld recon armor artwork',
+        'what': 'the worn Qi-Tech exoskeleton textures (5 body types x 3 views; the armour design is original, fitted to the body outlines)',
+        'source': 'the outlines of the RimWorld naked body artwork',
         'paths': ['Common/Textures/Things/Pawn/Humanlike/Apparel/CVG/QiTechExosuit/'],
     },
     'Convergence.Space': {

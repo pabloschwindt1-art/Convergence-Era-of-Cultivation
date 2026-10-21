@@ -40,7 +40,7 @@ may be used only inside RimWorld (not extracted and reused elsewhere).
 | Mod | Files | Location (inside the mod folder) | Made over |
 |---|---|---|---|
 | Convergence: Apparel | 125 | `Common/Textures/Things/Pawn/Humanlike/Apparel/CVG/` | vanilla robe, flak vest and hat artwork |
-| Convergence: Qi-Tech | 16 | `Common/Textures/Things/Pawn/Humanlike/Apparel/CVG/QiTechExosuit/` | vanilla recon armor artwork |
+| Convergence: Qi-Tech | 16 | `Common/Textures/Things/Pawn/Humanlike/Apparel/CVG/QiTechExosuit/` | outlines of the vanilla naked body artwork (the armour design is original) |
 | Convergence: Flying Sect | 4 | `Common/Textures/Things/Building/CVG/Island/CloudRockWall_Atlas.png`, `CloudRockWall_MenuIcon.png`, `JadeWall_Atlas.png`, `JadeWall_MenuIcon.png` | vanilla Odyssey gravship hull atlas |
 
 The scripts and intermediate files that produced them are part of the author's private working files (they read Ludeon's Art Source

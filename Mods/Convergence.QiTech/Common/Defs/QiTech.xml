@@ -3,7 +3,7 @@
   <!--
     Convergence: Qi-Tech v0.1 (docs/modulos/QITECH.md). The technological branch of the mod, for those who play with technology:
     the qi <-> electricity converter, the Qi-Tech exoskeleton and the stabilization chamber. Everything here needs industrial research.
-    Art is provisional (tinted vanilla); final art: Things/Building/CVG/QiTech/<Name>, Things/Pawn/Humanlike/Apparel/CVG/QiTechExosuit.
+    Art: all by the user; the worn exoskeleton is fitted to the outlines of the vanilla bodies (listed in LICENSE-THIRD-PARTY.md).
   -->
 
   <ResearchProjectDef>

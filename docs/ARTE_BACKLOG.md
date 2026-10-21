@@ -65,9 +65,9 @@ Fondo transparente (PNG o WebP). Se integran con `tools/art/recorte/` (`turret_s
 |---|---|---|---|---|
 | 1 | Resonador espiritual (2×2) | Cenital, como el multianalizador; una sola imagen (no rota) | `QiTech: Things/Building/CVG/QiTech/SpiritResonator.png` | ✅ hecho (2026-10-21) |
 | 2 | Cristal primordial | 3 imágenes de pila: 1 cristal, unos pocos, montón (`_a`, `_b`, `_c`), 128 px | `Core: Things/Item/Resource/CVG_PrimordialCrystal/CVG_PrimordialCrystal_a/_b/_c.png` | ✅ hecho (2026-10-21) |
-| 3 | Proyectiles de qi: rayo de inducción, rayo concentrado, rayo de qi comprimido | Apuntando al **norte**, alargados, 64-128 px | `QiTech: Things/Projectile/CVG/QiTech/<Nombre>.png` | P2 (hoy Charge_Small / ChargeLanceShot vanilla) |
-| 4 | Convertidor de qi (2×2) | Cenital, una imagen | `QiTech: Things/Building/CVG/QiTech/QiConverter.png` | P2 (hoy vanilla teñido) |
-| 5 | Cámara de estabilización (1×2, cama) | Tres vistas: `_south`, `_east`, `_north` | `QiTech: Things/Building/CVG/QiTech/StabilizationChamber_*.png` | P3 (hoy vanilla teñido) |
-| 6 | Exoesqueleto Qi-Tech | Ropa sobre el pawn: 5 cuerpos × 3 vistas + icono | `QiTech: Things/Pawn/Humanlike/Apparel/CVG/QiTechExosuit/` | P3 (hoy derivado de la armadura de reconocimiento de Ludeon) |
+| 3 | Proyectiles de qi: rayo de inducción, rayo concentrado, rayo de qi comprimido | Apuntando al **norte**, alargados, 64-128 px | `QiTech: Things/Projectile/CVG/QiTech/<Nombre>.png` | ✅ hecho (2026-10-21) |
+| 4 | Convertidor de qi (2×2) | Cenital, una imagen | `QiTech: Things/Building/CVG/QiTech/QiConverter.png` | ✅ hecho (2026-10-21) |
+| 5 | Cámara de estabilización (1×2, cama) | Tres vistas: `_south`, `_east`, `_north` | `QiTech: Things/Building/CVG/QiTech/StabilizationChamber_*.png` | ✅ ya era del usuario (commits 861d93e, eb1986f) |
+| 6 | Exoesqueleto Qi-Tech | Ropa sobre el pawn: 5 cuerpos × 3 vistas + icono | `QiTech: Things/Pawn/Humanlike/Apparel/CVG/QiTechExosuit/` | ✅ hecho (2026-10-21): diseño del usuario ajustado a las siluetas vanilla (plantilla `art/qitech/plantilla_exoesqueleto.png`) |
 
 Hechos: rifles de inducción (2 variantes), rifle concentrado, cañón de compresión, torretas de inducción y de contención (base, cabezal, icono).

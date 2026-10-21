@@ -24,14 +24,14 @@ terms. There is no single license for everything in it.
 
 3. MATERIAL DERIVED FROM RIMWORLD: not covered by the MIT License or by CC BY-NC-SA
    16 files of this mod are derivative works made over artwork owned by Ludeon
-   Studios: the Qi-Tech exoskeleton textures (worn, 5 body types x 3 views,
-   and its icon), made over the silhouette and shading of the RimWorld recon
-   armor artwork (the RimWorld Art Source, which the RimWorld EULA lets
-   modders use as a basis for a free mod). They are distributed here under the
-   terms of that EULA. Ludeon's rights in the underlying artwork remain and
-   the author does not license these files under MIT or CC BY-NC-SA. Use them
-   only inside RimWorld; do not extract or redistribute them separately.
-   Location:
+   Studios: the worn Qi-Tech exoskeleton textures (5 body types x 3 views; the
+   armour design is original, fitted to the body outlines), made over the
+   outlines of the RimWorld naked body artwork (the RimWorld Art Source, which
+   the RimWorld EULA lets modders use as a basis for a free mod). They are
+   distributed here under the terms of that EULA. Ludeon's rights in the
+   underlying artwork remain and the author does not license these files under
+   MIT or CC BY-NC-SA. Use them only inside RimWorld; do not extract or
+   redistribute them separately. Location:
       Common/Textures/Things/Pawn/Humanlike/Apparel/CVG/QiTechExosuit/
    The mod also refers to RimWorld's own assets and definitions by name (for
    example vanilla textures, defs and sounds) without including them. Those
