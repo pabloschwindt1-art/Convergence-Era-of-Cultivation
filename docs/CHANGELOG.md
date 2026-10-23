@@ -23,7 +23,7 @@ Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod
   Cada horno quema solo el combustible elegido.
 - **La alquimia puede fallar**: cada píldora sale de una tabla según el poder del alquimista (habilidad, sala, nivel del horno,
   maestría alquímica e inspiración). Base: 30% falla o mala, 45% normal, 20% excelente, 5% celestial (legendaria); un gran maestro
-  con todo a favor llega a 5 / 30 / 40 / 25. Si falla sale una **píldora de desecho** (textura provisoria hasta el arte del usuario).
+  con todo a favor llega a 5 / 30 / 40 / 25. Si falla sale una **píldora de desecho** (arte del usuario). Las otras 13 píldoras nuevas del usuario están en rt/pildoras_nuevas/, para cuando se programen.
 - Nuevo stat del colono **maestría alquímica**: la dan el rasgo de alquimista innato (+0.25 / +0.5 / +1), el cuerpo de yang puro
   (+0.1 a +0.5), las historias de alquimista del Core y del Caldero, y el rol de Maestro Alquimista del Caldero (+0.5).
 - Autotest `-cvgselftest`: sección "work rooms, furnace fire and pill failure" con una sala de alquimia real y 1600 píldoras en cuatro
