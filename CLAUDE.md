@@ -27,7 +27,7 @@ Cultivo xianxia / wuxia con tecno-cultivo, inspirado en *Tale of Immortal* y en 
 - Los módulos dependen del Core, nunca al revés ni entre ellos en círculo. Preferir XML sobre código en los módulos. Los módulos sin DLL propio usan las clases del DLL del Core.
 
 ## Reglas técnicas
-- RimWorld **1.6** (net472, Krafs.Rimworld.Ref 1.6.4871, Lib.Harmony 2.4.3 con `ExcludeAssets=runtime`, sin `0Harmony.dll` en los mods). Un solo DLL por proyecto que también carga en 1.7 (no verificado con la 1.7 actual).
+- RimWorld **1.6** (net472, Krafs.Rimworld.Ref 1.6.4871, Lib.Harmony 2.4.3 con `ExcludeAssets=runtime`, sin `0Harmony.dll` en los mods). Un solo DLL por proyecto que también carga en 1.7 (verificado en 1.7.4985: los 15 mods cargan y los autotests pasan).
 - Dependencia externa: solo Harmony. Se diseña usando **todas las DLC**, pero cada función de DLC va en `Mods/<DLC>` (LoadFolders `IfModActive`), con `MayRequire` o `ModsConfig.XActive`, para que sin la DLC el mod funcione sin esa parte (si es demasiado trabajo, ese módulo requiere la DLC). **Nada de AssetBundles, `GL` ni `Shader.Find`**: solo flecks/effecters vanilla y `renderNodeProperties`.
 - Datos en XML, lógica en C#. Sin enums cerrados para contenido: cada cosa nueva debe poder agregarse con XML.
 - Textos siempre en `Keyed`/`DefInjected`: inglés + Spanish + SpanishLatin. Las traducciones de un def condicional (`MayRequire`) van en la carpeta condicional correspondiente, no en `Common`.
@@ -35,7 +35,7 @@ Cultivo xianxia / wuxia con tecno-cultivo, inspirado en *Tale of Immortal* y en 
 - Jugar desde el repositorio: `tools/link-mods.ps1` enlaza cada carpeta de `Mods/` en `<RimWorld>/Mods/` con un junction. Log del juego: `%USERPROFILE%/AppData/LocalLow/Ludeon Studios/RimWorld by Ludeon Studios/Player.log`.
 
 ## Pruebas
-- Instancia de prueba aislada: `powershell -ExecutionPolicy Bypass -File tools/run-test.ps1 -GameArgs "-quicktest -cvgselftest" [-Mods ...] [-TimeoutSec N]` usa una carpeta de datos propia (ModsConfig y Prefs aislados), ventana chica minimizada y log propio, y cierra el juego al terminar. Listas de mods de ejemplo: `tools/pack-completo.txt`, `tools/pack-oleada1.txt`.
+- Instancia de prueba aislada: `powershell -ExecutionPolicy Bypass -File tools/run-test.ps1 [-Version 1.6|1.7] -GameArgs "-quicktest -cvgselftest" [-Mods ...|todos] [-TimeoutSec N]` usa una carpeta de datos propia (ModsConfig y Prefs aislados), ventana chica minimizada (o visible en el monitor secundario, si hay uno) y log propio, y cierra el juego al terminar. Listas de mods de ejemplo: `tools/pack-completo.txt`, `tools/pack-oleada1.txt`.
 - Reglas: un solo RimWorld de prueba a la vez; cerrar el juego al terminar; no tocar `Prefs.xml` ni `ModsConfig.xml` de nadie; los autotests deben ser inertes sin su argumento y no dejar mensajes ni cambios en partidas normales. Una prueba `-cvg...test` por lanzamiento (comparten el mapa y se pisan). Leer `Player.log` al terminar.
 - Antes de publicar: `python -I tools/check-workshop.py` (0 errores) y `python -I tools/make-licenses.py --check`.
 

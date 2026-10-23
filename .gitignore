@@ -31,3 +31,7 @@ desktop.ini
 .env
 *.pem
 *.key
+
+# Asset packs de RimWorld 1.7 (Waylith): los arma el juego en cada carpeta de carga al subir al Workshop
+Mods/**/Assets.zip
+Mods/**/Assets.zip.*
