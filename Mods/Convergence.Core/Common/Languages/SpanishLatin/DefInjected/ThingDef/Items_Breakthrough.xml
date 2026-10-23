@@ -4,4 +4,6 @@
   <CVG_FoundationPill.description>Una píldora refinada con hierbas medicinales y polvo de plata. Tomada antes de un retiro de avance, estabiliza el qi mientras se condensa la fundación y aumenta la probabilidad de alcanzar el Establecimiento de Fundación. Un cultivador que intenta ese avance toma una por su cuenta si hay alguna a mano.\n\nSu efecto dura un día y se gasta en el intento de avance.</CVG_FoundationPill.description>
   <CVG_FoundationPill.ingestible.ingestCommandString>Tomar {0}</CVG_FoundationPill.ingestible.ingestCommandString>
   <CVG_FoundationPill.ingestible.ingestReportString>Tomando {0}.</CVG_FoundationPill.ingestible.ingestReportString>
+  <CVG_WastePill.label>píldora de desecho</CVG_WastePill.label>
+  <CVG_WastePill.description>Un terrón gris y agrietado: lo que queda en el horno cuando un refinado sale mal. El qi se dispersó y las hierbas se quemaron, y nada de eso ayudará a un cultivador. El Pabellón del Caldero Celestial las compra por saco a un cobre cada una y las muele para abono; los aprendices dicen que todo maestro tiene una montaña detrás del taller.</CVG_WastePill.description>
 </LanguageData>

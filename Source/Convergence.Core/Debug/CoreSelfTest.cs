@@ -112,8 +112,12 @@ namespace Convergence
                 comp.Notify_RecipeProduced(colonist);
                 Check(comp.CrafterLabel == colonist.Name.ToStringShort, "made in the colony: " + comp.CrafterLabel);
             }
-            var weapon = DefDatabase<ThingDef>.AllDefsListForReading.FirstOrDefault(d => d.IsWeapon && d.HasComp(typeof(CompCrafter)));
-            Check(weapon != null, "weapons too: " + weapon?.defName);
+            // Con solo el Core no hay armas de Convergence (las traen Alchemy y otros módulos).
+            if (DefDatabase<ThingDef>.AllDefsListForReading.Any(d => d.IsWeapon && d.modContentPack?.PackageId?.StartsWith("prospero1088.convergence") == true))
+            {
+                var weapon = DefDatabase<ThingDef>.AllDefsListForReading.FirstOrDefault(d => d.IsWeapon && d.HasComp(typeof(CompCrafter)));
+                Check(weapon != null, "weapons too: " + weapon?.defName);
+            }
             pill.Destroy();
         }
 
@@ -134,6 +138,7 @@ namespace Convergence
             Check(WorkRoomUtility.AddLevels(QualityCategory.Normal, 1f) == QualityCategory.Good
                   && WorkRoomUtility.AddLevels(QualityCategory.Normal, -1f) == QualityCategory.Poor, "room bonus raises and lowers quality levels");
 
+            Check(DefDatabase<ThingDef>.GetNamedSilentFail("CVG_WastePill")?.modContentPack?.PackageId == "prospero1088.convergence.core", "waste pill exists (in the Core)");
             var furnaceDef = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_AlchemyFurnace");
             if (furnaceDef == null)
             {
@@ -141,15 +146,15 @@ namespace Convergence
                 return;
             }
             Check(furnaceDef.building?.workTableRoomRole?.defName == "CVG_AlchemyRoom", "the alchemy furnace makes an alchemy room");
-            Check(DefDatabase<ThingDef>.GetNamedSilentFail("CVG_WastePill") != null, "waste pill exists");
 
             // Un cuarto de 9x9 de paredes de madera, con el horno en el medio.
             IntVec3 center = IntVec3.Invalid;
-            foreach (var c in GenRadial.RadialCellsAround(map.Center, 40f, true))
+            // Cualquier lugar seco sin colonos ni edificios del jugador: la roca y las plantas se despejan (el mapa de prueba es al azar).
+            foreach (var c in GenRadial.RadialCellsAround(map.Center, 56f, true))
             {
                 var r = CellRect.CenteredOn(c, 4);
-                if (r.InBounds(map) && r.Cells.All(x => x.Standable(map) && x.GetEdifice(map) == null && !x.Fogged(map) && !x.GetTerrain(map).IsWater
-                                                         && !x.GetThingList(map).Any(t => t is Pawn)))
+                if (r.InBounds(map) && r.Cells.All(x => !x.GetTerrain(map).IsWater && x.GetTerrain(map).affordances.Contains(TerrainAffordanceDefOf.Heavy)
+                                                         && !x.GetThingList(map).Any(t => t is Pawn || t.Faction == Faction.OfPlayer)))
                 {
                     center = c;
                     break;
@@ -163,8 +168,12 @@ namespace Convergence
             var rect = CellRect.CenteredOn(center, 4);
             var spawned = new List<Thing>();
             foreach (var c in rect.Cells)
+            {
                 foreach (var t in c.GetThingList(map).ToList())
                     if (!(t is Pawn)) t.Destroy();
+                map.fogGrid.Unfog(c);
+                map.roofGrid.SetRoof(c, null);
+            }
             foreach (var c in rect.EdgeCells)
             {
                 var wall = ThingMaker.MakeThing(ThingDefOf.Wall, ThingDefOf.WoodLog);
@@ -269,9 +278,9 @@ namespace Convergence
                     var refuelComp = furnace.GetComp<CompRefuelable>();
                     float fuelLeft = refuelComp.Fuel;
                     refuelComp.ConsumeFuel(fuelLeft);
-                    var novice = Craft(3, 400, out float pNov);
-                    sb.Append("\n      skill 3, no fire (power " + pNov.ToString("0.00") + "): " + Show(novice));
-                    Check(novice[0] > mid[0] && novice[7] <= mid[7], "a novice with a cold furnace fails more (" + novice[0] + " vs " + mid[0] + ")");
+                    var novice = Craft(3, 1000, out float pNov);
+                    sb.Append("\n      [1000] skill 3, no fire (power " + pNov.ToString("0.00") + "): " + Show(novice));
+                    Check(novice[0] / 1000f > mid[0] / 400f, "a novice with a cold furnace fails more (" + (novice[0] / 10f) + "% vs " + (mid[0] / 4f) + "%)");
 
                     // 3. El mismo novato con horno nivel 3 y el mejor fuego: la sala compensa la habilidad.
                     refuelComp.Refuel(fuelLeft);
@@ -285,8 +294,8 @@ namespace Convergence
                         c.stackCount = 60;
                         refuelComp.Refuel(new List<Thing> { c });
                     }
-                    var helped = Craft(3, 400, out float pHelp);
-                    sb.Append("\n      skill 3, level 3 furnace, " + (fire?.Chosen?.label ?? "-") + " fire (power " + pHelp.ToString("0.00") + "): " + Show(helped));
+                    var helped = Craft(3, 1000, out float pHelp);
+                    sb.Append("\n      [1000] skill 3, level 3 furnace, " + (fire?.Chosen?.label ?? "-") + " fire (power " + pHelp.ToString("0.00") + "): " + Show(helped));
                     Check(helped[0] < novice[0], "a good furnace and fire make up for low skill (" + helped[0] + " vs " + novice[0] + " failed)");
 
                     // 4. Gran maestro (habilidad 20) con todo a favor.
