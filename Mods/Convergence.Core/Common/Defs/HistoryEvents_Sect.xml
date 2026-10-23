@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- Cultivation events recorded by the Core (SectEvents); the sect precepts of Convergence: Sects (Ideology) react to them. -->
+  <!-- Cultivation events recorded by the Core (SectEvents); the sect precepts of Convergence: Factions (Ideology) react to them. -->
   <HistoryEventDef><defName>CVG_Cultivated</defName><label>cultivated</label></HistoryEventDef>
   <HistoryEventDef><defName>CVG_Ascended</defName><label>ascended a realm</label></HistoryEventDef>
   <HistoryEventDef><defName>CVG_RetreatCompleted</defName><label>finished a breakthrough retreat</label></HistoryEventDef>

@@ -25,6 +25,9 @@ Sin cambio de versión todavía (va con la próxima subida de cada mod). Solo te
   viejo. El escenario **Heredero del dragón** pasa a cargar con Factions: lo persigue la Luna Sangrienta (incursión nueva "Los cazadores
   de sangre" a los 10-18 días). Sin `Mods/Sects` en LoadFolders; código sin las facciones viejas como alternativa.
 - Qi-Tech y Core: "the Edge" → "the Rim" en 7 textos en inglés, como el resto del proyecto.
+- Apparel: se borra `Patches/SectRobes.xml` (túnicas para los discípulos del Sects viejo; las de Factions están en
+  `SectRobes_Factions.xml`) y se quita Sects de la descripción y de `loadAfter`. Comentarios internos de Core y Factions sin "Convergence:
+  Sects". Factions: el color "natural" de las ideologías de secta tiene nombre en español.
 - `docs/LORE.md`: el Clan del Dragón figura como desaparecido. Autotests `-cvgselftest -cvgstoriestest` ALL OK en 1.6.4871.
 
 **Change notes (Steam)** (cada mod que la lleve):

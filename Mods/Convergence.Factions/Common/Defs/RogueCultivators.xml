@@ -3,7 +3,7 @@
   <!-- ======================================================================================================================
        Rogue Cultivators (散修): not a sect, the cultivators with no ties. No honorary titles and no favors; they arrive with the
        Convergence, trade at inns and night markets and sustain many Stories events (beggars, peddlers, the rogue market).
-       Brought over from the old Convergence: Sects.
+       Brought over from an earlier version of the mod.
        ====================================================================================================================== -->
 
   <FactionDef ParentName="OutlanderFactionBase">
