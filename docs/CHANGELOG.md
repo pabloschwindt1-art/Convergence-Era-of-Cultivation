@@ -19,7 +19,7 @@ sin errores rojos. Sigue siendo **un solo DLL net472** que carga en 1.6 y en 1.7
 - Core: el autotest de ingeribles ya no intenta comer cadáveres vacíos ni plantas sin madurar, el de "spawnear todo" salta las salidas
   de pocket map y el del muñeco de madera busca la casilla con el mismo peligro que el work giver (solo afectaba a `-cvgselftest`).
 - Nota de pruebas en 1.7: el ejecutable es `RimWorld.exe`, `-logFile` se ignora (log en `...\Logs\Player.log`) y arrancar la ventana
-  minimizada crashea el motor (swapchain 0×0): `tools/run-test.ps1` todavía no está adaptado.
+  minimizada crashea el motor (swapchain 0×0). `tools/run-test.ps1 -Version 1.6|1.7` ya lo contempla (1.6 en `C:\Games\RimWorld_1.6`).
 
 Versiones: Core 0.1.1 → **0.1.2**, Formations 0.1.1 → **0.1.2**, Qi-Tech **0.2.2** (junto con el arreglo de abajo, aún sin subir),
 los otros 12 0.1.0 → **0.1.1**.
