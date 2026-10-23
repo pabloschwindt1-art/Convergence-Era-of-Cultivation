@@ -47,7 +47,7 @@
   <CVG_Story_CollectiveDemonNone_Label>El experimento está en calma</CVG_Story_CollectiveDemonNone_Label>
   <CVG_Story_CollectiveDemonNone_Text>La muestra de qi de la corporación zumba en su contenedor y no hace nada. Por ahora.</CVG_Story_CollectiveDemonNone_Text>
   <CVG_Story_SectOffer_Label>Una secta recta tiende la mano</CVG_Story_SectOffer_Label>
-  <CVG_Story_SectOffer_Text>Emisarios del Pico Azur y del Loto Silencioso han oído hablar de vuestro pueblo. Ofrecen su amistad y un regalo: os aceptarían como secta menor bajo su protección.</CVG_Story_SectOffer_Text>
+  <CVG_Story_SectOffer_Text>Emisarios de la Espada Sin Forma y del Caldero Celestial oyeron hablar de tu gente. Ofrecen su amistad y un regalo: os aceptarían como una secta menor bajo su protección.</CVG_Story_SectOffer_Text>
   <CVG_Scenario_LoneSurvivor_Start>La secta es ceniza. Tienes una túnica, una espada y el poco qi que llevas en el dantian.\n\nTarde o temprano alguien vendrá a por ti.</CVG_Scenario_LoneSurvivor_Start>
   <CVG_Scenario_SectFlight_Start>Las puertas cayeron en una sola noche. Los cuatro sois todo lo que queda de la secta.\n\nOtros podrían encontraros. Los cazadores también.</CVG_Scenario_SectFlight_Start>
   <CVG_Scenario_DestroyedFamily_Start>El clan os rompió el dantian y os echó. Ahora no podéis cultivar.\n\nBuscad la forma de reparar lo que se rompió.</CVG_Scenario_DestroyedFamily_Start>
@@ -56,7 +56,7 @@
   <CVG_Scenario_ClassicalEra_Start>El qi regresó hace una generación y los jóvenes cultivan junto al fuego.\n\nUn día una secta recta se fijará en vosotros.</CVG_Scenario_ClassicalEra_Start>
   <CVG_Scenario_ExiledAlchemist_Start>Dejasteis el Pabellón con una deuda, una fórmula a medio escribir y un carro de tarros.\n\nLos cobradores os encontrarán.</CVG_Scenario_ExiledAlchemist_Start>
   <CVG_Scenario_BeastHunters_Start>Cazáis lo que otros evitan.\n\nUn gremio ha estado preguntando por vosotros.</CVG_Scenario_BeastHunters_Start>
-  <CVG_Scenario_LotusRefugees_Start>El templo se partió por una cuestión que nadie recuerda. Salisteis con hierbas y un sutra.\n\nLa abadesa os vio marchar.</CVG_Scenario_LotusRefugees_Start>
+  <CVG_Scenario_LotusRefugees_Start>La enfermería se dividió por el precio de un remedio. Te fuiste con hierbas y una receta.\n\nMo Qinghua te miró partir.</CVG_Scenario_LotusRefugees_Start>
   <CVG_Scenario_DragonHeir_Start>Llevas un hilo de sangre de dragón, fino como un cabello.\n\nEl clan lo ha notado.</CVG_Scenario_DragonHeir_Start>
   <CVG_SectWorld_Peace>Paz entre {0} y {1}: ambas sectas envainan sus espadas.</CVG_SectWorld_Peace>
   <CVG_SectWorld_WarEnded>La guerra entre sectas ha terminado: {0} venció a {1}.</CVG_SectWorld_WarEnded>

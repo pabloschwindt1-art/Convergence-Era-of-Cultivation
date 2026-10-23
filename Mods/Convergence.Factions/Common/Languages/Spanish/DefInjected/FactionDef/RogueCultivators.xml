@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Faction_RogueCultivators.label>cultivadores errantes</CVG_Faction_RogueCultivators.label>
+  <CVG_Faction_RogueCultivators.description>No es una secta: es todo el que cultiva sin lazos. Huérfanos de sectas destruidas, exiliados, caminantes. Fueron los primeros en cruzar cuando el muro entre los mundos apenas empezaba a adelgazar, años antes de la Convergencia, porque no tenían nada que perder. Se reúnen en posadas y mercados nocturnos, alquilan sus espadas por piedras espirituales y venden mapas y tablillas incompletas. Impredecibles: cada uno aprendió un poco de todo.</CVG_Faction_RogueCultivators.description>
+  <CVG_Faction_RogueCultivators.fixedName>Cultivadores Errantes</CVG_Faction_RogueCultivators.fixedName>
+  <CVG_Faction_RogueCultivators.pawnSingular>cultivador errante</CVG_Faction_RogueCultivators.pawnSingular>
+  <CVG_Faction_RogueCultivators.pawnsPlural>cultivadores errantes</CVG_Faction_RogueCultivators.pawnsPlural>
+  <CVG_Faction_RogueCultivators.leaderTitle>errante veterano</CVG_Faction_RogueCultivators.leaderTitle>
+</LanguageData>

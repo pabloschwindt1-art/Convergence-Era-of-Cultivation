@@ -95,7 +95,7 @@ namespace Convergence.Stories
         public Faction Primary => def?.factionToken == null ? null : Resolve(def.factionToken);
 
         /// <summary>
-        /// Tokens: bloodmoon / azurepeak / lotus / cauldron / dragon / rogue; sect:any, sect:friendly, sect:hostile, sect:rival
+        /// Tokens: bloodmoon / sword / temperings / cauldron / thread / dragon / rogue (azurepeak y lotus: alias viejos); sect:any, sect:friendly, sect:hostile, sect:rival
         /// (otra secta distinta de la amistosa); hostile (cualquier humanoide hostil), neutral (no hostil), empire.
         /// </summary>
         public Faction Resolve(string token)
@@ -112,8 +112,13 @@ namespace Convergence.Stories
             switch (token)
             {
                 case "bloodmoon": return StoryUtility.FactionByDef("CVG_Faction_BloodMoon");
-                case "azurepeak": return StoryUtility.FactionByDef("CVG_Faction_AzurePeak");
-                case "lotus": return StoryUtility.FactionByDef("CVG_Faction_SilentLotus");
+                // Convergence: Factions. "azurepeak" y "lotus" quedan como alias de partidas viejas: el Pico Azur pasó a la Espada Sin
+                // Forma y el Loto Silencioso al Caldero Celestial.
+                case "sword":
+                case "azurepeak": return StoryUtility.FactionByDef("CVG_Faction_FormlessSword") ?? StoryUtility.FactionByDef("CVG_Faction_AzurePeak");
+                case "temperings": return StoryUtility.FactionByDef("CVG_Faction_NineTemperings");
+                case "thread": return StoryUtility.FactionByDef("CVG_Faction_InvisibleThread");
+                case "lotus":
                 case "cauldron": return StoryUtility.FactionByDef("CVG_Faction_HeavenlyCauldron");
                 case "dragon": return StoryUtility.FactionByDef("CVG_Faction_AncientDragon");
                 case "rogue": return StoryUtility.FactionByDef("CVG_Faction_RogueCultivators");

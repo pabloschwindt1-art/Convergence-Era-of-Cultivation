@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <CVG_Scenario_LostDisciples.label>Discípulos perdidos</CVG_Scenario_LostDisciples.label>
-  <CVG_Scenario_LostDisciples.description>Practicabais al borde del Pico de la Espada cuando el suelo se abrió. Caísteis por la grieta y ahora estáis en un mundo de metal y cristal. Vuestra secta os busca.</CVG_Scenario_LostDisciples.description>
-  <CVG_Scenario_LostDisciples.scenario.summary>Tres discípulos que cayeron por una grieta a un mundo extraño. Ya cultivan, sin tecnología.</CVG_Scenario_LostDisciples.scenario.summary>
-  <CVG_Scenario_LostDisciples.scenario.name>Discípulos perdidos</CVG_Scenario_LostDisciples.scenario.name>
-  <CVG_Scenario_LostDisciples.scenario.description>Practicabais al borde del Pico de la Espada cuando el suelo se abrió. Caísteis por la grieta y ahora estáis en un mundo de metal y cristal. Vuestra secta os busca.</CVG_Scenario_LostDisciples.scenario.description>
-  <CVG_Scenario_ExiledAlchemist.label>Alquimista exiliado</CVG_Scenario_ExiledAlchemist.label>
-  <CVG_Scenario_ExiledAlchemist.description>El Pabellón perdona todo salvo lo impagado. Os fuisteis con una fórmula que no funcionaba, unos tarros y fama de deudores. El libro de cuentas recordará, y los cobradores del Pabellón son célebres por su puntualidad.</CVG_Scenario_ExiledAlchemist.description>
-  <CVG_Scenario_ExiledAlchemist.scenario.summary>Dos alquimistas que huyeron del Pabellón del Caldero Celestial con una deuda y una fórmula a medio escribir.</CVG_Scenario_ExiledAlchemist.scenario.summary>
-  <CVG_Scenario_ExiledAlchemist.scenario.name>Alquimista exiliado</CVG_Scenario_ExiledAlchemist.scenario.name>
-  <CVG_Scenario_ExiledAlchemist.scenario.description>El Pabellón perdona todo salvo lo impagado. Os fuisteis con una fórmula que no funcionaba, unos tarros y fama de deudores. El libro de cuentas recordará, y los cobradores del Pabellón son célebres por su puntualidad.</CVG_Scenario_ExiledAlchemist.scenario.description>
-  <CVG_Scenario_LotusRefugees.label>Refugiados del Loto</CVG_Scenario_LotusRefugees.label>
-  <CVG_Scenario_LotusRefugees.description>El templo se partió por una cuestión que ya nadie recuerda. Salisteis con un saco de hierbas y un sutra, y la abadesa no os detuvo. Os vio marchar con una expresión que quizá era pena.</CVG_Scenario_LotusRefugees.description>
-  <CVG_Scenario_LotusRefugees.scenario.summary>Cuatro monjes expulsados del Templo del Loto Silencioso por un cisma. Sanadores.</CVG_Scenario_LotusRefugees.scenario.summary>
-  <CVG_Scenario_LotusRefugees.scenario.name>Refugiados del Loto</CVG_Scenario_LotusRefugees.scenario.name>
-  <CVG_Scenario_LotusRefugees.scenario.description>El templo se partió por una cuestión que ya nadie recuerda. Salisteis con un saco de hierbas y un sutra, y la abadesa no os detuvo. Os vio marchar con una expresión que quizá era pena.</CVG_Scenario_LotusRefugees.scenario.description>
   <CVG_Scenario_DragonHeir.label>Heredero del dragón</CVG_Scenario_DragonHeir.label>
   <CVG_Scenario_DragonHeir.description>Tu bisabuela dejó el clan y se llevó su secreto. En tus venas hay un hilo de escama y de trueno, fino como un cabello. El clan ha notado que falta un hilo, y los clanes, como los dragones, son pacientes.</CVG_Scenario_DragonHeir.description>
   <CVG_Scenario_DragonHeir.scenario.summary>Un descendiente del Clan del Dragón Antiguo con sangre diluida, solo y buscado.</CVG_Scenario_DragonHeir.scenario.summary>

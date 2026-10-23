@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ======================================================================================================================
+       Heavenly Cauldron Pavilion (天鼎阁, Tiāndǐng Gé). Specialty: alchemy, spirit forging and trade. No weapon restriction (fire and
+       wood techniques, guns welcome: they buy technology eagerly). Built on the sect framework (Sect_Bases.xml).
+       ====================================================================================================================== -->
+
+  <FactionDef ParentName="CVG_SectFactionBase">
+    <defName>CVG_Faction_HeavenlyCauldron</defName>
+    <label>heavenly cauldron pavilion</label>
+    <description>A guild of alchemists and auctioneers born between sects at war: it sold pills to every side and won neutrality by treaty, because nobody would dare to kill the supplier of everyone. Its alchemical fire was inherited from a phoenix, and its masters refine for nobles and wanderers alike: a well-refined remedy does not ask about the lineage of whoever takes it. In Jiuxiao they hunt unknown materials and partners able to open new trade routes, and they buy technology from the Rim with open enthusiasm.</description>
+    <fixedName>Heavenly Cauldron Pavilion</fixedName>
+    <factionIconPath>World/CVG/Factions/HeavenlyCauldron</factionIconPath>
+    <royalFavorIconPath>UI/Icons/CVG/Contribution/HeavenlyCauldron</royalFavorIconPath>
+    <pawnSingular>pavilion alchemist</pawnSingular>
+    <pawnsPlural>pavilion alchemists</pawnsPlural>
+    <techLevel>Industrial</techLevel>
+    <categoryTag>CVG_Sect_HeavenlyCauldron</categoryTag>
+    <royalTitleTags><li>CVG_HeavenlyCauldronTitle</li></royalTitleTags>
+    <settlementNameMaker>CVG_NamerSettlement_HeavenlyCauldron</settlementNameMaker>
+    <!-- Near white: the faction icon is tinted with this color, and the emblem art already has its own colors. -->
+    <colorSpectrum>
+      <li>(1.00,1.00,1.00)</li>
+      <li>(0.92,0.92,0.92)</li>
+    </colorSpectrum>
+    <forcedMemes><li>CVG_Meme_CauldronWay</li></forcedMemes>
+    <basicMemberKind>CVG_HeavenlyCauldron_Apprentice</basicMemberKind>
+    <fixedLeaderKinds><li>CVG_HeavenlyCauldron_Grand</li></fixedLeaderKinds>
+    <caravanTraderKinds Inherit="False"><li>CVG_Trader_HeavenlyCauldron</li></caravanTraderKinds>
+    <visitorTraderKinds Inherit="False"><li>CVG_Trader_HeavenlyCauldron</li></visitorTraderKinds>
+    <baseTraderKinds Inherit="False"><li>CVG_Trader_HeavenlyCauldronSettlement</li></baseTraderKinds>
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <CVG_HeavenlyCauldron_Apprentice>10</CVG_HeavenlyCauldron_Apprentice>
+          <CVG_HeavenlyCauldron_Alchemist>7</CVG_HeavenlyCauldron_Alchemist>
+          <CVG_HeavenlyCauldron_Master>4</CVG_HeavenlyCauldron_Master>
+          <CVG_HeavenlyCauldron_Grand>1</CVG_HeavenlyCauldron_Grand>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <CVG_HeavenlyCauldron_Apprentice>10</CVG_HeavenlyCauldron_Apprentice>
+          <CVG_HeavenlyCauldron_Alchemist>7</CVG_HeavenlyCauldron_Alchemist>
+          <CVG_HeavenlyCauldron_Master>4</CVG_HeavenlyCauldron_Master>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <CVG_HeavenlyCauldron_Auctioneer>1</CVG_HeavenlyCauldron_Auctioneer>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+        </carriers>
+        <guards>
+          <CVG_HeavenlyCauldron_Apprentice>10</CVG_HeavenlyCauldron_Apprentice>
+          <CVG_HeavenlyCauldron_Alchemist>7</CVG_HeavenlyCauldron_Alchemist>
+          <CVG_HeavenlyCauldron_Master>4</CVG_HeavenlyCauldron_Master>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <CVG_HeavenlyCauldron_Apprentice>10</CVG_HeavenlyCauldron_Apprentice>
+          <CVG_HeavenlyCauldron_Alchemist>7</CVG_HeavenlyCauldron_Alchemist>
+          <CVG_HeavenlyCauldron_Master>4</CVG_HeavenlyCauldron_Master>
+          <CVG_HeavenlyCauldron_Grand>1.5</CVG_HeavenlyCauldron_Grand>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ConvergenceFaction">
+        <extraSettlements>1~2</extraSettlements>
+      </li>
+    </modExtensions>
+  </FactionDef>
+
+  <!-- Disciples: fire and wood cultivators armed with the Pavilion's own spirit weapons (forge of Alchemy & Artifacts) or simple
+       guns bought on the Rim; the alchemical fire body by rank. -->
+  <PawnKindDef Abstract="True" Name="CVG_HeavenlyCauldronKindBase" ParentName="CVG_Sect2KindBase">
+    <defaultFactionDef>CVG_Faction_HeavenlyCauldron</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_HeavenlyCauldron</nameMaker>
+    <weaponTags><li>CVG_SpiritWeapon</li><li>SimpleGun</li></weaponTags>
+    <apparelTags><li>IndustrialBasic</li><li>Neolithic</li></apparelTags>
+    <apparelColor>(0.78,0.32,0.22)</apparelColor>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_HeavenlyCauldronKindBase">
+    <defName>CVG_HeavenlyCauldron_Apprentice</defName>
+    <label>cauldron apprentice</label>
+    <fixedAdultBackstories><li>CVG_Backstory_HC_FurnaceStoker</li><li>CVG_Backstory_HC_HerbRunner</li></fixedAdultBackstories>
+    <combatPower>50</combatPower>
+    <minGenerationAge>16</minGenerationAge>
+    <weaponMoney>150~400</weaponMoney>
+    <apparelMoney>150~450</apparelMoney>
+    <itemQuality>Normal</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_QiRefining</realm>
+        <stage>1~3</stage>
+        <manuals><li>CVG_Manual_BlazingSun</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Fire</li><li>CVG_Element_Wood</li></elements>
+        <traitChances>
+          <li><trait>CVG_Body_PureYang</trait><degree>1</degree><chance>0.03</chance></li>
+          <li><trait>CVG_Body_PureYang</trait><degree>0</degree><chance>0.30</chance></li>
+        </traitChances>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_HeavenlyCauldronKindBase">
+    <defName>CVG_HeavenlyCauldron_Alchemist</defName>
+    <label>pavilion alchemist</label>
+    <fixedAdultBackstories><li>CVG_Backstory_HC_Alchemist</li><li>CVG_Backstory_HC_PillTaster</li></fixedAdultBackstories>
+    <combatPower>100</combatPower>
+    <minGenerationAge>18</minGenerationAge>
+    <weaponMoney>300~800</weaponMoney>
+    <apparelMoney>300~800</apparelMoney>
+    <itemQuality>Good</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_Foundation</realm>
+        <stage>1~2</stage>
+        <manuals><li>CVG_Manual_BlazingSun</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Fire</li><li>CVG_Element_Wood</li></elements>
+        <traitChances>
+          <li><trait>CVG_Body_PureYang</trait><degree>2</degree><chance>0.02</chance></li>
+          <li><trait>CVG_Body_PureYang</trait><degree>1</degree><chance>0.10</chance></li>
+          <li><trait>CVG_Body_PureYang</trait><degree>0</degree><chance>0.45</chance></li>
+        </traitChances>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_HeavenlyCauldronKindBase">
+    <defName>CVG_HeavenlyCauldron_Master</defName>
+    <label>cauldron master</label>
+    <fixedAdultBackstories><li>CVG_Backstory_HC_CauldronMaster</li><li>CVG_Backstory_HC_MaterialHunter</li></fixedAdultBackstories>
+    <combatPower>135</combatPower>
+    <minGenerationAge>20</minGenerationAge>
+    <weaponMoney>500~1200</weaponMoney>
+    <apparelMoney>400~1000</apparelMoney>
+    <itemQuality>Good</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_Foundation</realm>
+        <stage>3~4</stage>
+        <manuals><li>CVG_Manual_BlazingSun</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Fire</li><li>CVG_Element_Wood</li></elements>
+        <traitChances>
+          <li><trait>CVG_Body_PureYang</trait><degree>3</degree><chance>0.005</chance></li>
+          <li><trait>CVG_Body_PureYang</trait><degree>2</degree><chance>0.06</chance></li>
+          <li><trait>CVG_Body_PureYang</trait><degree>1</degree><chance>0.25</chance></li>
+          <li><trait>CVG_Body_PureYang</trait><degree>0</degree><chance>0.60</chance></li>
+        </traitChances>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_HeavenlyCauldronKindBase">
+    <defName>CVG_HeavenlyCauldron_Grand</defName>
+    <label>grand alchemist</label>
+    <fixedAdultBackstories><li>CVG_Backstory_HC_GrandAlchemist</li><li>CVG_Backstory_HC_LedgerElder</li></fixedAdultBackstories>
+    <combatPower>240</combatPower>
+    <minGenerationAge>40</minGenerationAge>
+    <maxGenerationAge>160</maxGenerationAge>
+    <factionLeader>true</factionLeader>
+    <weaponMoney>900~2000</weaponMoney>
+    <apparelMoney>600~1400</apparelMoney>
+    <itemQuality>Excellent</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_GoldenCore</realm>
+        <stage>1~3</stage>
+        <manuals><li>CVG_Manual_BlazingSun</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Fire</li><li>CVG_Element_Wood</li></elements>
+        <traitChances>
+          <li><trait>CVG_Body_PureYang</trait><degree>3</degree><chance>0.03</chance></li>
+          <li><trait>CVG_Body_PureYang</trait><degree>2</degree><chance>0.25</chance></li>
+          <li><trait>CVG_Body_PureYang</trait><degree>1</degree><chance>1</chance></li>
+        </traitChances>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_HeavenlyCauldronKindBase">
+    <defName>CVG_HeavenlyCauldron_Auctioneer</defName>
+    <label>pavilion auctioneer</label>
+    <fixedAdultBackstories><li>CVG_Backstory_HC_Auctioneer</li></fixedAdultBackstories>
+    <combatPower>45</combatPower>
+    <minGenerationAge>25</minGenerationAge>
+    <trader>true</trader>
+    <weaponMoney>150~400</weaponMoney>
+    <apparelMoney>300~700</apparelMoney>
+    <itemQuality>Good</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_QiRefining</realm>
+        <stage>2~3</stage>
+        <manuals><li>CVG_Manual_BlazingSun</li></manuals>
+        <elements><li>CVG_Element_Fire</li></elements>
+        <traitChances>
+          <li><trait>CVG_Body_PureYang</trait><degree>0</degree><chance>0.30</chance></li>
+        </traitChances>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Trade: the best of the game. Pills, herbs, spirit materials; spirit weapons of the forge Good to Masterwork (never Legendary);
+       buys every technology. -->
+  <TraderKindDef Abstract="True" Name="CVG_TraderHeavenlyCauldronBase">
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>500~1500</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>150~400</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritJade</thingDef><countRange>5~25</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_FoundationPill</thingDef><countRange>1~4</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_JadeSlip</thingDef><countRange>1~3</countRange></li>
+      <li Class="StockGenerator_SingleDef" MayRequire="prospero1088.convergence.alchemy"><thingDef>CVG_HealingPill</thingDef><countRange>2~8</countRange></li>
+      <li Class="StockGenerator_SingleDef" MayRequire="prospero1088.convergence.alchemy"><thingDef>CVG_QiRecoveryPill</thingDef><countRange>2~8</countRange></li>
+      <li Class="StockGenerator_SingleDef" MayRequire="prospero1088.convergence.alchemy"><thingDef>CVG_TemperingPill</thingDef><countRange>1~4</countRange></li>
+      <li Class="StockGenerator_SingleDef" MayRequire="prospero1088.convergence.alchemy"><thingDef>CVG_PurificationPill</thingDef><countRange>0~2</countRange></li>
+      <li Class="StockGenerator_SingleDef" MayRequire="prospero1088.convergence.alchemy"><thingDef>CVG_BiguPill</thingDef><countRange>3~10</countRange></li>
+      <li Class="StockGenerator_SingleDef" MayRequire="prospero1088.convergence.alchemy"><thingDef>CVG_SpiritHerb</thingDef><countRange>5~25</countRange></li>
+      <li Class="Convergence.StockGenerator_QualityTag" MayRequire="prospero1088.convergence.alchemy">
+        <tradeTag>WeaponMelee</tradeTag>
+        <weaponTags><li>CVG_SpiritWeapon</li></weaponTags>
+        <thingDefCountRange>1~3</thingDefCountRange>
+        <countRange>1~1</countRange>
+        <qualities>
+          <li><quality>Good</quality><weight>55</weight></li>
+          <li><quality>Excellent</quality><weight>37</weight></li>
+          <li><quality>Masterwork</quality><weight>8</weight></li>
+        </qualities>
+      </li>
+      <li Class="StockGenerator_SingleDef"><thingDef>MedicineHerbal</thingDef><countRange>20~60</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>MedicineIndustrial</thingDef><countRange>10~30</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>ComponentIndustrial</thingDef><countRange>20~60</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>ExoticMisc</tradeTag><thingDefCountRange>1~3</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>ExoticMisc</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Artifact</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>WeaponMelee</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>WeaponRanged</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>HiTechArmor</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Armor</tag></li>
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+    </stockGenerators>
+  </TraderKindDef>
+
+  <TraderKindDef ParentName="CVG_TraderHeavenlyCauldronBase">
+    <defName>CVG_Trader_HeavenlyCauldron</defName>
+    <label>heavenly cauldron merchant</label>
+  </TraderKindDef>
+
+  <TraderKindDef ParentName="CVG_TraderHeavenlyCauldronBase">
+    <defName>CVG_Trader_HeavenlyCauldronSettlement</defName>
+    <label>heavenly cauldron auction house</label>
+  </TraderKindDef>
+
+  <!-- Honorary titles -->
+  <RoyalTitleDef ParentName="CVG_SectTitle1">
+    <defName>CVG_Title_HeavenlyCauldron_Friend</defName>
+    <label>friend of the pavilion</label>
+    <description>The Pavilion writes its friends into the first page of its ledger, where the prices are fair. Everything has a price, the masters say; friendship only changes who pays it.</description>
+    <tags><li>CVG_HeavenlyCauldronTitle</li></tags>
+  </RoyalTitleDef>
+
+  <RoyalTitleDef ParentName="CVG_SectTitle2">
+    <defName>CVG_Title_HeavenlyCauldron_Guest</defName>
+    <label>honored guest of the pavilion</label>
+    <description>An honored guest may sit in the front row of the Pavilion's auctions and see the lot before it is announced. The Pavilion expects discretion in return: what is sold there is never spoken of outside.</description>
+    <tags><li>CVG_HeavenlyCauldronTitle</li></tags>
+  </RoyalTitleDef>
+
+  <RoyalTitleDef ParentName="CVG_SectTitle3">
+    <defName>CVG_Title_HeavenlyCauldron_Protector</defName>
+    <label>protector of the pavilion</label>
+    <description>Whoever has guarded a Pavilion caravan with their life has a debt written in red in the ledger. The Pavilion always pays its debts, with interest, and in the currency it chooses.</description>
+    <tags><li>CVG_HeavenlyCauldronTitle</li></tags>
+  </RoyalTitleDef>
+
+  <RoyalTitleDef ParentName="CVG_SectTitle4">
+    <defName>CVG_Title_HeavenlyCauldron_GuestElder</defName>
+    <label>guest elder of the pavilion</label>
+    <description>A guest elder (客卿长老) holds a seat at the Pavilion's council without owning a share of it. Qian Wanli grants the title rarely, and only to people whose word is worth more than their purse.</description>
+    <tags><li>CVG_HeavenlyCauldronTitle</li></tags>
+  </RoyalTitleDef>
+
+  <!-- The five favors -->
+  <RoyalTitlePermitDef ParentName="CVG_SectFavorResources">
+    <defName>CVG_Permit_HeavenlyCauldron_AlchemyMaterials</defName>
+    <label>alchemy materials</label>
+    <description>A crate from the Pavilion's storehouse: spirit stones, spirit jade and the herbs its furnaces never run out of. The Pavilion calls it a sample; it expects you to come back for more.</description>
+    <faction>CVG_Faction_HeavenlyCauldron</faction>
+    <minTitle>CVG_Title_HeavenlyCauldron_Friend</minTitle>
+    <royalAid>
+      <itemsToDrop>
+        <CVG_SpiritStone>40</CVG_SpiritStone>
+        <CVG_SpiritJade>4</CVG_SpiritJade>
+        <CVG_SpiritHerb MayRequire="prospero1088.convergence.alchemy">15</CVG_SpiritHerb>
+        <MedicineHerbal>10</MedicineHerbal>
+      </itemsToDrop>
+    </royalAid>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef ParentName="CVG_SectFavorReinforcements">
+    <defName>CVG_Permit_HeavenlyCauldron_Alchemists</defName>
+    <label>call pavilion escorts</label>
+    <description>Three alchemists of the Pavilion, armed with fire and whatever weapons the Rim sold them, come to your side. The Pavilion bills nothing; it simply remembers.</description>
+    <faction>CVG_Faction_HeavenlyCauldron</faction>
+    <minTitle>CVG_Title_HeavenlyCauldron_Guest</minTitle>
+    <royalAid>
+      <pawnKindDef>CVG_HeavenlyCauldron_Alchemist</pawnKindDef>
+    </royalAid>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef ParentName="CVG_SectFavorMasterwork">
+    <defName>CVG_Permit_HeavenlyCauldron_MasterworkArtifact</defName>
+    <label>masterwork spirit artifact</label>
+    <description>The Pavilion's spirit forge sends one artifact it had kept off the auction block: a weapon forged with qi and alchemical fire.</description>
+    <faction>CVG_Faction_HeavenlyCauldron</faction>
+    <minTitle>CVG_Title_HeavenlyCauldron_Protector</minTitle>
+    <modExtensions>
+      <li Class="Convergence.Factions.DefModExtension_SectGift">
+        <options>
+          <li MayRequire="prospero1088.convergence.alchemy"><weaponTag>CVG_SpiritWeapon</weaponTag><quality>Masterwork</quality></li>
+          <li><thing>CVG_FoundationPill</thing><count>3</count></li>
+        </options>
+      </li>
+    </modExtensions>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef ParentName="CVG_SectFavorExceptional">
+    <defName>CVG_Permit_HeavenlyCauldron_PillOfChoice</defName>
+    <label>pill of choice</label>
+    <description>Mo Qinghua refines one pill to order, from the recipes the Pavilion never sells. The guest elder chooses which: a breakthrough, a cleansing, or a second life.</description>
+    <faction>CVG_Faction_HeavenlyCauldron</faction>
+    <minTitle>CVG_Title_HeavenlyCauldron_GuestElder</minTitle>
+    <modExtensions>
+      <li Class="Convergence.Factions.DefModExtension_SectGift">
+        <playerChooses>true</playerChooses>
+        <options>
+          <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_NineTurnsPill</thing><count>1</count></li>
+          <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_JadeElixir</thing><count>1</count></li>
+          <li><thing>CVG_FoundationPill</thing><count>4</count></li>
+          <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_PurificationPill</thing><count>3</count></li>
+          <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_TemperingPill</thing><count>4</count></li>
+        </options>
+      </li>
+    </modExtensions>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef ParentName="CVG_SectFavorStrike">
+    <defName>CVG_Permit_HeavenlyCauldron_FireStrike</defName>
+    <label>cauldron fire strike</label>
+    <description>Four cauldron masters land where you point and turn the place into a furnace. The Pavilion calls it settling an account.</description>
+    <faction>CVG_Faction_HeavenlyCauldron</faction>
+    <minTitle>CVG_Title_HeavenlyCauldron_GuestElder</minTitle>
+    <royalAid>
+      <pawnKindDef>CVG_HeavenlyCauldron_Master</pawnKindDef>
+      <pawnCount>4</pawnCount>
+    </royalAid>
+  </RoyalTitlePermitDef>
+</Defs>

@@ -230,6 +230,31 @@ Requires: Harmony, Convergence: Era of Cultivation. Optional: Convergence: Races
 ```
 + [FOOTER]
 
+## 10b. Convergence: Factions — `prospero1088.convergence.factions` (nuevo; reemplaza a Sects)
+Required items: Harmony, Core · DLC required: Royalty, Ideology · Optional: Biotech Wuxia, Alchemy, Apparel
+
+```
+[h1]Convergence: Factions[/h1]
+The great sects of Jiuxiao for [url=https://steamcommunity.com/sharedfiles/filedetails/?id={ID_CORE}]Convergence: Era of Cultivation[/url], built on Royalty and Ideology.
+
+[list]
+[*][b]Formless Sword Sect[/b]: sword cultivators who deflect arrows and bullets.
+[*][b]Sect of Nine Temperings[/b]: body cultivators who fight bare-handed.
+[*][b]Heavenly Cauldron Pavilion[/b]: alchemists and merchants; a pill of your choice for its guest elders.
+[*][b]Blood Moon Cult[/b]: demonic cultivators, hostile unless you walk the demonic way yourself.
+[*][b]Invisible Thread Sect[/b]: puppeteers whose raids bring spirit puppets (needs Convergence: Biotech Wuxia).
+[*]And the [b]Rogue Cultivators[/b], who belong to no sect.
+[/list]
+[h2]Each sect[/h2]
+[list]
+[*]Its own ideology: meme, precepts, a specialist role and a ritual that tempers a four-grade constitution (sword body, steel body, pure yang body, blood moon body, thousand threads body).
+[*]Disciples by rank with their own backstories, names and weapons they can actually use.
+[*]Permanent [b]honorary titles[/b] (Royalty) for the colonists who earn its trust, and [b]sect contribution[/b] to spend on five favors: resources, reinforcements, a masterwork gift, an exceptional gift of your choice and a strike of its elite.
+[*]Trade in its specialty, from Good to Masterwork.
+[/list]
+Requires: Harmony, Convergence: Era of Cultivation, Royalty and Ideology. Replaces Convergence: Sects (do not use both).
+```
++ [FOOTER]
 ## 11. Convergence: Grafts — `prospero1088.convergence.grafts`
 Required items: Harmony, Core
 

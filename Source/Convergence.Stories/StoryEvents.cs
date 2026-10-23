@@ -103,7 +103,7 @@ namespace Convergence.Stories
                     GiveElixir(map);
                     break;
                 case "clan_returns":
-                    var clan = StoryUtility.FactionByDef("CVG_Faction_AncientDragon") ?? StoryUtility.FactionByDef("CVG_Faction_AzurePeak");
+                    var clan = StoryUtility.FactionByDef("CVG_Faction_AncientDragon") ?? StoryUtility.FactionByDef("CVG_Faction_FormlessSword") ?? StoryUtility.FactionByDef("CVG_Faction_AzurePeak");
                     StoryUtility.Raid(clan, 0.8f, "ClanReturns");
                     break;
                 case "emissaries":
@@ -234,7 +234,7 @@ namespace Convergence.Stories
 
         private static void SectOffer(Map map)
         {
-            foreach (var d in new[] { "CVG_Faction_AzurePeak", "CVG_Faction_SilentLotus" })
+            foreach (var d in new[] { "CVG_Faction_FormlessSword", "CVG_Faction_HeavenlyCauldron", "CVG_Faction_AzurePeak", "CVG_Faction_SilentLotus" })
                 StoryUtility.FactionByDef(d)?.TryAffectGoodwillWith(Faction.OfPlayer, 35, canSendMessage: false, canSendHostilityLetter: false);
             var gift = ThingMaker.MakeThing(DefDatabase<ThingDef>.GetNamed("CVG_SpiritStone"));
             gift.stackCount = 60;

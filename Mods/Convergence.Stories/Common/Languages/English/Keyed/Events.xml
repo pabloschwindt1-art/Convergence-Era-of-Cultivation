@@ -30,10 +30,10 @@
   <CVG_Ev_PeddlerInTheMist_Res_buy>The peddler weighs the silver, hums, and leaves you a bag whose content you will find out later.</CVG_Ev_PeddlerInTheMist_Res_buy>
   <CVG_Ev_PeddlerInTheMist_Opt_pass>Let him pass</CVG_Ev_PeddlerInTheMist_Opt_pass>
   <CVG_Ev_PeddlerInTheMist_Res_pass>He tips a hat he does not have and walks back into the mist.</CVG_Ev_PeddlerInTheMist_Res_pass>
-  <CVG_Ev_LotusPilgrims_Label>Pilgrims of the Lotus</CVG_Ev_LotusPilgrims_Label>
-  <CVG_Ev_LotusPilgrims_Text>A line of pilgrims in grey robes walks past the colony, carrying a lotus in a clay pot. They ask for water and a place to pray, and offer in return a blessing that, according to the Silent Lotus Temple, has never harmed anyone.</CVG_Ev_LotusPilgrims_Text>
+  <CVG_Ev_LotusPilgrims_Label>Pilgrims of the Cauldron</CVG_Ev_LotusPilgrims_Label>
+  <CVG_Ev_LotusPilgrims_Text>A line of herb pilgrims of the Heavenly Cauldron Pavilion walks past the colony in vermilion robes, carrying a censer lit from the cauldron's fire. They ask for water and a place to rest, and offer in return a blessing of the alchemical fire that, according to the Pavilion, has never harmed a paying customer.</CVG_Ev_LotusPilgrims_Text>
   <CVG_Ev_LotusPilgrims_Opt_welcome>Welcome them</CVG_Ev_LotusPilgrims_Opt_welcome>
-  <CVG_Ev_LotusPilgrims_Res_welcome>The pilgrims pray all night. The colony sleeps in peace.</CVG_Ev_LotusPilgrims_Res_welcome>
+  <CVG_Ev_LotusPilgrims_Res_welcome>The pilgrims keep the censer burning all night. The colony sleeps in peace.</CVG_Ev_LotusPilgrims_Res_welcome>
   <CVG_Ev_LotusPilgrims_Opt_water>Give water and move on</CVG_Ev_LotusPilgrims_Opt_water>
   <CVG_Ev_LotusPilgrims_Res_water>They bow, drink and continue their walk.</CVG_Ev_LotusPilgrims_Res_water>
   <CVG_Ev_StrandedAlchemist_Label>A stranded alchemist</CVG_Ev_StrandedAlchemist_Label>
@@ -45,30 +45,30 @@
   <CVG_Ev_TravelingStorytellers_Label>Traveling storytellers</CVG_Ev_TravelingStorytellers_Label>
   <CVG_Ev_TravelingStorytellers_Text>A troupe of storytellers sets up a mat under a tree and begins to recite the legend of the Iron Calamity as it is told in a fragment of Jiuxiao you have never heard of. By the third act, even your most serious cultivator is leaning in.</CVG_Ev_TravelingStorytellers_Text>
   <CVG_Ev_RunawayDisciple_Label>A disciple on the run</CVG_Ev_RunawayDisciple_Label>
-  <CVG_Ev_RunawayDisciple_Text>A young disciple of the Azure Peak arrives wounded and begs for shelter. He says he saw something in the Sword Graveyard that the elders do not want known, and that the sect's enforcers are two days behind him. His story has a hole in it, but his wounds do not.</CVG_Ev_RunawayDisciple_Text>
+  <CVG_Ev_RunawayDisciple_Text>A young disciple of the Formless Sword arrives wounded and begs for shelter. He says he saw something in the Sword Mound that the elders do not want known, and that the sect's enforcers are two days behind him. His story has a hole in it, but his wounds do not.</CVG_Ev_RunawayDisciple_Text>
   <CVG_Ev_RunawayDisciple_Opt_hide>Hide him</CVG_Ev_RunawayDisciple_Opt_hide>
   <CVG_Ev_RunawayDisciple_Res_hide>The disciple collapses in relief. Two days is not much time.</CVG_Ev_RunawayDisciple_Res_hide>
   <CVG_Ev_RunawayDisciple_Opt_hand>Hand him over</CVG_Ev_RunawayDisciple_Opt_hand>
   <CVG_Ev_RunawayDisciple_Res_hand>The enforcers thank you coldly and take him. Nobody in the colony meets his eyes.</CVG_Ev_RunawayDisciple_Res_hand>
-  <CVG_Ev_RunawayEnforcers_Label>The enforcers of the Peak</CVG_Ev_RunawayEnforcers_Label>
-  <CVG_Ev_RunawayEnforcers_Text>The enforcers of the Azure Peak have arrived, sword-hands resting on their hilts. They do not threaten: they only ask, politely, where the disciple is. They have the patience of men who know that the answer always comes.</CVG_Ev_RunawayEnforcers_Text>
+  <CVG_Ev_RunawayEnforcers_Label>The enforcers of the Sword Mound</CVG_Ev_RunawayEnforcers_Label>
+  <CVG_Ev_RunawayEnforcers_Text>The enforcers of the Formless Sword have arrived, sword-hands resting on their hilts. They do not threaten: they only ask, politely, where the disciple is. They have the patience of people who know that the answer always comes.</CVG_Ev_RunawayEnforcers_Text>
   <CVG_Ev_RunawayEnforcers_Opt_protect>Refuse to tell</CVG_Ev_RunawayEnforcers_Opt_protect>
   <CVG_Ev_RunawayEnforcers_Res_protect>Swords come out. The disciple, from a loft, finally understands that he has chosen his side.</CVG_Ev_RunawayEnforcers_Res_protect>
   <CVG_Ev_RunawayEnforcers_Opt_give>Give him up now</CVG_Ev_RunawayEnforcers_Opt_give>
   <CVG_Ev_RunawayEnforcers_Res_give>The enforcers lead him away. He does not resist, which is worse.</CVG_Ev_RunawayEnforcers_Res_give>
   <CVG_Ev_RunawayThanks_Label>What the disciple saw</CVG_Ev_RunawayThanks_Label>
-  <CVG_Ev_RunawayThanks_Text>When the dust settles the disciple tells his story to the end. In the Sword Graveyard, one of the swords had begun to whisper in the voice of the Iron Calamity. He has the proof wrapped in a cloth: a splinter of black metal that hums, and that he cannot bring himself to touch.</CVG_Ev_RunawayThanks_Text>
+  <CVG_Ev_RunawayThanks_Text>When the dust settles the disciple tells his story to the end. In the Sword Mound, one of the swords had begun to whisper in the voice of the Iron Calamity. He has the proof wrapped in a cloth: a splinter of black metal that hums, and that he cannot bring himself to touch.</CVG_Ev_RunawayThanks_Text>
   <CVG_Ev_BeastTamerWanders_Label>A beast tamer</CVG_Ev_BeastTamerWanders_Label>
   <CVG_Ev_BeastTamerWanders_Text>A woman in furs with a wind wolf asleep at her feet sits by your fire and talks about the language of beasts: not words, she says, but weather. She will teach what she can in a night, for a fair price.</CVG_Ev_BeastTamerWanders_Text>
   <CVG_Ev_BeastTamerWanders_Opt_learn>Learn from her (80 silver)</CVG_Ev_BeastTamerWanders_Opt_learn>
   <CVG_Ev_BeastTamerWanders_Res_learn>By morning your handler can calm animals that would have bitten them last week.</CVG_Ev_BeastTamerWanders_Res_learn>
   <CVG_Ev_BeastTamerWanders_Opt_decline>Thank her and decline</CVG_Ev_BeastTamerWanders_Opt_decline>
   <CVG_Ev_StolenManual_Label>The stolen manual</CVG_Ev_StolenManual_Label>
-  <CVG_Ev_StolenManual_Text>One of your people has been seen with a manual of the Silent Lotus Temple that nobody remembers buying. A monk from the temple arrives that same afternoon, looking, with good manners, for a stolen manual. The two things are going to meet at supper.</CVG_Ev_StolenManual_Text>
+  <CVG_Ev_StolenManual_Text>One of your people has been seen with a pill recipe of the Heavenly Cauldron Pavilion that nobody remembers buying. An alchemist of the Pavilion arrives that same afternoon, looking, with good manners, for a stolen recipe. The two things are going to meet at supper.</CVG_Ev_StolenManual_Text>
   <CVG_Ev_StolenManual_Opt_return>Return it</CVG_Ev_StolenManual_Opt_return>
-  <CVG_Ev_StolenManual_Res_return>The monk bows, deeper than the manual deserves.</CVG_Ev_StolenManual_Res_return>
+  <CVG_Ev_StolenManual_Res_return>The alchemist bows, deeper than the recipe deserves.</CVG_Ev_StolenManual_Res_return>
   <CVG_Ev_StolenManual_Opt_keep>Keep it and deny</CVG_Ev_StolenManual_Opt_keep>
-  <CVG_Ev_StolenManual_Res_keep>The monk does not argue. He only looks at the person who stole it for a long time.</CVG_Ev_StolenManual_Res_keep>
+  <CVG_Ev_StolenManual_Res_keep>The alchemist does not argue. She only writes something in her ledger, and looks at the thief for a long time.</CVG_Ev_StolenManual_Res_keep>
   <CVG_Ev_CursedBlade_Label>A sword in the stream</CVG_Ev_CursedBlade_Label>
   <CVG_Ev_CursedBlade_Text>Your people find a long sword lying in a stream, perfect, unrusted, humming faintly. The old tales warn against any weapon that no one remembers losing. The old tales also say that the best swords were found, not made.</CVG_Ev_CursedBlade_Text>
   <CVG_Ev_CursedBlade_Opt_take>Take the sword</CVG_Ev_CursedBlade_Opt_take>
@@ -82,9 +82,9 @@
   <CVG_Ev_BladeWhispers_Opt_silence>Silence it in a chest</CVG_Ev_BladeWhispers_Opt_silence>
   <CVG_Ev_BladeWhispers_Res_silence>The chest hums for three nights, then goes still.</CVG_Ev_BladeWhispers_Res_silence>
   <CVG_Ev_BladeExorcism_Label>Ridding the sword of its voice</CVG_Ev_BladeExorcism_Label>
-  <CVG_Ev_BladeExorcism_Text>A monk of the Silent Lotus who happens to be passing says that a voice in a blade is just a memory, and that all memories can be consoled. For the fee of a simple meal he will sit with the blade for a night, and it will either forget or be forgotten.</CVG_Ev_BladeExorcism_Text>
+  <CVG_Ev_BladeExorcism_Text>An alchemist of the Heavenly Cauldron who happens to be passing says that a voice in a blade is just a memory, and that every memory can be burned away by the right fire. For the fee of a simple meal she will sit with the blade beside her brazier for a night, and it will either forget or be forgotten.</CVG_Ev_BladeExorcism_Text>
   <CVG_Ev_BladeExorcism_Opt_sit>Let him sit with it</CVG_Ev_BladeExorcism_Opt_sit>
-  <CVG_Ev_BladeExorcism_Res_sit>At dawn the sword is just a sword, and the monk looks twenty years older.</CVG_Ev_BladeExorcism_Res_sit>
+  <CVG_Ev_BladeExorcism_Res_sit>At dawn the sword is just a sword, and the alchemist looks twenty years older.</CVG_Ev_BladeExorcism_Res_sit>
   <CVG_Ev_BladeExorcism_Opt_refuse>Keep the voice</CVG_Ev_BladeExorcism_Opt_refuse>
   <CVG_Ev_BladeExorcism_Res_refuse>The blade will sing again. Pray it does not sing for blood.</CVG_Ev_BladeExorcism_Res_refuse>
   <CVG_Ev_DemonBargain_Label>A bargain at dusk</CVG_Ev_DemonBargain_Label>
@@ -122,7 +122,7 @@
   <CVG_Ev_AllianceProposal_Opt_decline>Decline politely</CVG_Ev_AllianceProposal_Opt_decline>
   <CVG_Ev_AllianceProposal_Res_decline>The emissary says that the offer was a courtesy. He does not seem to think so.</CVG_Ev_AllianceProposal_Res_decline>
   <CVG_Ev_RivalChallenge_Label>A challenge for honor</CVG_Ev_RivalChallenge_Label>
-  <CVG_Ev_RivalChallenge_Text>A disciple of the Azure Peak rides in, bows exactly the right amount and challenges your strongest fighter to a duel 'in the spirit of friendship'. Everyone present understands that the spirit of friendship has a very sharp edge.</CVG_Ev_RivalChallenge_Text>
+  <CVG_Ev_RivalChallenge_Text>A disciple of the Formless Sword rides in, bows exactly the right amount and challenges your strongest fighter to a duel 'in the spirit of friendship'. Everyone present understands that the spirit of friendship has a very sharp edge.</CVG_Ev_RivalChallenge_Text>
   <CVG_Ev_RivalChallenge_Opt_duel>Accept the duel</CVG_Ev_RivalChallenge_Opt_duel>
   <CVG_Ev_RivalChallenge_Res_duel>It ends with a tie and a respectful nod. Both leave limping.</CVG_Ev_RivalChallenge_Res_duel>
   <CVG_Ev_RivalChallenge_Opt_decline>Bow and decline</CVG_Ev_RivalChallenge_Opt_decline>
@@ -209,11 +209,11 @@
   <CVG_Ev_LostCaravanReward_Label>A caravan comes back for its lost goods</CVG_Ev_LostCaravanReward_Label>
   <CVG_Ev_LostCaravanReward_Text>A caravan master arrives with a tired face and a promise. Months ago one of his carts went into a gully near your land, and he assumed it was lost. Your people did not touch it. He is, to put it mildly, moved by their honesty.</CVG_Ev_LostCaravanReward_Text>
   <CVG_Ev_VisitAzurePeak_Label>Swords at the gate</CVG_Ev_VisitAzurePeak_Label>
-  <CVG_Ev_VisitAzurePeak_Text>A party of the Azure Peak Sword Sect arrives at the gate, not to fight but to be seen. They carry swords with blue tassels and the disciplined idleness of people who have never been asked to wait. They are here, they say, to observe.</CVG_Ev_VisitAzurePeak_Text>
+  <CVG_Ev_VisitAzurePeak_Text>A party of the Formless Sword Sect arrives at the gate, not to fight but to be seen. They carry swords with white tassels and the disciplined idleness of people who have never been asked to wait. They are here, they say, to observe.</CVG_Ev_VisitAzurePeak_Text>
   <CVG_Ev_VisitCauldron_Label>The auction caravan</CVG_Ev_VisitCauldron_Label>
   <CVG_Ev_VisitCauldron_Text>Qian Wanli's auction caravan rolls to a stop at the edge of your land. Twelve carts, thirty guards, one smiling master and a banner that reads 'EVERYTHING HAS A PRICE, EVEN THIS BANNER'. The Pavilion sells pills, slips, jade and rumors, and buys everything.</CVG_Ev_VisitCauldron_Text>
-  <CVG_Ev_VisitLotus_Label>The healers of the Lotus</CVG_Ev_VisitLotus_Label>
-  <CVG_Ev_VisitLotus_Text>A small group of the Silent Lotus Temple arrives with baskets of herbs and no weapons. The abbess has sent them to see who in the colony is sick and has not said so. They will heal anyone who asks, and they will ask nothing, which is a little unsettling.</CVG_Ev_VisitLotus_Text>
+  <CVG_Ev_VisitLotus_Label>The healers of the Pavilion</CVG_Ev_VisitLotus_Label>
+  <CVG_Ev_VisitLotus_Text>A small group from the Heavenly Cauldron Pavilion's charity infirmary arrives with baskets of herbs and no weapons. Mo Qinghua has sent them to see who in the colony is sick and has not said so. They will heal anyone who asks, and for once the Pavilion asks no price, which is a little unsettling.</CVG_Ev_VisitLotus_Text>
   <CVG_Ev_VisitDragon_Label>A guest of the Dragon Clan</CVG_Ev_VisitDragon_Label>
   <CVG_Ev_VisitDragon_Text>A young man with the faint gleam of scales along his wrists stands at your gate and does not knock. Ao Ming of the Ancient Dragon Clan has been told to see how people on the Rim live. He is polite, curious and a little disappointed that nobody screamed.</CVG_Ev_VisitDragon_Text>
   <CVG_Ev_VisitRogueMarket_Label>A night market</CVG_Ev_VisitRogueMarket_Label>
@@ -242,10 +242,10 @@
   <CVG_Ev_MissionSpiderDone_Text>The Pavilion's representative looks at the gland, at the carcass, at you, and writes a figure on a slip. The figure has many zeroes. 'The Pavilion honors its debts', he says, with the sweetness of a man who has just made a lot of money.</CVG_Ev_MissionSpiderDone_Text>
   <CVG_Ev_MissionSpiderFail_Label>The spider keeps its web</CVG_Ev_MissionSpiderFail_Label>
   <CVG_Ev_MissionSpiderFail_Text>Another caravan vanishes in the pass. The Pavilion strikes the contract from the ledger without bitterness. Bitterness is not a line item.</CVG_Ev_MissionSpiderFail_Text>
-  <CVG_Ev_MissionLotusHerbs_Label>An outbreak at the temple</CVG_Ev_MissionLotusHerbs_Label>
-  <CVG_Ev_MissionLotusHerbs_Text>A novice from the Silent Lotus Temple arrives, out of breath, with a one-line message: 'the cough is spreading and the herb store is empty'. The abbess does not ask for charity. She asks for twenty-five doses of herbal medicine and promises a blessing of the lotus in return.</CVG_Ev_MissionLotusHerbs_Text>
+  <CVG_Ev_MissionLotusHerbs_Label>An outbreak at the Pavilion</CVG_Ev_MissionLotusHerbs_Label>
+  <CVG_Ev_MissionLotusHerbs_Text>A runner of the Heavenly Cauldron Pavilion arrives, out of breath, with a one-line message: 'the cough is spreading through the infirmary and the herb store is empty'. Qian Wanli does not ask for charity. He asks for twenty-five doses of herbal medicine and promises to write the debt in red in the Pavilion's ledger.</CVG_Ev_MissionLotusHerbs_Text>
   <CVG_Ev_MissionLotusHerbs_Opt_send>Send the herbs</CVG_Ev_MissionLotusHerbs_Opt_send>
-  <CVG_Ev_MissionLotusHerbs_Res_send>A month later the temple sends a basket of tea, a pill and a very long letter of thanks.</CVG_Ev_MissionLotusHerbs_Res_send>
+  <CVG_Ev_MissionLotusHerbs_Res_send>A month later the Pavilion sends a basket of tea, a pill and a receipt marked 'paid, with interest'.</CVG_Ev_MissionLotusHerbs_Res_send>
   <CVG_Ev_MissionLotusHerbs_Opt_decline>We can't spare them</CVG_Ev_MissionLotusHerbs_Opt_decline>
   <CVG_Ev_MissionCauldronCores_Label>A commission for beast cores</CVG_Ev_MissionCauldronCores_Label>
   <CVG_Ev_MissionCauldronCores_Text>Mo Qinghua, Grand Alchemist, sends a note on perfumed paper. She needs two beast cores for an experiment she refuses to describe. She will pay in slips and favors and has attached a list of every favor the Pavilion has ever granted you, in case you have forgotten them.</CVG_Ev_MissionCauldronCores_Text>
@@ -260,7 +260,7 @@
   <CVG_Ev_MissionEscortReward_Label>The caravan pays</CVG_Ev_MissionEscortReward_Label>
   <CVG_Ev_MissionEscortReward_Text>In the morning the caravan master counts his carts, finds them all, and pays double what he promised. A man who has been saved from bandits is generous for exactly one day.</CVG_Ev_MissionEscortReward_Text>
   <CVG_Ev_MissionAzureTournament_Label>The Tournament of Sects</CVG_Ev_MissionAzureTournament_Label>
-  <CVG_Ev_MissionAzureTournament_Text>Lin Wuchen has declared a tournament at the foot of the Peak and invites every sect and every person who can stand upright and swing a sword. Fighting is not compulsory. Honor is. The prize is a sword of spirit steel and, much more valuable, the right to be remembered.</CVG_Ev_MissionAzureTournament_Text>
+  <CVG_Ev_MissionAzureTournament_Text>The sect master of the Formless Sword has declared a tournament at the foot of the Peak and invites every sect and every person who can stand upright and swing a sword. Fighting is not compulsory. Honor is. The prize is a sword of spirit steel and, much more valuable, the right to be remembered.</CVG_Ev_MissionAzureTournament_Text>
   <CVG_Ev_MissionAzureTournament_Opt_send>Send your best fighter</CVG_Ev_MissionAzureTournament_Opt_send>
   <CVG_Ev_MissionAzureTournament_Res_send>Your fighter comes back limping, with a ribbon, a bruise and the respect of three sects.</CVG_Ev_MissionAzureTournament_Res_send>
   <CVG_Ev_MissionAzureTournament_Opt_skip>Skip the tournament</CVG_Ev_MissionAzureTournament_Opt_skip>
@@ -276,8 +276,8 @@
   <CVG_Ev_MissionStolenManual_Opt_no>Decline</CVG_Ev_MissionStolenManual_Opt_no>
   <CVG_Ev_MissionManualReward_Label>The manual returns</CVG_Ev_MissionManualReward_Label>
   <CVG_Ev_MissionManualReward_Text>You have retrieved the manual, slightly stained with tea and slightly used as a tray. The sect receives it with a grave bow and keeps their word: here are the lesser chapters, in a copy as careful as any scribe could make.</CVG_Ev_MissionManualReward_Text>
-  <CVG_Ev_TravelingHealer_Label>A healer without a temple</CVG_Ev_TravelingHealer_Label>
-  <CVG_Ev_TravelingHealer_Text>A woman with a satchel of dried herbs says she was a healer at the Silent Lotus Temple until her doubts got louder than her prayers. She does not want money. She wants a place to stay for the winter and a reason to stop walking.</CVG_Ev_TravelingHealer_Text>
+  <CVG_Ev_TravelingHealer_Label>A healer without a pavilion</CVG_Ev_TravelingHealer_Label>
+  <CVG_Ev_TravelingHealer_Text>A woman with a satchel of dried herbs says she was a healer in the Heavenly Cauldron Pavilion's infirmary until she grew tired of putting a price on every remedy. She does not want money. She wants a place to stay for the winter and a reason to stop walking.</CVG_Ev_TravelingHealer_Text>
   <CVG_Ev_TravelingHealer_Opt_welcome>Give her shelter</CVG_Ev_TravelingHealer_Opt_welcome>
   <CVG_Ev_TravelingHealer_Res_welcome>She looks around the colony for a long time and finally sets her satchel down.</CVG_Ev_TravelingHealer_Res_welcome>
   <CVG_Ev_TravelingHealer_Opt_food>Give her a meal and let her go</CVG_Ev_TravelingHealer_Opt_food>
@@ -301,8 +301,8 @@
   <CVG_Ev_OrphanOfTheCalamity_Text>Searching the ruins of a burned shrine, your people find a girl of seven who has not spoken in days. She clutches a small bronze mirror and does not let go. When someone approaches she looks past them, as if there were somebody standing behind.</CVG_Ev_OrphanOfTheCalamity_Text>
   <CVG_Ev_OrphanOfTheCalamity_Opt_adopt>Take her in</CVG_Ev_OrphanOfTheCalamity_Opt_adopt>
   <CVG_Ev_OrphanOfTheCalamity_Res_adopt>She sleeps in the corner of the kitchen with the mirror under her cheek.</CVG_Ev_OrphanOfTheCalamity_Res_adopt>
-  <CVG_Ev_OrphanOfTheCalamity_Opt_lotus>Send her to the Lotus</CVG_Ev_OrphanOfTheCalamity_Opt_lotus>
-  <CVG_Ev_OrphanOfTheCalamity_Res_lotus>The Temple receives her with gentleness and a bowl of rice.</CVG_Ev_OrphanOfTheCalamity_Res_lotus>
+  <CVG_Ev_OrphanOfTheCalamity_Opt_lotus>Send her to the Pavilion</CVG_Ev_OrphanOfTheCalamity_Opt_lotus>
+  <CVG_Ev_OrphanOfTheCalamity_Res_lotus>The Pavilion takes her in as an apprentice, with gentleness, a bowl of rice and a contract.</CVG_Ev_OrphanOfTheCalamity_Res_lotus>
   <CVG_Ev_OrphanSpeaks_Label>The girl speaks</CVG_Ev_OrphanSpeaks_Label>
   <CVG_Ev_OrphanSpeaks_Text>One morning the girl asks, in a small clear voice, for tea. Then she tells you that the mirror shows the dead as they were. She does not ask what it means. She asks whether she may keep it.</CVG_Ev_OrphanSpeaks_Text>
   <CVG_Ev_OrphanSpeaks_Opt_keep>Of course</CVG_Ev_OrphanSpeaks_Opt_keep>
@@ -342,8 +342,8 @@
   <CVG_Ev_CauldronCreditors_Res_flee>The collectors take off their silk gloves.</CVG_Ev_CauldronCreditors_Res_flee>
   <CVG_Ev_DragonHeirTrial_Label>The Dragon's trial</CVG_Ev_DragonHeirTrial_Label>
   <CVG_Ev_DragonHeirTrial_Text>An elder of the Ancient Dragon Clan arrives to see whether the blood of the descendant has thickened or thinned. He asks nothing, takes nothing and, for an entire afternoon, circles the colony in silence. Then he leaves a scale on the doorstep, which may be a gift or an invoice.</CVG_Ev_DragonHeirTrial_Text>
-  <CVG_Ev_LotusWelcome_Label>The Lotus remembers its own</CVG_Ev_LotusWelcome_Label>
-  <CVG_Ev_LotusWelcome_Text>A small procession of the Silent Lotus Temple arrives, with a lotus in a pot and a quiet song. They bring news that the abbess has heard of the refugees and has decided that the temple has a place for them, whenever they wish it. She sends tea.</CVG_Ev_LotusWelcome_Text>
+  <CVG_Ev_LotusWelcome_Label>The Pavilion remembers its own</CVG_Ev_LotusWelcome_Label>
+  <CVG_Ev_LotusWelcome_Text>A small procession of the Heavenly Cauldron Pavilion arrives, with a censer and a ledger. They bring news that the Pavilion has heard of the exiled healers and has decided that its infirmary has a place for them, whenever they wish it. Mo Qinghua sends tea, and Qian Wanli sends the bill for the tea.</CVG_Ev_LotusWelcome_Text>
   <CVG_Ev_BeastGuildOffer_Label>The hunters' guild</CVG_Ev_BeastGuildOffer_Label>
   <CVG_Ev_BeastGuildOffer_Text>A guild of beast hunters sends a representative who wants to meet people capable of tracking a mountain wolf. The guild is not rich, but pays in cores. He shakes your hand too long and, when you ask what's wrong, says only: 'it's the third wolf this month'.</CVG_Ev_BeastGuildOffer_Text>
   <CVG_Ev_BeastGuildOffer_Opt_hunt>Take the contract</CVG_Ev_BeastGuildOffer_Opt_hunt>

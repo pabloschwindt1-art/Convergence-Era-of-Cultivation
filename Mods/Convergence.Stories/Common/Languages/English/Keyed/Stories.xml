@@ -47,7 +47,7 @@
   <CVG_Story_CollectiveDemonNone_Label>The experiment is quiet</CVG_Story_CollectiveDemonNone_Label>
   <CVG_Story_CollectiveDemonNone_Text>The corporation's sample of qi hums in its container and does nothing. For now.</CVG_Story_CollectiveDemonNone_Text>
   <CVG_Story_SectOffer_Label>A righteous sect extends its hand</CVG_Story_SectOffer_Label>
-  <CVG_Story_SectOffer_Text>Emissaries of the Azure Peak and the Silent Lotus have heard of your people. They offer their friendship and a gift: they would accept you as a minor sect under their protection.</CVG_Story_SectOffer_Text>
+  <CVG_Story_SectOffer_Text>Emissaries of the Formless Sword and the Heavenly Cauldron have heard of your people. They offer their friendship and a gift: they would accept you as a minor sect under their protection.</CVG_Story_SectOffer_Text>
   <CVG_Scenario_LoneSurvivor_Start>The sect is ashes. You have a robe, a sword and the little qi that you carry in your dantian.\n\nSomeone will come for you sooner or later.</CVG_Scenario_LoneSurvivor_Start>
   <CVG_Scenario_SectFlight_Start>The gates fell in a single night. Four of you are all that is left of the sect.\n\nOthers may find you. So will the hunters.</CVG_Scenario_SectFlight_Start>
   <CVG_Scenario_DestroyedFamily_Start>The clan broke your dantian and cast you out. You cannot cultivate now.\n\nLook for a way to mend what was broken.</CVG_Scenario_DestroyedFamily_Start>
@@ -56,7 +56,7 @@
   <CVG_Scenario_ClassicalEra_Start>The qi returned a generation ago, and the young cultivate by the fire.\n\nOne day a righteous sect will notice you.</CVG_Scenario_ClassicalEra_Start>
   <CVG_Scenario_ExiledAlchemist_Start>You left the Pavilion with a debt, a half-written formula and a cart of jars.\n\nThe collectors will find you.</CVG_Scenario_ExiledAlchemist_Start>
   <CVG_Scenario_BeastHunters_Start>You hunt what others flee from.\n\nA guild has been asking about you.</CVG_Scenario_BeastHunters_Start>
-  <CVG_Scenario_LotusRefugees_Start>The temple split over a question nobody remembers. You walked out with herbs and a sutra.\n\nThe abbess watched you go.</CVG_Scenario_LotusRefugees_Start>
+  <CVG_Scenario_LotusRefugees_Start>The infirmary split over the price of a remedy. You walked out with herbs and a recipe.\n\nMo Qinghua watched you go.</CVG_Scenario_LotusRefugees_Start>
   <CVG_Scenario_DragonHeir_Start>You carry a thread of dragon blood, thin as a hair.\n\nThe clan has noticed.</CVG_Scenario_DragonHeir_Start>
   <CVG_SectWorld_Peace>Peace between {0} and {1}: both sects lay down their blades.</CVG_SectWorld_Peace>
   <CVG_SectWorld_WarEnded>The war between sects is over: {0} defeated {1}.</CVG_SectWorld_WarEnded>

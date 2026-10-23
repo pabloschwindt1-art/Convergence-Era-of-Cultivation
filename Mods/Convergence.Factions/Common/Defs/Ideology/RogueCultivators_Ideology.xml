@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Rogue Cultivators: the wandering path (meme and preset). Not a sect: no specialist and no tempering ritual. -->
+
+  <MemeDef>
+    <defName>CVG_Meme_WanderingPath</defName>
+    <label>wandering path</label>
+    <description>Every road is a master and every master is a road: no sect, no chains. Take a technique from an inn, a manual from a ruin and a lesson from whoever beat you, and owe nothing to anyone.</description>
+    <iconPath>UI/Memes/CVG/WanderingPath</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>115</renderOrder>
+    <exclusionTags><li>CVG_Sect_WanderingPath</li></exclusionTags>
+    <preventApparelRequirements>true</preventApparelRequirements>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->road</li>
+        <li>memeHyphenPrefix->road</li>
+        <li>memeConcept->wandering path</li>
+        <li>memeLeaderNoun->elder wanderer</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <li>creation(tag=meme_CVG_Meme_WanderingPath)->[deity0_name] left the first sect with nothing but a road, and found a master at every crossroads.</li>
+          <li>episode(uses=1,tag=meme_CVG_Meme_WanderingPath)->[deity0_name] showed the first [memberName] that a road teaches more than a hall.</li>
+          <li>intro(tag=meme_CVG_Meme_WanderingPath)->The early [memberNamePlural] of the [place_summary] [place_name] met at inns and night markets and never at the same one twice.</li>
+          <li>conflict(tag=meme_CVG_Meme_WanderingPath)->A powerful [foeLeader] called the [memberNamePlural] thieves of techniques that belonged to the sects.</li>
+          <li>founderJoin(tag=meme_CVG_Meme_WanderingPath)->[founderName] shared a fire and half a manual with [memberName] on a cold night.</li>
+          <li>victory(tag=meme_CVG_Meme_WanderingPath)->[founderName] fought the [foeLeader] with the techniques of ten sects at once, and the [foeSoldiers] could not tell which to fear.</li>
+          <li>setup(tag=meme_CVG_Meme_WanderingPath)->The Iron Calamity destroyed the sects that had cast the believers out, and the road was all that was left.</li>
+          <li>story(uses=1,tag=meme_CVG_Meme_WanderingPath)->The believers spread out and grew in number, each walking a road of their own.</li>
+          <li>lessonIntro(tag=meme_CVG_Meme_WanderingPath)->Traveler, the old wanderers used to say:</li>
+          <li>lesson(tag=meme_CVG_Meme_WanderingPath)->every road is a master and every master is a road.</li>
+          <li>lessonReinforcement(tag=meme_CVG_Meme_WanderingPath)->You will understand it at the thousandth crossroads.</li>
+          <li>archistFact(tag=meme_CVG_Meme_WanderingPath)->The archotechs never leave their halls; that is why they understand so little.</li>
+          <li>archistProphecy(tag=meme_CVG_Meme_WanderingPath)->[inTheEnd], every sect will fall, and the road will still be there.</li>
+          <li>animistFact(tag=meme_CVG_Meme_WanderingPath)->Every road keeps the footsteps of everyone who walked it.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Wayfarism</ideoName>
+        <theme>road</theme>
+        <adjective>road</adjective>
+        <member>wanderer</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+
+  <IdeoPresetDef>
+    <defName>CVG_Preset_WanderingPath</defName>
+    <label>wandering path</label>
+    <description>No hall, no master, no walls: the road is the sect. Everyone cultivates wherever they stand.</description>
+    <categoryDef>Strong</categoryDef>
+    <memes>
+      <li>CVG_Meme_WanderingPath</li>
+      <li>Individualist</li>
+    </memes>
+  </IdeoPresetDef>
+</Defs>

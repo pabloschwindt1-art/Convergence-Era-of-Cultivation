@@ -10,7 +10,7 @@
   </supportedVersions>
   <description>Cultivator clothes, textiles and armor for Convergence: Era of Cultivation.
 
-Cloud cotton (a crop) and cloud cloth woven on a spirit loom, spirit silk, sect robes for outer disciples, inner disciples and elders in the colors of each sect (with Convergence: Sects), hanfu, bamboo hat, jade crown, spirit scale armor and runic battle robes with spirit grade. Spirit leather comes from butchering awakened spirit beasts.
+Cloud cotton (a crop) and cloud cloth woven on a spirit loom, spirit silk, sect robes for outer disciples, inner disciples and elders in the colors of each sect (with Convergence: Factions or Convergence: Sects), hanfu, bamboo hat, jade crown, spirit scale armor and runic battle robes with spirit grade. Spirit leather comes from butchering awakened spirit beasts.
 
 Requires Convergence: Era of Cultivation and Convergence: Resources. No electricity needed.
 
@@ -49,6 +49,7 @@ Portions of the materials used to create this content/mod are trademarks and/or 
     <li>prospero1088.convergence.core</li>
     <li>prospero1088.convergence.resources</li>
     <li>prospero1088.convergence.alchemy</li>
+    <li>prospero1088.convergence.factions</li>
     <li>prospero1088.convergence.sects</li>
   </loadAfter>
 </ModMetaData>

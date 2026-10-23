@@ -10,9 +10,9 @@
   </supportedVersions>
   <description>Starting scenarios and story events for Convergence: Era of Cultivation.
 
-Six scenarios (Lone survivor, Flight from the sect, Destroyed family, Ascension Project, Classical era, Beast hunters), plus four more with Convergence: Sects (Lost disciples, Exiled alchemist, Lotus refugees, Dragon heir); each with a story that calls back later (the assassin of your sect, the clan that returns, the master who mends your dantian...). Story events after the Convergence: cultists fleeing the Calamity, ferocious beasts, a plea for help from an allied sect, the vengeance of a clan, a treasure being born. With Odyssey: dragon vein and ancient sect ruins landmarks.
+Six scenarios (Lone survivor, Flight from the sect, Destroyed family, Ascension Project, Classical era, Beast hunters), plus three more with Convergence: Factions (Lost disciples, Exiled alchemist, Healers of the infirmary) and one with Convergence: Sects (Dragon heir); each with a story that calls back later (the assassin of your sect, the clan that returns, the master who mends your dantian...). Story events after the Convergence: cultists fleeing the Calamity, ferocious beasts, a plea for help from an allied sect, the vengeance of a clan, a treasure being born. With Odyssey: dragon vein and ancient sect ruins landmarks.
 
-Requires Convergence: Era of Cultivation. Better with Convergence: Sects (factions and ranks), Fauna and Flora (spirit beasts) and Apparel.
+Requires Convergence: Era of Cultivation. Better with Convergence: Factions (the sects of Jiuxiao and their honorary titles), Fauna and Flora (spirit beasts) and Apparel.
 
 License: code, scripts and technical data are MIT; original art, lore and narrative text are CC BY-NC-SA 4.0 (credit Prospero1088, non-commercial, share-alike). The art was created with the assistance of AI. RimWorld material, and art derived from it, belongs to Ludeon Studios and is not covered by these licenses. Details: LICENSE.txt in the mod folder.
 
@@ -41,6 +41,7 @@ Portions of the materials used to create this content/mod are trademarks and/or 
     <li>Ludeon.RimWorld.Anomaly</li>
     <li>Ludeon.RimWorld.Odyssey</li>
     <li>prospero1088.convergence.core</li>
+    <li>prospero1088.convergence.factions</li>
     <li>prospero1088.convergence.sects</li>
     <li>prospero1088.convergence.faunaflora</li>
     <li>prospero1088.convergence.apparel</li>

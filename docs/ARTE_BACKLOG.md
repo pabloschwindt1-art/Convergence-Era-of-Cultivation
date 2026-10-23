@@ -77,7 +77,7 @@ Hojas del usuario (7 íconos por secta, hechas con IA). Recortes a tamaño compl
 (`meme`, `leader`, `elder`, `specialist`, `ritual`, `emblem`, `contribution`, más `*_full.png`). Las facciones usan color casi blanco
 para que el emblema no se tiña.
 
-| Recurso | Integrado en (`Mods/Convergence.Sects2/Common/Textures/`) | Estado |
+| Recurso | Integrado en (`Mods/Convergence.Factions/Common/Textures/`) | Estado |
 |---|---|---|
 | 1 Meme | `UI/Memes/CVG/SwordWay`, `BodyWay`, `CauldronWay`, `DemonicWay`, `PuppetPath` | ✅ |
 | 4 Especialista | `UI/Roles/CVG/SwordMaster`, `TemperingMaster`, `AlchemistMaster`, `BloodMoonOfficiant`, `PuppetMaster` | ✅ |

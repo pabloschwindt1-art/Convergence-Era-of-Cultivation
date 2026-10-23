@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ======================================================================================================================
+       Rogue Cultivators (散修): not a sect, the cultivators with no ties. No honorary titles and no favors; they arrive with the
+       Convergence, trade at inns and night markets and sustain many Stories events (beggars, peddlers, the rogue market).
+       Brought over from the old Convergence: Sects.
+       ====================================================================================================================== -->
+
+  <FactionDef ParentName="OutlanderFactionBase">
+    <defName>CVG_Faction_RogueCultivators</defName>
+    <factionIconPath>World/CVG/Factions/RogueCultivators</factionIconPath>
+    <label>rogue cultivators</label>
+    <description>Not a sect: everyone who cultivates without ties. Orphans of destroyed sects, exiles, wanderers. They were the first to cross while the wall between the worlds was still thinning, years before the Convergence, because they had nothing to lose. They gather at inns and night markets, rent their swords for spirit stones and sell maps and incomplete slips. Unpredictable: each has learned a bit of everything.</description>
+    <fixedName>Rogue Cultivators</fixedName>
+    <pawnSingular>wandering cultivator</pawnSingular>
+    <pawnsPlural>wandering cultivators</pawnsPlural>
+    <leaderTitle>elder wanderer</leaderTitle>
+    <categoryTag>CVG_Sect_RogueCultivators</categoryTag>
+    <listOrderPriority>45</listOrderPriority>
+    <techLevel>Medieval</techLevel>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>60</configurationListOrderPriority>
+    <backstoryFilters>
+      <li>
+        <categories><li>CVG_Cultivation</li></categories>
+        <commonality>2</commonality>
+      </li>
+    </backstoryFilters>
+    <structureMemeWeights Inherit="False">
+      <CVG_Structure_DaoOrigin>2</CVG_Structure_DaoOrigin>
+      <Structure_Ideological>2</Structure_Ideological>
+      <CVG_Structure_HeavenMandate>1</CVG_Structure_HeavenMandate>
+    </structureMemeWeights>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <earliestRaidDays>8</earliestRaidDays>
+    <canSiege>false</canSiege>
+    <settlementNameMaker>CVG_NamerSettlement_RogueCultivators</settlementNameMaker>
+    <!-- Near white: the faction icon is tinted with this color, and the emblem art already has its own colors. -->
+    <colorSpectrum>
+      <li>(0.95,0.95,0.95)</li>
+      <li>(1.00,1.00,1.00)</li>
+    </colorSpectrum>
+    <basicMemberKind>CVG_RogueCultivators_Wanderer</basicMemberKind>
+    <forcedMemes><li>CVG_Meme_WanderingPath</li></forcedMemes>
+    <fixedLeaderKinds><li>CVG_RogueCultivators_Hermit</li></fixedLeaderKinds>
+    <caravanTraderKinds Inherit="False"><li>CVG_Trader_RogueCultivators</li><li>CVG_Trader_RogueWanderer</li></caravanTraderKinds>
+    <visitorTraderKinds Inherit="False"><li>CVG_Trader_RogueCultivators</li><li>CVG_Trader_RogueWanderer</li></visitorTraderKinds>
+    <baseTraderKinds Inherit="False"><li>CVG_Trader_RogueCultivators</li></baseTraderKinds>
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <CVG_RogueCultivators_Wanderer>10</CVG_RogueCultivators_Wanderer>
+          <CVG_RogueCultivators_Sellsword>7</CVG_RogueCultivators_Sellsword>
+          <CVG_RogueCultivators_Veteran>3</CVG_RogueCultivators_Veteran>
+          <CVG_RogueCultivators_Hermit>1</CVG_RogueCultivators_Hermit>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <CVG_RogueCultivators_Wanderer>10</CVG_RogueCultivators_Wanderer>
+          <CVG_RogueCultivators_Sellsword>7</CVG_RogueCultivators_Sellsword>
+          <CVG_RogueCultivators_Veteran>3</CVG_RogueCultivators_Veteran>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <CVG_RogueCultivators_Peddler>1</CVG_RogueCultivators_Peddler>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+        </carriers>
+        <guards>
+          <CVG_RogueCultivators_Wanderer>10</CVG_RogueCultivators_Wanderer>
+          <CVG_RogueCultivators_Sellsword>7</CVG_RogueCultivators_Sellsword>
+          <CVG_RogueCultivators_Veteran>3</CVG_RogueCultivators_Veteran>
+          <CVG_RogueCultivators_Hermit>1</CVG_RogueCultivators_Hermit>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <CVG_RogueCultivators_Wanderer>10</CVG_RogueCultivators_Wanderer>
+          <CVG_RogueCultivators_Sellsword>7</CVG_RogueCultivators_Sellsword>
+          <CVG_RogueCultivators_Veteran>3</CVG_RogueCultivators_Veteran>
+          <CVG_RogueCultivators_Hermit>1</CVG_RogueCultivators_Hermit>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ConvergenceFaction">
+        <extraSettlements>1~2</extraSettlements>
+        <hostileTo>
+          <li>CVG_Faction_BloodMoon</li>
+        </hostileTo>
+      </li>
+    </modExtensions>
+  </FactionDef>
+
+  <PawnKindDef Abstract="True" Name="CVG_RogueCultivatorsKindBase" ParentName="CVG_Sect2KindBase">
+    <defaultFactionDef>CVG_Faction_RogueCultivators</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_RogueCultivators</nameMaker>
+    <weaponTags><li>MedievalMeleeDecent</li><li>Gun</li></weaponTags>
+    <apparelTags><li>Neolithic</li><li>IndustrialBasic</li></apparelTags>
+    <weaponMoney>150~400</weaponMoney>
+    <apparelMoney>150~450</apparelMoney>
+    <gearHealthRange>0.6~1.8</gearHealthRange>
+    <itemQuality>Normal</itemQuality>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_RogueCultivatorsKindBase">
+    <defName>CVG_RogueCultivators_Wanderer</defName>
+    <label>wandering cultivator</label>
+    <combatPower>55</combatPower>
+    <minGenerationAge>16</minGenerationAge>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_QiRefining</realm>
+        <stage>1~3</stage>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_RogueCultivatorsKindBase">
+    <defName>CVG_RogueCultivators_Sellsword</defName>
+    <label>cultivator sellsword</label>
+    <combatPower>105</combatPower>
+    <minGenerationAge>20</minGenerationAge>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_Foundation</realm>
+        <stage>1~2</stage>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_RogueCultivatorsKindBase">
+    <defName>CVG_RogueCultivators_Veteran</defName>
+    <label>veteran wanderer</label>
+    <combatPower>140</combatPower>
+    <minGenerationAge>25</minGenerationAge>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_Foundation</realm>
+        <stage>3~4</stage>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_RogueCultivatorsKindBase">
+    <defName>CVG_RogueCultivators_Hermit</defName>
+    <label>hidden hermit</label>
+    <combatPower>245</combatPower>
+    <minGenerationAge>40</minGenerationAge>
+    <maxGenerationAge>160</maxGenerationAge>
+    <factionLeader>true</factionLeader>
+    <weaponTags Inherit="False"><li>MedievalMeleeAdvanced</li><li>IndustrialGunAdvanced</li></weaponTags>
+    <weaponMoney>400~900</weaponMoney>
+    <apparelTags Inherit="False"><li>IndustrialBasic</li></apparelTags>
+    <apparelMoney>500~1200</apparelMoney>
+    <gearHealthRange>1.0~2.5</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_GoldenCore</realm>
+        <stage>1~3</stage>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_RogueCultivatorsKindBase">
+    <defName>CVG_RogueCultivators_Peddler</defName>
+    <label>night-market peddler</label>
+    <trader>true</trader>
+    <isFighter>false</isFighter>
+    <combatPower>45</combatPower>
+    <minGenerationAge>20</minGenerationAge>
+    <weaponTags Inherit="False"><li>MedievalMeleeDecent</li></weaponTags>
+    <weaponMoney>100~200</weaponMoney>
+    <apparelTags Inherit="False"><li>IndustrialBasic</li></apparelTags>
+    <apparelMoney>400~800</apparelMoney>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_QiRefining</realm>
+        <stage>2~3</stage>
+        <scaleWithColony>false</scaleWithColony>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <TraderKindDef>
+    <defName>CVG_Trader_RogueCultivators</defName>
+    <label>rogue cultivators merchant</label>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>300~900</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>20~80</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_JadeSlip</thingDef><countRange>0~2</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>MedicineHerbal</thingDef><countRange>10~30</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>ExoticMisc</tradeTag><thingDefCountRange>1~2</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>WeaponMelee</tradeTag><thingDefCountRange>1~3</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>WeaponRanged</tradeTag><thingDefCountRange>1~2</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>ExoticMisc</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>WeaponMelee</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>WeaponRanged</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Clothing</tag></li>
+    </stockGenerators>
+  </TraderKindDef>
+
+  <TraderKindDef>
+    <defName>CVG_Trader_RogueWanderer</defName>
+    <label>wandering cultivator merchant</label>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>200~600</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_JadeSlip</thingDef><countRange>1~4</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>20~100</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_BeastBlood</thingDef><countRange>0~4</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>ExoticMisc</tradeTag><thingDefCountRange>2~3</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_Tag"><tradeTag>Artifact</tradeTag><thingDefCountRange>0~1</thingDefCountRange><countRange>1~1</countRange></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>CVG_BeastCore</thingDef></li>
+      <li Class="StockGenerator_BuySingleDef"><thingDef>CVG_BeastBlood</thingDef></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>ExoticMisc</tag></li>
+    </stockGenerators>
+  </TraderKindDef>
+</Defs>

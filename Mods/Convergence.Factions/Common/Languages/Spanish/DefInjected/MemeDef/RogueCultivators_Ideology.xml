@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Meme_WanderingPath.label>camino errante</CVG_Meme_WanderingPath.label>
+  <CVG_Meme_WanderingPath.description>Cada camino es un maestro y cada maestro es un camino: sin secta, sin cadenas. Toma una técnica de una posada, un manual de una ruina y una lección de quien te venció, y no le debas nada a nadie.</CVG_Meme_WanderingPath.description>
+  <CVG_Meme_WanderingPath.generalRules.rulesStrings>
+    <li>memeAdjective-&gt;errante</li>
+    <li>memeHyphenPrefix-&gt;camino</li>
+    <li>memeConcept-&gt;camino errante</li>
+    <li>memeLeaderNoun-&gt;errante veterano</li>
+  </CVG_Meme_WanderingPath.generalRules.rulesStrings>
+  <CVG_Meme_WanderingPath.descriptionMaker.rules.rulesStrings>
+    <li>creation(tag=meme_CVG_Meme_WanderingPath)-&gt;[deity0_name] dejó la primera secta sin nada más que un camino, y encontró un maestro en cada encrucijada.</li>
+    <li>episode(uses=1,tag=meme_CVG_Meme_WanderingPath)-&gt;[deity0_name] le mostró al primer [memberName] que un camino enseña más que un salón.</li>
+    <li>intro(tag=meme_CVG_Meme_WanderingPath)-&gt;Los primeros [memberNamePlural] de [place_summary] [place_name] se encontraban en posadas y mercados nocturnos, y nunca dos veces en el mismo.</li>
+    <li>conflict(tag=meme_CVG_Meme_WanderingPath)-&gt;Un poderoso [foeLeader] llamaba a los [memberNamePlural] ladrones de técnicas que pertenecían a las sectas.</li>
+    <li>founderJoin(tag=meme_CVG_Meme_WanderingPath)-&gt;[founderName] compartió un fuego y medio manual con [memberName] en una noche fría.</li>
+    <li>victory(tag=meme_CVG_Meme_WanderingPath)-&gt;[founderName] peleó contra el [foeLeader] con las técnicas de diez sectas a la vez, y los [foeSoldiers] no supieron a cuál temerle.</li>
+    <li>setup(tag=meme_CVG_Meme_WanderingPath)-&gt;La Calamidad de Hierro destruyó las sectas que habían expulsado a los creyentes, y el camino fue todo lo que quedó.</li>
+    <li>story(uses=1,tag=meme_CVG_Meme_WanderingPath)-&gt;Los creyentes se extendieron y crecieron en número, cada uno por un camino propio.</li>
+    <li>lessonIntro(tag=meme_CVG_Meme_WanderingPath)-&gt;Viajero, los viejos errantes solían decir:</li>
+    <li>lesson(tag=meme_CVG_Meme_WanderingPath)-&gt;cada camino es un maestro y cada maestro es un camino.</li>
+    <li>lessonReinforcement(tag=meme_CVG_Meme_WanderingPath)-&gt;Lo entenderás en la encrucijada número mil.</li>
+    <li>archistFact(tag=meme_CVG_Meme_WanderingPath)-&gt;Los arcotecnólogos nunca salen de sus salones; por eso entienden tan poco.</li>
+    <li>archistProphecy(tag=meme_CVG_Meme_WanderingPath)-&gt;[inTheEnd], todas las sectas caerán, y el camino seguirá ahí.</li>
+    <li>animistFact(tag=meme_CVG_Meme_WanderingPath)-&gt;Cada camino guarda las pisadas de todos los que lo anduvieron.</li>
+  </CVG_Meme_WanderingPath.descriptionMaker.rules.rulesStrings>
+  <CVG_Meme_WanderingPath.symbolPacks.0.ideoName>Caminantismo</CVG_Meme_WanderingPath.symbolPacks.0.ideoName>
+  <CVG_Meme_WanderingPath.symbolPacks.0.theme>camino</CVG_Meme_WanderingPath.symbolPacks.0.theme>
+  <CVG_Meme_WanderingPath.symbolPacks.0.adjective>errante</CVG_Meme_WanderingPath.symbolPacks.0.adjective>
+  <CVG_Meme_WanderingPath.symbolPacks.0.member>caminante</CVG_Meme_WanderingPath.symbolPacks.0.member>
+</LanguageData>

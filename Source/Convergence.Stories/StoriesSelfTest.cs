@@ -72,7 +72,7 @@ namespace Convergence.Stories
             var visits = StoryEngine.All.Where(StoryEngine.BringsVisitors).ToList();
             // Los eventos de visita son de las sectas (MayRequire): sin un mod de sectas no se cargan.
             if (visits.Count == 0) sb.Append("\n    note: no story event brings visitors (they need a Sects mod)");
-            else Check(visits.Count >= 7, visits.Count + " story events bring visitors");
+            else Check(visits.Count >= (ModsConfig.IsActive("prospero1088.convergence.sects") ? 7 : 6), visits.Count + " story events bring visitors"); // la del Dragón sigue con el Sects viejo
             var f = Find.FactionManager.AllFactionsListForReading.FirstOrDefault(x => !x.IsPlayer && !x.Hidden && !x.temporary && x.def.humanlikeFaction
                 && !x.HostileTo(Faction.OfPlayer) && x.def.pawnGroupMakers != null && x.def.pawnGroupMakers.Any(g => g.kindDef == PawnGroupKindDefOf.Peaceful));
             if (f == null) { sb.Append("\n    skip: no friendly faction that sends visitors"); return; }
@@ -151,7 +151,7 @@ namespace Convergence.Stories
         private void TestEventDefs(Map map)
         {
             var defs = StoryEngine.All.ToList();
-            bool allModules = new[] { "prospero1088.convergence.sects", "prospero1088.convergence.resources", "prospero1088.convergence.faunaflora", "prospero1088.convergence.alchemy" }.All(id => ModsConfig.IsActive(id));
+            bool allModules = new[] { "prospero1088.convergence.factions", "prospero1088.convergence.resources", "prospero1088.convergence.faunaflora", "prospero1088.convergence.alchemy" }.All(id => ModsConfig.IsActive(id));
             Check(defs.Count >= (allModules ? 60 : 45), defs.Count + " story event definitions" + (allModules ? "" : " (sin todos los addons)"));
             int missing = 0;
             foreach (var d in defs)
@@ -459,7 +459,7 @@ namespace Convergence.Stories
                 var def = DefDatabase<IncidentDef>.GetNamed(key);
                 var parms = StorytellerUtility.DefaultParmsNow(def.category, map);
                 parms.forced = true;
-                if (key == "CVG_Story_AllyPlea" && !ModsConfig.IsActive("prospero1088.convergence.sects")) continue; // aliados = sectas (addon)
+                if (key == "CVG_Story_AllyPlea" && !ModsConfig.IsActive("prospero1088.convergence.factions") && !ModsConfig.IsActive("prospero1088.convergence.sects")) continue; // aliados = sectas (addon)
                 bool ok = def.Worker.TryExecute(parms);
                 Check(ok, key + " executed");
             }

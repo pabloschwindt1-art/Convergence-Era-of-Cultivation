@@ -13,7 +13,7 @@ especialidad, su lore y lo que vende**. Copiá los archivos de la Espada, renomb
 | Ritual de templado: conducción por el especialista, sujeto, 2 creyentes más, calidad, discurso | `Ideology/Sect_Framework.xml` |
 | Especialista: activo desde 1 creyente, ánimo por rol vacío desde 4, etiqueta `CVG_SectSpecialist` | `CVG_SectSpecialistBase` |
 | Preceptos de secta (cultivo, alquimia, esencia, demoníaco, duelos, jerarquía, retiro) y estructuras wuxia | `Ideology/Precepts_Sect.xml`, `Memes_Structures_Wuxia.xml` |
-| Código: constituciones con grados, ritual de templado, desvío y resistencia a proyectiles, calidad del stock, cuerpos de los discípulos, regalo a elección | Core `Source/Convergence.Core/Sects/` y `Source/Convergence.Sects2/SectGift.cs` |
+| Código: constituciones con grados, ritual de templado, desvío y resistencia a proyectiles, calidad del stock, cuerpos de los discípulos, regalo a elección | Core `Source/Convergence.Core/Sects/` y `Source/Convergence.Factions/SectGift.cs` |
 
 ## Lo que define cada secta (checklist)
 1. **Constitución** (Core, `Traits_*.xml`): un rasgo con 4 grados (0-3) y `DefModExtension_SpecialBody` (solo nace el grado 0). Efectos
@@ -48,9 +48,9 @@ especialidad, su lore y lo que vende**. Copiá los archivos de la Espada, renomb
    - En `Precepts_Sect.xml`, sumar el meme nuevo a `associatedMemes`/`conflictingMemes` donde corresponda.
 8. **Nombres**: `RulePackDef` de personas (muchas combinaciones: ≥ 25 apellidos × 30 nombres) y de asentamientos.
 9. **Traducciones**: Spanish y SpanishLatin para todo lo anterior (DefInjected) + Keyed si hace falta.
-10. **Autotest**: sumar un `SectSpec` en `Specs()` de `Sects2SelfTest.cs` (constitución, meme, rol, habilidad, ritual, los 4 rangos,
+10. **Autotest**: sumar un `SectSpec` en `Specs()` de `FactionsSelfTest.cs` (constitución, meme, rol, habilidad, ritual, los 4 rangos,
     regla de armas y de cuerpo, especialidad que vende; `requiresMod`/`specialtyMod` si dependen de otro mod, `extra` para una prueba
-    propia) y correr `-cvgsects2test` en 1.6 (y en 1.7 cuando toque), con todos los módulos y también sin los opcionales.
+    propia) y correr `-cvgfactionstest` en 1.6 (y en 1.7 cuando toque), con todos los módulos y también sin los opcionales.
     **Sectas que dependen de un mod o DLC** (el Hilo Invisible, de Biotech Wuxia): todo en `Mods/<Mod>/` (Defs y Languages) con
     `IfModActive` en `LoadFolders.xml`; si su constitución usa stats de una DLC, va en `Mods/<DLC>/` del Core.
 11. **Arte** (después): ícono de facción, meme, especialista y ritual. Mientras tanto, marcadores de íconos existentes.

@@ -45,8 +45,8 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 - New setting "Visitor groups at once" (default 2): no more caravans and visitors piling up on your map at the same time. Set 0 for vanilla behaviour.
 ```
 
-### Convergence: Sects 2.0 (preview, sin publicar todavía; 2026-10-22)
-- Mod nuevo, paralelo al Sects actual e incompatible con él. Requiere Royalty e Ideology. Las cinco sectas siguen la misma plantilla
+### Convergence: Factions (mod nuevo, sin publicar todavía; 2026-10-22)
+- Mod nuevo (`prospero1088.convergence.factions`; en desarrollo se llamó "Sects 2.0"). Reemplaza al Sects actual, que se retira más adelante, y es incompatible con él. Requiere Royalty e Ideology. Las cinco sectas siguen la misma plantilla
   (`docs/modulos/SECTS2_PLANTILLA.md`): 4 títulos honorarios permanentes, 5 favores, constitución de 4 grados con su ritual, especialista,
   meme con arma noble y despreciada, discípulos con historias de fondo propias por rango, armas que pueden usar y nombres propios.
   - **Espada Sin Forma** (espadas), **Nueve Templados** (cultivo corporal, sin armas), **Pabellón del Caldero Celestial** (alquimia y
@@ -56,8 +56,31 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
   - **Secta del Hilo Invisible** (marionetas; solo con Biotech Wuxia): sus incursiones y asentamientos traen marionetas; vende materiales
     de marioneta y atuendo de titiritero; ritual Vinculación de Hilos Espirituales.
 - Arte provisional (íconos del Sects viejo) hasta que llegue el definitivo.
-- Autotest `-cvgsects2test` ALL OK en 1.6.4871, con todos los módulos y también sin Biotech, Alchemy ni Biotech Wuxia.
+- Autotest `-cvgfactionstest` ALL OK en 1.6.4871, con todos los módulos y también sin Biotech, Alchemy ni Biotech Wuxia.
 
+- También trae a los **Cultivadores Errantes** del Sects viejo, como facción sin títulos ni favores (posadas, mercados nocturnos, mercenarios).
+- Imagen de vista previa provisoria con los cinco emblemas.
+
+### Convergence: Stories & Scenarios: eventos mudados a Convergence: Factions (2026-10-22)
+- Los eventos de las sectas ahora salen con **Convergence: Factions**: los del Pico Azur pasan a la Espada Sin Forma y los del Templo del
+  Loto Silencioso al Pabellón del Caldero Celestial (textos reescritos: enfermería de caridad, Mo Qinghua, Qian Wanli). Los del Clan del
+  Dragón siguen con el Sects viejo hasta decidir qué pasa con el Dragón.
+- Escenarios: Discípulos perdidos, Alquimista exiliado y **Sanadores de la enfermería** (antes Refugiados del Loto) pasan a Factions; el
+  Heredero del Dragón sigue con Sects.
+
+**Change notes (Steam):**
+```
+- Sect events and scenarios now use the new Convergence: Factions (the Azure Peak events move to the Formless Sword, the Silent Lotus ones to the Heavenly Cauldron Pavilion). Dragon Clan events still need Convergence: Sects.
+```
+
+### Convergence: Apparel: túnicas para Convergence: Factions (2026-10-22)
+- Los discípulos de las sectas de Factions (y de los Errantes) visten la túnica de su rango; los comerciantes del Caldero, los Errantes
+  y el Hilo Invisible venden seda espiritual y tela de nube.
+
+**Change notes (Steam):**
+```
+- Sect robes for the disciples of Convergence: Factions.
+```
 ### Convergence: Stories & Scenarios (2026-10-22)
 - Las visitas de las historias (VisitAzurePeak, VisitLotus, VisitCauldron, VisitDragon, VisitRogueMarket, LotusPilgrims, SectTradePact y
   los emisarios de la Convergencia) **ya no se juntan con otros huéspedes**: el evento no se elige si hay visitantes o una caravana de otra

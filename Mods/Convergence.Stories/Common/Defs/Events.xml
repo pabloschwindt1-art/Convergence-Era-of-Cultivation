@@ -38,7 +38,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>HungryBeggar</defName>
     <category>encounter</category>
     <weight>0.9</weight>
@@ -60,7 +60,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>LostDiscipleChild</defName>
     <category>encounter</category>
     <weight>0.8</weight>
@@ -70,7 +70,7 @@
     <options>
       <li>
         <key>keep</key>
-        <outcomes><li Class="Convergence.Stories.SO_Join" MayRequire="prospero1088.convergence.sects"><kind>CVG_SilentLotus_Lay</kind><count>1</count></li><li Class="Convergence.Stories.SO_Flag"><set>took_orphan</set></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Join" MayRequire="prospero1088.convergence.factions"><kind>CVG_HeavenlyCauldron_Apprentice</kind><count>1</count></li><li Class="Convergence.Stories.SO_Flag"><set>took_orphan</set></li></outcomes>
       </li>
       <li>
         <key>direct</key>
@@ -78,7 +78,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>PeddlerInTheMist</defName>
     <category>encounter</category>
     <weight>1.0</weight>
@@ -99,27 +99,27 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>LotusPilgrims</defName>
     <category>visit</category>
     <weight>1.0</weight>
     <minDays>5</minDays>
     <minRefireDays>45</minRefireDays>
     <tone>neutral</tone>
-    <factionToken>lotus</factionToken>
+    <factionToken>cauldron</factionToken>
     <requiresFaction>true</requiresFaction>
     <options>
       <li>
         <key>welcome</key>
-        <outcomes><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_LotusBlessing</thought><target>all</target></li><li Class="Convergence.Stories.SO_Goodwill"><faction>lotus</faction><amount>6</amount></li><li Class="Convergence.Stories.SO_Visit"><faction>lotus</faction></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_LotusBlessing</thought><target>all</target></li><li Class="Convergence.Stories.SO_Goodwill"><faction>cauldron</faction><amount>6</amount></li><li Class="Convergence.Stories.SO_Visit"><faction>cauldron</faction></li></outcomes>
       </li>
       <li>
         <key>water</key>
-        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>lotus</faction><amount>2</amount></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>cauldron</faction><amount>2</amount></li></outcomes>
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects,prospero1088.convergence.alchemy">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions,prospero1088.convergence.alchemy">
     <defName>StrandedAlchemist</defName>
     <category>encounter</category>
     <weight>0.9</weight>
@@ -148,27 +148,27 @@
     <tone>positive</tone>
     <outcomes><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_TaleWellTold</thought><target>all</target></li><li Class="Convergence.Stories.SO_Flag"><set>heard_calamity_tale</set></li></outcomes>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>RunawayDisciple</defName>
     <category>chain</category>
     <weight>0.8</weight>
     <minDays>8</minDays>
     <minRefireDays>120</minRefireDays>
     <tone>neutral</tone>
-    <factionToken>azurepeak</factionToken>
+    <factionToken>sword</factionToken>
     <requiresFaction>true</requiresFaction>
     <options>
       <li>
         <key>hide</key>
-        <outcomes><li Class="Convergence.Stories.SO_Join" MayRequire="prospero1088.convergence.sects"><kind>CVG_AzurePeak_Disciple</kind><count>1</count></li><li Class="Convergence.Stories.SO_Flag"><set>hid_disciple</set></li><li Class="Convergence.Stories.SO_Chain"><next>RunawayEnforcers</next><days>2~3</days></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Join" MayRequire="prospero1088.convergence.factions"><kind>CVG_FormlessSword_Disciple</kind><count>1</count></li><li Class="Convergence.Stories.SO_Flag"><set>hid_disciple</set></li><li Class="Convergence.Stories.SO_Chain"><next>RunawayEnforcers</next><days>2~3</days></li></outcomes>
       </li>
       <li>
         <key>hand</key>
-        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>azurepeak</faction><amount>14</amount></li><li Class="Convergence.Stories.SO_Thought"><chance>0.6</chance><thought>CVG_Thought_Ashamed</thought><target>all</target></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>sword</faction><amount>14</amount></li><li Class="Convergence.Stories.SO_Thought"><chance>0.6</chance><thought>CVG_Thought_Ashamed</thought><target>all</target></li></outcomes>
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>RunawayEnforcers</defName>
     <category>chain</category>
     <weight>1.0</weight>
@@ -176,20 +176,20 @@
     <minRefireDays>45</minRefireDays>
     <tone>neutral</tone>
     <chainOnly>true</chainOnly>
-    <factionToken>azurepeak</factionToken>
+    <factionToken>sword</factionToken>
     <requiresFaction>true</requiresFaction>
     <options>
       <li>
         <key>protect</key>
-        <outcomes><li Class="Convergence.Stories.SO_Raid"><faction>azurepeak</faction><points>0.7</points></li><li Class="Convergence.Stories.SO_Chain"><next>RunawayThanks</next><days>1~2</days></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Raid"><faction>sword</faction><points>0.7</points></li><li Class="Convergence.Stories.SO_Chain"><next>RunawayThanks</next><days>1~2</days></li></outcomes>
       </li>
       <li>
         <key>give</key>
-        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>azurepeak</faction><amount>10</amount></li><li Class="Convergence.Stories.SO_Thought"><chance>0.7</chance><thought>CVG_Thought_Ashamed</thought><target>all</target></li><li Class="Convergence.Stories.SO_Flag"><clear>hid_disciple</clear></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>sword</faction><amount>10</amount></li><li Class="Convergence.Stories.SO_Thought"><chance>0.7</chance><thought>CVG_Thought_Ashamed</thought><target>all</target></li><li Class="Convergence.Stories.SO_Flag"><clear>hid_disciple</clear></li></outcomes>
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>RunawayThanks</defName>
     <category>chain</category>
     <weight>1.0</weight>
@@ -197,7 +197,7 @@
     <minRefireDays>45</minRefireDays>
     <tone>positive</tone>
     <chainOnly>true</chainOnly>
-    <outcomes><li Class="Convergence.Stories.SO_Items"><thing>CVG_SpiritStone</thing><count>60~100</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_JadeSlip</thing><count>1</count></li><li Class="Convergence.Stories.SO_Goodwill"><faction>azurepeak</faction><amount>8</amount></li><li Class="Convergence.Stories.SO_Flag"><set>knows_black_splinter</set></li></outcomes>
+    <outcomes><li Class="Convergence.Stories.SO_Items"><thing>CVG_SpiritStone</thing><count>60~100</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_JadeSlip</thing><count>1</count></li><li Class="Convergence.Stories.SO_Goodwill"><faction>sword</faction><amount>8</amount></li><li Class="Convergence.Stories.SO_Flag"><set>knows_black_splinter</set></li></outcomes>
   </Convergence.Stories.StoryEventDef>
   <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.faunaflora">
     <defName>BeastTamerWanders</defName>
@@ -218,23 +218,23 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>StolenManual</defName>
     <category>dilemma</category>
     <weight>0.8</weight>
     <minDays>8</minDays>
     <minRefireDays>45</minRefireDays>
     <tone>neutral</tone>
-    <factionToken>lotus</factionToken>
+    <factionToken>cauldron</factionToken>
     <requiresFaction>true</requiresFaction>
     <options>
       <li>
         <key>return</key>
-        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>lotus</faction><amount>12</amount></li><li Class="Convergence.Stories.SO_Thought"><chance>0.6</chance><thought>CVG_Thought_ProudOfMercy</thought><target>all</target></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>cauldron</faction><amount>12</amount></li><li Class="Convergence.Stories.SO_Thought"><chance>0.6</chance><thought>CVG_Thought_ProudOfMercy</thought><target>all</target></li></outcomes>
       </li>
       <li>
         <key>keep</key>
-        <outcomes><li Class="Convergence.Stories.SO_Progress"><amount>500</amount></li><li Class="Convergence.Stories.SO_Goodwill"><faction>lotus</faction><amount>-10</amount></li><li Class="Convergence.Stories.SO_Thought"><chance>0.5</chance><thought>CVG_Thought_Ashamed</thought><target>random</target></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Progress"><amount>500</amount></li><li Class="Convergence.Stories.SO_Goodwill"><faction>cauldron</faction><amount>-10</amount></li><li Class="Convergence.Stories.SO_Thought"><chance>0.5</chance><thought>CVG_Thought_Ashamed</thought><target>random</target></li></outcomes>
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
@@ -296,7 +296,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>DemonBargain</defName>
     <category>chain</category>
     <weight>0.7</weight>
@@ -317,7 +317,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>BloodPactDue</defName>
     <category>chain</category>
     <weight>1.0</weight>
@@ -341,7 +341,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>WoundedEnemyBegs</defName>
     <category>dilemma</category>
     <weight>0.8</weight>
@@ -353,7 +353,7 @@
     <options>
       <li>
         <key>spare</key>
-        <outcomes><li Class="Convergence.Stories.SO_Join" MayRequire="prospero1088.convergence.sects"><kind>CVG_BloodMoon_Servant</kind><count>1</count></li><li Class="Convergence.Stories.SO_Thought"><chance>0.7</chance><thought>CVG_Thought_ProudOfMercy</thought><target>all</target></li><li Class="Convergence.Stories.SO_Flag"><set>spared_cultist</set></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Join" MayRequire="prospero1088.convergence.factions"><kind>CVG_BloodMoon_Servant</kind><count>1</count></li><li Class="Convergence.Stories.SO_Thought"><chance>0.7</chance><thought>CVG_Thought_ProudOfMercy</thought><target>all</target></li><li Class="Convergence.Stories.SO_Flag"><set>spared_cultist</set></li></outcomes>
       </li>
       <li>
         <key>execute</key>
@@ -365,7 +365,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>PavilionTaxmen</defName>
     <category>dilemma</category>
     <weight>0.8</weight>
@@ -391,7 +391,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>AllianceProposal</defName>
     <category>dilemma</category>
     <weight>0.7</weight>
@@ -403,7 +403,7 @@
     <options>
       <li>
         <key>accept</key>
-        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>sect:friendly</faction><amount>25</amount></li><li Class="Convergence.Stories.SO_Join" MayRequire="prospero1088.convergence.sects"><kind>CVG_SilentLotus_Monk</kind><count>1</count></li><li Class="Convergence.Stories.SO_Flag"><set>allied_by_marriage</set></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>sect:friendly</faction><amount>25</amount></li><li Class="Convergence.Stories.SO_Join" MayRequire="prospero1088.convergence.factions"><kind>CVG_HeavenlyCauldron_Alchemist</kind><count>1</count></li><li Class="Convergence.Stories.SO_Flag"><set>allied_by_marriage</set></li></outcomes>
       </li>
       <li>
         <key>decline</key>
@@ -411,23 +411,23 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>RivalChallenge</defName>
     <category>dilemma</category>
     <weight>0.9</weight>
     <minDays>8</minDays>
     <minRefireDays>45</minRefireDays>
     <tone>neutral</tone>
-    <factionToken>azurepeak</factionToken>
+    <factionToken>sword</factionToken>
     <requiresFaction>true</requiresFaction>
     <options>
       <li>
         <key>duel</key>
-        <outcomes><li Class="Convergence.Stories.SO_Skill"><skill>Melee</skill><xp>7000</xp></li><li Class="Convergence.Stories.SO_Damage"><chance>0.7</chance><damage>Cut</damage><amount>6</amount><hits>2</hits></li><li Class="Convergence.Stories.SO_Goodwill"><chance>0.6</chance><faction>azurepeak</faction><amount>10</amount></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Skill"><skill>Melee</skill><xp>7000</xp></li><li Class="Convergence.Stories.SO_Damage"><chance>0.7</chance><damage>Cut</damage><amount>6</amount><hits>2</hits></li><li Class="Convergence.Stories.SO_Goodwill"><chance>0.6</chance><faction>sword</faction><amount>10</amount></li></outcomes>
       </li>
       <li>
         <key>decline</key>
-        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>azurepeak</faction><amount>-5</amount></li><li Class="Convergence.Stories.SO_Thought"><chance>0.3</chance><thought>CVG_Thought_Ashamed</thought><target>random</target></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>sword</faction><amount>-5</amount></li><li Class="Convergence.Stories.SO_Thought"><chance>0.3</chance><thought>CVG_Thought_Ashamed</thought><target>random</target></li></outcomes>
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
@@ -442,7 +442,7 @@
     <options>
       <li>
         <key>read</key>
-        <outcomes><li Class="Convergence.Stories.SO_Items"><thing>CVG_JadeSlip</thing><count>1</count></li><li Class="Convergence.Stories.SO_Progress"><amount>300</amount></li><li Class="Convergence.Stories.SO_Mental" MayRequire="prospero1088.convergence.sects"><chance>0.3</chance><state>CVG_InnerDemon</state><count>1</count></li><li Class="Convergence.Stories.SO_Thought"><chance>0.4</chance><thought>CVG_Thought_HauntedDreams</thought><target>all</target></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Items"><thing>CVG_JadeSlip</thing><count>1</count></li><li Class="Convergence.Stories.SO_Progress"><amount>300</amount></li><li Class="Convergence.Stories.SO_Mental" MayRequire="prospero1088.convergence.factions"><chance>0.3</chance><state>CVG_InnerDemon</state><count>1</count></li><li Class="Convergence.Stories.SO_Thought"><chance>0.4</chance><thought>CVG_Thought_HauntedDreams</thought><target>all</target></li></outcomes>
       </li>
       <li>
         <key>leave</key>
@@ -576,7 +576,7 @@
     <minRefireDays>45</minRefireDays>
     <tone>threat</tone>
     <needsCultivator>true</needsCultivator>
-    <outcomes><li Class="Convergence.Stories.SO_Mental" MayRequire="prospero1088.convergence.sects"><state>CVG_InnerDemon</state><count>1</count></li><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_HauntedDreams</thought><target>all</target></li></outcomes>
+    <outcomes><li Class="Convergence.Stories.SO_Mental" MayRequire="prospero1088.convergence.factions"><state>CVG_InnerDemon</state><count>1</count></li><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_HauntedDreams</thought><target>all</target></li></outcomes>
   </Convergence.Stories.StoryEventDef>
   <Convergence.Stories.StoryEventDef>
     <defName>CollapsingCave</defName>
@@ -733,7 +733,7 @@
     <tone>positive</tone>
     <outcomes><li Class="Convergence.Stories.SO_Items"><thing>CVG_BeastCore</thing><count>1</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_BeastBlood</thing><count>2~4</count></li><li Class="Convergence.Stories.SO_Flag"><set>wolf_debt</set></li></outcomes>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>LostCaravanReward</defName>
     <category>opportunity</category>
     <weight>0.8</weight>
@@ -744,18 +744,18 @@
     <requiresFaction>true</requiresFaction>
     <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>cauldron</faction><amount>8</amount></li><li Class="Convergence.Stories.SO_Items"><thing>Silver</thing><count>200~400</count></li><li Class="Convergence.Stories.SO_Items"><thing>MedicineIndustrial</thing><count>3~6</count></li></outcomes>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>VisitAzurePeak</defName>
     <category>visit</category>
     <weight>0.9</weight>
     <minDays>8</minDays>
     <minRefireDays>45</minRefireDays>
     <tone>neutral</tone>
-    <factionToken>azurepeak</factionToken>
+    <factionToken>sword</factionToken>
     <requiresFaction>true</requiresFaction>
-    <outcomes><li Class="Convergence.Stories.SO_Visit"><faction>azurepeak</faction></li></outcomes>
+    <outcomes><li Class="Convergence.Stories.SO_Visit"><faction>sword</faction></li></outcomes>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>VisitCauldron</defName>
     <category>visit</category>
     <weight>1.0</weight>
@@ -766,16 +766,16 @@
     <requiresFaction>true</requiresFaction>
     <outcomes><li Class="Convergence.Stories.SO_Visit"><faction>cauldron</faction></li></outcomes>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>VisitLotus</defName>
     <category>visit</category>
     <weight>1.0</weight>
     <minDays>6</minDays>
     <minRefireDays>45</minRefireDays>
     <tone>neutral</tone>
-    <factionToken>lotus</factionToken>
+    <factionToken>cauldron</factionToken>
     <requiresFaction>true</requiresFaction>
-    <outcomes><li Class="Convergence.Stories.SO_Visit"><faction>lotus</faction></li><li Class="Convergence.Stories.SO_Thought"><chance>0.5</chance><thought>CVG_Thought_LotusBlessing</thought><target>all</target></li></outcomes>
+    <outcomes><li Class="Convergence.Stories.SO_Visit"><faction>cauldron</faction></li><li Class="Convergence.Stories.SO_Thought"><chance>0.5</chance><thought>CVG_Thought_LotusBlessing</thought><target>all</target></li></outcomes>
   </Convergence.Stories.StoryEventDef>
   <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
     <defName>VisitDragon</defName>
@@ -788,7 +788,7 @@
     <requiresFaction>true</requiresFaction>
     <outcomes><li Class="Convergence.Stories.SO_Visit"><faction>dragon</faction></li></outcomes>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>VisitRogueMarket</defName>
     <category>visit</category>
     <weight>1.0</weight>
@@ -857,7 +857,7 @@
     <chainOnly>true</chainOnly>
     <outcomes><li Class="Convergence.Stories.SO_Thought"><chance>0.4</chance><thought>CVG_Thought_Ashamed</thought><target>all</target></li></outcomes>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects,prospero1088.convergence.faunaflora">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions,prospero1088.convergence.faunaflora">
     <defName>MissionSpider</defName>
     <category>mission</category>
     <weight>0.7</weight>
@@ -876,7 +876,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects,prospero1088.convergence.faunaflora">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions,prospero1088.convergence.faunaflora">
     <defName>MissionSpiderDone</defName>
     <category>mission</category>
     <weight>1.0</weight>
@@ -886,7 +886,7 @@
     <chainOnly>true</chainOnly>
     <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>cauldron</faction><amount>18</amount></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_SpiritStone</thing><count>150~250</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_BeastCore</thing><count>2</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_JadeSlip</thing><count>1</count></li></outcomes>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects,prospero1088.convergence.faunaflora">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions,prospero1088.convergence.faunaflora">
     <defName>MissionSpiderFail</defName>
     <category>mission</category>
     <weight>1.0</weight>
@@ -896,29 +896,29 @@
     <chainOnly>true</chainOnly>
     <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>cauldron</faction><amount>-4</amount></li></outcomes>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>MissionLotusHerbs</defName>
     <category>mission</category>
     <weight>0.9</weight>
     <minDays>9</minDays>
     <minRefireDays>45</minRefireDays>
     <tone>neutral</tone>
-    <factionToken>lotus</factionToken>
+    <factionToken>cauldron</factionToken>
     <requiresFaction>true</requiresFaction>
     <options>
       <li>
         <key>send</key>
         <costThing>MedicineHerbal</costThing>
         <costCount>25</costCount>
-        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>lotus</faction><amount>16</amount></li><li Class="Convergence.Stories.SO_Items"><chance>0.6</chance><thing>CVG_FoundationPill</thing><count>1~2</count></li><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_LotusBlessing</thought><target>all</target></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>cauldron</faction><amount>16</amount></li><li Class="Convergence.Stories.SO_Items"><chance>0.6</chance><thing>CVG_FoundationPill</thing><count>1~2</count></li><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_LotusBlessing</thought><target>all</target></li></outcomes>
       </li>
       <li>
         <key>decline</key>
-        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>lotus</faction><amount>-3</amount></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>cauldron</faction><amount>-3</amount></li></outcomes>
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>MissionCauldronCores</defName>
     <category>mission</category>
     <weight>0.8</weight>
@@ -939,7 +939,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>MissionCaravanEscort</defName>
     <category>mission</category>
     <weight>0.8</weight>
@@ -960,7 +960,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>MissionEscortReward</defName>
     <category>mission</category>
     <weight>1.0</weight>
@@ -970,19 +970,19 @@
     <chainOnly>true</chainOnly>
     <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>cauldron</faction><amount>10</amount></li><li Class="Convergence.Stories.SO_Items"><thing>Silver</thing><count>250~450</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_SpiritStone</thing><count>40~80</count></li></outcomes>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>MissionAzureTournament</defName>
     <category>mission</category>
     <weight>0.7</weight>
     <minDays>18</minDays>
     <minRefireDays>100</minRefireDays>
     <tone>neutral</tone>
-    <factionToken>azurepeak</factionToken>
+    <factionToken>sword</factionToken>
     <requiresFaction>true</requiresFaction>
     <options>
       <li>
         <key>send</key>
-        <outcomes><li Class="Convergence.Stories.SO_Skill"><skill>Melee</skill><xp>9000</xp></li><li Class="Convergence.Stories.SO_Damage"><chance>0.6</chance><damage>Blunt</damage><amount>6</amount><hits>2</hits></li><li Class="Convergence.Stories.SO_Goodwill"><faction>azurepeak</faction><amount>12</amount></li><li Class="Convergence.Stories.SO_Items"><chance>0.5</chance><thing>MeleeWeapon_LongSword</thing><stuff>Steel</stuff><count>1</count></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Skill"><skill>Melee</skill><xp>9000</xp></li><li Class="Convergence.Stories.SO_Damage"><chance>0.6</chance><damage>Blunt</damage><amount>6</amount><hits>2</hits></li><li Class="Convergence.Stories.SO_Goodwill"><faction>sword</faction><amount>12</amount></li><li Class="Convergence.Stories.SO_Items"><chance>0.5</chance><thing>MeleeWeapon_LongSword</thing><stuff>Steel</stuff><count>1</count></li></outcomes>
       </li>
       <li>
         <key>skip</key>
@@ -1010,7 +1010,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>MissionStolenManual</defName>
     <category>mission</category>
     <weight>0.8</weight>
@@ -1030,7 +1030,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>MissionManualReward</defName>
     <category>mission</category>
     <weight>1.0</weight>
@@ -1040,7 +1040,7 @@
     <chainOnly>true</chainOnly>
     <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>sect:friendly</faction><amount>12</amount></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_JadeSlip</thing><count>1</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_FoundationPill</thing><count>1</count></li></outcomes>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>TravelingHealer</defName>
     <category>encounter</category>
     <weight>0.8</weight>
@@ -1050,7 +1050,7 @@
     <options>
       <li>
         <key>welcome</key>
-        <outcomes><li Class="Convergence.Stories.SO_Join" MayRequire="prospero1088.convergence.sects"><kind>CVG_SilentLotus_Monk</kind><count>1</count></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Join" MayRequire="prospero1088.convergence.factions"><kind>CVG_HeavenlyCauldron_Alchemist</kind><count>1</count></li></outcomes>
       </li>
       <li>
         <key>food</key>
@@ -1127,7 +1127,7 @@
       </li>
       <li>
         <key>lotus</key>
-        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><chance>0.8</chance><faction>lotus</faction><amount>6</amount></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><chance>0.8</chance><faction>cauldron</faction><amount>6</amount></li></outcomes>
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
@@ -1162,7 +1162,7 @@
     <requiresFlags><li>adopted_orphan</li></requiresFlags>
     <outcomes><li Class="Convergence.Stories.SO_Items"><thing>CVG_SpiritJade</thing><count>6~10</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_JadeSlip</thing><count>1~2</count></li><li Class="Convergence.Stories.SO_Items"><thing>Silver</thing><count>200~350</count></li><li Class="Convergence.Stories.SO_Flag"><clear>adopted_orphan</clear></li><li Class="Convergence.Stories.SO_Flag"><set>has_mirror_workshop</set></li></outcomes>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>FeudProvocation</defName>
     <category>chain</category>
     <weight>0.7</weight>
@@ -1182,7 +1182,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>FeudChallenge</defName>
     <category>chain</category>
     <weight>1.0</weight>
@@ -1204,7 +1204,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>FeudAftermath</defName>
     <category>chain</category>
     <weight>1.0</weight>
@@ -1253,7 +1253,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>CauldronCreditors</defName>
     <category>chain</category>
     <weight>1.0</weight>
@@ -1288,7 +1288,7 @@
     <requiresFaction>true</requiresFaction>
     <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>dragon</faction><amount>14</amount></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_BeastBlood</thing><count>3~5</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_BeastCore</thing><count>1</count></li></outcomes>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>LotusWelcome</defName>
     <category>chain</category>
     <weight>1.0</weight>
@@ -1296,9 +1296,9 @@
     <minRefireDays>45</minRefireDays>
     <tone>positive</tone>
     <chainOnly>true</chainOnly>
-    <factionToken>lotus</factionToken>
+    <factionToken>cauldron</factionToken>
     <requiresFaction>true</requiresFaction>
-    <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>lotus</faction><amount>20</amount></li><li Class="Convergence.Stories.SO_Items"><thing>MedicineHerbal</thing><count>10~20</count></li><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_LotusBlessing</thought><target>all</target></li></outcomes>
+    <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>cauldron</faction><amount>20</amount></li><li Class="Convergence.Stories.SO_Items"><thing>MedicineHerbal</thing><count>10~20</count></li><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_LotusBlessing</thought><target>all</target></li></outcomes>
   </Convergence.Stories.StoryEventDef>
   <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.faunaflora">
     <defName>BeastGuildOffer</defName>
@@ -1507,7 +1507,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>SectWarAppeal</defName>
     <category>mission</category>
     <weight>0</weight>
@@ -1541,7 +1541,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>SectTradePact</defName>
     <category>visit</category>
     <weight>0</weight>
@@ -1564,7 +1564,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>SectRivalry</defName>
     <category>dilemma</category>
     <weight>0</weight>
@@ -1594,7 +1594,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>SectTournament</defName>
     <category>mission</category>
     <weight>0</weight>
@@ -1619,7 +1619,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>SectTribute</defName>
     <category>dilemma</category>
     <weight>0.8</weight>
@@ -1647,7 +1647,7 @@
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>DisciplesTransfer</defName>
     <category>encounter</category>
     <weight>0.8</weight>
@@ -1659,7 +1659,7 @@
     <options>
       <li>
         <key>accept</key>
-        <outcomes><li Class="Convergence.Stories.SO_Join" MayRequire="prospero1088.convergence.sects"><kind>CVG_AzurePeak_Disciple</kind><count>1</count></li><li Class="Convergence.Stories.SO_Goodwill"><faction>sect:friendly</faction><amount>8</amount></li><li Class="Convergence.Stories.SO_Skill"><skill>Melee</skill><xp>1500</xp></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Join" MayRequire="prospero1088.convergence.factions"><kind>CVG_FormlessSword_Disciple</kind><count>1</count></li><li Class="Convergence.Stories.SO_Goodwill"><faction>sect:friendly</faction><amount>8</amount></li><li Class="Convergence.Stories.SO_Skill"><skill>Melee</skill><xp>1500</xp></li></outcomes>
       </li>
       <li>
         <key>decline</key>
@@ -1860,7 +1860,7 @@
     <stackLimit>1</stackLimit>
     <stages>
       <li>
-        <label>blessed by the lotus</label>
+        <label>blessed by the cauldron</label>
         <description>The pilgrims' blessing sits warm in my chest.</description>
         <baseMoodEffect>8</baseMoodEffect>
       </li>

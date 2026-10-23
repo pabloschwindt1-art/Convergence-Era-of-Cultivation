@@ -30,10 +30,10 @@
   <CVG_Ev_PeddlerInTheMist_Res_buy>El buhonero pesa la plata, tararea y te deja una bolsa cuyo contenido descubrirás después.</CVG_Ev_PeddlerInTheMist_Res_buy>
   <CVG_Ev_PeddlerInTheMist_Opt_pass>Dejarlo pasar</CVG_Ev_PeddlerInTheMist_Opt_pass>
   <CVG_Ev_PeddlerInTheMist_Res_pass>Toca un sombrero que no lleva y se vuelve a internar en la bruma.</CVG_Ev_PeddlerInTheMist_Res_pass>
-  <CVG_Ev_LotusPilgrims_Label>Peregrinos del Loto</CVG_Ev_LotusPilgrims_Label>
-  <CVG_Ev_LotusPilgrims_Text>Una fila de peregrinos con túnicas grises pasa junto a la colonia llevando un loto en una maceta de barro. Piden agua y un lugar donde rezar y ofrecen a cambio una bendición que, según el Templo del Loto Silencioso, nunca ha dañado a nadie.</CVG_Ev_LotusPilgrims_Text>
+  <CVG_Ev_LotusPilgrims_Label>Peregrinos del Caldero</CVG_Ev_LotusPilgrims_Label>
+  <CVG_Ev_LotusPilgrims_Text>Una fila de peregrinos herbolarios del Pabellón del Caldero Celestial pasa junto a la colonia con túnicas bermellón, llevando un incensario encendido con el fuego del caldero. Piden agua y un lugar donde descansar, y ofrecen a cambio una bendición del fuego alquímico que, según el Pabellón, nunca le hizo daño a un cliente que pagara.</CVG_Ev_LotusPilgrims_Text>
   <CVG_Ev_LotusPilgrims_Opt_welcome>Recibirlos</CVG_Ev_LotusPilgrims_Opt_welcome>
-  <CVG_Ev_LotusPilgrims_Res_welcome>Los peregrinos rezan toda la noche. La colonia duerme en paz.</CVG_Ev_LotusPilgrims_Res_welcome>
+  <CVG_Ev_LotusPilgrims_Res_welcome>Los peregrinos mantienen el incensario encendido toda la noche. La colonia duerme en paz.</CVG_Ev_LotusPilgrims_Res_welcome>
   <CVG_Ev_LotusPilgrims_Opt_water>Darles agua y que sigan</CVG_Ev_LotusPilgrims_Opt_water>
   <CVG_Ev_LotusPilgrims_Res_water>Se inclinan, beben y continúan su camino.</CVG_Ev_LotusPilgrims_Res_water>
   <CVG_Ev_StrandedAlchemist_Label>Un alquimista varado</CVG_Ev_StrandedAlchemist_Label>
@@ -45,30 +45,30 @@
   <CVG_Ev_TravelingStorytellers_Label>Cuentacuentos viajeros</CVG_Ev_TravelingStorytellers_Label>
   <CVG_Ev_TravelingStorytellers_Text>Una troupe de cuentacuentos extiende una estera bajo un árbol y empieza a recitar la leyenda de la Calamidad de Hierro como se cuenta en un fragmento de Jiuxiao que nunca has oído. En el tercer acto, hasta tu cultivador más serio se inclina para escuchar.</CVG_Ev_TravelingStorytellers_Text>
   <CVG_Ev_RunawayDisciple_Label>Un discípulo huyendo</CVG_Ev_RunawayDisciple_Label>
-  <CVG_Ev_RunawayDisciple_Text>Un joven discípulo del Pico Azur llega herido y pide cobijo. Dice que vio algo en el Cementerio de Espadas que los ancianos no quieren que se sepa y que los ejecutores de la secta van dos días detrás. Su historia tiene un agujero, pero sus heridas no.</CVG_Ev_RunawayDisciple_Text>
+  <CVG_Ev_RunawayDisciple_Text>Un joven discípulo de la Espada Sin Forma llega herido y pide refugio. Dice que vio algo en el Túmulo de las Espadas que los ancianos no quieren que se sepa, y que los ejecutores de la secta le van dos días detrás. Su historia tiene un agujero, pero sus heridas no.</CVG_Ev_RunawayDisciple_Text>
   <CVG_Ev_RunawayDisciple_Opt_hide>Esconderlo</CVG_Ev_RunawayDisciple_Opt_hide>
   <CVG_Ev_RunawayDisciple_Res_hide>El discípulo se desploma aliviado. Dos días no es mucho tiempo.</CVG_Ev_RunawayDisciple_Res_hide>
   <CVG_Ev_RunawayDisciple_Opt_hand>Entregarlo</CVG_Ev_RunawayDisciple_Opt_hand>
   <CVG_Ev_RunawayDisciple_Res_hand>Los ejecutores te dan las gracias con frialdad y se lo llevan. Nadie en la colonia le mira a los ojos.</CVG_Ev_RunawayDisciple_Res_hand>
-  <CVG_Ev_RunawayEnforcers_Label>Los ejecutores del Pico</CVG_Ev_RunawayEnforcers_Label>
-  <CVG_Ev_RunawayEnforcers_Text>Los ejecutores del Pico Azur han llegado, con las manos de espada apoyadas en la empuñadura. No amenazan: solo preguntan, con cortesía, dónde está el discípulo. Tienen la paciencia de quien sabe que la respuesta siempre llega.</CVG_Ev_RunawayEnforcers_Text>
+  <CVG_Ev_RunawayEnforcers_Label>Los ejecutores del Túmulo</CVG_Ev_RunawayEnforcers_Label>
+  <CVG_Ev_RunawayEnforcers_Text>Llegaron los ejecutores de la Espada Sin Forma, con la mano de la espada apoyada en la empuñadura. No amenazan: solo preguntan, con cortesía, dónde está el discípulo. Tienen la paciencia de quien sabe que la respuesta siempre llega.</CVG_Ev_RunawayEnforcers_Text>
   <CVG_Ev_RunawayEnforcers_Opt_protect>Negarse a hablar</CVG_Ev_RunawayEnforcers_Opt_protect>
   <CVG_Ev_RunawayEnforcers_Res_protect>Salen las espadas. El discípulo, desde un altillo, entiende por fin que ha elegido su bando.</CVG_Ev_RunawayEnforcers_Res_protect>
   <CVG_Ev_RunawayEnforcers_Opt_give>Entregarlo ahora</CVG_Ev_RunawayEnforcers_Opt_give>
   <CVG_Ev_RunawayEnforcers_Res_give>Los ejecutores se lo llevan. No se resiste, que es peor.</CVG_Ev_RunawayEnforcers_Res_give>
   <CVG_Ev_RunawayThanks_Label>Lo que vio el discípulo</CVG_Ev_RunawayThanks_Label>
-  <CVG_Ev_RunawayThanks_Text>Cuando se asienta el polvo el discípulo cuenta su historia hasta el final. En el Cementerio de Espadas, una de las espadas había empezado a susurrar con la voz de la Calamidad de Hierro. Tiene la prueba envuelta en un paño: una astilla de metal negro que zumba y que no se atreve a tocar.</CVG_Ev_RunawayThanks_Text>
+  <CVG_Ev_RunawayThanks_Text>Cuando se asienta el polvo, el discípulo cuenta su historia hasta el final. En el Túmulo de las Espadas, una de las espadas había empezado a susurrar con la voz de la Calamidad de Hierro. Trae la prueba envuelta en un paño: una astilla de metal negro que zumba y que no se anima a tocar.</CVG_Ev_RunawayThanks_Text>
   <CVG_Ev_BeastTamerWanders_Label>Un domador de bestias</CVG_Ev_BeastTamerWanders_Label>
   <CVG_Ev_BeastTamerWanders_Text>Una mujer con pieles y un lobo de viento dormido a sus pies se sienta junto a tu fuego y habla del lenguaje de las bestias: no son palabras, dice, sino clima. Enseñará lo que pueda en una noche, por un precio justo.</CVG_Ev_BeastTamerWanders_Text>
   <CVG_Ev_BeastTamerWanders_Opt_learn>Aprender de ella (80 de plata)</CVG_Ev_BeastTamerWanders_Opt_learn>
   <CVG_Ev_BeastTamerWanders_Res_learn>Al amanecer tu cuidador calma animales que la semana pasada lo habrían mordido.</CVG_Ev_BeastTamerWanders_Res_learn>
   <CVG_Ev_BeastTamerWanders_Opt_decline>Agradecer y declinar</CVG_Ev_BeastTamerWanders_Opt_decline>
   <CVG_Ev_StolenManual_Label>El manual robado</CVG_Ev_StolenManual_Label>
-  <CVG_Ev_StolenManual_Text>Han visto a uno de los tuyos con un manual del Templo del Loto Silencioso que nadie recuerda haber comprado. Esa misma tarde llega un monje del templo que, con buenos modales, busca un manual robado. Las dos cosas se van a encontrar en la cena.</CVG_Ev_StolenManual_Text>
+  <CVG_Ev_StolenManual_Text>A alguien de tu gente lo vieron con una receta de píldoras del Pabellón del Caldero Celestial que nadie recuerda haber comprado. Esa misma tarde llega una alquimista del Pabellón buscando, con buenos modales, una receta robada. Las dos cosas se van a encontrar en la cena.</CVG_Ev_StolenManual_Text>
   <CVG_Ev_StolenManual_Opt_return>Devolverlo</CVG_Ev_StolenManual_Opt_return>
-  <CVG_Ev_StolenManual_Res_return>El monje hace una reverencia, más profunda de lo que merece el manual.</CVG_Ev_StolenManual_Res_return>
+  <CVG_Ev_StolenManual_Res_return>La alquimista hace una reverencia, más profunda de lo que merece la receta.</CVG_Ev_StolenManual_Res_return>
   <CVG_Ev_StolenManual_Opt_keep>Quedárselo y negarlo</CVG_Ev_StolenManual_Opt_keep>
-  <CVG_Ev_StolenManual_Res_keep>El monje no discute. Solo mira durante largo rato a quien lo robó.</CVG_Ev_StolenManual_Res_keep>
+  <CVG_Ev_StolenManual_Res_keep>La alquimista no discute. Solo anota algo en su libro de cuentas y mira largo rato a quien la robó.</CVG_Ev_StolenManual_Res_keep>
   <CVG_Ev_CursedBlade_Label>Una espada en el arroyo</CVG_Ev_CursedBlade_Label>
   <CVG_Ev_CursedBlade_Text>Tu gente encuentra una espada larga en un arroyo, perfecta, sin óxido, zumbando levemente. Los viejos cuentos advierten contra cualquier arma que nadie recuerde haber perdido. Los viejos cuentos también dicen que las mejores espadas se encontraron, no se hicieron.</CVG_Ev_CursedBlade_Text>
   <CVG_Ev_CursedBlade_Opt_take>Tomar la espada</CVG_Ev_CursedBlade_Opt_take>
@@ -82,9 +82,9 @@
   <CVG_Ev_BladeWhispers_Opt_silence>Silenciarla en un cofre</CVG_Ev_BladeWhispers_Opt_silence>
   <CVG_Ev_BladeWhispers_Res_silence>El cofre zumba tres noches y luego se queda quieto.</CVG_Ev_BladeWhispers_Res_silence>
   <CVG_Ev_BladeExorcism_Label>Librar a la espada de su voz</CVG_Ev_BladeExorcism_Label>
-  <CVG_Ev_BladeExorcism_Text>Un monje del Loto Silencioso que pasa por casualidad dice que una voz en una hoja es solo un recuerdo y que todos los recuerdos se pueden consolar. Por el precio de una comida sencilla se sentará con la espada una noche, y esta olvidará o será olvidada.</CVG_Ev_BladeExorcism_Text>
+  <CVG_Ev_BladeExorcism_Text>Una alquimista del Caldero Celestial que pasaba por ahí dice que una voz en una hoja no es más que un recuerdo, y que todo recuerdo se quema con el fuego justo. Por el precio de una comida sencilla se sentará una noche con la hoja junto a su brasero, y la hoja olvidará o será olvidada.</CVG_Ev_BladeExorcism_Text>
   <CVG_Ev_BladeExorcism_Opt_sit>Dejar que se siente con ella</CVG_Ev_BladeExorcism_Opt_sit>
-  <CVG_Ev_BladeExorcism_Res_sit>Al amanecer la espada es solo una espada, y el monje parece veinte años mayor.</CVG_Ev_BladeExorcism_Res_sit>
+  <CVG_Ev_BladeExorcism_Res_sit>Al amanecer la espada es solo una espada, y la alquimista parece veinte años más vieja.</CVG_Ev_BladeExorcism_Res_sit>
   <CVG_Ev_BladeExorcism_Opt_refuse>Conservar la voz</CVG_Ev_BladeExorcism_Opt_refuse>
   <CVG_Ev_BladeExorcism_Res_refuse>La espada volverá a cantar. Reza para que no cante por sangre.</CVG_Ev_BladeExorcism_Res_refuse>
   <CVG_Ev_DemonBargain_Label>Un trato al anochecer</CVG_Ev_DemonBargain_Label>
@@ -122,7 +122,7 @@
   <CVG_Ev_AllianceProposal_Opt_decline>Declinar con cortesía</CVG_Ev_AllianceProposal_Opt_decline>
   <CVG_Ev_AllianceProposal_Res_decline>El emisario dice que la oferta era una cortesía. No parece pensarlo.</CVG_Ev_AllianceProposal_Res_decline>
   <CVG_Ev_RivalChallenge_Label>Un reto por el honor</CVG_Ev_RivalChallenge_Label>
-  <CVG_Ev_RivalChallenge_Text>Un discípulo del Pico Azur llega a caballo, hace la reverencia exacta y reta a tu luchador más fuerte a un duelo «en el espíritu de la amistad». Todos los presentes entienden que el espíritu de la amistad tiene un filo muy afilado.</CVG_Ev_RivalChallenge_Text>
+  <CVG_Ev_RivalChallenge_Text>Un discípulo de la Espada Sin Forma llega a caballo, hace exactamente la reverencia justa y desafía a tu mejor luchador a un duelo 'en espíritu de amistad'. Todos los presentes entienden que el espíritu de la amistad tiene un filo muy agudo.</CVG_Ev_RivalChallenge_Text>
   <CVG_Ev_RivalChallenge_Opt_duel>Aceptar el duelo</CVG_Ev_RivalChallenge_Opt_duel>
   <CVG_Ev_RivalChallenge_Res_duel>Acaba en empate y un gesto respetuoso. Ambos se van cojeando.</CVG_Ev_RivalChallenge_Res_duel>
   <CVG_Ev_RivalChallenge_Opt_decline>Hacer una reverencia y declinar</CVG_Ev_RivalChallenge_Opt_decline>
@@ -209,11 +209,11 @@
   <CVG_Ev_LostCaravanReward_Label>Una caravana vuelve a por sus bienes perdidos</CVG_Ev_LostCaravanReward_Label>
   <CVG_Ev_LostCaravanReward_Text>Un jefe de caravana llega con la cara cansada y una promesa. Hace meses uno de sus carros cayó en un barranco cerca de tu tierra y dio por perdido su contenido. Tu gente no lo tocó. Está, por decirlo suavemente, conmovido por su honradez.</CVG_Ev_LostCaravanReward_Text>
   <CVG_Ev_VisitAzurePeak_Label>Espadas a la puerta</CVG_Ev_VisitAzurePeak_Label>
-  <CVG_Ev_VisitAzurePeak_Text>Una comitiva de la Secta de la Espada del Pico Azur llega a la puerta, no a luchar sino a ser vista. Llevan espadas con borlas azules y la ociosidad disciplinada de quienes nunca han tenido que esperar. Están aquí, dicen, para observar.</CVG_Ev_VisitAzurePeak_Text>
+  <CVG_Ev_VisitAzurePeak_Text>Un grupo de la Secta de la Espada Sin Forma llega a la puerta, no para pelear sino para dejarse ver. Llevan espadas con borlas blancas y la ociosidad disciplinada de quien nunca tuvo que esperar. Vienen, dicen, a observar.</CVG_Ev_VisitAzurePeak_Text>
   <CVG_Ev_VisitCauldron_Label>La caravana de la subasta</CVG_Ev_VisitCauldron_Label>
   <CVG_Ev_VisitCauldron_Text>La caravana de subastas de Qian Wanli se detiene en el borde de tu tierra. Doce carros, treinta guardias, un maestro sonriente y un estandarte que dice «TODO TIENE PRECIO, INCLUSO ESTE ESTANDARTE». El Pabellón vende píldoras, tablillas, jade y rumores, y lo compra todo.</CVG_Ev_VisitCauldron_Text>
-  <CVG_Ev_VisitLotus_Label>Los sanadores del Loto</CVG_Ev_VisitLotus_Label>
-  <CVG_Ev_VisitLotus_Text>Un pequeño grupo del Templo del Loto Silencioso llega con cestas de hierbas y sin armas. La abadesa los ha enviado a ver quién está enfermo en la colonia sin decirlo. Sanarán a quien lo pida y no pedirán nada, lo cual es un poco inquietante.</CVG_Ev_VisitLotus_Text>
+  <CVG_Ev_VisitLotus_Label>Los sanadores del Pabellón</CVG_Ev_VisitLotus_Label>
+  <CVG_Ev_VisitLotus_Text>Un grupo pequeño de la enfermería de caridad del Pabellón del Caldero Celestial llega con canastas de hierbas y sin armas. Mo Qinghua los mandó a ver quién está enfermo en la colonia y no lo dijo. Curarán a quien lo pida y, por una vez, el Pabellón no pone precio, lo que inquieta un poco.</CVG_Ev_VisitLotus_Text>
   <CVG_Ev_VisitDragon_Label>Un invitado del Clan del Dragón</CVG_Ev_VisitDragon_Label>
   <CVG_Ev_VisitDragon_Text>Un joven con un leve brillo de escamas en las muñecas está ante tu puerta y no llama. Ao Ming, del Clan del Dragón Antiguo, ha recibido orden de ver cómo vive la gente del Borde. Es educado, curioso y algo decepcionado de que nadie gritara.</CVG_Ev_VisitDragon_Text>
   <CVG_Ev_VisitRogueMarket_Label>Un mercado nocturno</CVG_Ev_VisitRogueMarket_Label>
@@ -242,10 +242,10 @@
   <CVG_Ev_MissionSpiderDone_Text>El representante del Pabellón mira la glándula, el cadáver, a ti, y escribe una cifra en una tablilla. La cifra tiene muchos ceros. «El Pabellón honra sus deudas», dice con la dulzura de quien acaba de ganar mucho dinero.</CVG_Ev_MissionSpiderDone_Text>
   <CVG_Ev_MissionSpiderFail_Label>La araña conserva su telaraña</CVG_Ev_MissionSpiderFail_Label>
   <CVG_Ev_MissionSpiderFail_Text>Otra caravana desaparece en el paso. El Pabellón tacha el contrato del libro sin amargura. La amargura no es una partida contable.</CVG_Ev_MissionSpiderFail_Text>
-  <CVG_Ev_MissionLotusHerbs_Label>Un brote en el templo</CVG_Ev_MissionLotusHerbs_Label>
-  <CVG_Ev_MissionLotusHerbs_Text>Una novicia del Templo del Loto Silencioso llega sin aliento con un mensaje de una línea: «la tos se extiende y el almacén de hierbas está vacío». La abadesa no pide caridad. Pide veinticinco dosis de medicina herbal y promete a cambio una bendición del loto.</CVG_Ev_MissionLotusHerbs_Text>
+  <CVG_Ev_MissionLotusHerbs_Label>Un brote en el Pabellón</CVG_Ev_MissionLotusHerbs_Label>
+  <CVG_Ev_MissionLotusHerbs_Text>Un mensajero del Pabellón del Caldero Celestial llega sin aliento con un mensaje de una línea: 'la tos se extiende por la enfermería y el almacén de hierbas está vacío'. Qian Wanli no pide caridad. Pide veinticinco dosis de medicina herbal y promete escribir la deuda en rojo en el libro de cuentas del Pabellón.</CVG_Ev_MissionLotusHerbs_Text>
   <CVG_Ev_MissionLotusHerbs_Opt_send>Enviar las hierbas</CVG_Ev_MissionLotusHerbs_Opt_send>
-  <CVG_Ev_MissionLotusHerbs_Res_send>Un mes después el templo envía una cesta de té, una píldora y una larguísima carta de agradecimiento.</CVG_Ev_MissionLotusHerbs_Res_send>
+  <CVG_Ev_MissionLotusHerbs_Res_send>Un mes después el Pabellón manda una canasta de té, una píldora y un recibo que dice 'pagado, con intereses'.</CVG_Ev_MissionLotusHerbs_Res_send>
   <CVG_Ev_MissionLotusHerbs_Opt_decline>No podemos prescindir de ellas</CVG_Ev_MissionLotusHerbs_Opt_decline>
   <CVG_Ev_MissionCauldronCores_Label>Un encargo de núcleos de bestia</CVG_Ev_MissionCauldronCores_Label>
   <CVG_Ev_MissionCauldronCores_Text>Mo Qinghua, Gran Alquimista, envía una nota en papel perfumado. Necesita dos núcleos de bestia para un experimento que se niega a describir. Pagará en tablillas y favores y ha adjuntado una lista de todos los favores que el Pabellón te ha hecho, por si los has olvidado.</CVG_Ev_MissionCauldronCores_Text>
@@ -260,7 +260,7 @@
   <CVG_Ev_MissionEscortReward_Label>La caravana paga</CVG_Ev_MissionEscortReward_Label>
   <CVG_Ev_MissionEscortReward_Text>Por la mañana el jefe de la caravana cuenta sus carros, los encuentra todos y paga el doble de lo prometido. Un hombre salvado de bandidos es generoso durante exactamente un día.</CVG_Ev_MissionEscortReward_Text>
   <CVG_Ev_MissionAzureTournament_Label>El Torneo de las Sectas</CVG_Ev_MissionAzureTournament_Label>
-  <CVG_Ev_MissionAzureTournament_Text>Lin Wuchen ha declarado un torneo al pie del Pico e invita a todas las sectas y a toda persona que pueda mantenerse en pie y blandir una espada. Luchar no es obligatorio. El honor sí. El premio es una espada de acero espiritual y, mucho más valioso, el derecho a ser recordado.</CVG_Ev_MissionAzureTournament_Text>
+  <CVG_Ev_MissionAzureTournament_Text>El maestro de la Espada Sin Forma convocó un torneo al pie del Pico e invita a todas las sectas y a toda persona capaz de mantenerse en pie y blandir una espada. Pelear no es obligatorio. El honor sí. El premio es una espada de acero espiritual y, mucho más valioso, el derecho a ser recordado.</CVG_Ev_MissionAzureTournament_Text>
   <CVG_Ev_MissionAzureTournament_Opt_send>Enviar a tu mejor luchador</CVG_Ev_MissionAzureTournament_Opt_send>
   <CVG_Ev_MissionAzureTournament_Res_send>Tu luchador vuelve cojeando, con una cinta, un moretón y el respeto de tres sectas.</CVG_Ev_MissionAzureTournament_Res_send>
   <CVG_Ev_MissionAzureTournament_Opt_skip>No ir al torneo</CVG_Ev_MissionAzureTournament_Opt_skip>
@@ -276,8 +276,8 @@
   <CVG_Ev_MissionStolenManual_Opt_no>Declinar</CVG_Ev_MissionStolenManual_Opt_no>
   <CVG_Ev_MissionManualReward_Label>El manual vuelve</CVG_Ev_MissionManualReward_Label>
   <CVG_Ev_MissionManualReward_Text>Has recuperado el manual, algo manchado de té y algo usado como bandeja. La secta lo recibe con una reverencia grave y cumple su palabra: aquí están los capítulos menores, en una copia tan cuidadosa como la de cualquier escriba.</CVG_Ev_MissionManualReward_Text>
-  <CVG_Ev_TravelingHealer_Label>Una sanadora sin templo</CVG_Ev_TravelingHealer_Label>
-  <CVG_Ev_TravelingHealer_Text>Una mujer con un zurrón de hierbas secas dice que fue sanadora en el Templo del Loto Silencioso hasta que sus dudas fueron más fuertes que sus oraciones. No quiere dinero. Quiere un lugar donde pasar el invierno y una razón para dejar de caminar.</CVG_Ev_TravelingHealer_Text>
+  <CVG_Ev_TravelingHealer_Label>Una sanadora sin pabellón</CVG_Ev_TravelingHealer_Label>
+  <CVG_Ev_TravelingHealer_Text>Una mujer con un morral de hierbas secas dice que fue sanadora en la enfermería del Pabellón del Caldero Celestial hasta que se cansó de ponerle precio a cada remedio. No quiere dinero. Quiere un lugar donde pasar el invierno y una razón para dejar de caminar.</CVG_Ev_TravelingHealer_Text>
   <CVG_Ev_TravelingHealer_Opt_welcome>Darle cobijo</CVG_Ev_TravelingHealer_Opt_welcome>
   <CVG_Ev_TravelingHealer_Res_welcome>Mira la colonia largo rato y por fin deja el zurrón en el suelo.</CVG_Ev_TravelingHealer_Res_welcome>
   <CVG_Ev_TravelingHealer_Opt_food>Darle de comer y dejarla ir</CVG_Ev_TravelingHealer_Opt_food>
@@ -301,8 +301,8 @@
   <CVG_Ev_OrphanOfTheCalamity_Text>Rebuscando en las ruinas de un santuario quemado, tu gente halla a una niña de siete años que lleva días sin hablar. Aferra un pequeño espejo de bronce y no lo suelta. Cuando alguien se acerca, mira más allá, como si hubiera alguien detrás.</CVG_Ev_OrphanOfTheCalamity_Text>
   <CVG_Ev_OrphanOfTheCalamity_Opt_adopt>Acogerla</CVG_Ev_OrphanOfTheCalamity_Opt_adopt>
   <CVG_Ev_OrphanOfTheCalamity_Res_adopt>Duerme en un rincón de la cocina con el espejo bajo la mejilla.</CVG_Ev_OrphanOfTheCalamity_Res_adopt>
-  <CVG_Ev_OrphanOfTheCalamity_Opt_lotus>Mandarla al Loto</CVG_Ev_OrphanOfTheCalamity_Opt_lotus>
-  <CVG_Ev_OrphanOfTheCalamity_Res_lotus>El Templo la recibe con ternura y un cuenco de arroz.</CVG_Ev_OrphanOfTheCalamity_Res_lotus>
+  <CVG_Ev_OrphanOfTheCalamity_Opt_lotus>Enviarla al Pabellón</CVG_Ev_OrphanOfTheCalamity_Opt_lotus>
+  <CVG_Ev_OrphanOfTheCalamity_Res_lotus>El Pabellón la recibe como aprendiz, con dulzura, un tazón de arroz y un contrato.</CVG_Ev_OrphanOfTheCalamity_Res_lotus>
   <CVG_Ev_OrphanSpeaks_Label>La niña habla</CVG_Ev_OrphanSpeaks_Label>
   <CVG_Ev_OrphanSpeaks_Text>Una mañana la niña pide té con voz pequeña y clara. Luego te cuenta que el espejo muestra a los muertos como eran. No pregunta qué significa. Pregunta si puede quedárselo.</CVG_Ev_OrphanSpeaks_Text>
   <CVG_Ev_OrphanSpeaks_Opt_keep>Por supuesto</CVG_Ev_OrphanSpeaks_Opt_keep>
@@ -342,8 +342,8 @@
   <CVG_Ev_CauldronCreditors_Res_flee>Los cobradores se quitan los guantes de seda.</CVG_Ev_CauldronCreditors_Res_flee>
   <CVG_Ev_DragonHeirTrial_Label>La prueba del Dragón</CVG_Ev_DragonHeirTrial_Label>
   <CVG_Ev_DragonHeirTrial_Text>Un anciano del Clan del Dragón Antiguo llega para ver si la sangre del descendiente se ha espesado o adelgazado. No pide nada, no toma nada y durante toda una tarde rodea la colonia en silencio. Luego deja una escama en el umbral, que puede ser un regalo o una factura.</CVG_Ev_DragonHeirTrial_Text>
-  <CVG_Ev_LotusWelcome_Label>El Loto recuerda a los suyos</CVG_Ev_LotusWelcome_Label>
-  <CVG_Ev_LotusWelcome_Text>Una pequeña procesión del Templo del Loto Silencioso llega con un loto en una maceta y una canción tranquila. Traen la noticia de que la abadesa ha sabido de los refugiados y ha decidido que el templo tiene un lugar para ellos cuando quieran. Envía té.</CVG_Ev_LotusWelcome_Text>
+  <CVG_Ev_LotusWelcome_Label>El Pabellón recuerda a los suyos</CVG_Ev_LotusWelcome_Label>
+  <CVG_Ev_LotusWelcome_Text>Llega una pequeña comitiva del Pabellón del Caldero Celestial, con un incensario y un libro de cuentas. Traen la noticia de que el Pabellón supo de los sanadores exiliados y decidió que su enfermería tiene un lugar para ellos cuando quieran. Mo Qinghua manda té, y Qian Wanli manda la cuenta del té.</CVG_Ev_LotusWelcome_Text>
   <CVG_Ev_BeastGuildOffer_Label>El gremio de cazadores</CVG_Ev_BeastGuildOffer_Label>
   <CVG_Ev_BeastGuildOffer_Text>Un gremio de cazadores de bestias envía a un representante que quiere conocer a gente capaz de seguir el rastro de un lobo de montaña. El gremio no es rico, pero paga en núcleos. Te estrecha la mano demasiado tiempo y, cuando preguntas qué pasa, solo dice: «es el tercer lobo de este mes».</CVG_Ev_BeastGuildOffer_Text>
   <CVG_Ev_BeastGuildOffer_Opt_hunt>Aceptar el contrato</CVG_Ev_BeastGuildOffer_Opt_hunt>

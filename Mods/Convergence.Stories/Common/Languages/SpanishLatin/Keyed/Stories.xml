@@ -47,7 +47,7 @@
   <CVG_Story_CollectiveDemonNone_Label>El experimento está en calma</CVG_Story_CollectiveDemonNone_Label>
   <CVG_Story_CollectiveDemonNone_Text>La muestra de qi de la corporación zumba en su contenedor y no hace nada. Por ahora.</CVG_Story_CollectiveDemonNone_Text>
   <CVG_Story_SectOffer_Label>Una secta recta tiende la mano</CVG_Story_SectOffer_Label>
-  <CVG_Story_SectOffer_Text>Emisarios del Pico Azur y del Loto Silencioso oyeron hablar de su pueblo. Ofrecen su amistad y un regalo: los aceptarían como secta menor bajo su protección.</CVG_Story_SectOffer_Text>
+  <CVG_Story_SectOffer_Text>Emisarios de la Espada Sin Forma y del Caldero Celestial oyeron hablar de tu gente. Ofrecen su amistad y un regalo: los aceptarían como una secta menor bajo su protección.</CVG_Story_SectOffer_Text>
   <CVG_Scenario_LoneSurvivor_Start>La secta es ceniza. Tienes una túnica, una espada y el poco qi que llevas en el dantian.\n\nTarde o temprano alguien vendrá a por ti.</CVG_Scenario_LoneSurvivor_Start>
   <CVG_Scenario_SectFlight_Start>Las puertas cayeron en una sola noche. Ustedes cuatro son todo lo que queda de la secta.
 
@@ -70,9 +70,7 @@ Los cobradores los van a encontrar.</CVG_Scenario_ExiledAlchemist_Start>
   <CVG_Scenario_BeastHunters_Start>Cazan lo que otros evitan.
 
 Un gremio estuvo preguntando por ustedes.</CVG_Scenario_BeastHunters_Start>
-  <CVG_Scenario_LotusRefugees_Start>El templo se partió por una cuestión que nadie recuerda. Salieron con hierbas y un sutra.
-
-La abadesa los vio irse.</CVG_Scenario_LotusRefugees_Start>
+  <CVG_Scenario_LotusRefugees_Start>La enfermería se dividió por el precio de un remedio. Te fuiste con hierbas y una receta.\n\nMo Qinghua te miró partir.</CVG_Scenario_LotusRefugees_Start>
   <CVG_Scenario_DragonHeir_Start>Llevas un hilo de sangre de dragón, fino como un cabello.\n\nEl clan lo ha notado.</CVG_Scenario_DragonHeir_Start>
   <CVG_SectWorld_Peace>Paz entre {0} y {1}: ambas sectas envainan sus espadas.</CVG_SectWorld_Peace>
   <CVG_SectWorld_WarEnded>La guerra entre sectas terminó: {0} venció a {1}.</CVG_SectWorld_WarEnded>
