@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Formless Sword Sect: adult backstories by rank. Sect members always get one of these as adults (PawnKindDef
+       fixedAdultBackstories); childhood stays random. Not shuffleable: they only come from the sect. -->
+  <BackstoryDef Abstract="True" Name="CVG_FormlessSwordBackstoryBase">
+    <slot>Adulthood</slot>
+    <shuffleable>false</shuffleable>
+    <spawnCategories><li>CVG_Sect_FormlessSword</li></spawnCategories>
+    <requiredWorkTags><li>Violent</li></requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <!-- Outer disciples -->
+  <BackstoryDef ParentName="CVG_FormlessSwordBackstoryBase">
+    <defName>CVG_Backstory_FS_OuterDisciple</defName>
+    <title>outer sword disciple</title>
+    <titleShort>outer disciple</titleShort>
+    <description>[PAWN_nameDef] was an outer disciple of the Formless Sword: a thousand cuts before breakfast and a thousand after, on a training yard swept by the disciples themselves. The masters never explained the forms; they waited for [PAWN_objective] to understand them.</description>
+    <skillGains>
+      <Melee>4</Melee>
+      <Construction>1</Construction>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_FormlessSwordBackstoryBase">
+    <defName>CVG_Backstory_FS_MoundKeeper</defName>
+    <title>keeper of the sword mound</title>
+    <titleShort>mound keeper</titleShort>
+    <description>[PAWN_nameDef] tended the Sword Mound, where the blades of every dead master rest point-down in the earth. Polishing them one by one, [PAWN_pronoun] learned their names, their owners and the duels each one had lost.</description>
+    <skillGains>
+      <Melee>3</Melee>
+      <Artistic>1</Artistic>
+      <Intellectual>1</Intellectual>
+    </skillGains>
+  </BackstoryDef>
+
+  <!-- Inner disciples -->
+  <BackstoryDef ParentName="CVG_FormlessSwordBackstoryBase">
+    <defName>CVG_Backstory_FS_InnerBearer</defName>
+    <title>inner sword bearer</title>
+    <titleShort>sword bearer</titleShort>
+    <description>[PAWN_nameDef] was an inner disciple, allowed to carry a sword outside the gate. The Formless Sword gives that right only to those who have stopped looking at the blade when they cut.</description>
+    <skillGains>
+      <Melee>5</Melee>
+      <Social>1</Social>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_FormlessSwordBackstoryBase">
+    <defName>CVG_Backstory_FS_WanderingBlade</defName>
+    <title>blade sent down the mountain</title>
+    <titleShort>wandering blade</titleShort>
+    <description>After the Convergence the sect sent [PAWN_nameDef] down the mountain with one order: find out what intent is worth in a world of guns and machines. [PAWN_pronoun] has walked the Rim since, fighting rarely and watching a lot.</description>
+    <skillGains>
+      <Melee>4</Melee>
+      <Plants>1</Plants>
+      <Animals>1</Animals>
+    </skillGains>
+  </BackstoryDef>
+
+  <!-- Core disciples -->
+  <BackstoryDef ParentName="CVG_FormlessSwordBackstoryBase">
+    <defName>CVG_Backstory_FS_CoreBlade</defName>
+    <title>core blade of the formless sword</title>
+    <titleShort>core blade</titleShort>
+    <description>[PAWN_nameDef] is a core disciple, one of the few who may challenge an elder. The sect has apprentices to plant, haul and cook; [PAWN_pronoun] spent those years cutting falling leaves in two without touching the branch.</description>
+    <skillGains>
+      <Melee>7</Melee>
+      <Social>2</Social>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_FormlessSwordBackstoryBase">
+    <defName>CVG_Backstory_FS_TournamentRival</defName>
+    <title>rival of the young master</title>
+    <titleShort>tournament rival</titleShort>
+    <description>[PAWN_nameDef] won three sect tournaments and lost the fourth to Yan Zhao, the arrogant prodigy of the Formless Sword. Since that day [PAWN_pronoun] has trained twice as hard, and the whole sect is waiting for the fifth.</description>
+    <skillGains>
+      <Melee>6</Melee>
+      <Social>1</Social>
+    </skillGains>
+  </BackstoryDef>
+
+  <!-- Elders -->
+  <BackstoryDef ParentName="CVG_FormlessSwordBackstoryBase">
+    <defName>CVG_Backstory_FS_SwordElder</defName>
+    <title>sword elder</title>
+    <titleShort>sword elder</titleShort>
+    <description>[PAWN_nameDef] is an elder of the Formless Sword, trained in the line of Shen Ruoxue, whose sword is as cold as ice. Elders no longer prove anything with the blade; they teach with it, and the disciples say [PAWN_possessive] silence corrects more than words.</description>
+    <skillGains>
+      <Melee>8</Melee>
+      <Social>3</Social>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_FormlessSwordBackstoryBase">
+    <defName>CVG_Backstory_FS_DisciplineElder</defName>
+    <title>elder of discipline</title>
+    <titleShort>discipline elder</titleShort>
+    <description>[PAWN_nameDef] served under Gu Hengyue, the inflexible Elder of Discipline, and carried out the sect's punishments in [PAWN_possessive] name. Disciples lower their eyes when [PAWN_pronoun] passes; the sect master, Lin Wuchen, says that is exactly what the office is for.</description>
+    <skillGains>
+      <Melee>7</Melee>
+      <Social>4</Social>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+      <li>Artistic</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <!-- Swordsmith (trader) -->
+  <BackstoryDef ParentName="CVG_FormlessSwordBackstoryBase">
+    <defName>CVG_Backstory_FS_Swordsmith</defName>
+    <title>swordsmith of the formless sword</title>
+    <titleShort>swordsmith</titleShort>
+    <description>[PAWN_nameDef] works the forge that once turned the shells of fallen machines into the Swords of the Broken Sky. Now [PAWN_pronoun] travels with the sect's caravans, selling blades and buying any metal the Rim has to offer.</description>
+    <requiredWorkTags Inherit="False" />
+    <skillGains>
+      <Crafting>6</Crafting>
+      <Melee>2</Melee>
+      <Social>2</Social>
+    </skillGains>
+  </BackstoryDef>
+</Defs>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Backstory_FS_OuterDisciple.title>discípulo externo de espada</CVG_Backstory_FS_OuterDisciple.title>
+  <CVG_Backstory_FS_OuterDisciple.titleShort>discípulo externo</CVG_Backstory_FS_OuterDisciple.titleShort>
+  <CVG_Backstory_FS_OuterDisciple.description>[PAWN_nameDef] fue discípulo externo de la Espada Sin Forma: mil cortes antes del desayuno y mil después, en un patio de entrenamiento que barrían los propios discípulos. Los maestros nunca explicaron las formas; esperaron a que las entendiera.</CVG_Backstory_FS_OuterDisciple.description>
+  <CVG_Backstory_FS_MoundKeeper.title>guardián del túmulo de espadas</CVG_Backstory_FS_MoundKeeper.title>
+  <CVG_Backstory_FS_MoundKeeper.titleShort>guardián del túmulo</CVG_Backstory_FS_MoundKeeper.titleShort>
+  <CVG_Backstory_FS_MoundKeeper.description>[PAWN_nameDef] cuidaba el Túmulo de Espadas, donde las hojas de todos los maestros muertos descansan clavadas en la tierra. Puliéndolas una por una aprendió sus nombres, sus dueños y los duelos que cada una perdió.</CVG_Backstory_FS_MoundKeeper.description>
+  <CVG_Backstory_FS_InnerBearer.title>portador de espada interno</CVG_Backstory_FS_InnerBearer.title>
+  <CVG_Backstory_FS_InnerBearer.titleShort>portador de espada</CVG_Backstory_FS_InnerBearer.titleShort>
+  <CVG_Backstory_FS_InnerBearer.description>[PAWN_nameDef] fue discípulo interno, con derecho a llevar espada fuera de la puerta. La Espada Sin Forma solo da ese derecho a quien dejó de mirar la hoja cuando corta.</CVG_Backstory_FS_InnerBearer.description>
+  <CVG_Backstory_FS_WanderingBlade.title>hoja enviada montaña abajo</CVG_Backstory_FS_WanderingBlade.title>
+  <CVG_Backstory_FS_WanderingBlade.titleShort>hoja errante</CVG_Backstory_FS_WanderingBlade.titleShort>
+  <CVG_Backstory_FS_WanderingBlade.description>Tras la Convergencia, la secta mandó a [PAWN_nameDef] montaña abajo con una sola orden: averiguar cuánto vale la intención en un mundo de armas de fuego y máquinas. Desde entonces recorre el Borde, peleando poco y observando mucho.</CVG_Backstory_FS_WanderingBlade.description>
+  <CVG_Backstory_FS_CoreBlade.title>hoja principal de la espada sin forma</CVG_Backstory_FS_CoreBlade.title>
+  <CVG_Backstory_FS_CoreBlade.titleShort>hoja principal</CVG_Backstory_FS_CoreBlade.titleShort>
+  <CVG_Backstory_FS_CoreBlade.description>[PAWN_nameDef] es discípulo principal, uno de los pocos que pueden desafiar a un anciano. La secta tiene aprendices para sembrar, acarrear y cocinar; esos años los pasó partiendo en dos hojas que caían sin tocar la rama.</CVG_Backstory_FS_CoreBlade.description>
+  <CVG_Backstory_FS_TournamentRival.title>rival del joven maestro</CVG_Backstory_FS_TournamentRival.title>
+  <CVG_Backstory_FS_TournamentRival.titleShort>rival de torneo</CVG_Backstory_FS_TournamentRival.titleShort>
+  <CVG_Backstory_FS_TournamentRival.description>[PAWN_nameDef] ganó tres torneos de la secta y perdió el cuarto contra Yan Zhao, el prodigio arrogante de la Espada Sin Forma. Desde ese día entrena el doble, y toda la secta espera el quinto.</CVG_Backstory_FS_TournamentRival.description>
+  <CVG_Backstory_FS_SwordElder.title>anciano de espada</CVG_Backstory_FS_SwordElder.title>
+  <CVG_Backstory_FS_SwordElder.titleShort>anciano de espada</CVG_Backstory_FS_SwordElder.titleShort>
+  <CVG_Backstory_FS_SwordElder.description>[PAWN_nameDef] es anciano de la Espada Sin Forma, formado en la línea de Shen Ruoxue, cuya espada es fría como el hielo. Los ancianos ya no demuestran nada con la hoja; enseñan con ella, y los discípulos dicen que su silencio corrige más que las palabras.</CVG_Backstory_FS_SwordElder.description>
+  <CVG_Backstory_FS_DisciplineElder.title>anciano de la disciplina</CVG_Backstory_FS_DisciplineElder.title>
+  <CVG_Backstory_FS_DisciplineElder.titleShort>anciano de disciplina</CVG_Backstory_FS_DisciplineElder.titleShort>
+  <CVG_Backstory_FS_DisciplineElder.description>[PAWN_nameDef] sirvió bajo Gu Hengyue, el inflexible Anciano de la Disciplina, y ejecutó los castigos de la secta en su nombre. Los discípulos bajan la vista cuando pasa; el maestro de secta, Lin Wuchen, dice que para eso existe el cargo.</CVG_Backstory_FS_DisciplineElder.description>
+  <CVG_Backstory_FS_Swordsmith.title>forjador de la espada sin forma</CVG_Backstory_FS_Swordsmith.title>
+  <CVG_Backstory_FS_Swordsmith.titleShort>forjador</CVG_Backstory_FS_Swordsmith.titleShort>
+  <CVG_Backstory_FS_Swordsmith.description>[PAWN_nameDef] trabaja la forja que una vez convirtió los cascarones de máquinas caídas en las Espadas del Cielo Roto. Ahora viaja con las caravanas de la secta, vendiendo hojas y comprando cualquier metal que ofrezca el Borde.</CVG_Backstory_FS_Swordsmith.description>
+</LanguageData>

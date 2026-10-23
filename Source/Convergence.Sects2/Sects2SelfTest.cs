@@ -256,10 +256,11 @@ namespace Convergence.Sects2
             foreach (var kindName in new[] { "Disciple", "Bearer", "Blade", "Elder" })
             {
                 var kind = DefDatabase<PawnKindDef>.GetNamed("CVG_FormlessSword_" + kindName);
-                int hulks = 0, nonSwords = 0, bodies = 0;
+                int hulks = 0, nonSwords = 0, bodies = 0, sectStories = 0, adults = 0;
                 for (int i = 0; i < 6; i++)
                 {
                     var p = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, faction, forceGenerateNewPawn: true));
+                    if (p.story.Adulthood != null) { adults++; if (kind.fixedAdultBackstories.Contains(p.story.Adulthood)) sectStories++; }
                     if (p.story.bodyType == BodyTypeDefOf.Hulk) hulks++;
                     var w = p.equipment?.Primary;
                     if (w != null && !(w.def.weaponTags?.Contains("CVG_Sword") ?? false)) nonSwords++;
@@ -267,6 +268,7 @@ namespace Convergence.Sects2
                     p.Destroy();
                 }
                 Check(hulks == 0 && nonSwords == 0 && (kindName != "Elder" || bodies == 6), kindName + ": no Hulk, swords only, " + bodies + "/6 with Sword Body");
+                Check(kind.fixedAdultBackstories.Count > 0 && sectStories == adults, kindName + ": adult backstory from the sect (" + sectStories + "/" + adults + ")");
             }
 
             // Comercio: espadas Buena-Obra maestra, nunca Legendaria

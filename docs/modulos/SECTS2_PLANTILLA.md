@@ -22,6 +22,10 @@ especialidad, su lore y lo que vende**. Copiá los archivos de la Espada, renomb
    (`CVG_<Secta>Title`), color, `forcedMemes`, grupos de personajes y `DefModExtension_ConvergenceFaction` (alianzas y enemistades).
 3. **Discípulos**: 4 rangos (externo, interno, principal, anciano) + comerciante; reino y etapa, manuales, elementos, `weaponTags`
    (la especialidad), `disallowedBodyTypes` o `forcedBodyType`, y `traitChances` de su constitución (el grado más raro primero).
+   **Historias de fondo (obligatorio en toda secta):** la adultez de un miembro sale siempre de la secta; la infancia queda al azar.
+   Un archivo `<Secta>_Backstories.xml` con `ParentName` de una base propia (`slot` Adulthood, `shuffleable` false, categoría
+   `CVG_Sect_<Secta>`), 1-2 historias por rango con lore y habilidades de la especialidad, y en cada tipo de personaje
+   `<fixedAdultBackstories>` (mecanismo de vanilla). Ver `FormlessSword_Backstories.xml`.
 4. **Comercio**: un `TraderKindDef` abstracto con `StockGenerator_QualityTag` para su especialidad (calidades y pesos; nunca Legendario si así
    se decide) + materiales de Convergence que correspondan; dos hijos (caravana y asentamiento).
 5. **Títulos**: 4 `RoyalTitleDef` (`ParentName="CVG_SectTitle1..4"`) con su `tags` y su lore.

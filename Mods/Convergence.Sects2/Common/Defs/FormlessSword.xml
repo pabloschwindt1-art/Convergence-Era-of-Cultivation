@@ -78,7 +78,8 @@
     </modExtensions>
   </FactionDef>
 
-  <!-- Disciples: swords only (weapon tag CVG_Sword, no ranged weapons), no Hulk bodies, Sword Body by rank (rarest grade first). -->
+  <!-- Disciples: swords only (weapon tag CVG_Sword, no ranged weapons), no Hulk bodies, Sword Body by rank (rarest grade first),
+       adult backstory of the sect by rank (FormlessSword_Backstories.xml); childhood stays random. -->
   <PawnKindDef Abstract="True" Name="CVG_FormlessSwordKindBase" ParentName="CVG_Sect2KindBase">
     <defaultFactionDef>CVG_Faction_FormlessSword</defaultFactionDef>
     <nameMaker>CVG_NamerPerson_FormlessSword</nameMaker>
@@ -89,6 +90,7 @@
 
   <PawnKindDef ParentName="CVG_FormlessSwordKindBase">
     <defName>CVG_FormlessSword_Disciple</defName>
+    <fixedAdultBackstories><li>CVG_Backstory_FS_OuterDisciple</li><li>CVG_Backstory_FS_MoundKeeper</li></fixedAdultBackstories>
     <label>outer sword disciple</label>
     <combatPower>55</combatPower>
     <minGenerationAge>16</minGenerationAge>
@@ -113,6 +115,7 @@
 
   <PawnKindDef ParentName="CVG_FormlessSwordKindBase">
     <defName>CVG_FormlessSword_Bearer</defName>
+    <fixedAdultBackstories><li>CVG_Backstory_FS_InnerBearer</li><li>CVG_Backstory_FS_WanderingBlade</li></fixedAdultBackstories>
     <label>inner sword bearer</label>
     <combatPower>105</combatPower>
     <minGenerationAge>18</minGenerationAge>
@@ -138,6 +141,7 @@
 
   <PawnKindDef ParentName="CVG_FormlessSwordKindBase">
     <defName>CVG_FormlessSword_Blade</defName>
+    <fixedAdultBackstories><li>CVG_Backstory_FS_CoreBlade</li><li>CVG_Backstory_FS_TournamentRival</li></fixedAdultBackstories>
     <label>core blade disciple</label>
     <combatPower>140</combatPower>
     <minGenerationAge>20</minGenerationAge>
@@ -164,6 +168,7 @@
 
   <PawnKindDef ParentName="CVG_FormlessSwordKindBase">
     <defName>CVG_FormlessSword_Elder</defName>
+    <fixedAdultBackstories><li>CVG_Backstory_FS_SwordElder</li><li>CVG_Backstory_FS_DisciplineElder</li></fixedAdultBackstories>
     <label>sword elder</label>
     <combatPower>250</combatPower>
     <minGenerationAge>40</minGenerationAge>
@@ -192,6 +197,7 @@
 
   <PawnKindDef ParentName="CVG_FormlessSwordKindBase">
     <defName>CVG_FormlessSword_Swordsmith</defName>
+    <fixedAdultBackstories><li>CVG_Backstory_FS_Swordsmith</li></fixedAdultBackstories>
     <label>sect swordsmith</label>
     <combatPower>45</combatPower>
     <minGenerationAge>25</minGenerationAge>
