@@ -214,8 +214,7 @@
   <ThingDef ParentName="FurnitureBase">
     <defName>CVG_SpiritBonsai</defName>
     <label>spirit bonsai</label>
-    <description>A pot where a small living tree is trained into a bonsai. Needs tending like any plant. Raises the qi concentration of the room. A cultivator who cannot spare years to grow a forest grows one tree for a lifetime. Sect gardeners say a bonsai remembers the hand that pruned it and leans toward it.</description>
-    <thingClass>Building_PlantGrower</thingClass>
+    <description>A small tree trained for years into a bonsai, already shaped and only asking for a glance now and then. Pleasant to look at, it raises the qi concentration of the room. A cultivator who cannot spare years to grow a forest grows one tree for a lifetime. Sect gardeners say a bonsai remembers the hand that pruned it and leans toward it.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/SpiritBonsai</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
@@ -231,13 +230,11 @@
       <WorkToBuild>600</WorkToBuild>
       <Mass>4</Mass>
       <Flammability>1.0</Flammability>
-      <Beauty>5</Beauty>
+      <Beauty>15</Beauty>
     </statBases>
     <costList>
       <WoodLog>20</WoodLog>
     </costList>
-    <fertility>1.0</fertility>
-    <building><defaultPlantToGrow>Plant_Daylily</defaultPlantToGrow><sowTag>Decorative</sowTag></building>
     <modExtensions>
       <li Class="Convergence.DefModExtension_FengShui">
         <qi>4</qi>

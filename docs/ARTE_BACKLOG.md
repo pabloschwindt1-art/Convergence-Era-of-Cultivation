@@ -99,4 +99,4 @@ para que el emblema no se tiña.
 - ✅ (hecho 2026-10-22) **Apparel: telar espiritual (CVG_SpiritLoom).** El diseño es provisorio y no tiene nada de wuxia: parece un mueble blanco
   moderno con una franja celeste, tipo aparato de cocina. Se ve en rt/capturas/workshop_apparel/03_buildings.jpg. Hay que rehacerlo como un telar
   de madera tradicional, con el bastidor, los hilos de seda o de algodón de nube y algún detalle espiritual, a la altura del horno de alquimia y la forja.
-
+- **2026-10-23 — Furniture: árbol bonsái espiritual (pendiente, lo pidió el usuario).** El bonsái (CVG_SpiritBonsai) dejó de ser maceta porque el lirio de día que sembraba vanilla se dibujaba encima del árbol. Ahora es decoración pura (belleza 15, qi 4). Idea para después: versión wuxia de la maceta vanilla, con una maceta vacía y una planta propia, el árbol bonsái espiritual, que crezca despacio y solo se siembre ahí. Hacen falta dos dibujos: la maceta vacía y el árbol por etapas.
