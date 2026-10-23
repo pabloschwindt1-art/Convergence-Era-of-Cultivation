@@ -55,7 +55,7 @@ namespace Convergence.QiTech
             catch (System.Exception e)
             {
                 script = null;
-                Time.captureFramerate = 0;
+                UnityCompat.CaptureFramerate = 0;
                 Log.Error("[Convergence] Qi-Tech WorkshopShot: " + e + "\n  FAILURES: 1");
                 Root.Shutdown();
             }
@@ -123,13 +123,13 @@ namespace Convergence.QiTech
             yield return 360;
             Capture("05_turrets");
             yield return 2;
-            Time.captureFramerate = CaptureFps;
+            UnityCompat.CaptureFramerate = CaptureFps;
             for (int f = 0; f < CaptureFps * 6; f++)
             {
                 Capture($"anim_turrets/{f:000}");
                 yield return 1;
             }
-            Time.captureFramerate = 0;
+            UnityCompat.CaptureFramerate = 0;
             tm.CurTimeSpeed = TimeSpeed.Paused;
             HideUI(false);
             yield return 20;

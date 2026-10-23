@@ -3,9 +3,10 @@
   <name>Convergence: Biotech Wuxia</name>
   <author>Prospero1088</author>
   <packageId>prospero1088.convergence.biotechwuxia</packageId>
-  <modVersion>0.1.0</modVersion>
+  <modVersion>0.1.1</modVersion>
   <supportedVersions>
     <li>1.6</li>
+    <li>1.7</li>
   </supportedVersions>
   <description>Biotech in a wuxia key for Convergence: Era of Cultivation. It reuses the systems of Biotech instead of inventing new ones:
 

@@ -1015,12 +1015,13 @@ namespace Convergence
             var spot = GenRadial.RadialCellsAround(pawn.Position, 4f, false).FirstOrDefault(c => c.InBounds(map) && c.Standable(map)
                 && GenConstruct.CanPlaceBlueprintAt(dummy.def, c, Rot4.North, map).Accepted
                 && ThingUtility.InteractionCellWhenAt(dummy.def, c, Rot4.North, map) is var ic && ic.InBounds(map) && ic.Standable(map)
-                && pawn.CanReach(ic, Verse.AI.PathEndMode.OnCell, Danger.Deadly));
+                && pawn.CanReach(ic, Verse.AI.PathEndMode.OnCell, Danger.Some));   // el mismo peligro que acepta el work giver
             GenSpawn.Spawn(dummy, spot != IntVec3.Zero ? spot : CellFinder.RandomClosewalkCellNear(pawn.Position, map, 4), map, WipeMode.Vanish);
             var giver = new WorkGiver_TemperBody();
             Check(comp.CanTemperNow, "can temper now");
             bool danger = CultivatorAI.InDanger(pawn, 20f);
-            Check(giver.HasJobOnThing(pawn, dummy, forced: danger), "work giver finds the dummy" + (danger ? " (forced: enemies near)" : ""));
+            Check(giver.HasJobOnThing(pawn, dummy, forced: danger), "work giver finds the dummy" + (danger ? " (forced: enemies near)" : "")
+                + $" [spot {(spot != IntVec3.Zero ? "ok" : "fallback")}, reserve {Verse.AI.ReservationUtility.CanReserve(pawn, dummy, 1, -1, null, danger)}, forbidden {dummy.IsForbidden(pawn)}]");
 
             while (!tracker.Bottleneck) tracker.AddProgress(tracker.Realm.progressPerStage);
             tracker.Resource.Fill();
@@ -1153,7 +1154,9 @@ namespace Convergence
         /// <summary>Un colono come/usa una unidad de cada ingerible de los mods Convergence (píldoras, comida, sangre…).</summary>
         private static void TestIngestibles(Map map)
         {
-            var defs = DefDatabase<ThingDef>.AllDefsListForReading.Where(d => IsOurs(d) && d.IsIngestible).ToList();
+            // Sin cadáveres (sin pawn adentro nacen "bugged") ni plantas (no se comen hasta madurar): eso lo prueba el juego.
+            var defs = DefDatabase<ThingDef>.AllDefsListForReading.Where(d => IsOurs(d) && d.IsIngestible && !d.IsCorpse
+                && d.category != ThingCategory.Plant).ToList();
             int ok = 0;
             foreach (var def in defs)
             {
@@ -1181,7 +1184,8 @@ namespace Convergence
             var defs = DefDatabase<ThingDef>.AllDefsListForReading.Where(d =>
                 IsOurs(d) && !d.IsBlueprint && !d.IsFrame
                 && !d.isUnfinishedThing && d.category != ThingCategory.Pawn && d.category != ThingCategory.Ethereal
-                && d.category != ThingCategory.Projectile && d.category != ThingCategory.Mote && !d.IsCorpse).ToList();
+                && d.category != ThingCategory.Projectile && d.category != ThingCategory.Mote && !d.IsCorpse
+                && !typeof(MapPortal).IsAssignableFrom(d.thingClass)).ToList();   // salidas de pocket map: necesitan su portal
             foreach (var def in defs)
             {
                 try

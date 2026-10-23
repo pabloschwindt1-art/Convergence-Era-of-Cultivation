@@ -3,9 +3,10 @@
   <name>Convergence: Flying Sect</name>
   <author>Prospero1088</author>
   <packageId>prospero1088.convergence.space</packageId>
-  <modVersion>0.1.0</modVersion>
+  <modVersion>0.1.1</modVersion>
   <supportedVersions>
     <li>1.6</li>
+    <li>1.7</li>
   </supportedVersions>
   <description>The flying sect for Convergence: Era of Cultivation, on top of the gravship system of Odyssey (same mechanic, our own pieces): a floating island you can move.
 

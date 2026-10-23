@@ -193,7 +193,7 @@ qi por área.
   `VacuumUtility.GetVacuum`, `Gravship.AddThing`, `Building_GravEngine.SpawnSetup`, y varios de la interfaz de mecanitor (marionetas). Casi todos son postfix o
   prefijos acotados a lo propio (defName `CVG_`, componente o rasgo del mod); los pocos prefijos que saltan el original solo lo hacen para objetos del mod.
 - **Sin AssetBundles, sin `GL`, sin `Shader.Find`**: solo flecks/effecters vanilla y `renderNodeProperties`. Un solo DLL `net472` que también carga en 1.7
-  (no verificado con la 1.7 actual: ver §7).
+  (verificado en la beta 1.7.4985 el 2026-10-22: los 15 mods declaran 1.6 y 1.7).
 - **Rendimiento:** lógica en `CompTickRare`/`IsHashIntervalTick`, cachés estáticas, el comp no hace nada sin raíz.
 - **Compatibilidad entre mods:** 37 mods de terceros activos a la vez sin errores (§6). Integración opcional con Dubs Bad Hygiene.
 
@@ -258,7 +258,7 @@ Es lo que va a vivir un jugador que se suscriba a un módulo suelto: Harmony + l
 - Sin contenido de **Royalty**; Anomaly parcial; prisioneros/esclavos, mecanoides (Calamidad de Hierro) y niños cultivadores pendientes.
 - **Qi-Tech** está en v0.1 (convertidor, exoesqueleto, cámara de estabilización).
 - La **ropa** y algunas piezas de la isla conservan arte provisional hasta el rediseño.
-- RimWorld **1.6** únicamente en `supportedVersions`; la 1.7 no está verificada con el juego actual.
+- RimWorld **1.6 y 1.7** en `supportedVersions` (un solo DLL `net472`; la 1.7 se probó en la beta 1.7.4985, 2026-10-22).
 - Algunos módulos requieren DLC: Races y Biotech Wuxia (Biotech), Flying Sect (Odyssey).
 - Los avisos de traducción de "Spanish has N errors" que se ven con el pack del usuario vienen de otros mods (con solo los nuestros no aparecen).
 

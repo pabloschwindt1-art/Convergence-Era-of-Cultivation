@@ -10,14 +10,36 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 ## Sin publicar
 
+### Los 15 mods → compatibles con RimWorld 1.7 (2026-10-22)
+Probado en la beta 1.7.4985 (motor Waylith, Harmony 3.0) con las 5 DLC: autotests de Core, recursos, linajes y rasgos ALL OK,
+sin errores rojos. Sigue siendo **un solo DLL net472** que carga en 1.6 y en 1.7: para quien juega 1.6 no cambia nada.
+- `About.xml`: `<li>1.7</li>` en `supportedVersions` (los 15). `LoadFolders.xml`: bloque `<v1.7>` igual al de `<v1.6>` (los 15).
+- Core y Qi-Tech: las herramientas de capturas del Workshop usaban `Time.captureFramerate`, que no existe en 1.7 y lanzaba un error
+  en cada cuadro (llenaba el log). Ahora pasan por `UnityCompat.CaptureFramerate` (reflexión: igual en 1.6, no hace nada en 1.7).
+- Core: el autotest de ingeribles ya no intenta comer cadáveres vacíos ni plantas sin madurar, el de "spawnear todo" salta las salidas
+  de pocket map y el del muñeco de madera busca la casilla con el mismo peligro que el work giver (solo afectaba a `-cvgselftest`).
+- Nota de pruebas en 1.7: el ejecutable es `RimWorld.exe`, `-logFile` se ignora (log en `...\Logs\Player.log`) y arrancar la ventana
+  minimizada crashea el motor (swapchain 0×0): `tools/run-test.ps1` todavía no está adaptado.
+
+Versiones: Core 0.1.1 → **0.1.2**, Formations 0.1.1 → **0.1.2**, Qi-Tech **0.2.2** (junto con el arreglo de abajo, aún sin subir),
+los otros 12 0.1.0 → **0.1.1**.
+
+**Change notes (Steam)** (Qi-Tech: ver su bloque):
+```
+<versión>
+- Now compatible with RimWorld 1.7 (Waylith engine). Still works on 1.6: same files for both versions.
+```
+
 ### Convergence: Qi-Tech → 0.2.2
 - Compatibilidad con Character Editor: el rifle de inducción (dos variantes, `Graphic_Random`) hacía fallar su ventana de objetos
   (`TextureTool.GetGraphicForRandom`, miles de "GUI Error"). Ahora no se inclina al azar en el suelo, que era lo que envolvía su gráfico.
+- Compatible con RimWorld 1.7 (ver arriba).
 
 **Change notes (Steam):**
 ```
 0.2.2
 - Fixed: compatibility with Character Editor (the qi induction rifle broke its item window).
+- Now compatible with RimWorld 1.7 (Waylith engine). Still works on 1.6: same files for both versions.
 ```
 
 ---

@@ -3,9 +3,10 @@
   <name>Convergence: Apparel</name>
   <author>Prospero1088</author>
   <packageId>prospero1088.convergence.apparel</packageId>
-  <modVersion>0.1.0</modVersion>
+  <modVersion>0.1.1</modVersion>
   <supportedVersions>
     <li>1.6</li>
+    <li>1.7</li>
   </supportedVersions>
   <description>Cultivator clothes, textiles and armor for Convergence: Era of Cultivation.
 

@@ -75,7 +75,7 @@ namespace Convergence
             catch (System.Exception e)
             {
                 script = null;
-                Time.captureFramerate = 0;
+                UnityCompat.CaptureFramerate = 0;
                 Log.Error("[Convergence] WorkshopShot: " + e + "\n  FAILURES: 1");
                 Root.Shutdown();
             }
@@ -215,7 +215,7 @@ namespace Convergence
             HideUI(true);
             var fireball = hero.abilities.GetAbility(DefDatabase<AbilityDef>.GetNamed("CVG_Tech_Fireball"));
             var sea = hero.abilities.GetAbility(DefDatabase<AbilityDef>.GetNamed("CVG_Tech_SeaOfFlames"));
-            Time.captureFramerate = CaptureFps;
+            UnityCompat.CaptureFramerate = CaptureFps;
             tm.CurTimeSpeed = TimeSpeed.Normal;
             for (int f = 0; f < 100; f++)
             {
@@ -224,7 +224,7 @@ namespace Convergence
                 Capture($"anim_technique/{f:000}");
                 yield return 1;
             }
-            Time.captureFramerate = 0;
+            UnityCompat.CaptureFramerate = 0;
             tm.CurTimeSpeed = TimeSpeed.Paused;
             if (!enemy.Destroyed) enemy.Destroy();
             foreach (var fire in map.listerThings.ThingsOfDef(ThingDefOf.Fire).ToList()) fire.Destroy();
@@ -245,7 +245,7 @@ namespace Convergence
             yield return 10;
             MapComponent_Tribulation.For(map).DebugBegin(hero);
             CleanScreen(closeLetters: true);
-            Time.captureFramerate = CaptureFps;
+            UnityCompat.CaptureFramerate = CaptureFps;
             tm.CurTimeSpeed = TimeSpeed.Normal;
             for (int f = 0; f < 360; f++)
             {
@@ -254,7 +254,7 @@ namespace Convergence
                 Capture($"anim_tribulation/{f:000}");
                 yield return 1;
             }
-            Time.captureFramerate = 0;
+            UnityCompat.CaptureFramerate = 0;
             tm.CurTimeSpeed = TimeSpeed.Paused;
             HideUI(false);
             yield return 20;

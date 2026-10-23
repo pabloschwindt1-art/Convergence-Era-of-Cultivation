@@ -3,9 +3,10 @@
   <name>Convergence: Sects</name>
   <author>Prospero1088</author>
   <packageId>prospero1088.convergence.sects</packageId>
-  <modVersion>0.1.0</modVersion>
+  <modVersion>0.1.1</modVersion>
   <supportedVersions>
     <li>1.6</li>
+    <li>1.7</li>
   </supportedVersions>
   <description>The six factions of Jiuxiao for Convergence: Era of Cultivation.
 
