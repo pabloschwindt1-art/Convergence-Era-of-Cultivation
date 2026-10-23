@@ -43,4 +43,12 @@ Cost (within 8 cells of the bench): {2}.</CVG_Workbench_UpgradeDesc>
   <CVG_Pill_ThisPill>{0} (this pill)</CVG_Pill_ThisPill>
   <CVG_Pill_ThisPillDesc>Base {0} × {1} for its quality. By quality:</CVG_Pill_ThisPillDesc>
   <CVG_Pill_SideEffect>Side effect</CVG_Pill_SideEffect>
+  <CVG_WorkRoom_Cleanliness>Room cleanliness</CVG_WorkRoom_Cleanliness>
+  <CVG_WorkRoom_Impressiveness>Room impressiveness</CVG_WorkRoom_Impressiveness>
+  <CVG_WorkRoom_Qi>Room qi concentration</CVG_WorkRoom_Qi>
+  <CVG_Fire_Choose>Fire: {0}</CVG_Fire_Choose>
+  <CVG_Fire_ChooseDesc>Choose what the furnace burns. A better fire refines better pills (quality levels while it burns):\n{0}\n\nWhat is already in the furnace keeps burning; the fire changes little by little as new fuel goes in.</CVG_Fire_ChooseDesc>
+  <CVG_Fire_Inspect>Fire: {0} ({1} levels)</CVG_Fire_Inspect>
+  <CVG_Fire_Explanation>Furnace fire ({0})</CVG_Fire_Explanation>
+  <CVG_Pill_Failed>{PAWN_nameDef} lost control of the furnace fire: the {1} came out as waste pills.</CVG_Pill_Failed>
 </LanguageData>

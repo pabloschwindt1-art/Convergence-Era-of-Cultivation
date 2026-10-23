@@ -175,6 +175,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
+      <CVG_WorkRoomQuality>0</CVG_WorkRoomQuality>
       <WorkToBuild>2500</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
@@ -193,12 +194,21 @@
     </inspectorTabs>
     <building>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-      <workTableRoomRole>Workshop</workTableRoomRole>
+      <workTableRoomRole>CVG_WeavingRoom</workTableRoomRole>
       <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
     </building>
     <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_RobeWardrobe</li>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_SpiritStoneLantern</li>
+        </linkableFacilities>
+      </li>
+    </comps>
   </ThingDef>
 
   <RecipeDef>

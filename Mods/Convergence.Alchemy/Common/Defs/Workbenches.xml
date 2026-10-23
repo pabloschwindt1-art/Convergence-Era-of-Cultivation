@@ -27,6 +27,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
+      <CVG_WorkRoomQuality>0</CVG_WorkRoomQuality>
       <WorkToBuild>4000</WorkToBuild>
       <MaxHitPoints>220</MaxHitPoints>
       <Flammability>0.5</Flammability>
@@ -45,9 +46,16 @@
       <li>ITab_Bills</li>
     </inspectorTabs>
     <building>
+      <workTableRoomRole>CVG_SpiritSmithy</workTableRoomRole>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
     </building>
     <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_RitualBrazier</li>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_SpiritStoneLantern</li>
+        </linkableFacilities>
+      </li>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>60.0</fuelConsumptionRate>
         <fuelCapacity>50.0</fuelCapacity>
@@ -91,6 +99,7 @@
       </li>
     </comps>
     <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
     <modExtensions>
@@ -106,7 +115,7 @@
   <ThingDef ParentName="BenchBase">
     <defName>CVG_AlchemyFurnace</defName>
     <label>alchemy furnace</label>
-    <description>A bronze cauldron over a spirit fire, cast after the tripod of Shennong, the Divine Farmer who tasted the hundred herbs to learn which ones heal and which ones kill. The Heavenly Cauldron Pavilion lights every new furnace with ash from an older one, so that each flame descends from his. Pills come out with a quality that depends on the alchemist and on the furnace level (level 2: blood purification pills; level 3: nine-turns pills), and it also makes everything a drug lab makes. No electricity.</description>
+    <description>A bronze cauldron over a spirit fire, cast after the tripod of Shennong, the Divine Farmer who tasted the hundred herbs to learn which ones heal and which ones kill. The Heavenly Cauldron Pavilion lights every new furnace with ash from an older one, so that each flame descends from his. Pills come out with a quality that depends on the alchemist and on the furnace level (level 2: blood purification pills; level 3: nine-turns pills), and it also makes everything a drug lab makes. It burns wood, spirit stones or fire crystals: a better fire and a better alchemy room (clean, impressive, full of qi, with pill cabinets, censers and scripture shelves nearby) make better pills, and a careless refinement can fail. No electricity.</description>
     <thingClass>Convergence.Building_LeveledWorkTable</thingClass>
     <graphicData>
       <texPath>Things/Building/CVG/Alchemy/AlchemyFurnace1</texPath>
@@ -128,6 +137,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
+      <CVG_WorkRoomQuality>0</CVG_WorkRoomQuality>
       <WorkToBuild>4000</WorkToBuild>
       <MaxHitPoints>220</MaxHitPoints>
       <Flammability>0.5</Flammability>
@@ -146,9 +156,24 @@
       <li>ITab_Bills</li>
     </inspectorTabs>
     <building>
+      <workTableRoomRole>CVG_AlchemyRoom</workTableRoomRole>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
     </building>
     <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_PillCabinet</li>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_BronzeCenser</li>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_ScriptureShelf</li>
+        </linkableFacilities>
+      </li>
+      <li Class="Convergence.CompProperties_SpiritFire">
+        <fuels>
+          <li><thingDef>WoodLog</thingDef><qualityBonus>0</qualityBonus></li>
+          <li><thingDef>CVG_SpiritStone</thingDef><qualityBonus>0.25</qualityBonus></li>
+          <li MayRequire="prospero1088.convergence.resources"><thingDef>CVG_FireCrystal</thingDef><qualityBonus>0.5</qualityBonus></li>
+        </fuels>
+      </li>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>60.0</fuelConsumptionRate>
         <fuelCapacity>50.0</fuelCapacity>
@@ -191,6 +216,7 @@
       </li>
     </comps>
     <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
     <modExtensions>
@@ -226,6 +252,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
+      <CVG_WorkRoomQuality>0</CVG_WorkRoomQuality>
       <WorkToBuild>4000</WorkToBuild>
       <MaxHitPoints>220</MaxHitPoints>
       <Flammability>0.5</Flammability>
@@ -244,11 +271,20 @@
       <li>ITab_Bills</li>
     </inspectorTabs>
     <building>
+      <workTableRoomRole>CVG_ScribeHall</workTableRoomRole>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
     </building>
     <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_ScriptureShelf</li>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_PaintingScroll</li>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_SpiritStoneLantern</li>
+        </linkableFacilities>
+      </li>
     </comps>
     <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
     <modExtensions>
@@ -282,6 +318,7 @@
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
+      <CVG_WorkRoomQuality>0</CVG_WorkRoomQuality>
       <WorkToBuild>4000</WorkToBuild>
       <MaxHitPoints>220</MaxHitPoints>
       <Flammability>0.5</Flammability>
@@ -300,11 +337,20 @@
       <li>ITab_Bills</li>
     </inspectorTabs>
     <building>
+      <workTableRoomRole>CVG_ScribeHall</workTableRoomRole>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
     </building>
     <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_ScriptureShelf</li>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_PaintingScroll</li>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_SpiritStoneLantern</li>
+        </linkableFacilities>
+      </li>
     </comps>
     <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
     <modExtensions>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Wuxia work rooms (the wuxia version of the vanilla workshop and laboratory). A bench joins one with building>workTableRoomRole
+    and puts CVG_WorkRoomQuality in its statBases: the room (cleanliness, impressiveness, qi), the linked furniture (vanilla
+    facilities with statOffsets) and the furnace fire add quality levels to what is made there. A good room makes up for a weak
+    artisan. Code: Source/Convergence.Core/Crafting/WorkRooms.cs.
+  -->
+  <StatDef>
+    <defName>CVG_WorkRoomQuality</defName>
+    <label>work room quality</label>
+    <description>Quality levels that this work room adds to everything made here: a clean, impressive room full of qi, the furniture linked to the bench and the fire of the furnace. The decimal part is the chance of one more level (or one less, if negative). For pills it raises the chance of a good pill and lowers the chance of failure.</description>
+    <category>Building</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>-1</minValue>
+    <toStringStyle>FloatTwo</toStringStyle>
+    <toStringNumberSense>Offset</toStringNumberSense>
+    <formatString>{0} levels</formatString>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>990</displayPriorityInCategory>
+    <parts>
+      <li Class="Convergence.StatPart_RoomStatCurve">
+        <roomStat>Cleanliness</roomStat>
+        <labelKey>CVG_WorkRoom_Cleanliness</labelKey>
+        <curve>
+          <points>
+            <li>(-5.0, -0.4)</li>
+            <li>(-2.5, -0.2)</li>
+            <li>(0.0, 0.0)</li>
+            <li>(1.0, 0.15)</li>
+          </points>
+        </curve>
+      </li>
+      <li Class="Convergence.StatPart_RoomStatCurve">
+        <roomStat>Impressiveness</roomStat>
+        <labelKey>CVG_WorkRoom_Impressiveness</labelKey>
+        <curve>
+          <points>
+            <li>(0, 0)</li>
+            <li>(30, 0.05)</li>
+            <li>(60, 0.12)</li>
+            <li>(100, 0.2)</li>
+            <li>(170, 0.3)</li>
+          </points>
+        </curve>
+      </li>
+      <li Class="Convergence.StatPart_RoomStatCurve">
+        <roomStat>CVG_QiConcentration</roomStat>
+        <labelKey>CVG_WorkRoom_Qi</labelKey>
+        <curve>
+          <points>
+            <li>(0, 0)</li>
+            <li>(3, 0.1)</li>
+            <li>(6, 0.2)</li>
+            <li>(10, 0.3)</li>
+          </points>
+        </curve>
+      </li>
+      <li Class="Convergence.StatPart_SpiritFire" />
+    </parts>
+  </StatDef>
+
+  <StatDef>
+    <defName>CVG_AlchemyQuality</defName>
+    <label>alchemy mastery</label>
+    <description>How much better this person refines pills than skill alone would say: raises the chance of a good pill and lowers the chance of a failed one. Talent, an alchemist's body and the sect's teachings raise it.</description>
+    <category>PawnWork</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <toStringStyle>FloatTwo</toStringStyle>
+    <toStringNumberSense>Offset</toStringNumberSense>
+    <hideAtValue>0</hideAtValue>
+    <showOnAnimals>false</showOnAnimals>
+    <showOnMechanoids>false</showOnMechanoids>
+    <displayPriorityInCategory>2998</displayPriorityInCategory>
+  </StatDef>
+
+  <RoomRoleDef>
+    <defName>CVG_AlchemyRoom</defName>
+    <label>alchemy room</label>
+    <workerClass>Convergence.RoomRoleWorker_WorkTableRole</workerClass>
+    <relatedStats>
+      <li>Cleanliness</li>
+      <li>Impressiveness</li>
+      <li>CVG_QiConcentration</li>
+    </relatedStats>
+  </RoomRoleDef>
+
+  <RoomRoleDef>
+    <defName>CVG_SpiritSmithy</defName>
+    <label>spirit smithy</label>
+    <workerClass>Convergence.RoomRoleWorker_WorkTableRole</workerClass>
+    <relatedStats>
+      <li>Cleanliness</li>
+      <li>Impressiveness</li>
+      <li>CVG_QiConcentration</li>
+    </relatedStats>
+  </RoomRoleDef>
+
+  <RoomRoleDef>
+    <defName>CVG_ScribeHall</defName>
+    <label>scribe hall</label>
+    <workerClass>Convergence.RoomRoleWorker_WorkTableRole</workerClass>
+    <relatedStats>
+      <li>Cleanliness</li>
+      <li>Impressiveness</li>
+      <li>CVG_QiConcentration</li>
+    </relatedStats>
+  </RoomRoleDef>
+
+  <RoomRoleDef>
+    <defName>CVG_WeavingRoom</defName>
+    <label>weaving room</label>
+    <workerClass>Convergence.RoomRoleWorker_WorkTableRole</workerClass>
+    <relatedStats>
+      <li>Cleanliness</li>
+      <li>Impressiveness</li>
+      <li>CVG_QiConcentration</li>
+    </relatedStats>
+  </RoomRoleDef>
+</Defs>

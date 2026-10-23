@@ -67,6 +67,7 @@
           <CookSpeed>1.05</CookSpeed>
         </statFactors>
         <statOffsets>
+          <CVG_AlchemyQuality>0.1</CVG_AlchemyQuality>
           <ArmorRating_Heat>0.05</ArmorRating_Heat>
         </statOffsets>
       </li>
@@ -79,6 +80,7 @@
           <CookSpeed>1.1</CookSpeed>
         </statFactors>
         <statOffsets>
+          <CVG_AlchemyQuality>0.2</CVG_AlchemyQuality>
           <ArmorRating_Heat>0.10</ArmorRating_Heat>
         </statOffsets>
       </li>
@@ -91,6 +93,7 @@
           <CookSpeed>1.15</CookSpeed>
         </statFactors>
         <statOffsets>
+          <CVG_AlchemyQuality>0.35</CVG_AlchemyQuality>
           <ArmorRating_Heat>0.15</ArmorRating_Heat>
         </statOffsets>
       </li>
@@ -103,6 +106,7 @@
           <CookSpeed>1.2</CookSpeed>
         </statFactors>
         <statOffsets>
+          <CVG_AlchemyQuality>0.5</CVG_AlchemyQuality>
           <ArmorRating_Heat>0.20</ArmorRating_Heat>
         </statOffsets>
       </li>

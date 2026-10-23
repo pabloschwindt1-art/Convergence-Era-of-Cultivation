@@ -317,4 +317,27 @@
     </stages>
   </HediffDef>
 
+  <!-- What a failed refinement leaves in the furnace (Core: Patch_QualityUtility_PillBands / Patch_GenRecipe_WastePill). -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_WastePill</defName>
+    <label>waste pill</label>
+    <description>A grey, cracked lump: what is left in the furnace when a refinement goes wrong. The qi scattered and the herbs burned, and nothing in it will help a cultivator. The Heavenly Cauldron Pavilion buys them by the sack for a copper each and grinds them into fertilizer; apprentices say every master has a mountain of them behind the workshop.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/WastePill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <MarketValue>0.5</MarketValue>
+      <Mass>0.01</Mass>
+      <Flammability>1</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <techLevel>Neolithic</techLevel>
+  </ThingDef>
 </Defs>

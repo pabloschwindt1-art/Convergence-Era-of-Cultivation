@@ -150,6 +150,7 @@
       <ResearchSpeedFactor>0.8</ResearchSpeedFactor>
     </statBases>
     <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
     <fillPercent>0.5</fillPercent>
@@ -157,5 +158,12 @@
     <hasInteractionCell>true</hasInteractionCell>
     <designationCategory>Production</designationCategory>
     <uiOrder>2470</uiOrder>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_ScriptureShelf</li>
+        </linkableFacilities>
+      </li>
+    </comps>
   </ThingDef>
 </Defs>

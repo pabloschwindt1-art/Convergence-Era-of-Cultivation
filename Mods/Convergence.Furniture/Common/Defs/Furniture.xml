@@ -97,6 +97,16 @@
         <element>CVG_Element_Metal</element>
       </li>
     </modExtensions>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets><CVG_WorkRoomQuality>0.1</CVG_WorkRoomQuality></statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+        <maxDistance>8</maxDistance>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="FurnitureBase">
@@ -166,6 +176,11 @@
     <tickerType>Normal</tickerType>
     <drawerType>RealtimeOnly</drawerType>
     <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets><CVG_WorkRoomQuality>0.15</CVG_WorkRoomQuality></statOffsets>
+        <maxSimultaneous>2</maxSimultaneous>
+        <maxDistance>8</maxDistance>
+      </li>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>6.0</fuelConsumptionRate>
         <fuelCapacity>20.0</fuelCapacity>
@@ -187,7 +202,7 @@
         <glowColor>(252,187,113,0)</glowColor>
       </li>
     </comps>
-    <placeWorkers><li>PlaceWorker_GlowRadius</li></placeWorkers>
+    <placeWorkers><li>PlaceWorker_GlowRadius</li><li>PlaceWorker_ShowFacilitiesConnections</li></placeWorkers>
     <modExtensions>
       <li Class="Convergence.DefModExtension_FengShui">
         <qi>2</qi>
@@ -423,6 +438,16 @@
         <qi>2</qi>
       </li>
     </modExtensions>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets><CVG_WorkRoomQuality>0.05</CVG_WorkRoomQuality></statOffsets>
+        <maxSimultaneous>2</maxSimultaneous>
+        <maxDistance>8</maxDistance>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="FurnitureBase">
@@ -620,6 +645,16 @@
         <qi>0</qi>
       </li>
     </modExtensions>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets><CVG_WorkRoomQuality>0.1</CVG_WorkRoomQuality></statOffsets>
+        <maxSimultaneous>2</maxSimultaneous>
+        <maxDistance>8</maxDistance>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="FurnitureBase">
@@ -667,6 +702,16 @@
         <element>CVG_Element_Wood</element>
       </li>
     </modExtensions>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets><CVG_WorkRoomQuality>0.1</CVG_WorkRoomQuality><ResearchSpeedFactor>0.05</ResearchSpeedFactor></statOffsets>
+        <maxSimultaneous>2</maxSimultaneous>
+        <maxDistance>8</maxDistance>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="FurnitureBase">
@@ -714,6 +759,16 @@
         <qi>0</qi>
       </li>
     </modExtensions>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets><CVG_WorkRoomQuality>0.15</CVG_WorkRoomQuality></statOffsets>
+        <maxSimultaneous>2</maxSimultaneous>
+        <maxDistance>8</maxDistance>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="FurnitureBase">
@@ -832,6 +887,11 @@
     <tickerType>Normal</tickerType>
     <drawerType>RealtimeOnly</drawerType>
     <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets><CVG_WorkRoomQuality>0.05</CVG_WorkRoomQuality></statOffsets>
+        <maxSimultaneous>2</maxSimultaneous>
+        <maxDistance>8</maxDistance>
+      </li>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>0.5</fuelConsumptionRate>
         <fuelCapacity>5.0</fuelCapacity>
@@ -845,7 +905,7 @@
         <glowColor>(170,230,255,0)</glowColor>
       </li>
     </comps>
-    <placeWorkers><li>PlaceWorker_GlowRadius</li></placeWorkers>
+    <placeWorkers><li>PlaceWorker_GlowRadius</li><li>PlaceWorker_ShowFacilitiesConnections</li></placeWorkers>
     <modExtensions>
       <li Class="Convergence.DefModExtension_FengShui">
         <qi>2</qi>

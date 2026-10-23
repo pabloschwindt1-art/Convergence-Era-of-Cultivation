@@ -232,6 +232,16 @@
         <element>CVG_Element_Earth</element>
       </li>
     </modExtensions>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets><WorkTableWorkSpeedFactor>0.05</WorkTableWorkSpeedFactor></statOffsets>
+        <maxSimultaneous>2</maxSimultaneous>
+        <maxDistance>8</maxDistance>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
   </ThingDef>
   <ThingDef ParentName="StorageShelfBase">
     <defName>CVG_SectChest</defName>

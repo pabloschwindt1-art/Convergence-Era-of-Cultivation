@@ -12,6 +12,31 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod).
 
+### Alquimia y salas de trabajo (2026-10-22)
+- **Salas de trabajo wuxia** (Core): sala de alquimia (horno), herrería espiritual (forja), sala de escribas (mesa de runas, de
+  talismanes, escritorio de caligrafía) y sala de tejido (telar espiritual), la versión del taller y el laboratorio vanilla. Nuevo stat
+  de mesa **calidad de la sala de trabajo**: suma niveles de calidad por la limpieza (sucia resta), la impresión y la concentración de
+  qi de la sala, por los **muebles vinculados** (instalaciones vanilla: armario de píldoras, incensario, estantería de sutras, brasero
+  ritual, guardarropa, rollo pintado, linterna de piedra espiritual) y por el fuego del horno. Una buena sala compensa a un artesano
+  flojo. La estantería de sutras también acelera el escritorio de contemplación y la jarra de grano la cocina de secta.
+- **El horno necesita fuego** y el jugador elige cuál: leña (+0), piedra espiritual (+0.25) o cristal de fuego (+0.5, con Resources).
+  Cada horno quema solo el combustible elegido.
+- **La alquimia puede fallar**: cada píldora sale de una tabla según el poder del alquimista (habilidad, sala, nivel del horno,
+  maestría alquímica e inspiración). Base: 30% falla o mala, 45% normal, 20% excelente, 5% celestial (legendaria); un gran maestro
+  con todo a favor llega a 5 / 30 / 40 / 25. Si falla sale una **píldora de desecho** (textura provisoria hasta el arte del usuario).
+- Nuevo stat del colono **maestría alquímica**: la dan el rasgo de alquimista innato (+0.25 / +0.5 / +1), el cuerpo de yang puro
+  (+0.1 a +0.5), las historias de alquimista del Core y del Caldero, y el rol de Maestro Alquimista del Caldero (+0.5).
+- Autotest `-cvgselftest`: sección "work rooms, furnace fire and pill failure" con una sala de alquimia real y 1600 píldoras en cuatro
+  escenarios (habilidad 10: 55 fallos y 28 celestiales de 400; habilidad 3 con el horno frío: 101 fallos; habilidad 3 con horno nivel
+  3 y cristal de fuego: 57; habilidad 20: 11 fallos y 86 celestiales). ALL OK en 1.6.4871.
+
+**Change notes (Steam)** (Core, Alchemy, Furniture, Apparel, Factions, Traits & Destinies):
+```
+- Wuxia work rooms: alchemy room, spirit smithy, scribe hall and weaving room. Cleanliness, impressiveness, qi and linked furniture (pill cabinets, censers, scripture shelves, braziers...) raise the quality of what is made there; a good room makes up for a weak artisan.
+- The alchemy furnace needs fire: wood, spirit stones or fire crystals, and a better fire makes better pills.
+- Alchemy can fail: about 30% bad or failed (waste pills), 45% normal, 20% excellent, 5% celestial for an average alchemist; masters, good rooms and alchemist traits push the odds up.
+```
+
 ### Lore: el Clan del Dragón pasa a leyenda y las sectas viejas a las 5 de Factions (2026-10-22)
 Sin cambio de versión todavía (va con la próxima subida de cada mod). Solo textos (EN, ES y ES-Latin), salvo Stories.
 - **Clan del Dragón Antiguo** (decisión del usuario): ya no existe; solo quedan algunas personas que heredan un poco de su sangre. Unas 20

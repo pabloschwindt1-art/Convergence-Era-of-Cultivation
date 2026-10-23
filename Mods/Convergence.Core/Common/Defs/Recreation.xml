@@ -74,9 +74,11 @@
     <interactionCellOffset>(0,0,1)</interactionCellOffset>
     <tickerType>Rare</tickerType>
     <building>
+      <workTableRoomRole>CVG_ScribeHall</workTableRoomRole>
       <joyKind>HighCulture</joyKind>
     </building>
     <statBases>
+      <CVG_WorkRoomQuality>0</CVG_WorkRoomQuality>
       <MaxHitPoints>80</MaxHitPoints>
       <WorkToBuild>4000</WorkToBuild>
       <Mass>6</Mass>
@@ -94,10 +96,18 @@
     <pathCost>30</pathCost>
     <passability>PassThroughOnly</passability>
     <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
       <li>PlaceWorker_PreventInteractionSpotOverlap</li>
     </placeWorkers>
     <designationCategory>Joy</designationCategory>
     <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_ScriptureShelf</li>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_PaintingScroll</li>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_SpiritStoneLantern</li>
+        </linkableFacilities>
+      </li>
       <li Class="Convergence.CompProperties_DaoStudy">
         <comprehensionPerHour>0.05</comprehensionPerHour>
       </li>

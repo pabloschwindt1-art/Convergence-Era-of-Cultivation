@@ -70,7 +70,8 @@ namespace Convergence
     {
         public static void Postfix(Pawn pawn, ref QualityCategory __result)
         {
-            if (ForgeUtility.ForgeQuality == null || ForgeUtility.ForgeOf(pawn) == null || __result >= QualityCategory.Masterwork) return;
+            if (ForgeUtility.ForgeQuality == null || ForgeUtility.ForgeOf(pawn) == null || __result >= QualityCategory.Masterwork
+                || WorkRoomUtility.IsPillJob(pawn)) return;
             float bonus = pawn.GetStatValue(ForgeUtility.ForgeQuality);
             if (bonus <= 0f) return;
             int levels = Mathf.FloorToInt(bonus) + (Rand.Chance(bonus - Mathf.Floor(bonus)) ? 1 : 0);

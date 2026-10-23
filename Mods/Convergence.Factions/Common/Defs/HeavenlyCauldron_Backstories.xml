@@ -43,6 +43,11 @@
       <Medicine>2</Medicine>
       <Shooting>1</Shooting>
     </skillGains>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statOffsets><CVG_AlchemyQuality>0.3</CVG_AlchemyQuality></statOffsets>
+      </li>
+    </modExtensions>
   </BackstoryDef>
 
   <BackstoryDef ParentName="CVG_HeavenlyCauldronBackstoryBase">
@@ -93,6 +98,11 @@
     <workDisables>
       <li>ManualDumb</li>
     </workDisables>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statOffsets><CVG_AlchemyQuality>0.6</CVG_AlchemyQuality></statOffsets>
+      </li>
+    </modExtensions>
   </BackstoryDef>
 
   <BackstoryDef ParentName="CVG_HeavenlyCauldronBackstoryBase">

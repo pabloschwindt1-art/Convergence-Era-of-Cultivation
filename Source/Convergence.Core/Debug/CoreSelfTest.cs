@@ -67,6 +67,7 @@ namespace Convergence
             Section("guest group limit", () => TestGuestLimit(map));
             Section("sect framework (S1)", () => TestSectFramework(map));
             Section("made by and pill effects", () => TestCrafter(map));
+            Section("work rooms, furnace fire and pill failure", () => TestWorkRooms(map));
             sb.Append(fails == 0 ? "\n  ALL OK" : "\n  FAILURES: " + fails);
             // En la partida de prueba, acelerar para que corran ticks (tribulación, bestias, Maestro) y salgan sus errores.
             if (GenCommandLine.CommandLineArgPassed("cvgselftest")) Find.TickManager.CurTimeSpeed = TimeSpeed.Superfast;
@@ -114,6 +115,214 @@ namespace Convergence
             var weapon = DefDatabase<ThingDef>.AllDefsListForReading.FirstOrDefault(d => d.IsWeapon && d.HasComp(typeof(CompCrafter)));
             Check(weapon != null, "weapons too: " + weapon?.defName);
             pill.Destroy();
+        }
+
+        /// <summary>
+        /// Salas de trabajo: tabla de las píldoras (30/45/20/5), una sala de alquimia de verdad (paredes, horno, armario de píldoras),
+        /// el fuego de piedra espiritual y 400 píldoras fabricadas en ella (fallos = píldoras de desecho).
+        /// </summary>
+        private static void TestWorkRooms(Map map)
+        {
+            bool Near(float a, float b) => Math.Abs(a - b) < 0.011f;
+            var w0 = Patch_QualityUtility_PillBands.Weights(0f);
+            Check(Near(w0[0] + w0[1] + w0[2], 0.30f) && Near(w0[3] + w0[4], 0.45f) && Near(w0[5] + w0[6], 0.20f) && Near(w0[7], 0.05f),
+                "base table: 30% fail or bad, 45% normal, 20% excellent, 5% celestial");
+            var w1 = Patch_QualityUtility_PillBands.Weights(1f);
+            Check(Near(w1[0] + w1[1] + w1[2], 0.05f) && Near(w1[3] + w1[4], 0.30f) && Near(w1[5] + w1[6], 0.40f) && Near(w1[7], 0.25f),
+                "grandmaster with everything in favor: 5 / 30 / 40 / 25");
+            Check(Near(Patch_QualityUtility_PillBands.Weights(-1f).Sum(), 1f), "novice table adds up to 100%");
+            Check(WorkRoomUtility.AddLevels(QualityCategory.Normal, 1f) == QualityCategory.Good
+                  && WorkRoomUtility.AddLevels(QualityCategory.Normal, -1f) == QualityCategory.Poor, "room bonus raises and lowers quality levels");
+
+            var furnaceDef = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_AlchemyFurnace");
+            if (furnaceDef == null)
+            {
+                sb.Append("\n    (Convergence: Alchemy not loaded: room test skipped)");
+                return;
+            }
+            Check(furnaceDef.building?.workTableRoomRole?.defName == "CVG_AlchemyRoom", "the alchemy furnace makes an alchemy room");
+            Check(DefDatabase<ThingDef>.GetNamedSilentFail("CVG_WastePill") != null, "waste pill exists");
+
+            // Un cuarto de 9x9 de paredes de madera, con el horno en el medio.
+            IntVec3 center = IntVec3.Invalid;
+            foreach (var c in GenRadial.RadialCellsAround(map.Center, 40f, true))
+            {
+                var r = CellRect.CenteredOn(c, 4);
+                if (r.InBounds(map) && r.Cells.All(x => x.Standable(map) && x.GetEdifice(map) == null && !x.Fogged(map) && !x.GetTerrain(map).IsWater
+                                                         && !x.GetThingList(map).Any(t => t is Pawn)))
+                {
+                    center = c;
+                    break;
+                }
+            }
+            if (!center.IsValid)
+            {
+                Fail("no room for a test alchemy room");
+                return;
+            }
+            var rect = CellRect.CenteredOn(center, 4);
+            var spawned = new List<Thing>();
+            foreach (var c in rect.Cells)
+                foreach (var t in c.GetThingList(map).ToList())
+                    if (!(t is Pawn)) t.Destroy();
+            foreach (var c in rect.EdgeCells)
+            {
+                var wall = ThingMaker.MakeThing(ThingDefOf.Wall, ThingDefOf.WoodLog);
+                wall.SetFaction(Faction.OfPlayer);
+                spawned.Add(GenSpawn.Spawn(wall, c, map));
+            }
+            var furnace = (Building_WorkTable)GenSpawn.Spawn(ThingMaker.MakeThing(furnaceDef, ThingDefOf.Steel), center, map);
+            furnace.SetFaction(Faction.OfPlayer);
+            spawned.Add(furnace);
+            try
+            {
+                map.regionAndRoomUpdater.TryRebuildDirtyRegionsAndRooms();
+                var room = furnace.GetRoom();
+                Check(room?.Role?.defName == "CVG_AlchemyRoom", "the room is an alchemy room: " + room?.Role?.label);
+                var stat = WorkRoomUtility.WorkRoomQuality;
+                float s0 = furnace.GetStatValue(stat);
+                sb.Append("\n      room alone: " + s0.ToString("0.00") + " | " + stat.Worker.GetExplanationFull(StatRequest.For(furnace), ToStringNumberSense.Offset, s0).Replace("\n", " / "));
+
+                // Armario de píldoras vinculado.
+                var cabinetDef = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_PillCabinet");
+                if (cabinetDef != null)
+                {
+                    var inner = rect.ContractedBy(1);
+                    foreach (var c in inner.Cells)
+                    {
+                        var occ = GenAdj.OccupiedRect(c, Rot4.South, cabinetDef.size);
+                        if (!occ.Cells.All(x => inner.Contains(x) && x.GetEdifice(map) == null && x != furnace.InteractionCell)) continue;
+                        var cabinet = GenSpawn.Spawn(ThingMaker.MakeThing(cabinetDef, cabinetDef.MadeFromStuff ? GenStuff.DefaultStuffFor(cabinetDef) : null), c, map, Rot4.South);
+                        cabinet.SetFaction(Faction.OfPlayer);
+                        spawned.Add(cabinet);
+                        bool linked = furnace.GetComp<CompAffectedByFacilities>()?.LinkedFacilitiesListForReading.Contains(cabinet) == true;
+                        float s1 = furnace.GetStatValue(stat);
+                        Check(linked && Near(s1 - s0, 0.15f), "pill cabinet linked to the furnace: +" + (s1 - s0).ToString("0.00"));
+                        s0 = s1;
+                        break;
+                    }
+                }
+                else sb.Append("\n    (Convergence: Furniture not loaded: no pill cabinet)");
+
+                // Fuego de piedra espiritual.
+                var fire = furnace.GetComp<CompSpiritFire>();
+                var refuel = furnace.GetComp<CompRefuelable>();
+                var stone = DefDatabase<ThingDef>.GetNamed("CVG_SpiritStone");
+                Check(fire != null && refuel != null, "the furnace has a spirit fire");
+                if (fire != null && refuel != null)
+                {
+                    Check(refuel.Props.fuelFilter.Allows(ThingDefOf.WoodLog) && !refuel.Props.fuelFilter.Allows(stone), "by default it burns only wood");
+                    fire.SetFuel(stone);
+                    Check(refuel.Props.fuelFilter.Allows(stone) && !refuel.Props.fuelFilter.Allows(ThingDefOf.WoodLog), "spirit stone chosen: it burns only spirit stones");
+                    var fuel = ThingMaker.MakeThing(stone);
+                    fuel.stackCount = 60;
+                    refuel.Refuel(new List<Thing> { fuel });
+                    float s2 = furnace.GetStatValue(stat);
+                    Check(Near(fire.FireBonus, 0.25f) && Near(s2 - s0, 0.25f), "spirit stone fire: +" + fire.FireBonus.ToString("0.00") + " levels");
+                    sb.Append("\n      " + fire.CompInspectStringExtra());
+                }
+
+                // 400 píldoras de templado hechas en la sala, por un colono de habilidad 10.
+                var pillDef = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_TemperingPill");
+                var recipe = DefDatabase<RecipeDef>.AllDefsListForReading.FirstOrDefault(r => r.ProducedThingDef == pillDef);
+                var pawn = map.mapPawns.FreeColonists.FirstOrDefault();
+                if (recipe == null || pawn == null)
+                {
+                    Fail("no tempering pill recipe or colonist");
+                    return;
+                }
+                var bill = (Bill_Production)recipe.MakeNewBill();
+                furnace.BillStack.AddBill(bill);
+                var job = JobMaker.MakeJob(JobDefOf.DoBill, furnace);
+                job.bill = bill;
+                var oldJob = pawn.jobs.curJob;
+                var skill = pawn.skills.GetSkill(recipe.workSkill ?? SkillDefOf.Intellectual);
+                int oldLevel = skill.Level;
+                var level = furnace.GetComp<CompWorkbenchLevel>();
+                pawn.jobs.curJob = job;
+                // Fabrica n píldoras como al terminar la orden (GenRecipe, el mismo camino que el trabajo real) y cuenta qué sale.
+                int[] Craft(int skillLevel, int n, out float power)
+                {
+                    skill.Level = skillLevel;
+                    power = Patch_QualityUtility_PillBands.Power(pawn, recipe.workSkill, false);
+                    var counts = new int[8];
+                    for (int i = 0; i < n; i++)
+                        foreach (var product in GenRecipe.MakeRecipeProducts(recipe, pawn, new List<Thing>(), null, furnace).ToList())
+                        {
+                            if (product.def.defName == "CVG_WastePill") counts[0]++;
+                            else if (product.TryGetQuality(out var q)) counts[(int)q + 1]++;
+                            product.Destroy();
+                        }
+                    return counts;
+                }
+                string Show(int[] c) => "waste " + c[0] + ", bad " + (c[1] + c[2]) + ", normal " + (c[3] + c[4]) + ", excellent " + (c[5] + c[6]) + ", celestial " + c[7];
+                try
+                {
+                    // 1. El colono de la sala recién hecha (habilidad 10, armario y fuego de piedra).
+                    var mid = Craft(10, 400, out float pMid);
+                    sb.Append("\n      skill 10, new room, cabinet, spirit-stone fire (power " + pMid.ToString("0.00") + "): " + Show(mid));
+                    Check(mid.Sum() == 400, "400 pills came out");
+                    Check(mid[0] > 10 && mid[0] < 100, "some fail and turn into waste pills: " + mid[0]);
+                    Check(mid[7] > 0, "some come out celestial (legendary): " + mid[7]);
+
+                    // 2. Novato (habilidad 3) en esa misma sala, con el fuego apagado.
+                    var refuelComp = furnace.GetComp<CompRefuelable>();
+                    float fuelLeft = refuelComp.Fuel;
+                    refuelComp.ConsumeFuel(fuelLeft);
+                    var novice = Craft(3, 400, out float pNov);
+                    sb.Append("\n      skill 3, no fire (power " + pNov.ToString("0.00") + "): " + Show(novice));
+                    Check(novice[0] > mid[0] && novice[7] <= mid[7], "a novice with a cold furnace fails more (" + novice[0] + " vs " + mid[0] + ")");
+
+                    // 3. El mismo novato con horno nivel 3 y el mejor fuego: la sala compensa la habilidad.
+                    refuelComp.Refuel(fuelLeft);
+                    level?.SetLevel(3);
+                    var crystal = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_FireCrystal");
+                    if (crystal != null && fire != null)
+                    {
+                        refuelComp.ConsumeFuel(refuelComp.Fuel);
+                        fire.SetFuel(crystal);
+                        var c = ThingMaker.MakeThing(crystal);
+                        c.stackCount = 60;
+                        refuelComp.Refuel(new List<Thing> { c });
+                    }
+                    var helped = Craft(3, 400, out float pHelp);
+                    sb.Append("\n      skill 3, level 3 furnace, " + (fire?.Chosen?.label ?? "-") + " fire (power " + pHelp.ToString("0.00") + "): " + Show(helped));
+                    Check(helped[0] < novice[0], "a good furnace and fire make up for low skill (" + helped[0] + " vs " + novice[0] + " failed)");
+
+                    // 4. Gran maestro (habilidad 20) con todo a favor.
+                    var master = Craft(20, 400, out float pMaster);
+                    sb.Append("\n      skill 20, everything in favor (power " + pMaster.ToString("0.00") + "): " + Show(master));
+                    Check(master[0] < mid[0] && master[7] > mid[7], "a grandmaster rarely fails and makes more celestial pills");
+
+                    // 5. Inspiración creativa: suma poder y se gasta en la primera píldora.
+                    var insp = InspirationDefOf.Inspired_Creativity;
+                    if (pawn.mindState.inspirationHandler.TryStartInspiration(insp, null, false))
+                    {
+                        Craft(10, 1, out _);
+                        Check(pawn.InspirationDef != insp, "creative inspiration is spent on the first pill");
+                    }
+
+                    // "Hecho por" del colono en la píldora.
+                    skill.Level = 10;
+                    var one = GenRecipe.MakeRecipeProducts(recipe, pawn, new List<Thing>(), null, furnace).First();
+                    var maker = one.TryGetComp<CompCrafter>();
+                    if (one.def == pillDef)
+                        Check(maker?.CrafterLabel == pawn.Name.ToStringShort, "the pill says it was made by " + maker?.CrafterLabel);
+                    one.Destroy();
+                }
+                finally
+                {
+                    pawn.jobs.curJob = oldJob;
+                    skill.Level = oldLevel;
+                    level?.SetLevel(1);
+                    furnace.BillStack.Delete(bill);
+                }
+            }
+            finally
+            {
+                foreach (var t in spawned)
+                    if (!t.Destroyed) t.Destroy();
+            }
         }
 
         private static Pawn Colonist(Map map, bool root)

@@ -93,6 +93,7 @@
           <Medicine>3</Medicine>
         </skillGains>
         <statOffsets>
+          <CVG_AlchemyQuality>0.25</CVG_AlchemyQuality>
           <MedicalTendQuality>0.1</MedicalTendQuality>
         </statOffsets>
         <statFactors>
@@ -111,6 +112,7 @@
           <Medicine>5</Medicine>
         </skillGains>
         <statOffsets>
+          <CVG_AlchemyQuality>0.5</CVG_AlchemyQuality>
           <MedicalTendQuality>0.17</MedicalTendQuality>
         </statOffsets>
         <statFactors>
@@ -129,6 +131,7 @@
           <Medicine>7</Medicine>
         </skillGains>
         <statOffsets>
+          <CVG_AlchemyQuality>1.0</CVG_AlchemyQuality>
           <MedicalTendQuality>0.25</MedicalTendQuality>
         </statOffsets>
         <statFactors>

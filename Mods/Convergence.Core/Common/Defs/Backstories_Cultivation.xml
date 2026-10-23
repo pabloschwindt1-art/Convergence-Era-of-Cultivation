@@ -394,6 +394,7 @@
     </skillGains>
     <modExtensions>
       <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statOffsets><CVG_AlchemyQuality>0.1</CVG_AlchemyQuality></statOffsets>
         <statFactors>
           <DrugCookingSpeed>1.1</DrugCookingSpeed>
         </statFactors>
@@ -1884,6 +1885,7 @@
     </workDisables>
     <modExtensions>
       <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statOffsets><CVG_AlchemyQuality>0.4</CVG_AlchemyQuality></statOffsets>
         <statFactors>
           <NegotiationAbility>1.25</NegotiationAbility>
           <DrugCookingSpeed>1.2</DrugCookingSpeed>
@@ -2103,6 +2105,7 @@
     </workDisables>
     <modExtensions>
       <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statOffsets><CVG_AlchemyQuality>0.6</CVG_AlchemyQuality></statOffsets>
         <statFactors>
           <DrugCookingSpeed>1.3</DrugCookingSpeed>
           <MedicalTendQuality>1.2</MedicalTendQuality>
@@ -2454,6 +2457,7 @@
     </skillGains>
     <modExtensions>
       <li Class="Convergence.DefModExtension_BackstoryStats">
+        <statOffsets><CVG_AlchemyQuality>0.3</CVG_AlchemyQuality></statOffsets>
         <statFactors>
           <DrugCookingSpeed>1.15</DrugCookingSpeed>
         </statFactors>

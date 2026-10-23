@@ -202,6 +202,8 @@ namespace Convergence
     {
         public static void Postfix(Pawn pawn, ref QualityCategory __result)
         {
+            // Las píldoras ya cuentan el nivel del horno en su tabla (Patch_QualityUtility_PillBands).
+            if (WorkRoomUtility.IsPillJob(pawn)) return;
             float bonus = WorkbenchLevelUtility.LevelCompOf(pawn)?.Current?.qualityBonus ?? 0f;
             if (bonus <= 0f || __result >= QualityCategory.Masterwork) return;
             int levels = Mathf.FloorToInt(bonus) + (Rand.Chance(bonus - Mathf.Floor(bonus)) ? 1 : 0);

@@ -92,6 +92,10 @@
       </li>
     </roleRequirements>
     <roleEffects>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>CVG_AlchemyQuality</statDef>
+        <modifier>0.5</modifier>
+      </li>
       <li Class="RoleEffect_PawnStatFactor">
         <statDef>DrugSynthesisSpeed</statDef>
         <modifier>1.15</modifier>

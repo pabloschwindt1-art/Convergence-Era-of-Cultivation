@@ -65,6 +65,11 @@
     </statBases>
     <uiOrder>2111</uiOrder>
     <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_GrainJar</li>
+        </linkableFacilities>
+      </li>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>160.0</fuelConsumptionRate>
         <fuelCapacity>50.0</fuelCapacity>
@@ -84,6 +89,9 @@
     <modExtensions>
       <li Class="Convergence.DefModExtension_CopyRecipes"><from><li>FueledStove</li></from></li>
     </modExtensions>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="CVG_WuxiaBenchBase">
@@ -164,6 +172,7 @@
       <li>Woody</li>
     </stuffCategories>
     <statBases>
+      <CVG_WorkRoomQuality>0</CVG_WorkRoomQuality>
       <WorkToBuild>2500</WorkToBuild>
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>1.0</Flammability>
@@ -177,6 +186,17 @@
     <modExtensions>
       <li Class="Convergence.DefModExtension_CopyRecipes"><from><li>TableSculpting</li></from></li>
     </modExtensions>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_SpiritStoneLantern</li>
+          <li MayRequire="prospero1088.convergence.furniture">CVG_PaintingScroll</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
   </ThingDef>
 
   <ThingDef ParentName="CVG_WuxiaBenchBase">

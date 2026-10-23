@@ -43,4 +43,12 @@ Costo (a 8 casillas o menos de la mesa): {2}.</CVG_Workbench_UpgradeDesc>
   <CVG_Pill_ThisPill>{0} (esta píldora)</CVG_Pill_ThisPill>
   <CVG_Pill_ThisPillDesc>Base {0} × {1} por su calidad. Según la calidad:</CVG_Pill_ThisPillDesc>
   <CVG_Pill_SideEffect>Efecto secundario</CVG_Pill_SideEffect>
+  <CVG_WorkRoom_Cleanliness>Limpieza de la sala</CVG_WorkRoom_Cleanliness>
+  <CVG_WorkRoom_Impressiveness>Impresión de la sala</CVG_WorkRoom_Impressiveness>
+  <CVG_WorkRoom_Qi>Concentración de qi de la sala</CVG_WorkRoom_Qi>
+  <CVG_Fire_Choose>Fuego: {0}</CVG_Fire_Choose>
+  <CVG_Fire_ChooseDesc>Elige qué quema el horno. Un fuego mejor refina mejores píldoras (niveles de calidad mientras arde):\n{0}\n\nLo que ya está en el horno sigue ardiendo; el fuego cambia de a poco a medida que entra el combustible nuevo.</CVG_Fire_ChooseDesc>
+  <CVG_Fire_Inspect>Fuego: {0} ({1} niveles)</CVG_Fire_Inspect>
+  <CVG_Fire_Explanation>Fuego del horno ({0})</CVG_Fire_Explanation>
+  <CVG_Pill_Failed>{PAWN_nameDef} perdió el control del fuego del horno: {1} salió como píldoras de desecho.</CVG_Pill_Failed>
 </LanguageData>

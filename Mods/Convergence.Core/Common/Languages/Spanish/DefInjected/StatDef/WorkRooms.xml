@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_WorkRoomQuality.label>calidad de la sala de trabajo</CVG_WorkRoomQuality.label>
+  <CVG_WorkRoomQuality.description>Niveles de calidad que esta sala de trabajo suma a todo lo que se hace aquí: una sala limpia, impresionante y llena de qi, los muebles vinculados a la mesa y el fuego del horno. La parte decimal es la probabilidad de un nivel más (o uno menos, si es negativa). En las píldoras sube la probabilidad de una buena píldora y baja la de que falle.</CVG_WorkRoomQuality.description>
+  <CVG_WorkRoomQuality.formatString>{0} niveles</CVG_WorkRoomQuality.formatString>
+  <CVG_AlchemyQuality.label>maestría alquímica</CVG_AlchemyQuality.label>
+  <CVG_AlchemyQuality.description>Cuánto mejor refina píldoras esta persona de lo que diría solo su habilidad: sube la probabilidad de una buena píldora y baja la de una fallida. La suben el talento, un cuerpo de alquimista y las enseñanzas de la secta.</CVG_AlchemyQuality.description>
+</LanguageData>
