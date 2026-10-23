@@ -10,6 +10,19 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 ## Sin publicar
 
+### Convergence: Core (2026-10-22)
+- Nuevo ajuste **"Grupos de huéspedes a la vez"** (2 por defecto; 0 = sin tope, como vanilla): con el mapa lleno de visitantes o caravanas
+  de comercio de otras facciones no llegan más caravanas, visitantes, viajeros ni recaudadores; el narrador lo reintenta más tarde. Los
+  forzados (misiones) pasan igual y los ataques no se tocan. Con muchas facciones amistosas (sectas) llegaban 3-4 grupos juntos, con
+  decenas de personas y animales, y el juego se ponía lento.
+- Autotest `-cvgselftest`: nueva sección "guest group limit" (ALL OK en 1.6.4871).
+- Versión: si la 0.1.2 (compatibilidad con 1.7) todavía no se subió, va junto con ella; si ya se subió, 0.1.3.
+
+**Change notes (Steam):**
+```
+- New setting "Visitor groups at once" (default 2): no more caravans and visitors piling up on your map at the same time. Set 0 for vanilla behaviour.
+```
+
 ### Convergence: Stories & Scenarios (2026-10-22)
 - Las visitas de las historias (VisitAzurePeak, VisitLotus, VisitCauldron, VisitDragon, VisitRogueMarket, LotusPilgrims, SectTradePact y
   los emisarios de la Convergencia) **ya no se juntan con otros huéspedes**: el evento no se elige si hay visitantes o una caravana de otra

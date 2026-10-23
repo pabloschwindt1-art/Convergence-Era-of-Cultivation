@@ -332,4 +332,7 @@ Algunas van a comerciar, otras van a juzgar, y una de ellas caza. Su buena volun
   <CVG_Tab_StageEta>≈ {0} días para la próxima etapa al ritmo actual</CVG_Tab_StageEta>
   <CVG_EnvRes_Explain>Resistencia al entorno {0}</CVG_EnvRes_Explain>
   <CVG_EnvRes_Affinity>Afinidad de la raíz de {0}</CVG_EnvRes_Affinity>
+  <CVG_Setting_MaxGuestGroups>Grupos de huéspedes a la vez (caravanas, visitantes): {0}</CVG_Setting_MaxGuestGroups>
+  <CVG_Setting_NoLimit>sin tope</CVG_Setting_NoLimit>
+  <CVG_Setting_MaxGuestGroupsTip>Máximo de grupos de visitantes y caravanas de comercio de otras facciones en un mapa al mismo tiempo. Un grupo nuevo espera a que se vaya otro. Con muchas facciones amistosas (sectas) podían llegar 3-4 grupos juntos, con decenas de personas y animales de carga. 0 = sin tope (como en el juego base). No afecta a los ataques.</CVG_Setting_MaxGuestGroupsTip>
 </LanguageData>

@@ -47,6 +47,8 @@ namespace Convergence
         public float legendaryBackstoryChance = 1f;
         /// <summary>Multiplica la disonancia celestial de los implantes que no la definen (biónicos vanilla o de otros mods). 0 = no suman.</summary>
         public float implantDissonanceFactor = 1f;
+        /// <summary>Máximo de grupos de huéspedes (visitantes, caravanas) a la vez en un mapa. 0 = sin tope. Ver <see cref="GuestLimit"/>.</summary>
+        public int maxGuestGroups = 2;
 
         public override void ExposeData()
         {
@@ -67,6 +69,7 @@ namespace Convergence
             Scribe_Values.Look(ref preCultivationChanceFactor, "preCultivationChanceFactor", 1f);
             Scribe_Values.Look(ref legendaryBackstoryChance, "rareBackstoryFactor", 1f);
             Scribe_Values.Look(ref implantDissonanceFactor, "implantDissonanceFactor", 1f);
+            Scribe_Values.Look(ref maxGuestGroups, "maxGuestGroups", 2);
             if (Scribe.mode == LoadSaveMode.PostLoadInit && difficulty == null) difficulty = new CultivationDifficultyValues();
         }
     }

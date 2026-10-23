@@ -332,4 +332,7 @@ Some will trade, some will judge, and one of them hunts. Their goodwill can be e
   <CVG_Tab_StageEta>≈ {0} days to the next stage at the current pace</CVG_Tab_StageEta>
   <CVG_EnvRes_Explain>Environment resistance {0}</CVG_EnvRes_Explain>
   <CVG_EnvRes_Affinity>Affinity of the {0} root</CVG_EnvRes_Affinity>
+  <CVG_Setting_MaxGuestGroups>Visitor groups at once (caravans, visitors): {0}</CVG_Setting_MaxGuestGroups>
+  <CVG_Setting_NoLimit>no limit</CVG_Setting_NoLimit>
+  <CVG_Setting_MaxGuestGroupsTip>Maximum number of visitor groups and trade caravans from other factions on a map at the same time. A new group waits until one leaves. With many friendly factions (sects) up to 3-4 groups could arrive together, with dozens of people and pack animals. 0 = no limit (vanilla). Raids are not affected.</CVG_Setting_MaxGuestGroupsTip>
 </LanguageData>

@@ -353,9 +353,7 @@ namespace Convergence.Stories
 
         /// <summary>Hay huéspedes en el mapa: visitantes o una caravana de comercio de otra facción no hostil. Las visitas de las historias
         /// esperan a que se vayan (si no, se juntaban con las caravanas de vanilla: hasta 3 grupos a la vez).</summary>
-        public static bool GuestsOnMap(Map map) => map?.lordManager != null && map.lordManager.lords.Any(l =>
-            (l.LordJob is LordJob_VisitColony || l.LordJob is LordJob_TradeWithColony)
-            && l.faction != null && !l.faction.IsPlayer && !l.faction.HostileTo(Faction.OfPlayer) && l.ownedPawns.Any(p => p.Spawned));
+        public static bool GuestsOnMap(Map map) => GuestLimit.Count(map) > 0;
 
         /// <summary>Días entre reintentos de una visita aplazada, y cuántas veces se reintenta antes de abandonarla.</summary>
         public const int VisitRetryDays = 1;

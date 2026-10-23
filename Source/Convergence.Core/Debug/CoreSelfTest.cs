@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using RimWorld;
 using Verse;
+using Verse.AI.Group;
 
 namespace Convergence
 {
@@ -63,6 +64,7 @@ namespace Convergence
             Section("recipes smoke", TestRecipes);
             Section("ingestibles smoke", () => TestIngestibles(map));
             Section("translations", TestTranslations);
+            Section("guest group limit", () => TestGuestLimit(map));
             sb.Append(fails == 0 ? "\n  ALL OK" : "\n  FAILURES: " + fails);
             // En la partida de prueba, acelerar para que corran ticks (tribulación, bestias, Maestro) y salgan sus errores.
             if (GenCommandLine.CommandLineArgPassed("cvgselftest")) Find.TickManager.CurTimeSpeed = TimeSpeed.Superfast;
@@ -1151,6 +1153,48 @@ namespace Convergence
                 }
             }
             Check(bad == 0, recipes.Count + " Convergence recipes valid");
+        }
+
+        /// <summary>Con el mapa lleno de huéspedes no llegan más caravanas ni visitantes (salvo forzados); con tope 0, como vanilla.</summary>
+        private static void TestGuestLimit(Map map)
+        {
+            void SendHome()
+            {
+                foreach (var lord in map.lordManager.lords.Where(l => l.LordJob is LordJob_VisitColony || l.LordJob is LordJob_TradeWithColony).ToList())
+                    foreach (var p in lord.ownedPawns.ToList()) if (!p.Destroyed) p.Destroy();
+            }
+            var settings = ConvergenceMod.Settings;
+            int saved = settings.maxGuestGroups;
+            try
+            {
+                SendHome();
+                Check(GuestLimit.Count(map) == 0, "no guests at the start");
+                var f = Find.FactionManager.AllFactionsListForReading.FirstOrDefault(x => !x.IsPlayer && !x.Hidden && !x.temporary && x.def.humanlikeFaction
+                    && !x.HostileTo(Faction.OfPlayer) && x.def.pawnGroupMakers != null && x.def.pawnGroupMakers.Any(g => g.kindDef == PawnGroupKindDefOf.Peaceful));
+                if (f == null) { sb.Append("\n    skip: no friendly faction that sends visitors"); return; }
+                IncidentParms Parms(bool forced)
+                {
+                    var p = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.Misc, map);
+                    p.faction = f;
+                    p.forced = forced;
+                    return p;
+                }
+                settings.maxGuestGroups = 1;
+                Check(IncidentDefOf.VisitorGroup.Worker.TryExecute(Parms(true)) && GuestLimit.Count(map) == 1, "a visitor group arrives (" + f.Name + ")");
+                Check(GuestLimit.Full(map), "limit 1: the map is full");
+                Check(!IncidentDefOf.VisitorGroup.Worker.CanFireNow(Parms(false)), "limit 1: no second visitor group");
+                Check(!IncidentDefOf.TraderCaravanArrival.Worker.CanFireNow(Parms(false)), "limit 1: no trade caravan either");
+                Check(IncidentDefOf.VisitorGroup.Worker.CanFireNow(Parms(true)), "forced visits (quests) still pass");
+                settings.maxGuestGroups = 2;
+                Check(!GuestLimit.Full(map), "limit 2 (default): one more group fits");
+                settings.maxGuestGroups = 0;
+                Check(!GuestLimit.Full(map), "limit 0: no limit, as in vanilla");
+            }
+            finally
+            {
+                settings.maxGuestGroups = saved;
+                SendHome();
+            }
         }
 
         /// <summary>Un colono come/usa una unidad de cada ingerible de los mods Convergence (píldoras, comida, sangre…).</summary>

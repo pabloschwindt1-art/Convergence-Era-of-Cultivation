@@ -72,6 +72,9 @@ namespace Convergence
             if (!Mathf.Approximately(legendary, s.legendaryBackstoryChance)) { s.legendaryBackstoryChance = legendary; LegendaryBackstories.Apply(); }
             listing.Label("CVG_Setting_ImplantDissonance".Translate(s.implantDissonanceFactor.ToStringPercent()), tooltip: "CVG_Setting_ImplantDissonanceTip".Translate());
             s.implantDissonanceFactor = Mathf.Round(listing.Slider(s.implantDissonanceFactor, 0f, 3f) * 20f) / 20f;
+            listing.Label("CVG_Setting_MaxGuestGroups".Translate(s.maxGuestGroups == 0 ? "CVG_Setting_NoLimit".Translate().ToString() : s.maxGuestGroups.ToString()),
+                tooltip: "CVG_Setting_MaxGuestGroupsTip".Translate());
+            s.maxGuestGroups = Mathf.RoundToInt(listing.Slider(s.maxGuestGroups, 0f, 5f));
             listing.CheckboxLabeled("CVG_Setting_PreCultivation".Translate(), ref s.preCultivationEnabled, "CVG_Setting_PreCultivationTip".Translate());
             if (s.preCultivationEnabled)
             {
