@@ -86,3 +86,10 @@ para que el emblema no se tiña.
 | 7 Contribución | `UI/Icons/CVG/Contribution/<Secta>` (`royalFavorIconPath`) | ✅ |
 | 2 Líder de secta | `UI/Roles/CVG/<Secta>_Leader` (parche de `Precept.Icon` en las ideologías de secta) | ✅ |
 | 3 Gran Anciano | `UI/Roles/CVG/<Secta>_Elder` (el rol moralista se llama Gran Anciano) | ✅ |
+
+## Arreglos de arte anotados por el usuario
+
+- **2026-10-22 — Resources: horno de refinado (CVG_RefiningFurnace, textura Things/Building/CVG/RefiningFurnace).** El diseño
+  actual es un resto provisorio: una losa gris con íconos sueltos (llama, cuencos, rodillo), que se ve en rt/capturas/workshop_resources/02_buildings.jpg.
+  Hay que rehacerlo como un horno wuxia de verdad, de 2×1 o del tamaño que tenga el def, con la misma calidad que el horno de alquimia y la forja espiritual.
+
