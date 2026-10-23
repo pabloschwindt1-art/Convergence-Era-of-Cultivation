@@ -129,9 +129,24 @@ namespace Convergence
             return true;
         }
 
+        /// <summary>
+        /// Un miembro de secta nunca lleva un arma que no puede usar (de fuego sin poder disparar, cualquiera sin poder pelear):
+        /// se la quita y queda con sus puños y sus técnicas.
+        /// </summary>
+        public static void DropUnusableWeapon(Pawn pawn)
+        {
+            var w = pawn.equipment?.Primary;
+            if (w == null) return;
+            bool unusable = pawn.WorkTagIsDisabled(WorkTags.Violent)
+                || (w.def.IsRangedWeapon && pawn.skills?.GetSkill(SkillDefOf.Shooting)?.TotallyDisabled == true)
+                || (w.def.IsMeleeWeapon && pawn.skills?.GetSkill(SkillDefOf.Melee)?.TotallyDisabled == true);
+            if (unusable) pawn.equipment.DestroyEquipment(w);
+        }
+
         /// <summary>Tipo de cuerpo de la secta (forzado o sin los prohibidos) y su constitución con probabilidad.</summary>
         public static void ApplyBodyAndTraits(Pawn pawn, DefModExtension_CultivatorPawnKind ext)
         {
+            DropUnusableWeapon(pawn);
             var story = pawn.story;
             if (story != null && pawn.DevelopmentalStage.Adult())
             {

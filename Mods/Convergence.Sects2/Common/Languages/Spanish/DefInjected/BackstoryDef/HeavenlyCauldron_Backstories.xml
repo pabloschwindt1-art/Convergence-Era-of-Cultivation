@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Backstory_HC_FurnaceStoker.title>fogonero del pabellón</CVG_Backstory_HC_FurnaceStoker.title>
+  <CVG_Backstory_HC_FurnaceStoker.titleShort>fogonero</CVG_Backstory_HC_FurnaceStoker.titleShort>
+  <CVG_Backstory_HC_FurnaceStoker.description>[PAWN_nameDef] pasó años alimentando los hornos del Pabellón, aprendiendo a leer el calor por el color de la llama. Los aprendices que se equivocan arruinan una tanda de píldoras; [PAWN_nameDef] arruinó una sola, y todavía recuerda su precio.</CVG_Backstory_HC_FurnaceStoker.description>
+  <CVG_Backstory_HC_HerbRunner.title>corredor de hierbas</CVG_Backstory_HC_HerbRunner.title>
+  <CVG_Backstory_HC_HerbRunner.titleShort>corredor de hierbas</CVG_Backstory_HC_HerbRunner.titleShort>
+  <CVG_Backstory_HC_HerbRunner.description>[PAWN_nameDef] llevaba hierbas desde las terrazas de la montaña hasta los calderos del Pabellón, más rápido que cualquier gremio rival. Una hierba pierde su qi con las horas, y el Pabellón paga según la frescura.</CVG_Backstory_HC_HerbRunner.description>
+  <CVG_Backstory_HC_Alchemist.title>alquimista del pabellón</CVG_Backstory_HC_Alchemist.title>
+  <CVG_Backstory_HC_Alchemist.titleShort>alquimista</CVG_Backstory_HC_Alchemist.titleShort>
+  <CVG_Backstory_HC_Alchemist.description>[PAWN_nameDef] es alquimista pleno del Caldero Celestial, con derecho a refinar píldoras bajo el sello del Pabellón. El sello significa que la píldora es verdadera, la dosis justa y el precio innegociable.</CVG_Backstory_HC_Alchemist.description>
+  <CVG_Backstory_HC_PillTaster.title>catador de píldoras</CVG_Backstory_HC_PillTaster.title>
+  <CVG_Backstory_HC_PillTaster.titleShort>catador</CVG_Backstory_HC_PillTaster.titleShort>
+  <CVG_Backstory_HC_PillTaster.description>Antes de vender una receta nueva, alguien tiene que tragarla. [PAWN_nameDef] probó píldoras para el Pabellón durante una década y sobrevivió a todas menos a una, a la que sobrevivió igual.</CVG_Backstory_HC_PillTaster.description>
+  <CVG_Backstory_HC_CauldronMaster.title>maestro del caldero</CVG_Backstory_HC_CauldronMaster.title>
+  <CVG_Backstory_HC_CauldronMaster.titleShort>maestro del caldero</CVG_Backstory_HC_CauldronMaster.titleShort>
+  <CVG_Backstory_HC_CauldronMaster.description>[PAWN_nameDef] dirige un caldero del Pabellón, con aprendices que alimentan el fuego y alquimistas que muelen las hierbas. Un maestro del caldero firma cada tanda; una tanda mala le cuesta la firma.</CVG_Backstory_HC_CauldronMaster.description>
+  <CVG_Backstory_HC_MaterialHunter.title>cazador de materiales</CVG_Backstory_HC_MaterialHunter.title>
+  <CVG_Backstory_HC_MaterialHunter.titleShort>cazador de materiales</CVG_Backstory_HC_MaterialHunter.titleShort>
+  <CVG_Backstory_HC_MaterialHunter.description>[PAWN_nameDef] cazaba materiales raros para Ning Yuhuo, la alquimista de fuego con sangre de fénix: núcleos de bestia, hierbas venenosas, metales de los restos del Borde. El Pabellón paga bien por todo lo que nadie refinó antes.</CVG_Backstory_HC_MaterialHunter.description>
+  <CVG_Backstory_HC_GrandAlchemist.title>gran alquimista</CVG_Backstory_HC_GrandAlchemist.title>
+  <CVG_Backstory_HC_GrandAlchemist.titleShort>gran alquimista</CVG_Backstory_HC_GrandAlchemist.titleShort>
+  <CVG_Backstory_HC_GrandAlchemist.description>[PAWN_nameDef] es uno de los grandes alquimistas del Pabellón, formado por Mo Qinghua, que nunca deja su caldero y es, según dicen, el único capaz de refinar píldoras de alma. Habla poco y refina mucho.</CVG_Backstory_HC_GrandAlchemist.description>
+  <CVG_Backstory_HC_LedgerElder.title>guardián del libro de cuentas</CVG_Backstory_HC_LedgerElder.title>
+  <CVG_Backstory_HC_LedgerElder.titleShort>guardián del libro</CVG_Backstory_HC_LedgerElder.titleShort>
+  <CVG_Backstory_HC_LedgerElder.description>[PAWN_nameDef] lleva el libro de cuentas del Pabellón para Qian Wanli, el maestro jovial que no tiene enemigos oficiales y sabe quién compró qué. Cada deuda de Jiuxiao está escrita ahí, incluidas las que los deudores olvidaron.</CVG_Backstory_HC_LedgerElder.description>
+  <CVG_Backstory_HC_Auctioneer.title>subastador del pabellón</CVG_Backstory_HC_Auctioneer.title>
+  <CVG_Backstory_HC_Auctioneer.titleShort>subastador</CVG_Backstory_HC_Auctioneer.titleShort>
+  <CVG_Backstory_HC_Auctioneer.description>[PAWN_nameDef] aprendió el oficio de Hu Xiaoman, la subastadora con sangre de zorro que vende un secreto con cada lote. Ahora viaja con las caravanas del Pabellón, vendiendo de todo y comprando cualquier cosa del Borde.</CVG_Backstory_HC_Auctioneer.description>
+</LanguageData>

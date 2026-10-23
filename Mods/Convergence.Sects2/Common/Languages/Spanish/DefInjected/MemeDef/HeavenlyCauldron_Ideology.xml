@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Meme_CauldronWay.label>camino del caldero</CVG_Meme_CauldronWay.label>
+  <CVG_Meme_CauldronWay.description>El Dao también puede conocerse transformando la materia. Todo tiene precio, y todo precio puede refinarse en una píldora: un remedio bien refinado no pregunta por el linaje de quien lo recibe.</CVG_Meme_CauldronWay.description>
+  <CVG_Meme_CauldronWay.generalRules.rulesStrings>
+    <li>memeAdjective-&gt;alquímico</li>
+    <li>memeHyphenPrefix-&gt;caldero</li>
+    <li>memeConcept-&gt;camino del caldero</li>
+    <li>memeLeaderNoun-&gt;maestro del pabellón</li>
+  </CVG_Meme_CauldronWay.generalRules.rulesStrings>
+  <CVG_Meme_CauldronWay.descriptionMaker.rules.rulesStrings>
+    <li>creation(tag=meme_CVG_Meme_CauldronWay)-&gt;[deity0_name] recibió el fuego alquímico de un fénix y encendió con él el primer caldero.</li>
+    <li>episode(uses=1,tag=meme_CVG_Meme_CauldronWay)-&gt;[deity0_name] le mostró al primer [memberName] que todo precio puede refinarse en una píldora.</li>
+    <li>intro(tag=meme_CVG_Meme_CauldronWay)-&gt;Los primeros [memberNamePlural] de [place_summary] [place_name] vendieron píldoras a todos los bandos de una guerra, y todos los bandos los dejaron vivir.</li>
+    <li>conflict(tag=meme_CVG_Meme_CauldronWay)-&gt;Un poderoso [foeLeader] intentó comprar las recetas secretas de los [memberNamePlural], y después quitárselas.</li>
+    <li>founderJoin(tag=meme_CVG_Meme_CauldronWay)-&gt;[founderName] refinó un remedio para un desconocido moribundo sin preguntar el precio, y [memberName] lo pagó cien veces.</li>
+    <li>victory(tag=meme_CVG_Meme_CauldronWay)-&gt;[founderName] dejó de venderle al [foeLeader], y los [foeSoldiers] se quedaron sin con qué curar sus heridas.</li>
+    <li>setup(tag=meme_CVG_Meme_CauldronWay)-&gt;La Calamidad de Hierro quemó los calderos de los creyentes, así que los reconstruyeron con el metal de las propias máquinas.</li>
+    <li>story(uses=1,tag=meme_CVG_Meme_CauldronWay)-&gt;Los creyentes se extendieron y crecieron en número, cada uno abriendo una nueva ruta comercial.</li>
+    <li>lessonIntro(tag=meme_CVG_Meme_CauldronWay)-&gt;Discípulo, los viejos maestros solían decir:</li>
+    <li>lesson(tag=meme_CVG_Meme_CauldronWay)-&gt;un remedio bien refinado no pregunta por el linaje de quien lo recibe.</li>
+    <li>lessonReinforcement(tag=meme_CVG_Meme_CauldronWay)-&gt;Lo entenderás en tu novena vuelta del fuego.</li>
+    <li>archistFact(tag=meme_CVG_Meme_CauldronWay)-&gt;Los arcotecnólogos también refinan la materia; solo que sus precios son más altos.</li>
+    <li>archistProphecy(tag=meme_CVG_Meme_CauldronWay)-&gt;[inTheEnd], todos necesitarán un remedio, y el caldero seguirá ardiendo.</li>
+    <li>animistFact(tag=meme_CVG_Meme_CauldronWay)-&gt;Cada hierba guarda el espíritu de la montaña donde creció; el caldero solo lo despierta.</li>
+  </CVG_Meme_CauldronWay.descriptionMaker.rules.rulesStrings>
+  <CVG_Meme_CauldronWay.symbolPacks.0.ideoName>Caldero Celestial</CVG_Meme_CauldronWay.symbolPacks.0.ideoName>
+  <CVG_Meme_CauldronWay.symbolPacks.0.theme>caldero</CVG_Meme_CauldronWay.symbolPacks.0.theme>
+  <CVG_Meme_CauldronWay.symbolPacks.0.adjective>alquímico</CVG_Meme_CauldronWay.symbolPacks.0.adjective>
+  <CVG_Meme_CauldronWay.symbolPacks.0.member>alquimista</CVG_Meme_CauldronWay.symbolPacks.0.member>
+</LanguageData>

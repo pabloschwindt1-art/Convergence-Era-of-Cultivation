@@ -13,6 +13,11 @@
     <exclusionTags><li>CVG_Sect_SwordWay</li></exclusionTags>
     <!-- No mandatory clothing: whoever edits the ideology decides (user decision). -->
     <preventApparelRequirements>true</preventApparelRequirements>
+    <!-- Believers may use any weapon; the noble one lifts their mood, the despised one weighs on it (vanilla Ideology). -->
+    <preferredWeaponClasses>
+      <noble>CVG_Sword</noble>
+      <despised>Ranged</despised>
+    </preferredWeaponClasses>
     <requireOne>
       <li><li>CVG_Cultivation_Venerated</li></li>
       <li><li>CVG_Duels_Encouraged</li></li>

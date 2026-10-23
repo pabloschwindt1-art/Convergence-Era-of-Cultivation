@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Heavenly Cauldron Pavilion: adult backstories by rank (fixedAdultBackstories). Childhood stays random. None disables shooting:
+       the Pavilion's members also carry guns. -->
+  <BackstoryDef Abstract="True" Name="CVG_HeavenlyCauldronBackstoryBase">
+    <slot>Adulthood</slot>
+    <shuffleable>false</shuffleable>
+    <spawnCategories><li>CVG_Sect_HeavenlyCauldron</li></spawnCategories>
+    <requiredWorkTags><li>Violent</li></requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_HeavenlyCauldronBackstoryBase">
+    <defName>CVG_Backstory_HC_FurnaceStoker</defName>
+    <title>furnace stoker of the pavilion</title>
+    <titleShort>furnace stoker</titleShort>
+    <description>[PAWN_nameDef] spent years feeding the Pavilion's furnaces, learning to read the heat by the color of the flame. Apprentices who misjudge it ruin a batch of pills; [PAWN_pronoun] ruined only one, and still remembers its price.</description>
+    <skillGains>
+      <Cooking>3</Cooking>
+      <Shooting>2</Shooting>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_HeavenlyCauldronBackstoryBase">
+    <defName>CVG_Backstory_HC_HerbRunner</defName>
+    <title>herb runner</title>
+    <titleShort>herb runner</titleShort>
+    <description>[PAWN_nameDef] ran herbs from the mountain terraces to the Pavilion's cauldrons, faster than any rival guild. A herb loses its qi by the hour, and the Pavilion pays by freshness.</description>
+    <skillGains>
+      <Plants>3</Plants>
+      <Shooting>2</Shooting>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_HeavenlyCauldronBackstoryBase">
+    <defName>CVG_Backstory_HC_Alchemist</defName>
+    <title>pavilion alchemist</title>
+    <titleShort>alchemist</titleShort>
+    <description>[PAWN_nameDef] is a full alchemist of the Heavenly Cauldron, entitled to refine pills under the Pavilion's seal. The seal means the pill is real, the dose is right and the price is not negotiable.</description>
+    <skillGains>
+      <Intellectual>3</Intellectual>
+      <Medicine>2</Medicine>
+      <Shooting>1</Shooting>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_HeavenlyCauldronBackstoryBase">
+    <defName>CVG_Backstory_HC_PillTaster</defName>
+    <title>pill taster</title>
+    <titleShort>pill taster</titleShort>
+    <description>Before a new recipe is sold, someone has to swallow it. [PAWN_nameDef] tasted pills for the Pavilion for a decade and survived all but one, which [PAWN_pronoun] survived anyway.</description>
+    <skillGains>
+      <Medicine>3</Medicine>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_HeavenlyCauldronBackstoryBase">
+    <defName>CVG_Backstory_HC_CauldronMaster</defName>
+    <title>cauldron master</title>
+    <titleShort>cauldron master</titleShort>
+    <description>[PAWN_nameDef] masters a cauldron of the Pavilion, with apprentices to feed the fire and alchemists to grind the herbs. A cauldron master signs each batch; a bad batch costs the signature.</description>
+    <skillGains>
+      <Intellectual>5</Intellectual>
+      <Medicine>2</Medicine>
+      <Crafting>2</Crafting>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_HeavenlyCauldronBackstoryBase">
+    <defName>CVG_Backstory_HC_MaterialHunter</defName>
+    <title>material hunter</title>
+    <titleShort>material hunter</titleShort>
+    <description>[PAWN_nameDef] hunted rare materials for Ning Yuhuo, the fire alchemist with phoenix blood: beast cores, poison herbs, metals from the Rim's wrecks. The Pavilion pays well for anything nobody has refined before.</description>
+    <skillGains>
+      <Shooting>4</Shooting>
+      <Animals>2</Animals>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_HeavenlyCauldronBackstoryBase">
+    <defName>CVG_Backstory_HC_GrandAlchemist</defName>
+    <title>grand alchemist</title>
+    <titleShort>grand alchemist</titleShort>
+    <description>[PAWN_nameDef] is one of the Pavilion's grand alchemists, trained by Mo Qinghua, who never leaves the cauldron and is said to be the only one able to refine soul pills. [PAWN_pronoun] speaks little and refines a lot.</description>
+    <skillGains>
+      <Intellectual>7</Intellectual>
+      <Medicine>3</Medicine>
+      <Social>1</Social>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_HeavenlyCauldronBackstoryBase">
+    <defName>CVG_Backstory_HC_LedgerElder</defName>
+    <title>keeper of the ledger</title>
+    <titleShort>ledger keeper</titleShort>
+    <description>[PAWN_nameDef] keeps the Pavilion's ledger for Qian Wanli, the jovial master who has no official enemies and knows who bought what. Every debt in Jiuxiao is written there, including the ones the debtors forgot.</description>
+    <skillGains>
+      <Social>6</Social>
+      <Intellectual>4</Intellectual>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_HeavenlyCauldronBackstoryBase">
+    <defName>CVG_Backstory_HC_Auctioneer</defName>
+    <title>pavilion auctioneer</title>
+    <titleShort>auctioneer</titleShort>
+    <description>[PAWN_nameDef] learned the trade from Hu Xiaoman, the fox-blooded auctioneer who sells a secret with every lot. Now [PAWN_pronoun] travels with the Pavilion's caravans, selling everything and buying anything from the Rim.</description>
+    <requiredWorkTags Inherit="False" />
+    <skillGains>
+      <Social>6</Social>
+      <Intellectual>2</Intellectual>
+    </skillGains>
+  </BackstoryDef>
+</Defs>

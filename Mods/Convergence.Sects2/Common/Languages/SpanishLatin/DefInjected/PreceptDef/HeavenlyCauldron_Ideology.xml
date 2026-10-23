@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Role_AlchemistMaster.label>maestro alquimista</CVG_Role_AlchemistMaster.label>
+  <CVG_Role_AlchemistMaster.description>El maestro que guarda el fuego del caldero y firma cada tanda de píldoras. Solo puede ocupar el cargo alguien cuyo propio cuerpo arde con fuego alquímico: el Pabellón dice que no se puede mandar sobre una llama que uno no lleva.</CVG_Role_AlchemistMaster.description>
+  <CVG_Ritual_CauldronBlessing.label>bendición del caldero</CVG_Ritual_CauldronBlessing.label>
+  <CVG_Ritual_CauldronBlessing.description>El discípulo se arrodilla ante el gran caldero mientras el maestro alquimista lo alimenta con piedras espirituales y recita las nueve vueltas del fuego. Cuando la llama cambia de color, el maestro la apoya en las palmas del discípulo; la quemadura es la bendición.</CVG_Ritual_CauldronBlessing.description>
+</LanguageData>

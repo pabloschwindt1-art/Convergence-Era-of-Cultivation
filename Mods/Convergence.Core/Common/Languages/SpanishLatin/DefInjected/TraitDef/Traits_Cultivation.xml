@@ -11,7 +11,13 @@
   <CVG_Body_PureYin.degreeDatas.0.label>cuerpo yin puro</CVG_Body_PureYin.degreeDatas.0.label>
   <CVG_Body_PureYin.degreeDatas.0.description>El cuerpo de {PAWN_nameDef} está impregnado de yin puro. Cuando fluya el qi, cultivará mucho mejor de noche y resonará con el agua y la escarcha.</CVG_Body_PureYin.degreeDatas.0.description>
   <CVG_Body_PureYang.degreeDatas.0.label>cuerpo yang puro</CVG_Body_PureYang.degreeDatas.0.label>
-  <CVG_Body_PureYang.degreeDatas.0.description>El cuerpo de {PAWN_nameDef} arde con yang puro. Cuando fluya el qi, cultivará mucho mejor de día y resonará con el fuego.</CVG_Body_PureYang.degreeDatas.0.description>
+  <CVG_Body_PureYang.degreeDatas.0.description>El cuerpo de {PAWN_nameDef} arde con yang puro: tiene calor en la noche más fría y el fuego de un horno le obedece un poco más de lo que debería. El Caldero Celestial lo llama el primer fuego, la chispa que todo alquimista necesita antes de que el caldero le responda.</CVG_Body_PureYang.degreeDatas.0.description>
+  <CVG_Body_PureYang.degreeDatas.1.label>cuerpo de llama del horno</CVG_Body_PureYang.degreeDatas.1.label>
+  <CVG_Body_PureYang.degreeDatas.1.description>El yang de {PAWN_nameDef} aprendió la paciencia del horno: arde parejo, no desbocado. Las píldoras que refina rara vez se rajan, y los maestros del Pabellón le confían el segundo fuego.</CVG_Body_PureYang.degreeDatas.1.description>
+  <CVG_Body_PureYang.degreeDatas.2.label>cuerpo de fuego de nueve vueltas</CVG_Body_PureYang.degreeDatas.2.label>
+  <CVG_Body_PureYang.degreeDatas.2.description>El Fuego del Caldero de Nueve Vueltas gira nueve veces antes de asentarse. El cuerpo de {PAWN_nameDef} aprendió las nueve: puede sostener una llama al calor exacto que pide una píldora durante días sin dormir, como hace Mo Qinghua.</CVG_Body_PureYang.degreeDatas.2.description>
+  <CVG_Body_PureYang.degreeDatas.3.label>cuerpo de fuego del fénix</CVG_Body_PureYang.degreeDatas.3.label>
+  <CVG_Body_PureYang.degreeDatas.3.description>El Pabellón heredó el fuego alquímico de un fénix, y {PAWN_nameDef} lleva lo más parecido a él: un fuego que refina sin quemar. El Caldero Celestial registra quizá un alquimista así por generación, y nadie, ni sus enemigos, se atrevería a matar a quien refina para todos.</CVG_Body_PureYang.degreeDatas.3.description>
   <CVG_Body_NineYang.degreeDatas.0.label>cuerpo de los nueve yang</CVG_Body_NineYang.degreeDatas.0.label>
   <CVG_Body_NineYang.degreeDatas.0.description>Nueve soles parecen arder dentro de {PAWN_nameDef}. Un cuerpo raro de fuego extremo: poder inmenso, pero el calor debe liberarse cultivando.</CVG_Body_NineYang.degreeDatas.0.description>
   <CVG_Body_CelestialSword.degreeDatas.0.label>cuerpo de espada celestial</CVG_Body_CelestialSword.degreeDatas.0.label>

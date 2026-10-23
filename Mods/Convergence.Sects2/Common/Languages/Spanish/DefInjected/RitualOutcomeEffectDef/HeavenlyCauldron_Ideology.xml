@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Outcome_CauldronBlessing.description>Según la calidad del ritual, los participantes tendrán entre {MINMOOD} y {MAXMOOD} de ánimo durante {MOODDAYS} días. Cuanto mejor la ceremonia, más probable es que la bendición prenda.</CVG_Outcome_CauldronBlessing.description>
+  <CVG_Outcome_CauldronBlessing.outcomeChances.0.label>Terrible</CVG_Outcome_CauldronBlessing.outcomeChances.0.label>
+  <CVG_Outcome_CauldronBlessing.outcomeChances.0.description>¡La {0} fue terrible! El fuego se apagó dos veces y el discípulo terminó con las manos quemadas por nada.</CVG_Outcome_CauldronBlessing.outcomeChances.0.description>
+  <CVG_Outcome_CauldronBlessing.outcomeChances.1.label>Apagada</CVG_Outcome_CauldronBlessing.outcomeChances.1.label>
+  <CVG_Outcome_CauldronBlessing.outcomeChances.1.description>La {0} fue apagada. Las palabras estaban bien y la llama tibia.</CVG_Outcome_CauldronBlessing.outcomeChances.1.description>
+  <CVG_Outcome_CauldronBlessing.outcomeChances.2.label>Solemne</CVG_Outcome_CauldronBlessing.outcomeChances.2.label>
+  <CVG_Outcome_CauldronBlessing.outcomeChances.2.description>La {0} fue solemne. Todos sintieron el viejo fuego del Pabellón pasar de una mano a otra.</CVG_Outcome_CauldronBlessing.outcomeChances.2.description>
+  <CVG_Outcome_CauldronBlessing.outcomeChances.3.label>Inolvidable</CVG_Outcome_CauldronBlessing.outcomeChances.3.label>
+  <CVG_Outcome_CauldronBlessing.outcomeChances.3.description>¡La {0} fue inolvidable! Por un momento, la llama del caldero tuvo el color de un fénix.</CVG_Outcome_CauldronBlessing.outcomeChances.3.description>
+</LanguageData>

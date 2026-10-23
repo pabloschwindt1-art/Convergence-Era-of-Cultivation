@@ -12,6 +12,11 @@
     <renderOrder>111</renderOrder>
     <exclusionTags><li>CVG_Sect_BodyWay</li></exclusionTags>
     <preventApparelRequirements>true</preventApparelRequirements>
+    <!-- Believers may use any weapon; the noble one lifts their mood, the despised one weighs on it (vanilla Ideology). -->
+    <preferredWeaponClasses>
+      <noble>MeleeBlunt</noble>
+      <despised>Ranged</despised>
+    </preferredWeaponClasses>
     <requireOne>
       <li><li>CVG_Cultivation_Venerated</li></li>
       <li><li>CVG_Duels_Allowed</li></li>

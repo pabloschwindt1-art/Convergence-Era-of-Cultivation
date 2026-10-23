@@ -50,6 +50,9 @@
   </TraitDef>
   <TraitDef>
     <defName>CVG_Body_PureYang</defName>
+    <!-- Alchemical fire body (Heavenly Cauldron Pavilion): one progressive constitution, valid with or without a spirit root. Degrees
+         0-3: pure yang, furnace flame, nine-turn fire, phoenix fire. Born only at degree 0 (the old pure yang body); the higher grades
+         come from the Pavilion's blessing of the cauldron. -->
     <commonality>0</commonality>
     <exclusionTags>
       <li>CVG_SpecialBody</li>
@@ -57,7 +60,51 @@
     <degreeDatas>
       <li>
         <label>pure yang body</label>
-        <description>{PAWN_nameDef}'s body burns with pure yang. Once qi flows, {PAWN_pronoun} will cultivate far better by day and resonate with fire.</description>
+        <degree>0</degree>
+        <description>{PAWN_nameDef}'s body burns with pure yang: {PAWN_pronoun} is warm in the coldest night and the fire of a furnace obeys {PAWN_objective} a little better than it should. The Heavenly Cauldron calls it the first fire, the spark every alchemist must have before the cauldron will answer.</description>
+        <statFactors>
+          <DrugSynthesisSpeed>1.1</DrugSynthesisSpeed>
+          <CookSpeed>1.05</CookSpeed>
+        </statFactors>
+        <statOffsets>
+          <ArmorRating_Heat>0.05</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <label>furnace flame body</label>
+        <degree>1</degree>
+        <description>The yang in {PAWN_nameDef} has learned the patience of the furnace: it burns steady, not wild. Pills refined by {PAWN_possessive} hand rarely crack, and the Pavilion's masters trust {PAWN_objective} with the second fire.</description>
+        <statFactors>
+          <DrugSynthesisSpeed>1.2</DrugSynthesisSpeed>
+          <CookSpeed>1.1</CookSpeed>
+        </statFactors>
+        <statOffsets>
+          <ArmorRating_Heat>0.10</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <label>nine-turn fire body</label>
+        <degree>2</degree>
+        <description>The Nine-Turn Cauldron Fire turns nine times before it settles. {PAWN_nameDef}'s body has learned all nine: {PAWN_pronoun} can hold a flame at the exact heat a pill needs for days without sleeping, as Mo Qinghua does.</description>
+        <statFactors>
+          <DrugSynthesisSpeed>1.3</DrugSynthesisSpeed>
+          <CookSpeed>1.15</CookSpeed>
+        </statFactors>
+        <statOffsets>
+          <ArmorRating_Heat>0.15</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <label>phoenix fire body</label>
+        <degree>3</degree>
+        <description>The Pavilion inherited the alchemical fire from a phoenix, and {PAWN_nameDef} carries the closest thing to it: a fire that refines without burning. The Heavenly Cauldron records perhaps one such alchemist in a generation, and nobody, not even its enemies, would dare to kill the one who refines for everyone.</description>
+        <statFactors>
+          <DrugSynthesisSpeed>1.4</DrugSynthesisSpeed>
+          <CookSpeed>1.2</CookSpeed>
+        </statFactors>
+        <statOffsets>
+          <ArmorRating_Heat>0.20</ArmorRating_Heat>
+        </statOffsets>
       </li>
     </degreeDatas>
     <modExtensions>

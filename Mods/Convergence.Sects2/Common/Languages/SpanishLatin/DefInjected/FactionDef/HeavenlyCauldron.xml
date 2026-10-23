@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Faction_HeavenlyCauldron.label>pabellón del caldero celestial</CVG_Faction_HeavenlyCauldron.label>
+  <CVG_Faction_HeavenlyCauldron.description>Un gremio de alquimistas y subastadores nacido entre sectas en guerra: vendía píldoras a todos los bandos y ganó la neutralidad por tratado, porque nadie se atrevería a matar al proveedor de todos. Su fuego alquímico lo heredó de un fénix, y sus maestros refinan para nobles y errantes por igual: un remedio bien refinado no pregunta por el linaje de quien lo recibe. En Jiuxiao buscan materias desconocidas y socios capaces de abrir nuevas rutas comerciales, y compran la tecnología del Borde con franco entusiasmo.</CVG_Faction_HeavenlyCauldron.description>
+  <CVG_Faction_HeavenlyCauldron.fixedName>Pabellón del Caldero Celestial</CVG_Faction_HeavenlyCauldron.fixedName>
+  <CVG_Faction_HeavenlyCauldron.pawnSingular>alquimista del pabellón</CVG_Faction_HeavenlyCauldron.pawnSingular>
+  <CVG_Faction_HeavenlyCauldron.pawnsPlural>alquimistas del pabellón</CVG_Faction_HeavenlyCauldron.pawnsPlural>
+  <CVG_Faction_HeavenlyCauldron.leaderTitle>maestro del pabellón</CVG_Faction_HeavenlyCauldron.leaderTitle>
+  <CVG_Faction_HeavenlyCauldron.royalFavorLabel>contribución de secta</CVG_Faction_HeavenlyCauldron.royalFavorLabel>
+</LanguageData>

@@ -286,6 +286,15 @@ namespace Convergence.Sects2
 
         private static bool IsSword(Thing t) => t?.def.weaponTags?.Contains("CVG_Sword") ?? false;
 
+        /// <summary>El arma que lleva la puede usar (de fuego solo si sabe disparar, ninguna si no puede pelear).</summary>
+        private static bool UsableWeapon(Pawn p)
+        {
+            var w = p.equipment?.Primary;
+            if (w == null) return true;
+            if (p.WorkTagIsDisabled(WorkTags.Violent)) return false;
+            return w.def.IsRangedWeapon ? !p.skills.GetSkill(SkillDefOf.Shooting).TotallyDisabled : !p.skills.GetSkill(SkillDefOf.Melee).TotallyDisabled;
+        }
+
         /// <summary>Las sectas del nuevo Sects y sus reglas propias.</summary>
         private static IEnumerable<SectSpec> Specs()
         {
@@ -306,6 +315,15 @@ namespace Convergence.Sects2
                 weaponOk = p => p.equipment?.Primary == null, weaponRule = "unarmed",
                 bodyOk = p => p.story.bodyType == BodyTypeDefOf.Hulk && (CompCultivator.For(p)?.IsBodyCultivator ?? false), bodyRule = "Hulk body cultivator",
                 specialty = t => t.def.IsApparel && (t.def.tradeTags?.Contains("Armor") ?? false), specialtyLabel = "armors"
+            };
+            yield return new SectSpec
+            {
+                id = "HeavenlyCauldron", bodyTrait = "CVG_Body_PureYang", meme = "CVG_Meme_CauldronWay", role = "CVG_Role_AlchemistMaster", ability = "ProductionCommand",
+                outcome = "CVG_Outcome_CauldronBlessing",
+                kinds = new[] { "CVG_HeavenlyCauldron_Apprentice", "CVG_HeavenlyCauldron_Alchemist", "CVG_HeavenlyCauldron_Master", "CVG_HeavenlyCauldron_Grand" },
+                weaponOk = p => p.equipment?.Primary == null || (p.equipment.Primary.def.weaponTags?.Any(t => t == "CVG_SpiritWeapon" || t == "SimpleGun") ?? false),
+                weaponRule = "spirit weapons or simple guns",
+                specialty = t => t.def.weaponTags?.Contains("CVG_SpiritWeapon") ?? false, specialtyLabel = "spirit weapons"
             };
         }
 
@@ -370,7 +388,7 @@ namespace Convergence.Sects2
                 {
                     var p = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, f, forceGenerateNewPawn: true));
                     if (p.story.Adulthood != null) { adults++; if (kind.fixedAdultBackstories.Contains(p.story.Adulthood)) sectStories++; }
-                    if (!s.weaponOk(p)) badWeapon++;
+                    if (!s.weaponOk(p) || !UsableWeapon(p)) badWeapon++;
                     if (!s.bodyOk(p)) badBody++;
                     if (ConstitutionUtility.Degree(p, body) != null) bodies++;
                     p.Destroy();

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Weapon classes for the sects' noble and despised weapons (Ideology, MemeDef.preferredWeaponClasses): believers are proud to
+       wield the noble class and uneasy with the despised one. Assigned to the weapons by patch (Patches/SwordTag.xml). -->
+  <WeaponClassDef>
+    <defName>CVG_Sword</defName>
+    <label>sword</label>
+  </WeaponClassDef>
+</Defs>

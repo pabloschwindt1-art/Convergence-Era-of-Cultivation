@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Heavenly Cauldron Pavilion: ideology (meme, preset, specialist, blessing of the cauldron). Template: SECTS2_PLANTILLA.md. -->
+
+  <MemeDef>
+    <defName>CVG_Meme_CauldronWay</defName>
+    <label>cauldron way</label>
+    <description>The Dao can also be known by transforming matter. Everything has a price, and every price can be refined into a pill: a well-refined remedy does not ask about the lineage of whoever takes it.</description>
+    <iconPath>UI/Memes/CVG/CauldronWay</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>112</renderOrder>
+    <exclusionTags><li>CVG_Sect_CauldronWay</li></exclusionTags>
+    <preventApparelRequirements>true</preventApparelRequirements>
+    <requireOne>
+      <li><li>CVG_Alchemy_Venerated</li></li>
+      <li><li>CVG_Cultivation_Venerated</li></li>
+      <li><li>CVG_Hierarchy_Elders</li></li>
+      <li><li>CVG_Demonic_Tolerated</li></li>
+    </requireOne>
+    <requiredRituals>
+      <li>
+        <precept>CVG_Ritual_CauldronBlessing</precept>
+        <pattern>CVG_Pattern_CauldronBlessing</pattern>
+      </li>
+    </requiredRituals>
+    <agreeableTraits>
+      <li>CVG_Body_PureYang</li>
+    </agreeableTraits>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->alchemical</li>
+        <li>memeHyphenPrefix->cauldron</li>
+        <li>memeConcept->cauldron way</li>
+        <li>memeLeaderNoun->pavilion master</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <li>creation(tag=meme_CVG_Meme_CauldronWay)->[deity0_name] received the alchemical fire from a phoenix and lit the first cauldron with it.</li>
+          <li>episode(uses=1,tag=meme_CVG_Meme_CauldronWay)->[deity0_name] showed the first [memberName] that every price can be refined into a pill.</li>
+          <li>intro(tag=meme_CVG_Meme_CauldronWay)->The early [memberNamePlural] of the [place_summary] [place_name] sold pills to every side of a war, and every side let them live.</li>
+          <li>conflict(tag=meme_CVG_Meme_CauldronWay)->A powerful [foeLeader] tried to buy the [memberNamePlural]' secret recipes, and then to take them.</li>
+          <li>founderJoin(tag=meme_CVG_Meme_CauldronWay)->[founderName] refined a remedy for a dying stranger without asking a price, and [memberName] paid it a hundredfold.</li>
+          <li>victory(tag=meme_CVG_Meme_CauldronWay)->[founderName] stopped selling to the [foeLeader], and the [foeSoldiers] had nothing left to heal their wounds.</li>
+          <li>setup(tag=meme_CVG_Meme_CauldronWay)->The Iron Calamity burned the believers' cauldrons, so they rebuilt them from the machines' own metal.</li>
+          <li>story(uses=1,tag=meme_CVG_Meme_CauldronWay)->The believers spread out and grew in number, each opening a new trade route.</li>
+          <li>lessonIntro(tag=meme_CVG_Meme_CauldronWay)->Disciple, the old masters used to say:</li>
+          <li>lesson(tag=meme_CVG_Meme_CauldronWay)->a well-refined remedy does not ask about the lineage of whoever takes it.</li>
+          <li>lessonReinforcement(tag=meme_CVG_Meme_CauldronWay)->You will understand it at your ninth turn of the fire.</li>
+          <li>archistFact(tag=meme_CVG_Meme_CauldronWay)->The archotechs refine matter too; their prices are simply higher.</li>
+          <li>archistProphecy(tag=meme_CVG_Meme_CauldronWay)->[inTheEnd], everyone will need a remedy, and the cauldron will still be burning.</li>
+          <li>animistFact(tag=meme_CVG_Meme_CauldronWay)->Every herb keeps the spirit of the mountain it grew on; the cauldron only wakes it.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Heavenly Cauldron</ideoName>
+        <theme>cauldron</theme>
+        <adjective>alchemical</adjective>
+        <member>alchemist</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+
+  <IdeoPresetDef>
+    <defName>CVG_Preset_HeavenlyCauldron</defName>
+    <label>heavenly cauldron pavilion</label>
+    <description>Alchemists of the Heavenly Cauldron: the Dao is known by transforming matter, and every price can be refined into a pill. Alchemy and cultivation are venerated, the elders lead, and the demonic arts are tolerated, as long as they pay. Your colony stays independent; the Pavilion is a partner, not a master.</description>
+    <categoryDef>Strong</categoryDef>
+    <memes>
+      <li>CVG_Meme_CauldronWay</li>
+      <li>Loyalist</li>
+    </memes>
+  </IdeoPresetDef>
+
+  <PreceptDef ParentName="CVG_SectSpecialistBase">
+    <defName>CVG_Role_AlchemistMaster</defName>
+    <label>alchemist master</label>
+    <description>The master who keeps the cauldron's fire and signs every batch of pills. Only someone whose own body burns with alchemical fire may hold the office: the Pavilion says you cannot command a flame you do not carry.</description>
+    <iconPath>UI/Roles/CVG/AlchemistMaster</iconPath>
+    <nameMaker>NamerRoleMoralist</nameMaker>
+    <requiredMemes><li>CVG_Meme_CauldronWay</li></requiredMemes>
+    <roleRequirements Inherit="False">
+      <li Class="RoleRequirement_SameIdeo">
+        <labelKey>RoleRequirementLabelSameIdeo</labelKey>
+      </li>
+      <li Class="Convergence.RoleRequirement_HasTrait">
+        <traits><li>CVG_Body_PureYang</li></traits>
+      </li>
+    </roleRequirements>
+    <roleEffects>
+      <li Class="RoleEffect_PawnStatFactor">
+        <statDef>DrugSynthesisSpeed</statDef>
+        <modifier>1.15</modifier>
+      </li>
+    </roleEffects>
+    <grantedAbilities>
+      <li>ProductionCommand</li>
+    </grantedAbilities>
+  </PreceptDef>
+
+  <!-- Ritual: Blessing of the Cauldron. One grade of the alchemical fire body per ceremony; on failure only the materials are lost. -->
+  <RitualOutcomeEffectDef ParentName="CVG_SectTemperOutcomeBase">
+    <defName>CVG_Outcome_CauldronBlessing</defName>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_TemperConstitution">
+        <steps>
+          <li>
+            <toTrait>CVG_Body_PureYang</toTrait>
+            <toDegree>0</toDegree>
+            <chanceByQuality><points><li>(0, 0.80)</li><li>(1, 1.00)</li></points></chanceByQuality>
+            <cost><CVG_SpiritStone>30</CVG_SpiritStone><MedicineHerbal>5</MedicineHerbal></cost>
+          </li>
+          <li>
+            <fromTrait>CVG_Body_PureYang</fromTrait>
+            <fromDegree>0</fromDegree>
+            <toTrait>CVG_Body_PureYang</toTrait>
+            <toDegree>1</toDegree>
+            <chanceByQuality><points><li>(0, 0.60)</li><li>(1, 1.00)</li></points></chanceByQuality>
+            <cost><CVG_SpiritStone>60</CVG_SpiritStone><CVG_SpiritJade>5</CVG_SpiritJade><MedicineHerbal>10</MedicineHerbal></cost>
+          </li>
+          <li>
+            <fromTrait>CVG_Body_PureYang</fromTrait>
+            <fromDegree>1</fromDegree>
+            <toTrait>CVG_Body_PureYang</toTrait>
+            <toDegree>2</toDegree>
+            <chanceByQuality><points><li>(0, 0.40)</li><li>(1, 0.90)</li></points></chanceByQuality>
+            <cost><CVG_SpiritStone>120</CVG_SpiritStone><CVG_SpiritJade>15</CVG_SpiritJade><CVG_FoundationPill>1</CVG_FoundationPill></cost>
+          </li>
+          <li>
+            <fromTrait>CVG_Body_PureYang</fromTrait>
+            <fromDegree>2</fromDegree>
+            <toTrait>CVG_Body_PureYang</toTrait>
+            <toDegree>3</toDegree>
+            <chanceByQuality><points><li>(0, 0.20)</li><li>(1, 0.55)</li></points></chanceByQuality>
+            <cost><CVG_SpiritStone>200</CVG_SpiritStone><CVG_SpiritJade>40</CVG_SpiritJade><CVG_PrimordialCrystal>3</CVG_PrimordialCrystal></cost>
+          </li>
+        </steps>
+      </li>
+    </modExtensions>
+  </RitualOutcomeEffectDef>
+
+  <RitualPatternDef ParentName="CVG_SectTemperPatternBase">
+    <defName>CVG_Pattern_CauldronBlessing</defName>
+    <ritualOutcomeEffect>CVG_Outcome_CauldronBlessing</ritualOutcomeEffect>
+    <ritualExplanation>The alchemist master kindles one disciple's alchemical fire by a single grade: pure yang, furnace flame, nine-turn fire, phoenix fire. A failed blessing costs only the materials.</ritualExplanation>
+  </RitualPatternDef>
+
+  <PreceptDef ParentName="CVG_SectRitualBase">
+    <defName>CVG_Ritual_CauldronBlessing</defName>
+    <label>blessing of the cauldron</label>
+    <description>The disciple kneels before the great cauldron while the alchemist master feeds it with spirit stones and recites the nine turns of the fire. When the flame changes color, the master presses it into the disciple's palms; the burn is the blessing.</description>
+    <iconPath>UI/Icons/Rituals/CVG/CauldronBlessing</iconPath>
+    <ritualPatternBase>CVG_Pattern_CauldronBlessing</ritualPatternBase>
+    <requiredMemes><li>CVG_Meme_CauldronWay</li></requiredMemes>
+  </PreceptDef>
+</Defs>
