@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>CVG_NamerPerson_FormlessSword</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[family] [given]</li>
+        <li>family->Lin</li>
+        <li>family->Jian</li>
+        <li>family->Ye</li>
+        <li>family->Feng</li>
+        <li>family->Xiao</li>
+        <li>family->Shen</li>
+        <li>family->Qin</li>
+        <li>family->Duan</li>
+        <li>family->Gu</li>
+        <li>family->Han</li>
+        <li>family->Mu</li>
+        <li>family->Xie</li>
+        <li>given->Feng</li>
+        <li>given->Ling</li>
+        <li>given->Jian</li>
+        <li>given->Yun</li>
+        <li>given->Xue</li>
+        <li>given->Chen</li>
+        <li>given->Ruo</li>
+        <li>given->Hao</li>
+        <li>given->Ming</li>
+        <li>given->Qing</li>
+        <li>given->Yu</li>
+        <li>given->Han</li>
+        <li>given->Lan</li>
+        <li>given->Rui</li>
+        <li>given->Wuxin</li>
+        <li>given->Kong</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>CVG_NamerSettlement_FormlessSword</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[place] [kind]</li>
+        <li>place->Wuxing</li>
+        <li>place->Jianshan</li>
+        <li>place->Cangjian</li>
+        <li>place->Kongming</li>
+        <li>place->Tianya</li>
+        <li>place->Yunling</li>
+        <li>kind->Peak</li>
+        <li>kind->Sword Mound</li>
+        <li>kind->Cliff</li>
+        <li>kind->Hall</li>
+        <li>kind->Pavilion</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

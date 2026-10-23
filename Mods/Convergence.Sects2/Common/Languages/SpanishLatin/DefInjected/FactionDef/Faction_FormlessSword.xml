@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Faction_FormlessSword.label>secta de la espada sin forma</CVG_Faction_FormlessSword.label>
+  <CVG_Faction_FormlessSword.description>Una secta de espadachines que enseña que el acero puede quebrarse, pero la intención verdadera persiste. Hace cuatro mil años, el Santo de la Espada Qing Feng partió una montaña de un solo tajo y se quedó en la cima a cultivar; sus herederos dicen que nunca desenvainó. Tras la Convergencia buscan reconstruir las enseñanzas perdidas en la Calamidad de Hierro y hallar discípulos capaces de comprender un corte antes de ejecutarlo. No tienen nada contra la tecnología: sus espadas más antiguas se forjaron con los cascarones de máquinas caídas.</CVG_Faction_FormlessSword.description>
+  <CVG_Faction_FormlessSword.fixedName>Secta de la Espada Sin Forma</CVG_Faction_FormlessSword.fixedName>
+  <CVG_Faction_FormlessSword.pawnSingular>discípulo de espada</CVG_Faction_FormlessSword.pawnSingular>
+  <CVG_Faction_FormlessSword.pawnsPlural>discípulos de espada</CVG_Faction_FormlessSword.pawnsPlural>
+  <CVG_Faction_FormlessSword.leaderTitle>maestro de secta</CVG_Faction_FormlessSword.leaderTitle>
+  <CVG_Faction_FormlessSword.royalFavorLabel>contribución de secta</CVG_Faction_FormlessSword.royalFavorLabel>
+</LanguageData>
