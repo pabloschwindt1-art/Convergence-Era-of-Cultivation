@@ -96,4 +96,7 @@ para que el emblema no se tiña.
   El diseño es malo y está **dado vuelta**: el arco y la punta quedan del lado del tirador, así que parece que dispara hacia quien la usa.
   Se ve en rt/capturas/workshop_alchemy/05_gear.jpg (segunda de la segunda fila). Hay que rehacerla con el arco hacia adelante y la orientación
   que usa RimWorld para las armas: la boca apunta a la derecha (este) en el ícono, como las demás armas de rango. Revisar también equippedAngleOffset.
+- **2026-10-22 — Apparel: telar espiritual (CVG_SpiritLoom).** El diseño es provisorio y no tiene nada de wuxia: parece un mueble blanco
+  moderno con una franja celeste, tipo aparato de cocina. Se ve en rt/capturas/workshop_apparel/03_buildings.jpg. Hay que rehacerlo como un telar
+  de madera tradicional, con el bastidor, los hilos de seda o de algodón de nube y algún detalle espiritual, a la altura del horno de alquimia y la forja.
 
