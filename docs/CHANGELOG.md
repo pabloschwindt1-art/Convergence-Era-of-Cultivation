@@ -38,6 +38,11 @@ Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod
   prueba en el monitor secundario (ROG), visible y sin robar el foco (`-NoSecondMonitor` vuelve a la ventana minimizada).
   Tanda en 1.7.4985 con los 15 mods: Core, Resource, Bloodline, Trait, Stories, Formations, Grafts, Factions, Qi network, Qi-Tech,
   Crops, Furniture y Flying island ALL OK.
+- Herramientas de prueba (sin cambio en el juego): skill nueva `rimworld-mod-tester` (docs/skills/) con el criterio de qué probar,
+  y `tools/elegir-pruebas.py`, que elige los autotests según lo que cambió y separa los lentos (títeres, playtest), que piden permiso.
+  `run-test.ps1 -Mods todos` y espera tantos resultados como pruebas pedidas. `TestArena.Clear` despeja la zona de los tests (roca,
+  agua, techo; opcionalmente pawns ajenos). Arreglos de tests: Hijo del Cielo sin genes de vidas extra (fallaba al azar), atadura
+  mirada seguido. 1.7.4985: Core + Stories y Formations ALL OK.
 - Furniture: el bonsái espiritual ya no es maceta (vanilla le sembraba lirio de día encima del árbol). Es decoración, con belleza 15 y qi 4.
 - Factions: arreglado el aviso sin fin "Rol de ... activado / desactivado" con un solo creyente: el rol de especialista de las sectas
   se desactivaba y se activaba en cada recálculo (los dos mínimos valían 1). Ahora se apaga recién sin creyentes.

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +19,7 @@ namespace Convergence.Formations
         private bool started;
         private int phase = -1;
         private int waitUntil;
+        private int deadline;
         private readonly StringBuilder sb = new StringBuilder("[Convergence] Formations self-test");
         private int fails;
         private Map map;
@@ -87,7 +88,7 @@ namespace Convergence.Formations
         {
             Cleanup();
             center = map.Center;
-            TestArena.Clear(map, CellRect.CenteredOn(center, 24));   // superficie limpia: sin roca ni agua donde van banderas y enemigos
+            TestArena.Clear(map, CellRect.CenteredOn(center, 24), removeStrangers: true);   // superficie limpia: sin roca ni agua donde van banderas y enemigos
             foreach (var dx in new[] { -6, 6 })
                 foreach (var dz in new[] { -6, 6 })
                 {
@@ -183,9 +184,12 @@ namespace Convergence.Formations
                     Setup("CVG_BindingFormationCore");
                     enemy = SpawnHostile(center + new IntVec3(1, 0, -1));
                     Freeze(enemy);
-                    phase = 6; waitUntil = now + 700; break;
+                    phase = 6; waitUntil = now + 60; deadline = now + 1500; break;
 
                 case 6:
+                    // La atadura aturde unos segundos y vuelve a atar en su intervalo: se mira seguido hasta que se vea atado o venza el plazo
+                    // (mirar una sola vez a los 700 ticks caía a veces entre dos ataduras).
+                    if (!enemy.stances.stunner.Stunned && !enemy.Dead && now < deadline) { waitUntil = now + 20; break; }
                     Check(enemy.stances.stunner.Stunned || enemy.Dead, "strongest enemy was bound (stunned)");
                     phase = 7; waitUntil = now + 10; break;
 

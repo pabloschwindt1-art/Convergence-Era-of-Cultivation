@@ -49,6 +49,10 @@ namespace Convergence
             if (map != null && lifeTrait != null && GameComponent_Convergence.Active)
             {
                 var p = Generate(map);
+                // Sin genes de linaje con vidas extra (nueve vidas del zorro): si no, el gen salva la segunda muerte y el test falla al azar
+                if (p.genes != null)
+                    foreach (var g in p.genes.GenesListForReading.Where(g => g.def.HasModExtension<DefModExtension_ExtraLives>()).ToList())
+                        p.genes.RemoveGene(g);
                 p.story.traits.GainTrait(new Trait(lifeTrait, 0, forced: true));
                 p.Kill(null);
                 sb.Append($"\n  {lifeTrait.defName}: first death -> dead {p.Dead}");
