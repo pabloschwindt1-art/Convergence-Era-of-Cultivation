@@ -14,4 +14,33 @@ Coste (a 8 casillas o menos de la mesa): {2}.</CVG_Workbench_UpgradeDesc>
   <CVG_Workbench_Upgraded>{0} ha subido a nivel {1}.</CVG_Workbench_Upgraded>
   <CVG_Workbench_Level>Nivel {0}/{1}</CVG_Workbench_Level>
   <CVG_Workbench_RequiresResearch>Requiere comprender {0} (pestaña de investigación Cultivo).</CVG_Workbench_RequiresResearch>
+  <CVG_Crafter_MadeBy>Hecho por</CVG_Crafter_MadeBy>
+  <CVG_Crafter_Lore>{0}, {1}</CVG_Crafter_Lore>
+  <CVG_Crafter_Mixed>varios artesanos</CVG_Crafter_Mixed>
+  <CVG_Crafter_ByColonistDesc>Hecho en tu colonia.</CVG_Crafter_ByColonistDesc>
+  <CVG_Crafter_LoreDesc>Llegó de fuera de la colonia: un comerciante, una secta, un botín o una ruina antigua. El sello que lleva es el único rastro de quien lo hizo.</CVG_Crafter_LoreDesc>
+  <CVG_Crafter_MixedDesc>Esta pila mezcla objetos hechos por manos distintas.</CVG_Crafter_MixedDesc>
+  <CVG_Crafter_Alchemist_0>un viejo alquimista</CVG_Crafter_Alchemist_0>
+  <CVG_Crafter_Alchemist_1>un alquimista errante</CVG_Crafter_Alchemist_1>
+  <CVG_Crafter_Alchemist_2>un maestro de horno olvidado</CVG_Crafter_Alchemist_2>
+  <CVG_Crafter_Alchemist_3>un alquimista de secta</CVG_Crafter_Alchemist_3>
+  <CVG_Crafter_Smith_0>un viejo herrero</CVG_Crafter_Smith_0>
+  <CVG_Crafter_Smith_1>un forjador de hojas errante</CVG_Crafter_Smith_1>
+  <CVG_Crafter_Smith_2>un forjador espiritual olvidado</CVG_Crafter_Smith_2>
+  <CVG_Crafter_Smith_3>un maestro de forja de secta</CVG_Crafter_Smith_3>
+  <CVG_Crafter_TalismanMaster_0>un viejo maestro de talismanes</CVG_Crafter_TalismanMaster_0>
+  <CVG_Crafter_TalismanMaster_1>un escriba de runas errante</CVG_Crafter_TalismanMaster_1>
+  <CVG_Crafter_TalismanMaster_2>un tallador de sellos olvidado</CVG_Crafter_TalismanMaster_2>
+  <CVG_Crafter_TalismanMaster_3>un maestro de talismanes de secta</CVG_Crafter_TalismanMaster_3>
+  <CVG_Crafter_Artisan_0>un viejo artesano</CVG_Crafter_Artisan_0>
+  <CVG_Crafter_Artisan_1>un artesano errante</CVG_Crafter_Artisan_1>
+  <CVG_Crafter_Artisan_2>un maestro olvidado</CVG_Crafter_Artisan_2>
+  <CVG_Crafter_Artisan_3>un artesano de secta</CVG_Crafter_Artisan_3>
+  <CVG_Crafter_BenchLevel>Nivel de mesa necesario</CVG_Crafter_BenchLevel>
+  <CVG_Crafter_BenchLevelDesc>El nivel al que hay que mejorar la mesa (en el lugar) para poder hacerlo.</CVG_Crafter_BenchLevelDesc>
+  <CVG_Crafter_Skill>Habilidad necesaria</CVG_Crafter_Skill>
+  <CVG_Crafter_SkillDesc>La habilidad mínima de quien lo fabrica.</CVG_Crafter_SkillDesc>
+  <CVG_Pill_ThisPill>{0} (esta píldora)</CVG_Pill_ThisPill>
+  <CVG_Pill_ThisPillDesc>Base {0} × {1} por su calidad. Según la calidad:</CVG_Pill_ThisPillDesc>
+  <CVG_Pill_SideEffect>Efecto secundario</CVG_Pill_SideEffect>
 </LanguageData>

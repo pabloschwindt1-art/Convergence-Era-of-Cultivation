@@ -14,4 +14,33 @@ Cost (within 8 cells of the bench): {2}.</CVG_Workbench_UpgradeDesc>
   <CVG_Workbench_Upgraded>The {0} has been upgraded to level {1}.</CVG_Workbench_Upgraded>
   <CVG_Workbench_Level>Level {0}/{1}</CVG_Workbench_Level>
   <CVG_Workbench_RequiresResearch>Requires comprehending {0} (Cultivation research tab).</CVG_Workbench_RequiresResearch>
+  <CVG_Crafter_MadeBy>Made by</CVG_Crafter_MadeBy>
+  <CVG_Crafter_Lore>{0}, {1}</CVG_Crafter_Lore>
+  <CVG_Crafter_Mixed>several makers</CVG_Crafter_Mixed>
+  <CVG_Crafter_ByColonistDesc>Made in your colony.</CVG_Crafter_ByColonistDesc>
+  <CVG_Crafter_LoreDesc>It came from outside the colony: a trader, a sect, loot or an old ruin. The seal on it is the only trace of whoever made it.</CVG_Crafter_LoreDesc>
+  <CVG_Crafter_MixedDesc>This stack mixes items made by different hands.</CVG_Crafter_MixedDesc>
+  <CVG_Crafter_Alchemist_0>an old alchemist</CVG_Crafter_Alchemist_0>
+  <CVG_Crafter_Alchemist_1>a wandering alchemist</CVG_Crafter_Alchemist_1>
+  <CVG_Crafter_Alchemist_2>a forgotten furnace master</CVG_Crafter_Alchemist_2>
+  <CVG_Crafter_Alchemist_3>a sect alchemist</CVG_Crafter_Alchemist_3>
+  <CVG_Crafter_Smith_0>an old smith</CVG_Crafter_Smith_0>
+  <CVG_Crafter_Smith_1>a wandering bladesmith</CVG_Crafter_Smith_1>
+  <CVG_Crafter_Smith_2>a forgotten spirit forger</CVG_Crafter_Smith_2>
+  <CVG_Crafter_Smith_3>a sect forge master</CVG_Crafter_Smith_3>
+  <CVG_Crafter_TalismanMaster_0>an old talisman master</CVG_Crafter_TalismanMaster_0>
+  <CVG_Crafter_TalismanMaster_1>a wandering rune writer</CVG_Crafter_TalismanMaster_1>
+  <CVG_Crafter_TalismanMaster_2>a forgotten seal carver</CVG_Crafter_TalismanMaster_2>
+  <CVG_Crafter_TalismanMaster_3>a sect talisman master</CVG_Crafter_TalismanMaster_3>
+  <CVG_Crafter_Artisan_0>an old artisan</CVG_Crafter_Artisan_0>
+  <CVG_Crafter_Artisan_1>a wandering artisan</CVG_Crafter_Artisan_1>
+  <CVG_Crafter_Artisan_2>a forgotten master</CVG_Crafter_Artisan_2>
+  <CVG_Crafter_Artisan_3>a sect artisan</CVG_Crafter_Artisan_3>
+  <CVG_Crafter_BenchLevel>Workbench level needed</CVG_Crafter_BenchLevel>
+  <CVG_Crafter_BenchLevelDesc>The level the workbench must be upgraded to (in place) before this can be made.</CVG_Crafter_BenchLevelDesc>
+  <CVG_Crafter_Skill>Skill needed</CVG_Crafter_Skill>
+  <CVG_Crafter_SkillDesc>The minimum skill of whoever makes it.</CVG_Crafter_SkillDesc>
+  <CVG_Pill_ThisPill>{0} (this pill)</CVG_Pill_ThisPill>
+  <CVG_Pill_ThisPillDesc>Base {0} × {1} for its quality. By quality:</CVG_Pill_ThisPillDesc>
+  <CVG_Pill_SideEffect>Side effect</CVG_Pill_SideEffect>
 </LanguageData>

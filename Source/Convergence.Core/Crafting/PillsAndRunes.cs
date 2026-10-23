@@ -13,6 +13,10 @@ namespace Convergence
 
         public static float FactorOf(Thing thing) =>
             thing != null && thing.TryGetQuality(out var q) ? Factors[Mathf.Clamp((int)q, 0, Factors.Length - 1)] : 1f;
+
+        /// <summary>Tabla de un efecto por calidad, para la ficha: "Horrible: +150 / ... / Legendaria: +660".</summary>
+        public static string Table(float amount) =>
+            string.Join("\n", Enumerable.Range(0, Factors.Length).Select(i => ((QualityCategory)i).GetLabel().CapitalizeFirst() + ": +" + (amount * Factors[i]).ToString("0")));
     }
 
     /// <summary>Como <c>IngestionOutcomeDoer_GiveHediff</c>, pero la severidad se multiplica por la calidad de la píldora.</summary>

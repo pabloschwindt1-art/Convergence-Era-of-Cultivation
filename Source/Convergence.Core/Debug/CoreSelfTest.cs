@@ -66,6 +66,7 @@ namespace Convergence
             Section("translations", TestTranslations);
             Section("guest group limit", () => TestGuestLimit(map));
             Section("sect framework (S1)", () => TestSectFramework(map));
+            Section("made by and pill effects", () => TestCrafter(map));
             sb.Append(fails == 0 ? "\n  ALL OK" : "\n  FAILURES: " + fails);
             // En la partida de prueba, acelerar para que corran ticks (tribulación, bestias, Maestro) y salgan sus errores.
             if (GenCommandLine.CommandLineArgPassed("cvgselftest")) Find.TickManager.CurTimeSpeed = TimeSpeed.Superfast;
@@ -90,6 +91,30 @@ namespace Convergence
         }
 
         private static void Fail(string what) => Check(false, what);
+
+        /// <summary>"Hecho por" y la ficha de las píldoras: creador inventado, creador colono, qi por calidad, efectos y receta.</summary>
+        private static void TestCrafter(Map map)
+        {
+            var def = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_NineTurnsPill") ?? DefDatabase<ThingDef>.GetNamed("CVG_FoundationPill");
+            var pill = ThingMaker.MakeThing(def);
+            pill.TryGetComp<CompQuality>()?.SetQuality(QualityCategory.Excellent, ArtGenerationContext.Outsider);
+            var comp = pill.TryGetComp<CompCrafter>();
+            Check(comp != null, def.defName + " has a maker");
+            if (comp == null) return;
+            string lore = comp.CrafterLabel;
+            Check(!lore.NullOrEmpty() && lore == comp.CrafterLabel, "from outside the colony: " + lore + " (stable)");
+            foreach (var row in comp.SpecialDisplayStats())
+                sb.Append("\n      " + row.LabelCap + ": " + row.ValueString + " | " + row.GetExplanationText(StatRequest.For(pill)).Replace("\n", " / "));
+            var colonist = map.mapPawns.FreeColonists.FirstOrDefault();
+            if (colonist != null)
+            {
+                comp.Notify_RecipeProduced(colonist);
+                Check(comp.CrafterLabel == colonist.Name.ToStringShort, "made in the colony: " + comp.CrafterLabel);
+            }
+            var weapon = DefDatabase<ThingDef>.AllDefsListForReading.FirstOrDefault(d => d.IsWeapon && d.HasComp(typeof(CompCrafter)));
+            Check(weapon != null, "weapons too: " + weapon?.defName);
+            pill.Destroy();
+        }
 
         private static Pawn Colonist(Map map, bool root)
         {

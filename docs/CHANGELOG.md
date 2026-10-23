@@ -34,6 +34,11 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 - New icons for the leader and the Grand Elder of each sect.
 ```
 ### Convergence: Core (2026-10-22)
+- **"Hecho por"** en píldoras, armas y talismanes de todos los módulos: el colono que lo fabricó o, si vino de afuera (comercio, sectas,
+  botín, eventos), un creador de lore ("Lin Jin, un alquimista errante", "un viejo herrero"…). Las pilas mezcladas dicen "varios artesanos".
+- La ficha de cada píldora muestra lo que hace **esa** píldora con su calidad (qi con la tabla de todas las calidades), sus efectos
+  secundarios (toxicidad), el nivel de mesa y la habilidad que pide la receta.
+- Autotest `-cvgselftest`: sección "made by and pill effects" (ALL OK en 1.6.4871).
 - Nuevo ajuste **"Grupos de huéspedes a la vez"** (2 por defecto; 0 = sin tope, como vanilla): con el mapa lleno de visitantes o caravanas
   de comercio de otras facciones no llegan más caravanas, visitantes, viajeros ni recaudadores; el narrador lo reintenta más tarde. Los
   forzados (misiones) pasan igual y los ataques no se tocan. Con muchas facciones amistosas (sectas) llegaban 3-4 grupos juntos, con
@@ -59,6 +64,7 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 **Change notes (Steam):**
 ```
+- Pills, weapons and talismans show who made them: your colonist, or a lore maker for items from outside ("an old alchemist", "a wandering bladesmith"...). Pills show their real effect for their quality, side effects and what the recipe needs.
 - The sword, steel and pure yang bodies are now four-grade constitutions, and two new special bodies appear: the blood moon body and, with Biotech, the thousand threads body. Colonists are born at the first grade; the higher grades come from the rituals of Convergence: Factions. Old celestial sword bodies become celestial jade.
 ```
 - Versión: si la 0.1.2 (compatibilidad con 1.7) todavía no se subió, va junto con ella; si ya se subió, 0.1.3.
