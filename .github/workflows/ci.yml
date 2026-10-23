@@ -43,6 +43,8 @@ jobs:
         run: dotnet build Source/Convergence.QiTech/Convergence.QiTech.csproj -c Release
       - name: Build Convergence.Stories
         run: dotnet build Source/Convergence.Stories/Convergence.Stories.csproj -c Release
+      - name: Build Convergence.Factions
+        run: dotnet build Source/Convergence.Factions/Convergence.Factions.csproj -c Release
 
       - name: Check that every XML file is well formed
         shell: python
