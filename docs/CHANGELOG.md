@@ -43,6 +43,9 @@ Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod
   descripción; los 21 objetos que suben el qi lo dicen (muebles, puertas, bloques, jade, plantas). Biotech Wuxia: el tambor de sangre
   ocupa 1×1 (heredaba el 1×2 de la pileta y su dibujo redondo no seguía la huella). `tools/audit_funcional.py` sin dos falsos
   positivos (qi 0 de feng shui, clases usadas desde código). Carga en 1.7 ALL OK; los 3 errores de traducción son de Biotech vanilla.
+- Biotech Wuxia: se borra la ballesta de repetición de marioneta (y su virote): ningún títere la usaba desde que el guardián de
+  bronce pelea a puños. La ballesta de repetición de Alchemy (la del jugador) sigue. Stories: las 4 llaves del final valen 1500 /
+  2500 / 3500 / 5000 (antes 0) y siguen sin poder venderse. 1.7: Core + Stories ALL OK.
 - Herramientas de prueba (sin cambio en el juego): skill nueva `rimworld-mod-tester` (docs/skills/) con el criterio de qué probar,
   y `tools/elegir-pruebas.py`, que elige los autotests según lo que cambió y separa los lentos (títeres, playtest), que piden permiso.
   `run-test.ps1 -Mods todos` y espera tantos resultados como pruebas pedidas. `TestArena.Clear` despeja la zona de los tests (roca,

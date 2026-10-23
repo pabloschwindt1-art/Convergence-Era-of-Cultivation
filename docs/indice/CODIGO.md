@@ -68,6 +68,7 @@ Generado por `tools/make-index.py`. Primera frase del `<summary>` de cada clase.
 | `CompProperties_QiConverter` | Convergence.QiTech | `QiTech.cs` |  |
 | `CompProperties_QiLightningRod` | Convergence.Core | `QiNetwork/QiSources.cs` | ×1,5 con la Marea de Qi, ×0,5 con el Reflujo de Qi, ×1 si no. |
 | `CompProperties_QiNode` | Convergence.Core | `QiNetwork/QiNetwork.cs` |  |
+| `CompProperties_SpiritFire` | Convergence.Core | `Crafting/WorkRooms.cs` | Fuego espiritual de un horno con CompRefuelable: el jugador elige el combustible (leña, piedra espiritual, cristal de fuego…) y el fuego suma calidad según lo que arde en el tanque (promedio de lo que se cargó). |
 | `CompProperties_SpiritGrade` | Convergence.Core | `Techniques/SpiritGrade.cs` | Grado espiritual de un arma (docs/modulos/DEFENSA.md §1): 0 mortal (vanilla y otros mods), 1 runas, 2 arma espiritual, 3+ tesoro |
 | `CompProperties_StabilizationChamber` | Convergence.QiTech | `QiTech.cs` |  |
 | `CompProperties_UseEffectLearnManual` | Convergence.Core | `Techniques/CompUseEffect_LearnTechniqueManual.cs` | Tablilla de jade (玉简) que enseña un manual de técnicas al leerla |
@@ -79,6 +80,7 @@ Generado por `tools/make-index.py`. Primera frase del `<summary>` de cada clase.
 | `CompQiConverterPower` | Convergence.QiTech | `QiTech.cs` | Lado "red eléctrica" del convertidor |
 | `CompQiLightningRod` | Convergence.Core | `QiNetwork/QiSources.cs` | Pararrayos del trueno celestial |
 | `CompQiNode` | Convergence.Core | `QiNetwork/QiNetwork.cs` |  |
+| `CompSpiritFire` | Convergence.Core | `Crafting/WorkRooms.cs` |  |
 | `CompSpiritGrade` | Convergence.Core | `Techniques/SpiritGrade.cs` |  |
 | `CompStabilizationChamber` | Convergence.QiTech | `QiTech.cs` | Cama con corriente: quien descansa dentro y lleva algo que suma disonancia celestial (implantes, injertos) recibe el hediff que la baja. |
 | `CompUseEffect_LearnTechniqueManual` | Convergence.Core | `Techniques/CompUseEffect_LearnTechniqueManual.cs` |  |
@@ -297,6 +299,7 @@ Generado por `tools/make-index.py`. Primera frase del `<summary>` de cada clase.
 | `MentorLesson_ReachStage` | Convergence.Core | `Mentor/MentorDefs.cs` | Que algún discípulo llegue a la etapa stage de cualquier reino (o de path); si ya venía más arriba, que avance al menos una etapa desde que empezó la lección. |
 | `MentorLesson` | Convergence.Core | `Mentor/MentorDefs.cs` | Lección del Maestro: un objetivo simple que se comprueba cada poco |
 | `MentorUtility` | Convergence.Core | `Mentor/GameComponent_Mentor.cs` |  |
+| `ModShots` | Convergence.Core | `Debug/ModShots.cs` | Capturas para las páginas de Workshop de los módulos: con -cvgmodshots (o -cvgmodshots=alchemy,races) y run-test.ps1 -Visible -Language English -Width 1920 -Height 1080, arma para cada módulo activo hasta cinco escenas c |
 | `NoEdgeShadowsStartup` | Convergence.Core | `Core/NoBuildingShadows.cs` |  |
 | `OrbitalQi` | Convergence.Core | `Space/IslandPatches.cs` | Qi celestial en órbita (ESPACIO.md): en mapas de vacío (espacio de Odyssey) el qi ambiental es más puro y la concentración sube. |
 | `PassiveTechniqueUtility` | Convergence.Core | `Techniques/PassiveTechniques.cs` |  |
@@ -316,12 +319,14 @@ Generado por `tools/make-index.py`. Primera frase del `<summary>` de cada clase.
 | `Patch_CompPowerTrader_Inspect_Qi` | Convergence.Core | `QiNetwork/QiNetwork.cs` | CompPowerTrader tiene su propio texto ("Energía generada: 0 W"); en edificios de la red de qi no se muestra. |
 | `Patch_CompPowerTrader_PowerOn_Qi` | Convergence.Core | `QiNetwork/QiNetwork.cs` |  |
 | `Patch_CompPowerTrader_PowerOn` | Convergence.Core | `Biotech/BandTotem.cs` | Un tótem no está en ninguna red eléctrica: su "energía" es tener combustible (piedras espirituales). |
+| `Patch_CompRefuelable_RefuelList` | Convergence.Core | `Crafting/WorkRooms.cs` | Lo que se carga en un horno con fuego espiritual cambia su grado de fuego. |
 | `Patch_EntityCodex_Hidden` | Convergence.Core | `Research/DaoComprehension.cs` | Con Anomaly, el juego oculta los proyectos de conocimiento hasta activar el monolito |
 | `Patch_FactionGenerator_NewGeneratedFaction` | Convergence.Factions | `SectIdeos.cs` | Una secta recién creada (al generar el mundo o al llegar con la Convergencia) ya nace con su ideología propia. |
 | `Patch_FishingUtility_GetCatchesFor` | Convergence.Core | `Core/PostConvergence.cs` | Peces con DefModExtension_PostConvergence: antes de la Convergencia no se pescan; si salen, se cambian por un pez común del mismo cuerpo de agua (el qi todavía no volvió a los ríos). |
 | `Patch_Frame_CompleteConstruction` | Convergence.Core | `Traits/TraitProgression.cs` | Terminar un edificio con contador o con feng shui (formaciones) suma al constructor. |
 | `Patch_GeneDef_DescriptionFull` | Convergence.Core | `Bloodline/BloodlineText.cs` | Descripción de genes de linaje: los de pureza listan los efectos al despertar y si ya están activos; los de aspecto aclaran que son cosméticos |
 | `Patch_GenRecipe_MakeRecipeProducts` | Convergence.Core | `Traits/TraitProgression.cs` | Cada producto hecho en una mesa con DefModExtension_ProgressCounter suma al contador del artesano. |
+| `Patch_GenRecipe_WastePill` | Convergence.Core | `Crafting/WorkRooms.cs` | Una píldora fallida sale como píldora de desecho (si existe; si no, queda horrible). |
 | `Patch_GenStep_ScatterLumpsMineable_ChooseThingDef` | Convergence.Core | `Resources/ConvergenceMineables.cs` | Las vetas de la Convergencia no aparecen al generar mapas antes de ella, ni fuera de su clima/bioma. |
 | `Patch_GenTemperature_Dome` | Convergence.Core | `Space/IslandDome.cs` | Dentro de una cúpula abastecida la temperatura es la de la cúpula. |
 | `Patch_GraphicShadow_DrawWorker` | Convergence.Core | `Core/NoBuildingShadows.cs` |  |
@@ -359,7 +364,9 @@ Generado por `tools/make-index.py`. Primera frase del `<summary>` de cada clase.
 | `Patch_Projectile_PuppetPenetration` | Convergence.Core | `Biotech/PuppetTiers.cs` |  |
 | `Patch_Projectile_Tick` | Convergence.Formations | `Formations.cs` |  |
 | `Patch_QualityUtility_Forge` | Convergence.Core | `Crafting/ForgeUtility.cs` | Calidad de forja: lo creado en una forja sube tantos niveles como CVG_ForgeQuality (la parte decimal es una probabilidad) |
+| `Patch_QualityUtility_PillBands` | Convergence.Core | `Crafting/WorkRooms.cs` | Alquimia con riesgo: el resultado de una píldora sale de una tabla que mezcla tres (novato, base y gran maestro) según el "poder" del alquimista: habilidad, sala de trabajo (sala, muebles, fuego), nivel del horno, maestr |
 | `Patch_QualityUtility_WorkbenchLevel` | Convergence.Core | `Crafting/WorkbenchLevels.cs` | Calidad por nivel de mesa (se suma al hook de forja). |
+| `Patch_QualityUtility_WorkRoom` | Convergence.Core | `Crafting/WorkRooms.cs` | Las demás cosas hechas en una sala de trabajo wuxia suben (o bajan, si la sala es mala) por la sala. |
 | `Patch_RaidPremonition` | Convergence.Core | `Traits/TraitMechanics.cs` | Regresor: un asalto contra el jugador se retrasa y avisa (una vez por asalto) |
 | `Patch_RecipeDef_AvailableOnNow_Level` | Convergence.Core | `Crafting/WorkbenchLevels.cs` |  |
 | `Patch_RecruitAttempt_DoRecruit` | Convergence.Core | `Traits/TraitProgression.cs` | Domar un animal suma "BeastTaming" (×3 si es bestia espiritual). |
@@ -410,6 +417,7 @@ Generado por `tools/make-index.py`. Primera frase del `<summary>` de cada clase.
 | `RecipeWorker_EngraveRunes` | Convergence.Core | `Crafting/PillsAndRunes.cs` | Grabar runas: la receta toma un arma de grado 0 y no la destruye, le suma un grado espiritual (CompSpiritGrade.bonus) |
 | `RecordWorker_TimeCultivating` | Convergence.Core | `Core/CultivationLife.cs` | Tiempo cultivando o templando el cuerpo (registro de la ficha del colono). |
 | `RenderTest` | Convergence.Core | `Debug/RenderTest.cs` | Herramienta de arte: con -cvgrendertest guarda retratos (sur, este, norte) de colonos con cada gen propio que dibuja partes del cuerpo y con cada prenda propia en los 5 tipos de cuerpo, en &lt;datos&gt;/cvg_renders/ |
+| `ResearchMod_FireIncident` | Convergence.Core | `Events/IncidentWorker_Convergence.cs` | Al completar el proyecto, dispara un incidente (forzado) en el mapa del jugador: p |
 | `ResearchMod_TriggerConvergence` | Convergence.Core | `Events/IncidentWorker_Convergence.cs` | Al completar el proyecto de investigación, dispara la Convergencia (modo Investigación). |
 | `ResourceSelfTest` | Convergence.Core | `Resources/ResourceSelfTest.cs` | Autotest de recursos (con -cvgselftest): vetas de la Convergencia en el mapa antes y después de ConvergenceMineables.OnConvergence, y materiales de los módulos cargados. |
 | `Result` | Convergence.Core | `Space/IslandEndgameBuilder.cs` |  |
@@ -422,6 +430,7 @@ Generado por `tools/make-index.py`. Primera frase del `<summary>` de cada clase.
 | `RitualRoleConstitutionSubject` | Convergence.Core | `Sects/TemperConstitution.cs` | Sujeto del templado: un colono libre al que le queda un paso de la constitución y con el costo en el almacén. |
 | `RoleRequirement_HasTrait` | Convergence.Core | `Sects/Constitutions.cs` | Requisito de un rol de Ideology: tener alguno de estos rasgos (cualquier grado ≥ minDegree). |
 | `RoomInfo` | Convergence.Core | `Space/IslandEndgameBuilder.cs` |  |
+| `RoomRoleWorker_WorkTableRole` | Convergence.Core | `Crafting/WorkRooms.cs` | Rol de sala por mesa: la sala es "sala de alquimia" si tiene mesas con workTableRoomRole igual a este rol. |
 | `RoomStatWorker_QiConcentration` | Convergence.Core | `Cultivation/QiConcentration.cs` | Stat de habitación CVG_QiConcentration: qi ambiental + edificios de feng shui de la habitación. |
 | `RoyalTitlePermitWorker_SectGift` | Convergence.Factions | `SectGift.cs` | Favor de regalo de una secta: como el envío de recursos de Royalty (cápsula donde se apunta, gratis fuera del enfriamiento o pagando contribución), pero con los objetos de DefModExtension_SectGift y, si corresponde, a el |
 | `ScenarioShot` | Convergence.Core | `Debug/ScenarioShot.cs` | Revisión de la lista de escenarios: con -cvgscenarioshot (sin -quicktest) abre "Elegir escenario" desde el menú principal, selecciona el primer escenario de Convergence, guarda &lt;datos&gt;/cvg_renders/scenarios.png y c |
@@ -464,6 +473,7 @@ Generado por `tools/make-index.py`. Primera frase del `<summary>` de cada clase.
 | `SpecialThingFilterWorker_SpiritGraded` | Convergence.Core | `Crafting/PillsAndRunes.cs` | Armas que grabar runas no puede mejorar (ya tienen grado espiritual 1+ o no llevan grado): la receta las excluye. |
 | `SpiritBeastUtility` | Convergence.Core | `Body/SpiritBeast.cs` | Despertar de animales tras la Convergencia y productos al carnear. |
 | `SpiritEngineeringStartup` | Convergence.QiTech | `SpiritEngineering.cs` |  |
+| `SpiritFuel` | Convergence.Core | `Crafting/WorkRooms.cs` | Un combustible del fuego espiritual y los niveles de calidad que da. |
 | `SpiritGradeInjection` | Convergence.Core | `Crafting/PillsAndRunes.cs` | Todas las armas pueden recibir runas: se les añade CompSpiritGrade (grado 0) si no lo tienen. |
 | `SpiritGradeUtility` | Convergence.Core | `Techniques/SpiritGrade.cs` | Supresión de reino (DISENO.md §4.1c): el daño contra un cultivador se reduce si el grado espiritual del ataque es menor que su reino |
 | `SpiritRoot` | Convergence.Core | `Cultivation/SpiritRoot.cs` | Raíz espiritual de un colono: calidad + uno o más elementos |
@@ -481,6 +491,8 @@ Generado por `tools/make-index.py`. Primera frase del `<summary>` de cada clase.
 | `StatPart_PuppetPower` | Convergence.Core | `Biotech/PuppetTiers.cs` | Aplica la fuerza de PuppetPower a las marionetas de guerra (daño, defensa, velocidad, cadencia). |
 | `StatPart_RealmCurveTraits` | Convergence.Core | `Traits/TraitMechanics.cs` |  |
 | `StatPart_RequiresMeleeWeapon` | Convergence.Core | `Sects/ProjectileDefense.cs` | El stat vale 0 si el pawn no empuña un arma cuerpo a cuerpo con alguna de estas etiquetas (weaponTags) o categorías: el desvío de los espadachines solo funciona con la espada en la mano. |
+| `StatPart_RoomStatCurve` | Convergence.Core | `Crafting/WorkRooms.cs` | Suma a un stat de mesa un valor por la sala: la curva convierte un stat de sala (limpieza, impresión, qi) en niveles. |
+| `StatPart_SpiritFire` | Convergence.Core | `Crafting/WorkRooms.cs` | El fuego del horno suma al stat de la sala de trabajo. |
 | `StatPart_WorkbenchLevel` | Convergence.Core | `Crafting/WorkbenchLevels.cs` |  |
 | `StatResource` | Convergence.Core | `Defs/CultivationPathDefs.cs` | Recurso con máximo y regeneración por stats del camino (el qi usa CVG_QiMax / CVG_QiRegen). |
 | `StatWorker_Cultivation` | Convergence.Core | `Cultivation/StatWorker_Cultivation.cs` | Stat de cultivo: solo se muestra en cultivadores despiertos (de cualquier camino). |
@@ -508,6 +520,7 @@ Generado por `tools/make-index.py`. Primera frase del `<summary>` de cada clase.
 | `TechniqueTracker` | Convergence.Core | `Techniques/TechniqueTracker.cs` | Técnicas de un colono (va dentro de CompCultivator): manuales conocidos, técnicas desbloqueadas, experiencia de maestría por técnica, puntos de comprensión para desbloquear y qué técnicas se ven en la barra |
 | `TechniqueUtility` | Convergence.Core | `Techniques/TechniqueUtility.cs` | Consultas de técnicas: requisitos, poder (reino × maestría × afinidad), coste y reparto a PNJ. |
 | `TemperStep` | Convergence.Core | `Sects/TemperConstitution.cs` |  |
+| `TestArena` | Convergence.Core | `Debug/TestArena.cs` | Para los autotests: deja un rectángulo del mapa como superficie limpia (sin roca, edificios, plantas ni objetos; suelo firme, sin techo ni niebla) |
 | `ThoughtWorker_CVG_RealmRank` | Convergence.Core | `Traits/TraitThoughts.cs` | Joven maestro arrogante: orgulloso si su reino es el más alto de la colonia (etapa 0), herido si alguien lo supera (etapa 1) |
 | `ThoughtWorker_CVG_Seclusion` | Convergence.Core | `Traits/TraitThoughts.cs` | Amante del retiro: contento solo en su propia habitación cerrada (+) y molesto con mucha gente alrededor (−) |
 | `ThoughtWorker_Precept_MissedCultivation` | Convergence.Core | `Traits/TraitThoughts.cs` | Precepto "cultivo obligatorio": pensamiento negativo mientras un cultivador despierto lleva un día sin cultivar (no tiene el recuerdo de "cultivé hoy", que dura un día) |
@@ -531,6 +544,7 @@ Generado por `tools/make-index.py`. Primera frase del `<summary>` de cada clase.
 | `WorkbenchLevelUtility` | Convergence.Core | `Crafting/WorkbenchLevels.cs` |  |
 | `WorkGiver_Cultivate` | Convergence.Core | `Jobs/WorkGiver_Cultivate.cs` | Busca un lugar de cultivo libre (cualquier edificio con DefModExtension_CultivationSpot). |
 | `WorkGiver_TemperBody` | Convergence.Core | `Body/BodyTempering.cs` | Busca un aparato de templado libre para quien puede templar el cuerpo ahora (tiene sangre-qi). |
+| `WorkRoomUtility` | Convergence.Core | `Crafting/WorkRooms.cs` | Salas de trabajo wuxia (sala de alquimia, herrería espiritual, estudio de talismanes…): la versión del taller y el laboratorio vanilla |
 | `WorkshopShot` | Convergence.Core | `Debug/WorkshopShot.cs` |  |
 | `WorkshopShotMap` | Convergence.Core | `Debug/WorkshopShot.cs` | Capturas para la página de Steam Workshop del Core: con -cvgworkshopshot (lanzar con run-test.ps1 -Language English -Width 1920 -Height 1080) dispara la Convergencia, arma una escena de tres cultivadores, y guarda en &lt |
 | `WorldMode` | Convergence.Core | `Core/ConvergenceSettings.cs` | Tecno-cultivo o cultivo clásico (sin tecnología) |

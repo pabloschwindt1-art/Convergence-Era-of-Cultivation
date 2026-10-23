@@ -8,9 +8,9 @@ Convergence.Sects está descontinuado (lo reemplaza Factions) y no se indexa.
 |---|---|---|---|---|---|
 | [Convergence.Alchemy](#convergencealchemy) | 0.1.1 | harmony, core, resources | 72 | — | — |
 | [Convergence.Apparel](#convergenceapparel) | 0.1.1 | harmony, core, resources | 33 | — | — |
-| [Convergence.BiotechWuxia](#convergencebiotechwuxia) | 0.1.1 | harmony, Biotech, core, resources, formations | 69 | — | — |
-| [Convergence.Core](#convergencecore) | 0.1.3 | harmony | 401 | 408 | cvganimshot, cvgbandtotemtest, cvgbenchshot, cvgcardshot, cvgcropstest, cvgdevshot, cvgflightrender, cvgflighttest, cvgflightvanilla, cvgfloorshot, cvgflowtest, cvgfurnituretest, cvgislandshot, cvgislandspacetest, cvgislandtest, cvgnightshot, cvgplaytest, cvgqinettest, cvgreach, cvgrendertest, cvgscenarioshot, cvgsectideotest, cvgselftest, cvgshowcase, cvgtabshot, cvgtransreport, cvgworkshopshot, quicktest |
-| [Convergence.Factions](#convergencefactions) | 0.1.1 | harmony, core, Royalty, Ideology | 238 | 13 | cvgfactionsshot, cvgfactionstest, cvgfavorstest |
+| [Convergence.BiotechWuxia](#convergencebiotechwuxia) | 0.1.1 | harmony, Biotech, core, resources, formations | 67 | — | — |
+| [Convergence.Core](#convergencecore) | 0.1.3 | harmony | 408 | 422 | cvganimshot, cvgbandtotemtest, cvgbenchshot, cvgcardshot, cvgcropstest, cvgdevshot, cvgflightrender, cvgflighttest, cvgflightvanilla, cvgfloorshot, cvgflowtest, cvgfurnituretest, cvgislandshot, cvgislandspacetest, cvgislandtest, cvgmodshots, cvgnightshot, cvgplaytest, cvgqinettest, cvgreach, cvgrendertest, cvgscenarioshot, cvgsectideotest, cvgselftest, cvgshowcase, cvgtabshot, cvgtransreport, cvgworkshopshot, quicktest |
+| [Convergence.Factions](#convergencefactions) | 0.1.2 | harmony, core, Royalty, Ideology | 238 | 13 | cvgfactionsshot, cvgfactionstest, cvgfavorstest |
 | [Convergence.FaunaFlora](#convergencefaunaflora) | 0.1.1 | harmony, core | 52 | — | — |
 | [Convergence.Formations](#convergenceformations) | 0.1.2 | harmony, core | 31 | 15 | cvgformationstest, cvgformflow, cvgturretshot, cvgwallshot |
 | [Convergence.Furniture](#convergencefurniture) | 0.1.1 | core | 61 | — | — |
@@ -19,7 +19,7 @@ Convergence.Sects está descontinuado (lo reemplaza Factions) y no se indexa.
 | [Convergence.Races](#convergenceraces) | 0.1.1 | harmony, core, Biotech | 198 | — | — |
 | [Convergence.Resources](#convergenceresources) | 0.1.1 | harmony, core | 93 | — | — |
 | [Convergence.Space](#convergencespace) | 0.1.1 | harmony, Odyssey, core, resources, formations | 18 | — | — |
-| [Convergence.Stories](#convergencestories) | 0.1.1 | harmony, core | 178 | 70 | cvgchargetest, cvgmechtabtest, cvgpuppetfighttest, cvgstoriestest, cvgworktest |
+| [Convergence.Stories](#convergencestories) | 0.1.1 | harmony, core | 175 | 70 | cvgchargetest, cvgmechtabtest, cvgpuppetfighttest, cvgstoriestest, cvgworktest |
 | [Convergence.TraitsDestinies](#convergencetraitsdestinies) | 0.1.1 | harmony, core | 61 | — | — |
 
 ## Convergence.Alchemy — Convergence: Alchemy & Artifacts
@@ -62,7 +62,7 @@ Convergence.Sects está descontinuado (lo reemplaza Factions) y no se indexa.
 - `Common/Defs/Apparel_Daily.xml` — ThingDef 3: CVG_Apparel_Trousers, CVG_Apparel_PaddedRobe, CVG_Apparel_FurHood
 - `Common/Defs/Textiles.xml` — ThingDef 5, RecipeDef 1: CVG_CloudCotton, CVG_Plant_CloudCotton, CVG_CloudCloth, CVG_SpiritSilk, CVG_SpiritLoom, CVG_WeaveCloudCloth
 
-**Parches:** `Patches/SectRobes.xml`, `Patches/SectRobes_Factions.xml`
+**Parches:** `Patches/SectRobes_Factions.xml`
 
 **Idiomas:** Spanish, SpanishLatin · **Texturas:** 150
 
@@ -78,7 +78,7 @@ Convergence.Sects está descontinuado (lo reemplaza Factions) y no se indexa.
 - `Common/Defs/BloodDemonDevices.xml` — ThingDef 3: CVG_BloodLotusBasin, CVG_BloodMoonCenser, CVG_BloodDrumOfReturn
 - `Common/Defs/PuppetAnimation.xml` — AnimationDef 1: CVG_PuppetSway
 - `Common/Defs/PuppetGear.xml` — ThingDef 3, ResearchProjectDef 1: CVG_Research_PuppetMasters, CVG_Apparel_PuppeteerMask, CVG_Apparel_ThousandThreadsCrown, CVG_ThreadTotem
-- `Common/Defs/PuppetWeapons.xml` — ThingDef 4: CVG_PuppetGun_RepeatingCrossbow, CVG_Bolt_PuppetCrossbow, CVG_PuppetGun_JadeNeedle, CVG_Needle_PuppetJade
+- `Common/Defs/PuppetWeapons.xml` — ThingDef 2: CVG_PuppetGun_JadeNeedle, CVG_Needle_PuppetJade
 - `Common/Defs/Puppets.xml` — ThingDef 8, HediffDef 6, ResearchProjectDef 4, PawnKindDef 3, RecipeDef 3: CVG_PuppetHeartThread, CVG_PuppetHeartThread, CVG_SpiritThread, CVG_PuppetBlueprint, CVG_Research_Puppetry, CVG_Research_WarThreads, CVG_Research_SteelThreads, CVG_Research_JadeThreads, CVG_PuppetMaterial_Wood, CVG_PuppetMaterial_Iron, CVG_PuppetMaterial_Steel, CVG_PuppetBond, CVG_PuppetBacklash, CVG_Puppet_Wood, CVG_Puppet_Wood, CVG_Puppet_Bronze, CVG_Puppet_Bronze, CVG_Puppet_Jade, CVG_Puppet_Jade, CVG_BuildPuppet_Wood, CVG_BuildPuppet_Bronze, CVG_BuildPuppet_Jade, CVG_PuppetWorkshop, CVG_SpiritCharger
 - `Common/Defs/PuppetsWork.xml` — ThingDef 3, PawnKindDef 3, RecipeDef 3: CVG_Puppet_Miner, CVG_Puppet_Miner, CVG_Puppet_Mason, CVG_Puppet_Mason, CVG_Puppet_Blade, CVG_Puppet_Blade, CVG_BuildPuppet_Miner, CVG_BuildPuppet_Mason, CVG_BuildPuppet_Blade
 - `Mods/Anomaly/Defs/Jiangshi.xml` — ThingDef 4, HediffDef 3, RecipeDef 3, DamageDef 1, MutantDef 1, PawnKindDef 1, IncidentDef 1: CVG_YangDrain, CVG_CorpseQi, CVG_Jiangshi, CVG_Jiangshi, CVG_Jiangshi, CVG_BaguaDazed, CVG_PeachWood, CVG_MakePeachWood, CVG_PeachWoodSword, CVG_BaguaMirror, CVG_GlutinousRicePoultice, CVG_MakeGlutinousRicePoultice, CVG_DrawCorpseQi, CVG_JiangshiNight
@@ -87,7 +87,7 @@ Convergence.Sects está descontinuado (lo reemplaza Factions) y no se indexa.
 
 **Parches:** `Common/Patches/Biotech_Wuxia.xml`, `Mods/Anomaly/Patches/Jiangshi_Shambler.xml`
 
-**Idiomas:** Spanish, SpanishLatin · **Texturas:** 60
+**Idiomas:** Spanish, SpanishLatin · **Texturas:** 59
 
 **Código en el Core:** Source/Convergence.Core/ → Biotech/ (marionetas, demonio de sangre, jiangshi, tótem)
 
@@ -113,7 +113,7 @@ Convergence.Sects está descontinuado (lo reemplaza Factions) y no se indexa.
 - `Common/Defs/Hediffs_Realms.xml` — HediffDef 3: CVG_Hediff_QiRefining, CVG_Hediff_Foundation, CVG_Hediff_GoldenCore
 - `Common/Defs/HistoryEvents_Sect.xml` — HistoryEventDef 7: CVG_Cultivated, CVG_Ascended, CVG_RetreatCompleted, CVG_TookPill, CVG_DemonicArt, CVG_ExtractedEssence, CVG_DuelFought
 - `Common/Defs/Incidents_Convergence.xml` — IncidentDef 1: CVG_Convergence
-- `Common/Defs/Items_Breakthrough.xml` — HediffDef 2, ThingDef 1: CVG_FoundationPill, CVG_FoundationPillAbsorbed, CVG_QiDeviation
+- `Common/Defs/Items_Breakthrough.xml` — ThingDef 2, HediffDef 2: CVG_FoundationPill, CVG_FoundationPillAbsorbed, CVG_QiDeviation, CVG_WastePill
 - `Common/Defs/Leather_Spirit.xml` — ThingDef 1: CVG_SpiritLeather
 - `Common/Defs/MentalStates_InnerDemon.xml` — MentalBreakDef 1, MentalStateDef 1: CVG_InnerDemon, CVG_InnerDemon
 - `Common/Defs/Mentors.xml` — HediffDef 2, MentorDef 1, ThingDef 1: CVG_Mentor_YunShouzhi, CVG_MentorPresence, CVG_MentorProtection, CVG_JadeFragment_Leaf
@@ -142,13 +142,14 @@ Convergence.Sects está descontinuado (lo reemplaza Factions) y no se indexa.
 - `Common/Defs/Techniques_Thunder.xml` — AbilityDef 7, HediffDef 4, TechniqueManualDef 1: CVG_Manual_NineHeavensThunder, CVG_Tech_LightningStep, CVG_Tech_ChainLightning, CVG_Tech_ThunderRoar, CVG_Tech_LightningReflexes, CVG_Passive_LightningReflexes, CVG_Tech_StormHeart, CVG_Passive_StormHeart, CVG_Tech_LightningBody, CVG_Passive_LightningBody, CVG_Tech_TribulationBorn, CVG_Passive_TribulationBorn
 - `Common/Defs/Traits_Cultivation.xml` — TraitDef 13: CVG_SpiritRoot, CVG_Body_PureYin, CVG_Body_PureYang, CVG_Body_NineYang, CVG_Body_CelestialSword, CVG_Body_Immortal, CVG_Body_Chaos, CVG_Body_Venom, CVG_Body_InnateSpirit, CVG_Body_Steel, CVG_Body_Tribulation, CVG_Body_Sword, CVG_Body_BloodMoon
 - `Common/Defs/WeaponClasses_Sects.xml` — WeaponClassDef 1: CVG_Sword
+- `Common/Defs/WorkRooms.xml` — RoomRoleDef 4, StatDef 2: CVG_WorkRoomQuality, CVG_AlchemyQuality, CVG_AlchemyRoom, CVG_SpiritSmithy, CVG_ScribeHall, CVG_WeavingRoom
 - `Common/Defs/Work_Cultivation.xml` — JobDef 2, WorkTypeDef 1, WorkGiverDef 1: CVG_Cultivation, CVG_Cultivate, CVG_Cultivate, CVG_Breakthrough
 - `Mods/Biotech/Defs/Genes_SpiritRoot.xml` — GeneDef 10, GeneCategoryDef 1: CVG_Cultivation, CVG_Gene_RootGrade_Inferior, CVG_Gene_RootGrade_Common, CVG_Gene_RootGrade_Superior, CVG_Gene_RootGrade_Heavenly, CVG_Gene_RootElement_Metal, CVG_Gene_RootElement_Wood, CVG_Gene_RootElement_Water, CVG_Gene_RootElement_Fire, CVG_Gene_RootElement_Earth, CVG_Gene_RootElement_Thunder
 - `Mods/Biotech/Defs/Traits_Puppeteer.xml` — TraitDef 1: CVG_Body_ThousandThreads
 
 **Parches:** `Common/Patches/Backstories_Tiers.xml`, `Common/Patches/Forges.xml`, `Common/Patches/SwordTag.xml`, `Common/Patches/ThinkTree_InnerDemon.xml`, `Mods/DubsBadHygiene/Patches/Bigu.xml`, `Mods/Odyssey/Patches/Vacuum.xml`
 
-**Idiomas:** English, Spanish, SpanishLatin · **Texturas:** 111
+**Idiomas:** English, Spanish, SpanishLatin · **Texturas:** 112
 
 **Código** (`Source/Convergence.Core`):
 
@@ -181,6 +182,7 @@ Convergence.Sects está descontinuado (lo reemplaza Factions) y no se indexa.
 - `Crafting/Crafter.cs`: CompProperties_Crafter, CompCrafter, CrafterInjection
 - `Crafting/ForgeUtility.cs`: DefModExtension_Forge, ForgeUtility, StatPart_Forge, Patch_QualityUtility_Forge
 - `Crafting/PillsAndRunes.cs`: PillQuality, IngestionOutcomeDoer_GiveHediffByQuality, IngestionOutcomeDoer_GainResourceByQuality, IngestionOutcomeDoer_PurifyBloodline, RecipeWorker_EngraveRunes, SpecialThingFilterWorker_SpiritGraded, CompProperties_UseEffectSpiritBurst, CompUseEffect_SpiritBurst, SpiritGradeInjection
+- `Crafting/WorkRooms.cs`: WorkRoomUtility, StatPart_RoomStatCurve, RoomRoleWorker_WorkTableRole, SpiritFuel, CompProperties_SpiritFire, CompSpiritFire, Patch_CompRefuelable_RefuelList, StatPart_SpiritFire, Patch_QualityUtility_PillBands, Patch_QualityUtility_WorkRoom, Patch_GenRecipe_WastePill
 - `Crafting/WorkbenchLevels.cs`: WorkbenchLevel, CompProperties_WorkbenchLevel, CompWorkbenchLevel, Building_LeveledWorkTable, DefModExtension_RequiresWorkbenchLevel, WorkbenchLevelUtility, Patch_RecipeDef_AvailableOnNow_Level, WorkbenchLevelStartup, StatPart_WorkbenchLevel, Patch_QualityUtility_WorkbenchLevel
 - `Cultivation/BreakthroughUtility.cs`: BreakthroughUtility
 - `Cultivation/CompCultivator.cs`: CompCultivator, Patch_Pawn_AgeTracker_BiologicalTicksPerTick, Patch_Pawn_HealthScale, CompProperties_Cultivator
@@ -210,12 +212,14 @@ Convergence.Sects está descontinuado (lo reemplaza Factions) y no se indexa.
 - `Debug/FloorShot.cs`: FloorShot
 - `Debug/FlowTest.cs`: GameComponent_FlowTest
 - `Debug/FurnitureSelfTest.cs`: GameComponent_FurnitureTest
+- `Debug/ModShots.cs`: ModShots
 - `Debug/PlayTest.cs`: GameComponent_PlayTest, PlayTestProbe, ErrorEntry
 - `Debug/ReachabilityAudit.cs`: ReachabilityAudit
 - `Debug/RenderTest.cs`: RenderTest
 - `Debug/ScenarioShot.cs`: ScenarioShot
 - `Debug/Showcase.cs`: Showcase
 - `Debug/TabShot.cs`: TabShot
+- `Debug/TestArena.cs`: TestArena
 - `Debug/TranslationReportShot.cs`: TranslationReportShot
 - `Debug/WorkshopShot.cs`: WorkshopShotMap, WorkshopShot
 - `Defs/BloodlineDefs.cs`: BloodlinePurityDef, BloodlineDef, BloodlinePurity, DefModExtension_Bloodline
@@ -227,7 +231,7 @@ Convergence.Sects está descontinuado (lo reemplaza Factions) y no se indexa.
 - `Economy/CultivationWealth.cs`: CultivationWealthDef, DefModExtension_CultivationWealth, DefModExtension_CultivationThreat, CultivationWealthRecord, CultivationWealth, Patch_WealthWatcher_ForceRecount, Patch_IncidentWorker_Raid_AdjustedRaidPoints, Patch_IncidentWorker_AggressiveAnimals
 - `Events/AuraPressure.cs`: AuraPressure, Patch_IncidentWorker_Raid_AuraPressure
 - `Events/CelestialCalendar.cs`: DefModExtension_CelestialCondition, IncidentWorker_CelestialCondition, StatPart_CelestialCondition, CelestialCalendar
-- `Events/IncidentWorker_Convergence.cs`: IncidentWorker_Convergence, ConvergenceUtility, ResearchMod_TriggerConvergence
+- `Events/IncidentWorker_Convergence.cs`: IncidentWorker_Convergence, ConvergenceUtility, ResearchMod_TriggerConvergence, ResearchMod_FireIncident
 - `Events/InnerDemon.cs`: MentalBreakWorker_InnerDemon, DefModExtension_InnerDemon, MentalState_InnerDemon, CompProperties_DaoStudy, CompDaoStudy
 - `Ideology/SectEvents.cs`: SectEvents, DefModExtension_DemonicArt, Patch_Ability_Activate_SectEvents, Patch_Thing_Ingested_SectEvents
 - `Ideology/SectIdeoSelfTest.cs`: GameComponent_SectIdeoTest
@@ -283,11 +287,11 @@ Convergence.Sects está descontinuado (lo reemplaza Factions) y no se indexa.
 - `UI/Gizmo_ResourceBar.cs`: Gizmo_ResourceBar
 - `UI/ITab_Cultivation.cs`: ITab_Cultivation
 
-**Argumentos de autotest y herramientas:** `-cvganimshot`, `-cvgbandtotemtest`, `-cvgbenchshot`, `-cvgcardshot`, `-cvgcropstest`, `-cvgdevshot`, `-cvgflightrender`, `-cvgflighttest`, `-cvgflightvanilla`, `-cvgfloorshot`, `-cvgflowtest`, `-cvgfurnituretest`, `-cvgislandshot`, `-cvgislandspacetest`, `-cvgislandtest`, `-cvgnightshot`, `-cvgplaytest`, `-cvgqinettest`, `-cvgreach`, `-cvgrendertest`, `-cvgscenarioshot`, `-cvgsectideotest`, `-cvgselftest`, `-cvgshowcase`, `-cvgtabshot`, `-cvgtransreport`, `-cvgworkshopshot`, `-quicktest`
+**Argumentos de autotest y herramientas:** `-cvganimshot`, `-cvgbandtotemtest`, `-cvgbenchshot`, `-cvgcardshot`, `-cvgcropstest`, `-cvgdevshot`, `-cvgflightrender`, `-cvgflighttest`, `-cvgflightvanilla`, `-cvgfloorshot`, `-cvgflowtest`, `-cvgfurnituretest`, `-cvgislandshot`, `-cvgislandspacetest`, `-cvgislandtest`, `-cvgmodshots`, `-cvgnightshot`, `-cvgplaytest`, `-cvgqinettest`, `-cvgreach`, `-cvgrendertest`, `-cvgscenarioshot`, `-cvgsectideotest`, `-cvgselftest`, `-cvgshowcase`, `-cvgtabshot`, `-cvgtransreport`, `-cvgworkshopshot`, `-quicktest`
 
 ## Convergence.Factions — Convergence: Factions
 
-- packageId `prospero1088.convergence.factions`, versión 0.1.1
+- packageId `prospero1088.convergence.factions`, versión 0.1.2
 - Depende de: brrainz.harmony, prospero1088.convergence.core, Ludeon.RimWorld.Royalty, Ludeon.RimWorld.Ideology
 - Incompatible con: prospero1088.convergence.sects
 - Carpetas que carga: /; Common; 1.6; Mods/BiotechWuxia  (si está prospero1088.convergence.biotechwuxia)
@@ -530,18 +534,17 @@ Convergence.Sects está descontinuado (lo reemplaza Factions) y no se indexa.
 
 - packageId `prospero1088.convergence.stories`, versión 0.1.1
 - Depende de: brrainz.harmony, prospero1088.convergence.core
-- Carpetas que carga: /; Common; 1.6; Mods/Odyssey  (si está Ludeon.RimWorld.Odyssey); Mods/BiotechWuxia  (si está prospero1088.convergence.biotechwuxia); Mods/Factions  (si está prospero1088.convergence.factions); Mods/Sects  (si está prospero1088.convergence.sects)
+- Carpetas que carga: /; Common; 1.6; Mods/Odyssey  (si está Ludeon.RimWorld.Odyssey); Mods/BiotechWuxia  (si está prospero1088.convergence.biotechwuxia); Mods/Factions  (si está prospero1088.convergence.factions)
 
 **Defs** (archivo → tipos y defNames):
 
 - `Common/Defs/Endgame.xml` — ThingDef 4, SecretRealmDef 4: CVG_FounderSeal, CVG_JiuxiaoShard, CVG_RuptureCore, CVG_HeavenKey, CVG_EndRealm_FounderTomb, CVG_EndRealm_JiuxiaoFragment, CVG_EndRealm_RuptureField, CVG_EndRealm_DeepestRealm
-- `Common/Defs/Events.xml` — StoryEventDef 111, ThoughtDef 9: WanderingSwordsman, HermitTeaches, HungryBeggar, LostDiscipleChild, PeddlerInTheMist, LotusPilgrims, StrandedAlchemist, TravelingStorytellers, RunawayDisciple, RunawayEnforcers, RunawayThanks, BeastTamerWanders, StolenManual, CursedBlade, BladeWhispers, BladeExorcism, DemonBargain, BloodPactDue, WoundedEnemyBegs, PavilionTaxmen, AllianceProposal, RivalChallenge, JadeSlipTemptation, PoorVillageFamine, SacrificeOffer, QiDeviationPlague, QiMeteor, DemonicFog, BeastTideSmall, ThievingSpirits, QiLightning, PoisonedWell, CorruptedQiLeak, CollapsingCave, RiftTremor, NightOfTheHungryGhosts, SuddenEnlightenment, SpringOfJade, AncientCacheMap, CacheGuardian … (+80)
+- `Common/Defs/Events.xml` — StoryEventDef 108, ThoughtDef 9: WanderingSwordsman, HermitTeaches, HungryBeggar, LostDiscipleChild, PeddlerInTheMist, LotusPilgrims, StrandedAlchemist, TravelingStorytellers, RunawayDisciple, RunawayEnforcers, RunawayThanks, BeastTamerWanders, StolenManual, CursedBlade, BladeWhispers, BladeExorcism, DemonBargain, BloodPactDue, WoundedEnemyBegs, PavilionTaxmen, AllianceProposal, RivalChallenge, JadeSlipTemptation, PoorVillageFamine, SacrificeOffer, QiDeviationPlague, QiMeteor, DemonicFog, BeastTideSmall, ThievingSpirits, QiLightning, PoisonedWell, CorruptedQiLeak, CollapsingCave, RiftTremor, NightOfTheHungryGhosts, SuddenEnlightenment, SpringOfJade, AncientCacheMap, CacheGuardian … (+77)
 - `Common/Defs/SecretRealms.xml` — ThingDef 5, SecretRealmDef 4, GenStepDef 2, PawnKindDef 2, HediffDef 1, BiomeDef 1, MapGeneratorDef 1, IncidentDef 1, SitePartDef 1, QuestScriptDef 1: CVG_RealmGate, CVG_RealmExit, CVG_RealmLantern, CVG_FormationTrap, CVG_ForgottenSarcophagus, CVG_RealmSealPressure, CVG_SecretRealmBiome, CVG_SecretRealmMap, CVG_SecretRealmGen, CVG_Sanctuary_Disciple, CVG_Sanctuary_Elder, CVG_SecretRealm_JadeHollow, CVG_SecretRealm_ThunderTomb, CVG_SecretRealm_NetherLabyrinth, CVG_Sanctuary, CVG_Story_RealmGate, CVG_SecretRealmEntrance, CVG_SecretRealmEntrance, CVG_OpportunitySite_SecretRealm
 - `Common/Defs/Stories.xml` — ScenarioDef 6, IncidentDef 5, ScenPartDef 5, ThingDef 2, LetterDef 1, HediffDef 1, ThoughtDef 1: CVG_StoryLetter, CVG_DamagedDantian, CVG_DantianElixir, CVG_Thought_Cursed, CVG_LightPillar, CVG_Story_CultistsFlee, CVG_Story_AllyPlea, CVG_Story_BeastMigration, CVG_Story_TreasureBirth, CVG_Story_ClanVengeance, CVG_StartingBloodline, CVG_StoryOrigin, CVG_ConvergenceOccurred, CVG_StartingCultivators, CVG_Scenario_LoneSurvivor, CVG_Scenario_SectFlight, CVG_Scenario_DestroyedFamily, CVG_Scenario_AscensionProject, CVG_Scenario_ClassicalEra, CVG_Scenario_BeastHunters, CVG_StartingPuppets
 - `Mods/BiotechWuxia/Defs/Scenario_PuppetMaster.xml` — ScenarioDef 1: CVG_Scenario_PuppetMaster
-- `Mods/Factions/Defs/Scenarios_Factions.xml` — ScenarioDef 3: CVG_Scenario_LostDisciples, CVG_Scenario_ExiledAlchemist, CVG_Scenario_LotusRefugees
+- `Mods/Factions/Defs/Scenarios_Factions.xml` — ScenarioDef 4: CVG_Scenario_LostDisciples, CVG_Scenario_ExiledAlchemist, CVG_Scenario_LotusRefugees, CVG_Scenario_DragonHeir
 - `Mods/Odyssey/Defs/Landmarks_Sects.xml` — RulePackDef 2, LandmarkDef 2, TileMutatorDef 1: CVG_DragonVein, CVG_NamerLandmark_DragonVein, CVG_NamerLandmark_SectRuins, CVG_DragonVeinLandmark, CVG_SectRuins
-- `Mods/Sects/Defs/Scenarios_Sects.xml` — ScenarioDef 1: CVG_Scenario_DragonHeir
 
 **Parches:** `Common/Patches/Sanctuary.xml`, `Mods/Odyssey/Patches/FlightCoreLoot.xml`
 

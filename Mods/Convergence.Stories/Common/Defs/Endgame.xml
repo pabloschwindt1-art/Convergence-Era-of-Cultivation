@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- Endgame chain (docs/modulos/ENDGAME.md). Art provisional; final art Things/Item/CVG/<DefName>. -->
+  <!-- Endgame chain (docs/modulos/ENDGAME.md). Art provisional; final art Things/Item/CVG/<DefName>.
+       Keys: market value rises with the step (1500 / 2500 / 3500 / 5000) for colony wealth; they still cannot be sold (tradeability None). -->
   <ThingDef ParentName="ResourceBase">
     <defName>CVG_FounderSeal</defName>
     <label>founder's seal</label>
@@ -10,7 +11,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>0</MarketValue>
+      <MarketValue>1500</MarketValue>
       <Mass>0.5</Mass>
       <MaxHitPoints>400</MaxHitPoints>
       <Flammability>0</Flammability>
@@ -29,7 +30,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>0</MarketValue>
+      <MarketValue>2500</MarketValue>
       <Mass>0.5</Mass>
       <MaxHitPoints>400</MaxHitPoints>
       <Flammability>0</Flammability>
@@ -48,7 +49,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>0</MarketValue>
+      <MarketValue>3500</MarketValue>
       <Mass>0.5</Mass>
       <MaxHitPoints>400</MaxHitPoints>
       <Flammability>0</Flammability>
@@ -67,7 +68,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>0</MarketValue>
+      <MarketValue>5000</MarketValue>
       <Mass>0.5</Mass>
       <MaxHitPoints>400</MaxHitPoints>
       <Flammability>0</Flammability>

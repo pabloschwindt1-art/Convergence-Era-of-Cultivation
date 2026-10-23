@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <CVG_PuppetGun_RepeatingCrossbow.label>ballesta de repetición de marioneta</CVG_PuppetGun_RepeatingCrossbow.label>
-  <CVG_PuppetGun_RepeatingCrossbow.description>La ballesta de repetición de Zhuge Liang (诸葛连弩) soltaba diez virotes en el tiempo en que un arquero tensaba uno; el Valle de los Mil Hilos la hundió en el pecho de sus guardianes de bronce y dejó que los engranajes de la marioneta movieran la palanca. Dispara ráfagas cortas de tres virotes y forma parte de la marioneta: se rompe si se la arranca.</CVG_PuppetGun_RepeatingCrossbow.description>
-  <CVG_Bolt_PuppetCrossbow.label>virote de ballesta</CVG_Bolt_PuppetCrossbow.label>
   <CVG_PuppetGun_JadeNeedle.label>lanzador de agujas de jade</CVG_PuppetGun_JadeNeedle.label>
   <CVG_PuppetGun_JadeNeedle.description>Se decía que las bordadoras del Valle de los Mil Hilos eran las mujeres más letales de Jiuxiao: una aguja que pasa un hilo por la seda puede pasar qi a través de una armadura. La guardiana de jade lanza agujas de jade espiritual cargadas por su núcleo de bestia; son finas, rápidas y perforan armaduras. Forma parte de la marioneta y se rompe si se la arranca.</CVG_PuppetGun_JadeNeedle.description>
   <CVG_Needle_PuppetJade.label>aguja de jade</CVG_Needle_PuppetJade.label>

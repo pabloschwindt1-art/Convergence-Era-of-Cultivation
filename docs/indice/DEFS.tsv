@@ -120,8 +120,6 @@ CVG_Research_PuppetMasters	ResearchProjectDef	Convergence.BiotechWuxia	Mods/Conv
 CVG_Apparel_PuppeteerMask	ThingDef	Convergence.BiotechWuxia	Mods/Convergence.BiotechWuxia/Common/Defs/PuppetGear.xml	puppeteer's mask	máscara del titiritero
 CVG_Apparel_ThousandThreadsCrown	ThingDef	Convergence.BiotechWuxia	Mods/Convergence.BiotechWuxia/Common/Defs/PuppetGear.xml	crown of a thousand threads	corona de mil hilos
 CVG_ThreadTotem	ThingDef	Convergence.BiotechWuxia	Mods/Convergence.BiotechWuxia/Common/Defs/PuppetGear.xml	thread totem	tótem de hilos
-CVG_PuppetGun_RepeatingCrossbow	ThingDef	Convergence.BiotechWuxia	Mods/Convergence.BiotechWuxia/Common/Defs/PuppetWeapons.xml	puppet repeating crossbow	ballesta de repetición de marioneta
-CVG_Bolt_PuppetCrossbow	ThingDef	Convergence.BiotechWuxia	Mods/Convergence.BiotechWuxia/Common/Defs/PuppetWeapons.xml	crossbow bolt	virote de ballesta
 CVG_PuppetGun_JadeNeedle	ThingDef	Convergence.BiotechWuxia	Mods/Convergence.BiotechWuxia/Common/Defs/PuppetWeapons.xml	jade needle caster	lanzador de agujas de jade
 CVG_Needle_PuppetJade	ThingDef	Convergence.BiotechWuxia	Mods/Convergence.BiotechWuxia/Common/Defs/PuppetWeapons.xml	jade needle	aguja de jade
 CVG_PuppetHeartThread	HediffDef	Convergence.BiotechWuxia	Mods/Convergence.BiotechWuxia/Common/Defs/Puppets.xml	puppet heart thread	hilo del corazón de marioneta
@@ -346,6 +344,7 @@ CVG_Convergence	IncidentDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/I
 CVG_FoundationPill	ThingDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/Items_Breakthrough.xml	foundation pill	píldora de fundación
 CVG_FoundationPillAbsorbed	HediffDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/Items_Breakthrough.xml	foundation pill absorbed	píldora de fundación absorbida
 CVG_QiDeviation	HediffDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/Items_Breakthrough.xml	qi deviation	desviación de qi
+CVG_WastePill	ThingDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/Items_Breakthrough.xml	waste pill	píldora de desecho
 CVG_SpiritLeather	ThingDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/Leather_Spirit.xml	spirit leather	cuero espiritual
 CVG_InnerDemon	MentalBreakDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/MentalStates_InnerDemon.xml		demonio interno
 CVG_InnerDemon	MentalStateDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/MentalStates_InnerDemon.xml	inner demon	demonio interno
@@ -558,6 +557,12 @@ CVG_Body_Tribulation	TraitDef	Convergence.Core	Mods/Convergence.Core/Common/Defs
 CVG_Body_Sword	TraitDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/Traits_Cultivation.xml		
 CVG_Body_BloodMoon	TraitDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/Traits_Cultivation.xml		
 CVG_Sword	WeaponClassDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/WeaponClasses_Sects.xml	sword	espada
+CVG_WorkRoomQuality	StatDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/WorkRooms.xml	work room quality	calidad de la sala de trabajo
+CVG_AlchemyQuality	StatDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/WorkRooms.xml	alchemy mastery	maestría alquímica
+CVG_AlchemyRoom	RoomRoleDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/WorkRooms.xml	alchemy room	sala de alquimia
+CVG_SpiritSmithy	RoomRoleDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/WorkRooms.xml	spirit smithy	herrería espiritual
+CVG_ScribeHall	RoomRoleDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/WorkRooms.xml	scribe hall	sala de escribas
+CVG_WeavingRoom	RoomRoleDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/WorkRooms.xml	weaving room	sala de tejido
 CVG_Cultivation	WorkTypeDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/Work_Cultivation.xml		cultivo
 CVG_Cultivate	WorkGiverDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/Work_Cultivation.xml	cultivate	cultivar
 CVG_Cultivate	JobDef	Convergence.Core	Mods/Convergence.Core/Common/Defs/Work_Cultivation.xml		cultivar
@@ -725,7 +730,7 @@ CVG_Retreat_Revered_Self	ThoughtDef	Convergence.Factions	Mods/Convergence.Factio
 CVG_Cultivation_Obligatory_Missed	ThoughtDef	Convergence.Factions	Mods/Convergence.Factions/Common/Defs/Ideology/Precepts_Sect.xml		
 CVG_Meme_WanderingPath	MemeDef	Convergence.Factions	Mods/Convergence.Factions/Common/Defs/Ideology/RogueCultivators_Ideology.xml	wandering path	camino errante
 CVG_Preset_WanderingPath	IdeoPresetDef	Convergence.Factions	Mods/Convergence.Factions/Common/Defs/Ideology/RogueCultivators_Ideology.xml	wandering path	senda errante
-CVG_IdeoColor_Natural	ColorDef	Convergence.Factions	Mods/Convergence.Factions/Common/Defs/Ideology/SectIdeoIcons.xml	natural	
+CVG_IdeoColor_Natural	ColorDef	Convergence.Factions	Mods/Convergence.Factions/Common/Defs/Ideology/SectIdeoIcons.xml	natural	natural
 CVG_IdeoIcon_SwordWay	IdeoIconDef	Convergence.Factions	Mods/Convergence.Factions/Common/Defs/Ideology/SectIdeoIcons.xml		
 CVG_IdeoIcon_BodyWay	IdeoIconDef	Convergence.Factions	Mods/Convergence.Factions/Common/Defs/Ideology/SectIdeoIcons.xml		
 CVG_IdeoIcon_CauldronWay	IdeoIconDef	Convergence.Factions	Mods/Convergence.Factions/Common/Defs/Ideology/SectIdeoIcons.xml		
@@ -1419,7 +1424,6 @@ LostCaravanReward	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Com
 VisitAzurePeak	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
 VisitCauldron	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
 VisitLotus	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
-VisitDragon	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
 VisitRogueMarket	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
 VisitEmpireInquisitor	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
 MissionWindWolf	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
@@ -1433,7 +1437,6 @@ MissionCauldronCores	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/
 MissionCaravanEscort	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
 MissionEscortReward	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
 MissionAzureTournament	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
-MissionDragonTribute	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
 MissionStolenManual	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
 MissionManualReward	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
 TravelingHealer	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
@@ -1451,7 +1454,6 @@ PreOddLights	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/D
 PreRestlessAnimals	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
 PreStrangeDreams	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
 CauldronCreditors	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
-DragonHeirTrial	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
 LotusWelcome	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
 BeastGuildOffer	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
 TeaMaster	StoryEventDef	Convergence.Stories	Mods/Convergence.Stories/Common/Defs/Events.xml		
@@ -1533,12 +1535,12 @@ CVG_Scenario_PuppetMaster	ScenarioDef	Convergence.Stories	Mods/Convergence.Stori
 CVG_Scenario_LostDisciples	ScenarioDef	Convergence.Stories	Mods/Convergence.Stories/Mods/Factions/Defs/Scenarios_Factions.xml	Lost disciples	Discípulos perdidos
 CVG_Scenario_ExiledAlchemist	ScenarioDef	Convergence.Stories	Mods/Convergence.Stories/Mods/Factions/Defs/Scenarios_Factions.xml	Exiled alchemist	Alquimista exiliado
 CVG_Scenario_LotusRefugees	ScenarioDef	Convergence.Stories	Mods/Convergence.Stories/Mods/Factions/Defs/Scenarios_Factions.xml	Healers of the infirmary	Sanadores de la enfermería
+CVG_Scenario_DragonHeir	ScenarioDef	Convergence.Stories	Mods/Convergence.Stories/Mods/Factions/Defs/Scenarios_Factions.xml	Heir of the dragon	Heredero del dragón
 CVG_DragonVein	TileMutatorDef	Convergence.Stories	Mods/Convergence.Stories/Mods/Odyssey/Defs/Landmarks_Sects.xml	dragon vein	veta de dragón
 CVG_NamerLandmark_DragonVein	RulePackDef	Convergence.Stories	Mods/Convergence.Stories/Mods/Odyssey/Defs/Landmarks_Sects.xml		
 CVG_NamerLandmark_SectRuins	RulePackDef	Convergence.Stories	Mods/Convergence.Stories/Mods/Odyssey/Defs/Landmarks_Sects.xml		
 CVG_DragonVeinLandmark	LandmarkDef	Convergence.Stories	Mods/Convergence.Stories/Mods/Odyssey/Defs/Landmarks_Sects.xml	dragon vein	veta de dragón
 CVG_SectRuins	LandmarkDef	Convergence.Stories	Mods/Convergence.Stories/Mods/Odyssey/Defs/Landmarks_Sects.xml	ruins of an old sect	ruinas de una secta antigua
-CVG_Scenario_DragonHeir	ScenarioDef	Convergence.Stories	Mods/Convergence.Stories/Mods/Sects/Defs/Scenarios_Sects.xml	Heir of the dragon	Heredero del dragón
 CVG_Inspired_Enlightenment	InspirationDef	Convergence.TraitsDestinies	Mods/Convergence.TraitsDestinies/Common/Defs/Inspirations.xml	sudden enlightenment	iluminación súbita
 CVG_Inspired_SwordIntent	InspirationDef	Convergence.TraitsDestinies	Mods/Convergence.TraitsDestinies/Common/Defs/Inspirations.xml	sword intent	intención de la espada
 CVG_Inspired_ForgeFire	InspirationDef	Convergence.TraitsDestinies	Mods/Convergence.TraitsDestinies/Common/Defs/Inspirations.xml	forge fire	fuego de la forja

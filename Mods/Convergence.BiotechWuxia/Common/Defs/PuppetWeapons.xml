@@ -3,60 +3,9 @@
   <!--
     Puppet weapons (docs/revision/REVISION_BiotechWuxia.md, item 2). Same pattern as the vanilla light mech guns
     (LightMechanoidGunRanged: destroyOnDrop, tradeability None, relicChance 0): built into the puppet, never dropped.
-    Own weapon tags (CVG_PuppetCrossbow / CVG_PuppetJadeNeedle) so only puppets get them and puppets get nothing else.
+    Own weapon tag (CVG_PuppetJadeNeedle) so only puppets get it and puppets get nothing else. The repeating crossbow was removed
+    (2026-10-23): no puppet used it after the bronze guardian became a melee fighter.
   -->
-
-  <!-- ================= Zhuge repeating crossbow ================= -->
-  <ThingDef ParentName="LightMechanoidGunRanged">
-    <defName>CVG_PuppetGun_RepeatingCrossbow</defName>
-    <label>puppet repeating crossbow</label>
-    <description>Zhuge Liang's repeating crossbow (诸葛连弩) loosed ten bolts in the time an archer drew once; the Thousand Strings Valley sank it into the chests of its bronze guardians and let the puppet's own gears work the lever. It fires short bursts of three bolts and is part of the puppet: it breaks if torn out.</description>
-    <techLevel>Medieval</techLevel>
-    <graphicData>
-      <texPath>Things/Item/Equipment/WeaponRanged/CVG_PuppetCrossbow</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <MarketValue>600</MarketValue>
-      <Mass>2</Mass>
-      <AccuracyTouch>0.70</AccuracyTouch>
-      <AccuracyShort>0.78</AccuracyShort>
-      <AccuracyMedium>0.65</AccuracyMedium>
-      <AccuracyLong>0.45</AccuracyLong>
-      <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
-    </statBases>
-    <weaponTags>
-      <li>CVG_PuppetCrossbow</li>
-    </weaponTags>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>CVG_Bolt_PuppetCrossbow</defaultProjectile>
-        <warmupTime>1.1</warmupTime>
-        <range>22.9</range>
-        <burstShotCount>3</burstShotCount>
-        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
-        <soundCast>Bow_Recurve</soundCast>
-      </li>
-    </verbs>
-  </ThingDef>
-
-  <ThingDef ParentName="BaseProjectileNeolithic">
-    <defName>CVG_Bolt_PuppetCrossbow</defName>
-    <label>crossbow bolt</label>
-    <graphicData>
-      <texPath>Things/Projectile/Arrow_Small</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
-      <damageDef>Arrow</damageDef>
-      <damageAmountBase>9</damageAmountBase>
-      <armorPenetrationBase>0.15</armorPenetrationBase>
-      <stoppingPower>0.5</stoppingPower>
-      <speed>50</speed>
-    </projectile>
-  </ThingDef>
 
   <!-- ================= Jade needle caster ================= -->
   <ThingDef ParentName="LightMechanoidGunRanged">
