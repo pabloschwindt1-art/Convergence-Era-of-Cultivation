@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Blood Moon Cult: adult backstories by rank (fixedAdultBackstories). Childhood stays random: the Cult recruits the desperate,
+       the cast out and the ambitious from anywhere. All of them fight with blades. -->
+  <BackstoryDef Abstract="True" Name="CVG_BloodMoonBackstoryBase">
+    <slot>Adulthood</slot>
+    <shuffleable>false</shuffleable>
+    <spawnCategories><li>CVG_Sect_BloodMoon</li></spawnCategories>
+    <requiredWorkTags><li>Violent</li></requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_BloodMoonBackstoryBase">
+    <defName>CVG_Backstory_BM_BloodServant</defName>
+    <title>blood servant</title>
+    <titleShort>blood servant</titleShort>
+    <description>[PAWN_nameDef] came to the Cult with nothing and gave it the only thing [PAWN_pronoun] had: a bowl of [PAWN_possessive] own blood every new moon. Servants who keep giving become disciples; the others become lanterns.</description>
+    <skillGains>
+      <Melee>3</Melee>
+      <Cooking>2</Cooking>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_BloodMoonBackstoryBase">
+    <defName>CVG_Backstory_BM_RiftRunner</defName>
+    <title>rift runner</title>
+    <titleShort>rift runner</titleShort>
+    <description>When the rifts to Jiuxiao opened, the Cult sent its expendables through first. [PAWN_nameDef] went in three times and came back three times, carrying maps drawn in [PAWN_possessive] own blood because ink froze on the other side.</description>
+    <skillGains>
+      <Melee>3</Melee>
+      <Plants>2</Plants>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_BloodMoonBackstoryBase">
+    <defName>CVG_Backstory_BM_BloodDisciple</defName>
+    <title>blood disciple</title>
+    <titleShort>blood disciple</titleShort>
+    <description>[PAWN_nameDef] is a full disciple of the Blood Moon, taught to draw qi from the blood of the fallen instead of from the sky. The orthodox sects call it theft; the Cult calls it not letting anything go to waste.</description>
+    <skillGains>
+      <Melee>4</Melee>
+      <Medicine>2</Medicine>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_BloodMoonBackstoryBase">
+    <defName>CVG_Backstory_BM_LanternKeeper</defName>
+    <title>keeper of soul lanterns</title>
+    <titleShort>lantern keeper</titleShort>
+    <description>[PAWN_nameDef] tended the soul lanterns of Shi Gu, the elder of souls: one flame for each disciple of the Cult, which flickers when its owner is hurt and goes out when they die. [PAWN_pronoun] learned to read a battle from a room full of candles.</description>
+    <skillGains>
+      <Intellectual>3</Intellectual>
+      <Melee>2</Melee>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_BloodMoonBackstoryBase">
+    <defName>CVG_Backstory_BM_CrimsonEnvoy</defName>
+    <title>crimson envoy</title>
+    <titleShort>crimson envoy</titleShort>
+    <description>[PAWN_nameDef] carried the Blood Saint's word to sects that would rather have killed the messenger. Su Lanyin chooses envoys who smile easily and bleed slowly; [PAWN_nameDef] has done both in front of three sect masters.</description>
+    <skillGains>
+      <Social>4</Social>
+      <Melee>4</Melee>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_BloodMoonBackstoryBase">
+    <defName>CVG_Backstory_BM_DebtCollector</defName>
+    <title>collector of blood debts</title>
+    <titleShort>debt collector</titleShort>
+    <description>Every blood debt owed to the Cult is written in a red book, and [PAWN_nameDef] carried it for years. Debtors pay in blood, in service or in kind; [PAWN_pronoun] never cared which, only that the line was crossed out.</description>
+    <skillGains>
+      <Melee>5</Melee>
+      <Social>2</Social>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_BloodMoonBackstoryBase">
+    <defName>CVG_Backstory_BM_BloodElder</defName>
+    <title>blood elder</title>
+    <titleShort>blood elder</titleShort>
+    <description>[PAWN_nameDef] was among the first disciples of Xue Jiuyou, the Venerable, and was there when the Heavenly Origin sect purged them. [PAWN_pronoun] has outlived most of the elders who did it, and visits the graves of the rest.</description>
+    <skillGains>
+      <Melee>7</Melee>
+      <Social>2</Social>
+      <Medicine>2</Medicine>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_BloodMoonBackstoryBase">
+    <defName>CVG_Backstory_BM_SoulElder</defName>
+    <title>elder of souls</title>
+    <titleShort>soul elder</titleShort>
+    <description>[PAWN_nameDef] studied under Shi Gu, who believes the soul is just blood that has learned to think. [PAWN_pronoun] speaks softly, never raises a hand in anger, and nobody in the Cult has ever won an argument against [PAWN_objective].</description>
+    <skillGains>
+      <Intellectual>5</Intellectual>
+      <Melee>4</Melee>
+      <Social>2</Social>
+    </skillGains>
+  </BackstoryDef>
+</Defs>

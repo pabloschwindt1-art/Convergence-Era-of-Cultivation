@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Blood Moon Cult: ideology (meme, preset, specialist, blood oath). Template: SECTS2_PLANTILLA.md. -->
+
+  <MemeDef>
+    <defName>CVG_Meme_DemonicWay</defName>
+    <label>demonic way</label>
+    <description>Heaven is a cage; break it with what you have in your veins. Blood and soul hold more qi than any mountain, and only cowards call it theft to take what the dead no longer need. Strength is respected, loyalty is repaid and every blood debt is collected.</description>
+    <iconPath>UI/Memes/CVG/DemonicWay</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>114</renderOrder>
+    <exclusionTags><li>CVG_Sect_DemonicWay</li></exclusionTags>
+    <preventApparelRequirements>true</preventApparelRequirements>
+    <!-- Believers may use any weapon; a blade lifts their mood, a long gun weighs on it: blood spilled from afar is blood wasted. -->
+    <preferredWeaponClasses>
+      <noble>MeleePiercer</noble>
+      <despised>LongShots</despised>
+    </preferredWeaponClasses>
+    <requireOne>
+      <li><li>CVG_Demonic_Embraced</li></li>
+      <li><li>CVG_Essence_Honored</li></li>
+      <li><li>CVG_Cultivation_Venerated</li></li>
+      <li><li>CVG_Hierarchy_Elders</li></li>
+    </requireOne>
+    <requiredRituals>
+      <li>
+        <precept>CVG_Ritual_BloodOath</precept>
+        <pattern>CVG_Pattern_BloodOath</pattern>
+      </li>
+    </requiredRituals>
+    <agreeableTraits>
+      <li>CVG_Body_BloodMoon</li>
+    </agreeableTraits>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->blood</li>
+        <li>memeHyphenPrefix->blood</li>
+        <li>memeConcept->demonic way</li>
+        <li>memeLeaderNoun->venerable</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <li>creation(tag=meme_CVG_Meme_DemonicWay)->[deity0_name] bled under a red moon until the sky bled back, and drank what fell.</li>
+          <li>episode(uses=1,tag=meme_CVG_Meme_DemonicWay)->[deity0_name] showed the first [memberName] that blood remembers every cultivation it ever fed.</li>
+          <li>intro(tag=meme_CVG_Meme_DemonicWay)->The early [memberNamePlural] of the [place_summary] [place_name] were cast out of a righteous sect for saying aloud what its elders practiced in secret.</li>
+          <li>conflict(tag=meme_CVG_Meme_DemonicWay)->A powerful [foeLeader] hunted the [memberNamePlural] in the name of Heaven.</li>
+          <li>founderJoin(tag=meme_CVG_Meme_DemonicWay)->[founderName] mixed [founderName]'s blood with that of a dying [memberName], and both of them lived.</li>
+          <li>victory(tag=meme_CVG_Meme_DemonicWay)->[founderName] collected the blood debt of the [foeLeader], and the [foeSoldiers] paid the interest.</li>
+          <li>setup(tag=meme_CVG_Meme_DemonicWay)->The Iron Calamity left the world full of the dead, and the believers learned not to waste them.</li>
+          <li>story(uses=1,tag=meme_CVG_Meme_DemonicWay)->The believers spread out and grew in number, each one bound to the others by blood.</li>
+          <li>lessonIntro(tag=meme_CVG_Meme_DemonicWay)->Disciple, the Venerable used to say:</li>
+          <li>lesson(tag=meme_CVG_Meme_DemonicWay)->Heaven is a cage; break it with what you have in your veins.</li>
+          <li>lessonReinforcement(tag=meme_CVG_Meme_DemonicWay)->You will understand it the first time you face your inner demon and win.</li>
+          <li>archistFact(tag=meme_CVG_Meme_DemonicWay)->The archotechs also feed on what others leave behind; they simply call it data.</li>
+          <li>archistProphecy(tag=meme_CVG_Meme_DemonicWay)->[inTheEnd], the moon will turn red for everyone, and only the blood-sworn will know what it means.</li>
+          <li>animistFact(tag=meme_CVG_Meme_DemonicWay)->Every beast keeps its spirit in its blood; we only ask it to stay.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Blood Moon</ideoName>
+        <theme>blood</theme>
+        <adjective>blood</adjective>
+        <member>blood disciple</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+
+  <IdeoPresetDef>
+    <defName>CVG_Preset_BloodMoon</defName>
+    <label>blood moon cult</label>
+    <description>Disciples of the Blood Moon: Heaven is a cage, and blood and soul are the keys. The demonic arts are embraced, extracting essence is honored, cultivation is venerated and the elders lead. Your colony stays independent; the Cult is a pact, not a master, and it remembers every debt in both directions.</description>
+    <categoryDef>Strong</categoryDef>
+    <memes>
+      <li>CVG_Meme_DemonicWay</li>
+      <li>Loyalist</li>
+    </memes>
+  </IdeoPresetDef>
+
+  <PreceptDef ParentName="CVG_SectSpecialistBase">
+    <defName>CVG_Role_BloodMoonOfficiant</defName>
+    <label>officiant of the blood moon</label>
+    <description>The officiant holds the bowl at every blood oath and reads the moon before every raid. Only someone whose own blood has already turned may hold the office: the Cult says you cannot bind another's blood with blood that is still clean.</description>
+    <iconPath>UI/Roles/CVG/BloodMoonOfficiant</iconPath>
+    <nameMaker>NamerRoleMoralist</nameMaker>
+    <requiredMemes><li>CVG_Meme_DemonicWay</li></requiredMemes>
+    <roleRequiredWorkTags><li>Violent</li></roleRequiredWorkTags>
+    <roleRequirements Inherit="False">
+      <li Class="RoleRequirement_SameIdeo">
+        <labelKey>RoleRequirementLabelSameIdeo</labelKey>
+      </li>
+      <li Class="Convergence.RoleRequirement_HasTrait">
+        <traits><li>CVG_Body_BloodMoon</li></traits>
+      </li>
+    </roleRequirements>
+    <roleEffects>
+      <li Class="RoleEffect_PawnStatFactor">
+        <statDef>MeleeDamageFactor</statDef>
+        <modifier>1.1</modifier>
+      </li>
+      <li Class="RoleEffect_PawnStatFactor">
+        <statDef>InjuryHealingFactor</statDef>
+        <modifier>1.2</modifier>
+      </li>
+    </roleEffects>
+    <!-- Blood control: the officiant can drive another's blood to fight a disease (vanilla immunity drive). -->
+    <grantedAbilities>
+      <li>ImmunityDrive</li>
+    </grantedAbilities>
+  </PreceptDef>
+
+  <!-- Ritual: Blood Oath. One grade of the blood moon body per oath; on failure only the offerings are lost. -->
+  <RitualOutcomeEffectDef ParentName="CVG_SectTemperOutcomeBase">
+    <defName>CVG_Outcome_BloodOath</defName>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_TemperConstitution">
+        <steps>
+          <li>
+            <toTrait>CVG_Body_BloodMoon</toTrait>
+            <toDegree>0</toDegree>
+            <chanceByQuality><points><li>(0, 0.80)</li><li>(1, 1.00)</li></points></chanceByQuality>
+            <cost><CVG_BeastBlood>15</CVG_BeastBlood><CVG_SpiritStone>20</CVG_SpiritStone></cost>
+          </li>
+          <li>
+            <fromTrait>CVG_Body_BloodMoon</fromTrait>
+            <fromDegree>0</fromDegree>
+            <toTrait>CVG_Body_BloodMoon</toTrait>
+            <toDegree>1</toDegree>
+            <chanceByQuality><points><li>(0, 0.60)</li><li>(1, 1.00)</li></points></chanceByQuality>
+            <cost><CVG_BeastBlood>30</CVG_BeastBlood><CVG_SpiritStone>40</CVG_SpiritStone></cost>
+          </li>
+          <li>
+            <fromTrait>CVG_Body_BloodMoon</fromTrait>
+            <fromDegree>1</fromDegree>
+            <toTrait>CVG_Body_BloodMoon</toTrait>
+            <toDegree>2</toDegree>
+            <chanceByQuality><points><li>(0, 0.40)</li><li>(1, 0.90)</li></points></chanceByQuality>
+            <cost><CVG_BeastBlood>60</CVG_BeastBlood><CVG_SpiritStone>80</CVG_SpiritStone><CVG_BeastCore>2</CVG_BeastCore></cost>
+          </li>
+          <li>
+            <fromTrait>CVG_Body_BloodMoon</fromTrait>
+            <fromDegree>2</fromDegree>
+            <toTrait>CVG_Body_BloodMoon</toTrait>
+            <toDegree>3</toDegree>
+            <chanceByQuality><points><li>(0, 0.20)</li><li>(1, 0.55)</li></points></chanceByQuality>
+            <cost><CVG_BeastBlood>120</CVG_BeastBlood><CVG_SpiritStone>150</CVG_SpiritStone><CVG_PrimordialCrystal>2</CVG_PrimordialCrystal></cost>
+          </li>
+        </steps>
+      </li>
+    </modExtensions>
+  </RitualOutcomeEffectDef>
+
+  <RitualPatternDef ParentName="CVG_SectTemperPatternBase">
+    <defName>CVG_Pattern_BloodOath</defName>
+    <ritualOutcomeEffect>CVG_Outcome_BloodOath</ritualOutcomeEffect>
+    <ritualExplanation>The officiant of the blood moon turns one disciple's blood by a single grade: turbid blood, crimson blood, lunar blood, inner demon blood. A failed oath costs only the offerings.</ritualExplanation>
+  </RitualPatternDef>
+
+  <PreceptDef ParentName="CVG_SectRitualBase">
+    <defName>CVG_Ritual_BloodOath</defName>
+    <label>blood oath</label>
+    <description>Under the moon, the disciple cuts a palm over a bowl of beast blood and spirit stones while the officiant names every debt the oath creates. The others add a drop each; when the bowl boils without fire, the disciple drinks it, and the Cult owns a little more of them.</description>
+    <iconPath>UI/Icons/Rituals/CVG/BloodOath</iconPath>
+    <ritualPatternBase>CVG_Pattern_BloodOath</ritualPatternBase>
+    <requiredMemes><li>CVG_Meme_DemonicWay</li></requiredMemes>
+  </PreceptDef>
+</Defs>

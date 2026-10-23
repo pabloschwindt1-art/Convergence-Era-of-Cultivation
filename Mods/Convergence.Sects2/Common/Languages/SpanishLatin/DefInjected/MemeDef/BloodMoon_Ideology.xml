@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Meme_DemonicWay.label>camino demoníaco</CVG_Meme_DemonicWay.label>
+  <CVG_Meme_DemonicWay.description>El Cielo es una jaula; rómpela con lo que tienes en las venas. La sangre y el alma guardan más qi que cualquier montaña, y solo los cobardes llaman robo a tomar lo que los muertos ya no necesitan. La fuerza se respeta, la lealtad se paga y toda deuda de sangre se cobra.</CVG_Meme_DemonicWay.description>
+  <CVG_Meme_DemonicWay.generalRules.rulesStrings>
+    <li>memeAdjective-&gt;sangriento</li>
+    <li>memeHyphenPrefix-&gt;sangre</li>
+    <li>memeConcept-&gt;camino demoníaco</li>
+    <li>memeLeaderNoun-&gt;venerable</li>
+  </CVG_Meme_DemonicWay.generalRules.rulesStrings>
+  <CVG_Meme_DemonicWay.descriptionMaker.rules.rulesStrings>
+    <li>creation(tag=meme_CVG_Meme_DemonicWay)-&gt;[deity0_name] sangró bajo una luna roja hasta que el cielo sangró también, y bebió lo que cayó.</li>
+    <li>episode(uses=1,tag=meme_CVG_Meme_DemonicWay)-&gt;[deity0_name] le mostró al primer [memberName] que la sangre recuerda cada cultivo que alimentó.</li>
+    <li>intro(tag=meme_CVG_Meme_DemonicWay)-&gt;Los primeros [memberNamePlural] de [place_summary] [place_name] fueron expulsados de una secta justa por decir en voz alta lo que sus ancianos practicaban en secreto.</li>
+    <li>conflict(tag=meme_CVG_Meme_DemonicWay)-&gt;Un poderoso [foeLeader] cazaba a los [memberNamePlural] en nombre del Cielo.</li>
+    <li>founderJoin(tag=meme_CVG_Meme_DemonicWay)-&gt;[founderName] mezcló su sangre con la de un [memberName] moribundo, y los dos vivieron.</li>
+    <li>victory(tag=meme_CVG_Meme_DemonicWay)-&gt;[founderName] cobró la deuda de sangre del [foeLeader], y los [foeSoldiers] pagaron los intereses.</li>
+    <li>setup(tag=meme_CVG_Meme_DemonicWay)-&gt;La Calamidad de Hierro dejó el mundo lleno de muertos, y los creyentes aprendieron a no desperdiciarlos.</li>
+    <li>story(uses=1,tag=meme_CVG_Meme_DemonicWay)-&gt;Los creyentes se extendieron y crecieron en número, cada uno atado a los demás por la sangre.</li>
+    <li>lessonIntro(tag=meme_CVG_Meme_DemonicWay)-&gt;Discípulo, el Venerable solía decir:</li>
+    <li>lesson(tag=meme_CVG_Meme_DemonicWay)-&gt;el Cielo es una jaula; rómpela con lo que tienes en las venas.</li>
+    <li>lessonReinforcement(tag=meme_CVG_Meme_DemonicWay)-&gt;Lo entenderás la primera vez que enfrentes a tu demonio interno y ganes.</li>
+    <li>archistFact(tag=meme_CVG_Meme_DemonicWay)-&gt;Los arcotecnólogos también se alimentan de lo que otros dejan; solo que lo llaman datos.</li>
+    <li>archistProphecy(tag=meme_CVG_Meme_DemonicWay)-&gt;[inTheEnd], la luna se volverá roja para todos, y solo los juramentados de sangre sabrán qué significa.</li>
+    <li>animistFact(tag=meme_CVG_Meme_DemonicWay)-&gt;Cada bestia guarda su espíritu en la sangre; nosotros solo le pedimos que se quede.</li>
+  </CVG_Meme_DemonicWay.descriptionMaker.rules.rulesStrings>
+  <CVG_Meme_DemonicWay.symbolPacks.0.ideoName>Luna Sangrienta</CVG_Meme_DemonicWay.symbolPacks.0.ideoName>
+  <CVG_Meme_DemonicWay.symbolPacks.0.theme>sangre</CVG_Meme_DemonicWay.symbolPacks.0.theme>
+  <CVG_Meme_DemonicWay.symbolPacks.0.adjective>sangriento</CVG_Meme_DemonicWay.symbolPacks.0.adjective>
+  <CVG_Meme_DemonicWay.symbolPacks.0.member>discípulo de sangre</CVG_Meme_DemonicWay.symbolPacks.0.member>
+</LanguageData>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Faction_BloodMoon.label>culto de la luna sangrienta</CVG_Faction_BloodMoon.label>
+  <CVG_Faction_BloodMoon.description>Un culto heterodoxo nacido de una purga de la secta del Origen Celestial. Su fundador, Xue Jiuyou, el Venerable, descubrió que la sangre y el alma concentran el qi más rápido que cualquier meditación, y lo expulsaron por decirlo en voz alta. No son locos: son pragmáticos. Respetan la fuerza y la lealtad, tienen sus propias leyes y pagan sus deudas de sangre hasta la última gota. El Cielo es una jaula, dicen; rómpela con lo que tienes en las venas. Cruzaron a Jiuxiao antes que nadie, siguiendo una luna roja que, según algunos susurran, nunca fue una luna.</CVG_Faction_BloodMoon.description>
+  <CVG_Faction_BloodMoon.fixedName>Culto de la Luna Sangrienta</CVG_Faction_BloodMoon.fixedName>
+  <CVG_Faction_BloodMoon.pawnSingular>discípulo de sangre</CVG_Faction_BloodMoon.pawnSingular>
+  <CVG_Faction_BloodMoon.pawnsPlural>discípulos de sangre</CVG_Faction_BloodMoon.pawnsPlural>
+  <CVG_Faction_BloodMoon.leaderTitle>venerable</CVG_Faction_BloodMoon.leaderTitle>
+  <CVG_Faction_BloodMoon.royalFavorLabel>contribución de secta</CVG_Faction_BloodMoon.royalFavorLabel>
+</LanguageData>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Role_BloodMoonOfficiant.label>oficiante de la luna sangrienta</CVG_Role_BloodMoonOfficiant.label>
+  <CVG_Role_BloodMoonOfficiant.description>El oficiante sostiene el cuenco en cada juramento de sangre y lee la luna antes de cada incursión. Solo puede ocupar el cargo alguien cuya propia sangre ya cambió: el Culto dice que no se puede atar la sangre de otro con una sangre que sigue limpia.</CVG_Role_BloodMoonOfficiant.description>
+  <CVG_Ritual_BloodOath.label>juramento de sangre</CVG_Ritual_BloodOath.label>
+  <CVG_Ritual_BloodOath.description>Bajo la luna, el discípulo se corta la palma sobre un cuenco de sangre de bestia y piedras espirituales mientras el oficiante nombra cada deuda que crea el juramento. Los demás agregan una gota cada uno; cuando el cuenco hierve sin fuego, el discípulo lo bebe, y el Culto se queda con un poco más de él.</CVG_Ritual_BloodOath.description>
+</LanguageData>

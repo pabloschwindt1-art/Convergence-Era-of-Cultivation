@@ -48,4 +48,12 @@
   <CVG_Body_Sword.degreeDatas.2.description>El hierro estelar es el metal que cae ardiendo del cielo y no se funde. El cuerpo de {PAWN_nameDef} alcanzó ese grado: siente el golpe antes de que llegue, como el Santo de la Espada Qing Feng sintió la montaña antes de partirla.</CVG_Body_Sword.degreeDatas.2.description>
   <CVG_Body_Sword.degreeDatas.3.label>cuerpo de espada de jade celestial</CVG_Body_Sword.degreeDatas.3.label>
   <CVG_Body_Sword.degreeDatas.3.description>El jade es la piedra que guarda la memoria del cielo. En {PAWN_nameDef} la hoja y el cuerpo ya son una sola intención: la Espada Sin Forma registra quizá un discípulo así por generación, y sus maestros se inclinan ante él como ante una espada viva.</CVG_Body_Sword.degreeDatas.3.description>
+  <CVG_Body_BloodMoon.degreeDatas.0.label>cuerpo de sangre turbia</CVG_Body_BloodMoon.degreeDatas.0.label>
+  <CVG_Body_BloodMoon.degreeDatas.0.description>La sangre de {PAWN_nameDef} es espesa y oscura, y cierra las heridas más rápido de lo que debería. La Luna Sangrienta lo llama la primera mancha: un cuerpo que empezó a tomar lo que necesita de la sangre que derrama.</CVG_Body_BloodMoon.degreeDatas.0.description>
+  <CVG_Body_BloodMoon.degreeDatas.1.label>cuerpo de sangre carmesí</CVG_Body_BloodMoon.degreeDatas.1.label>
+  <CVG_Body_BloodMoon.degreeDatas.1.description>La sangre de {PAWN_nameDef} tomó el carmesí profundo de los estandartes del Culto. El dolor le llega tarde y se va temprano; los susurros que vienen con él se quedan un poco más.</CVG_Body_BloodMoon.degreeDatas.1.description>
+  <CVG_Body_BloodMoon.degreeDatas.2.label>cuerpo de sangre lunar</CVG_Body_BloodMoon.degreeDatas.2.label>
+  <CVG_Body_BloodMoon.degreeDatas.2.description>Bajo la Luna del Demonio Interno, la sangre de {PAWN_nameDef} brilla apenas, como el cielo la noche en que Xue Jiuyou fundó el Culto. Sana de heridas que a otros los dejarían lisiados, y aprendió a vivir con la voz que lo sana.</CVG_Body_BloodMoon.degreeDatas.2.description>
+  <CVG_Body_BloodMoon.degreeDatas.3.label>cuerpo de sangre del demonio interno</CVG_Body_BloodMoon.degreeDatas.3.label>
+  <CVG_Body_BloodMoon.degreeDatas.3.description>{PAWN_nameDef} selló al demonio interno dentro de su propia sangre y lo volvió un arma, como hizo el Venerable. El Culto registra a pocos que sobrevivan al último juramento; los que lo hacen ya no temen a la tribulación, solo a sí mismos.</CVG_Body_BloodMoon.degreeDatas.3.description>
 </LanguageData>

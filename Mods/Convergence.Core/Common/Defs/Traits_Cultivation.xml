@@ -466,4 +466,72 @@
     </modExtensions>
   </TraitDef>
 
-</Defs>
+  <TraitDef>
+    <defName>CVG_Body_BloodMoon</defName>
+    <!-- Blood Moon body (Blood Moon Cult): one progressive constitution, valid with or without a spirit root. Degrees 0-3: turbid
+         blood, crimson blood, lunar blood, inner demon blood. Heals and hits harder, at the price of a restless mind (mental break
+         threshold). Born only at degree 0; the higher grades come from the Cult's blood oath. -->
+    <commonality>0</commonality>
+    <exclusionTags>
+      <li>CVG_SpecialBody</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>turbid blood body</label>
+        <degree>0</degree>
+        <description>{PAWN_nameDef}'s blood is thick and dark, and it closes wounds faster than it should. The Blood Moon calls it the first stain: a body that has started to take what it needs from the blood it spills.</description>
+        <statFactors>
+          <InjuryHealingFactor>1.1</InjuryHealingFactor>
+          <MeleeDamageFactor>1.05</MeleeDamageFactor>
+        </statFactors>
+        <statOffsets>
+          <PainShockThreshold>0.03</PainShockThreshold>
+          <MentalBreakThreshold>0.02</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <label>crimson blood body</label>
+        <degree>1</degree>
+        <description>The blood in {PAWN_nameDef} has turned the deep crimson of the Cult's banners. Pain reaches {PAWN_objective} late and leaves early; the whispers that come with it stay a little longer.</description>
+        <statFactors>
+          <InjuryHealingFactor>1.2</InjuryHealingFactor>
+          <MeleeDamageFactor>1.08</MeleeDamageFactor>
+        </statFactors>
+        <statOffsets>
+          <PainShockThreshold>0.06</PainShockThreshold>
+          <MentalBreakThreshold>0.04</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <label>lunar blood body</label>
+        <degree>2</degree>
+        <description>Under the Moon of the Inner Demon, {PAWN_nameDef}'s blood glows faintly, like the sky the night Xue Jiuyou founded the Cult. {PAWN_pronoun} heals from wounds that would cripple others, and has learned to live with the voice that heals them.</description>
+        <statFactors>
+          <InjuryHealingFactor>1.35</InjuryHealingFactor>
+          <MeleeDamageFactor>1.12</MeleeDamageFactor>
+        </statFactors>
+        <statOffsets>
+          <PainShockThreshold>0.10</PainShockThreshold>
+          <MentalBreakThreshold>0.06</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+      <li>
+        <label>inner demon blood body</label>
+        <degree>3</degree>
+        <description>{PAWN_nameDef} has sealed the inner demon inside {PAWN_possessive} own blood and made it a weapon, as the Venerable did. The Cult records few who survive the last oath; those who do no longer fear tribulation, only themselves.</description>
+        <statFactors>
+          <InjuryHealingFactor>1.5</InjuryHealingFactor>
+          <MeleeDamageFactor>1.15</MeleeDamageFactor>
+        </statFactors>
+        <statOffsets>
+          <PainShockThreshold>0.15</PainShockThreshold>
+          <MentalBreakThreshold>0.08</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpecialBody">
+        <chance>0.006</chance>
+      </li>
+    </modExtensions>
+  </TraitDef></Defs>

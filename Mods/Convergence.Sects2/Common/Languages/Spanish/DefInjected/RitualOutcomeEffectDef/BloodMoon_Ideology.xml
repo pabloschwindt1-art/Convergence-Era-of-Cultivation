@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Outcome_BloodOath.description>Según la calidad del ritual, los participantes tendrán entre {MINMOOD} y {MAXMOOD} de ánimo durante {MOODDAYS} días. Cuanto mejor la ceremonia, más probable es que la sangre cambie.</CVG_Outcome_BloodOath.description>
+  <CVG_Outcome_BloodOath.outcomeChances.0.label>Terrible</CVG_Outcome_BloodOath.outcomeChances.0.label>
+  <CVG_Outcome_BloodOath.outcomeChances.0.description>¡El {0} fue terrible! El cuenco se enfrió antes de tiempo y la sangre se cortó como leche agria.</CVG_Outcome_BloodOath.outcomeChances.0.description>
+  <CVG_Outcome_BloodOath.outcomeChances.1.label>Apagado</CVG_Outcome_BloodOath.outcomeChances.1.label>
+  <CVG_Outcome_BloodOath.outcomeChances.1.description>El {0} fue apagado. Las deudas se nombraron, pero nadie sintió que se contrajeran.</CVG_Outcome_BloodOath.outcomeChances.1.description>
+  <CVG_Outcome_BloodOath.outcomeChances.2.label>Solemne</CVG_Outcome_BloodOath.outcomeChances.2.label>
+  <CVG_Outcome_BloodOath.outcomeChances.2.description>El {0} fue solemne. Todos sintieron el pulso de los demás latir en la misma sangre.</CVG_Outcome_BloodOath.outcomeChances.2.description>
+  <CVG_Outcome_BloodOath.outcomeChances.3.label>Inolvidable</CVG_Outcome_BloodOath.outcomeChances.3.label>
+  <CVG_Outcome_BloodOath.outcomeChances.3.description>¡El {0} fue inolvidable! Por un momento, la luna se tiñó de rojo y el cuenco hirvió solo.</CVG_Outcome_BloodOath.outcomeChances.3.description>
+</LanguageData>

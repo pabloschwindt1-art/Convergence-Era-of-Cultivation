@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Backstory_BM_BloodServant.title>siervo de sangre</CVG_Backstory_BM_BloodServant.title>
+  <CVG_Backstory_BM_BloodServant.titleShort>siervo de sangre</CVG_Backstory_BM_BloodServant.titleShort>
+  <CVG_Backstory_BM_BloodServant.description>[PAWN_nameDef] llegó al Culto sin nada y le dio lo único que tenía: un cuenco de su propia sangre cada luna nueva. Los siervos que siguen dando se vuelven discípulos; los demás se vuelven farolas.</CVG_Backstory_BM_BloodServant.description>
+  <CVG_Backstory_BM_RiftRunner.title>corredor de grietas</CVG_Backstory_BM_RiftRunner.title>
+  <CVG_Backstory_BM_RiftRunner.titleShort>corredor de grietas</CVG_Backstory_BM_RiftRunner.titleShort>
+  <CVG_Backstory_BM_RiftRunner.description>Cuando se abrieron las grietas hacia Jiuxiao, el Culto mandó primero a los prescindibles. [PAWN_nameDef] entró tres veces y volvió tres veces, con mapas dibujados con su propia sangre porque del otro lado la tinta se congelaba.</CVG_Backstory_BM_RiftRunner.description>
+  <CVG_Backstory_BM_BloodDisciple.title>discípulo de sangre</CVG_Backstory_BM_BloodDisciple.title>
+  <CVG_Backstory_BM_BloodDisciple.titleShort>discípulo de sangre</CVG_Backstory_BM_BloodDisciple.titleShort>
+  <CVG_Backstory_BM_BloodDisciple.description>[PAWN_nameDef] es discípulo pleno de la Luna Sangrienta, entrenado para sacar el qi de la sangre de los caídos en vez del cielo. Las sectas ortodoxas lo llaman robo; el Culto lo llama no desperdiciar nada.</CVG_Backstory_BM_BloodDisciple.description>
+  <CVG_Backstory_BM_LanternKeeper.title>guardián de las farolas de alma</CVG_Backstory_BM_LanternKeeper.title>
+  <CVG_Backstory_BM_LanternKeeper.titleShort>guardián de farolas</CVG_Backstory_BM_LanternKeeper.titleShort>
+  <CVG_Backstory_BM_LanternKeeper.description>[PAWN_nameDef] cuidaba las farolas de alma de Shi Gu, el anciano de almas: una llama por cada discípulo del Culto, que tiembla cuando su dueño está herido y se apaga cuando muere. Aprendió a leer una batalla desde una sala llena de velas.</CVG_Backstory_BM_LanternKeeper.description>
+  <CVG_Backstory_BM_CrimsonEnvoy.title>enviado carmesí</CVG_Backstory_BM_CrimsonEnvoy.title>
+  <CVG_Backstory_BM_CrimsonEnvoy.titleShort>enviado carmesí</CVG_Backstory_BM_CrimsonEnvoy.titleShort>
+  <CVG_Backstory_BM_CrimsonEnvoy.description>[PAWN_nameDef] llevó la palabra de la Santa de Sangre a sectas que preferían matar al mensajero. Su Lanyin elige enviados que sonríen fácil y sangran despacio; [PAWN_nameDef] hizo las dos cosas delante de tres maestros de secta.</CVG_Backstory_BM_CrimsonEnvoy.description>
+  <CVG_Backstory_BM_DebtCollector.title>cobrador de deudas de sangre</CVG_Backstory_BM_DebtCollector.title>
+  <CVG_Backstory_BM_DebtCollector.titleShort>cobrador de deudas</CVG_Backstory_BM_DebtCollector.titleShort>
+  <CVG_Backstory_BM_DebtCollector.description>Cada deuda de sangre con el Culto está escrita en un libro rojo, y [PAWN_nameDef] lo cargó durante años. Los deudores pagan con sangre, con servicio o en especie; a [PAWN_nameDef] nunca le importó cómo, solo que la línea quedara tachada.</CVG_Backstory_BM_DebtCollector.description>
+  <CVG_Backstory_BM_BloodElder.title>anciano de sangre</CVG_Backstory_BM_BloodElder.title>
+  <CVG_Backstory_BM_BloodElder.titleShort>anciano de sangre</CVG_Backstory_BM_BloodElder.titleShort>
+  <CVG_Backstory_BM_BloodElder.description>[PAWN_nameDef] estuvo entre los primeros discípulos de Xue Jiuyou, el Venerable, y estaba ahí cuando la secta del Origen Celestial los purgó. Sobrevivió a la mayoría de los ancianos que lo hicieron, y visita las tumbas de los demás.</CVG_Backstory_BM_BloodElder.description>
+  <CVG_Backstory_BM_SoulElder.title>anciano de almas</CVG_Backstory_BM_SoulElder.title>
+  <CVG_Backstory_BM_SoulElder.titleShort>anciano de almas</CVG_Backstory_BM_SoulElder.titleShort>
+  <CVG_Backstory_BM_SoulElder.description>[PAWN_nameDef] estudió con Shi Gu, que cree que el alma no es más que sangre que aprendió a pensar. Habla en voz baja, nunca levanta la mano con enojo, y nadie en el Culto le ganó jamás una discusión.</CVG_Backstory_BM_SoulElder.description>
+</LanguageData>

@@ -162,6 +162,9 @@
     <associatedMemes>
       <li>CVG_Meme_SwordWay</li>
     </associatedMemes>
+    <conflictingMemes>
+      <li>CVG_Meme_DemonicWay</li>
+    </conflictingMemes>
     <comps>
       <li Class="PreceptComp_SelfTookMemoryThought">
         <eventDef>CVG_ExtractedEssence</eventDef>
@@ -197,6 +200,9 @@
     <impact>High</impact>
     <displayOrderInIssue>20</displayOrderInIssue>
     <displayOrderInImpact>1000</displayOrderInImpact>
+    <associatedMemes>
+      <li>CVG_Meme_DemonicWay</li>
+    </associatedMemes>
     <comps>
       <li Class="PreceptComp_SelfTookMemoryThought">
         <eventDef>CVG_ExtractedEssence</eventDef>
@@ -214,7 +220,11 @@
     <displayOrderInImpact>1000</displayOrderInImpact>
     <associatedMemes>
       <li>CVG_Meme_SwordWay</li>
+      <li>CVG_Meme_BodyWay</li>
     </associatedMemes>
+    <conflictingMemes>
+      <li>CVG_Meme_DemonicWay</li>
+    </conflictingMemes>
     <comps>
       <li Class="PreceptComp_SelfTookMemoryThought">
         <eventDef>CVG_DemonicArt</eventDef>
@@ -250,8 +260,12 @@
     <impact>High</impact>
     <displayOrderInIssue>20</displayOrderInIssue>
     <displayOrderInImpact>1000</displayOrderInImpact>
+    <associatedMemes>
+      <li>CVG_Meme_DemonicWay</li>
+    </associatedMemes>
     <conflictingMemes>
       <li>CVG_Meme_SwordWay</li>
+      <li>CVG_Meme_BodyWay</li>
     </conflictingMemes>
     <comps>
       <li Class="PreceptComp_SelfTookMemoryThought">

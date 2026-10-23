@@ -325,6 +325,14 @@ namespace Convergence.Sects2
                 weaponRule = "spirit weapons or simple guns",
                 specialty = t => t.def.weaponTags?.Contains("CVG_SpiritWeapon") ?? false, specialtyLabel = "spirit weapons"
             };
+            yield return new SectSpec
+            {
+                id = "BloodMoon", bodyTrait = "CVG_Body_BloodMoon", meme = "CVG_Meme_DemonicWay", role = "CVG_Role_BloodMoonOfficiant", ability = "ImmunityDrive",
+                outcome = "CVG_Outcome_BloodOath",
+                kinds = new[] { "CVG_BloodMoon_Servant", "CVG_BloodMoon_Disciple", "CVG_BloodMoon_Crimson", "CVG_BloodMoon_Elder" },
+                weaponOk = p => p.equipment?.Primary == null || p.equipment.Primary.def.IsMeleeWeapon, weaponRule = "blades only",
+                specialty = null, specialtyLabel = "no trade"
+            };
         }
 
         /// <summary>Lo que distingue a cada secta en la prueba genérica de contenido (todo lo demás sale de la plantilla).</summary>
@@ -337,7 +345,7 @@ namespace Convergence.Sects2
             public string weaponRule = "any weapon";
             public Func<Pawn, bool> bodyOk = p => true;
             public string bodyRule = "any body";
-            public Func<Thing, bool> specialty;     // lo que vende con calidad controlada
+            public Func<Thing, bool> specialty;     // lo que vende con calidad controlada (null: la secta no comercia)
             public string specialtyLabel;
         }
 
@@ -398,6 +406,11 @@ namespace Convergence.Sects2
                     kind.label + ": " + s.weaponRule + ", " + s.bodyRule + ", " + bodies + "/6 with the constitution, sect backstory " + sectStories + "/" + adults);
             }
 
+            if (s.specialty == null)
+            {
+                Check(fdef.caravanTraderKinds.NullOrEmpty() && fdef.baseTraderKinds.NullOrEmpty() && fdef.visitorTraderKinds.NullOrEmpty(), "trade: none, by design");
+                return;
+            }
             var trader = DefDatabase<TraderKindDef>.GetNamed("CVG_Trader_" + s.id);
             var stock = new List<Thing>();
             for (int i = 0; i < 8; i++) foreach (var g in trader.stockGenerators) stock.AddRange(g.GenerateThings(map.Tile, f));
