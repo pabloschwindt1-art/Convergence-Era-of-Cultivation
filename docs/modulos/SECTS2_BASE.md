@@ -78,6 +78,14 @@ Lo de Royalty (A-E) vive en el mod nuevo porque ese mod exige la DLC. Lo genéri
 
 ## 4. Orden de trabajo
 
+**S1 hecha (2026-10-22):** base común en el Core (`Source/Convergence.Core/Sects/`), autotest `-cvgselftest` sección "sect framework (S1)",
+ALL OK en 1.6.4871. Piezas: etiqueta `CVG_Sword` en todas las espadas (parche XML), constituciones con grados (`ConstitutionUtility`),
+`RoleRequirement_HasTrait`, `DefModExtension_StartingTrait` (en el meme), ritual de templado genérico (`DefModExtension_TemperConstitution` +
+`RitualOutcomeEffectWorker_TemperConstitution` + `RitualRoleConstitutionSubject`), stats `CVG_ProjectileDeflectChance` (con espada en la
+mano) y `CVG_ProjectileResistance` (tope 50%), `traitChances`/`forcedBodyType`/`disallowedBodyTypes` en los discípulos y
+`StockGenerator_QualityTag`. El ritual se probó en su lógica; la ceremonia completa en el juego se prueba en la S2, con su XML real.
+Pedido de contenido para la S2: `SECTS2_PEDIDO_ESPADA.md`.
+
 **S0 hecha (2026-10-22):** `Mods/Convergence.Sects2` + `Source/Convergence.Sects2`, autotest `-cvgsects2test`, **ALL OK en 1.6.4871** sin
 errores en el log (la prueba en 1.7 queda pendiente: Steam está en 1.6). Lo que aprendimos en el juego:
 - Royalty exige `changeHeirQuestPoints` en todo título otorgable, aunque no se herede.

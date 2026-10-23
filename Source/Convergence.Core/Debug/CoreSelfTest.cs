@@ -65,6 +65,7 @@ namespace Convergence
             Section("ingestibles smoke", () => TestIngestibles(map));
             Section("translations", TestTranslations);
             Section("guest group limit", () => TestGuestLimit(map));
+            Section("sect framework (S1)", () => TestSectFramework(map));
             sb.Append(fails == 0 ? "\n  ALL OK" : "\n  FAILURES: " + fails);
             // En la partida de prueba, acelerar para que corran ticks (tribulación, bestias, Maestro) y salgan sus errores.
             if (GenCommandLine.CommandLineArgPassed("cvgselftest")) Find.TickManager.CurTimeSpeed = TimeSpeed.Superfast;
@@ -1153,6 +1154,119 @@ namespace Convergence
                 }
             }
             Check(bad == 0, recipes.Count + " Convergence recipes valid");
+        }
+
+        /// <summary>
+        /// Base común del nuevo Sects: etiqueta de espadas, constituciones con grados, requisito de rol, constitución inicial, ritual de templado,
+        /// desvío y resistencia a proyectiles, cuerpos y rasgos de los discípulos, y stock con calidad mínima. Usa rasgos vanilla con grados
+        /// (laboriosidad) para no depender del contenido de ninguna secta.
+        /// </summary>
+        private static void TestSectFramework(Map map)
+        {
+            var longsword = DefDatabase<ThingDef>.GetNamed("MeleeWeapon_LongSword");
+            Check(longsword.weaponTags?.Contains("CVG_Sword") ?? false, "the longsword is tagged CVG_Sword");
+            var jian = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_Jian");
+            if (jian != null) Check(jian.weaponTags?.Contains("CVG_Sword") ?? false, "the jian is tagged CVG_Sword");
+            Check(!(DefDatabase<ThingDef>.GetNamed("MeleeWeapon_Mace").weaponTags?.Contains("CVG_Sword") ?? false), "the mace is not a sword");
+
+            var industry = DefDatabase<TraitDef>.GetNamed("Industriousness");
+            var nimble = DefDatabase<TraitDef>.GetNamed("Nimble");
+            var pawn = Colonist(map, root: false);
+            ConstitutionUtility.RemoveTrait(pawn, industry);
+            ConstitutionUtility.RemoveTrait(pawn, nimble);
+
+            // Rasgos con grado y requisito de rol
+            var req = new RoleRequirement_HasTrait { traits = new List<TraitDef> { industry } };
+            Check(!req.Met(pawn, null), "role requirement not met without the trait");
+            ConstitutionUtility.SetTrait(pawn, industry, 1);
+            Check(ConstitutionUtility.Degree(pawn, industry) == 1 && req.Met(pawn, null), "trait degree 1 meets the role requirement");
+            ConstitutionUtility.SetTrait(pawn, industry, 2);
+            Check(ConstitutionUtility.Degree(pawn, industry) == 2 && pawn.story.traits.allTraits.Count(t => t.def == industry) == 1, "degree 1 -> 2 replaces it");
+            ConstitutionUtility.RemoveTrait(pawn, industry);
+
+            // Ritual de templado: sin rasgo -> 1 -> 2 -> otro rasgo (el "celestial"), y después nada
+            var ext = new DefModExtension_TemperConstitution
+            {
+                steps = new List<TemperStep>
+                {
+                    new TemperStep { toTrait = industry, toDegree = 1, blockedBy = new List<TraitDef> { nimble } },
+                    new TemperStep { fromTrait = industry, fromDegree = 1, toTrait = industry, toDegree = 2 },
+                    new TemperStep { fromTrait = industry, fromDegree = 2, toTrait = nimble, toDegree = 0 },
+                }
+            };
+            foreach (var s in ext.steps) s.chanceByQuality = new SimpleCurve { new CurvePoint(0f, 0f), new CurvePoint(1f, 1f) };
+            Check(ext.StepFor(pawn) == ext.steps[0], "untempered pawn: first step");
+            RitualOutcomeEffectWorker_TemperConstitution.Resolve(ext, pawn, 1f, map);
+            Check(ConstitutionUtility.Degree(pawn, industry) == 1, "quality 100%: none -> degree 1");
+            RitualOutcomeEffectWorker_TemperConstitution.Resolve(ext, pawn, 0f, map);
+            Check(ConstitutionUtility.Degree(pawn, industry) == 1, "quality 0%: the step fails, nothing changes");
+            RitualOutcomeEffectWorker_TemperConstitution.Resolve(ext, pawn, 1f, map);
+            Check(ConstitutionUtility.Degree(pawn, industry) == 2, "degree 1 -> 2");
+            RitualOutcomeEffectWorker_TemperConstitution.Resolve(ext, pawn, 1f, map);
+            Check(ConstitutionUtility.Degree(pawn, industry) == null && ConstitutionUtility.Degree(pawn, nimble) != null, "degree 2 -> the separate top trait");
+            Check(ext.StepFor(pawn) == null, "nothing left to temper");
+            ext.cost = new List<ThingDefCountClass> { new ThingDefCountClass(DefDatabase<ThingDef>.GetNamed("CVG_SpiritStone"), 100000) };
+            Check(!ext.CanPay(map, out _), "a cost the colony cannot pay blocks the ritual");
+
+            // Constitución inicial: solo a uno, el mejor en cuerpo a cuerpo
+            var others = new List<Pawn> { Colonist(map, root: false), Colonist(map, root: false), Colonist(map, root: false) };
+            foreach (var p in others) ConstitutionUtility.RemoveTrait(p, industry);
+            GameComponent_StartingTraits.Apply(others, new DefModExtension_StartingTrait { trait = industry, degree = 1, count = 1 });
+            Check(others.Count(p => ConstitutionUtility.Degree(p, industry) != null) == 1, "starting trait: exactly one colonist");
+            var best = others.OrderByDescending(p => p.skills.GetSkill(SkillDefOf.Melee).Level).First();
+            Check(ConstitutionUtility.Degree(best, industry) != null, "starting trait goes to the best melee fighter");
+
+            // Discípulos: cuerpo y rasgo con probabilidad
+            var kindExt = new DefModExtension_CultivatorPawnKind
+            {
+                forcedBodyType = BodyTypeDefOf.Hulk,
+                traitChances = new List<TraitChance> { new TraitChance { trait = industry, degree = 2, chance = 1f } }
+            };
+            var d = others[0];
+            CultivatorPawnKindUtility.ApplyBodyAndTraits(d, kindExt);
+            Check(d.story.bodyType == BodyTypeDefOf.Hulk && ConstitutionUtility.Degree(d, industry) == 2, "forced Hulk body and trait by chance");
+            kindExt = new DefModExtension_CultivatorPawnKind { disallowedBodyTypes = new List<BodyTypeDef> { BodyTypeDefOf.Hulk, BodyTypeDefOf.Thin } };
+            CultivatorPawnKindUtility.ApplyBodyAndTraits(d, kindExt);
+            Check(d.story.bodyType != BodyTypeDefOf.Hulk && d.story.bodyType != BodyTypeDefOf.Thin, "disallowed body types are replaced (" + d.story.bodyType.defName + ")");
+
+            // Desvío y resistencia a proyectiles
+            Check(ProjectileDefense.DeflectStat != null && ProjectileDefense.ResistStat != null, "projectile defense stats exist");
+            int deflected = 0;
+            for (int i = 0; i < 400; i++) { var b = new DamageInfo(DamageDefOf.Bullet, 10f); if (ProjectileDefense.Apply(null, ref b, 1f, 0f)) deflected++; }
+            Check(deflected > 140 && deflected < 260, "deflection is capped at 50% (" + deflected + "/400)");
+            var hit = new DamageInfo(DamageDefOf.Bullet, 10f);
+            ProjectileDefense.Apply(null, ref hit, 0f, 0.3f);
+            Check(Math.Abs(hit.Amount - 7f) < 0.01f, "30% resistance: 10 -> " + hit.Amount);
+            var bomb = new DamageInfo(DamageDefOf.Bomb, 10f);
+            Check(!ProjectileDefense.Apply(null, ref bomb, 1f, 0.5f) && Math.Abs(bomb.Amount - 10f) < 0.01f, "explosions are neither deflected nor reduced");
+            var cut = new DamageInfo(DamageDefOf.Cut, 10f);
+            Check(!ProjectileDefense.Apply(null, ref cut, 1f, 0.5f) && Math.Abs(cut.Amount - 10f) < 0.01f, "melee hits are not affected");
+            var part = new StatPart_RequiresMeleeWeapon { weaponTags = new List<string> { "CVG_Sword" } };
+            float v = 0.3f;
+            part.TransformValue(StatRequest.For(pawn), ref v);
+            Check(v == 0f, "no sword in hand: deflection 0");
+            var sword = (ThingWithComps)ThingMaker.MakeThing(longsword, GenStuff.DefaultStuffFor(longsword));
+            pawn.equipment.DestroyAllEquipment();
+            pawn.equipment.AddEquipment(sword);
+            v = 0.3f;
+            part.TransformValue(StatRequest.For(pawn), ref v);
+            Check(Math.Abs(v - 0.3f) < 0.001f, "longsword in hand: deflection kept");
+
+            // Stock de especialidad con calidad mínima
+            var gen = new StockGenerator_QualityTag
+            {
+                tradeTag = "WeaponMelee",
+                weaponTags = new List<string> { "CVG_Sword" },
+                qualities = new List<QualityChance> { new QualityChance { quality = QualityCategory.Legendary } },
+                countRange = new IntRange(1, 1)
+            };
+            var stock = new List<Thing>();
+            for (int i = 0; i < 6; i++) stock.AddRange(gen.GenerateThings(map.Tile));
+            Check(stock.Count > 0 && stock.All(t => t.def.weaponTags.Contains("CVG_Sword")), "stock: only swords (" + string.Join(", ", stock.Select(t => t.def.defName).Distinct()) + ")");
+            Check(stock.All(t => t.TryGetComp<CompQuality>()?.Quality == QualityCategory.Legendary), "stock: forced quality");
+            foreach (var t in stock) t.Destroy();
+
+            foreach (var p in others.Append(pawn)) if (!p.Destroyed) p.Destroy();
         }
 
         /// <summary>Con el mapa lleno de huéspedes no llegan más caravanas ni visitantes (salvo forzados); con tope 0, como vanilla.</summary>

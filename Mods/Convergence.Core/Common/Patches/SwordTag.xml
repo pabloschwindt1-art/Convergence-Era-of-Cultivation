@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Weapon tag CVG_Sword on every sword (vanilla and Convergence): sword sects arm themselves with it (PawnKindDef weaponTags) and
+       projectile deflection needs it in hand (StatPart_RequiresMeleeWeapon). Each block does nothing if its weapon does not exist. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_Gladius"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="MeleeWeapon_Gladius"]/weaponTags</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_Gladius"]/weaponTags</xpath>
+        <value><li>CVG_Sword</li></value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_Gladius"]</xpath>
+        <value><weaponTags><li>CVG_Sword</li></weaponTags></value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_LongSword"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="MeleeWeapon_LongSword"]/weaponTags</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_LongSword"]/weaponTags</xpath>
+        <value><li>CVG_Sword</li></value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_LongSword"]</xpath>
+        <value><weaponTags><li>CVG_Sword</li></weaponTags></value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_MonoSword"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="MeleeWeapon_MonoSword"]/weaponTags</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_MonoSword"]/weaponTags</xpath>
+        <value><li>CVG_Sword</li></value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_MonoSword"]</xpath>
+        <value><weaponTags><li>CVG_Sword</li></weaponTags></value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_MonoSwordBladelink"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="MeleeWeapon_MonoSwordBladelink"]/weaponTags</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_MonoSwordBladelink"]/weaponTags</xpath>
+        <value><li>CVG_Sword</li></value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_MonoSwordBladelink"]</xpath>
+        <value><weaponTags><li>CVG_Sword</li></weaponTags></value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_PlasmaSword"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="MeleeWeapon_PlasmaSword"]/weaponTags</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_PlasmaSword"]/weaponTags</xpath>
+        <value><li>CVG_Sword</li></value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_PlasmaSword"]</xpath>
+        <value><weaponTags><li>CVG_Sword</li></weaponTags></value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_PlasmaSwordBladelink"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="MeleeWeapon_PlasmaSwordBladelink"]/weaponTags</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_PlasmaSwordBladelink"]/weaponTags</xpath>
+        <value><li>CVG_Sword</li></value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="MeleeWeapon_PlasmaSwordBladelink"]</xpath>
+        <value><weaponTags><li>CVG_Sword</li></weaponTags></value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="CVG_Jian"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="CVG_Jian"]/weaponTags</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="CVG_Jian"]/weaponTags</xpath>
+        <value><li>CVG_Sword</li></value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="CVG_Jian"]</xpath>
+        <value><weaponTags><li>CVG_Sword</li></weaponTags></value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="CVG_SpiritSword"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="CVG_SpiritSword"]/weaponTags</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="CVG_SpiritSword"]/weaponTags</xpath>
+        <value><li>CVG_Sword</li></value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="CVG_SpiritSword"]</xpath>
+        <value><weaponTags><li>CVG_Sword</li></weaponTags></value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="CVG_SpiritSabre"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="CVG_SpiritSabre"]/weaponTags</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="CVG_SpiritSabre"]/weaponTags</xpath>
+        <value><li>CVG_Sword</li></value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="CVG_SpiritSabre"]</xpath>
+        <value><weaponTags><li>CVG_Sword</li></weaponTags></value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="CVG_Dao"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="CVG_Dao"]/weaponTags</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="CVG_Dao"]/weaponTags</xpath>
+        <value><li>CVG_Sword</li></value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="CVG_Dao"]</xpath>
+        <value><weaponTags><li>CVG_Sword</li></weaponTags></value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="CVG_Zhanmadao"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="CVG_Zhanmadao"]/weaponTags</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="CVG_Zhanmadao"]/weaponTags</xpath>
+        <value><li>CVG_Sword</li></value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="CVG_Zhanmadao"]</xpath>
+        <value><weaponTags><li>CVG_Sword</li></weaponTags></value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="CVG_FlyingSword"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="CVG_FlyingSword"]/weaponTags</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="CVG_FlyingSword"]/weaponTags</xpath>
+        <value><li>CVG_Sword</li></value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="CVG_FlyingSword"]</xpath>
+        <value><weaponTags><li>CVG_Sword</li></weaponTags></value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="CVG_PeachWoodSword"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="CVG_PeachWoodSword"]/weaponTags</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="CVG_PeachWoodSword"]/weaponTags</xpath>
+        <value><li>CVG_Sword</li></value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="CVG_PeachWoodSword"]</xpath>
+        <value><weaponTags><li>CVG_Sword</li></weaponTags></value>
+      </nomatch>
+    </match>
+  </Operation>
+</Patch>

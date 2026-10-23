@@ -25,6 +25,23 @@ namespace Convergence
         public List<SpiritRootGradeDef> grades;
         /// <summary>Si es true y el pawn es hostil al jugador, su reino se limita al de la colonia (+1 como mucho).</summary>
         public bool scaleWithColony = true;
+        /// <summary>
+        /// Rasgos con probabilidad (constituciones de secta: Cuerpo de Espada común, superior…). Se prueban en orden y se queda el primero
+        /// que sale: poner los más raros primero.
+        /// </summary>
+        public List<TraitChance> traitChances;
+        /// <summary>Tipos de cuerpo que esta secta no tiene (p. ej. Hulk en la Espada Sin Forma); se cambia por uno permitido.</summary>
+        public List<BodyTypeDef> disallowedBodyTypes;
+        /// <summary>Tipo de cuerpo de todos sus miembros (p. ej. Hulk en los Nueve Templados).</summary>
+        public BodyTypeDef forcedBodyType;
+    }
+
+    /// <summary>Un rasgo (con su grado) que un tipo de pawn recibe con cierta probabilidad.</summary>
+    public class TraitChance
+    {
+        public TraitDef trait;
+        public int degree;
+        public float chance = 1f;
     }
 
     /// <summary>En un <c>FactionDef</c>: la facción no existe hasta la Convergencia; entonces llega al mundo.</summary>
@@ -57,6 +74,7 @@ namespace Convergence
         {
             var ext = pawn.kindDef?.GetModExtension<DefModExtension_CultivatorPawnKind>();
             if (ext == null || pawn.RaceProps?.Humanlike != true || pawn.story?.traits == null) return false;
+            ApplyBodyAndTraits(pawn, ext);
             var comp = CompCultivator.For(pawn);
             if (comp == null) return false;
 
@@ -95,6 +113,29 @@ namespace Convergence
             if (!ext.manuals.NullOrEmpty())
                 TechniqueUtility.GiveNpcTechniques(pawn, ext.manuals);
             return true;
+        }
+
+        /// <summary>Tipo de cuerpo de la secta (forzado o sin los prohibidos) y su constitución con probabilidad.</summary>
+        public static void ApplyBodyAndTraits(Pawn pawn, DefModExtension_CultivatorPawnKind ext)
+        {
+            var story = pawn.story;
+            if (story != null && pawn.DevelopmentalStage.Adult())
+            {
+                if (ext.forcedBodyType != null) story.bodyType = ext.forcedBodyType;
+                else if (!ext.disallowedBodyTypes.NullOrEmpty() && ext.disallowedBodyTypes.Contains(story.bodyType))
+                {
+                    var allowed = new List<BodyTypeDef> { pawn.gender == Gender.Female ? BodyTypeDefOf.Female : BodyTypeDefOf.Male, BodyTypeDefOf.Thin, BodyTypeDefOf.Fat }
+                        .Where(b => !ext.disallowedBodyTypes.Contains(b)).ToList();
+                    if (allowed.Count > 0) story.bodyType = allowed.First();
+                }
+            }
+            if (ext.traitChances.NullOrEmpty() || story?.traits == null) return;
+            foreach (var tc in ext.traitChances)
+            {
+                if (tc.trait == null || !Rand.Chance(tc.chance)) continue;
+                ConstitutionUtility.SetTrait(pawn, tc.trait, tc.degree);
+                break;
+            }
         }
 
         private static List<QiElementDef> PickElements(DefModExtension_CultivatorPawnKind ext)

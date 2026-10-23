@@ -12,7 +12,7 @@
 
 Each sect grants honorary titles to the colonists who earn its trust (Sect Friend, Honored Guest, Sect Protector, Guest Elder). Its currency is sect contribution, earned with its quests, and spent on favors: disciples who come to your aid, spirit resources and more. Your colony stays independent.
 
-Requires Convergence: Era of Cultivation and Royalty. Do not use together with Convergence: Sects.
+Requires Convergence: Era of Cultivation, Royalty and Ideology. Do not use together with Convergence: Sects.
 
 License: code, scripts and technical data are MIT; original art, lore and narrative text are CC BY-NC-SA 4.0 (credit Prospero1088, non-commercial, share-alike). The art was created with the assistance of AI. RimWorld material, and art derived from it, belongs to Ludeon Studios and is not covered by these licenses. Details: LICENSE.txt in the mod folder.
 
@@ -34,6 +34,10 @@ Portions of the materials used to create this content/mod are trademarks and/or 
     <li>
       <packageId>Ludeon.RimWorld.Royalty</packageId>
       <displayName>Royalty</displayName>
+    </li>
+    <li>
+      <packageId>Ludeon.RimWorld.Ideology</packageId>
+      <displayName>Ideology</displayName>
     </li>
   </modDependencies>
   <incompatibleWith>

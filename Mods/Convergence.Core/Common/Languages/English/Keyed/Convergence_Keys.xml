@@ -335,4 +335,13 @@ Some will trade, some will judge, and one of them hunts. Their goodwill can be e
   <CVG_Setting_MaxGuestGroups>Visitor groups at once (caravans, visitors): {0}</CVG_Setting_MaxGuestGroups>
   <CVG_Setting_NoLimit>no limit</CVG_Setting_NoLimit>
   <CVG_Setting_MaxGuestGroupsTip>Maximum number of visitor groups and trade caravans from other factions on a map at the same time. A new group waits until one leaves. With many friendly factions (sects) up to 3-4 groups could arrive together, with dozens of people and pack animals. 0 = no limit (vanilla). Raids are not affected.</CVG_Setting_MaxGuestGroupsTip>
+  <CVG_ProjectileDeflected>Deflected!</CVG_ProjectileDeflected>
+  <CVG_RoleRequirement_Trait>Requirement: {0}</CVG_RoleRequirement_Trait>
+  <CVG_StatPart_WieldingSword>Wielding a sword ({0})</CVG_StatPart_WieldingSword>
+  <CVG_StatPart_NoSword>Not wielding a sword: no deflection</CVG_StatPart_NoSword>
+  <CVG_Temper_NothingToTemper>{PAWN_labelShort} has nothing left to temper.</CVG_Temper_NothingToTemper>
+  <CVG_Temper_NoStep>{PAWN_labelShort} cannot temper further.</CVG_Temper_NoStep>
+  <CVG_Temper_MissingCost>Missing in storage: {0}</CVG_Temper_MissingCost>
+  <CVG_Temper_Success>The tempering took hold: {PAWN_labelShort} now has {1} (chance {2}).</CVG_Temper_Success>
+  <CVG_Temper_Failure>The tempering did not take hold: {PAWN_labelShort} did not reach {1} this time (chance {2}). The cost is spent.</CVG_Temper_Failure>
 </LanguageData>

@@ -168,6 +168,9 @@ namespace Convergence
             absorbed = false;
             if (dinfo.Def == null || !dinfo.Def.harmsHealth || dinfo.Def.consideredHelpful) return;
 
+            // Desvío y resistencia a proyectiles (constituciones de secta).
+            if (ProjectileDefense.Apply(Pawn, ref dinfo)) { absorbed = true; return; }
+
             // Debilidad a un material (Demonio de Sangre: plata lunar).
             float weakness = StuffWeaknessUtility.FactorFor(Pawn, dinfo);
             if (weakness != 1f) dinfo.SetAmount(dinfo.Amount * weakness);

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_ProjectileDeflectChance.label>desvío de proyectiles</CVG_ProjectileDeflectChance.label>
+  <CVG_ProjectileDeflectChance.description>Probabilidad de cortar en el aire una bala, una flecha o un rayo de qi con la espada en la mano. La Espada Sin Forma dice que la hoja no ve la bala; la ve la intención, y la mano solo la sigue.\n\nSolo funciona empuñando una espada. Las explosiones no se pueden desviar. Máximo 50%.</CVG_ProjectileDeflectChance.description>
+  <CVG_ProjectileResistance.label>resistencia a proyectiles</CVG_ProjectileResistance.label>
+  <CVG_ProjectileResistance.description>Fracción del daño de balas, flechas y rayos de qi que un cuerpo templado ignora. Los cultivadores del cuerpo dicen que una piel forjada con dolor es la única armadura que nadie te puede quitar.\n\nLas explosiones no se reducen. Máximo 50%.</CVG_ProjectileResistance.description>
+</LanguageData>

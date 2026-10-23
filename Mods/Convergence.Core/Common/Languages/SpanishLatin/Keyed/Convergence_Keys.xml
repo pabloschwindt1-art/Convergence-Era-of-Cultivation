@@ -335,4 +335,13 @@ Algunas van a comerciar, otras van a juzgar, y una de ellas caza. Su buena volun
   <CVG_Setting_MaxGuestGroups>Grupos de huéspedes a la vez (caravanas, visitantes): {0}</CVG_Setting_MaxGuestGroups>
   <CVG_Setting_NoLimit>sin tope</CVG_Setting_NoLimit>
   <CVG_Setting_MaxGuestGroupsTip>Máximo de grupos de visitantes y caravanas de comercio de otras facciones en un mapa al mismo tiempo. Un grupo nuevo espera a que se vaya otro. Con muchas facciones amistosas (sectas) podían llegar 3-4 grupos juntos, con decenas de personas y animales de carga. 0 = sin tope (como en el juego base). No afecta a los ataques.</CVG_Setting_MaxGuestGroupsTip>
+  <CVG_ProjectileDeflected>¡Desviado!</CVG_ProjectileDeflected>
+  <CVG_RoleRequirement_Trait>Requisito: {0}</CVG_RoleRequirement_Trait>
+  <CVG_StatPart_WieldingSword>Empuña una espada ({0})</CVG_StatPart_WieldingSword>
+  <CVG_StatPart_NoSword>Sin espada en la mano: no desvía</CVG_StatPart_NoSword>
+  <CVG_Temper_NothingToTemper>A {PAWN_labelShort} no le queda nada por templar.</CVG_Temper_NothingToTemper>
+  <CVG_Temper_NoStep>{PAWN_labelShort} no puede templarse más.</CVG_Temper_NoStep>
+  <CVG_Temper_MissingCost>Falta en el almacén: {0}</CVG_Temper_MissingCost>
+  <CVG_Temper_Success>El templado prendió: {PAWN_labelShort} ahora tiene {1} (probabilidad {2}).</CVG_Temper_Success>
+  <CVG_Temper_Failure>El templado no prendió: {PAWN_labelShort} no alcanzó {1} esta vez (probabilidad {2}). El costo se gastó igual.</CVG_Temper_Failure>
 </LanguageData>
