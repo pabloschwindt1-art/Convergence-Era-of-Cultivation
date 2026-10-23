@@ -5,7 +5,7 @@
   <ThingDef ParentName="MakeableDrugPillBase">
     <defName>CVG_TemperingPill</defName>
     <label>tempering pill</label>
-    <description>Beast blood and spirit herbs boiled down into a red pill. The body cultivators of the Silent Lotus Temple swallow one before beating their flesh against stone, saying that the blood remembers what the bones forget. Restores blood qi for the path of the body (more with higher quality). Every pill leaves some toxicity.</description>
+    <description>Beast blood and spirit herbs boiled down into a red pill. The body cultivators of the Sect of Nine Temperings swallow one before beating their flesh against stone, saying that the blood remembers what the bones forget. Restores blood qi for the path of the body (more with higher quality). Every pill leaves some toxicity.</description>
     <graphicData>
       <texPath>Things/Item/CVG/TemperingPill</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -125,7 +125,7 @@
   <ThingDef ParentName="MakeableDrugPillBase">
     <defName>CVG_PurificationPill</defName>
     <label>blood purification pill</label>
-    <description>A pill of beast core and spirit jade that burns impurities out of the blood. The Ancient Dragon Clan claims the formula was stolen from its archives, and the Blood Moon Cult brews a darker version with human blood. Chance to raise the purity of a bloodline by one level (higher with quality); if it fails, or there is no bloodline, it poisons. Needs a level 2 alchemy furnace.</description>
+    <description>A pill of beast core and spirit jade that burns impurities out of the blood. Legend says the formula was stolen from the archives of the vanished Ancient Dragon Clan, and the Blood Moon Cult brews a darker version with human blood. Chance to raise the purity of a bloodline by one level (higher with quality); if it fails, or there is no bloodline, it poisons. Needs a level 2 alchemy furnace.</description>
     <graphicData>
       <texPath>Things/Item/CVG/PurificationPill</texPath>
       <graphicClass>Graphic_Single</graphicClass>

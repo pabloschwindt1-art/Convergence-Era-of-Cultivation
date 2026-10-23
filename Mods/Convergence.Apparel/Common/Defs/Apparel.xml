@@ -6,7 +6,7 @@
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>CVG_Apparel_RobeOuter</defName>
     <label>outer disciple robe</label>
-    <description>A plain wide-sleeved robe dyed in the color of the sect, handed to every new disciple on the day they pass the gate trial. The custom comes from the Azure Peak, whose founder Qing Feng wore one patched robe for forty years to remember that the sword, not the cloth, makes the cultivator. Its loose weave lets the qi of the air seep a little faster into the body.</description>
+    <description>A plain wide-sleeved robe dyed in the color of the sect, handed to every new disciple on the day they pass the gate trial. The custom comes from the Formless Sword Sect, whose founder Qing Feng wore one patched robe for forty years to remember that the sword, not the cloth, makes the cultivator. Its loose weave lets the qi of the air seep a little faster into the body.</description>
     <possessionCount>1</possessionCount>
     <recipeMaker>
       <recipeUsers><li>CVG_SpiritLoom</li><li>HandTailoringBench</li></recipeUsers>
@@ -185,7 +185,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>CVG_Apparel_BambooHat</defName>
     <label>bamboo hat</label>
-    <description>A wide conical hat of woven bamboo, the mark of rogue cultivators and wandering swordsmen who own little else. Legend says the first one was woven by a monk of the Silent Lotus to shade a dying stranger, who later became a saint and never wore anything else on his head. It keeps off sun and rain, and hides the eyes of anyone who would rather not be recognised.</description>
+    <description>A wide conical hat of woven bamboo, the mark of rogue cultivators and wandering swordsmen who own little else. Legend says the first one was woven by a wandering monk to shade a dying stranger, who later became a saint and never wore anything else on his head. It keeps off sun and rain, and hides the eyes of anyone who would rather not be recognised.</description>
     <possessionCount>1</possessionCount>
     <recipeMaker>
       <recipeUsers><li>CVG_SpiritLoom</li><li>HandTailoringBench</li></recipeUsers>
@@ -266,7 +266,7 @@
   <ThingDef ParentName="ArmorSmithableBase">
     <defName>CVG_Apparel_ScaleArmor</defName>
     <label>spirit scale armor</label>
-    <description>Overlapping scales of spirit metal or spirit leather sewn onto a quilted robe, the standard armor of the Azure Peak sword patrols. During the Iron Calamity its smiths learned to hammer scales from the husks of fallen machines, and the shape has not changed since. Medium protection that slows a cultivator less than plate. It has spirit grade 1.</description>
+    <description>Overlapping scales of spirit metal or spirit leather sewn onto a quilted robe, the standard armor of the Formless Sword patrols. During the Iron Calamity its smiths learned to hammer scales from the husks of fallen machines, and the shape has not changed since. Medium protection that slows a cultivator less than plate. It has spirit grade 1.</description>
     <possessionCount>1</possessionCount>
     <recipeMaker>
       <recipeUsers><li MayRequire="prospero1088.convergence.alchemy">CVG_SpiritForge</li></recipeUsers>
@@ -314,7 +314,7 @@
   <ThingDef ParentName="ArmorSmithableBase">
     <defName>CVG_Apparel_ScaleHelmet</defName>
     <label>spirit scale helmet</label>
-    <description>A rounded helmet of overlapping spirit-metal scales with a hanging neck guard, the doumou made to complete the scale armor of the Azure Peak patrols. A red tassel rises from its crest ring: in Jiuxiao it marks a soldier sworn to guard the gate of a sect until death. It gives moderate protection to the head. It has spirit grade 1.</description>
+    <description>A rounded helmet of overlapping spirit-metal scales with a hanging neck guard, the doumou made to complete the scale armor of the Formless Sword patrols. A red tassel rises from its crest ring: in Jiuxiao it marks a soldier sworn to guard the gate of a sect until death. It gives moderate protection to the head. It has spirit grade 1.</description>
     <possessionCount>1</possessionCount>
     <techLevel>Medieval</techLevel>
     <recipeMaker>

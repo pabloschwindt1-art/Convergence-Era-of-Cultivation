@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <CVG_Backstory_DragonClanWard.title>pupilo del clan del dragón</CVG_Backstory_DragonClanWard.title>
-  <CVG_Backstory_DragonClanWard.titleFemale>pupila del clan del dragón</CVG_Backstory_DragonClanWard.titleFemale>
+  <CVG_Backstory_DragonClanWard.title>pupilo de una casa de tormenta</CVG_Backstory_DragonClanWard.title>
+  <CVG_Backstory_DragonClanWard.titleFemale>pupila de una casa de tormenta</CVG_Backstory_DragonClanWard.titleFemale>
   <CVG_Backstory_DragonClanWard.titleShort>pupilo</CVG_Backstory_DragonClanWard.titleShort>
   <CVG_Backstory_DragonClanWard.titleShortFemale>pupila</CVG_Backstory_DragonClanWard.titleShortFemale>
   <CVG_Backstory_DragonClanWard.description>[PAWN_nameDef] se crio como pupilo de una casa de tormenta que decía descender de Ao Lingshuang, la princesa dragón exiliada al Borde. Aprendió las genealogías del clan, el saludo en forma de ola y que un dragón no se inclina ante nadie.\n\nA los trece años se paró bajo una tormenta para el Rito del Primer Rayo, y el rayo le dejó vivir.</CVG_Backstory_DragonClanWard.description>
@@ -9,7 +9,7 @@
   <CVG_Backstory_StormArchivist.titleFemale>archivera de la tormenta</CVG_Backstory_StormArchivist.titleFemale>
   <CVG_Backstory_StormArchivist.titleShort>archivero</CVG_Backstory_StormArchivist.titleShort>
   <CVG_Backstory_StormArchivist.titleShortFemale>archivera</CVG_Backstory_StormArchivist.titleShortFemale>
-  <CVG_Backstory_StormArchivist.description>[PAWN_nameDef] custodiaba los archivos del Antiguo Clan del Dragón: cartas de mareas del Mar Celestial roto, los tratados del Pacto de los Cuatro Puntos y el nombre de cada señor desde Ao Zhenhai.\n\nLo leyó todo y no barrió nada. Barrer suelos, dice el Clan, está por debajo de los descendientes del Sellador del Mar.</CVG_Backstory_StormArchivist.description>
+  <CVG_Backstory_StormArchivist.description>[PAWN_nameDef] custodiaba lo que queda de los archivos del desaparecido Clan del Dragón Antiguo: cartas de mareas del Mar Celestial roto, los tratados del Pacto de los Cuatro Puntos y el nombre de cada señor desde Ao Zhenhai.\n\nLo leyó todo y no barrió nada. Barrer suelos, dicen las viejas casas de tormenta, está por debajo de los descendientes del Sellador del Mar.</CVG_Backstory_StormArchivist.description>
   <CVG_Backstory_AshOrphan.title>huérfano de la ceniza</CVG_Backstory_AshOrphan.title>
   <CVG_Backstory_AshOrphan.titleFemale>huérfana de la ceniza</CVG_Backstory_AshOrphan.titleFemale>
   <CVG_Backstory_AshOrphan.titleShort>huérfano</CVG_Backstory_AshOrphan.titleShort>
@@ -24,7 +24,7 @@
   <CVG_Backstory_LotusNovice.titleFemale>novicia del loto</CVG_Backstory_LotusNovice.titleFemale>
   <CVG_Backstory_LotusNovice.titleShort>novicio</CVG_Backstory_LotusNovice.titleShort>
   <CVG_Backstory_LotusNovice.titleShortFemale>novicia</CVG_Backstory_LotusNovice.titleShortFemale>
-  <CVG_Backstory_LotusNovice.description>[PAWN_nameDef] se crio como novicio del Templo del Loto Silencioso, barriendo los senderos para que nadie pisara la hierba viva. Las Voces del Loto le enseñaron a recolocar huesos, a preparar hierbas amargas y a sentarse junto a los moribundos sin apartar la mirada.</CVG_Backstory_LotusNovice.description>
+  <CVG_Backstory_LotusNovice.description>[PAWN_nameDef] se crio como novicio de un templo de montaña, barriendo los senderos para que nadie pisara la hierba viva. Las Voces del Loto le enseñaron a recolocar huesos, a preparar hierbas amargas y a sentarse junto a los moribundos sin apartar la mirada.</CVG_Backstory_LotusNovice.description>
   <CVG_Backstory_ValleyHealer.title>sanador de los valles</CVG_Backstory_ValleyHealer.title>
   <CVG_Backstory_ValleyHealer.titleFemale>sanadora de los valles</CVG_Backstory_ValleyHealer.titleFemale>
   <CVG_Backstory_ValleyHealer.titleShort>sanador</CVG_Backstory_ValleyHealer.titleShort>

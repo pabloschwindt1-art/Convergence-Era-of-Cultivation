@@ -100,7 +100,7 @@
     </suppressedTraits>
     <socialFightChanceFactor>1.3</socialFightChanceFactor>
     <label>diluted dragon blood</label>
-    <description>Dragon blood thinned by generations, yet it still answers thunder. It flows in the storm houses descended from Ao Lingshuang, the princess who fled the Ancient Dragon Clan to live on the Rim as a mercenary, and so does her pride.</description>
+    <description>Dragon blood thinned by generations, yet it still answers thunder. It flows in the storm houses descended from Ao Lingshuang, the princess who fled the Ancient Dragon Clan, long before it vanished, to live on the Rim as a mercenary, and so does her pride.</description>
     <iconPath>UI/Icons/Genes/CVG_RootElement_Water</iconPath>
     <iconColor>(0.55, 0.8, 1)</iconColor>
     <displayOrderInCategory>11</displayOrderInCategory>
@@ -128,7 +128,7 @@
     </suppressedTraits>
     <socialFightChanceFactor>1.1</socialFightChanceFactor>
     <label>pure dragon blood</label>
-    <description>Horns, scale and storm: the blood of the Ancient Dragon Clan runs true in this body. The Clan would greet its bearer as kin, and expects kin to bow to nothing but the Dao of Heaven.</description>
+    <description>Horns, scale and storm: the blood of the vanished Ancient Dragon Clan surfaces almost whole in this body, as it does once in many generations. The Clan would have greeted its bearer as kin, and expected kin to bow to nothing but the Dao of Heaven.</description>
     <iconPath>UI/Icons/Genes/CVG_RootElement_Water</iconPath>
     <iconColor>(0.8, 0.6, 1)</iconColor>
     <displayOrderInCategory>12</displayOrderInCategory>
@@ -486,7 +486,7 @@
   <XenotypeDef>
     <defName>CVG_Xeno_Dragon</defName>
     <label>dragon descendant</label>
-    <description>Members of the Ancient Dragon Clan: pure dragon blood, horns, a scaled tail and blue-green scales. Proud, strong and long-lived; after the Convergence they breathe lightning.</description>
+    <description>Rare heirs of the vanished Ancient Dragon Clan, in whom its blood surfaced strongly: horns, a scaled tail and blue-green scales. Proud, strong and long-lived; after the Convergence they breathe lightning.</description>
     <descriptionShort>Pure dragon blood: horns, scales and a scaled tail. Strong, armored and proud.</descriptionShort>
     <iconPath>UI/Icons/Xenotypes/Impid</iconPath>
     <inheritable>true</inheritable>

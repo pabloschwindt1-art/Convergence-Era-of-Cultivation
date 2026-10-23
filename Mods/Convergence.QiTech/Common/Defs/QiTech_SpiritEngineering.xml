@@ -15,7 +15,7 @@
     <defName>CVG_Research_QiFundamentals</defName>
     <tab>CVG_SpiritualEngineering</tab>
     <label>qi fundamentals</label>
-    <description>Since the Convergence, every instrument on the Edge has been picking up something it was not built to measure. Qi fundamentals turns that noise into units: how much qi a stone holds, how fast it leaks, how it bends a magnetic field. The sects learned the same things in a cave over a lifetime; the engineers learned them in a lab over a season, and both still argue about which way was cheating.</description>
+    <description>Since the Convergence, every instrument on the Rim has been picking up something it was not built to measure. Qi fundamentals turns that noise into units: how much qi a stone holds, how fast it leaks, how it bends a magnetic field. The sects learned the same things in a cave over a lifetime; the engineers learned them in a lab over a season, and both still argue about which way was cheating.</description>
     <baseCost>2000</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>

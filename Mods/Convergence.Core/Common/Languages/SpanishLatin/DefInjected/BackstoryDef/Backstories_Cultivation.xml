@@ -48,12 +48,12 @@
   <CVG_Backstory_RangeGoatherd.titleFemale>cabrera del Dragón</CVG_Backstory_RangeGoatherd.titleFemale>
   <CVG_Backstory_RangeGoatherd.titleShort>cabrero</CVG_Backstory_RangeGoatherd.titleShort>
   <CVG_Backstory_RangeGoatherd.titleShortFemale>cabrera</CVG_Backstory_RangeGoatherd.titleShortFemale>
-  <CVG_Backstory_RangeGoatherd.description>[PAWN_nameDef] pastoreaba cabras en las faldas de la Cordillera del Dragón Enroscado, donde el Clan del Dragón Antiguo prohíbe subir por encima de la línea de nubes. A veces bajaban jinetes con cuernos entre la niebla a contar los rebaños, y los cabreros aprendieron a quedarse quietos y dejarlos.</CVG_Backstory_RangeGoatherd.description>
+  <CVG_Backstory_RangeGoatherd.description>[PAWN_nameDef] pastoreaba cabras en las faldas de la Cordillera del Dragón Enroscado, donde los pastores viejos todavía no suben por encima de la línea de nubes: allá arriba vivió el Clan del Dragón Antiguo, y dicen que sus salas vacías vigilan. Cada tantos años sube alguien con un brillo de escama en las muñecas a hacer preguntas, y los cabreros aprendieron a contestar y mirar para otro lado.</CVG_Backstory_RangeGoatherd.description>
   <CVG_Backstory_BellowsChild.title>niño del fuelle</CVG_Backstory_BellowsChild.title>
   <CVG_Backstory_BellowsChild.titleFemale>niña del fuelle</CVG_Backstory_BellowsChild.titleFemale>
   <CVG_Backstory_BellowsChild.titleShort>niño del fuelle</CVG_Backstory_BellowsChild.titleShort>
   <CVG_Backstory_BellowsChild.titleShortFemale>niña del fuelle</CVG_Backstory_BellowsChild.titleShortFemale>
-  <CVG_Backstory_BellowsChild.description>[PAWN_nameDef] accionaba el fuelle en una forja que abastecía de espadas de práctica al Pico Azur. Aprendió los colores del acero caliente, que el hierro espiritual canta medio tono antes de rajarse y a mantener los antebrazos lejos del temple, casi siempre.</CVG_Backstory_BellowsChild.description>
+  <CVG_Backstory_BellowsChild.description>[PAWN_nameDef] accionaba el fuelle en una forja que abastecía de espadas de práctica a la Espada Sin Forma. Aprendió los colores del acero caliente, que el hierro espiritual canta medio tono antes de rajarse y a mantener los antebrazos lejos del temple, casi siempre.</CVG_Backstory_BellowsChild.description>
   <CVG_Backstory_PeddlersChild.title>hijo de charlatán</CVG_Backstory_PeddlersChild.title>
   <CVG_Backstory_PeddlersChild.titleFemale>hija de charlatán</CVG_Backstory_PeddlersChild.titleFemale>
   <CVG_Backstory_PeddlersChild.titleShort>hijo del vendedor</CVG_Backstory_PeddlersChild.titleShort>
@@ -107,7 +107,7 @@
   <CVG_Backstory_SwordCemeterySweeper.titleFemale>barrendera de espadas</CVG_Backstory_SwordCemeterySweeper.titleFemale>
   <CVG_Backstory_SwordCemeterySweeper.titleShort>barrendero</CVG_Backstory_SwordCemeterySweeper.titleShort>
   <CVG_Backstory_SwordCemeterySweeper.titleShortFemale>barrendera</CVG_Backstory_SwordCemeterySweeper.titleShortFemale>
-  <CVG_Backstory_SwordCemeterySweeper.description>[PAWN_nameDef] barría hojas en el Cementerio de Espadas del Pico Azur, donde las hojas de los ancianos muertos están clavadas en la tierra y zumban cuando llueve. Tocarlas estaba prohibido, así que aprendió cuáles cantaban en la tormenta y cuáles se quedaban mudas.\n\nDesde entonces no ha podido dormir con truenos.</CVG_Backstory_SwordCemeterySweeper.description>
+  <CVG_Backstory_SwordCemeterySweeper.description>[PAWN_nameDef] barría hojas en el Cementerio de Espadas dla Espada Sin Forma, donde las hojas de los ancianos muertos están clavadas en la tierra y zumban cuando llueve. Tocarlas estaba prohibido, así que aprendió cuáles cantaban en la tormenta y cuáles se quedaban mudas.\n\nDesde entonces no ha podido dormir con truenos.</CVG_Backstory_SwordCemeterySweeper.description>
   <CVG_Backstory_RiftCrossedChild.title>niño cruzagrietas</CVG_Backstory_RiftCrossedChild.title>
   <CVG_Backstory_RiftCrossedChild.titleFemale>niña cruzagrietas</CVG_Backstory_RiftCrossedChild.titleFemale>
   <CVG_Backstory_RiftCrossedChild.titleShort>niño de la grieta</CVG_Backstory_RiftCrossedChild.titleShort>
@@ -125,7 +125,7 @@
   <CVG_Backstory_TempleGateChild.titleFemale>expósita del templo</CVG_Backstory_TempleGateChild.titleFemale>
   <CVG_Backstory_TempleGateChild.titleShort>niño del templo</CVG_Backstory_TempleGateChild.titleShort>
   <CVG_Backstory_TempleGateChild.titleShortFemale>niña del templo</CVG_Backstory_TempleGateChild.titleShortFemale>
-  <CVG_Backstory_TempleGateChild.description>[PAWN_nameDef] fue dejado a la puerta del Templo del Loto Silencioso con un nombre prendido a la manta. Nunca fue novicio, solo un niño laico: tocaba las campanas de las horas, alimentaba al qilin del templo y llevaba caldo amargo al pabellón de los peregrinos.\n\nLos monjes dicen que el qilin lo eligió. El qilin no ha hecho comentarios.</CVG_Backstory_TempleGateChild.description>
+  <CVG_Backstory_TempleGateChild.description>[PAWN_nameDef] fue dejado a la puerta de un templo de montaña con un nombre prendido a la manta. Nunca fue novicio, solo un niño laico: tocaba las campanas de las horas, alimentaba al qilin del templo y llevaba caldo amargo al pabellón de los peregrinos.\n\nLos monjes dicen que el qilin lo eligió. El qilin no ha hecho comentarios.</CVG_Backstory_TempleGateChild.description>
   <CVG_Backstory_ClinicChild.title>niño de la clínica</CVG_Backstory_ClinicChild.title>
   <CVG_Backstory_ClinicChild.titleFemale>niña de la clínica</CVG_Backstory_ClinicChild.titleFemale>
   <CVG_Backstory_ClinicChild.titleShort>niño de clínica</CVG_Backstory_ClinicChild.titleShort>
@@ -149,12 +149,12 @@
   <CVG_Backstory_FallenHouseHeir.titleFemale>heredera de casa caída</CVG_Backstory_FallenHouseHeir.titleFemale>
   <CVG_Backstory_FallenHouseHeir.titleShort>heredero</CVG_Backstory_FallenHouseHeir.titleShort>
   <CVG_Backstory_FallenHouseHeir.titleShortFemale>heredera</CVG_Backstory_FallenHouseHeir.titleShortFemale>
-  <CVG_Backstory_FallenHouseHeir.description>[PAWN_nameDef] nació como último heredero de la casa Wen de Jiuxiao, un clan de cultivadores que alguna vez tuvo tres montañas y un asiento en los consejos del Pico Azur. Cuando nació, las viejas deudas de la Calamidad de Hierro y una disputa perdida contra un clan rival habían dejado a la familia un solo patio y una biblioteca de técnicas que nadie podía darse el lujo de practicar.\n\nAprendió etiqueta, genealogía y a vender una reliquia sin parecer triste. Nadie le enseñó nunca a cargar su propio equipaje.</CVG_Backstory_FallenHouseHeir.description>
+  <CVG_Backstory_FallenHouseHeir.description>[PAWN_nameDef] nació como último heredero de la casa Wen de Jiuxiao, un clan de cultivadores que alguna vez tuvo tres montañas y un asiento en los consejos dla Espada Sin Forma. Cuando nació, las viejas deudas de la Calamidad de Hierro y una disputa perdida contra un clan rival habían dejado a la familia un solo patio y una biblioteca de técnicas que nadie podía darse el lujo de practicar.\n\nAprendió etiqueta, genealogía y a vender una reliquia sin parecer triste. Nadie le enseñó nunca a cargar su propio equipaje.</CVG_Backstory_FallenHouseHeir.description>
   <CVG_Backstory_BeastRaisedChild.title>criado por bestias</CVG_Backstory_BeastRaisedChild.title>
   <CVG_Backstory_BeastRaisedChild.titleFemale>criada por bestias</CVG_Backstory_BeastRaisedChild.titleFemale>
   <CVG_Backstory_BeastRaisedChild.titleShort>niño salvaje</CVG_Backstory_BeastRaisedChild.titleShort>
   <CVG_Backstory_BeastRaisedChild.titleShortFemale>niña salvaje</CVG_Backstory_BeastRaisedChild.titleShortFemale>
-  <CVG_Backstory_BeastRaisedChild.description>Cuando una caravana se dispersó en un bosque de bestias espirituales, [PAWN_nameDef] se perdió y vivió tres años con una manada de lobos lunares que lo trataban como a un cachorro lento pero leal. Más tarde, un monje del Templo del Loto Silencioso lo devolvió al habla, una palabra por día, pero las palabras nunca llegaron a ser la lengua en la que piensa.\n\nTodavía gruñe cuando algo lo sobresalta, y prefiere hablar con un lobo antes que con un mercader.</CVG_Backstory_BeastRaisedChild.description>
+  <CVG_Backstory_BeastRaisedChild.description>Cuando una caravana se dispersó en un bosque de bestias espirituales, [PAWN_nameDef] se perdió y vivió tres años con una manada de lobos lunares que lo trataban como a un cachorro lento pero leal. Más tarde, un sanador del Caldero Celestial lo devolvió al habla, una palabra por día, pero las palabras nunca llegaron a ser la lengua en la que piensa.\n\nTodavía gruñe cuando algo lo sobresalta, y prefiere hablar con un lobo antes que con un mercader.</CVG_Backstory_BeastRaisedChild.description>
   <CVG_Backstory_CultCaptiveChild.title>cautivo del culto</CVG_Backstory_CultCaptiveChild.title>
   <CVG_Backstory_CultCaptiveChild.titleFemale>cautiva del culto</CVG_Backstory_CultCaptiveChild.titleFemale>
   <CVG_Backstory_CultCaptiveChild.titleShort>cautivo</CVG_Backstory_CultCaptiveChild.titleShort>
@@ -212,7 +212,7 @@
   <CVG_Backstory_TeaHouseServer.titleFemale>mesera de casa de té</CVG_Backstory_TeaHouseServer.titleFemale>
   <CVG_Backstory_TeaHouseServer.titleShort>mesero</CVG_Backstory_TeaHouseServer.titleShort>
   <CVG_Backstory_TeaHouseServer.titleShortFemale>mesera</CVG_Backstory_TeaHouseServer.titleShortFemale>
-  <CVG_Backstory_TeaHouseServer.description>[PAWN_nameDef] servía té en una casa de té del camino al Pico Azur, y se enteraba de cada rumor de la secta un día antes que la propia secta.</CVG_Backstory_TeaHouseServer.description>
+  <CVG_Backstory_TeaHouseServer.description>[PAWN_nameDef] servía té en una casa de té del camino a la Espada Sin Forma, y se enteraba de cada rumor de la secta un día antes que la propia secta.</CVG_Backstory_TeaHouseServer.description>
   <CVG_Backstory_ExpelledOuterDisciple.title>discípulo expulsado</CVG_Backstory_ExpelledOuterDisciple.title>
   <CVG_Backstory_ExpelledOuterDisciple.titleFemale>discípula expulsada</CVG_Backstory_ExpelledOuterDisciple.titleFemale>
   <CVG_Backstory_ExpelledOuterDisciple.titleShort>discípulo</CVG_Backstory_ExpelledOuterDisciple.titleShort>
@@ -285,13 +285,13 @@
   <CVG_Backstory_LotusMonk.titleFemale>monja del Loto</CVG_Backstory_LotusMonk.titleFemale>
   <CVG_Backstory_LotusMonk.titleShort>monje</CVG_Backstory_LotusMonk.titleShort>
   <CVG_Backstory_LotusMonk.titleShortFemale>monja</CVG_Backstory_LotusMonk.titleShortFemale>
-  <CVG_Backstory_LotusMonk.description>[PAWN_nameDef] tomó los votos completos en el Templo del Loto Silencioso: templar el cuerpo en los manantiales fríos cada amanecer, recolocar los huesos de los peregrinos cada mediodía y sentarse con los moribundos cada noche. El Templo no enseña a matar, solo a aguantar y a remendar.\n\nPosee un cuenco, un hábito y nada más, y considera que eso ya es una cosa de más.</CVG_Backstory_LotusMonk.description>
+  <CVG_Backstory_LotusMonk.description>[PAWN_nameDef] tomó los votos completos en un templo de montaña de Jiuxiao: templar el cuerpo en los manantiales fríos cada amanecer, recolocar los huesos de los peregrinos cada mediodía y sentarse con los moribundos cada noche. El Templo no enseña a matar, solo a aguantar y a remendar.\n\nPosee un cuenco, un hábito y nada más, y considera que eso ya es una cosa de más.</CVG_Backstory_LotusMonk.description>
   <!-- Adulthood, tier 3 -->
   <CVG_Backstory_SwordForger.title>maestro forjador</CVG_Backstory_SwordForger.title>
   <CVG_Backstory_SwordForger.titleFemale>maestra forjadora</CVG_Backstory_SwordForger.titleFemale>
   <CVG_Backstory_SwordForger.titleShort>maestro forjador</CVG_Backstory_SwordForger.titleShort>
   <CVG_Backstory_SwordForger.titleShortFemale>maestra forjadora</CVG_Backstory_SwordForger.titleShortFemale>
-  <CVG_Backstory_SwordForger.description>[PAWN_nameDef] fue maestro forjador del Pico Azur, uno de los pocos cuyas hojas llevan los Ancianos de Espada, plegando hierro espiritual cien veces y escuchándolo entre pliegue y pliegue. Tras la Convergencia plegó plastiacero de la misma manera, para horror de los viejos herreros y deleite de los Ancianos de Espada.\n\n"Una hoja", dice, "es la segunda columna vertebral del forjador". Es casi lo único que dice; habla con el acero con más facilidad que con la gente.</CVG_Backstory_SwordForger.description>
+  <CVG_Backstory_SwordForger.description>[PAWN_nameDef] fue maestro forjador dla Espada Sin Forma, uno de los pocos cuyas hojas llevan los Ancianos de Espada, plegando hierro espiritual cien veces y escuchándolo entre pliegue y pliegue. Tras la Convergencia plegó plastiacero de la misma manera, para horror de los viejos herreros y deleite de los Ancianos de Espada.\n\n"Una hoja", dice, "es la segunda columna vertebral del forjador". Es casi lo único que dice; habla con el acero con más facilidad que con la gente.</CVG_Backstory_SwordForger.description>
   <!-- Adulthood, tier 2 -->
   <CVG_Backstory_FormationMason.title>albañil de formaciones</CVG_Backstory_FormationMason.title>
   <CVG_Backstory_FormationMason.titleShort>albañil</CVG_Backstory_FormationMason.titleShort>
@@ -332,7 +332,7 @@
   <CVG_Backstory_DragonHunter.titleFemale>cazadora de dragones</CVG_Backstory_DragonHunter.titleFemale>
   <CVG_Backstory_DragonHunter.titleShort>cazador de dragones</CVG_Backstory_DragonHunter.titleShort>
   <CVG_Backstory_DragonHunter.titleShortFemale>cazadora de dragones</CVG_Backstory_DragonHunter.titleShortFemale>
-  <CVG_Backstory_DragonHunter.description>[PAWN_nameDef] cazaba a los de sangre de dragón por sus escamas, que el Pabellón compra al peso y Ascension Dynamics por gramo. El Clan del Dragón Antiguo caza a quienes venden escamas, así que aprendió a disparar primero, desollar rápido y no dormir nunca dos veces en el mismo valle.\n\nSigue vivo. El Clan tiene una lista, y está en ella.</CVG_Backstory_DragonHunter.description>
+  <CVG_Backstory_DragonHunter.description>[PAWN_nameDef] cazaba a los de sangre de dragón por sus escamas, que el Pabellón compra al peso y Ascension Dynamics por gramo. Los pocos que llevan esa sangre se cuidan entre sí cuando uno desaparece, así que aprendió a disparar primero, desollar rápido y no dormir nunca dos veces en el mismo valle.\n\nSigue vivo. Alguien lleva una lista, y está en ella.</CVG_Backstory_DragonHunter.description>
   <!-- Adulthood, tier 3 -->
   <CVG_Backstory_SutraLibrarian.title>guardián de sutras</CVG_Backstory_SutraLibrarian.title>
   <CVG_Backstory_SutraLibrarian.titleFemale>guardiana de sutras</CVG_Backstory_SutraLibrarian.titleFemale>
@@ -343,7 +343,7 @@
   <CVG_Backstory_RepentantAssassin.titleFemale>asesina arrepentida</CVG_Backstory_RepentantAssassin.titleFemale>
   <CVG_Backstory_RepentantAssassin.titleShort>asesino</CVG_Backstory_RepentantAssassin.titleShort>
   <CVG_Backstory_RepentantAssassin.titleShortFemale>asesina</CVG_Backstory_RepentantAssassin.titleShortFemale>
-  <CVG_Backstory_RepentantAssassin.description>[PAWN_nameDef] fue un Hilo Rojo del Culto de la Luna Sangrienta, uno de los cuchillos que se envían a llenar las farolas de alma. El último objetivo era un niño bajo la protección de un monje del Loto Silencioso, y el monje no levantó la mano; solo le preguntó su nombre.\n\nSoltó la hoja allí mismo. En su lugar, carga con la lista de nombres, y pesa.</CVG_Backstory_RepentantAssassin.description>
+  <CVG_Backstory_RepentantAssassin.description>[PAWN_nameDef] fue un Hilo Rojo del Culto de la Luna Sangrienta, uno de los cuchillos que se envían a llenar las farolas de alma. El último objetivo era un niño bajo la protección de un monje errante, y el monje no levantó la mano; solo le preguntó su nombre.\n\nSoltó la hoja allí mismo. En su lugar, carga con la lista de nombres, y pesa.</CVG_Backstory_RepentantAssassin.description>
   <CVG_Backstory_ShellEngineer.title>ingeniero del Hierro</CVG_Backstory_ShellEngineer.title>
   <CVG_Backstory_ShellEngineer.titleFemale>ingeniera del Hierro</CVG_Backstory_ShellEngineer.titleFemale>
   <CVG_Backstory_ShellEngineer.titleShort>ingeniero</CVG_Backstory_ShellEngineer.titleShort>
@@ -410,17 +410,17 @@
   <CVG_Backstory_SwordSaintHermit.titleFemale>santa de la espada</CVG_Backstory_SwordSaintHermit.titleFemale>
   <CVG_Backstory_SwordSaintHermit.titleShort>santo de la espada</CVG_Backstory_SwordSaintHermit.titleShort>
   <CVG_Backstory_SwordSaintHermit.titleShortFemale>santa de la espada</CVG_Backstory_SwordSaintHermit.titleShortFemale>
-  <CVG_Backstory_SwordSaintHermit.description>[PAWN_nameDef] es una de las tres personas vivas a las que el Pico Azur llama Santo de la Espada, y la única que rechazó el título. Vivió solo en una cima del Cementerio de Espadas, cortando la lluvia, y bajó únicamente cuando la Convergencia desgarró la formación.\n\nNo ha dicho una frase completa en años. Cocinar, cuidar enfermos y conversar son cosas que hacen otros; [PAWN_nameDef] tiene una espada.</CVG_Backstory_SwordSaintHermit.description>
+  <CVG_Backstory_SwordSaintHermit.description>[PAWN_nameDef] es una de las tres personas vivas a las que la Espada Sin Forma llama Santo de la Espada, y la única que rechazó el título. Vivió solo en una cima del Cementerio de Espadas, cortando la lluvia, y bajó únicamente cuando la Convergencia desgarró la formación.\n\nNo ha dicho una frase completa en años. Cocinar, cuidar enfermos y conversar son cosas que hacen otros; [PAWN_nameDef] tiene una espada.</CVG_Backstory_SwordSaintHermit.description>
   <CVG_Backstory_SealedDemonLord.title>señor demoníaco</CVG_Backstory_SealedDemonLord.title>
   <CVG_Backstory_SealedDemonLord.titleFemale>señora demoníaca</CVG_Backstory_SealedDemonLord.titleFemale>
   <CVG_Backstory_SealedDemonLord.titleShort>señor demoníaco</CVG_Backstory_SealedDemonLord.titleShort>
   <CVG_Backstory_SealedDemonLord.titleShortFemale>señora demoníaca</CVG_Backstory_SealedDemonLord.titleShortFemale>
-  <CVG_Backstory_SealedDemonLord.description>[PAWN_nameDef] fue un Señor Demoníaco del camino de la sangre, temido por cinco sectas y cortejado por el Culto de la Luna Sangrienta, hasta que una abadesa del Loto Silencioso selló el demonio en su interior con un solo toque y lo dejó marcharse. El sello aguanta. El hambre que contiene no duerme.\n\nNo se le puede confiar a los enfermos ni a los animales, y lo sabe mejor que nadie.</CVG_Backstory_SealedDemonLord.description>
+  <CVG_Backstory_SealedDemonLord.description>[PAWN_nameDef] fue un Señor Demoníaco del camino de la sangre, temido por cinco sectas y cortejado por el Culto de la Luna Sangrienta, hasta que una abadesa de los templos de montaña selló el demonio en su interior con un solo toque y lo dejó marcharse. El sello aguanta. El hambre que contiene no duerme.\n\nNo se le puede confiar a los enfermos ni a los animales, y lo sabe mejor que nadie.</CVG_Backstory_SealedDemonLord.description>
   <CVG_Backstory_ExiledDragonPatriarch.title>patriarca exiliado</CVG_Backstory_ExiledDragonPatriarch.title>
   <CVG_Backstory_ExiledDragonPatriarch.titleFemale>matriarca exiliada</CVG_Backstory_ExiledDragonPatriarch.titleFemale>
   <CVG_Backstory_ExiledDragonPatriarch.titleShort>patriarca</CVG_Backstory_ExiledDragonPatriarch.titleShort>
   <CVG_Backstory_ExiledDragonPatriarch.titleShortFemale>matriarca</CVG_Backstory_ExiledDragonPatriarch.titleShortFemale>
-  <CVG_Backstory_ExiledDragonPatriarch.description>[PAWN_nameDef] dirigió una casa menor del Clan del Dragón Antiguo durante más tiempo del que duran la mayoría de los reinos, hasta que una guerra perdida contra el Culto de la Luna Sangrienta le costó a la casa su tesoro y la ley del Clan le costó los cuernos. La sangre de dragón mantiene el cuerpo en la edad de su primera muda, así que el exilio parece joven; la voz de mando, la memoria de cada tratado y el gusto por los tesoros son mucho más viejos.\n\nEl Clan cría a sus herederos para gobernar, no para barrer, cocinar ni cargar, y nunca vio motivo para aprender.</CVG_Backstory_ExiledDragonPatriarch.description>
+  <CVG_Backstory_ExiledDragonPatriarch.description>[PAWN_nameDef] dirigió una de las últimas casas que se decían herederas del desaparecido Clan del Dragón Antiguo, durante más tiempo del que duran la mayoría de los reinos, hasta que una guerra perdida contra el Culto de la Luna Sangrienta le costó a la casa su tesoro y la ley de la propia casa le costó los cuernos. La sangre de dragón mantiene el cuerpo en la edad de su primera muda, así que el exilio parece joven; la voz de mando, la memoria de cada tratado y el gusto por los tesoros son mucho más viejos.\n\nEsas casas crían a sus herederos para gobernar, no para barrer, cocinar ni cargar, y nunca vio motivo para aprender.</CVG_Backstory_ExiledDragonPatriarch.description>
   <CVG_Backstory_FormationGrandmaster.title>maestro de formaciones</CVG_Backstory_FormationGrandmaster.title>
   <CVG_Backstory_FormationGrandmaster.titleFemale>maestra de formaciones</CVG_Backstory_FormationGrandmaster.titleFemale>
   <CVG_Backstory_FormationGrandmaster.titleShort>gran maestro</CVG_Backstory_FormationGrandmaster.titleShort>
@@ -430,32 +430,32 @@
   <CVG_Backstory_ImmortalPhysician.titleFemale>médica inmortal</CVG_Backstory_ImmortalPhysician.titleFemale>
   <CVG_Backstory_ImmortalPhysician.titleShort>médico inmortal</CVG_Backstory_ImmortalPhysician.titleShort>
   <CVG_Backstory_ImmortalPhysician.titleShortFemale>médica inmortal</CVG_Backstory_ImmortalPhysician.titleShortFemale>
-  <CVG_Backstory_ImmortalPhysician.description>[PAWN_nameDef] recorrió Jiuxiao como el Médico Inmortal, curando plagas con una cesta de hierbas y una aguja y rechazando cada secta que le ofreció un asiento y cada rey que le ofreció un palacio. El Loto Silencioso guarda un registro de todos los que ha curado; llena una sala, y la cara sobre la cesta no ha envejecido un día desde que se empezó el registro, como no envejece la cara de un cultivador.\n\nHizo voto de no hacer daño nunca y voto de pobreza, que no deja lugar para herramientas, y ha cumplido ambos.</CVG_Backstory_ImmortalPhysician.description>
+  <CVG_Backstory_ImmortalPhysician.description>[PAWN_nameDef] recorrió Jiuxiao como el Médico Inmortal, curando plagas con una cesta de hierbas y una aguja y rechazando cada secta que le ofreció un asiento y cada rey que le ofreció un palacio. El Pabellón del Caldero Celestial guarda un registro de todos los que ha curado; llena una sala, y la cara sobre la cesta no ha envejecido un día desde que se empezó el registro, como no envejece la cara de un cultivador.\n\nHizo voto de no hacer daño nunca y voto de pobreza, que no deja lugar para herramientas, y ha cumplido ambos.</CVG_Backstory_ImmortalPhysician.description>
   <!-- Adulthood, tier 1 -->
   <CVG_Backstory_SwordApprentice.title>aprendiz de espada</CVG_Backstory_SwordApprentice.title>
   <CVG_Backstory_SwordApprentice.titleShort>aprendiz de espada</CVG_Backstory_SwordApprentice.titleShort>
-  <CVG_Backstory_SwordApprentice.description>[PAWN_nameDef] fue Aprendiz de Espada del Pico Azur, el rango externo que barre los patios de entrenamiento y hace mil cortes antes del desayuno y mil después. Ocho años de las mismas tres formas, hasta que los ancianos dejaron de corregirlas.</CVG_Backstory_SwordApprentice.description>
+  <CVG_Backstory_SwordApprentice.description>[PAWN_nameDef] fue Aprendiz de Espada dla Espada Sin Forma, el rango externo que barre los patios de entrenamiento y hace mil cortes antes del desayuno y mil después. Ocho años de las mismas tres formas, hasta que los ancianos dejaron de corregirlas.</CVG_Backstory_SwordApprentice.description>
   <!-- Adulthood, tier 2 -->
   <CVG_Backstory_SwordBearer.title>portador de espada</CVG_Backstory_SwordBearer.title>
   <CVG_Backstory_SwordBearer.titleFemale>portadora de espada</CVG_Backstory_SwordBearer.titleFemale>
   <CVG_Backstory_SwordBearer.titleShort>portador</CVG_Backstory_SwordBearer.titleShort>
   <CVG_Backstory_SwordBearer.titleShortFemale>portadora</CVG_Backstory_SwordBearer.titleShortFemale>
-  <CVG_Backstory_SwordBearer.description>[PAWN_nameDef] llegó a Portador de Espada del Pico Azur, el rango interno al que se confía una hoja con nombre del Cementerio de Espadas y el deber de ponerse en primera línea cuando el Culto de la Luna Sangrienta sube por los escalones. La hoja tiene nombre; no lo dice en voz alta.</CVG_Backstory_SwordBearer.description>
+  <CVG_Backstory_SwordBearer.description>[PAWN_nameDef] llegó a Portador de Espada dla Espada Sin Forma, el rango interno al que se confía una hoja con nombre del Cementerio de Espadas y el deber de ponerse en primera línea cuando el Culto de la Luna Sangrienta sube por los escalones. La hoja tiene nombre; no lo dice en voz alta.</CVG_Backstory_SwordBearer.description>
   <!-- Adulthood, tier 3 -->
-  <CVG_Backstory_BladeOfThePeak.title>hoja del Pico</CVG_Backstory_BladeOfThePeak.title>
+  <CVG_Backstory_BladeOfThePeak.title>hoja sin forma</CVG_Backstory_BladeOfThePeak.title>
   <CVG_Backstory_BladeOfThePeak.titleShort>hoja</CVG_Backstory_BladeOfThePeak.titleShort>
-  <CVG_Backstory_BladeOfThePeak.description>[PAWN_nameDef] fue Hoja del Pico, uno de los discípulos núcleo de la Secta de la Espada del Pico Azur que portan la técnica firma de la secta, la Lluvia de Qi de Espada, y el derecho a desafiar a un anciano. Ganó tres torneos de secta y perdió el cuarto contra Yan Zhao, el joven prodigio, cosa que el Pico no le ha dejado olvidar.\n\nUna Hoja no planta, ni acarrea, ni cocina; la secta tiene aprendices para eso, y nunca aprendió.</CVG_Backstory_BladeOfThePeak.description>
+  <CVG_Backstory_BladeOfThePeak.description>[PAWN_nameDef] fue Hoja Sin Forma, uno de los discípulos núcleo de la Secta de la Espada Sin Forma que portan la técnica firma de la secta, la Lluvia de Qi de Espada, y el derecho a desafiar a un anciano. Ganó tres torneos de secta y perdió el cuarto contra Yan Zhao, el joven prodigio, cosa que la secta no le ha dejado olvidar.\n\nUna Hoja no planta, ni acarrea, ni cocina; la secta tiene aprendices para eso, y nunca aprendió.</CVG_Backstory_BladeOfThePeak.description>
   <!-- Adulthood, tier 1 -->
   <CVG_Backstory_LotusLayApprentice.title>aprendiz del Loto</CVG_Backstory_LotusLayApprentice.title>
   <CVG_Backstory_LotusLayApprentice.titleShort>aprendiz laico</CVG_Backstory_LotusLayApprentice.titleShort>
   <CVG_Backstory_LotusLayApprentice.titleShortFemale>aprendiz laica</CVG_Backstory_LotusLayApprentice.titleShortFemale>
-  <CVG_Backstory_LotusLayApprentice.description>[PAWN_nameDef] sirvió como aprendiz laico del Templo del Loto Silencioso, el rango anterior a los votos: cambiaba vendajes en el pabellón de peregrinos, hervía caldo amargo y sostenía las manos de aquellos a los que los monjes no podían salvar.</CVG_Backstory_LotusLayApprentice.description>
+  <CVG_Backstory_LotusLayApprentice.description>[PAWN_nameDef] sirvió como aprendiz laico de un templo de montaña, el rango anterior a los votos: cambiaba vendajes en el pabellón de peregrinos, hervía caldo amargo y sostenía las manos de aquellos a los que los monjes no podían salvar.</CVG_Backstory_LotusLayApprentice.description>
   <!-- Adulthood, tier 3 -->
   <CVG_Backstory_VajraGuardian.title>guardián Vajra</CVG_Backstory_VajraGuardian.title>
   <CVG_Backstory_VajraGuardian.titleFemale>guardiana Vajra</CVG_Backstory_VajraGuardian.titleFemale>
   <CVG_Backstory_VajraGuardian.titleShort>guardián</CVG_Backstory_VajraGuardian.titleShort>
   <CVG_Backstory_VajraGuardian.titleShortFemale>guardiana</CVG_Backstory_VajraGuardian.titleShortFemale>
-  <CVG_Backstory_VajraGuardian.description>[PAWN_nameDef] fue Guardián del Templo del Loto Silencioso, uno de los monjes que templan el cuerpo hasta que un puño detiene una espada y cuya palma, la Palma Vajra, aturde a un buey. Los Guardianes se plantan en las puertas de las pagodas para que los sanadores de dentro nunca tengan que levantar la mano.\n\nTomó los votos del Templo por completo: no matar por placer, ni armas, ni posesiones, ni explicaciones.</CVG_Backstory_VajraGuardian.description>
+  <CVG_Backstory_VajraGuardian.description>[PAWN_nameDef] fue Guardián de la Secta de los Nueve Templados, uno de los discípulos que templan el cuerpo hasta que un puño detiene una espada y cuya palma, la Palma Vajra, aturde a un buey. Los Guardianes se plantan en las puertas del salón para que los sanadores de dentro nunca tengan que levantar la mano.\n\nTomó los votos de la secta por completo: no matar por placer, ni armas, ni posesiones, ni explicaciones.</CVG_Backstory_VajraGuardian.description>
   <!-- Adulthood, tier 1 -->
   <CVG_Backstory_CauldronApprentice.title>aprendiz de caldero</CVG_Backstory_CauldronApprentice.title>
   <CVG_Backstory_CauldronApprentice.titleShort>aprendiz</CVG_Backstory_CauldronApprentice.titleShort>
@@ -473,11 +473,11 @@
   <!-- Adulthood, tier 2 -->
   <CVG_Backstory_VeinFinder.title>buscavetas</CVG_Backstory_VeinFinder.title>
   <CVG_Backstory_VeinFinder.titleShort>buscavetas</CVG_Backstory_VeinFinder.titleShort>
-  <CVG_Backstory_VeinFinder.description>[PAWN_nameDef] fue buscavetas: recorría las colinas por delante de los gremios mineros de Jiuxiao con una vara horquillada de madera de duraznero y un dolor de muelas que empeora cuanto más cerca está la piedra espiritual. Los gremios pagan por veta, el Pabellón paga por el mapa y el Clan del Dragón le paga por no acercarse a sus montañas.</CVG_Backstory_VeinFinder.description>
+  <CVG_Backstory_VeinFinder.description>[PAWN_nameDef] fue buscavetas: recorría las colinas por delante de los gremios mineros de Jiuxiao con una vara horquillada de madera de duraznero y un dolor de muelas que empeora cuanto más cerca está la piedra espiritual. Los gremios pagan por veta, el Pabellón paga por el mapa y los pastores viejos le pagan por no cavar cerca de las salas vacías del Clan del Dragón.</CVG_Backstory_VeinFinder.description>
   <!-- Adulthood, tier 3 -->
   <CVG_Backstory_MountainOpener.title>abremontañas</CVG_Backstory_MountainOpener.title>
   <CVG_Backstory_MountainOpener.titleShort>abremontañas</CVG_Backstory_MountainOpener.titleShort>
-  <CVG_Backstory_MountainOpener.description>[PAWN_nameDef] fue abremontañas, uno de los cultivadores del camino de la tierra que los gremios mineros de Jiuxiao contratan para partir una ladera de un solo golpe donde cuarenta picos tardarían una estación. El Pico Azur llama a la técnica Golpe Parte-Montañas y la enseña para la guerra; los gremios pagan mejor.\n\nAños de eso le grabaron el qi de tierra en los huesos y el silencio de las galerías en los modales. Le habla a la roca con más soltura que a la gente.</CVG_Backstory_MountainOpener.description>
+  <CVG_Backstory_MountainOpener.description>[PAWN_nameDef] fue abremontañas, uno de los cultivadores del camino de la tierra que los gremios mineros de Jiuxiao contratan para partir una ladera de un solo golpe donde cuarenta picos tardarían una estación. La Espada Sin Forma llama a la técnica Golpe Parte-Montañas y la enseña para la guerra; los gremios pagan mejor.\n\nAños de eso le grabaron el qi de tierra en los huesos y el silencio de las galerías en los modales. Le habla a la roca con más soltura que a la gente.</CVG_Backstory_MountainOpener.description>
   <!-- Adulthood, tier 1 -->
   <CVG_Backstory_JadeSlipEngraver.title>grabador de jade</CVG_Backstory_JadeSlipEngraver.title>
   <CVG_Backstory_JadeSlipEngraver.titleFemale>grabadora de jade</CVG_Backstory_JadeSlipEngraver.titleFemale>
@@ -500,13 +500,13 @@
   <CVG_Backstory_BellowsStriker.titleFemale>machacadora de forja</CVG_Backstory_BellowsStriker.titleFemale>
   <CVG_Backstory_BellowsStriker.titleShort>machacador</CVG_Backstory_BellowsStriker.titleShort>
   <CVG_Backstory_BellowsStriker.titleShortFemale>machacadora</CVG_Backstory_BellowsStriker.titleShortFemale>
-  <CVG_Backstory_BellowsStriker.description>[PAWN_nameDef] fue machacador en una forja de las faldas del Pico Azur: blandía el martillo grande donde señalaba el herrero, hacía hojas de práctica y herraduras y, una vez al año, le dejaban sostener las tenazas mientras el maestro plegaba hierro espiritual.</CVG_Backstory_BellowsStriker.description>
+  <CVG_Backstory_BellowsStriker.description>[PAWN_nameDef] fue machacador en una forja de las faldas dla Espada Sin Forma: blandía el martillo grande donde señalaba el herrero, hacía hojas de práctica y herraduras y, una vez al año, le dejaban sostener las tenazas mientras el maestro plegaba hierro espiritual.</CVG_Backstory_BellowsStriker.description>
   <!-- Adulthood, tier 2 -->
   <CVG_Backstory_ShellSmith.title>herrero de cascarones</CVG_Backstory_ShellSmith.title>
   <CVG_Backstory_ShellSmith.titleFemale>herrera de cascarones</CVG_Backstory_ShellSmith.titleFemale>
   <CVG_Backstory_ShellSmith.titleShort>herrero</CVG_Backstory_ShellSmith.titleShort>
   <CVG_Backstory_ShellSmith.titleShortFemale>herrera</CVG_Backstory_ShellSmith.titleShortFemale>
-  <CVG_Backstory_ShellSmith.description>[PAWN_nameDef] fue herrero de cascarones del Pico Azur, uno de los herreros que trabajan los cascarones caídos de la Calamidad de Hierro para hacer hojas, como hace la secta desde que las Espadas del Cielo Roto se forjaron con las primeras máquinas muertas. El metal se resiste al martillo y recuerda lo que fue.\n\nDesde la Convergencia tiene plastiacero con qué compararlo, y dice que los cascarones siguen siendo más duros.</CVG_Backstory_ShellSmith.description>
+  <CVG_Backstory_ShellSmith.description>[PAWN_nameDef] fue herrero de cascarones dla Espada Sin Forma, uno de los herreros que trabajan los cascarones caídos de la Calamidad de Hierro para hacer hojas, como hace la secta desde que las Espadas del Cielo Roto se forjaron con las primeras máquinas muertas. El metal se resiste al martillo y recuerda lo que fue.\n\nDesde la Convergencia tiene plastiacero con qué compararlo, y dice que los cascarones siguen siendo más duros.</CVG_Backstory_ShellSmith.description>
   <!-- Childhood, tier 1 -->
   <CVG_Backstory_BeastGardenChild.title>niño del bestiario</CVG_Backstory_BeastGardenChild.title>
   <CVG_Backstory_BeastGardenChild.titleFemale>niña del bestiario</CVG_Backstory_BeastGardenChild.titleFemale>

@@ -339,7 +339,7 @@
   <ThingDef ParentName="StoneBlocksBase">
     <defName>CVG_BlocksDragonObsidian</defName>
     <label>dragon obsidian blocks</label>
-    <description>Blocks of dragon obsidian: hard, sharp and resistant to fire. The Ancient Dragon Clan builds its hoard halls of it, because no thief's fire can crack the walls.</description>
+    <description>Blocks of dragon obsidian: hard, sharp and resistant to fire. The vanished Ancient Dragon Clan built its hoard halls of it, because no thief's fire can crack the walls.</description>
     <graphicData>
       <color>(32,28,36)</color>
     </graphicData>

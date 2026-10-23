@@ -3,7 +3,7 @@
   <!-- Person namers for the bloodline xenotypes (XenotypeDef.nameMaker / nameMakerFemale, like Biotech's Impid or Dirtmole).
        Chinese order: family name first. A courtesy name in quotes becomes the nickname; without it, the given name is the nickname. -->
 
-  <!-- dragon: clan names of the Ancient Dragon Clan (Ao is the surname of the Dragon Kings) -->
+  <!-- dragon: clan names of the vanished Ancient Dragon Clan (Ao is the surname of the Dragon Kings) -->
   <RulePackDef>
     <defName>CVG_NamerPerson_Dragon</defName>
     <rulePack>
@@ -169,7 +169,7 @@
     </rulePack>
   </RulePackDef>
 
-  <!-- qilin: names of the Middle Valleys and the Silent Lotus (virtue, peace, good omen) -->
+  <!-- qilin: names of the Middle Valleys and the mountain temples (virtue, peace, good omen) -->
   <RulePackDef>
     <defName>CVG_NamerPerson_Qilin</defName>
     <rulePack>

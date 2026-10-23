@@ -12,7 +12,7 @@
       <li>
         <degree>-1</degree>
         <label>dull comprehension</label>
-        <description>The Dao reaches {PAWN_nameDef} slowly: cultivation, study and techniques come hard. Yet the Silent Lotus tells of a slow-witted gardener who became abbot after watching a single leaf fall. It improves with sudden enlightenments.</description>
+        <description>The Dao reaches {PAWN_nameDef} slowly: cultivation, study and techniques come hard. Yet the temple monks tell of a slow-witted gardener who became abbot after watching a single leaf fall. It improves with sudden enlightenments.</description>
         <commonality>1</commonality>
         <statFactors>
           <CVG_CultivationSpeed>0.8</CVG_CultivationSpeed>
@@ -26,7 +26,7 @@
       <li>
         <degree>1</degree>
         <label>sharp comprehension</label>
-        <description>{PAWN_nameDef} grasps the Dao quickly: faster cultivation and cheaper techniques. Azure Peak recruiters show children a single sword form; those who repeat it that same night are the ones they look for. It improves further with sudden enlightenments.</description>
+        <description>{PAWN_nameDef} grasps the Dao quickly: faster cultivation and cheaper techniques. Formless Sword recruiters show children a single sword form; those who repeat it that same night are the ones they look for. It improves further with sudden enlightenments.</description>
         <commonality>0.6</commonality>
         <statFactors>
           <CVG_CultivationSpeed>1.25</CVG_CultivationSpeed>
@@ -86,7 +86,7 @@
     <degreeDatas>
       <li>
         <label>late bloomer</label>
-        <description>Great vessels take long to fill: slow in the first realms, faster and faster in the high ones. The proverb is carved over the gate of the Ancient Dragon Clan, who count their youth in centuries.</description>
+        <description>Great vessels take long to fill: slow in the first realms, faster and faster in the high ones. The proverb is carved over the empty gate of the vanished Ancient Dragon Clan, who counted their youth in centuries.</description>
       </li>
     </degreeDatas>
     <modExtensions>

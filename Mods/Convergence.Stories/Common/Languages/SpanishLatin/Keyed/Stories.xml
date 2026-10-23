@@ -33,6 +33,8 @@
   <CVG_Story_Assassin_Text>Quien destruyó tu secta dejó un superviviente, y eso es un cabo suelto. El asesino ha dado por fin con el rastro y viene con sus discípulos a cortarlo.</CVG_Story_Assassin_Text>
   <CVG_Story_Pursuers_Label>Los perseguidores de la secta</CVG_Story_Pursuers_Label>
   <CVG_Story_Pursuers_Text>Los cazadores que destruyeron tu secta no se han rendido. Una nueva oleada viene a terminar lo que empezaron.</CVG_Story_Pursuers_Text>
+  <CVG_Story_BloodHunters_Label>Los cazadores de sangre</CVG_Story_BloodHunters_Label>
+  <CVG_Story_BloodHunters_Text>El Culto de la Luna Sangrienta viene por la sangre de dragón de tus venas. La quiere fresca.</CVG_Story_BloodHunters_Text>
   <CVG_Story_MasterOffer_Label>Un viejo maestro ofrece un camino</CVG_Story_MasterOffer_Label>
   <CVG_Story_MasterOffer_Text>Un ermitaño pasa de noche y deja una vasija en la puerta: un elixir para reparar un dantian roto. «El cuerpo recuerda lo que el corazón se niega a olvidar», dice, y desaparece. Quien lo beba volverá a cultivar.</CVG_Story_MasterOffer_Text>
   <CVG_Story_ClanReturns_Label>El clan regresa</CVG_Story_ClanReturns_Label>
@@ -71,7 +73,7 @@ Los cobradores los van a encontrar.</CVG_Scenario_ExiledAlchemist_Start>
 
 Un gremio estuvo preguntando por ustedes.</CVG_Scenario_BeastHunters_Start>
   <CVG_Scenario_LotusRefugees_Start>La enfermería se dividió por el precio de un remedio. Te fuiste con hierbas y una receta.\n\nMo Qinghua te miró partir.</CVG_Scenario_LotusRefugees_Start>
-  <CVG_Scenario_DragonHeir_Start>Llevas un hilo de sangre de dragón, fino como un cabello.\n\nEl clan lo ha notado.</CVG_Scenario_DragonHeir_Start>
+  <CVG_Scenario_DragonHeir_Start>Llevas un hilo de sangre de dragón, fino como un cabello.\n\nLa Luna Sangrienta lo notó.</CVG_Scenario_DragonHeir_Start>
   <CVG_SectWorld_Peace>Paz entre {0} y {1}: ambas sectas envainan sus espadas.</CVG_SectWorld_Peace>
   <CVG_SectWorld_WarEnded>La guerra entre sectas terminó: {0} venció a {1}.</CVG_SectWorld_WarEnded>
   <CVG_Scenario_PuppetMaster_Start>Llevas un hilo atado al corazón.

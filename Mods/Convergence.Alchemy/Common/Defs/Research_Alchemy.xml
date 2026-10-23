@@ -24,7 +24,7 @@
   <ResearchProjectDef ParentName="CVG_DaoResearchBase">
     <defName>CVG_Research_SpiritForge3</defName>
     <label>spirit treasures</label>
-    <description>How to give a weapon a spirit of its own. The Azure Peak Sword Sect believes a treasure is never forged, only awakened, and that its spirit chooses its master. Allows upgrading the spirit forge to level 3 (treasures such as the flying sword).</description>
+    <description>How to give a weapon a spirit of its own. The Formless Sword Sect believes a treasure is never forged, only awakened, and that its spirit chooses its master. Allows upgrading the spirit forge to level 3 (treasures such as the flying sword).</description>
     <baseCost>4500</baseCost>
     <prerequisites>
       <li>CVG_Research_SpiritForge2</li>

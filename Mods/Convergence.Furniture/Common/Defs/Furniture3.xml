@@ -4,7 +4,7 @@
   <ThingDef ParentName="BedBase">
     <defName>CVG_SectDoubleBed</defName>
     <label>sect double bed</label>
-    <description>A wide bed of dark wood for two, with a red quilt for the wedding night and a hard pillow for every other. Dao partners of the Silent Lotus share one bed and one retreat, and say the second is the harder. The headboard carries two carved cranes, as the marriage contracts of Jiuxiao require.</description>
+    <description>A wide bed of dark wood for two, with a red quilt for the wedding night and a hard pillow for every other. Dao partners of the Nine Temperings share one bed and one retreat, and say the second is the harder. The headboard carries two carved cranes, as the marriage contracts of Jiuxiao require.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/SectDoubleBed</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -49,7 +49,7 @@
   <ThingDef ParentName="BedWithQualityBase">
     <defName>CVG_HealerBed</defName>
     <label>healer's bed</label>
-    <description>A bed of pale wood with a bowl of herbs under the pillow and a ring of jade beads on the frame, laid out the way the healers of the Silent Lotus place their patients. The patient lies facing the door, the healer facing the patient, and nobody may speak above a whisper. It mends the sick faster than a plain bed, though nothing there is a machine.</description>
+    <description>A bed of pale wood with a bowl of herbs under the pillow and a ring of jade beads on the frame, laid out the way the healers of the Heavenly Cauldron place their patients. The patient lies facing the door, the healer facing the patient, and nobody may speak above a whisper. It mends the sick faster than a plain bed, though nothing there is a machine.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/HealerBed</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -236,7 +236,7 @@
   <ThingDef ParentName="StorageShelfBase">
     <defName>CVG_SectChest</defName>
     <label>sect chest</label>
-    <description>A heavy chest of camphor wood with brass corners, kept at the foot of the master's bed. Its lid carries the sect's seal, and the lock is a formation: it opens only for those whose qi it remembers. The chest of the Azure Peak was empty when the Calamity struck; the elders say that is how it was protected.</description>
+    <description>A heavy chest of camphor wood with brass corners, kept at the foot of the master's bed. Its lid carries the sect's seal, and the lock is a formation: it opens only for those whose qi it remembers. The chest of the Formless Sword Sect was empty when the Calamity struck; the elders say that is how it was protected.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/SectChest</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -453,7 +453,7 @@
   <ThingDef ParentName="FurnitureWithQualityBase">
     <defName>CVG_Guqin</defName>
     <label>guqin</label>
-    <description>A long, low zither of seven silk strings on a board of paulownia wood, played with the instrument laid on a table and the player sitting upright. The old masters said the guqin is not played to be heard but to hear oneself. The Silent Lotus sing to it at dusk, and even the monks who forbid music do not forbid this.</description>
+    <description>A long, low zither of seven silk strings on a board of paulownia wood, played with the instrument laid on a table and the player sitting upright. The old masters said the guqin is not played to be heard but to hear oneself. The temple monks sing to it at dusk, and even the monks who forbid music do not forbid this.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/Guqin</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -599,7 +599,7 @@
   <ThingDef ParentName="FurnitureBase">
     <defName>CVG_LotusPlanter</defName>
     <label>lotus planter</label>
-    <description>A wide stone basin of still water where a single lotus opens each morning and closes at dusk. It grows on its own, needs no tending, and is never found dead. The monks of the Silent Lotus say that is not a miracle but good manners: the flower will not wilt in front of someone who is looking for peace.</description>
+    <description>A wide stone basin of still water where a single lotus opens each morning and closes at dusk. It grows on its own, needs no tending, and is never found dead. The temple monks say that is not a miracle but good manners: the flower will not wilt in front of someone who is looking for peace.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/LotusPlanter</texPath>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>

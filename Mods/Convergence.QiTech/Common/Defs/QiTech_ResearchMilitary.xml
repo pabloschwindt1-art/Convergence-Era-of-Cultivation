@@ -28,7 +28,7 @@
     <defName>CVG_Research_QiWeapons</defName>
     <tab>CVG_SpiritualEngineering</tab>
     <label>qi induction weapons</label>
-    <description>Rifles that wrap each round in a coherent qi field, so that it strikes a cultivator as a spirit weapon would. Unlocks the qi induction rifle and the concentrated qi rifle at the fabrication bench. The sects first called them toys, then "mortal swords", and finally stopped calling them anything in front of the Edge.</description>
+    <description>Rifles that wrap each round in a coherent qi field, so that it strikes a cultivator as a spirit weapon would. Unlocks the qi induction rifle and the concentrated qi rifle at the fabrication bench. The sects first called them toys, then "mortal swords", and finally stopped calling them anything in front of the Rim.</description>
     <baseCost>4000</baseCost>
     <techLevel>Spacer</techLevel>
     <prerequisites>
@@ -46,7 +46,7 @@
     <defName>CVG_Research_QiDefense</defName>
     <tab>CVG_SpiritualEngineering</tab>
     <label>automated qi defense</label>
-    <description>A heavy turret frame fitted with induction coils and a spirit stone capacitor: it needs grid power and spends a little stone with every burst. Unlocks the qi induction turret. It is the Edge's answer to the guardian statues of the sects, and like them it never sleeps; unlike them, it sends a bill.</description>
+    <description>A heavy turret frame fitted with induction coils and a spirit stone capacitor: it needs grid power and spends a little stone with every burst. Unlocks the qi induction turret. It is the Rim's answer to the guardian statues of the sects, and like them it never sleeps; unlike them, it sends a bill.</description>
     <baseCost>4400</baseCost>
     <techLevel>Spacer</techLevel>
     <prerequisites>

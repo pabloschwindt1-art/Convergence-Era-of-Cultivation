@@ -40,7 +40,7 @@
       <li>
         <label>arrogant young master</label>
         <labelFemale>arrogant young miss</labelFemale>
-        <description>"Do you know who my father is?" Picks fights, looks down on everyone and, when the temper snaps, snaps loudly. Yan Zhao, core disciple of Azure Peak, is the model every young master of Jiuxiao tries to imitate.</description>
+        <description>"Do you know who my father is?" Picks fights, looks down on everyone and, when the temper snaps, snaps loudly. Yan Zhao, core disciple of the Formless Sword, is the model every young master of Jiuxiao tries to imitate.</description>
         <statOffsets>
           <NegotiationAbility>-0.1</NegotiationAbility>
         </statOffsets>
@@ -118,7 +118,7 @@
       <li>
         <label>loyal disciple</label>
         <labelFemale>loyal disciple</labelFemale>
-        <description>Learns eagerly and stays calm under a master's eye. Azure Peak still honors the disciple who carried a dying elder down the mountain during the Iron Calamity, refusing every order to leave.</description>
+        <description>Learns eagerly and stays calm under a master's eye. The Formless Sword still honors the disciple who carried a dying elder down the mountain during the Iron Calamity, refusing every order to leave.</description>
         <statOffsets>
           <MentalBreakThreshold>-0.03</MentalBreakThreshold>
         </statOffsets>

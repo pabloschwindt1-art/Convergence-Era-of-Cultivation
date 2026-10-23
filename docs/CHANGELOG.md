@@ -12,6 +12,30 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod).
 
+### Lore: el Clan del Dragón pasa a leyenda y las sectas viejas a las 5 de Factions (2026-10-22)
+Sin cambio de versión todavía (va con la próxima subida de cada mod). Solo textos (EN, ES y ES-Latin), salvo Stories.
+- **Clan del Dragón Antiguo** (decisión del usuario): ya no existe; solo quedan algunas personas que heredan un poco de su sangre. Unas 20
+  descripciones lo nombran en pasado ("el desaparecido Clan del Dragón Antiguo") en Alchemy, Apparel, Core, Formations, Furniture,
+  Races, Resources y Traits & Destinies. El xenotipo dragón pasa a "raros herederos" del clan; el pupilo es de "una casa de tormenta".
+- **Pico Azur → Espada Sin Forma** y **Templo del Loto Silencioso** repartido: lo corporal (Vajra, Kongming, piel de hierro) a los
+  **Nueve Templados**, lo de sanar (enfermería, cama de sanador, injertos de mano) al **Caldero Celestial** y el ambiente de monjes (té,
+  guqin, estanques, incienso) a "los templos de montaña de Jiuxiao", sin secta. Unas 105 descripciones en 13 mods. Lin Wuchen sale de
+  la backstory del Anciano de la Disciplina (Factions).
+- **Stories:** se quitan los 3 eventos del clan (VisitDragon, MissionDragonTribute, DragonHeirTrial), que solo cargaban con el Sects
+  viejo. El escenario **Heredero del dragón** pasa a cargar con Factions: lo persigue la Luna Sangrienta (incursión nueva "Los cazadores
+  de sangre" a los 10-18 días). Sin `Mods/Sects` en LoadFolders; código sin las facciones viejas como alternativa.
+- Qi-Tech y Core: "the Edge" → "the Rim" en 7 textos en inglés, como el resto del proyecto.
+- `docs/LORE.md`: el Clan del Dragón figura como desaparecido. Autotests `-cvgselftest -cvgstoriestest` ALL OK en 1.6.4871.
+
+**Change notes (Steam)** (cada mod que la lleve):
+```
+- Lore pass: descriptions now name the five sects of Convergence: Factions; the Ancient Dragon Clan is a vanished legend.
+```
+Stories, además:
+```
+- The Dragon heir scenario now works with Convergence: Factions: the Blood Moon Cult hunts your dragon blood. The old Dragon Clan events were removed.
+```
+
 ### Convergence: Core → 0.1.3 (2026-10-22)
 - **"Hecho por"** en píldoras, armas y talismanes de todos los módulos: el colono que lo fabricó o, si vino de afuera (comercio, sectas,
   botín, eventos), un creador de lore ("Lin Jin, un alquimista errante", "un viejo herrero"…). Las pilas mezcladas dicen "varios artesanos".
@@ -27,13 +51,13 @@ Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod
 ### Convergence: Stories & Scenarios: eventos mudados a Convergence: Factions (2026-10-22)
 - Los eventos de las sectas ahora salen con **Convergence: Factions**: los del Pico Azur pasan a la Espada Sin Forma y los del Templo del
   Loto Silencioso al Pabellón del Caldero Celestial (textos reescritos: enfermería de caridad, Mo Qinghua, Qian Wanli). Los del Clan del
-  Dragón siguen con el Sects viejo hasta decidir qué pasa con el Dragón.
+  Dragón se quitaron después (ver "Lore" arriba).
 - Escenarios: Discípulos perdidos, Alquimista exiliado y **Sanadores de la enfermería** (antes Refugiados del Loto) pasan a Factions; el
-  Heredero del Dragón sigue con Sects.
+  Heredero del dragón también (ver "Lore" arriba).
 
 **Change notes (Steam):**
 ```
-- Sect events and scenarios now use the new Convergence: Factions (the Azure Peak events move to the Formless Sword, the Silent Lotus ones to the Heavenly Cauldron Pavilion). Dragon Clan events still need Convergence: Sects.
+- Sect events and scenarios now use the new Convergence: Factions (the Azure Peak events move to the Formless Sword, the Silent Lotus ones to the Heavenly Cauldron Pavilion).
 ```
 
 ### Convergence: Apparel: túnicas para Convergence: Factions (2026-10-22)

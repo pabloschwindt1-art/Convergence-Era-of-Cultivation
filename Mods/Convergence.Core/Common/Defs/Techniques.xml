@@ -512,7 +512,7 @@
   <AbilityDef ParentName="CVG_TechniqueBoltBase">
     <defName>CVG_Tech_Fireball</defName>
     <label>fireball</label>
-    <description>Condense fire qi into a ball that bursts on impact and sets things alight.\n\nBurst of radius 1.5: 10 burn damage, scaled by realm and mastery. Every fire disciple's first lesson, and the reason the Azure Peak keeps its practice yards far from the library.</description>
+    <description>Condense fire qi into a ball that bursts on impact and sets things alight.\n\nBurst of radius 1.5: 10 burn damage, scaled by realm and mastery. Every fire disciple's first lesson, and the reason the Formless Sword Sect keeps its practice yards far from the library.</description>
     <iconPath>UI/Techniques/CVG_Tech_Fireball</iconPath>
     <verbProperties>
       <soundCast>Shot_IncendiaryLauncher</soundCast>

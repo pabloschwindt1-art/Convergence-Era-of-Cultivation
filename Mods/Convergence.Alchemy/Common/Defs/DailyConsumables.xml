@@ -579,7 +579,7 @@
   <ThingDef ParentName="DrugBase">
     <defName>CVG_Incense</defName>
     <label>incense</label>
-    <description>Sticks of sandalwood dust and spirit herb that burn slow and blue. Breathing the smoke before cultivating quiets the heart and lets qi flow a little faster, but it dulls the senses. The Silent Lotus Temple burns a stick for every disciple who meditates there.</description>
+    <description>Sticks of sandalwood dust and spirit herb that burn slow and blue. Breathing the smoke before cultivating quiets the heart and lets qi flow a little faster, but it dulls the senses. The mountain temples of Jiuxiao burn a stick for every disciple who meditates there.</description>
     <possessionCount>6</possessionCount>
     <graphicData>
       <texPath>Things/Item/Resource/CVG_Incense</texPath>

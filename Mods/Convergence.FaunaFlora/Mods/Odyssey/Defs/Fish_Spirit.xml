@@ -19,7 +19,7 @@
   <ThingDef ParentName="FishBase">
     <defName>CVG_Fish_JadeEel</defName>
     <label>jade eel</label>
-    <description>A slender green eel with a jade sheen. Its flesh is full of qi. Drowned monks of the Silent Lotus Temple are said to return as jade eels, still looking for the shore. Their meat is rich in qi and in sorrow.</description>
+    <description>A slender green eel with a jade sheen. Its flesh is full of qi. Drowned temple monks are said to return as jade eels, still looking for the shore. Their meat is rich in qi and in sorrow.</description>
     <graphicData>
       <texPath>Things/Item/Fish/CVG_JadeEel</texPath>
     </graphicData>

@@ -16,7 +16,7 @@
         <degree>0</degree>
         <label>apprentice spirit farmer</label>
         <labelFemale>apprentice spirit farmer</labelFemale>
-        <description>Plants grow for {PAWN_nameDef} as if they loved the hand that tends them, and spirit herbs will too. Field monks of the Silent Lotus sing to their rice before cutting it; this one hardly needs to. (Apprentice: it improves by harvesting spirit herbs.)</description>
+        <description>Plants grow for {PAWN_nameDef} as if they loved the hand that tends them, and spirit herbs will too. Temple field monks sing to their rice before cutting it; this one hardly needs to. (Apprentice: it improves by harvesting spirit herbs.)</description>
         <commonality>1</commonality>
         <skillGains>
           <Plants>3</Plants>
@@ -168,7 +168,7 @@
         <degree>0</degree>
         <label>apprentice artifact forger</label>
         <labelFemale>apprentice artifact forger</labelFemale>
-        <description>Metal listens to {PAWN_nameDef} at the forge: spirit forging goes faster and turns out better. Azure Peak apprentices fold their first blade a thousand times, and bury it in the Sword Tomb if it breaks. (Apprentice: it improves by forging at the spirit forge.)</description>
+        <description>Metal listens to {PAWN_nameDef} at the forge: spirit forging goes faster and turns out better. Formless Sword apprentices fold their first blade a thousand times, and bury it in the Sword Tomb if it breaks. (Apprentice: it improves by forging at the spirit forge.)</description>
         <commonality>1</commonality>
         <skillGains>
           <Crafting>3</Crafting>
@@ -184,7 +184,7 @@
         <degree>1</degree>
         <label>master artifact forger</label>
         <labelFemale>master artifact forger</labelFemale>
-        <description>Steel, spirit metal and scrap from the Rim all take the shape {PAWN_nameDef} asks of them. Azure Peak's smiths learned that art from the Heaven-Breaking Swords, forged out of the husks of the Iron Calamity. (Master: it improves by forging at the spirit forge.)</description>
+        <description>Steel, spirit metal and scrap from the Rim all take the shape {PAWN_nameDef} asks of them. the Formless Sword's smiths learned that art from the Heaven-Breaking Swords, forged out of the husks of the Iron Calamity. (Master: it improves by forging at the spirit forge.)</description>
         <commonality>0.15</commonality>
         <skillGains>
           <Crafting>5</Crafting>
@@ -200,7 +200,7 @@
         <degree>2</degree>
         <label>grandmaster artifact forger</label>
         <labelFemale>grandmaster artifact forger</labelFemale>
-        <description>Metal no longer just listens to {PAWN_nameDef}: it waits, and every spirit forging comes out fast and fine. Weapons from such a forge earn a place in Azure Peak's Sword Tomb, where the blades of every elder sleep.</description>
+        <description>Metal no longer just listens to {PAWN_nameDef}: it waits, and every spirit forging comes out fast and fine. Weapons from such a forge earn a place in the Formless Sword's Sword Tomb, where the blades of every elder sleep.</description>
         <commonality>0.02</commonality>
         <skillGains>
           <Crafting>7</Crafting>
@@ -323,7 +323,7 @@
         <degree>0</degree>
         <label>apprentice beast tamer</label>
         <labelFemale>apprentice beast tamer</labelFemale>
-        <description>Beasts, spiritual or not, accept {PAWN_nameDef} as one of their own: taming and training come easier. Silent Lotus novices begin by feeding the temple's qilin, and it is the qilin who decide who stays. (Apprentice: it improves by taming animals (spirit beasts count triple).)</description>
+        <description>Beasts, spiritual or not, accept {PAWN_nameDef} as one of their own: taming and training come easier. Temple novices begin by feeding the temple's qilin, and it is the qilin who decide who stays. (Apprentice: it improves by taming animals (spirit beasts count triple).)</description>
         <commonality>1</commonality>
         <skillGains>
           <Animals>3</Animals>
@@ -337,7 +337,7 @@
         <degree>1</degree>
         <label>master beast tamer</label>
         <labelFemale>master beast tamer</labelFemale>
-        <description>Wild animals lower their heads before {PAWN_nameDef}, and trained ones learn twice as eagerly. The Ancient Dragon Clan has been known to offer such tamers a post guarding its eggs, a rare honor for an outsider. (Master: it improves by taming animals (spirit beasts count triple).)</description>
+        <description>Wild animals lower their heads before {PAWN_nameDef}, and trained ones learn twice as eagerly. Legend says the Ancient Dragon Clan, before it vanished, offered such tamers a post guarding its eggs, a rare honor for an outsider. (Master: it improves by taming animals (spirit beasts count triple).)</description>
         <commonality>0.15</commonality>
         <skillGains>
           <Animals>5</Animals>

@@ -15,7 +15,7 @@
       <li>
         <degree>0</degree>
         <label>iron skin</label>
-        <description>{PAWN_nameDef}'s skin is as hard as iron: blades skid off it. Silent Lotus monks temper the body with bamboo rods and glacier rivers until the flesh forgets how to bruise. It hardens further with body tempering.</description>
+        <description>{PAWN_nameDef}'s skin is as hard as iron: blades skid off it. Nine Temperings disciples temper the body with bamboo rods and glacier rivers until the flesh forgets how to bruise. It hardens further with body tempering.</description>
         <commonality>1</commonality>
         <statOffsets>
           <ArmorRating_Sharp>0.06</ArmorRating_Sharp>
@@ -28,7 +28,7 @@
       <li>
         <degree>1</degree>
         <label>bronze skin</label>
-        <description>{PAWN_nameDef}'s skin has the sheen and hardness of bronze, and turns aside cuts and blows alike. The Silent Lotus Temple casts its guardian statues in that same color, to honor the monks who reached this stage. It hardens further with body tempering.</description>
+        <description>{PAWN_nameDef}'s skin has the sheen and hardness of bronze, and turns aside cuts and blows alike. The Sect of Nine Temperings casts its guardian statues in that same color, to honor the disciples who reached this stage. It hardens further with body tempering.</description>
         <commonality>0.25</commonality>
         <statOffsets>
           <ArmorRating_Sharp>0.12</ArmorRating_Sharp>
@@ -41,7 +41,7 @@
       <li>
         <degree>2</degree>
         <label>ancestral iron skin</label>
-        <description>An ancestral iron body: even bullets struggle to pierce {PAWN_nameDef}, and every wound runs shallower. Kongming, Guardian Monk of the Silent Lotus, is said to have stopped a falling temple bell with his bare back at this stage.</description>
+        <description>An ancestral iron body: even bullets struggle to pierce {PAWN_nameDef}, and every wound runs shallower. Kongming, Guardian of the Nine Temperings, is said to have stopped a falling bronze bell with his bare back at this stage.</description>
         <commonality>0.03</commonality>
         <statOffsets>
           <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
@@ -91,7 +91,7 @@
     <degreeDatas>
       <li>
         <label>saber body</label>
-        <description>{PAWN_nameDef}'s body is a blade: blows land more often, cut deep, and sabers feel like part of the arm. Qing Feng split a mountain with one stroke before founding Azure Peak; the sword sages say his body was an edge long before his sword was.</description>
+        <description>{PAWN_nameDef}'s body is a blade: blows land more often, cut deep, and sabers feel like part of the arm. Qing Feng split a mountain with one stroke before founding the Formless Sword Sect; the sword sages say his body was an edge long before his sword was.</description>
         <statOffsets>
           <MeleeHitChance>3</MeleeHitChance>
         </statOffsets>
@@ -128,7 +128,7 @@
     <degreeDatas>
       <li>
         <label>vajra body</label>
-        <description>The indestructible vajra body: {PAWN_nameDef} barely feels pain and wounds go shallow. The first woman to reach it founded the Silent Lotus Temple, whose twelve pagodas came through the Great Rupture without a single crack.</description>
+        <description>The indestructible vajra body: {PAWN_nameDef} barely feels pain and wounds go shallow. The first woman to reach it founded the Sect of Nine Temperings, whose twelve halls came through the Great Rupture without a single crack.</description>
         <statOffsets>
           <PainShockThreshold>0.5</PainShockThreshold>
         </statOffsets>
@@ -163,7 +163,7 @@
     <degreeDatas>
       <li>
         <label>ice bone, jade muscle</label>
-        <description>Bones of ice and muscles of jade: {PAWN_nameDef} does not feel the cold, is strikingly beautiful and, once qi flows, cultivates fast. Shen Ruoxue, Sword Elder of Azure Peak, was born with such a body, and her frost blades are said to be cut from her own breath.</description>
+        <description>Bones of ice and muscles of jade: {PAWN_nameDef} does not feel the cold, is strikingly beautiful and, once qi flows, cultivates fast. Shen Ruoxue, Sword Elder of the Formless Sword, was born with such a body, and her frost blades are said to be cut from her own breath.</description>
         <statOffsets>
           <ComfyTemperatureMin>-25</ComfyTemperatureMin>
           <PawnBeauty>2</PawnBeauty>

@@ -336,7 +336,7 @@
   <ThingDef ParentName="PlantBase">
     <defName>CVG_Plant_PoisonHerb</defName>
     <label>venom herb</label>
-    <description>A purple herb that grows in swamps, full of poison. Body cultivators of the Silent Lotus chew a leaf a day for a year, and the ones who survive fear no poison again.</description>
+    <description>A purple herb that grows in swamps, full of poison. Body cultivators of the Nine Temperings chew a leaf a day for a year, and the ones who survive fear no poison again.</description>
     <statBases>
       <MaxHitPoints>60</MaxHitPoints>
       <Nutrition>0.15</Nutrition>

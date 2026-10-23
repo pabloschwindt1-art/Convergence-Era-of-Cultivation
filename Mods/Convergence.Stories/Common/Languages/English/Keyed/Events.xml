@@ -214,8 +214,6 @@
   <CVG_Ev_VisitCauldron_Text>Qian Wanli's auction caravan rolls to a stop at the edge of your land. Twelve carts, thirty guards, one smiling master and a banner that reads 'EVERYTHING HAS A PRICE, EVEN THIS BANNER'. The Pavilion sells pills, slips, jade and rumors, and buys everything.</CVG_Ev_VisitCauldron_Text>
   <CVG_Ev_VisitLotus_Label>The healers of the Pavilion</CVG_Ev_VisitLotus_Label>
   <CVG_Ev_VisitLotus_Text>A small group from the Heavenly Cauldron Pavilion's charity infirmary arrives with baskets of herbs and no weapons. Mo Qinghua has sent them to see who in the colony is sick and has not said so. They will heal anyone who asks, and for once the Pavilion asks no price, which is a little unsettling.</CVG_Ev_VisitLotus_Text>
-  <CVG_Ev_VisitDragon_Label>A guest of the Dragon Clan</CVG_Ev_VisitDragon_Label>
-  <CVG_Ev_VisitDragon_Text>A young man with the faint gleam of scales along his wrists stands at your gate and does not knock. Ao Ming of the Ancient Dragon Clan has been told to see how people on the Rim live. He is polite, curious and a little disappointed that nobody screamed.</CVG_Ev_VisitDragon_Text>
   <CVG_Ev_VisitRogueMarket_Label>A night market</CVG_Ev_VisitRogueMarket_Label>
   <CVG_Ev_VisitRogueMarket_Text>At dusk lanterns light up along the road and, as if they had been there forever, a night market of rogue cultivators sets itself up in your meadow. They sell maps, half-finished slips, a bit of everything. They leave before dawn. They always leave before dawn.</CVG_Ev_VisitRogueMarket_Text>
   <CVG_Ev_VisitEmpireInquisitor_Label>A registration order</CVG_Ev_VisitEmpireInquisitor_Label>
@@ -264,11 +262,6 @@
   <CVG_Ev_MissionAzureTournament_Opt_send>Send your best fighter</CVG_Ev_MissionAzureTournament_Opt_send>
   <CVG_Ev_MissionAzureTournament_Res_send>Your fighter comes back limping, with a ribbon, a bruise and the respect of three sects.</CVG_Ev_MissionAzureTournament_Res_send>
   <CVG_Ev_MissionAzureTournament_Opt_skip>Skip the tournament</CVG_Ev_MissionAzureTournament_Opt_skip>
-  <CVG_Ev_MissionDragonTribute_Label>The tribute to the Dragon</CVG_Ev_MissionDragonTribute_Label>
-  <CVG_Ev_MissionDragonTribute_Text>The Ancient Dragon Clan lets it be known that it will entertain petitions from lesser people, if accompanied by a gift worthy of a dragon's hoard. It does not specify what is worthy. It would be impolite to ask.</CVG_Ev_MissionDragonTribute_Text>
-  <CVG_Ev_MissionDragonTribute_Opt_pay>Send 100 spirit stones</CVG_Ev_MissionDragonTribute_Opt_pay>
-  <CVG_Ev_MissionDragonTribute_Res_pay>Ao Lian examines the stones for exactly as long as is polite, then accepts.</CVG_Ev_MissionDragonTribute_Res_pay>
-  <CVG_Ev_MissionDragonTribute_Opt_pass>Not now</CVG_Ev_MissionDragonTribute_Opt_pass>
   <CVG_Ev_MissionStolenManual_Label>Thieves with a manual</CVG_Ev_MissionStolenManual_Label>
   <CVG_Ev_MissionStolenManual_Text>A message from a righteous sect: a gang of rogue thieves has stolen a manual from their library and is hiding in the hills south of your land. They ask you to retrieve it and offer you a copy of the manual's lesser chapters in return.</CVG_Ev_MissionStolenManual_Text>
   <CVG_Ev_MissionStolenManual_Opt_go>Take the job</CVG_Ev_MissionStolenManual_Opt_go>
@@ -340,8 +333,6 @@
   <CVG_Ev_CauldronCreditors_Res_pay>The ledger closes like a mouth.</CVG_Ev_CauldronCreditors_Res_pay>
   <CVG_Ev_CauldronCreditors_Opt_flee>Refuse</CVG_Ev_CauldronCreditors_Opt_flee>
   <CVG_Ev_CauldronCreditors_Res_flee>The collectors take off their silk gloves.</CVG_Ev_CauldronCreditors_Res_flee>
-  <CVG_Ev_DragonHeirTrial_Label>The Dragon's trial</CVG_Ev_DragonHeirTrial_Label>
-  <CVG_Ev_DragonHeirTrial_Text>An elder of the Ancient Dragon Clan arrives to see whether the blood of the descendant has thickened or thinned. He asks nothing, takes nothing and, for an entire afternoon, circles the colony in silence. Then he leaves a scale on the doorstep, which may be a gift or an invoice.</CVG_Ev_DragonHeirTrial_Text>
   <CVG_Ev_LotusWelcome_Label>The Pavilion remembers its own</CVG_Ev_LotusWelcome_Label>
   <CVG_Ev_LotusWelcome_Text>A small procession of the Heavenly Cauldron Pavilion arrives, with a censer and a ledger. They bring news that the Pavilion has heard of the exiled healers and has decided that its infirmary has a place for them, whenever they wish it. Mo Qinghua sends tea, and Qian Wanli sends the bill for the tea.</CVG_Ev_LotusWelcome_Text>
   <CVG_Ev_BeastGuildOffer_Label>The hunters' guild</CVG_Ev_BeastGuildOffer_Label>

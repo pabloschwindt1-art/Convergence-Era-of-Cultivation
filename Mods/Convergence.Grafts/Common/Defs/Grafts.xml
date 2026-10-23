@@ -255,7 +255,7 @@
     <defName>CVG_Graft_HealerHand</defName>
     <label>healer's hand</label>
     <labelNoun>a healer's hand</labelNoun>
-    <description>Monks of the Silent Lotus Temple believe a healer's hand must first be healed itself. This graft, grown around a lotus seed, steadies the fingers and warms the wound it touches.\n\nTend quality +12%, tend speed +15%, surgery success +8% (per hand).\n\nReplaces only the hand; the arm stays natural.\nCelestial dissonance +0.1.</description>
+    <description>Healers of the Heavenly Cauldron believe a healer's hand must first be healed itself. This graft, grown around a lotus seed, steadies the fingers and warms the wound it touches.\n\nTend quality +12%, tend speed +15%, surgery success +8% (per hand).\n\nReplaces only the hand; the arm stays natural.\nCelestial dissonance +0.1.</description>
     <descriptionHyperlinks><ThingDef>CVG_Graft_HealerHand</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>CVG_Graft_HealerHand</spawnThingOnRemoved>
     <addedPartProps>
@@ -279,7 +279,7 @@
     </graphicData>
     
     <label>healer's hand</label>
-    <description>Monks of the Silent Lotus Temple believe a healer's hand must first be healed itself. This graft, grown around a lotus seed, steadies the fingers and warms the wound it touches.\n\nTend quality +12%, tend speed +15%, surgery success +8% (per hand).\n\nReplaces only the hand; the arm stays natural.\nCelestial dissonance +0.1.</description>
+    <description>Healers of the Heavenly Cauldron believe a healer's hand must first be healed itself. This graft, grown around a lotus seed, steadies the fingers and warms the wound it touches.\n\nTend quality +12%, tend speed +15%, surgery success +8% (per hand).\n\nReplaces only the hand; the arm stays natural.\nCelestial dissonance +0.1.</description>
     <descriptionHyperlinks><RecipeDef>CVG_Install_HealerHand</RecipeDef></descriptionHyperlinks>
     
     <costList><CVG_SpiritJade>2</CVG_SpiritJade><CVG_BeastBlood>2</CVG_BeastBlood><MedicineHerbal>15</MedicineHerbal></costList>
@@ -822,7 +822,7 @@
   <ResearchProjectDef ParentName="CVG_DaoResearchBase">
     <defName>CVG_Research_DaoGrafting</defName>
     <label>Dao grafting</label>
-    <description>The Pavilion's surgeons call it a trade, the Lotus monks a vow, and the Azure Peak a fashion. In every case, the principle is the same: a bone that remembers the Dao can teach the body what the mind knows. Unlocks the Dao grafting altar, the bone refining furnace and the trade grafts.</description>
+    <description>The Pavilion's surgeons call it a trade, the Nine Temperings a vow, and the Formless Sword a fashion. In every case, the principle is the same: a bone that remembers the Dao can teach the body what the mind knows. Unlocks the Dao grafting altar, the bone refining furnace and the trade grafts.</description>
     <baseCost>2400</baseCost>
     <prerequisites><li>CVG_Research_BodyTempering</li></prerequisites>
     <researchViewX>2</researchViewX>

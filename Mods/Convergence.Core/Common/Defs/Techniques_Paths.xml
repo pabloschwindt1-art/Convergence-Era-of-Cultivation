@@ -19,7 +19,7 @@
   <Convergence.TechniqueManualDef>
     <defName>CVG_Manual_SpiritSense</defName>
     <label>Spirit Sense Sutra</label>
-    <description>A sutra of the Silent Lotus Temple on the shen, the spirit sense that a cultivator spreads around like ripples. It trains the mind, not the meridians: a calm heart, eyes that see through the dust of battle.</description>
+    <description>A sutra of the mountain temples of Jiuxiao on the shen, the spirit sense that a cultivator spreads around like ripples. It trains the mind, not the meridians: a calm heart, eyes that see through the dust of battle.</description>
     <path>CVG_Path_Qi</path>
     <requiredResearch>CVG_Research_TechniqueManuals</requiredResearch>
     <order>7</order>

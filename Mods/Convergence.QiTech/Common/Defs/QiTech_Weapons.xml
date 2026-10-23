@@ -62,7 +62,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>CVG_QT_InductionRifle</defName>
     <label>qi induction rifle</label>
-    <description>An assault rifle whose barrel is wound with spirit-silver coils that drink a breath of qi from a spirit stone cell and wrap it around each round. The shot carries just enough qi to bite through the faint aura of a Qi Refining cultivator. The engineers of the Edge built the first ones after watching their bullets slide off a barefoot girl who had been meditating for three months; they called it a calibration problem.</description>
+    <description>An assault rifle whose barrel is wound with spirit-silver coils that drink a breath of qi from a spirit stone cell and wrap it around each round. The shot carries just enough qi to bite through the faint aura of a Qi Refining cultivator. The engineers of the Rim built the first ones after watching their bullets slide off a barefoot girl who had been meditating for three months; they called it a calibration problem.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <!-- Two variants (_a plain, _b ornate): each rifle picks one at random and keeps it. -->

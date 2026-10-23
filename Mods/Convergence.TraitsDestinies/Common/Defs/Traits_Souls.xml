@@ -38,7 +38,7 @@
     <degreeDatas>
       <li>
         <label>ancient soul</label>
-        <description>Wise and calm beyond the years of the body, if a little slow on the feet. Silent Lotus monks claim such souls have turned the wheel of rebirth so many times that they no longer hurry anywhere.</description>
+        <description>Wise and calm beyond the years of the body, if a little slow on the feet. Temple monks claim such souls have turned the wheel of rebirth so many times that they no longer hurry anywhere.</description>
         <statOffsets>
           <MentalBreakThreshold>-0.06</MentalBreakThreshold>
         </statOffsets>

@@ -33,6 +33,8 @@
   <CVG_Story_Assassin_Text>Whoever destroyed your sect left a survivor, and that is a loose thread. The assassin has finally found the trail and comes with his disciples to cut it.</CVG_Story_Assassin_Text>
   <CVG_Story_Pursuers_Label>The pursuers of the sect</CVG_Story_Pursuers_Label>
   <CVG_Story_Pursuers_Text>The hunters who destroyed your sect have not given up. A new wave comes to finish what they started.</CVG_Story_Pursuers_Text>
+  <CVG_Story_BloodHunters_Label>The blood hunters</CVG_Story_BloodHunters_Label>
+  <CVG_Story_BloodHunters_Text>The Blood Moon Cult has come for the dragon blood in your veins. They want it fresh.</CVG_Story_BloodHunters_Text>
   <CVG_Story_MasterOffer_Label>An old master offers a way</CVG_Story_MasterOffer_Label>
   <CVG_Story_MasterOffer_Text>A hermit passes by in the night and leaves a jar at the door: an elixir to mend a broken dantian. 'The body remembers what the heart refuses to forget', he says, and vanishes. Whoever drinks it will cultivate again.</CVG_Story_MasterOffer_Text>
   <CVG_Story_ClanReturns_Label>The clan returns</CVG_Story_ClanReturns_Label>
@@ -57,7 +59,7 @@
   <CVG_Scenario_ExiledAlchemist_Start>You left the Pavilion with a debt, a half-written formula and a cart of jars.\n\nThe collectors will find you.</CVG_Scenario_ExiledAlchemist_Start>
   <CVG_Scenario_BeastHunters_Start>You hunt what others flee from.\n\nA guild has been asking about you.</CVG_Scenario_BeastHunters_Start>
   <CVG_Scenario_LotusRefugees_Start>The infirmary split over the price of a remedy. You walked out with herbs and a recipe.\n\nMo Qinghua watched you go.</CVG_Scenario_LotusRefugees_Start>
-  <CVG_Scenario_DragonHeir_Start>You carry a thread of dragon blood, thin as a hair.\n\nThe clan has noticed.</CVG_Scenario_DragonHeir_Start>
+  <CVG_Scenario_DragonHeir_Start>You carry a thread of dragon blood, thin as a hair.\n\nThe Blood Moon has noticed.</CVG_Scenario_DragonHeir_Start>
   <CVG_SectWorld_Peace>Peace between {0} and {1}: both sects lay down their blades.</CVG_SectWorld_Peace>
   <CVG_SectWorld_WarEnded>The war between sects is over: {0} defeated {1}.</CVG_SectWorld_WarEnded>
   <CVG_Scenario_PuppetMaster_Start>You carry a thread tied around your heart.

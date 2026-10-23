@@ -140,7 +140,7 @@ colonia sigue su ideología; si no, es hostil.
 | **Azure Peak Sword Sect** (Secta de la Espada del Pico Azur) | Recta | Cultivo de espada; orgullosa y disciplinada; forja espadas con técnicas de ambos mundos |
 | **Silent Lotus Temple** (Templo del Loto Silencioso) | Recta | Monjes: cultivo corporal y sanación; acogen a quien lo necesite |
 | **Heavenly Cauldron Pavilion** (Pabellón del Caldero Celestial) | Neutral | Alquimistas y comerciantes: subastas, píldoras; compran y venden tecnología del Borde con entusiasmo |
-| **Ancient Dragon Clan** (Clan del Dragón Antiguo) | Neutral | Descendientes de dragones; poderosos y cerrados; conexión con el Maestro dragón |
+| **Ancient Dragon Clan** (Clan del Dragón Antiguo) | — (desaparecido) | Leyenda: el clan ya no existe; solo quedan algunas personas que heredan un poco de su sangre (linaje dragón de Races, escenario Heredero del dragón). Se nombra en pasado. Decisión del usuario 2026-10-22; quizá vuelva en el futuro |
 | **Blood Moon Cult** (Culto de la Luna Sangrienta) | Demoníaca | Cultivo por sangre y almas; secuestra discípulos; potenciado en la Luna del Demonio Interno |
 | **Rogue Cultivators** (Cultivadores errantes, 散修) | Neutral | Sin secta: mercenarios, comerciantes, visitantes |
 

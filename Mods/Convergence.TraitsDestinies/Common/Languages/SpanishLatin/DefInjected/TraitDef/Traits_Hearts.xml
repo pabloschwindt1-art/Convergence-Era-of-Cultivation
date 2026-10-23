@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <CVG_Heart_Sword.degreeDatas.0.label>corazón de espada</CVG_Heart_Sword.degreeDatas.0.label>
-  <CVG_Heart_Sword.degreeDatas.0.description>{PAWN_nameDef} comprende la espada: las hojas aciertan más y las técnicas cuestan menos. "La espada no es buena ni mala; lo es la mano", dice la puerta del Pico Azur, y este corazón ya lo sabe.</CVG_Heart_Sword.degreeDatas.0.description>
+  <CVG_Heart_Sword.degreeDatas.0.description>{PAWN_nameDef} comprende la espada: las hojas aciertan más y las técnicas cuestan menos. "La espada no es buena ni mala; lo es la mano", dice la puerta dla Espada Sin Forma, y este corazón ya lo sabe.</CVG_Heart_Sword.degreeDatas.0.description>
   <CVG_Heart_SaberIntent.degreeDatas.0.label>intención de sable</CVG_Heart_SaberIntent.degreeDatas.0.label>
   <CVG_Heart_SaberIntent.degreeDatas.0.description>La intención detrás de los golpes de {PAWN_nameDef} le pone peso a cada corte. Los sables de Jiuxiao eran de sus guardias de frontera, que enseñaban que un sable se blande con la voluntad antes que con el brazo.</CVG_Heart_SaberIntent.degreeDatas.0.description>
   <CVG_Heart_Buddha.degreeDatas.0.label>corazón de buda</CVG_Heart_Buddha.degreeDatas.0.label>
-  <CVG_Heart_Buddha.degreeDatas.0.description>Un corazón del Dao quieto como un lago: {PAWN_nameDef} rara vez se quiebra, nunca cae en una furia asesina y avanza de reino con más seguridad. Nadie vio jamás enojada a la abadesa Miao Yin del Loto Silencioso, y ella dice que se lo debe a este corazón, no al entrenamiento.</CVG_Heart_Buddha.degreeDatas.0.description>
+  <CVG_Heart_Buddha.degreeDatas.0.description>Un corazón del Dao quieto como un lago: {PAWN_nameDef} rara vez se quiebra, nunca cae en una furia asesina y avanza de reino con más seguridad. Nadie vio jamás enojada a la abadesa Miao Yin de los templos de montaña, y ella dice que se lo debe a este corazón, no al entrenamiento.</CVG_Heart_Buddha.degreeDatas.0.description>
   <CVG_Heart_Demonic.degreeDatas.0.label>corazón demoníaco</CVG_Heart_Demonic.degreeDatas.0.label>
   <CVG_Heart_Demonic.degreeDatas.0.description>La oscuridad alimenta el cultivo de {PAWN_nameDef}, y desgasta la mente. El Culto de la Luna Sangrienta lo llama "la puerta abierta", y muchos de sus ancianos nacieron con él.</CVG_Heart_Demonic.degreeDatas.0.description>
   <CVG_Heart_Child.degreeDatas.0.label>corazón de niño</CVG_Heart_Child.degreeDatas.0.label>
-  <CVG_Heart_Child.degreeDatas.0.description>Un corazón de recién nacido: los demonios internos no encuentran de dónde agarrarse, pero los mercaderes sí. Los sutras del Loto Silencioso lo llaman el bloque sin tallar, el corazón que cada monje pasa la vida intentando recuperar.</CVG_Heart_Child.degreeDatas.0.description>
+  <CVG_Heart_Child.degreeDatas.0.description>Un corazón de recién nacido: los demonios internos no encuentran de dónde agarrarse, pero los mercaderes sí. Los sutras de los templos lo llaman el bloque sin tallar, el corazón que cada monje pasa la vida intentando recuperar.</CVG_Heart_Child.degreeDatas.0.description>
   <CVG_Heart_Stone.degreeDatas.0.label>corazón de piedra</CVG_Heart_Stone.degreeDatas.0.label>
   <CVG_Heart_Stone.degreeDatas.0.description>Un corazón firme como la roca e igual de cálido: {PAWN_nameDef} no duda, ni conecta, y los cadáveres en el suelo no conmueven a ese corazón. Los viejos mineros de Jiuxiao dicen que estos corazones nacen cuando un espíritu de la montaña reclama como propia a una criatura humana.</CVG_Heart_Stone.degreeDatas.0.description>
   <CVG_Heart_Restless.degreeDatas.0.label>corazón inquieto</CVG_Heart_Restless.degreeDatas.0.label>

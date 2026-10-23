@@ -10,7 +10,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>CVG_SpiritSword</defName>
     <label>spirit sword</label>
-    <description>A straight sword folded with qi in a spirit forge. The Azure Peak Sword Sect teaches that every jian is a distant descendant of Ganjiang and Moye, the twin swords of legend, and that a sword without qi is only a long knife. Spirit grade 2: it cuts through the protection of cultivators of lower realms.</description>
+    <description>A straight sword folded with qi in a spirit forge. The Formless Sword Sect teaches that every jian is a distant descendant of Ganjiang and Moye, the twin swords of legend, and that a sword without qi is only a long knife. Spirit grade 2: it cuts through the protection of cultivators of lower realms.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/CVG/SpiritSword</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -197,7 +197,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>CVG_FlyingSword</defName>
     <label>flying sword</label>
-    <description>A treasure sword that answers its master's qi. In Jiuxiao the immortals rode such swords between the nine heavens, and the Azure Peak Sword Sect says the art was lost in the Great Rupture. The art of riding it was lost in the Great Rupture; today it is wielded in hand. Spirit grade 3.</description>
+    <description>A treasure sword that answers its master's qi. In Jiuxiao the immortals rode such swords between the nine heavens, and the Formless Sword Sect says the art was lost in the Great Rupture. The art of riding it was lost in the Great Rupture; today it is wielded in hand. Spirit grade 3.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/CVG/FlyingSword</texPath>
       <graphicClass>Graphic_Single</graphicClass>

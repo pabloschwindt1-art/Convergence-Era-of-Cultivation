@@ -42,7 +42,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>CVG_QiGatheringCore</defName>
     <label>qi gathering formation core</label>
-    <description>The heart of a Qi Gathering Formation. Burns spirit stones slowly and, with flags enclosing an area, raises the qi concentration of every cell inside (+1 per level), indoors or outdoors. Azure Peak records say the Gathering Array was drawn by a sword saint who was tired of chasing qi across mountains and decided to make the mountain come to him. Its stone brazier never smokes, but the air around it tastes of rain. Formation flags are in the Security tab.</description>
+    <description>The heart of a Qi Gathering Formation. Burns spirit stones slowly and, with flags enclosing an area, raises the qi concentration of every cell inside (+1 per level), indoors or outdoors. Formless Sword records say the Gathering Array was drawn by a sword saint who was tired of chasing qi across mountains and decided to make the mountain come to him. Its stone brazier never smokes, but the air around it tastes of rain. Formation flags are in the Security tab.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Formations/QiGatheringCore</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -102,7 +102,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>CVG_SwordFormationCore</defName>
     <label>killing swords formation core</label>
-    <description>Core of the Formation of Killing Swords. Every two seconds it launches qi swords (one per level) at the enemies inside the flags' area. Each volley uses a little spirit stone. The Formation of Killing Swords is the oldest defense of the Azure Peak Sword Sect: ten thousand swords sleeping in the Sword Graveyard answer the call of a single core. Elders warn that the swords do not tell friend from foe, only the array's edge.</description>
+    <description>Core of the Formation of Killing Swords. Every two seconds it launches qi swords (one per level) at the enemies inside the flags' area. Each volley uses a little spirit stone. The Formation of Killing Swords is the oldest defense of the Formless Sword Sect: ten thousand swords sleeping in the Sword Graveyard answer the call of a single core. Elders warn that the swords do not tell friend from foe, only the array's edge.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Formations/SwordFormationCore</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -163,7 +163,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>CVG_BindingFormationCore</defName>
     <label>binding formation core</label>
-    <description>Core of the Formation of Binding. Every ten seconds it immobilizes the strongest enemy inside the area for 5 seconds per level (a cultivator of higher realm first). Each binding uses half a spirit stone. The Binding Formation comes from the chains the Silent Lotus Temple used to hold a mad demon-cultivator for three hundred years, until the monks learned to forge the chains out of qi alone. It only holds one prisoner at a time, but it chooses the most dangerous.</description>
+    <description>Core of the Formation of Binding. Every ten seconds it immobilizes the strongest enemy inside the area for 5 seconds per level (a cultivator of higher realm first). Each binding uses half a spirit stone. The Binding Formation comes from the chains the Sect of Nine Temperings used to hold a mad demon-cultivator for three hundred years, until its elders learned to forge the chains out of qi alone. It only holds one prisoner at a time, but it chooses the most dangerous.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Formations/BindingFormationCore</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -367,7 +367,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>CVG_GuardianStatue</defName>
     <label>guardian statue</label>
-    <description>A statue of spirit stone that comes to life when enemies get close and throws qi swords at them. Uses a little spirit stone per shot. Needs no power. At the gates of the Ancient Dragon Clan stand guardians carved from a single block of spirit stone, with eyes left unfinished on purpose: the sculptors say an open eye would never close again. When an enemy crosses the threshold the stone remembers it was once a mountain.</description>
+    <description>A statue of spirit stone that comes to life when enemies get close and throws qi swords at them. Uses a little spirit stone per shot. Needs no power. At the empty gates of the vanished Ancient Dragon Clan still stand guardians carved from a single block of spirit stone, with eyes left unfinished on purpose: the sculptors say an open eye would never close again. When an enemy crosses the threshold the stone remembers it was once a mountain.</description>
     <thingClass>Building_TurretGun</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <drawHighlight>true</drawHighlight>

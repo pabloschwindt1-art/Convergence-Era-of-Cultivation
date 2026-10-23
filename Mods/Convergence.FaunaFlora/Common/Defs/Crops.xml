@@ -68,7 +68,7 @@
   <ThingDef ParentName="OrganicProductBase">
     <defName>CVG_CloudTeaLeaf</defName>
     <label>cloud tea leaf</label>
-    <description>Tender leaves of the tea that grows where the clouds touch the mountain, picked before dawn and dried in the shade. Steeped, they make the tea of the clouds, which clears the head and steadies the qi. The Silent Lotus monks say the first cup is for the guest, the second for the host and the third for the mountain.</description>
+    <description>Tender leaves of the tea that grows where the clouds touch the mountain, picked before dawn and dried in the shade. Steeped, they make the tea of the clouds, which clears the head and steadies the qi. The temple monks of Jiuxiao say the first cup is for the guest, the second for the host and the third for the mountain.</description>
     <graphicData>
       <texPath>Things/Item/Resource/CVG_CloudTeaLeaf</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -150,7 +150,7 @@
   <ThingDef ParentName="PlantBase">
     <defName>CVG_Plant_Lotus</defName>
     <label>lotus</label>
-    <description>A broad-leaved plant with a single pink flower that opens at dawn and closes at dusk. It wants rich, wet ground, so it fares poorly in dry or poor soil. It is beautiful in the field and gives edible roots; in the temples of the Silent Lotus it grows in every pond, and no one remembers who planted the first.</description>
+    <description>A broad-leaved plant with a single pink flower that opens at dawn and closes at dusk. It wants rich, wet ground, so it fares poorly in dry or poor soil. It is beautiful in the field and gives edible roots; in the mountain temples of Jiuxiao it grows in every pond, and no one remembers who planted the first.</description>
     <statBases>
       <MaxHitPoints>85</MaxHitPoints>
       <Nutrition>0.15</Nutrition>

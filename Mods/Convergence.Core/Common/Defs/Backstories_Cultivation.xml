@@ -186,7 +186,7 @@
     <defName>CVG_Backstory_RangeGoatherd</defName>
     <title>range goatherd</title>
     <titleShort>goatherd</titleShort>
-    <description>[PAWN_nameDef] herded goats in the foothills of the Coiled Dragon Range, where the Ancient Dragon Clan forbids anyone to climb above the cloud line. Riders with horns sometimes came down through the mist to count the herds, and the goatherds learned to stand still and let them.</description>
+    <description>[PAWN_nameDef] herded goats in the foothills of the Coiled Dragon Range, where the old herders still will not climb above the cloud line: the Ancient Dragon Clan once lived up there, and its empty halls are said to keep watch. Every few years someone with a glint of scale on the wrists comes up the paths asking questions, and the goatherds learned to answer and look away.</description>
     <slot>Childhood</slot>
     <spawnCategories>
       <li>Tribal</li>
@@ -202,7 +202,7 @@
     <defName>CVG_Backstory_BellowsChild</defName>
     <title>bellows child</title>
     <titleShort>bellows child</titleShort>
-    <description>[PAWN_nameDef] pumped the bellows in a forge that supplied practice swords to the Azure Peak. [PAWN_pronoun] learned the colours of hot steel, that spirit iron sings a half-tone before it cracks, and to keep [PAWN_possessive] forearms away from the quench, mostly.</description>
+    <description>[PAWN_nameDef] pumped the bellows in a forge that supplied practice swords to the Formless Sword Sect. [PAWN_pronoun] learned the colours of hot steel, that spirit iron sings a half-tone before it cracks, and to keep [PAWN_possessive] forearms away from the quench, mostly.</description>
     <slot>Childhood</slot>
     <spawnCategories>
       <li>Outlander</li>
@@ -428,7 +428,7 @@
     <defName>CVG_Backstory_SwordCemeterySweeper</defName>
     <title>cemetery sweeper</title>
     <titleShort>sweeper</titleShort>
-    <description>[PAWN_nameDef] swept leaves in the Sword Cemetery of the Azure Peak, where the blades of dead elders stand point-down in the earth and hum when it rains. Touching them was forbidden, so [PAWN_pronoun] learned instead which ones sang in a storm and which stayed silent.\n\n[PAWN_pronoun] has never been able to sleep through thunder since.</description>
+    <description>[PAWN_nameDef] swept leaves in the Sword Cemetery of the Formless Sword Sect, where the blades of dead elders stand point-down in the earth and hum when it rains. Touching them was forbidden, so [PAWN_pronoun] learned instead which ones sang in a storm and which stayed silent.\n\n[PAWN_pronoun] has never been able to sleep through thunder since.</description>
     <slot>Childhood</slot>
     <spawnCategories>
       <li>CVG_Tier2</li>
@@ -515,7 +515,7 @@
     <defName>CVG_Backstory_TempleGateChild</defName>
     <title>temple gate child</title>
     <titleShort>gate child</titleShort>
-    <description>[PAWN_nameDef] was left at the gate of the Silent Lotus Temple with a name pinned to [PAWN_possessive] blanket. Never a novice, only a lay child, [PAWN_pronoun] rang the hour bells, fed the temple's qilin and carried bitter broth to the pilgrims' ward.\n\nThe monks say the qilin chose [PAWN_objective]. The qilin has not commented.</description>
+    <description>[PAWN_nameDef] was left at the gate of a mountain temple with a name pinned to [PAWN_possessive] blanket. Never a novice, only a lay child, [PAWN_pronoun] rang the hour bells, fed the temple's qilin and carried bitter broth to the pilgrims' ward.\n\nThe monks say the qilin chose [PAWN_objective]. The qilin has not commented.</description>
     <slot>Childhood</slot>
     <spawnCategories>
       <li>CVG_Tier2</li>
@@ -631,7 +631,7 @@
     <defName>CVG_Backstory_FallenHouseHeir</defName>
     <title>fallen house heir</title>
     <titleShort>heir</titleShort>
-    <description>[PAWN_nameDef] was born the last heir of the Wen house of Jiuxiao, a cultivator clan that once held three mountains and a seat at the councils of the Azure Peak. By the time of [PAWN_possessive] birth, old debts from the Iron Calamity and a feud lost to a rival clan had left the family a single courtyard and a library of techniques nobody could afford to practise.\n\n[PAWN_pronoun] learned etiquette, genealogy and how to sell an heirloom without looking sad. Nobody ever taught [PAWN_objective] to carry [PAWN_possessive] own luggage.</description>
+    <description>[PAWN_nameDef] was born the last heir of the Wen house of Jiuxiao, a cultivator clan that once held three mountains and a seat at the councils of the Formless Sword Sect. By the time of [PAWN_possessive] birth, old debts from the Iron Calamity and a feud lost to a rival clan had left the family a single courtyard and a library of techniques nobody could afford to practise.\n\n[PAWN_pronoun] learned etiquette, genealogy and how to sell an heirloom without looking sad. Nobody ever taught [PAWN_objective] to carry [PAWN_possessive] own luggage.</description>
     <slot>Childhood</slot>
     <spawnCategories>
       <li>CVG_Tier3</li>
@@ -656,7 +656,7 @@
     <defName>CVG_Backstory_BeastRaisedChild</defName>
     <title>beast-raised child</title>
     <titleShort>wild child</titleShort>
-    <description>When a caravan was scattered in a spirit-beast forest, [PAWN_nameDef] was lost and lived three years with a pack of moon wolves that treated [PAWN_objective] as a slow but loyal cub. A monk of the Silent Lotus Temple later talked [PAWN_objective] back into speech, one word a day, but words never became the language [PAWN_pronoun] thinks in.\n\n[PAWN_pronoun] still growls when startled, and would rather talk to a wolf than to a merchant.</description>
+    <description>When a caravan was scattered in a spirit-beast forest, [PAWN_nameDef] was lost and lived three years with a pack of moon wolves that treated [PAWN_objective] as a slow but loyal cub. A healer of the Heavenly Cauldron later talked [PAWN_objective] back into speech, one word a day, but words never became the language [PAWN_pronoun] thinks in.\n\n[PAWN_pronoun] still growls when startled, and would rather talk to a wolf than to a merchant.</description>
     <slot>Childhood</slot>
     <spawnCategories>
       <li>CVG_Tier3</li>
@@ -976,7 +976,7 @@
     <defName>CVG_Backstory_TeaHouseServer</defName>
     <title>teahouse server</title>
     <titleShort>server</titleShort>
-    <description>[PAWN_nameDef] served tea in a teahouse on the road to the Azure Peak, and heard every rumour of the sect a day before the sect did.</description>
+    <description>[PAWN_nameDef] served tea in a teahouse on the road to the Formless Sword Sect, and heard every rumour of the sect a day before the sect did.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>Outlander</li>
@@ -1352,7 +1352,7 @@
     <titleShort>monk</titleShort>
     <titleFemale>Lotus nun</titleFemale>
     <titleShortFemale>nun</titleShortFemale>
-    <description>[PAWN_nameDef] took full vows at the Silent Lotus Temple: tempering the body in the cold springs each dawn, setting the bones of pilgrims each noon and sitting with the dying each night. The Temple does not teach how to kill, only how to endure and how to mend.\n\n[PAWN_pronoun] owns a bowl, a robe and nothing else, and considers that one thing too many.</description>
+    <description>[PAWN_nameDef] took full vows at a mountain temple of Jiuxiao: tempering the body in the cold springs each dawn, setting the bones of pilgrims each noon and sitting with the dying each night. The Temple does not teach how to kill, only how to endure and how to mend.\n\n[PAWN_pronoun] owns a bowl, a robe and nothing else, and considers that one thing too many.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>CVG_Tier2</li>
@@ -1385,7 +1385,7 @@
     <defName>CVG_Backstory_SwordForger</defName>
     <title>master sword forger</title>
     <titleShort>master forger</titleShort>
-    <description>[PAWN_nameDef] was a master forger of the Azure Peak, one of the few whose blades the Sword Elders carry, folding spirit iron a hundred times and listening to it between folds. After the Convergence [PAWN_pronoun] folded plasteel the same way, to the horror of the old smiths and the delight of the Sword Elders.\n\n'A blade,' [PAWN_pronoun] says, 'is the forger's second spine.' It is about the only thing [PAWN_pronoun] says; [PAWN_pronoun] talks to steel more easily than to people.</description>
+    <description>[PAWN_nameDef] was a master forger of the Formless Sword Sect, one of the few whose blades the Sword Elders carry, folding spirit iron a hundred times and listening to it between folds. After the Convergence [PAWN_pronoun] folded plasteel the same way, to the horror of the old smiths and the delight of the Sword Elders.\n\n'A blade,' [PAWN_pronoun] says, 'is the forger's second spine.' It is about the only thing [PAWN_pronoun] says; [PAWN_pronoun] talks to steel more easily than to people.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>CVG_Tier3</li>
@@ -1626,7 +1626,7 @@
     <defName>CVG_Backstory_DragonHunter</defName>
     <title>dragon hunter</title>
     <titleShort>dragon hunter</titleShort>
-    <description>[PAWN_nameDef] hunted the dragon-blooded for their scales, which sell to the Pavilion by weight and to Ascension Dynamics by the gram. The Ancient Dragon Clan hunts those who sell scales, so [PAWN_pronoun] learned to shoot first, skin fast and never sleep in the same valley twice.\n\n[PAWN_pronoun] is still alive. The Clan has a list, and [PAWN_pronoun] is on it.</description>
+    <description>[PAWN_nameDef] hunted the dragon-blooded for their scales, which sell to the Pavilion by weight and to Ascension Dynamics by the gram. The few who carry that blood stick together when one of them goes missing, so [PAWN_pronoun] learned to shoot first, skin fast and never sleep in the same valley twice.\n\n[PAWN_pronoun] is still alive. Somebody keeps a list, and [PAWN_pronoun] is on it.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>CVG_Tier2</li>
@@ -1684,7 +1684,7 @@
     <defName>CVG_Backstory_RepentantAssassin</defName>
     <title>repentant assassin</title>
     <titleShort>assassin</titleShort>
-    <description>[PAWN_nameDef] was a Red Thread of the Blood Moon Cult, one of the knives sent to fill the soul lanterns. The last target was a child under the protection of a monk of the Silent Lotus, and the monk did not raise a hand; he only asked [PAWN_nameDef]'s name.\n\n[PAWN_pronoun] dropped the blade there. [PAWN_pronoun] carries the list of names instead, and it is heavy.</description>
+    <description>[PAWN_nameDef] was a Red Thread of the Blood Moon Cult, one of the knives sent to fill the soul lanterns. The last target was a child under the protection of a wandering monk, and the monk did not raise a hand; he only asked [PAWN_nameDef]'s name.\n\n[PAWN_pronoun] dropped the blade there. [PAWN_pronoun] carries the list of names instead, and it is heavy.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>CVG_Tier3</li>
@@ -2117,7 +2117,7 @@
     <defName>CVG_Backstory_SwordSaintHermit</defName>
     <title>sword saint hermit</title>
     <titleShort>sword saint</titleShort>
-    <description>[PAWN_nameDef] is one of the three living people whom the Azure Peak calls a Sword Saint, and the only one who refused the title. [PAWN_pronoun] lived alone on a peak of the Sword Cemetery, cutting rain, and came down only when the Convergence tore the formation open.\n\n[PAWN_pronoun] has not spoken a full sentence in years. Cooking, nursing and conversation are things other people do; [PAWN_pronoun] has a sword.</description>
+    <description>[PAWN_nameDef] is one of the three living people whom the Formless Sword Sect calls a Sword Saint, and the only one who refused the title. [PAWN_pronoun] lived alone on a peak of the Sword Cemetery, cutting rain, and came down only when the Convergence tore the formation open.\n\n[PAWN_pronoun] has not spoken a full sentence in years. Cooking, nursing and conversation are things other people do; [PAWN_pronoun] has a sword.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>CVG_Tier4</li>
@@ -2145,7 +2145,7 @@
     <defName>CVG_Backstory_SealedDemonLord</defName>
     <title>sealed demon lord</title>
     <titleShort>demon lord</titleShort>
-    <description>[PAWN_nameDef] was a Demon Lord of the blood path, feared by five sects and courted by the Blood Moon Cult, until an abbess of the Silent Lotus sealed the demon inside [PAWN_objective] with a single touch and let [PAWN_objective] walk away. The seal holds. The hunger it holds back does not sleep.\n\n[PAWN_pronoun] cannot be trusted with the sick or with animals, and knows it better than anyone.</description>
+    <description>[PAWN_nameDef] was a Demon Lord of the blood path, feared by five sects and courted by the Blood Moon Cult, until an abbess of the mountain temples sealed the demon inside [PAWN_objective] with a single touch and let [PAWN_objective] walk away. The seal holds. The hunger it holds back does not sleep.\n\n[PAWN_pronoun] cannot be trusted with the sick or with animals, and knows it better than anyone.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>CVG_Tier4</li>
@@ -2180,7 +2180,7 @@
     <titleShort>patriarch</titleShort>
     <titleFemale>exiled matriarch</titleFemale>
     <titleShortFemale>matriarch</titleShortFemale>
-    <description>[PAWN_nameDef] led a branch house of the Ancient Dragon Clan for longer than most kingdoms last, until a lost war with the Blood Moon Cult cost the house its hoard and the Clan's law cost [PAWN_objective] [PAWN_possessive] horns. Dragon blood keeps the body at the age of its first moult, so the exile looks young; the voice of command, the memory of every treaty and the taste for treasure are much older.\n\nThe Clan raises its heirs to rule, not to sweep, cook or carry, and the exile has never seen a reason to learn.</description>
+    <description>[PAWN_nameDef] led one of the last houses that still called themselves heirs of the vanished Ancient Dragon Clan, for longer than most kingdoms last, until a lost war with the Blood Moon Cult cost the house its hoard and the house's own law cost [PAWN_objective] [PAWN_possessive] horns. Dragon blood keeps the body at the age of its first moult, so the exile looks young; the voice of command, the memory of every treaty and the taste for treasure are much older.\n\nSuch houses raise their heirs to rule, not to sweep, cook or carry, and the exile has never seen a reason to learn.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>CVG_Tier4</li>
@@ -2245,7 +2245,7 @@
     <defName>CVG_Backstory_ImmortalPhysician</defName>
     <title>immortal physician</title>
     <titleShort>physician</titleShort>
-    <description>[PAWN_nameDef] walked Jiuxiao as the Immortal Physician, curing plagues with a basket of herbs and a needle and refusing every sect that offered a seat and every king who offered a palace. The Silent Lotus keeps a register of everyone [PAWN_pronoun] has healed; it fills a room, and the face above the basket has not aged a day since the register was begun, as a cultivator's face does not.\n\n[PAWN_pronoun] took a vow never to harm and a vow of poverty that leaves no room for tools, and has kept both.</description>
+    <description>[PAWN_nameDef] walked Jiuxiao as the Immortal Physician, curing plagues with a basket of herbs and a needle and refusing every sect that offered a seat and every king who offered a palace. The Heavenly Cauldron Pavilion keeps a register of everyone [PAWN_pronoun] has healed; it fills a room, and the face above the basket has not aged a day since the register was begun, as a cultivator's face does not.\n\n[PAWN_pronoun] took a vow never to harm and a vow of poverty that leaves no room for tools, and has kept both.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>CVG_Tier4</li>
@@ -2277,7 +2277,7 @@
     <defName>CVG_Backstory_SwordApprentice</defName>
     <title>sword apprentice</title>
     <titleShort>sword apprentice</titleShort>
-    <description>[PAWN_nameDef] was a Sword Apprentice of the Azure Peak, the outer rank that sweeps the training yards and makes a thousand cuts before breakfast and a thousand after. Eight years of the same three forms, until the elders stopped correcting them.</description>
+    <description>[PAWN_nameDef] was a Sword Apprentice of the Formless Sword Sect, the outer rank that sweeps the training yards and makes a thousand cuts before breakfast and a thousand after. Eight years of the same three forms, until the elders stopped correcting them.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>Outlander</li>
@@ -2301,7 +2301,7 @@
     <defName>CVG_Backstory_SwordBearer</defName>
     <title>sword bearer</title>
     <titleShort>sword bearer</titleShort>
-    <description>[PAWN_nameDef] rose to Sword Bearer of the Azure Peak, the inner rank entrusted with a named blade from the Sword Cemetery and the duty of standing in the first line when the Blood Moon Cult comes up the steps. The blade has a name; [PAWN_pronoun] does not say it aloud.</description>
+    <description>[PAWN_nameDef] rose to Sword Bearer of the Formless Sword Sect, the inner rank entrusted with a named blade from the Sword Cemetery and the duty of standing in the first line when the Blood Moon Cult comes up the steps. The blade has a name; [PAWN_pronoun] does not say it aloud.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>CVG_Tier2</li>
@@ -2326,9 +2326,9 @@
 
   <BackstoryDef>
     <defName>CVG_Backstory_BladeOfThePeak</defName>
-    <title>blade of the Peak</title>
+    <title>formless blade</title>
     <titleShort>blade</titleShort>
-    <description>[PAWN_nameDef] was a Blade of the Peak, one of the core disciples of the Azure Peak Sword Sect who carry the sect's signature technique, Sword Qi Rain, and the right to challenge an elder. [PAWN_pronoun] won three sect tournaments and lost the fourth to Yan Zhao, the young prodigy, which the Peak has not let [PAWN_objective] forget.\n\nA Blade does not plant, haul or cook; the sect has apprentices for that, and [PAWN_pronoun] never learned.</description>
+    <description>[PAWN_nameDef] was a Formless Blade, one of the core disciples of the Formless Sword Sect who carry the sect's signature technique, Sword Qi Rain, and the right to challenge an elder. [PAWN_pronoun] won three sect tournaments and lost the fourth to Yan Zhao, the young prodigy, which the sect has not let [PAWN_objective] forget.\n\nA Blade does not plant, haul or cook; the sect has apprentices for that, and [PAWN_pronoun] never learned.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>CVG_Tier3</li>
@@ -2359,7 +2359,7 @@
     <defName>CVG_Backstory_LotusLayApprentice</defName>
     <title>lay apprentice</title>
     <titleShort>lay apprentice</titleShort>
-    <description>[PAWN_nameDef] served as a lay apprentice of the Silent Lotus Temple, the rank below the vows: changing dressings in the pilgrims' ward, boiling bitter broth and holding the hands of those the monks could not save.</description>
+    <description>[PAWN_nameDef] served as a lay apprentice of a mountain temple, the rank below the vows: changing dressings in the pilgrims' ward, boiling bitter broth and holding the hands of those the monks could not save.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>Outlander</li>
@@ -2383,7 +2383,7 @@
     <defName>CVG_Backstory_VajraGuardian</defName>
     <title>Vajra guardian</title>
     <titleShort>guardian</titleShort>
-    <description>[PAWN_nameDef] was a Guardian of the Silent Lotus Temple, one of the monks who temper their bodies until a fist can stop a sword and whose palm, the Vajra Palm, can stun a bull. Guardians stand at the pagoda gates so that the healers inside never have to raise a hand.\n\n[PAWN_pronoun] took the Temple's vows in full: no killing for pleasure, no weapon, no possessions, no explanations.</description>
+    <description>[PAWN_nameDef] was a Guardian of the Sect of Nine Temperings, one of the disciples who temper their bodies until a fist can stop a sword and whose palm, the Vajra Palm, can stun a bull. Guardians stand at the gates of the hall so that the healers inside never have to raise a hand.\n\n[PAWN_pronoun] took the sect's vows in full: no killing for pleasure, no weapon, no possessions, no explanations.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>CVG_Tier3</li>
@@ -2501,7 +2501,7 @@
     <defName>CVG_Backstory_VeinFinder</defName>
     <title>vein-finder</title>
     <titleShort>vein-finder</titleShort>
-    <description>[PAWN_nameDef] was a vein-finder, walking the hills ahead of the mining guilds of Jiuxiao with a forked rod of peach wood and a toothache that gets worse the closer the spirit stone lies. The guilds pay by the vein, the Pavilion pays for the map and the Dragon Clan pays [PAWN_objective] not to come near its mountains.</description>
+    <description>[PAWN_nameDef] was a vein-finder, walking the hills ahead of the mining guilds of Jiuxiao with a forked rod of peach wood and a toothache that gets worse the closer the spirit stone lies. The guilds pay by the vein, the Pavilion pays for the map and the old herders pay [PAWN_objective] not to dig near the empty halls of the Dragon Clan.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>CVG_Tier2</li>
@@ -2531,7 +2531,7 @@
     <defName>CVG_Backstory_MountainOpener</defName>
     <title>mountain-opener</title>
     <titleShort>mountain-opener</titleShort>
-    <description>[PAWN_nameDef] was a mountain-opener, one of the earth-path cultivators the mining guilds of Jiuxiao hire to split a hillside with a single strike where forty picks would take a season. The Azure Peak calls the technique Mountain-Splitting Strike and teaches it for war; the guilds pay better.\n\nYears of it burned the earth qi into [PAWN_possessive] bones and the silence of the galleries into [PAWN_possessive] manner. [PAWN_pronoun] speaks to rock more readily than to people.</description>
+    <description>[PAWN_nameDef] was a mountain-opener, one of the earth-path cultivators the mining guilds of Jiuxiao hire to split a hillside with a single strike where forty picks would take a season. The Formless Sword Sect calls the technique Mountain-Splitting Strike and teaches it for war; the guilds pay better.\n\nYears of it burned the earth qi into [PAWN_possessive] bones and the silence of the galleries into [PAWN_possessive] manner. [PAWN_pronoun] speaks to rock more readily than to people.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>CVG_Tier3</li>
@@ -2642,7 +2642,7 @@
     <defName>CVG_Backstory_BellowsStriker</defName>
     <title>bellows striker</title>
     <titleShort>striker</titleShort>
-    <description>[PAWN_nameDef] was a striker in a forge of the foothills below the Azure Peak, swinging the big hammer where the smith pointed, making practice blades and horseshoes and, once a year, being allowed to hold the tongs while the master folded spirit iron.</description>
+    <description>[PAWN_nameDef] was a striker in a forge of the foothills below the Formless Sword Sect, swinging the big hammer where the smith pointed, making practice blades and horseshoes and, once a year, being allowed to hold the tongs while the master folded spirit iron.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>Outlander</li>
@@ -2666,7 +2666,7 @@
     <defName>CVG_Backstory_ShellSmith</defName>
     <title>shell-smith</title>
     <titleShort>shell-smith</titleShort>
-    <description>[PAWN_nameDef] was a shell-smith of the Azure Peak, one of the smiths who work the fallen shells of the Iron Calamity into blades, as the sect has done since the Swords of the Broken Sky were forged from the first dead machines. The metal fights the hammer and remembers what it was.\n\nSince the Convergence [PAWN_pronoun] has had plasteel to compare it with, and says the shells are still harder.</description>
+    <description>[PAWN_nameDef] was a shell-smith of the Formless Sword Sect, one of the smiths who work the fallen shells of the Iron Calamity into blades, as the sect has done since the Swords of the Broken Sky were forged from the first dead machines. The metal fights the hammer and remembers what it was.\n\nSince the Convergence [PAWN_pronoun] has had plasteel to compare it with, and says the shells are still harder.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>CVG_Tier2</li>

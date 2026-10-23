@@ -26,7 +26,7 @@
   <ThingDef ParentName="PlantBase">
     <defName>CVG_Plant_CloudCotton</defName>
     <label>cloud cotton plant</label>
-    <description>A mid-size crop of pale, faintly luminous bolls that yields cloud cotton. On still nights a field of it looks like a low cloud resting on the ground, which gave the plant its name. The monks of the Silent Lotus Temple grow it on terraces and weave their plain robes from it.</description>
+    <description>A mid-size crop of pale, faintly luminous bolls that yields cloud cotton. On still nights a field of it looks like a low cloud resting on the ground, which gave the plant its name. The mountain temples of Jiuxiao grow it on terraces and weave their plain robes from it.</description>
     <statBases>
       <MaxHitPoints>85</MaxHitPoints>
       <Nutrition>0.2</Nutrition>

@@ -24,7 +24,7 @@
   <ThingDef ParentName="WoolBase">
     <defName>CVG_SevenColorWool</defName>
     <label>seven-color wool</label>
-    <description>Wool from a seven-color sheep. Each shearing comes in a different color, one of the five element colors, gold or white. It insulates very well. The monks of the Silent Lotus Temple say the sheep shed one color each time it forgives a sin of the shepherd. Weavers swear no two fleeces ever came out alike.</description>
+    <description>Wool from a seven-color sheep. Each shearing comes in a different color, one of the five element colors, gold or white. It insulates very well. The temple monks of Jiuxiao say the sheep shed one color each time it forgives a sin of the shepherd. Weavers swear no two fleeces ever came out alike.</description>
     <possessionCount>30</possessionCount>
     <statBases>
       <MarketValue>4.2</MarketValue>
@@ -228,7 +228,7 @@
   <ThingDef ParentName="AnimalThingBase">
     <defName>CVG_SevenColorSheep</defName>
     <label>seven-color sheep</label>
-    <description>A sheep whose wool changes color with every shearing. Tame and placid. A shepherd of the Silent Lotus Temple is said to have found the first one grazing at the foot of a rainbow. The temple keeps a flock and sheds no blood in its fields.</description>
+    <description>A sheep whose wool changes color with every shearing. Tame and placid. A temple shepherd of Jiuxiao is said to have found the first one grazing at the foot of a rainbow. The temple keeps a flock and sheds no blood in its fields.</description>
     <statBases>
       <MoveSpeed>4.8</MoveSpeed>
       <MarketValue>520</MarketValue>
@@ -643,7 +643,7 @@
   <ThingDef ParentName="ThingBaseWolf">
     <defName>CVG_WindWolf</defName>
     <label>wind wolf</label>
-    <description>A pale-furred wolf that runs on the wind itself. It hunts in small packs and is hard to catch. The Azure Peak disciples say the wind wolf is a sword spirit that forgot its blade and took to running. The pack never howls: it listens for the voice of the storm and follows it.</description>
+    <description>A pale-furred wolf that runs on the wind itself. It hunts in small packs and is hard to catch. Formless Sword disciples say the wind wolf is a sword spirit that forgot its blade and took to running. The pack never howls: it listens for the voice of the storm and follows it.</description>
     <statBases>
       <MoveSpeed>6.8</MoveSpeed>
       <MarketValue>800</MarketValue>
@@ -900,7 +900,7 @@
   <ThingDef ParentName="AnimalThingBase">
     <defName>CVG_Xuanwu</defName>
     <label>black tortoise</label>
-    <description>The Black Tortoise of the North, Xuanwu, is said to carry the pillar of the northern sky on its shell; this beast is one of its far descendants, slow as a glacier and as hard to stop. Moss and protective runes grow together on its carapace, and the Azure Peak smiths would trade a season of swords for a single plate of it. It shrugs off frost and fire alike: the northern waters it guards remember both.</description>
+    <description>The Black Tortoise of the North, Xuanwu, is said to carry the pillar of the northern sky on its shell; this beast is one of its far descendants, slow as a glacier and as hard to stop. Moss and protective runes grow together on its carapace, and the Formless Sword Sect smiths would trade a season of swords for a single plate of it. It shrugs off frost and fire alike: the northern waters it guards remember both.</description>
     <statBases>
       <MoveSpeed>1.6</MoveSpeed>
       <MarketValue>1800</MarketValue>

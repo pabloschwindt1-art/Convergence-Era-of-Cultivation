@@ -19,7 +19,7 @@
   <CVG_Tech_FrostBreath.label>aliento helado</CVG_Tech_FrostBreath.label>
   <CVG_Tech_FrostBreath.description>Exhala una niebla helada. Quien quede atrapado puede congelarse en el sitio, y los fuegos se apagan.\n\nCono de 10 casillas: 12 de congelación y 40% de aturdir, escalado por reino y maestría. Requiere Establecimiento de Fundación y una raíz de agua.</CVG_Tech_FrostBreath.description>
   <CVG_Tech_Fireball.label>bola de fuego</CVG_Tech_Fireball.label>
-  <CVG_Tech_Fireball.description>Condensa el qi de fuego en una bola que estalla al impactar y prende fuego.\n\nExplosión de radio 1.5: 10 de daño por quemadura, escalado por reino y maestría. La primera lección de todo discípulo del fuego, y la razón por la que el Pico Azur tiene sus patios de práctica lejos de la biblioteca.</CVG_Tech_Fireball.description>
+  <CVG_Tech_Fireball.description>Condensa el qi de fuego en una bola que estalla al impactar y prende fuego.\n\nExplosión de radio 1.5: 10 de daño por quemadura, escalado por reino y maestría. La primera lección de todo discípulo del fuego, y la razón por la que la Espada Sin Forma tiene sus patios de práctica lejos de la biblioteca.</CVG_Tech_Fireball.description>
   <CVG_Tech_BlazingMeridians.label>meridianos ardientes</CVG_Tech_BlazingMeridians.label>
   <CVG_Tech_SeaOfFlames.label>mar de llamas</CVG_Tech_SeaOfFlames.label>
   <CVG_Tech_SeaOfFlames.description>Abre el dantian y deja salir el fuego. Una ola de llamas arrasa todo lo que tienes delante.\n\nCono de 10 casillas: 16 de daño por quemadura, escalado por reino y maestría. Requiere Establecimiento de Fundación y una raíz de fuego.</CVG_Tech_SeaOfFlames.description>

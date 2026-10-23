@@ -149,7 +149,7 @@
   <ThingDef ParentName="PlantBase">
     <defName>CVG_Plant_SnowLotus</defName>
     <label>snow lotus</label>
-    <description>A white lotus that blooms in the cold. The nuns of the Silent Lotus Temple say the first one grew where a frozen immortal wept on a glacier, and they take only a few petals from each flower. Rare; yields snow lotus petals for high-grade pills.</description>
+    <description>A white lotus that blooms in the cold. The herb-gatherers of the Heavenly Cauldron say the first one grew where a frozen immortal wept on a glacier, and they take only a few petals from each flower. Rare; yields snow lotus petals for high-grade pills.</description>
     <statBases>
       <MaxHitPoints>60</MaxHitPoints>
       <Nutrition>0.15</Nutrition>

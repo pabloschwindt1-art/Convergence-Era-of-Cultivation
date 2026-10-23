@@ -81,7 +81,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>CVG_BreathFormation</defName>
     <label>breath formation</label>
-    <description>A jade tablet carved with the character for "breath" and ringed with lotus petals of pressed silver. It gathers the thin qi of the high sky and breathes it back into the room as air, slowly, the way a sleeper breathes. The monks of the Silent Lotus say it was the first formation ever carved, and that it was meant to keep a single candle lit.</description>
+    <description>A jade tablet carved with the character for "breath" and ringed with lotus petals of pressed silver. It gathers the thin qi of the high sky and breathes it back into the room as air, slowly, the way a sleeper breathes. The temple monks say it was the first formation ever carved, and that it was meant to keep a single candle lit.</description>
     <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Things/Building/CVG/Island/BreathFormation</texPath>

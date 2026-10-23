@@ -4,7 +4,7 @@
   <ThingDef ParentName="FurnitureBase">
     <defName>CVG_CarvedScreen</defName>
     <label>carved wood screen</label>
-    <description>A folding screen of carved wood that breaks up a room and lets the qi flow around it. Raises the qi concentration of the room a little. The screens of the Azure Peak guest hall are carved with the story of the Peak splitting in a single stroke. Guests are expected to read it in silence before speaking to their host.</description>
+    <description>A folding screen of carved wood that breaks up a room and lets the qi flow around it. Raises the qi concentration of the room a little. The screens of the Formless Sword Sect guest hall are carved with the story of Qing Feng splitting a mountain in a single stroke. Guests are expected to read it in silence before speaking to their host.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/CarvedScreen</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -38,7 +38,7 @@
   <ThingDef ParentName="FurnitureBase">
     <defName>CVG_PorcelainVase</defName>
     <label>porcelain vase</label>
-    <description>A tall vase of fine blue-and-white porcelain. Calms the room and raises its qi concentration a little. Porcelain fired in the kilns of the Silent Lotus Temple is said to hold the echo of the last prayer spoken near it. An empty vase is not empty, monks say, it is only listening.</description>
+    <description>A tall vase of fine blue-and-white porcelain. Calms the room and raises its qi concentration a little. Porcelain fired in the kilns of the mountain temples is said to hold the echo of the last prayer spoken near it. An empty vase is not empty, monks say, it is only listening.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/PorcelainVase</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
@@ -236,7 +236,7 @@
     <stuffCategories><li>Stony</li></stuffCategories>
     <costStuffCount>40</costStuffCount>
     <label>rock garden</label>
-    <description>Raked white sand around a few carefully placed stones (kare-sansui). Calming to look at and it raises the qi concentration of the room. The raked sand of the kare-sansui garden represents the sea, and the stones the mountains the Silent Lotus monks left behind. Disciples rake it every morning before prayer to rehearse patience.</description>
+    <description>Raked white sand around a few carefully placed stones (kare-sansui). Calming to look at and it raises the qi concentration of the room. The raked sand of the kare-sansui garden represents the sea, and the stones the mountains the temple monks left behind. Disciples rake it every morning before prayer to rehearse patience.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/RockGarden</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -270,7 +270,7 @@
     <stuffCategories><li>Stony</li></stuffCategories>
     <costStuffCount>70</costStuffCount>
     <label>statue of the azure dragon</label>
-    <description>A stone statue of the azure dragon, one of the four sacred beasts. It raises the qi concentration of the room and its element is wood. Of the Four Sacred Beasts, the Azure Dragon is guardian of the east and of spring; the Ancient Dragon Clan carves it facing the sunrise.</description>
+    <description>A stone statue of the azure dragon, one of the four sacred beasts. It raises the qi concentration of the room and its element is wood. Of the Four Sacred Beasts, the Azure Dragon is guardian of the east and of spring; the vanished Ancient Dragon Clan carved it facing the sunrise.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/StatueDragon</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
@@ -334,7 +334,7 @@
     <stuffCategories><li>Stony</li></stuffCategories>
     <costStuffCount>70</costStuffCount>
     <label>statue of the golden qilin</label>
-    <description>A stone statue of the golden qilin, one of the four sacred beasts. It raises the qi concentration of the room and its element is earth. Of the Four Sacred Beasts, the Golden Qilin is gentle beast of the center; it appears, say the Silent Lotus monks, only when a just ruler is born.</description>
+    <description>A stone statue of the golden qilin, one of the four sacred beasts. It raises the qi concentration of the room and its element is earth. Of the Four Sacred Beasts, the Golden Qilin is gentle beast of the center; it appears, say the temple monks, only when a just ruler is born.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/StatueQilin</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
@@ -396,7 +396,7 @@
   <ThingDef ParentName="FurnitureBase">
     <defName>CVG_PaintingScroll</defName>
     <label>painting scroll</label>
-    <description>A hanging scroll with an ink landscape or a line of calligraphy, on a standing frame. Raises the qi concentration of the room a little. The scrolls of the Azure Peak are painted with a brush made of a single sword-qi hair, so the ink holds a little of the painter's intent. Hung in a room, they are said to quiet quarrels.</description>
+    <description>A hanging scroll with an ink landscape or a line of calligraphy, on a standing frame. Raises the qi concentration of the room a little. The scrolls of the Formless Sword Sect are painted with a brush made of a single sword-qi hair, so the ink holds a little of the painter's intent. Hung in a room, they are said to quiet quarrels.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/PaintingScroll</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
@@ -460,7 +460,7 @@
   <ThingDef ParentName="BedBase">
     <defName>CVG_SectBed</defName>
     <label>sect bed</label>
-    <description>A low wooden bed with a hard mat and a rolled pillow, in the style of the cultivation sects. Disciples of the outer sects sleep on hard mats to keep their qi from growing lazy. The founders of the Azure Peak slept on bare stone and are remembered with envy.</description>
+    <description>A low wooden bed with a hard mat and a rolled pillow, in the style of the cultivation sects. Disciples of the outer sects sleep on hard mats to keep their qi from growing lazy. The founders of the Formless Sword Sect slept on bare stone and are remembered with envy.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/SectBed</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -544,7 +544,7 @@
   <ThingDef ParentName="FurnitureBase">
     <defName>CVG_MeditationStool</defName>
     <label>meditation stool</label>
-    <description>A short round stool for sitting upright for long hours. The round stool teaches the back to be straight, for a cultivator who leans falls off. The Silent Lotus monks say it is the first teacher and the last.</description>
+    <description>A short round stool for sitting upright for long hours. The round stool teaches the back to be straight, for a cultivator who leans falls off. The temple monks say it is the first teacher and the last.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/MeditationStool</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -802,7 +802,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>CVG_SpiritStoneLantern</defName>
     <label>spirit stone lantern</label>
-    <description>A stone lantern whose flame is fed by spirit stones. Gives a cold light and raises the qi concentration of the room a little. Stone lanterns lined the road to the Silent Lotus Temple long before the Convergence, and the monks lit them with a single flame carried from the first one. A spirit stone in the cup now makes the light cold and clear.</description>
+    <description>A stone lantern whose flame is fed by spirit stones. Gives a cold light and raises the qi concentration of the room a little. Stone lanterns lined the road to the old mountain temples long before the Convergence, and the monks lit them with a single flame carried from the first one. A spirit stone in the cup now makes the light cold and clear.</description>
     <category>Building</category>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/SpiritStoneLantern</texPath><drawSize>(1,1)</drawSize>

@@ -346,7 +346,7 @@
   <GeneDef ParentName="CVG_BloodTierGeneBase">
     <defName>CVG_BloodGene_BeastInstinct_I</defName>
     <label>beast instinct I</label>
-    <description>Claws in the soul: harder blows and quicker reflexes, and a temper that looks for fights. The Ancient Dragon Clan calls it the old hunger, and keeps its young apart until they learn to master it.</description>
+    <description>Claws in the soul: harder blows and quicker reflexes, and a temper that looks for fights. The vanished Ancient Dragon Clan called it the old hunger, and kept its young apart until they learned to master it.</description>
     <iconPath>UI/Icons/Genes/CVG/Gene_BeastInstinct</iconPath>
     <iconColor>(0.7, 0.7, 0.7)</iconColor>
     <displayOrderInCategory>31</displayOrderInCategory>
@@ -372,7 +372,7 @@
   <GeneDef ParentName="CVG_BloodTierGeneBase">
     <defName>CVG_BloodGene_BeastInstinct_II</defName>
     <label>beast instinct II</label>
-    <description>Claws in the soul: harder blows and quicker reflexes, and a temper that looks for fights. The Ancient Dragon Clan calls it the old hunger, and keeps its young apart until they learn to master it.</description>
+    <description>Claws in the soul: harder blows and quicker reflexes, and a temper that looks for fights. The vanished Ancient Dragon Clan called it the old hunger, and kept its young apart until they learned to master it.</description>
     <iconPath>UI/Icons/Genes/CVG/Gene_BeastInstinct</iconPath>
     <iconColor>(0.55, 0.8, 1)</iconColor>
     <displayOrderInCategory>32</displayOrderInCategory>
@@ -398,7 +398,7 @@
   <GeneDef ParentName="CVG_BloodTierGeneBase">
     <defName>CVG_BloodGene_BeastInstinct_III</defName>
     <label>beast instinct III</label>
-    <description>Claws in the soul: harder blows and quicker reflexes, and a temper that looks for fights. The Ancient Dragon Clan calls it the old hunger, and keeps its young apart until they learn to master it.</description>
+    <description>Claws in the soul: harder blows and quicker reflexes, and a temper that looks for fights. The vanished Ancient Dragon Clan called it the old hunger, and kept its young apart until they learned to master it.</description>
     <iconPath>UI/Icons/Genes/CVG/Gene_BeastInstinct</iconPath>
     <iconColor>(0.8, 0.6, 1)</iconColor>
     <displayOrderInCategory>33</displayOrderInCategory>
@@ -424,7 +424,7 @@
   <GeneDef ParentName="CVG_BloodTierGeneBase">
     <defName>CVG_BloodGene_BeastInstinct_IV</defName>
     <label>beast instinct IV</label>
-    <description>Claws in the soul: harder blows and quicker reflexes, and a temper that looks for fights. The Ancient Dragon Clan calls it the old hunger, and keeps its young apart until they learn to master it.</description>
+    <description>Claws in the soul: harder blows and quicker reflexes, and a temper that looks for fights. The vanished Ancient Dragon Clan called it the old hunger, and kept its young apart until they learned to master it.</description>
     <iconPath>UI/Icons/Genes/CVG/Gene_BeastInstinct</iconPath>
     <iconColor>(1, 0.82, 0.35)</iconColor>
     <displayOrderInCategory>34</displayOrderInCategory>

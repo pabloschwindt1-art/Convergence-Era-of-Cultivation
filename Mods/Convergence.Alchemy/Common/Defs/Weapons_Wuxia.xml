@@ -7,7 +7,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>CVG_Jian</defName>
     <label>jian</label>
-    <description>The straight double-edged sword, called the gentleman of weapons. Every sword sect of Jiuxiao began with a mortal jian and a disciple who practised the same nine cuts for ten years; the Azure Peak still hands one to each new disciple before any spirit blade. Forged from spirit steel or moon silver it already bites into the qi of cultivators.</description>
+    <description>The straight double-edged sword, called the gentleman of weapons. Every sword sect of Jiuxiao began with a mortal jian and a disciple who practised the same nine cuts for ten years; the Formless Sword Sect still hands one to each new disciple before any spirit blade. Forged from spirit steel or moon silver it already bites into the qi of cultivators.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/CVG/Jian</texPath>
       <graphicClass>Graphic_Single</graphicClass>

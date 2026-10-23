@@ -115,7 +115,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>CVG_HealingTalisman</defName>
     <label>healing talisman</label>
-    <description>A talisman of the Celestial Master tradition, which began when Zhang Daoling healed the sick with charms burned and dissolved in water. The Silent Lotus Temple gives them away to anyone who asks, though each one costs its scribes a week of fasting and a beast core. Single use: heals the worst health condition of whoever uses it.</description>
+    <description>A talisman of the Celestial Master tradition, which began when Zhang Daoling healed the sick with charms burned and dissolved in water. The healers of the Heavenly Cauldron give them away to anyone too poor to pay, though each one costs its scribes a week of fasting and a beast core. Single use: heals the worst health condition of whoever uses it.</description>
     <graphicData>
       <texPath>Things/Item/CVG/HealingTalisman</texPath>
       <graphicClass>Graphic_Single</graphicClass>

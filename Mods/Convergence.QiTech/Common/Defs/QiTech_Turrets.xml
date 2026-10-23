@@ -52,7 +52,7 @@
   <ThingDef ParentName="AutocannonTurret">
     <defName>CVG_QT_InductionTurret</defName>
     <label>qi induction turret</label>
-    <description>A heavy automatic turret that runs on two things at once: current from the grid and qi from the spirit stones in its capacitor. Each burst spends a little stone, and without either the coils go cold. No cultivator is needed to man it. The first ones guarded the warehouses where the Edge stored the spirit stones it bought from the sects, which the sects considered a joke in poor taste.</description>
+    <description>A heavy automatic turret that runs on two things at once: current from the grid and qi from the spirit stones in its capacitor. Each burst spends a little stone, and without either the coils go cold. No cultivator is needed to man it. The first ones guarded the warehouses where the Rim stored the spirit stones it bought from the sects, which the sects considered a joke in poor taste.</description>
     <uiIconPath>Things/Building/CVG/QiTech/QiInductionTurret_MenuIcon</uiIconPath>
     <graphicData>
       <texPath>Things/Building/CVG/QiTech/QiInductionTurret</texPath>
@@ -151,7 +151,7 @@
   <ThingDef ParentName="AutocannonTurret">
     <defName>CVG_QT_ContainmentTurret</defName>
     <label>qi containment cannon</label>
-    <description>A long-range turret that fires one compressed qi bolt at a time, each worth almost half a spirit stone, dense enough to wound a Golden Core cultivator as if they were mortal. It draws a great deal of power and cannot hit what stands right next to it. The Azure Peak sent an envoy to ask that it not be pointed at their mountain, and the envoy was the first person it was pointed at.</description>
+    <description>A long-range turret that fires one compressed qi bolt at a time, each worth almost half a spirit stone, dense enough to wound a Golden Core cultivator as if they were mortal. It draws a great deal of power and cannot hit what stands right next to it. The Formless Sword Sect sent an envoy to ask that it not be pointed at their mountain, and the envoy was the first person it was pointed at.</description>
     <uiIconPath>Things/Building/CVG/QiTech/QiContainmentTurret_MenuIcon</uiIconPath>
     <graphicData>
       <texPath>Things/Building/CVG/QiTech/QiContainmentTurret</texPath>

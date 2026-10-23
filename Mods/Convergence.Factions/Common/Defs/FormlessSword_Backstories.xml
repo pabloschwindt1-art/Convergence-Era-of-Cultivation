@@ -105,7 +105,7 @@
     <defName>CVG_Backstory_FS_DisciplineElder</defName>
     <title>elder of discipline</title>
     <titleShort>discipline elder</titleShort>
-    <description>[PAWN_nameDef] served under Gu Hengyue, the inflexible Elder of Discipline, and carried out the sect's punishments in [PAWN_possessive] name. Disciples lower their eyes when [PAWN_pronoun] passes; the sect master, Lin Wuchen, says that is exactly what the office is for.</description>
+    <description>[PAWN_nameDef] served under Gu Hengyue, the inflexible Elder of Discipline, and carried out the sect's punishments in [PAWN_possessive] name. Disciples lower their eyes when [PAWN_pronoun] passes; the sect master says that is exactly what the office is for.</description>
     <skillGains>
       <Melee>7</Melee>
       <Social>4</Social>

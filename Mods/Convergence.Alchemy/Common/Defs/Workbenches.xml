@@ -5,7 +5,7 @@
   <ThingDef ParentName="BenchBase">
     <defName>CVG_SpiritForge</defName>
     <label>spirit forge</label>
-    <description>A wood-fired forge where metal is folded with the qi of spirit stones. The Azure Peak Sword Sect says its first fire was lit by Gan Jiang and Mo Ye, the smith couple of legend: when the metal would not melt, Mo Ye gave herself to the flames, and the twin swords that came out bore their names. It makes spirit weapons and everything a smithy makes, and can be upgraded in place (level 2: spears and bows; level 3: treasures such as the flying sword). No electricity.</description>
+    <description>A wood-fired forge where metal is folded with the qi of spirit stones. The Formless Sword Sect says its first fire was lit by Gan Jiang and Mo Ye, the smith couple of legend: when the metal would not melt, Mo Ye gave herself to the flames, and the twin swords that came out bore their names. It makes spirit weapons and everything a smithy makes, and can be upgraded in place (level 2: spears and bows; level 3: treasures such as the flying sword). No electricity.</description>
     <thingClass>Convergence.Building_LeveledWorkTable</thingClass>
     <graphicData>
       <texPath>Things/Building/CVG/Alchemy/SpiritForge1</texPath>

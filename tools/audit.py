@@ -25,8 +25,7 @@ STALE = [
     (r'Azure Peak|Pico Azur', 'secta vieja (Pico Azur → Espada Sin Forma)'),
     (r'Silent Lotus|Loto Silencioso|Lotus Temple|Templo del Loto', 'secta vieja (Loto Silencioso → Caldero)'),
     (r'Lin Wuchen', 'personaje de la secta vieja'),
-    (r'Ancient Dragon|Dragón Antiguo|Dragon Clan|Clan del Dragón', 'secta vieja (Clan del Dragón: pendiente de decidir)'),
-    (r'Sword Graveyard|Cementerio de Espadas', 'lugar de la secta vieja (ahora Túmulo de Espadas)'),
+    # El Clan del Dragón Antiguo es leyenda (clan desaparecido): nombrarlo en pasado está bien.
     (r'Convergence: Sects\b|Sects 2\.0|\bsects2\b', 'el mod Sects (descontinuado)'),
     (r'CVG_Faction_(AzurePeak|SilentLotus|AncientDragon)|CVG_(AzurePeak|SilentLotus|AncientDragon)_\w+', 'def de la secta vieja'),
 ]

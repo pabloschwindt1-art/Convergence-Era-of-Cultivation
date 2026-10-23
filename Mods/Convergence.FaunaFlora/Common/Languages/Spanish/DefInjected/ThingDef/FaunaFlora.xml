@@ -3,7 +3,7 @@
   <CVG_SpiderCocoon.label>capullo de araña de jade</CVG_SpiderCocoon.label>
   <CVG_SpiderCocoon.description>Un capullo esponjoso de seda espiritual que suelta la araña tejedora de jade. En un telar espiritual se hila para obtener seda espiritual. Las arañas tejedoras del Pantano de Jade envuelven sus capullos en una seda tan fina que el Pabellón del Caldero Celestial pagó una vez uno solo con una píldora de renacimiento.</CVG_SpiderCocoon.description>
   <CVG_SevenColorWool.label>lana de siete colores</CVG_SevenColorWool.label>
-  <CVG_SevenColorWool.description>Lana de una oveja de siete colores. Cada esquila sale de un color distinto: uno de los cinco colores de los elementos, dorado o blanco. Aísla muy bien. Los monjes del Templo del Loto Silencioso dicen que la oveja suelta un color cada vez que perdona un pecado del pastor. Los tejedores juran que dos vellones nunca salieron iguales.</CVG_SevenColorWool.description>
+  <CVG_SevenColorWool.description>Lana de una oveja de siete colores. Cada esquila sale de un color distinto: uno de los cinco colores de los elementos, dorado o blanco. Aísla muy bien. Los monjes de los templos de Jiuxiao dicen que la oveja suelta un color cada vez que perdona un pecado del pastor. Los tejedores juran que dos vellones nunca salieron iguales.</CVG_SevenColorWool.description>
   <CVG_EggPhoenixHenUnfertilized.label>huevo de sangre de fénix (sin fecundar)</CVG_EggPhoenixHenUnfertilized.label>
   <CVG_EggPhoenixHenUnfertilized.description>Un huevo sin fecundar caliente al tacto. Rico en qi y bueno en cualquier cocina. Los campesinos del sur tienen una gallina en cada casa porque sus huevos mantienen tibio el hogar en invierno. Dicen que la primera gallina fue una pluma que el Ave Bermellón perdió sobre una aldea.</CVG_EggPhoenixHenUnfertilized.description>
   <CVG_EggPhoenixHenFertilized.label>huevo de sangre de fénix (fecundado)</CVG_EggPhoenixHenFertilized.label>
@@ -15,7 +15,7 @@
   <CVG_JadeWeaverSpider.label>araña tejedora de jade</CVG_JadeWeaverSpider.label>
   <CVG_JadeWeaverSpider.description>Una araña del tamaño de un perro con patas verde jade que teje capullos de seda espiritual. Tranquila y fácil de criar mientras tenga la panza llena. Los aldeanos del Pantano de Jade cuentan de una araña que tejió un puente de seda para llevar a un niño que se ahogaba al otro lado. Desde entonces sus descendientes solo hilan donde alguien necesita ser rescatado, y nadie ha visto nunca a una hilar para sí misma.</CVG_JadeWeaverSpider.description>
   <CVG_SevenColorSheep.label>oveja de siete colores</CVG_SevenColorSheep.label>
-  <CVG_SevenColorSheep.description>Una oveja cuya lana cambia de color en cada esquila. Mansa y apacible. Se dice que un pastor del Templo del Loto Silencioso encontró la primera paciendo al pie de un arcoíris. El templo conserva un rebaño y no derrama sangre en sus campos.</CVG_SevenColorSheep.description>
+  <CVG_SevenColorSheep.description>Una oveja cuya lana cambia de color en cada esquila. Mansa y apacible. Se dice que un pastor de un templo de Jiuxiao encontró la primera paciendo al pie de un arcoíris. El templo conserva un rebaño y no derrama sangre en sus campos.</CVG_SevenColorSheep.description>
   <CVG_PhoenixBloodHen.label>gallina de sangre de fénix</CVG_PhoenixBloodHen.label>
   <CVG_PhoenixBloodHen.description>Una gallina de plumas rojas y doradas con huevos tibios. Resiste el calor y pone a menudo. Sus plumas llevan una chispa del Ave Bermellón, por eso pone huevos tibios y nunca siente el frío. Los cultivadores del sur tienen una como amuleto de buena suerte y como desayuno.</CVG_PhoenixBloodHen.description>
   <CVG_CloudOx.label>buey de las nubes</CVG_CloudOx.label>
@@ -23,7 +23,7 @@
   <CVG_MoonDeer.label>ciervo lunar</CVG_MoonDeer.label>
   <CVG_MoonDeer.description>Un ciervo pálido cuyas astas brillan como la luna. Se le cortan las astas cada temporada y vuelven a crecer sin daño. Los ciervos del palacio de la luna bajan la noche de luna llena a mudar las astas en la montaña. Los cazadores que matan uno ven cómo se les acaba la suerte antes de la próxima cosecha.</CVG_MoonDeer.description>
   <CVG_WindWolf.label>lobo de viento</CVG_WindWolf.label>
-  <CVG_WindWolf.description>Un lobo de pelaje pálido que corre sobre el propio viento. Caza en manadas pequeñas y es difícil de atrapar. Los discípulos del Pico Azur dicen que el lobo de viento es un espíritu de espada que olvidó su hoja y se echó a correr. La manada nunca aúlla: escucha la voz de la tormenta y la sigue.</CVG_WindWolf.description>
+  <CVG_WindWolf.description>Un lobo de pelaje pálido que corre sobre el propio viento. Caza en manadas pequeñas y es difícil de atrapar. Los discípulos de la Espada Sin Forma dicen que el lobo de viento es un espíritu de espada que olvidó su hoja y se echó a correr. La manada nunca aúlla: escucha la voz de la tormenta y la sigue.</CVG_WindWolf.description>
   <CVG_CelestialCrane.label>grulla celestial</CVG_CelestialCrane.label>
   <CVG_CelestialCrane.description>Una grulla alta y blanca de corona roja, de la que se dice que lleva las almas de los viejos cultivadores. Pacífica salvo que se moleste a su nido. Los Ocho Inmortales cabalgaban grullas entre el cielo y la tierra, y estas son las que nunca regresaron. Donde una anida, dicen los viejos, un inmortal observa desde una nube.</CVG_CelestialCrane.description>
   <CVG_NineNetherSpider.label>araña de los nueve infiernos</CVG_NineNetherSpider.label>
@@ -73,7 +73,7 @@
   <CVG_WindWolf.tools.1.labelNoLocation>garra</CVG_WindWolf.tools.1.labelNoLocation>
   <CVG_WindWolf.tools.3.label>cabeza</CVG_WindWolf.tools.3.label>
   <CVG_Xuanwu.label>tortuga negra</CVG_Xuanwu.label>
-  <CVG_Xuanwu.description>Se dice que la Tortuga Negra del Norte, Xuanwu, carga en el caparazón el pilar del cielo del norte; esta bestia es una de sus descendientes lejanas, lenta como un glaciar e igual de imposible de frenar. El musgo y las runas de protección crecen juntos sobre su caparazón, y los herreros del Pico Azur cambiarían una temporada de espadas por una sola de sus placas. Le dan igual la escarcha y el fuego: las aguas del norte que custodia recuerdan los dos.</CVG_Xuanwu.description>
+  <CVG_Xuanwu.description>Se dice que la Tortuga Negra del Norte, Xuanwu, carga en el caparazón el pilar del cielo del norte; esta bestia es una de sus descendientes lejanas, lenta como un glaciar e igual de imposible de frenar. El musgo y las runas de protección crecen juntos sobre su caparazón, y los herreros dla Espada Sin Forma cambiarían una temporada de espadas por una sola de sus placas. Le dan igual la escarcha y el fuego: las aguas del norte que custodia recuerdan los dos.</CVG_Xuanwu.description>
   <CVG_Xuanwu.race.meatLabel>carne de tortuga</CVG_Xuanwu.race.meatLabel>
   <CVG_Xuanwu.tools.0.label>pico</CVG_Xuanwu.tools.0.label>
   <CVG_Xuanwu.tools.1.label>cabeza</CVG_Xuanwu.tools.1.label>

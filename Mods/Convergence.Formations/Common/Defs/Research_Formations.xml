@@ -18,7 +18,7 @@
   <ResearchProjectDef ParentName="CVG_DaoResearchBase">
     <defName>CVG_Research_QiGathering</defName>
     <label>qi gathering formation</label>
-    <description>Arrange flags so that the qi of the land gathers instead of scattering. Unlocks the Qi Gathering Formation. An old saying of the Azure Peak: a formation does not make qi, it only teaches it where to rest.</description>
+    <description>Arrange flags so that the qi of the land gathers instead of scattering. Unlocks the Qi Gathering Formation. An old saying of the Formless Sword Sect: a formation does not make qi, it only teaches it where to rest.</description>
     <baseCost>1800</baseCost>
     <prerequisites><li>CVG_Research_FiveElements</li></prerequisites>
     <researchViewX>4</researchViewX>

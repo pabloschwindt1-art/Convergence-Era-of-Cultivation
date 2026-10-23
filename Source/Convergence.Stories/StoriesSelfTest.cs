@@ -72,7 +72,7 @@ namespace Convergence.Stories
             var visits = StoryEngine.All.Where(StoryEngine.BringsVisitors).ToList();
             // Los eventos de visita son de las sectas (MayRequire): sin un mod de sectas no se cargan.
             if (visits.Count == 0) sb.Append("\n    note: no story event brings visitors (they need a Sects mod)");
-            else Check(visits.Count >= (ModsConfig.IsActive("prospero1088.convergence.sects") ? 7 : 6), visits.Count + " story events bring visitors"); // la del Dragón sigue con el Sects viejo
+            else Check(visits.Count >= 6, visits.Count + " story events bring visitors");
             var f = Find.FactionManager.AllFactionsListForReading.FirstOrDefault(x => !x.IsPlayer && !x.Hidden && !x.temporary && x.def.humanlikeFaction
                 && !x.HostileTo(Faction.OfPlayer) && x.def.pawnGroupMakers != null && x.def.pawnGroupMakers.Any(g => g.kindDef == PawnGroupKindDefOf.Peaceful));
             if (f == null) { sb.Append("\n    skip: no friendly faction that sends visitors"); return; }
@@ -471,7 +471,7 @@ namespace Convergence.Stories
             var ally = StoryUtility.Sects().FirstOrDefault(f => !f.HostileTo(Faction.OfPlayer) && f.def.defName != "CVG_Faction_BloodMoon");
             if (ally != null) { StoryEvents.Decide("AllyPlea", "help", ally.def.defName); StoryEvents.Decide("AllyPlea", "decline", ally.def.defName); }
             Check(true, "ally decisions ran (" + (ally?.Name ?? "no ally sect present") + ")");
-            foreach (var k in new[] { "master_offer", "emissaries", "collective_demon", "sect_offer", "cultists_aftermath", "treasure_rivals", "assassin", "refuge", "pursuers", "clan_returns" })
+            foreach (var k in new[] { "master_offer", "emissaries", "collective_demon", "sect_offer", "cultists_aftermath", "treasure_rivals", "assassin", "refuge", "pursuers", "clan_returns", "blood_hunters" })
             {
                 try { StoryEvents.Run(k); Check(true, "story event " + k); }
                 catch (Exception e) { Check(false, "story event " + k + ": " + e.Message); }

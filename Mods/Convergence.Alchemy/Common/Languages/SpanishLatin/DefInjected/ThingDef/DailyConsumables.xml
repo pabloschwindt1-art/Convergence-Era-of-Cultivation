@@ -19,7 +19,7 @@
   <CVG_CloudTea.ingestible.ingestCommandString>Beber {0}</CVG_CloudTea.ingestible.ingestCommandString>
   <CVG_CloudTea.ingestible.ingestReportString>Bebiendo {0}.</CVG_CloudTea.ingestible.ingestReportString>
   <CVG_Incense.label>incienso</CVG_Incense.label>
-  <CVG_Incense.description>Varitas de polvo de sándalo e hierba espiritual que arden lentas y azules. Respirar el humo antes de cultivar calma el corazón y deja fluir el qi un poco más rápido, pero embota los sentidos. El Templo del Loto Silencioso quema una varita por cada discípulo que medita allí.</CVG_Incense.description>
+  <CVG_Incense.description>Varitas de polvo de sándalo e hierba espiritual que arden lentas y azules. Respirar el humo antes de cultivar calma el corazón y deja fluir el qi un poco más rápido, pero embota los sentidos. Los templos de montaña de Jiuxiao queman una varita por cada discípulo que medita allí.</CVG_Incense.description>
   <CVG_Incense.ingestible.ingestCommandString>Quemar {0}</CVG_Incense.ingestible.ingestCommandString>
   <CVG_Incense.ingestible.ingestReportString>Quemando {0}.</CVG_Incense.ingestible.ingestReportString>
 </LanguageData>

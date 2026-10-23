@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <CVG_SpiritSword.label>espada espiritual</CVG_SpiritSword.label>
-  <CVG_SpiritSword.description>Una espada recta plegada con qi en una forja espiritual. La Secta de la Espada del Pico Azur enseña que todo jian desciende de lejos de Ganjiang y Moye, las espadas gemelas de la leyenda, y que una espada sin qi no es más que un cuchillo largo. Grado espiritual 2: atraviesa la protección de los cultivadores de reinos menores.</CVG_SpiritSword.description>
+  <CVG_SpiritSword.description>Una espada recta plegada con qi en una forja espiritual. La Secta de la Espada Sin Forma enseña que todo jian desciende de lejos de Ganjiang y Moye, las espadas gemelas de la leyenda, y que una espada sin qi no es más que un cuchillo largo. Grado espiritual 2: atraviesa la protección de los cultivadores de reinos menores.</CVG_SpiritSword.description>
   <CVG_SpiritSword.tools.0.label>empuñadura</CVG_SpiritSword.tools.0.label>
   <CVG_SpiritSword.tools.1.label>punta</CVG_SpiritSword.tools.1.label>
   <CVG_SpiritSword.tools.2.label>filo</CVG_SpiritSword.tools.2.label>
@@ -14,7 +14,7 @@
   <CVG_SpiritSpear.tools.0.label>asta</CVG_SpiritSpear.tools.0.label>
   <CVG_SpiritSpear.tools.1.label>punta</CVG_SpiritSpear.tools.1.label>
   <CVG_FlyingSword.label>espada voladora</CVG_FlyingSword.label>
-  <CVG_FlyingSword.description>Una espada tesoro que responde al qi de su dueño. En Jiuxiao los inmortales cabalgaban espadas así entre los nueve cielos, y la Secta de la Espada del Pico Azur dice que el arte se perdió en la Gran Ruptura. El arte de montarla se perdió en la Gran Ruptura; hoy se empuña en la mano. Grado espiritual 3.</CVG_FlyingSword.description>
+  <CVG_FlyingSword.description>Una espada tesoro que responde al qi de su dueño. En Jiuxiao los inmortales cabalgaban espadas así entre los nueve cielos, y la Secta de la Espada Sin Forma dice que el arte se perdió en la Gran Ruptura. El arte de montarla se perdió en la Gran Ruptura; hoy se empuña en la mano. Grado espiritual 3.</CVG_FlyingSword.description>
   <CVG_FlyingSword.tools.0.label>empuñadura</CVG_FlyingSword.tools.0.label>
   <CVG_FlyingSword.tools.1.label>punta</CVG_FlyingSword.tools.1.label>
   <CVG_FlyingSword.tools.2.label>filo</CVG_FlyingSword.tools.2.label>

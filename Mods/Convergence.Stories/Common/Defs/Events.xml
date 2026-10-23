@@ -777,17 +777,6 @@
     <requiresFaction>true</requiresFaction>
     <outcomes><li Class="Convergence.Stories.SO_Visit"><faction>cauldron</faction></li><li Class="Convergence.Stories.SO_Thought"><chance>0.5</chance><thought>CVG_Thought_LotusBlessing</thought><target>all</target></li></outcomes>
   </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
-    <defName>VisitDragon</defName>
-    <category>visit</category>
-    <weight>0.7</weight>
-    <minDays>14</minDays>
-    <minRefireDays>45</minRefireDays>
-    <tone>neutral</tone>
-    <factionToken>dragon</factionToken>
-    <requiresFaction>true</requiresFaction>
-    <outcomes><li Class="Convergence.Stories.SO_Visit"><faction>dragon</faction></li></outcomes>
-  </Convergence.Stories.StoryEventDef>
   <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>VisitRogueMarket</defName>
     <category>visit</category>
@@ -986,27 +975,6 @@
       </li>
       <li>
         <key>skip</key>
-      </li>
-    </options>
-  </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
-    <defName>MissionDragonTribute</defName>
-    <category>mission</category>
-    <weight>0.6</weight>
-    <minDays>20</minDays>
-    <minRefireDays>100</minRefireDays>
-    <tone>neutral</tone>
-    <factionToken>dragon</factionToken>
-    <requiresFaction>true</requiresFaction>
-    <options>
-      <li>
-        <key>pay</key>
-        <costThing>CVG_SpiritStone</costThing>
-        <costCount>100</costCount>
-        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>dragon</faction><amount>22</amount></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_BeastBlood</thing><count>3~6</count></li><li Class="Convergence.Stories.SO_Items"><chance>0.5</chance><thing>CVG_JadeSlip</thing><count>1</count></li></outcomes>
-      </li>
-      <li>
-        <key>pass</key>
       </li>
     </options>
   </Convergence.Stories.StoryEventDef>
@@ -1275,18 +1243,6 @@
         <outcomes><li Class="Convergence.Stories.SO_Raid"><faction>cauldron</faction><points>0.6</points></li></outcomes>
       </li>
     </options>
-  </Convergence.Stories.StoryEventDef>
-  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.sects">
-    <defName>DragonHeirTrial</defName>
-    <category>chain</category>
-    <weight>1.0</weight>
-    <minDays>3</minDays>
-    <minRefireDays>45</minRefireDays>
-    <tone>neutral</tone>
-    <chainOnly>true</chainOnly>
-    <factionToken>dragon</factionToken>
-    <requiresFaction>true</requiresFaction>
-    <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>dragon</faction><amount>14</amount></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_BeastBlood</thing><count>3~5</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_BeastCore</thing><count>1</count></li></outcomes>
   </Convergence.Stories.StoryEventDef>
   <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>LotusWelcome</defName>

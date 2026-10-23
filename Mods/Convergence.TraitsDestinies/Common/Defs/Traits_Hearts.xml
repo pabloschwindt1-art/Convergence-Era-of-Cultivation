@@ -14,7 +14,7 @@
     <degreeDatas>
       <li>
         <label>sword heart</label>
-        <description>{PAWN_nameDef} understands the sword: blades land more often and techniques cost less. "The sword is neither good nor evil; the hand is," reads the gate of Azure Peak, and this heart already knows it.</description>
+        <description>{PAWN_nameDef} understands the sword: blades land more often and techniques cost less. "The sword is neither good nor evil; the hand is," reads the gate of the Formless Sword, and this heart already knows it.</description>
         <statOffsets>
           <MeleeHitChance>4</MeleeHitChance>
         </statOffsets>
@@ -63,7 +63,7 @@
     <degreeDatas>
       <li>
         <label>buddha heart</label>
-        <description>A Dao heart as still as a lake: {PAWN_nameDef} rarely breaks, never falls into a killing rage, and breaks through more surely. Abbess Miao Yin of the Silent Lotus has never been seen angry, and says she owes it to this heart, not to training.</description>
+        <description>A Dao heart as still as a lake: {PAWN_nameDef} rarely breaks, never falls into a killing rage, and breaks through more surely. Abbess Miao Yin of the mountain temples has never been seen angry, and says she owes it to this heart, not to training.</description>
         <statOffsets>
           <MentalBreakThreshold>-0.08</MentalBreakThreshold>
           <CVG_BreakthroughChance>0.05</CVG_BreakthroughChance>
@@ -134,7 +134,7 @@
     <degreeDatas>
       <li>
         <label>child's heart</label>
-        <description>A heart of a newborn: inner demons find nothing to hold on to, but merchants find a lot. The sutras of the Silent Lotus call it the uncarved block, the heart every monk spends a lifetime trying to recover.</description>
+        <description>A heart of a newborn: inner demons find nothing to hold on to, but merchants find a lot. The temple sutras call it the uncarved block, the heart every monk spends a lifetime trying to recover.</description>
         <statOffsets>
           <MentalBreakThreshold>-0.1</MentalBreakThreshold>
           <TradePriceImprovement>-0.1</TradePriceImprovement>

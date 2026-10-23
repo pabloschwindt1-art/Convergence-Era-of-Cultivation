@@ -126,7 +126,7 @@
     <defName>CVG_Graft_SpiritWoodHand</defName>
     <label>spirit-wood hand</label>
     <labelNoun>a spirit-wood hand</labelNoun>
-    <description>Every novice of the Silent Lotus Temple carves one wooden hand before being taught to heal, and gives it to a stranger. A spirit stone set in the palm lends the wood a sliver of qi: enough to hold a bowl or a hoe, if not a brush.\n\nHand efficiency x0.8. Replaces only the hand. Any healer can fit it; no altar needed.\nCelestial dissonance +0.02.</description>
+    <description>Every novice healer of the Heavenly Cauldron carves one wooden hand before being taught to heal, and gives it to a stranger. A spirit stone set in the palm lends the wood a sliver of qi: enough to hold a bowl or a hoe, if not a brush.\n\nHand efficiency x0.8. Replaces only the hand. Any healer can fit it; no altar needed.\nCelestial dissonance +0.02.</description>
     <descriptionHyperlinks><ThingDef>CVG_Graft_SpiritWoodHand</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>CVG_Graft_SpiritWoodHand</spawnThingOnRemoved>
     <addedPartProps>
@@ -149,7 +149,7 @@
     </graphicData>
     
     <label>spirit-wood hand</label>
-    <description>Every novice of the Silent Lotus Temple carves one wooden hand before being taught to heal, and gives it to a stranger. A spirit stone set in the palm lends the wood a sliver of qi: enough to hold a bowl or a hoe, if not a brush.\n\nHand efficiency x0.8. Replaces only the hand. Any healer can fit it; no altar needed.\nCelestial dissonance +0.02.</description>
+    <description>Every novice healer of the Heavenly Cauldron carves one wooden hand before being taught to heal, and gives it to a stranger. A spirit stone set in the palm lends the wood a sliver of qi: enough to hold a bowl or a hoe, if not a brush.\n\nHand efficiency x0.8. Replaces only the hand. Any healer can fit it; no altar needed.\nCelestial dissonance +0.02.</description>
     <descriptionHyperlinks><RecipeDef>CVG_Install_SpiritWoodHand</RecipeDef></descriptionHyperlinks>
     
     <costList><WoodLog>30</WoodLog><CVG_SpiritStone>3</CVG_SpiritStone></costList>

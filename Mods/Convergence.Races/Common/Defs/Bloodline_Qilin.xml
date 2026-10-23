@@ -151,7 +151,7 @@
     <socialFightChanceFactor>0.3</socialFightChanceFactor>
     <aggroMentalBreakSelectionChanceFactor>0</aggroMentalBreakSelectionChanceFactor>
     <label>pure qilin blood</label>
-    <description>Gold scales and a small horn: the Arbiter of the Middle Valleys speaks through you. The Silent Lotus Temple would call its bearer a Voice of the Lotus, a witness whose presence certifies oaths and who never starts a fight.</description>
+    <description>Gold scales and a small horn: the Arbiter of the Middle Valleys speaks through you. The mountain temples would call its bearer a Voice of the Lotus, a witness whose presence certifies oaths and who never starts a fight.</description>
     <iconPath>UI/Icons/Genes/CVG_RootElement_Earth</iconPath>
     <iconColor>(0.8, 0.6, 1)</iconColor>
     <displayOrderInCategory>32</displayOrderInCategory>
@@ -204,7 +204,7 @@
   <GeneDef ParentName="CVG_BloodAspectBase">
     <defName>CVG_Qilin_Mane</defName>
     <label>pale mane</label>
-    <description>Pale gold-white hair, soft as a deer's coat. In the Silent Lotus Temple it is never cut, only braided, so that it does not brush the living grass.</description>
+    <description>Pale gold-white hair, soft as a deer's coat. In the mountain temples it is never cut, only braided, so that it does not brush the living grass.</description>
     <iconPath>UI/Icons/Genes/Gene_HairColor</iconPath>
     <iconColor>(245, 232, 195)</iconColor>
     <displayOrderInCategory>35</displayOrderInCategory>
@@ -517,7 +517,7 @@
   <XenotypeDef>
     <defName>CVG_Xeno_Qilin</defName>
     <label>voice of the lotus</label>
-    <description>Monks and healers of the Silent Lotus Temple: pure qilin blood, a golden horn, golden scales and deer ears. Serene and gifted healers, they suffer when they have to kill.</description>
+    <description>Temple monks and healers of the Middle Valleys: pure qilin blood, a golden horn, golden scales and deer ears. Serene and gifted healers, they suffer when they have to kill.</description>
     <descriptionShort>Pure qilin blood: golden horn and scales. Calm healers who dislike killing.</descriptionShort>
     <iconPath>UI/Icons/Xenotypes/Genie</iconPath>
     <inheritable>true</inheritable>

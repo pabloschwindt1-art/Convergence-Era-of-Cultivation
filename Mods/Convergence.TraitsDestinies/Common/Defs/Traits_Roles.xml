@@ -72,7 +72,7 @@
       <li>
         <degree>0</degree>
         <label>spirit tailor</label>
-        <description>Thread and needle obey {PAWN_objective}, spirit silk and beast leather too, and the same deft hands speed up all manual work. The robes of Azure Peak's elders are stitched with qi so they never tear in a duel, a craft every spirit tailor dreams of.</description>
+        <description>Thread and needle obey {PAWN_objective}, spirit silk and beast leather too, and the same deft hands speed up all manual work. The robes of the Formless Sword's elders are stitched with qi so they never tear in a duel, a craft every spirit tailor dreams of.</description>
         <skillGains>
           <Crafting>2</Crafting>
           <Artistic>1</Artistic>
@@ -100,7 +100,7 @@
         <degree>0</degree>
         <label>feng shui master</label>
         <labelFemale>feng shui master</labelFemale>
-        <description>Knows where qi gathers and where it leaks: builds well and breaks through more surely. Geomancers say the Coiled Dragon Range of the Ancient Dragon Clan was a fragment of its own before the Rupture because masters like this placed its first halls.</description>
+        <description>Knows where qi gathers and where it leaks: builds well and breaks through more surely. Geomancers say the Coiled Dragon Range of the vanished Ancient Dragon Clan was a fragment of its own before the Rupture because masters like this placed its first halls.</description>
         <skillGains>
           <Artistic>2</Artistic>
           <Construction>1</Construction>

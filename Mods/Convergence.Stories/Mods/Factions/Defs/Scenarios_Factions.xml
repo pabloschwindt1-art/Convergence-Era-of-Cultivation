@@ -159,4 +159,65 @@
       </parts>
     </scenario>
   </ScenarioDef>
+
+  <ScenarioDef ParentName="ScenarioBase">
+    <defName>CVG_Scenario_DragonHeir</defName>
+    <label>Heir of the dragon</label>
+    <description>Long after the Ancient Dragon Clan vanished, your great-grandmother still carried a little of its blood, and she passed it on without a word. In your veins there is a thread of scale and thunder, thin as a hair. The Blood Moon Cult pays well for blood like yours, and the Blood Moon is patient.</description>
+    <scenario>
+      <summary>One heir of the vanished Ancient Dragon Clan with diluted blood, alone and hunted by the Blood Moon.</summary>
+      <playerFaction>
+        <factionDef>PlayerColony</factionDef>
+      </playerFaction>
+      <parts>
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+          <def>ConfigPage_ConfigureStartingPawns</def>
+          <pawnCount>1</pawnCount>
+          <pawnChoiceCount>3</pawnChoiceCount>
+        </li>
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <method>Standing</method>
+        </li>
+
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MedicineHerbal</thingDef><count>12</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Pemmican</thingDef><count>150</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>Silver</thingDef><count>150</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>MeleeWeapon_LongSword</thingDef><count>1</count><stuff>Steel</stuff></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>CVG_JadeSlip</thingDef><count>1</count></li>
+        <li Class="ScenPart_StartingThing_Defined"><def>StartingThing_Defined</def><thingDef>CVG_BeastBlood</thingDef><count>4</count></li>
+        <li Class="ScenPart_ScatterThingsNearPlayerStart"><def>ScatterThingsNearPlayerStart</def><thingDef>WoodLog</thingDef><count>250</count></li>
+        <li Class="ScenPart_ScatterThingsAnywhere"><def>ScatterThingsAnywhere</def><thingDef>Steel</thingDef><count>300</count></li>
+
+        <li Class="Convergence.Stories.ScenPart_StoryOrigin">
+          <def>CVG_StoryOrigin</def>
+          <visible>false</visible>
+          <origin>DragonHeir</origin>
+          <followUps><li><key>blood_hunters</key><days>10~18</days></li></followUps>
+        </li>
+        <li Class="Convergence.Stories.ScenPart_ConvergenceOccurred">
+          <def>CVG_ConvergenceOccurred</def>
+        </li>
+        <li Class="Convergence.Stories.ScenPart_StartingCultivators">
+          <def>CVG_StartingCultivators</def>
+          <realm>CVG_Realm_QiRefining</realm>
+          <stage>2~4</stage>
+          <count>99</count>
+          <techniques>true</techniques>
+        </li>
+        <li Class="Convergence.Stories.ScenPart_StartingBloodline" MayRequire="prospero1088.convergence.races">
+          <def>CVG_StartingBloodline</def>
+          <visible>false</visible>
+          <bloodline>CVG_Bloodline_Dragon</bloodline>
+          <purityIndex>1</purityIndex>
+          <count>1</count>
+        </li>
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <textKey>CVG_Scenario_DragonHeir_Start</textKey>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
 </Defs>

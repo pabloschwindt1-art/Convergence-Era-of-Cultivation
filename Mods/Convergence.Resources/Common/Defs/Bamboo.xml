@@ -64,7 +64,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>CVG_JadeBamboo</defName>
     <label>jade spirit bamboo</label>
-    <description>Bamboo the colour of jade that grew where the qi pools, each joint ringed with faint veins of light. It is as hard as iron and still bends, rings like a bell when struck and holds qi in its hollow heart. Swordsmiths make practice blades and flying-sword sheaths of it, alchemists their stirring rods, and the flutes of the Silent Lotus Temple are carved from nothing else.</description>
+    <description>Bamboo the colour of jade that grew where the qi pools, each joint ringed with faint veins of light. It is as hard as iron and still bends, rings like a bell when struck and holds qi in its hollow heart. Swordsmiths make practice blades and flying-sword sheaths of it, alchemists their stirring rods, and the flutes of the mountain temples are carved from nothing else.</description>
     <graphicData>
       <texPath>Things/Item/Resource/CVG_JadeBamboo</texPath>
       <graphicClass>Graphic_Single</graphicClass>

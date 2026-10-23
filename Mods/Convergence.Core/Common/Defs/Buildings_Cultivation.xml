@@ -60,7 +60,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>CVG_CultivationSpot</defName>
     <label>cultivation spot</label>
-    <description>A circle of pebbles on bare ground where a cultivator sits to gather qi. It costs nothing, and it is how every sect began: the founder of the Azure Peak cultivated thirty years on a flat rock before anyone built him a hall. A cushion or a platform gathers qi better.</description>
+    <description>A circle of pebbles on bare ground where a cultivator sits to gather qi. It costs nothing, and it is how every sect began: the founder of the Formless Sword Sect cultivated thirty years on a flat rock before anyone built him a hall. A cushion or a platform gathers qi better.</description>
     <graphicData>
       <texPath>Things/Building/CVG/CultivationSpot</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -103,7 +103,7 @@
   <ThingDef ParentName="FurnitureWithQualityBase">
     <defName>CVG_MeditationPlatform</defName>
     <label>meditation platform</label>
-    <description>A raised stone dais with a carved lotus on top, built where the qi of the room gathers. Its quality decides how well it holds the qi of the cultivator. The Silent Lotus Temple has one hundred and eight of them on its terraces, one for each of the worldly troubles a monk must let go.</description>
+    <description>A raised stone dais with a carved lotus on top, built where the qi of the room gathers. Its quality decides how well it holds the qi of the cultivator. The mountain temples of Jiuxiao have one hundred and eight of them on their terraces, one for each of the worldly troubles a monk must let go.</description>
     <graphicData>
       <texPath>Things/Building/CVG/MeditationPlatform</texPath>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>

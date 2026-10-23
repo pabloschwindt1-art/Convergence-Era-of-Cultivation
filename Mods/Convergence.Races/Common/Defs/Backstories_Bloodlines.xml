@@ -5,7 +5,7 @@
 
   <BackstoryDef>
     <defName>CVG_Backstory_DragonClanWard</defName>
-    <title>dragon clan ward</title>
+    <title>storm house ward</title>
     <titleShort>ward</titleShort>
     <description>[PAWN_nameDef] was raised as a ward of a storm house that claimed descent from Ao Lingshuang, the dragon princess exiled to the Rim. [PAWN_pronoun] learned the clan genealogies, the wave-like greeting and that a dragon bows to no one.\n\nAt thirteen [PAWN_pronoun] stood under a storm for the Rite of the First Lightning, and the lightning let [PAWN_objective] live.</description>
     <slot>Childhood</slot>
@@ -22,7 +22,7 @@
     <defName>CVG_Backstory_StormArchivist</defName>
     <title>storm archivist</title>
     <titleShort>archivist</titleShort>
-    <description>[PAWN_nameDef] kept the archives of the Ancient Dragon Clan: tide charts of the shattered Celestial Sea, the treaties of the Pact of the Four Points and the name of every lord since Ao Zhenhai.\n\n[PAWN_pronoun] read everything and swept nothing. Sweeping floors, the Clan says, is beneath the descendants of the Sea-Sealer.</description>
+    <description>[PAWN_nameDef] kept what remains of the archives of the vanished Ancient Dragon Clan: tide charts of the shattered Celestial Sea, the treaties of the Pact of the Four Points and the name of every lord since Ao Zhenhai.\n\n[PAWN_pronoun] read everything and swept nothing. Sweeping floors, the old storm houses say, is beneath the descendants of the Sea-Sealer.</description>
     <slot>Adulthood</slot>
     <spawnCategories>
       <li>CVG_Bloodline_Dragon</li>
@@ -80,7 +80,7 @@
     <defName>CVG_Backstory_LotusNovice</defName>
     <title>lotus novice</title>
     <titleShort>novice</titleShort>
-    <description>[PAWN_nameDef] grew up as a novice of the Silent Lotus Temple, sweeping the paths so that no one would tread on the living grass. The Voices of the Lotus taught [PAWN_objective] to set bones, brew bitter herbs and sit beside the dying without looking away.</description>
+    <description>[PAWN_nameDef] grew up as a novice of a mountain temple, sweeping the paths so that no one would tread on the living grass. The Voices of the Lotus taught [PAWN_objective] to set bones, brew bitter herbs and sit beside the dying without looking away.</description>
     <slot>Childhood</slot>
     <spawnCategories>
       <li>CVG_Bloodline_Qilin</li>

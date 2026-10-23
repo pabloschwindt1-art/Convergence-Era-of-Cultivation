@@ -159,7 +159,7 @@
   <ThingDef ParentName="FurnitureWithQualityBase">
     <defName>CVG_BambooRecliner</defName>
     <label>bamboo recliner</label>
-    <description>A reclining chair of bent bamboo with a cushion of wadded cloud cotton, as comfortable as anything an old master ever sat in. The slats creak when you lean back, which the old masters said was the chair saying it was happy. The Silent Lotus keep one in every infirmary and one more in the abbess's study.</description>
+    <description>A reclining chair of bent bamboo with a cushion of wadded cloud cotton, as comfortable as anything an old master ever sat in. The slats creak when you lean back, which the old masters said was the chair saying it was happy. The Heavenly Cauldron keeps one in every infirmary and one more in the pavilion master's study.</description>
     <replaceTags><li>Chair</li></replaceTags>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/BambooRecliner</texPath>

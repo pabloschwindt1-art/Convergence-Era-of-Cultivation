@@ -214,8 +214,6 @@
   <CVG_Ev_VisitCauldron_Text>La caravana de subastas de Qian Wanli se detiene en el borde de tu tierra. Doce carros, treinta guardias, un maestro sonriente y un estandarte que dice «TODO TIENE PRECIO, INCLUSO ESTE ESTANDARTE». El Pabellón vende píldoras, tablillas, jade y rumores, y lo compra todo.</CVG_Ev_VisitCauldron_Text>
   <CVG_Ev_VisitLotus_Label>Los sanadores del Pabellón</CVG_Ev_VisitLotus_Label>
   <CVG_Ev_VisitLotus_Text>Un grupo pequeño de la enfermería de caridad del Pabellón del Caldero Celestial llega con canastas de hierbas y sin armas. Mo Qinghua los mandó a ver quién está enfermo en la colonia y no lo dijo. Curarán a quien lo pida y, por una vez, el Pabellón no pone precio, lo que inquieta un poco.</CVG_Ev_VisitLotus_Text>
-  <CVG_Ev_VisitDragon_Label>Un invitado del Clan del Dragón</CVG_Ev_VisitDragon_Label>
-  <CVG_Ev_VisitDragon_Text>Un joven con un leve brillo de escamas en las muñecas está ante tu puerta y no llama. Ao Ming, del Clan del Dragón Antiguo, ha recibido orden de ver cómo vive la gente del Borde. Es educado, curioso y algo decepcionado de que nadie gritara.</CVG_Ev_VisitDragon_Text>
   <CVG_Ev_VisitRogueMarket_Label>Un mercado nocturno</CVG_Ev_VisitRogueMarket_Label>
   <CVG_Ev_VisitRogueMarket_Text>Al anochecer se encienden faroles a lo largo del camino y, como si siempre hubieran estado ahí, un mercado nocturno de cultivadores errantes se monta en tu prado. Venden mapas, tablillas a medio acabar, de todo un poco. Se van antes del amanecer. Siempre se van antes del amanecer.</CVG_Ev_VisitRogueMarket_Text>
   <CVG_Ev_VisitEmpireInquisitor_Label>Una orden de registro</CVG_Ev_VisitEmpireInquisitor_Label>
@@ -264,11 +262,6 @@
   <CVG_Ev_MissionAzureTournament_Opt_send>Enviar a tu mejor luchador</CVG_Ev_MissionAzureTournament_Opt_send>
   <CVG_Ev_MissionAzureTournament_Res_send>Tu luchador vuelve cojeando, con una cinta, un moretón y el respeto de tres sectas.</CVG_Ev_MissionAzureTournament_Res_send>
   <CVG_Ev_MissionAzureTournament_Opt_skip>No ir al torneo</CVG_Ev_MissionAzureTournament_Opt_skip>
-  <CVG_Ev_MissionDragonTribute_Label>El tributo al Dragón</CVG_Ev_MissionDragonTribute_Label>
-  <CVG_Ev_MissionDragonTribute_Text>El Clan del Dragón Antiguo da a entender que atenderá peticiones de gente menor, si van acompañadas de un obsequio digno de un tesoro de dragón. No especifica qué es digno. Sería de mala educación preguntar.</CVG_Ev_MissionDragonTribute_Text>
-  <CVG_Ev_MissionDragonTribute_Opt_pay>Enviar 100 piedras espirituales</CVG_Ev_MissionDragonTribute_Opt_pay>
-  <CVG_Ev_MissionDragonTribute_Res_pay>Ao Lian examina las piedras exactamente el tiempo que es cortés y acepta.</CVG_Ev_MissionDragonTribute_Res_pay>
-  <CVG_Ev_MissionDragonTribute_Opt_pass>Ahora no</CVG_Ev_MissionDragonTribute_Opt_pass>
   <CVG_Ev_MissionStolenManual_Label>Ladrones con un manual</CVG_Ev_MissionStolenManual_Label>
   <CVG_Ev_MissionStolenManual_Text>Un mensaje de una secta recta: una banda de ladrones errantes les ha robado un manual de su biblioteca y se esconde en las colinas al sur de tu tierra. Te piden recuperarlo y te ofrecen a cambio una copia de los capítulos menores del manual.</CVG_Ev_MissionStolenManual_Text>
   <CVG_Ev_MissionStolenManual_Opt_go>Aceptar el encargo</CVG_Ev_MissionStolenManual_Opt_go>
@@ -340,8 +333,6 @@
   <CVG_Ev_CauldronCreditors_Res_pay>El libro se cierra como una boca.</CVG_Ev_CauldronCreditors_Res_pay>
   <CVG_Ev_CauldronCreditors_Opt_flee>Negarse</CVG_Ev_CauldronCreditors_Opt_flee>
   <CVG_Ev_CauldronCreditors_Res_flee>Los cobradores se quitan los guantes de seda.</CVG_Ev_CauldronCreditors_Res_flee>
-  <CVG_Ev_DragonHeirTrial_Label>La prueba del Dragón</CVG_Ev_DragonHeirTrial_Label>
-  <CVG_Ev_DragonHeirTrial_Text>Un anciano del Clan del Dragón Antiguo llega para ver si la sangre del descendiente se ha espesado o adelgazado. No pide nada, no toma nada y durante toda una tarde rodea la colonia en silencio. Luego deja una escama en el umbral, que puede ser un regalo o una factura.</CVG_Ev_DragonHeirTrial_Text>
   <CVG_Ev_LotusWelcome_Label>El Pabellón recuerda a los suyos</CVG_Ev_LotusWelcome_Label>
   <CVG_Ev_LotusWelcome_Text>Llega una pequeña comitiva del Pabellón del Caldero Celestial, con un incensario y un libro de cuentas. Traen la noticia de que el Pabellón supo de los sanadores exiliados y decidió que su enfermería tiene un lugar para ellos cuando quieran. Mo Qinghua manda té, y Qian Wanli manda la cuenta del té.</CVG_Ev_LotusWelcome_Text>
   <CVG_Ev_BeastGuildOffer_Label>El gremio de cazadores</CVG_Ev_BeastGuildOffer_Label>

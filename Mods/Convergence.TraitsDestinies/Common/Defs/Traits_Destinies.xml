@@ -89,7 +89,7 @@
       <li>
         <label>son of heaven</label>
         <labelFemale>daughter of heaven</labelFemale>
-        <description>The protagonist of the age: once the Convergence comes, fate pulls {PAWN_objective} back from death once a year, and breakthroughs come a little easier. The Dao of Heaven picks a favorite for every era; the elders of Azure Peak add that it tires of them just as surely.</description>
+        <description>The protagonist of the age: once the Convergence comes, fate pulls {PAWN_objective} back from death once a year, and breakthroughs come a little easier. The Dao of Heaven picks a favorite for every era; the elders of the Formless Sword add that it tires of them just as surely.</description>
         <statOffsets>
           <CVG_BreakthroughChance>0.1</CVG_BreakthroughChance>
         </statOffsets>
@@ -171,7 +171,7 @@
     <degreeDatas>
       <li>
         <label>legendary beast blood</label>
-        <description>A supreme beast's blood sleeps in {PAWN_nameDef}: animals sense it and yield, and blows land with a weight that is not quite human. The Ancient Dragon Clan hunts down whoever sells such blood, but it cannot hunt down whoever is born with it.</description>
+        <description>A supreme beast's blood sleeps in {PAWN_nameDef}: animals sense it and yield, and blows land with a weight that is not quite human. The vanished Ancient Dragon Clan once hunted down whoever sold such blood; nobody can hunt down whoever is born with it.</description>
         <statOffsets>
           <TameAnimalChance>0.2</TameAnimalChance>
         </statOffsets>

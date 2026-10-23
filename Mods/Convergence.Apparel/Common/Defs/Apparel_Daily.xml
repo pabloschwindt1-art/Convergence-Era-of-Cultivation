@@ -49,7 +49,7 @@
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>CVG_Apparel_PaddedRobe</defName>
     <label>padded cotton robe</label>
-    <description>A long robe quilted with layers of cloud cotton, the winter dress of the northern sects of Jiuxiao. The Silent Lotus monks of the snow passes wear one for months without fire, saying that warmth is half cotton and half breath. It is bulky and slows the wearer a little.</description>
+    <description>A long robe quilted with layers of cloud cotton, the winter dress of the northern sects of Jiuxiao. The Nine Temperings disciples of the snow passes wear one for months without fire, saying that warmth is half cotton and half breath. It is bulky and slows the wearer a little.</description>
     <possessionCount>1</possessionCount>
     <techLevel>Neolithic</techLevel>
     <recipeMaker>
@@ -106,7 +106,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>CVG_Apparel_FurHood</defName>
     <label>lined fur hood</label>
-    <description>A hood lined with fur or thick cloth, tied under the chin with the ear flaps down. Beast hunters of the northern fragments of Jiuxiao wore them while tracking snow beasts, and claim a good hood is worth more than a minor qi technique against the frost. Its shape is copied from the old caps of the Ancient Dragon Clan's mountain guards.</description>
+    <description>A hood lined with fur or thick cloth, tied under the chin with the ear flaps down. Beast hunters of the northern fragments of Jiuxiao wore them while tracking snow beasts, and claim a good hood is worth more than a minor qi technique against the frost. Its shape is said to copy the caps of the mountain guards of the Ancient Dragon Clan, a clan that exists now only in stories.</description>
     <possessionCount>1</possessionCount>
     <recipeMaker>
       <recipeUsers><li>CVG_SpiritLoom</li></recipeUsers>
