@@ -11,17 +11,17 @@
     <description>A guild of alchemists and auctioneers born between sects at war: it sold pills to every side and won neutrality by treaty, because nobody would dare to kill the supplier of everyone. Its alchemical fire was inherited from a phoenix, and its masters refine for nobles and wanderers alike: a well-refined remedy does not ask about the lineage of whoever takes it. In Jiuxiao they hunt unknown materials and partners able to open new trade routes, and they buy technology from the Rim with open enthusiasm.</description>
     <fixedName>Heavenly Cauldron Pavilion</fixedName>
     <factionIconPath>World/CVG/Factions/HeavenlyCauldron</factionIconPath>
-    <royalFavorIconPath>UI/Paths/CVG_Path_Fire</royalFavorIconPath>
+    <royalFavorIconPath>UI/Icons/CVG/Contribution/HeavenlyCauldron</royalFavorIconPath>
     <pawnSingular>pavilion alchemist</pawnSingular>
     <pawnsPlural>pavilion alchemists</pawnsPlural>
     <techLevel>Industrial</techLevel>
     <categoryTag>CVG_Sect_HeavenlyCauldron</categoryTag>
     <royalTitleTags><li>CVG_HeavenlyCauldronTitle</li></royalTitleTags>
     <settlementNameMaker>CVG_NamerSettlement_HeavenlyCauldron</settlementNameMaker>
-    <!-- Vermilion and gold -->
+    <!-- Near white: the faction icon is tinted with this color, and the emblem art already has its own colors. -->
     <colorSpectrum>
-      <li>(0.80,0.25,0.18)</li>
-      <li>(0.90,0.72,0.30)</li>
+      <li>(1.00,1.00,1.00)</li>
+      <li>(0.92,0.92,0.92)</li>
     </colorSpectrum>
     <forcedMemes><li>CVG_Meme_CauldronWay</li></forcedMemes>
     <basicMemberKind>CVG_HeavenlyCauldron_Apprentice</basicMemberKind>

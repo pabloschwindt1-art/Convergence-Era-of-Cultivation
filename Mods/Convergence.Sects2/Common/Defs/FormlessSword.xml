@@ -11,16 +11,16 @@
     <description>A sect of swordsmen who teach that steel can break, but true intent endures. Four thousand years ago the Sword Saint Qing Feng split a mountain with a single stroke and stayed on the summit to cultivate; his heirs say he never drew the blade. After the Convergence they seek to rebuild the teachings lost in the Iron Calamity, and disciples able to understand a cut before making it. They have no quarrel with technology: their oldest swords were forged from the shells of fallen machines.</description>
     <fixedName>Formless Sword Sect</fixedName>
     <factionIconPath>World/CVG/Factions/FormlessSword</factionIconPath>
-    <royalFavorIconPath>UI/Paths/CVG_Path_Sword</royalFavorIconPath>
+    <royalFavorIconPath>UI/Icons/CVG/Contribution/FormlessSword</royalFavorIconPath>
     <pawnSingular>sword disciple</pawnSingular>
     <pawnsPlural>sword disciples</pawnsPlural>
     <categoryTag>CVG_Sect_FormlessSword</categoryTag>
     <royalTitleTags><li>CVG_FormlessSwordTitle</li></royalTitleTags>
     <settlementNameMaker>CVG_NamerSettlement_FormlessSword</settlementNameMaker>
-    <!-- White and steel blue -->
+    <!-- Near white: the faction icon is tinted with this color, and the emblem art already has its own colors. -->
     <colorSpectrum>
-      <li>(0.86,0.93,1.00)</li>
-      <li>(0.62,0.72,0.84)</li>
+      <li>(1.00,1.00,1.00)</li>
+      <li>(0.92,0.92,0.92)</li>
     </colorSpectrum>
     <forcedMemes><li>CVG_Meme_SwordWay</li></forcedMemes>
     <basicMemberKind>CVG_FormlessSword_Disciple</basicMemberKind>

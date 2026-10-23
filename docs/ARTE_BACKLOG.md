@@ -71,3 +71,18 @@ Fondo transparente (PNG o WebP). Se integran con `tools/art/recorte/` (`turret_s
 | 6 | Exoesqueleto Qi-Tech | Ropa sobre el pawn: 5 cuerpos × 3 vistas + icono | `QiTech: Things/Pawn/Humanlike/Apparel/CVG/QiTechExosuit/` | ✅ hecho (2026-10-21): diseño del usuario ajustado a las siluetas vanilla (plantilla `art/qitech/plantilla_exoesqueleto.png`) |
 
 Hechos: rifles de inducción (2 variantes), rifle concentrado, cañón de compresión, torretas de inducción y de contención (base, cabezal, icono).
+## Sects 2.0: íconos de las cinco sectas (2026-10-22)
+
+Hojas del usuario (7 íconos por secta, hechas con IA). Recortes a tamaño completo y a 128×128 en `art/sects2/<Secta>/`
+(`meme`, `leader`, `elder`, `specialist`, `ritual`, `emblem`, `contribution`, más `*_full.png`). Las facciones usan color casi blanco
+para que el emblema no se tiña.
+
+| Recurso | Integrado en (`Mods/Convergence.Sects2/Common/Textures/`) | Estado |
+|---|---|---|
+| 1 Meme | `UI/Memes/CVG/SwordWay`, `BodyWay`, `CauldronWay`, `DemonicWay`, `PuppetPath` | ✅ |
+| 4 Especialista | `UI/Roles/CVG/SwordMaster`, `TemperingMaster`, `AlchemistMaster`, `BloodMoonOfficiant`, `PuppetMaster` | ✅ |
+| 5 Ritual | `UI/Icons/Rituals/CVG/TemperSwordBody`, `NineTemperings`, `CauldronBlessing`, `BloodOath`, `ThreadBinding` | ✅ |
+| 6 Emblema | `World/CVG/Factions/<Secta>` (`factionIconPath`) | ✅ |
+| 7 Contribución | `UI/Icons/CVG/Contribution/<Secta>` (`royalFavorIconPath`) | ✅ |
+| 2 Líder de secta | `art/sects2/<Secta>/leader.png` | ⏳ pendiente: Sects 2.0 todavía no tiene un rol de líder propio por secta (usa el de vanilla) |
+| 3 Gran Anciano | `art/sects2/<Secta>/elder.png` | ⏳ pendiente: el rol de gran anciano todavía no existe en Sects 2.0 |

@@ -12,7 +12,7 @@
     <description>A heterodox cult born from a purge of the Heavenly Origin sect. Its founder, Xue Jiuyou, the Venerable, discovered that blood and soul concentrate qi faster than any meditation, and was cast out for saying it aloud. They are not mad: they are pragmatic. They respect strength and loyalty, keep their own laws, and pay their blood debts to the last drop. Heaven is a cage, they say; break it with what you have in your veins. They crossed into Jiuxiao before anyone else, following a red moon that, some whisper, was never a moon at all.</description>
     <fixedName>Blood Moon Cult</fixedName>
     <factionIconPath>World/CVG/Factions/BloodMoon</factionIconPath>
-    <royalFavorIconPath>UI/Paths/CVG_Path_Soul</royalFavorIconPath>
+    <royalFavorIconPath>UI/Icons/CVG/Contribution/BloodMoon</royalFavorIconPath>
     <pawnSingular>blood disciple</pawnSingular>
     <pawnsPlural>blood disciples</pawnsPlural>
     <leaderTitle>venerable</leaderTitle>
@@ -25,10 +25,10 @@
       <CVG_Structure_DaoOrigin>1</CVG_Structure_DaoOrigin>
       <Structure_Ideological>2</Structure_Ideological>
     </structureMemeWeights>
-    <!-- Crimson and black -->
+    <!-- Near white: the faction icon is tinted with this color, and the emblem art already has its own colors. -->
     <colorSpectrum>
-      <li>(0.55,0.06,0.08)</li>
-      <li>(0.20,0.05,0.07)</li>
+      <li>(1.00,1.00,1.00)</li>
+      <li>(0.92,0.92,0.92)</li>
     </colorSpectrum>
     <forcedMemes><li>CVG_Meme_DemonicWay</li></forcedMemes>
     <basicMemberKind>CVG_BloodMoon_Servant</basicMemberKind>

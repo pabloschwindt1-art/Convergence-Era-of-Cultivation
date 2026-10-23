@@ -13,17 +13,17 @@
     <description>The puppeteers of the Thousand Strings Valley, heirs of the art of Yan Shi, whose automaton once bowed to a king and winked at his concubines. Their creed is patience: a calm will can guide a hundred bodies without risking a single life. Grand Master Gongshu Yan rebuilt the sect after the Iron Calamity by taking apart the machines that had destroyed it, and the Valley still buys every mechanoid part the Rim can sell. In Jiuxiao they look for rare woods, unbreakable threads and disciples whose souls fray at the edges.</description>
     <fixedName>Invisible Thread Sect</fixedName>
     <factionIconPath>World/CVG/Factions/InvisibleThread</factionIconPath>
-    <royalFavorIconPath>UI/Paths/CVG_Path_Wood</royalFavorIconPath>
+    <royalFavorIconPath>UI/Icons/CVG/Contribution/InvisibleThread</royalFavorIconPath>
     <pawnSingular>puppeteer</pawnSingular>
     <pawnsPlural>puppeteers</pawnsPlural>
     <techLevel>Industrial</techLevel>
     <categoryTag>CVG_Sect_InvisibleThread</categoryTag>
     <royalTitleTags><li>CVG_InvisibleThreadTitle</li></royalTitleTags>
     <settlementNameMaker>CVG_NamerSettlement_InvisibleThread</settlementNameMaker>
-    <!-- Jade green and lacquer black -->
+    <!-- Near white: the faction icon is tinted with this color, and the emblem art already has its own colors. -->
     <colorSpectrum>
-      <li>(0.40,0.66,0.58)</li>
-      <li>(0.16,0.18,0.20)</li>
+      <li>(1.00,1.00,1.00)</li>
+      <li>(0.92,0.92,0.92)</li>
     </colorSpectrum>
     <forcedMemes><li>CVG_Meme_PuppetPath</li></forcedMemes>
     <basicMemberKind>CVG_InvisibleThread_Apprentice</basicMemberKind>

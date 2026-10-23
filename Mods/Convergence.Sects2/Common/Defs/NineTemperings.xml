@@ -11,16 +11,16 @@
     <description>A sect that refines flesh, blood and bone with qi until the body becomes both weapon and armor. Its founder, the Iron Mountain patriarch, broke his hands on the Calamity's machines nine times and nine times tempered them again; the sect still counts its ranks in temperings. They say not even a spirit sword can replace a body forged through pain and perseverance, and they respect strength wherever it comes from, technology or qi.</description>
     <fixedName>Sect of Nine Temperings</fixedName>
     <factionIconPath>World/CVG/Factions/NineTemperings</factionIconPath>
-    <royalFavorIconPath>UI/Paths/CVG_Path_Body</royalFavorIconPath>
+    <royalFavorIconPath>UI/Icons/CVG/Contribution/NineTemperings</royalFavorIconPath>
     <pawnSingular>tempered disciple</pawnSingular>
     <pawnsPlural>tempered disciples</pawnsPlural>
     <categoryTag>CVG_Sect_NineTemperings</categoryTag>
     <royalTitleTags><li>CVG_NineTemperingsTitle</li></royalTitleTags>
     <settlementNameMaker>CVG_NamerSettlement_NineTemperings</settlementNameMaker>
-    <!-- Bronze and dark iron -->
+    <!-- Near white: the faction icon is tinted with this color, and the emblem art already has its own colors. -->
     <colorSpectrum>
-      <li>(0.72,0.50,0.28)</li>
-      <li>(0.32,0.30,0.30)</li>
+      <li>(1.00,1.00,1.00)</li>
+      <li>(0.92,0.92,0.92)</li>
     </colorSpectrum>
     <forcedMemes><li>CVG_Meme_BodyWay</li></forcedMemes>
     <basicMemberKind>CVG_NineTemperings_Disciple</basicMemberKind>
