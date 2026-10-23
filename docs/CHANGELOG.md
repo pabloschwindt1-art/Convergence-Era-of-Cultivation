@@ -45,7 +45,7 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 - New setting "Visitor groups at once" (default 2): no more caravans and visitors piling up on your map at the same time. Set 0 for vanilla behaviour.
 ```
 
-### Convergence: Factions (mod nuevo, sin publicar todavía; 2026-10-22)
+### Convergence: Factions 0.1.0 — subido 2026-10-22 (id 3824674368)
 - Mod nuevo (`prospero1088.convergence.factions`; en desarrollo se llamó "Sects 2.0"). Reemplaza al Sects actual, que se retira más adelante, y es incompatible con él. Requiere Royalty e Ideology. Las cinco sectas siguen la misma plantilla
   (`docs/modulos/SECTS2_PLANTILLA.md`): 4 títulos honorarios permanentes, 5 favores, constitución de 4 grados con su ritual, especialista,
   meme con arma noble y despreciada, discípulos con historias de fondo propias por rango, armas que pueden usar y nombres propios.

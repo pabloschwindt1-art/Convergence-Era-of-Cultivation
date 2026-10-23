@@ -49,7 +49,7 @@ Dependencias **duras** = las que el juego exige (`modDependencies` del About). C
 | Convergence: Races | `…races` | Core, **Biotech** | — | 173 defs (121 genes), 87 tex. | 2,0 | no |
 | Convergence: Traits & Destinies | `…traitsdestinies` | Core | Biotech, Odyssey | 61 defs (51 rasgos) | 0,2 | no |
 | Convergence: Sects | `…sects` | Core | Ideology | 144 defs, 35 tex. | 1,8 | no |
-| **Convergence: Factions** (nuevo, sin publicar; reemplaza a Sects, que se retira después) | `…factions` | Core, **Royalty**, **Ideology** | Biotech Wuxia (Hilo Invisible), Alchemy, Apparel | 6 facciones (5 sectas + Errantes) | 1,6 | sí |
+| **Convergence: Factions** (id 3824674368, subido 2026-10-22; reemplaza a Sects, que ya no se actualiza) | `…factions` | Core, **Royalty**, **Ideology** | Biotech Wuxia (Hilo Invisible), Alchemy, Apparel | 6 facciones (5 sectas + Errantes) | 1,6 | sí |
 | Convergence: Alchemy & Artifacts | `…alchemy` | Core, Resources | Odyssey, Fauna & Flora | 72 defs, 62 tex. | 2,1 | no |
 | Convergence: Apparel | `…apparel` | Core, Resources | — | 33 defs, 150 tex. | 1,7 | no |
 | Convergence: Fauna & Flora | `…faunaflora` | Core | Odyssey, Apparel, Resources | 52 defs, 74 tex. | 3,3 | no |
