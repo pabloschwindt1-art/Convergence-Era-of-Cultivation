@@ -30,6 +30,8 @@ Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod
   escenarios (habilidad 10: 55 fallos y 28 celestiales de 400; habilidad 3 con el horno frío: 101 fallos; habilidad 3 con horno nivel
   3 y cristal de fuego: 57; habilidad 20: 11 fallos y 86 celestiales). ALL OK en 1.6.4871.
 
+- Factions: arreglado el aviso sin fin "Rol de ... activado / desactivado" con un solo creyente: el rol de especialista de las sectas
+  se desactivaba y se activaba en cada recálculo (los dos mínimos valían 1). Ahora se apaga recién sin creyentes.
 - Factions: los favores del Caldero entregan píldoras con calidad. El artefacto de obra maestra, cuando da píldoras de Fundación, las da
   de obra maestra; la "píldora a elección" sale siempre legendaria (celestial). Antes llegaban en calidad Normal. `-cvgfavorstest` ALL OK.
 

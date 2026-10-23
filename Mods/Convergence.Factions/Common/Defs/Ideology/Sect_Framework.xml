@@ -208,7 +208,9 @@
   <!-- Sect specialist: the first role the believers want filled (active from 1 believer), but the "role empty" mood only from 4. -->
   <PreceptDef Abstract="True" Name="CVG_SectSpecialistBase" ParentName="PreceptRoleSingleBase">
     <activationBelieverCount>1</activationBelieverCount>
-    <deactivationBelieverCount>1</deactivationBelieverCount>
+    <!-- Vanilla desactiva con creyentes <= deactivation y activa con >= activation: si los dos valen 1, con un creyente el rol se
+         apaga y se prende en cada recalculo (cartas sin fin). Se apaga recien sin creyentes. -->
+    <deactivationBelieverCount>0</deactivationBelieverCount>
     <roleTags><li>CVG_SectSpecialist</li></roleTags>
     <displayOrderInImpact>90</displayOrderInImpact>
     <canRemoveInUI>true</canRemoveInUI>
