@@ -340,14 +340,14 @@
   <RoyalTitlePermitDef ParentName="CVG_SectFavorMasterwork">
     <defName>CVG_Permit_HeavenlyCauldron_MasterworkArtifact</defName>
     <label>masterwork spirit artifact</label>
-    <description>The Pavilion's spirit forge sends one artifact it had kept off the auction block: a weapon forged with qi and alchemical fire or, when the forge has nothing ready, three foundation pills from its best batch.</description>
+    <description>The Pavilion's spirit forge sends one artifact it had kept off the auction block: a weapon forged with qi and alchemical fire or, when the forge has nothing ready, three masterwork foundation pills from its best batch.</description>
     <faction>CVG_Faction_HeavenlyCauldron</faction>
     <minTitle>CVG_Title_HeavenlyCauldron_Protector</minTitle>
     <modExtensions>
       <li Class="Convergence.Factions.DefModExtension_SectGift">
         <options>
           <li MayRequire="prospero1088.convergence.alchemy"><weaponTag>CVG_SpiritWeapon</weaponTag><quality>Masterwork</quality></li>
-          <li><thing>CVG_FoundationPill</thing><count>3</count></li>
+          <li><thing>CVG_FoundationPill</thing><count>3</count><quality>Masterwork</quality></li>
         </options>
       </li>
     </modExtensions>
@@ -356,18 +356,18 @@
   <RoyalTitlePermitDef ParentName="CVG_SectFavorExceptional">
     <defName>CVG_Permit_HeavenlyCauldron_PillOfChoice</defName>
     <label>pill of choice</label>
-    <description>Mo Qinghua refines one pill to order, from the recipes the Pavilion never sells. The guest elder chooses which: a breakthrough, a cleansing, or a second life.</description>
+    <description>Mo Qinghua refines one pill to order, from the recipes the Pavilion never sells. The guest elder chooses which: a breakthrough, a cleansing, or a second life. Every pill from her furnace comes out celestial.</description>
     <faction>CVG_Faction_HeavenlyCauldron</faction>
     <minTitle>CVG_Title_HeavenlyCauldron_GuestElder</minTitle>
     <modExtensions>
       <li Class="Convergence.Factions.DefModExtension_SectGift">
         <playerChooses>true</playerChooses>
         <options>
-          <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_NineTurnsPill</thing><count>1</count></li>
-          <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_JadeElixir</thing><count>1</count></li>
-          <li><thing>CVG_FoundationPill</thing><count>4</count></li>
-          <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_PurificationPill</thing><count>3</count></li>
-          <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_TemperingPill</thing><count>4</count></li>
+          <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_NineTurnsPill</thing><count>1</count><quality>Legendary</quality></li>
+          <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_JadeElixir</thing><count>1</count><quality>Legendary</quality></li>
+          <li><thing>CVG_FoundationPill</thing><count>4</count><quality>Legendary</quality></li>
+          <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_PurificationPill</thing><count>3</count><quality>Legendary</quality></li>
+          <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_TemperingPill</thing><count>4</count><quality>Legendary</quality></li>
         </options>
       </li>
     </modExtensions>
