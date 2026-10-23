@@ -10,6 +10,19 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 ## Sin publicar
 
+### Convergence: Stories & Scenarios (2026-10-22)
+- Las visitas de las historias (VisitAzurePeak, VisitLotus, VisitCauldron, VisitDragon, VisitRogueMarket, LotusPilgrims, SectTradePact y
+  los emisarios de la Convergencia) **ya no se juntan con otros huéspedes**: el evento no se elige si hay visitantes o una caravana de otra
+  facción en el mapa, y una visita ya decidida se aplaza un día (hasta 6 veces). Antes podían coincidir con las caravanas y visitas de
+  vanilla: hasta 3 grupos a la vez.
+- Autotest `-cvgstoriestest`: nueva sección "visits wait for guests to leave" (ALL OK en 1.6.4871).
+- Versión: si la 0.1.1 (compatibilidad con 1.7) todavía no se subió, va junto con ella; si ya se subió, 0.1.2.
+
+**Change notes (Steam):**
+```
+- Story visits no longer pile up with other visitors or trade caravans: they wait until your guests have left.
+```
+
 ### Los 15 mods → compatibles con RimWorld 1.7 (2026-10-22)
 Probado en la beta 1.7.4985 (motor Waylith, Harmony 3.0) con las 5 DLC: autotests de Core, recursos, linajes y rasgos ALL OK,
 sin errores rojos. Sigue siendo **un solo DLL net472** que carga en 1.6 y en 1.7: para quien juega 1.6 no cambia nada.

@@ -7,6 +7,7 @@ using RimWorld;
 using RimWorld.Planet;
 using RimWorld.QuestGen;
 using Verse.AI;
+using Verse.AI.Group;
 using Verse;
 
 namespace Convergence.Stories
@@ -53,8 +54,39 @@ namespace Convergence.Stories
             Section("sect world", () => TestSectWorld(map));
             Section("endgame", () => TestEndgame(map));
             Section("puppet master scenario", () => TestPuppetMaster(map));
+            Section("visits wait for guests to leave", () => TestGuests(map));
             sb.Append(fails == 0 ? "\n  ALL OK" : "\n  FAILURES: " + fails);
             if (fails == 0) Log.Message(sb.ToString()); else Log.Error(sb.ToString());
+        }
+
+        /// <summary>Las visitas de las historias no se juntan con otros huéspedes: el evento no se elige y una visita pendiente se aplaza.</summary>
+        private void TestGuests(Map map)
+        {
+            void SendHome() // los huéspedes de pruebas anteriores se van
+            {
+                foreach (var lord in map.lordManager.lords.Where(l => l.LordJob is LordJob_VisitColony || l.LordJob is LordJob_TradeWithColony).ToList())
+                    foreach (var p in lord.ownedPawns.ToList()) p.Destroy();
+            }
+            SendHome();
+            Check(!StoryUtility.GuestsOnMap(map), "no guests at the start");
+            var visits = StoryEngine.All.Where(StoryEngine.BringsVisitors).ToList();
+            // Los eventos de visita son de las sectas (MayRequire): sin un mod de sectas no se cargan.
+            if (visits.Count == 0) sb.Append("\n    note: no story event brings visitors (they need a Sects mod)");
+            else Check(visits.Count >= 7, visits.Count + " story events bring visitors");
+            var f = Find.FactionManager.AllFactionsListForReading.FirstOrDefault(x => !x.IsPlayer && !x.Hidden && !x.temporary && x.def.humanlikeFaction
+                && !x.HostileTo(Faction.OfPlayer) && x.def.pawnGroupMakers != null && x.def.pawnGroupMakers.Any(g => g.kindDef == PawnGroupKindDefOf.Peaceful));
+            if (f == null) { sb.Append("\n    skip: no friendly faction that sends visitors"); return; }
+            int scheduledBefore = GameComponent_Story.Instance.Scheduled.Count(s => s.key.StartsWith("visit:"));
+            SO_Visit.Send(f, map, 1);
+            Check(StoryUtility.GuestsOnMap(map), "a visit arrives when there are no guests (" + f.Name + ")");
+            int lords = map.lordManager.lords.Count;
+            SO_Visit.Send(f, map, 1);
+            Check(map.lordManager.lords.Count == lords, "a second visit does not arrive while the first is here");
+            Check(GameComponent_Story.Instance.Scheduled.Count(s => s.key.StartsWith("visit:")) == scheduledBefore + 1, "the second visit is postponed one day");
+            SO_Visit.Send(f, map, StoryUtility.VisitMaxTries);
+            Check(GameComponent_Story.Instance.Scheduled.Count(s => s.key.StartsWith("visit:")) == scheduledBefore + 1, "after " + StoryUtility.VisitMaxTries + " tries it is dropped");
+            GameComponent_Story.Instance.Scheduled.RemoveAll(s => s.key.StartsWith("visit:"));
+            SendHome();
         }
 
         private void TestScenarios()

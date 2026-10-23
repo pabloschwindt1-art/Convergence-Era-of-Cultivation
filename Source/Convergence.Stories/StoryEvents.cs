@@ -80,6 +80,14 @@ namespace Convergence.Stories
             var map = StoryUtility.HomeMap;
             if (map == null) return;
             if (key.StartsWith("ev:")) { StoryEngine.RunScheduled(key.Substring(3)); return; }
+            if (key.StartsWith("visit:"))
+            {
+                // visit:<loadID de la facción>:<intento> (visita aplazada porque había huéspedes)
+                var parts = key.Split(':');
+                if (parts.Length == 3 && int.TryParse(parts[1], out int id) && int.TryParse(parts[2], out int attempt))
+                    SO_Visit.Send(Find.FactionManager.AllFactionsListForReading.FirstOrDefault(f => f.loadID == id), map, attempt);
+                return;
+            }
             switch (key)
             {
                 case "assassin":
@@ -195,6 +203,12 @@ namespace Convergence.Stories
             if (f.HostileTo(Faction.OfPlayer))
             {
                 StoryUtility.Raid(f, 0.7f, "EmissariesHostile");
+                return;
+            }
+            // Los emisarios llegan una sola vez: si hay huéspedes, esperan a que se vayan.
+            if (StoryUtility.GuestsOnMap(map))
+            {
+                GameComponent_Story.Instance?.Schedule("emissaries", StoryUtility.VisitRetryDays * GenDate.TicksPerDay);
                 return;
             }
             var parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.Misc, map);

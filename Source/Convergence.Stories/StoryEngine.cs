@@ -271,11 +271,24 @@ namespace Convergence.Stories
             var f = ctx.Resolve(faction);
             if (f == null) return null;
             if (f.HostileTo(Faction.OfPlayer)) { StoryUtility.Raid(f, 0.6f, null); return null; }
-            var parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.Misc, ctx.map);
+            Send(f, ctx.map, 1);
+            return null;
+        }
+
+        /// <summary>Manda el grupo, o lo aplaza un día si ya hay huéspedes en el mapa (como mucho <see cref="StoryUtility.VisitMaxTries"/> veces).</summary>
+        public static void Send(Faction f, Map map, int attempt)
+        {
+            if (f == null || map == null || f.HostileTo(Faction.OfPlayer)) return;
+            if (StoryUtility.GuestsOnMap(map))
+            {
+                if (attempt < StoryUtility.VisitMaxTries)
+                    GameComponent_Story.Instance?.Schedule("visit:" + f.loadID + ":" + (attempt + 1), StoryUtility.VisitRetryDays * GenDate.TicksPerDay);
+                return;
+            }
+            var parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.Misc, map);
             parms.faction = f;
             parms.forced = true;
             IncidentDefOf.VisitorGroup.Worker.TryExecute(parms);
-            return null;
         }
     }
 
@@ -478,6 +491,19 @@ namespace Convergence.Stories
 
         public static IEnumerable<StoryEventDef> All => DefDatabase<StoryEventDef>.AllDefsListForReading;
 
+        private static readonly Dictionary<StoryEventDef, bool> bringsVisitors = new Dictionary<StoryEventDef, bool>();
+
+        /// <summary>El evento trae un grupo de visitantes (<see cref="SO_Visit"/>, directo o en alguna opción).</summary>
+        public static bool BringsVisitors(StoryEventDef def)
+        {
+            if (!bringsVisitors.TryGetValue(def, out bool v))
+            {
+                v = (def.outcomes?.Any(o => o is SO_Visit) ?? false) || (def.options?.Any(o => o.outcomes?.Any(x => x is SO_Visit) ?? false) ?? false);
+                bringsVisitors[def] = v;
+            }
+            return v;
+        }
+
         public static bool Eligible(StoryEventDef def, Map map, bool ignoreTiming = false)
         {
             var gc = GameComponent_Story.Instance;
@@ -490,6 +516,7 @@ namespace Convergence.Stories
                 if (!def.pre && Find.TickManager.TicksGame - conv.OccurredTick < def.minDays * GenDate.TicksPerDay) return false;
                 if (def.pre && Find.TickManager.TicksGame < def.minDays * GenDate.TicksPerDay) return false;
                 if (gc.LastFired.TryGetValue(def.defName, out int last) && Find.TickManager.TicksGame - last < def.minRefireDays * GenDate.TicksPerDay) return false;
+                if (BringsVisitors(def) && StoryUtility.GuestsOnMap(map)) return false;
             }
             if (map.mapPawns.FreeColonistsSpawnedCount < def.minColonists) return false;
             if (def.needsCultivator && !map.mapPawns.FreeColonistsSpawned.Any(p => CompCultivator.For(p)?.IsCultivator ?? false)) return false;
