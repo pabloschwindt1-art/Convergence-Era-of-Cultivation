@@ -36,7 +36,7 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 **Change notes (Steam):**
 ```
-- The sword body is now a four-grade constitution (iron, cold steel, star-iron, celestial jade), for cultivators with or without a spirit root. Old celestial sword bodies become celestial jade.
+- The sword, steel and pure yang bodies are now four-grade constitutions, and two new special bodies appear: the blood moon body and, with Biotech, the thousand threads body. Colonists are born at the first grade; the higher grades come from the rituals of Convergence: Factions. Old celestial sword bodies become celestial jade.
 ```
 - Versión: si la 0.1.2 (compatibilidad con 1.7) todavía no se subió, va junto con ella; si ya se subió, 0.1.3.
 

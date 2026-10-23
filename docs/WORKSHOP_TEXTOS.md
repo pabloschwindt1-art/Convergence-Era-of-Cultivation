@@ -37,45 +37,131 @@ The full texts are in the LICENSE.txt files inside the mod folder.
 ---
 
 ## 1. Convergence: Era of Cultivation (Core) — `prospero1088.convergence.core`
-Tags: Mod, 1.6 · Required items: Harmony · Recommended: Convergence collection · DLC: optional (Biotech, Ideology, Anomaly, Odyssey add parts)
+Tags: Mod, 1.6, 1.7 · Required items: Harmony · DLC: optional (Royalty, Ideology, Biotech, Anomaly, Odyssey add parts)
+Texto vigente de la página (0.1.2, 2026-10-22): el que escribió el usuario, con 1.7, Factions en lugar de Sects y las novedades.
 
 ```
 [h1]Convergence: Era of Cultivation[/h1]
 [i]A fragment of the Nine Heavens collides with your rimworld. Qi begins to flow, and the Era of Cultivation begins.[/i]
 
-A xianxia / wuxia cultivation framework inspired by Tale of Immortal. Play it [b]with technology[/b] (techno-cultivation) or [b]without it[/b] (classic cultivation): the Core never requires electricity or industrial research.
+Convergence is a modular xianxia / wuxia cultivation system for RimWorld 1.6 and 1.7, inspired by Tale of Immortal, Amazing Cultivation Simulator and cultivation fantasy.
 
-[h2]What you get[/h2]
+Build your own story. Become a spiritual cultivator, master body cultivation, combine technology with the Dao, or establish a traditional sect.
+
+Convergence expands RimWorld's existing mechanics rather than replacing them.
+
+[h2]The Vision Behind Convergence[/h2]
+Convergence isn't about turning RimWorld into Tale of Immortal or Amazing Cultivation Simulator. It's about bringing the xianxia universe into RimWorld and letting both worlds interact.
+
+The Convergence is a world-changing event that introduces Qi, cultivation, spiritual creatures, ancient sects and new possibilities into the stories RimWorld already creates.
+
+A traditional sect seeking immortality? A mechanitor commanding spiritual puppets? A cybernetic warrior pursuing body cultivation? An ordinary colony trying to survive in a world where cultivators have suddenly appeared?
+
+Why not?
+
+The traits, backstories, factions, technologies and cultivation systems are designed to open up these possibilities and create new stories through the unpredictable interactions that make RimWorld special. Some of these possibilities come from the optional modules.
+
+The goal isn't to create a linear cultivation RPG or force every colonist down the same path. It's to introduce an entirely new dimension to the world while preserving the freedom to play however you want.
+
+Cultivation is another dimension of RimWorld, not a replacement for it.
+
+This is my personal interpretation of a genre I love, built around the freedom and emergent storytelling that make RimWorld special.
+
+[h2]Core Features[/h2]
 [list]
-[*][b]The Convergence[/b]: an event (or a story beat, your choice) that wakes the qi of the world. Before it, spirit roots sleep. After it, factions, beasts and veins awaken.
-[*][b]Spirit roots[/b] by element (a gene with Biotech, a trait without it) and four grades of quality.
-[*][b]Cultivation realms in two paths[/b]: the Qi path (Qi Refining, Foundation Establishment, Golden Core) and the Body path (Skin to Golden Body tempering). Every realm multiplies speed, damage, health and armor.
-[*][b]Breakthroughs and heavenly tribulation[/b]: seclusion, pills, lightning, qi deviation. Tribulation can kill (you can turn that off).
-[*][b]Techniques[/b]: 44 techniques in 9 manuals, with mastery, a development window like the psycast trees, and combat sets. NPC cultivators use them too.
-[*][b]The Master[/b]: a wounded master arrives with the Convergence, teaches, leaves and gives you a jade that starts a chain of searches.
-[*][b]Qi network[/b]: conduits and consumers, the wuxia version of electricity. No power grid needed.
-[*][b]Celestial calendar[/b]: Qi Tide, Qi Ebb, Moon of the Inner Demon. Qi deviation as a mental break.
-[*][b]Celestial dissonance[/b]: every implant carries a configurable dissonance that makes tribulation harder.
-[*][b]Cultivation difficulty[/b] (Easy / Hard / Nightmare) and a separate cultivation wealth, so your spirit gear does not inflate raid points.
-[*]122 backstories, cultivation traits, research tree of the Dao, and an Odyssey bonus: vacuum resistance that grows with your realm (up to 50% at Golden Core).
+[*][b]The Convergence:[/b] Choose when spiritual energy awakens. The world changes as spirit roots, factions, beasts and resources become active.
+[*][b]Spirit Roots:[/b] Six elements and four grades of spiritual potential, integrated with Biotech genes when available.
+[*][b]Special Bodies:[/b] Rare constitutions such as the sword body, steel body or pure yang body, some with four grades that can be refined further.
+[*][b]Cultivation Realms:[/b] Nine realms across two paths: Qi Cultivation and Body Cultivation.
+[*][b]Heavenly Tribulations:[/b] Break through cultivation realms while facing lightning, spiritual trials and the risk of death.
+[*][b]Martial Techniques:[/b] 44 techniques across nine manuals, featuring mastery and combat combinations.
+[*][b]The Master:[/b] A mysterious wounded cultivator arrives to guide your colony and introduce the cultivation system through events.
+[*][b]Qi Networks:[/b] Spiritual conduits and consumers provide an alternative to electricity.
+[*][b]Celestial Calendar:[/b] Qi Tides, Qi Ebbs and the Moon of the Inner Demon.
+[*][b]Celestial Dissonance:[/b] Implants affect the difficulty of heavenly tribulations.
+[*][b]Dao Research:[/b] A dedicated cultivation research system.
+[*][b]Primordial Crystal:[/b] Ten spirit stones pressed into a stable crystal, a shared spiritual material used by the modules.
+[*][b]Stories and Characters:[/b] Cultivation traits, extensive backstories and character progression.
 [/list]
 
-[h2]Settings[/h2]
-Convergence trigger (storyteller / research / immediate), day range, spirit-root chance, difficulty, tribulation lethality, master on/off, dissonance factor and more.
+[h2]Your World, Your Story[/h2]
+Cultivation is not mandatory for every colonist. You can pursue immortality, explore the scientific potential of Qi, build a hybrid civilization, or simply try to survive as the world changes around you.
 
-[h2]Modules (separate items)[/h2]
-Resources, Alchemy & Artifacts, Apparel, Fauna & Flora, Furniture, Formations, Races, Traits & Destinies, Sects, Grafts, Stories & Scenarios, Qi-Tech, Biotech Wuxia and Flying Sect. See the [url=https://steamcommunity.com/sharedfiles/filedetails/?id={ID_COLLECTION}]collection[/url].
+The original RimWorld mechanics remain available, and your colony's story remains your own.
 
-[h2]Compatibility[/h2]
-Uses all DLCs when present and works without them. Only Harmony is required. Tested together with 37 popular mods (Vanilla Expanded, Dubs, HugsLib, AllowTool, Character Editor…).
+[h2]Customization[/h2]
+[list]
+[*]Choose when the Convergence begins.
+[*]Configure spirit-root probability.
+[*]Select cultivation difficulty: Easy, Hard or Nightmare.
+[*]Enable or disable lethal tribulations.
+[*]Configure the Master and celestial dissonance.
+[*]Limit how many visitor groups and caravans can be on your map at once.
+[*]Play with or without industrial technology.
+[/list]
 
-[h2]Status[/h2]
-Version 0.1.0 (early release). Nascent Soul and higher realms are not in yet.
+[h2]Modular Addons[/h2]
+Convergence consists of one Core framework and 14 optional modules:
+
+Resources, Formations, Races, Traits & Destinies, Factions, Alchemy & Artifacts, Apparel, Fauna & Flora, Furniture, Grafts, Stories & Scenarios, Qi-Tech, Biotech Wuxia and Flying Sect.
+
+Each module expands the world with new mechanics, content and storytelling possibilities.
+
+[i]Note: Convergence: Sects is no longer part of the pack. It has been replaced by Convergence: Factions. Sects will stay available for existing saves, but it will no longer be updated. Do not use both.[/i]
+
+[h2]Compatibility & Requirements[/h2]
+Requires: RimWorld 1.6 or 1.7, and Harmony.
+
+Royalty, Ideology, Biotech, Anomaly and Odyssey are optional for the Core. DLC-specific features activate when their expansions are installed.
+
+No electricity or industrial research is required.
+
+[h2]Development Status[/h2]
+Version 0.1.2 — Early Release
+
+Convergence is playable and undergoing additional testing and balancing. Nascent Soul and higher cultivation realms are not implemented yet.
+
+What's new in 0.1.2:
+[list]
+[*]RimWorld 1.7 support: the same mod works on 1.6 and 1.7.
+[*]New setting "Visitor groups at once" (default 2): caravans and visitors no longer pile up on your map. Set it to 0 for vanilla behaviour.
+[*]The sword, steel and pure yang bodies are now four-grade constitutions, and two new special bodies appear: the blood moon body and, with Biotech, the thousand threads body. Colonists are born at the first grade; the higher grades are earned through the rituals of Convergence: Factions. Old celestial sword bodies become the highest grade of the sword body.
+[/list]
+
+[h2]Community & Contributions[/h2]
+This is a free community project. Players and modders are welcome to contribute with bug reports, translations, artwork, compatibility improvements, code and new addons.
+
+GitHub — Source Code & Contributions:
+https://github.com/pabloschwindt1-art/Convergence-Era-of-Cultivation
+
+[h2]Languages[/h2]
+English, Spanish and Spanish (Latin America).
+
+[h2]Licensing & AI Assistance[/h2]
+[list]
+[*]Code, scripts and technical content: MIT License.
+[*]Original art, lore and narrative content: CC BY-NC-SA 4.0 (attribution, non-commercial use, share-alike).
+[*]Artwork was created with AI assistance, under the author's creative direction, and subsequently selected, edited and integrated into the project.
+[*]Some artwork remains provisional. RimWorld materials and derivatives belonging to Ludeon Studios are not covered by these licenses.
+[/list]
+
+Portions of the materials used to create this content/mod are trademarks and/or copyrighted works of Ludeon Studios Inc. All rights reserved by Ludeon. This content/mod is not official and is not endorsed by Ludeon.
+
+Created by Prospero1088
+
+[h2]A Personal Project[/h2]
+I'm not a professional game developer. Convergence started as a personal hobby because I wanted to experience the world of cultivation within RimWorld.
+
+I originally made it for myself, combining elements from cultivation stories and games that I enjoy with RimWorld's emergent storytelling. Eventually, I decided to share it in case other players would enjoy exploring this interpretation of the genre.
+
+This project was developed in my free time with the assistance of AI tools. I'll keep fixing bugs, improving mechanics and adding new ideas whenever I feel like working on it.
+
+There is no development schedule or commitment to regular updates. This is simply a hobby that I enjoy, and I'm happy to share the results with anyone interested.
+
+Feedback, suggestions and contributions are always welcome.
 ```
-+ [FOOTER]
 
 ---
-
 ## 2. Convergence: Resources — `prospero1088.convergence.resources`
 Required items: Harmony, Convergence: Era of Cultivation
 
