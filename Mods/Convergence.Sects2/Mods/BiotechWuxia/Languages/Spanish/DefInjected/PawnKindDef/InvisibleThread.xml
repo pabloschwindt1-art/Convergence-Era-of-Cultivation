@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_InvisibleThread_Apprentice.label>aprendiz del hilo</CVG_InvisibleThread_Apprentice.label>
+  <CVG_InvisibleThread_Puppeteer.label>titiritero</CVG_InvisibleThread_Puppeteer.label>
+  <CVG_InvisibleThread_Master.label>maestro titiritero</CVG_InvisibleThread_Master.label>
+  <CVG_InvisibleThread_Elder.label>gran titiritero</CVG_InvisibleThread_Elder.label>
+  <CVG_InvisibleThread_Merchant.label>mercader de hilos</CVG_InvisibleThread_Merchant.label>
+</LanguageData>

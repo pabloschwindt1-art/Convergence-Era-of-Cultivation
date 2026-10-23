@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Invisible Thread Sect: adult backstories by rank (fixedAdultBackstories). Childhood stays random. They fight with guns from
+       behind their puppets. -->
+  <BackstoryDef Abstract="True" Name="CVG_InvisibleThreadBackstoryBase">
+    <slot>Adulthood</slot>
+    <shuffleable>false</shuffleable>
+    <spawnCategories><li>CVG_Sect_InvisibleThread</li></spawnCategories>
+    <requiredWorkTags><li>Violent</li></requiredWorkTags>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_InvisibleThreadBackstoryBase">
+    <defName>CVG_Backstory_IT_ThreadSpinner</defName>
+    <title>thread spinner</title>
+    <titleShort>thread spinner</titleShort>
+    <description>Every apprentice of the Valley begins at the spinning wheel, drawing spirit thread from silk and qi until the fingers bleed and then a little longer. [PAWN_nameDef] spun for three years before being allowed to touch a puppet.</description>
+    <skillGains>
+      <Crafting>3</Crafting>
+      <Shooting>2</Shooting>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_InvisibleThreadBackstoryBase">
+    <defName>CVG_Backstory_IT_JointCarver</defName>
+    <title>joint carver</title>
+    <titleShort>joint carver</titleShort>
+    <description>[PAWN_nameDef] carved the joints of the Valley's puppets: knees, wrists and the hundred small bones of a hand. A badly carved joint betrays its puppet in battle, and the carver's name is written inside every one.</description>
+    <skillGains>
+      <Crafting>3</Crafting>
+      <Construction>2</Construction>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_InvisibleThreadBackstoryBase">
+    <defName>CVG_Backstory_IT_Puppeteer</defName>
+    <title>valley puppeteer</title>
+    <titleShort>puppeteer</titleShort>
+    <description>[PAWN_nameDef] is a full puppeteer of the Invisible Thread, bound to puppets by threads of [PAWN_possessive] own soul. The sect teaches that a puppeteer who must step into a fight has already lost it.</description>
+    <skillGains>
+      <Crafting>3</Crafting>
+      <Shooting>3</Shooting>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_InvisibleThreadBackstoryBase">
+    <defName>CVG_Backstory_IT_ShadowPlayer</defName>
+    <title>shadow theatre player</title>
+    <titleShort>shadow player</titleShort>
+    <description>Before the Convergence, [PAWN_nameDef] toured the villages with the Valley's shadow theatre, the sect's oldest disguise. Audiences saw paper heroes behind a lit screen; the puppeteers counted who watched, and who watched too closely.</description>
+    <skillGains>
+      <Artistic>3</Artistic>
+      <Social>2</Social>
+      <Shooting>1</Shooting>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_InvisibleThreadBackstoryBase">
+    <defName>CVG_Backstory_IT_PuppetMaster</defName>
+    <title>puppet master</title>
+    <titleShort>puppet master</titleShort>
+    <description>[PAWN_nameDef] masters a workshop of the Valley and drives a squad of war puppets without moving from the back line. Ling Xian, the puppet saint, taught [PAWN_objective] to fight with ten hands and think with one head.</description>
+    <skillGains>
+      <Crafting>5</Crafting>
+      <Shooting>3</Shooting>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_InvisibleThreadBackstoryBase">
+    <defName>CVG_Backstory_IT_MachineBreaker</defName>
+    <title>breaker of machines</title>
+    <titleShort>machine breaker</titleShort>
+    <description>After the Iron Calamity, [PAWN_nameDef] took apart the wrecks of the machines that had burned the Valley, joint by joint, to learn how they moved. Half of today's war puppets walk the way those machines did.</description>
+    <skillGains>
+      <Crafting>4</Crafting>
+      <Intellectual>3</Intellectual>
+      <Shooting>2</Shooting>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_InvisibleThreadBackstoryBase">
+    <defName>CVG_Backstory_IT_GrandPuppeteer</defName>
+    <title>grand puppeteer</title>
+    <titleShort>grand puppeteer</titleShort>
+    <description>[PAWN_nameDef] is one of the grand puppeteers of the Thousand Strings, second only to Gongshu Yan, who rebuilt the sect from the Calamity's scrap. [PAWN_pronoun] can hold a conversation, play a game of weiqi and drive a dozen puppets at once, and is said to lose only the conversation.</description>
+    <skillGains>
+      <Crafting>7</Crafting>
+      <Intellectual>3</Intellectual>
+      <Shooting>2</Shooting>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_InvisibleThreadBackstoryBase">
+    <defName>CVG_Backstory_IT_BlueprintKeeper</defName>
+    <title>keeper of the blueprints</title>
+    <titleShort>blueprint keeper</titleShort>
+    <description>[PAWN_nameDef] keeps the Valley's sealed blueprints, including the copy of Yan Shi's automaton that nobody has ever managed to build. Old Kui, the previous keeper, burned the Valley's library rather than let the Calamity have it; [PAWN_nameDef] rewrote it from memory.</description>
+    <skillGains>
+      <Intellectual>6</Intellectual>
+      <Crafting>4</Crafting>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_InvisibleThreadBackstoryBase">
+    <defName>CVG_Backstory_IT_ThreadMerchant</defName>
+    <title>thread merchant</title>
+    <titleShort>thread merchant</titleShort>
+    <description>[PAWN_nameDef] travels with the Valley's caravans, selling thread and blueprints and buying any machine part the Rim will part with. [PAWN_pronoun] can tell a mechanoid's age from the wear of a single joint.</description>
+    <requiredWorkTags Inherit="False" />
+    <skillGains>
+      <Social>6</Social>
+      <Crafting>2</Crafting>
+    </skillGains>
+  </BackstoryDef>
+</Defs>

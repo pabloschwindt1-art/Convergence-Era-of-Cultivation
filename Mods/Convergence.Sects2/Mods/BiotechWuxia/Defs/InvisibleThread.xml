@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ======================================================================================================================
+       Invisible Thread Sect (无形丝宗, Wúxíng Sīzōng), seated in the Thousand Strings Valley. Specialty: spirit puppets (Biotech
+       Wuxia's puppets, which use the vanilla mechanitor system). Loaded only with Biotech Wuxia (and therefore Biotech). Its
+       disciples fight from behind their puppets with light guns; its raids and settlements bring puppets. Built on the sect
+       framework (Common/Defs/Sect_Bases.xml).
+       ====================================================================================================================== -->
+
+  <FactionDef ParentName="CVG_SectFactionBase">
+    <defName>CVG_Faction_InvisibleThread</defName>
+    <label>invisible thread sect</label>
+    <description>The puppeteers of the Thousand Strings Valley, heirs of the art of Yan Shi, whose automaton once bowed to a king and winked at his concubines. Their creed is patience: a calm will can guide a hundred bodies without risking a single life. Grand Master Gongshu Yan rebuilt the sect after the Iron Calamity by taking apart the machines that had destroyed it, and the Valley still buys every mechanoid part the Rim can sell. In Jiuxiao they look for rare woods, unbreakable threads and disciples whose souls fray at the edges.</description>
+    <fixedName>Invisible Thread Sect</fixedName>
+    <factionIconPath>World/CVG/Factions/InvisibleThread</factionIconPath>
+    <royalFavorIconPath>UI/Paths/CVG_Path_Wood</royalFavorIconPath>
+    <pawnSingular>puppeteer</pawnSingular>
+    <pawnsPlural>puppeteers</pawnsPlural>
+    <techLevel>Industrial</techLevel>
+    <categoryTag>CVG_Sect_InvisibleThread</categoryTag>
+    <royalTitleTags><li>CVG_InvisibleThreadTitle</li></royalTitleTags>
+    <settlementNameMaker>CVG_NamerSettlement_InvisibleThread</settlementNameMaker>
+    <!-- Jade green and lacquer black -->
+    <colorSpectrum>
+      <li>(0.40,0.66,0.58)</li>
+      <li>(0.16,0.18,0.20)</li>
+    </colorSpectrum>
+    <forcedMemes><li>CVG_Meme_PuppetPath</li></forcedMemes>
+    <basicMemberKind>CVG_InvisibleThread_Apprentice</basicMemberKind>
+    <fixedLeaderKinds><li>CVG_InvisibleThread_Elder</li></fixedLeaderKinds>
+    <caravanTraderKinds Inherit="False"><li>CVG_Trader_InvisibleThread</li></caravanTraderKinds>
+    <visitorTraderKinds Inherit="False"><li>CVG_Trader_InvisibleThread</li></visitorTraderKinds>
+    <baseTraderKinds Inherit="False"><li>CVG_Trader_InvisibleThreadSettlement</li></baseTraderKinds>
+    <!-- Puppets march only with fighting groups and guard the settlements; visitors and caravans come in person. -->
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <CVG_InvisibleThread_Apprentice>8</CVG_InvisibleThread_Apprentice>
+          <CVG_InvisibleThread_Puppeteer>6</CVG_InvisibleThread_Puppeteer>
+          <CVG_InvisibleThread_Master>3</CVG_InvisibleThread_Master>
+          <CVG_InvisibleThread_Elder>1</CVG_InvisibleThread_Elder>
+          <CVG_Puppet_Blade>6</CVG_Puppet_Blade>
+          <CVG_Puppet_Bronze>5</CVG_Puppet_Bronze>
+          <CVG_Puppet_Jade>1.5</CVG_Puppet_Jade>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <CVG_InvisibleThread_Apprentice>10</CVG_InvisibleThread_Apprentice>
+          <CVG_InvisibleThread_Puppeteer>7</CVG_InvisibleThread_Puppeteer>
+          <CVG_InvisibleThread_Master>4</CVG_InvisibleThread_Master>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <CVG_InvisibleThread_Merchant>1</CVG_InvisibleThread_Merchant>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+        </carriers>
+        <guards>
+          <CVG_InvisibleThread_Apprentice>10</CVG_InvisibleThread_Apprentice>
+          <CVG_InvisibleThread_Puppeteer>7</CVG_InvisibleThread_Puppeteer>
+          <CVG_InvisibleThread_Master>4</CVG_InvisibleThread_Master>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <CVG_InvisibleThread_Apprentice>8</CVG_InvisibleThread_Apprentice>
+          <CVG_InvisibleThread_Puppeteer>6</CVG_InvisibleThread_Puppeteer>
+          <CVG_InvisibleThread_Master>3</CVG_InvisibleThread_Master>
+          <CVG_InvisibleThread_Elder>1.5</CVG_InvisibleThread_Elder>
+          <CVG_Puppet_Blade>5</CVG_Puppet_Blade>
+          <CVG_Puppet_Bronze>5</CVG_Puppet_Bronze>
+          <CVG_Puppet_Jade>1.5</CVG_Puppet_Jade>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ConvergenceFaction">
+        <extraSettlements>1~2</extraSettlements>
+      </li>
+    </modExtensions>
+  </FactionDef>
+
+  <!-- Disciples: metal and wood cultivators (threads and puppets) with light guns; the thousand threads body by rank. -->
+  <PawnKindDef Abstract="True" Name="CVG_InvisibleThreadKindBase" ParentName="CVG_Sect2KindBase">
+    <defaultFactionDef>CVG_Faction_InvisibleThread</defaultFactionDef>
+    <nameMaker>CVG_NamerPerson_InvisibleThread</nameMaker>
+    <weaponTags><li>SimpleGun</li></weaponTags>
+    <apparelTags><li>IndustrialBasic</li><li>Neolithic</li></apparelTags>
+    <apparelColor>(0.36,0.58,0.52)</apparelColor>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_InvisibleThreadKindBase">
+    <defName>CVG_InvisibleThread_Apprentice</defName>
+    <label>thread apprentice</label>
+    <fixedAdultBackstories><li>CVG_Backstory_IT_ThreadSpinner</li><li>CVG_Backstory_IT_JointCarver</li></fixedAdultBackstories>
+    <combatPower>50</combatPower>
+    <minGenerationAge>16</minGenerationAge>
+    <weaponMoney>150~400</weaponMoney>
+    <apparelMoney>150~450</apparelMoney>
+    <itemQuality>Normal</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_QiRefining</realm>
+        <stage>1~3</stage>
+        <manuals><li>CVG_Manual_GoldenEdge</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Metal</li><li>CVG_Element_Wood</li></elements>
+        <traitChances>
+          <li><trait>CVG_Body_ThousandThreads</trait><degree>1</degree><chance>0.03</chance></li>
+          <li><trait>CVG_Body_ThousandThreads</trait><degree>0</degree><chance>0.30</chance></li>
+        </traitChances>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_InvisibleThreadKindBase">
+    <defName>CVG_InvisibleThread_Puppeteer</defName>
+    <label>puppeteer</label>
+    <fixedAdultBackstories><li>CVG_Backstory_IT_Puppeteer</li><li>CVG_Backstory_IT_ShadowPlayer</li></fixedAdultBackstories>
+    <combatPower>95</combatPower>
+    <minGenerationAge>18</minGenerationAge>
+    <weaponMoney>300~800</weaponMoney>
+    <apparelMoney>300~800</apparelMoney>
+    <itemQuality>Good</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_Foundation</realm>
+        <stage>1~2</stage>
+        <manuals><li>CVG_Manual_GoldenEdge</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Metal</li><li>CVG_Element_Wood</li></elements>
+        <traitChances>
+          <li><trait>CVG_Body_ThousandThreads</trait><degree>2</degree><chance>0.02</chance></li>
+          <li><trait>CVG_Body_ThousandThreads</trait><degree>1</degree><chance>0.10</chance></li>
+          <li><trait>CVG_Body_ThousandThreads</trait><degree>0</degree><chance>0.45</chance></li>
+        </traitChances>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_InvisibleThreadKindBase">
+    <defName>CVG_InvisibleThread_Master</defName>
+    <label>puppet master</label>
+    <fixedAdultBackstories><li>CVG_Backstory_IT_PuppetMaster</li><li>CVG_Backstory_IT_MachineBreaker</li></fixedAdultBackstories>
+    <weaponTags Inherit="False"><li>Gun</li><li>SimpleGun</li></weaponTags>
+    <combatPower>130</combatPower>
+    <minGenerationAge>20</minGenerationAge>
+    <weaponMoney>500~1200</weaponMoney>
+    <apparelMoney>400~1000</apparelMoney>
+    <itemQuality>Good</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_Foundation</realm>
+        <stage>3~4</stage>
+        <manuals><li>CVG_Manual_GoldenEdge</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Metal</li><li>CVG_Element_Wood</li></elements>
+        <traitChances>
+          <li><trait>CVG_Body_ThousandThreads</trait><degree>3</degree><chance>0.005</chance></li>
+          <li><trait>CVG_Body_ThousandThreads</trait><degree>2</degree><chance>0.06</chance></li>
+          <li><trait>CVG_Body_ThousandThreads</trait><degree>1</degree><chance>0.25</chance></li>
+          <li><trait>CVG_Body_ThousandThreads</trait><degree>0</degree><chance>0.60</chance></li>
+        </traitChances>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_InvisibleThreadKindBase">
+    <defName>CVG_InvisibleThread_Elder</defName>
+    <label>grand puppeteer</label>
+    <fixedAdultBackstories><li>CVG_Backstory_IT_GrandPuppeteer</li><li>CVG_Backstory_IT_BlueprintKeeper</li></fixedAdultBackstories>
+    <weaponTags Inherit="False"><li>Gun</li></weaponTags>
+    <combatPower>220</combatPower>
+    <minGenerationAge>40</minGenerationAge>
+    <maxGenerationAge>160</maxGenerationAge>
+    <factionLeader>true</factionLeader>
+    <weaponMoney>900~2000</weaponMoney>
+    <apparelMoney>600~1400</apparelMoney>
+    <itemQuality>Excellent</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_GoldenCore</realm>
+        <stage>1~3</stage>
+        <manuals><li>CVG_Manual_GoldenEdge</li><li>CVG_Manual_EvergreenSutra</li></manuals>
+        <elements><li>CVG_Element_Metal</li><li>CVG_Element_Wood</li></elements>
+        <traitChances>
+          <li><trait>CVG_Body_ThousandThreads</trait><degree>3</degree><chance>0.03</chance></li>
+          <li><trait>CVG_Body_ThousandThreads</trait><degree>2</degree><chance>0.25</chance></li>
+          <li><trait>CVG_Body_ThousandThreads</trait><degree>1</degree><chance>1</chance></li>
+        </traitChances>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CVG_InvisibleThreadKindBase">
+    <defName>CVG_InvisibleThread_Merchant</defName>
+    <label>thread merchant</label>
+    <fixedAdultBackstories><li>CVG_Backstory_IT_ThreadMerchant</li></fixedAdultBackstories>
+    <combatPower>45</combatPower>
+    <minGenerationAge>25</minGenerationAge>
+    <trader>true</trader>
+    <weaponMoney>150~400</weaponMoney>
+    <apparelMoney>300~700</apparelMoney>
+    <itemQuality>Good</itemQuality>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CultivatorPawnKind">
+        <realm>CVG_Realm_QiRefining</realm>
+        <stage>2~3</stage>
+        <manuals><li>CVG_Manual_GoldenEdge</li></manuals>
+        <elements><li>CVG_Element_Metal</li></elements>
+        <traitChances>
+          <li><trait>CVG_Body_ThousandThreads</trait><degree>0</degree><chance>0.30</chance></li>
+        </traitChances>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+
+  <!-- Trade: puppet materials and blueprints; the puppeteer's regalia Good to Masterwork (never Legendary); buys machines. -->
+  <TraderKindDef Abstract="True" Name="CVG_TraderInvisibleThreadBase">
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>400~1200</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>80~250</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritThread</thingDef><countRange>30~80</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritWood</thingDef><countRange>60~160</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritSteel</thingDef><countRange>30~90</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritJade</thingDef><countRange>5~20</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_PuppetBlueprint</thingDef><countRange>1~3</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_PuppetHeartThread</thingDef><countRange>0~1</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>ComponentIndustrial</thingDef><countRange>15~40</countRange></li>
+      <li Class="Convergence.StockGenerator_QualityDefs">
+        <thingDefs>
+          <li>CVG_Apparel_PuppeteerMask</li>
+          <li>CVG_Apparel_ThousandThreadsCrown</li>
+          <li MayRequire="prospero1088.convergence.apparel">CVG_Apparel_GrandPuppeteerRobe</li>
+        </thingDefs>
+        <thingDefCountRange>1~2</thingDefCountRange>
+        <countRange>1~1</countRange>
+        <qualities>
+          <li><quality>Good</quality><weight>55</weight></li>
+          <li><quality>Excellent</quality><weight>37</weight></li>
+          <li><quality>Masterwork</quality><weight>8</weight></li>
+        </qualities>
+      </li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>ExoticMisc</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Artifact</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>WeaponRanged</tag></li>
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+    </stockGenerators>
+  </TraderKindDef>
+
+  <TraderKindDef ParentName="CVG_TraderInvisibleThreadBase">
+    <defName>CVG_Trader_InvisibleThread</defName>
+    <label>invisible thread merchant</label>
+  </TraderKindDef>
+
+  <TraderKindDef ParentName="CVG_TraderInvisibleThreadBase">
+    <defName>CVG_Trader_InvisibleThreadSettlement</defName>
+    <label>thousand strings workshop</label>
+  </TraderKindDef>
+
+  <!-- Honorary titles -->
+  <RoyalTitleDef ParentName="CVG_SectTitle1">
+    <defName>CVG_Title_InvisibleThread_Friend</defName>
+    <label>thread friend</label>
+    <description>A thread friend (丝友) has a spool with their name in the Valley's workshop, and the puppeteers tie a knot in it for every favor. Nobody has ever seen the spool run out.</description>
+    <tags><li>CVG_InvisibleThreadTitle</li></tags>
+  </RoyalTitleDef>
+
+  <RoyalTitleDef ParentName="CVG_SectTitle2">
+    <defName>CVG_Title_InvisibleThread_Guest</defName>
+    <label>guest of the thousand strings</label>
+    <description>Guests of the Thousand Strings may watch the Valley's shadow theatre from behind the screen, where the threads are visible. The sect considers that the greatest trust it can show.</description>
+    <tags><li>CVG_InvisibleThreadTitle</li></tags>
+  </RoyalTitleDef>
+
+  <RoyalTitleDef ParentName="CVG_SectTitle3">
+    <defName>CVG_Title_InvisibleThread_Keeper</defName>
+    <label>keeper of a spare thread</label>
+    <description>The Valley ties one thread of every master to someone outside the sect, so that if the master falls, someone can still pull it. Whoever holds a spare thread is trusted with a life.</description>
+    <tags><li>CVG_InvisibleThreadTitle</li></tags>
+  </RoyalTitleDef>
+
+  <RoyalTitleDef ParentName="CVG_SectTitle4">
+    <defName>CVG_Title_InvisibleThread_GuestElder</defName>
+    <label>guest elder of the valley</label>
+    <description>A guest elder (客卿长老) sits at the Valley's council behind a silk screen like the masters, so that nobody can tell who speaks. Gongshu Yan grants the title only to those whose hands he has watched work.</description>
+    <tags><li>CVG_InvisibleThreadTitle</li></tags>
+  </RoyalTitleDef>
+
+  <!-- The five favors -->
+  <RoyalTitlePermitDef ParentName="CVG_SectFavorResources">
+    <defName>CVG_Permit_InvisibleThread_PuppetMaterials</defName>
+    <label>puppet materials</label>
+    <description>A crate from the Valley's workshop: spirit wood, spirit steel, spirit thread and a puppet blueprint. Enough for a puppet, the puppeteers say, if your hands are steady.</description>
+    <faction>CVG_Faction_InvisibleThread</faction>
+    <minTitle>CVG_Title_InvisibleThread_Friend</minTitle>
+    <royalAid>
+      <itemsToDrop>
+        <CVG_SpiritWood>45</CVG_SpiritWood>
+        <CVG_SpiritSteel>25</CVG_SpiritSteel>
+        <CVG_SpiritThread>20</CVG_SpiritThread>
+        <CVG_PuppetBlueprint>1</CVG_PuppetBlueprint>
+      </itemsToDrop>
+    </royalAid>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef ParentName="CVG_SectFavorReinforcements">
+    <defName>CVG_Permit_InvisibleThread_BladePuppets</defName>
+    <label>lend blade puppets</label>
+    <description>Three blade puppets of the Valley come to your side, driven by a master who stays home. They do not tire, do not fear and do not ask to be thanked.</description>
+    <faction>CVG_Faction_InvisibleThread</faction>
+    <minTitle>CVG_Title_InvisibleThread_Guest</minTitle>
+    <royalAid>
+      <pawnKindDef>CVG_Puppet_Blade</pawnKindDef>
+    </royalAid>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef ParentName="CVG_SectFavorMasterwork">
+    <defName>CVG_Permit_InvisibleThread_MasterworkRegalia</defName>
+    <label>masterwork puppeteer regalia</label>
+    <description>The Valley sends a piece of its masters' regalia, woven and lacquered by hand: a crown of a thousand threads or a grand puppeteer's robe.</description>
+    <faction>CVG_Faction_InvisibleThread</faction>
+    <minTitle>CVG_Title_InvisibleThread_Keeper</minTitle>
+    <modExtensions>
+      <li Class="Convergence.Sects2.DefModExtension_SectGift">
+        <options>
+          <li><thing>CVG_Apparel_ThousandThreadsCrown</thing><quality>Masterwork</quality></li>
+          <li MayRequire="prospero1088.convergence.apparel"><thing>CVG_Apparel_GrandPuppeteerRobe</thing><quality>Masterwork</quality></li>
+        </options>
+      </li>
+    </modExtensions>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef ParentName="CVG_SectFavorExceptional">
+    <defName>CVG_Permit_InvisibleThread_GrandMasterGift</defName>
+    <label>gift of the grand master</label>
+    <description>Gongshu Yan opens the Valley's sealed workshop to the guest elder: regalia the grand masters wore, a heart thread ready to implant, or blueprints that never leave the Valley. The guest elder chooses.</description>
+    <faction>CVG_Faction_InvisibleThread</faction>
+    <minTitle>CVG_Title_InvisibleThread_GuestElder</minTitle>
+    <modExtensions>
+      <li Class="Convergence.Sects2.DefModExtension_SectGift">
+        <playerChooses>true</playerChooses>
+        <options>
+          <li><thing>CVG_Apparel_ThousandThreadsCrown</thing><quality>Legendary</quality></li>
+          <li MayRequire="prospero1088.convergence.apparel"><thing>CVG_Apparel_GrandPuppeteerRobe</thing><quality>Legendary</quality></li>
+          <li><thing>CVG_Apparel_PuppeteerMask</thing><quality>Legendary</quality></li>
+          <li><thing>CVG_PuppetHeartThread</thing><count>1</count></li>
+          <li><thing>CVG_PuppetBlueprint</thing><count>5</count></li>
+        </options>
+      </li>
+    </modExtensions>
+  </RoyalTitlePermitDef>
+
+  <RoyalTitlePermitDef ParentName="CVG_SectFavorStrike">
+    <defName>CVG_Permit_InvisibleThread_JadeStrike</defName>
+    <label>jade puppet strike</label>
+    <description>Four jade puppets fall where you point, each one driven by a different master hidden somewhere far away. The Valley calls it a performance; the audience rarely applauds.</description>
+    <faction>CVG_Faction_InvisibleThread</faction>
+    <minTitle>CVG_Title_InvisibleThread_GuestElder</minTitle>
+    <royalAid>
+      <pawnKindDef>CVG_Puppet_Jade</pawnKindDef>
+      <pawnCount>4</pawnCount>
+    </royalAid>
+  </RoyalTitlePermitDef>
+</Defs>

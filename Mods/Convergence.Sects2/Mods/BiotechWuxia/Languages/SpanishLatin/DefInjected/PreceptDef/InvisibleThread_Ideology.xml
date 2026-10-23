@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Role_PuppetMaster.label>maestro titiritero</CVG_Role_PuppetMaster.label>
+  <CVG_Role_PuppetMaster.description>El maestro que enseña los hilos y ata el alma de cada discípulo a las marionetas de la secta. Solo puede ocupar el cargo alguien cuya propia alma ya se deshilacha en hilos: el Valle dice que no se le puede enseñar a soltar a una mano que nunca sostuvo nada.</CVG_Role_PuppetMaster.description>
+  <CVG_Ritual_ThreadBinding.label>vinculación de hilos espirituales</CVG_Ritual_ThreadBinding.label>
+  <CVG_Ritual_ThreadBinding.description>El discípulo se sienta con los ojos vendados en un círculo de marionetas mientras el maestro titiritero le enrolla hilo espiritual en los dedos, una vuelta por cada maestro de la secta. Los demás tiran de los hilos de las marionetas al compás; la vinculación prende cuando el discípulo sabe, sin mirar, qué marioneta se movió.</CVG_Ritual_ThreadBinding.description>
+</LanguageData>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Title_InvisibleThread_Friend.label>amigo del hilo</CVG_Title_InvisibleThread_Friend.label>
+  <CVG_Title_InvisibleThread_Friend.description>Un amigo del hilo (丝友) tiene un carrete con su nombre en el taller del Valle, y los titiriteros le hacen un nudo por cada favor. Nadie vio nunca que el carrete se terminara.</CVG_Title_InvisibleThread_Friend.description>
+  <CVG_Title_InvisibleThread_Guest.label>huésped de los mil hilos</CVG_Title_InvisibleThread_Guest.label>
+  <CVG_Title_InvisibleThread_Guest.description>Los huéspedes de los Mil Hilos pueden mirar el teatro de sombras del Valle desde detrás de la pantalla, donde los hilos se ven. La secta lo considera la mayor confianza que puede mostrar.</CVG_Title_InvisibleThread_Guest.description>
+  <CVG_Title_InvisibleThread_Keeper.label>guardián de un hilo de reserva</CVG_Title_InvisibleThread_Keeper.label>
+  <CVG_Title_InvisibleThread_Keeper.description>El Valle ata un hilo de cada maestro a alguien de fuera de la secta, para que si el maestro cae, alguien todavía pueda tirar de él. A quien guarda un hilo de reserva se le confía una vida.</CVG_Title_InvisibleThread_Keeper.description>
+  <CVG_Title_InvisibleThread_GuestElder.label>anciano invitado del valle</CVG_Title_InvisibleThread_GuestElder.label>
+  <CVG_Title_InvisibleThread_GuestElder.description>Un anciano invitado (客卿长老) se sienta en el consejo del Valle detrás de una pantalla de seda, como los maestros, para que nadie sepa quién habla. Gongshu Yan concede el título solo a quienes vio trabajar con sus manos.</CVG_Title_InvisibleThread_GuestElder.description>
+</LanguageData>

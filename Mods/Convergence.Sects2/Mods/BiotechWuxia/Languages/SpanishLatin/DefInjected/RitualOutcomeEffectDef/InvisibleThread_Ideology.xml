@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Outcome_ThreadBinding.description>Según la calidad del ritual, los participantes tendrán entre {MINMOOD} y {MAXMOOD} de ánimo durante {MOODDAYS} días. Cuanto mejor la ceremonia, más probable es que la vinculación prenda.</CVG_Outcome_ThreadBinding.description>
+  <CVG_Outcome_ThreadBinding.outcomeChances.0.label>Terrible</CVG_Outcome_ThreadBinding.outcomeChances.0.label>
+  <CVG_Outcome_ThreadBinding.outcomeChances.0.description>¡La {0} fue terrible! Los hilos se enredaron y dos marionetas se cayeron encima del discípulo.</CVG_Outcome_ThreadBinding.outcomeChances.0.description>
+  <CVG_Outcome_ThreadBinding.outcomeChances.1.label>Apagada</CVG_Outcome_ThreadBinding.outcomeChances.1.label>
+  <CVG_Outcome_ThreadBinding.outcomeChances.1.description>La {0} fue apagada. Las marionetas se movieron, pero nadie sintió los hilos.</CVG_Outcome_ThreadBinding.outcomeChances.1.description>
+  <CVG_Outcome_ThreadBinding.outcomeChances.2.label>Solemne</CVG_Outcome_ThreadBinding.outcomeChances.2.label>
+  <CVG_Outcome_ThreadBinding.outcomeChances.2.description>La {0} fue solemne. Todos sintieron, por un momento, los hilos de los demás.</CVG_Outcome_ThreadBinding.outcomeChances.2.description>
+  <CVG_Outcome_ThreadBinding.outcomeChances.3.label>Inolvidable</CVG_Outcome_ThreadBinding.outcomeChances.3.label>
+  <CVG_Outcome_ThreadBinding.outcomeChances.3.description>¡La {0} fue inolvidable! Las marionetas se inclinaron solas ante el discípulo, como el autómata de Yan Shi ante el rey.</CVG_Outcome_ThreadBinding.outcomeChances.3.description>
+</LanguageData>

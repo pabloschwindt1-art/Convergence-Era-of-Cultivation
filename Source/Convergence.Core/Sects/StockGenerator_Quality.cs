@@ -38,6 +38,37 @@ namespace Convergence
         }
     }
 
+    /// <summary>
+    /// Stock de especialidad por lista de objetos (p. ej. el equipo de titiritero del Hilo Invisible), con la misma calidad controlada
+    /// que <see cref="StockGenerator_QualityTag"/>. A diferencia de los generadores vanilla, vende aunque el objeto sea solo vendible
+    /// por el jugador (<c>Tradeability.Sellable</c>): es la secta la que lo fabrica.
+    /// </summary>
+    public class StockGenerator_QualityDefs : StockGenerator
+    {
+        public List<ThingDef> thingDefs;
+        public IntRange thingDefCountRange = IntRange.One;
+        public List<QualityChance> qualities;
+
+        public override bool HandlesThingDef(ThingDef thingDef) => thingDefs != null && thingDefs.Contains(thingDef);
+
+        public override IEnumerable<Thing> GenerateThings(PlanetTile forTile, Faction faction = null)
+        {
+            if (thingDefs.NullOrEmpty()) yield break;
+            var defs = thingDefs.InRandomOrder().Take(thingDefCountRange.RandomInRange).ToList();
+            foreach (var def in defs)
+            {
+                for (int i = RandomCountOf(def); i > 0; i--)
+                {
+                    var thing = ThingMaker.MakeThing(def, def.MadeFromStuff ? GenStuff.RandomStuffByCommonalityFor(def) : null);
+                    var comp = thing.TryGetComp<CompQuality>();
+                    if (comp != null && !qualities.NullOrEmpty())
+                        comp.SetQuality(qualities.RandomElementByWeight(c => c.weight).quality, ArtGenerationContext.Outsider);
+                    yield return thing;
+                }
+            }
+        }
+    }
+
     public class QualityChance
     {
         public QualityCategory quality;

@@ -296,7 +296,7 @@ namespace Convergence.Sects2
         }
 
         /// <summary>Las sectas del nuevo Sects y sus reglas propias.</summary>
-        private static IEnumerable<SectSpec> Specs()
+        private IEnumerable<SectSpec> Specs()
         {
             yield return new SectSpec
             {
@@ -323,7 +323,7 @@ namespace Convergence.Sects2
                 kinds = new[] { "CVG_HeavenlyCauldron_Apprentice", "CVG_HeavenlyCauldron_Alchemist", "CVG_HeavenlyCauldron_Master", "CVG_HeavenlyCauldron_Grand" },
                 weaponOk = p => p.equipment?.Primary == null || (p.equipment.Primary.def.weaponTags?.Any(t => t == "CVG_SpiritWeapon" || t == "SimpleGun") ?? false),
                 weaponRule = "spirit weapons or simple guns",
-                specialty = t => t.def.weaponTags?.Contains("CVG_SpiritWeapon") ?? false, specialtyLabel = "spirit weapons"
+                specialty = t => t.def.weaponTags?.Contains("CVG_SpiritWeapon") ?? false, specialtyLabel = "spirit weapons", specialtyMod = "prospero1088.convergence.alchemy"
             };
             yield return new SectSpec
             {
@@ -332,6 +332,16 @@ namespace Convergence.Sects2
                 kinds = new[] { "CVG_BloodMoon_Servant", "CVG_BloodMoon_Disciple", "CVG_BloodMoon_Crimson", "CVG_BloodMoon_Elder" },
                 weaponOk = p => p.equipment?.Primary == null || p.equipment.Primary.def.IsMeleeWeapon, weaponRule = "blades only",
                 specialty = null, specialtyLabel = "no trade"
+            };
+            yield return new SectSpec
+            {
+                id = "InvisibleThread", bodyTrait = "CVG_Body_ThousandThreads", meme = "CVG_Meme_PuppetPath", role = "CVG_Role_PuppetMaster", ability = "WorkDrive",
+                outcome = "CVG_Outcome_ThreadBinding", requiresMod = "prospero1088.convergence.biotechwuxia",
+                kinds = new[] { "CVG_InvisibleThread_Apprentice", "CVG_InvisibleThread_Puppeteer", "CVG_InvisibleThread_Master", "CVG_InvisibleThread_Elder" },
+                weaponOk = p => p.equipment?.Primary == null || p.equipment.Primary.def.IsRangedWeapon, weaponRule = "guns",
+                specialty = t => t.def.defName.StartsWith("CVG_Apparel_Puppeteer") || t.def.defName == "CVG_Apparel_ThousandThreadsCrown"
+                    || t.def.defName == "CVG_Apparel_GrandPuppeteerRobe", specialtyLabel = "puppeteer regalia",
+                extra = TestPuppetRaid
             };
         }
 
@@ -347,6 +357,20 @@ namespace Convergence.Sects2
             public string bodyRule = "any body";
             public Func<Thing, bool> specialty;     // lo que vende con calidad controlada (null: la secta no comercia)
             public string specialtyLabel;
+            public string requiresMod;              // la secta solo existe con este mod (p. ej. el Hilo Invisible con Biotech Wuxia)
+            public string specialtyMod;             // su especialidad sale de este mod (p. ej. las armas espirituales, de Alchemy)
+            public Action<SectSpec, Faction> extra; // prueba propia de la secta
+        }
+
+        /// <summary>Hilo Invisible: sus grupos de combate traen marionetas (mecas de Biotech Wuxia) de la secta, sin maestro.</summary>
+        private void TestPuppetRaid(SectSpec s, Faction f)
+        {
+            var parms = new PawnGroupMakerParms { groupKind = PawnGroupKindDefOf.Combat, faction = f, points = 2000f, tile = map.Tile };
+            var group = PawnGroupMakerUtility.GeneratePawns(parms).ToList();
+            var puppets = group.Where(p => p.RaceProps.IsMechanoid).ToList();
+            Check(group.Count > 0 && puppets.Count > 0 && puppets.All(p => p.Faction == f && p.TryGetComp<CompPuppet>() != null),
+                "combat group of " + group.Count + " with " + puppets.Count + " puppet(s) of the sect");
+            foreach (var p in group) p.Destroy();
         }
 
         /// <summary>Prueba de contenido común a toda secta del nuevo Sects (plantilla): facción, títulos, favores, constitución,
@@ -354,6 +378,7 @@ namespace Convergence.Sects2
         private void TestSect(SectSpec s)
         {
             Note("sect: " + s.id);
+            if (s.requiresMod != null && !ModsConfig.IsActive(s.requiresMod)) { Note("  skipped: needs " + s.requiresMod); return; }
             var fdef = DefDatabase<FactionDef>.GetNamedSilentFail("CVG_Faction_" + s.id);
             if (fdef == null) { Check(false, s.id + ": faction def missing"); return; }
             var f = Find.FactionManager.FirstFactionOfDef(fdef);
@@ -406,11 +431,13 @@ namespace Convergence.Sects2
                     kind.label + ": " + s.weaponRule + ", " + s.bodyRule + ", " + bodies + "/6 with the constitution, sect backstory " + sectStories + "/" + adults);
             }
 
+            s.extra?.Invoke(s, f);
             if (s.specialty == null)
             {
                 Check(fdef.caravanTraderKinds.NullOrEmpty() && fdef.baseTraderKinds.NullOrEmpty() && fdef.visitorTraderKinds.NullOrEmpty(), "trade: none, by design");
                 return;
             }
+            if (s.specialtyMod != null && !ModsConfig.IsActive(s.specialtyMod)) { Note("  trade specialty skipped: needs " + s.specialtyMod); return; }
             var trader = DefDatabase<TraderKindDef>.GetNamed("CVG_Trader_" + s.id);
             var stock = new List<Thing>();
             for (int i = 0; i < 8; i++) foreach (var g in trader.stockGenerators) stock.AddRange(g.GenerateThings(map.Tile, f));

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Invisible Thread Sect: ideology (meme, preset, specialist, thread binding). Template: SECTS2_PLANTILLA.md. -->
+
+  <MemeDef>
+    <defName>CVG_Meme_PuppetPath</defName>
+    <label>puppet path</label>
+    <description>Whoever pulls the strings does not need to be strong, only patient. Lend a piece of your soul to wood and bronze and let it stand in your place: a calm will can guide a hundred bodies without risking a single life.</description>
+    <iconPath>UI/Memes/CVG/PuppetPath</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>117</renderOrder>
+    <exclusionTags><li>CVG_Sect_PuppetPath</li></exclusionTags>
+    <preventApparelRequirements>true</preventApparelRequirements>
+    <!-- Believers may use any weapon; a light gun lifts their mood, a club weighs on it: brawling is a puppet's work. -->
+    <preferredWeaponClasses>
+      <noble>RangedLight</noble>
+      <despised>MeleeBlunt</despised>
+    </preferredWeaponClasses>
+    <requireOne>
+      <li><li>CVG_Cultivation_Venerated</li></li>
+      <li><li>CVG_Alchemy_Accepted</li></li>
+      <li><li>CVG_Duels_Forbidden</li></li>
+      <li><li>CVG_Retreat_Revered</li></li>
+    </requireOne>
+    <requiredRituals>
+      <li>
+        <precept>CVG_Ritual_ThreadBinding</precept>
+        <pattern>CVG_Pattern_ThreadBinding</pattern>
+      </li>
+    </requiredRituals>
+    <agreeableTraits>
+      <li>CVG_Body_ThousandThreads</li>
+    </agreeableTraits>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->threaded</li>
+        <li>memeHyphenPrefix->thread</li>
+        <li>memeConcept->puppet path</li>
+        <li>memeLeaderNoun->grand puppeteer</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <li>creation(tag=meme_CVG_Meme_PuppetPath)->[deity0_name] carved a figure out of the first tree and lent it a thread of [deity0_possessive] own soul.</li>
+          <li>episode(uses=1,tag=meme_CVG_Meme_PuppetPath)->[deity0_name] showed the first [memberName] that a body is only a puppet the soul forgot it was holding.</li>
+          <li>intro(tag=meme_CVG_Meme_PuppetPath)->The early [memberNamePlural] of the [place_summary] [place_name] toured the villages with a shadow theatre, and nobody looked behind the screen.</li>
+          <li>conflict(tag=meme_CVG_Meme_PuppetPath)->A powerful [foeLeader] called the [memberNamePlural] cowards who would not fight with their own hands.</li>
+          <li>founderJoin(tag=meme_CVG_Meme_PuppetPath)->[founderName] cut a puppet's strings to save [memberName] from a fire, and the puppet walked out of the flames anyway.</li>
+          <li>victory(tag=meme_CVG_Meme_PuppetPath)->[founderName] sent a hundred puppets against the [foeLeader], and not one believer was hurt when the [foeSoldiers] fled.</li>
+          <li>setup(tag=meme_CVG_Meme_PuppetPath)->The Iron Calamity burned the believers' valley, so they took apart the machines that did it and learned how they walked.</li>
+          <li>story(uses=1,tag=meme_CVG_Meme_PuppetPath)->The believers spread out and grew in number, each one followed by puppets of their own making.</li>
+          <li>lessonIntro(tag=meme_CVG_Meme_PuppetPath)->Disciple, the old masters used to say:</li>
+          <li>lesson(tag=meme_CVG_Meme_PuppetPath)->whoever pulls the strings does not need to be strong, only patient.</li>
+          <li>lessonReinforcement(tag=meme_CVG_Meme_PuppetPath)->You will understand it the day you forget which hand moves which thread.</li>
+          <li>archistFact(tag=meme_CVG_Meme_PuppetPath)->The archotechs are puppeteers too; we simply have not found their threads yet.</li>
+          <li>archistProphecy(tag=meme_CVG_Meme_PuppetPath)->[inTheEnd], every machine will need a master, and the Valley will be ready.</li>
+          <li>animistFact(tag=meme_CVG_Meme_PuppetPath)->Every tree keeps a dance in its grain; the carver only lets it out.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Thousand Strings</ideoName>
+        <theme>thread</theme>
+        <adjective>threaded</adjective>
+        <member>puppeteer</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+
+  <IdeoPresetDef>
+    <defName>CVG_Preset_InvisibleThread</defName>
+    <label>invisible thread sect</label>
+    <description>Puppeteers of the Invisible Thread: patience over strength, a hundred bodies guided by one calm will. Cultivation is venerated, alchemy accepted, duels forbidden and secluded retreats revered. Your colony stays independent; the Valley is a teacher, not a master.</description>
+    <categoryDef>Strong</categoryDef>
+    <memes>
+      <li>CVG_Meme_PuppetPath</li>
+      <li>Loyalist</li>
+    </memes>
+  </IdeoPresetDef>
+
+  <PreceptDef ParentName="CVG_SectSpecialistBase">
+    <defName>CVG_Role_PuppetMaster</defName>
+    <label>puppet master</label>
+    <description>The master who teaches the threads and binds each disciple's soul to the sect's puppets. Only someone whose own soul already frays into threads may hold the office: the Valley says you cannot teach a hand to let go if it has never held anything.</description>
+    <iconPath>UI/Roles/CVG/PuppetMaster</iconPath>
+    <nameMaker>NamerRoleMoralist</nameMaker>
+    <requiredMemes><li>CVG_Meme_PuppetPath</li></requiredMemes>
+    <roleRequirements Inherit="False">
+      <li Class="RoleRequirement_SameIdeo">
+        <labelKey>RoleRequirementLabelSameIdeo</labelKey>
+      </li>
+      <li Class="Convergence.RoleRequirement_HasTrait">
+        <traits><li>CVG_Body_ThousandThreads</li></traits>
+      </li>
+    </roleRequirements>
+    <roleEffects>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>MechBandwidth</statDef>
+        <modifier>2</modifier>
+      </li>
+      <li Class="RoleEffect_PawnStatFactor">
+        <statDef>MechFormingSpeed</statDef>
+        <modifier>1.2</modifier>
+      </li>
+    </roleEffects>
+    <!-- Coordination: the puppet master drives the others' work as well as the puppets' (vanilla work drive). -->
+    <grantedAbilities>
+      <li>WorkDrive</li>
+    </grantedAbilities>
+  </PreceptDef>
+
+  <!-- Ritual: Binding of Spirit Threads. One grade of the thousand threads body per ceremony; on failure only the materials are lost. -->
+  <RitualOutcomeEffectDef ParentName="CVG_SectTemperOutcomeBase">
+    <defName>CVG_Outcome_ThreadBinding</defName>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_TemperConstitution">
+        <steps>
+          <li>
+            <toTrait>CVG_Body_ThousandThreads</toTrait>
+            <toDegree>0</toDegree>
+            <chanceByQuality><points><li>(0, 0.80)</li><li>(1, 1.00)</li></points></chanceByQuality>
+            <cost><CVG_SpiritThread>15</CVG_SpiritThread><CVG_SpiritStone>20</CVG_SpiritStone></cost>
+          </li>
+          <li>
+            <fromTrait>CVG_Body_ThousandThreads</fromTrait>
+            <fromDegree>0</fromDegree>
+            <toTrait>CVG_Body_ThousandThreads</toTrait>
+            <toDegree>1</toDegree>
+            <chanceByQuality><points><li>(0, 0.60)</li><li>(1, 1.00)</li></points></chanceByQuality>
+            <cost><CVG_SpiritThread>30</CVG_SpiritThread><CVG_SpiritStone>40</CVG_SpiritStone><CVG_SpiritSteel>20</CVG_SpiritSteel></cost>
+          </li>
+          <li>
+            <fromTrait>CVG_Body_ThousandThreads</fromTrait>
+            <fromDegree>1</fromDegree>
+            <toTrait>CVG_Body_ThousandThreads</toTrait>
+            <toDegree>2</toDegree>
+            <chanceByQuality><points><li>(0, 0.40)</li><li>(1, 0.90)</li></points></chanceByQuality>
+            <cost><CVG_SpiritThread>60</CVG_SpiritThread><CVG_SpiritStone>80</CVG_SpiritStone><CVG_SpiritJade>15</CVG_SpiritJade></cost>
+          </li>
+          <li>
+            <fromTrait>CVG_Body_ThousandThreads</fromTrait>
+            <fromDegree>2</fromDegree>
+            <toTrait>CVG_Body_ThousandThreads</toTrait>
+            <toDegree>3</toDegree>
+            <chanceByQuality><points><li>(0, 0.20)</li><li>(1, 0.55)</li></points></chanceByQuality>
+            <cost><CVG_SpiritThread>120</CVG_SpiritThread><CVG_SpiritStone>150</CVG_SpiritStone><CVG_SpiritJade>40</CVG_SpiritJade><CVG_PrimordialCrystal>2</CVG_PrimordialCrystal></cost>
+          </li>
+        </steps>
+      </li>
+    </modExtensions>
+  </RitualOutcomeEffectDef>
+
+  <RitualPatternDef ParentName="CVG_SectTemperPatternBase">
+    <defName>CVG_Pattern_ThreadBinding</defName>
+    <ritualOutcomeEffect>CVG_Outcome_ThreadBinding</ritualOutcomeEffect>
+    <ritualExplanation>The puppet master draws one disciple's soul into finer threads by a single grade: silk thread, steel thread, jade thread, heart of a thousand threads. A failed binding costs only the materials.</ritualExplanation>
+  </RitualPatternDef>
+
+  <PreceptDef ParentName="CVG_SectRitualBase">
+    <defName>CVG_Ritual_ThreadBinding</defName>
+    <label>binding of spirit threads</label>
+    <description>The disciple sits blindfolded in a circle of puppets while the puppet master winds spirit thread around their fingers, one turn for each of the sect's masters. The others pull the puppets' strings in time; the binding holds when the disciple can tell, without looking, which puppet moved.</description>
+    <iconPath>UI/Icons/Rituals/CVG/ThreadBinding</iconPath>
+    <ritualPatternBase>CVG_Pattern_ThreadBinding</ritualPatternBase>
+    <requiredMemes><li>CVG_Meme_PuppetPath</li></requiredMemes>
+  </PreceptDef>
+</Defs>

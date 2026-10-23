@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Meme_PuppetPath.label>camino de la marioneta</CVG_Meme_PuppetPath.label>
+  <CVG_Meme_PuppetPath.description>Quien tira de los hilos no necesita ser fuerte, solo paciente. Préstale un pedazo de tu alma a la madera y al bronce y deja que ocupe tu lugar: una voluntad serena puede guiar cien cuerpos sin arriesgar una sola vida.</CVG_Meme_PuppetPath.description>
+  <CVG_Meme_PuppetPath.generalRules.rulesStrings>
+    <li>memeAdjective-&gt;enhebrado</li>
+    <li>memeHyphenPrefix-&gt;hilo</li>
+    <li>memeConcept-&gt;camino de la marioneta</li>
+    <li>memeLeaderNoun-&gt;gran titiritero</li>
+  </CVG_Meme_PuppetPath.generalRules.rulesStrings>
+  <CVG_Meme_PuppetPath.descriptionMaker.rules.rulesStrings>
+    <li>creation(tag=meme_CVG_Meme_PuppetPath)-&gt;[deity0_name] talló una figura del primer árbol y le prestó un hilo de su propia alma.</li>
+    <li>episode(uses=1,tag=meme_CVG_Meme_PuppetPath)-&gt;[deity0_name] le mostró al primer [memberName] que un cuerpo es solo una marioneta que el alma olvidó que sostenía.</li>
+    <li>intro(tag=meme_CVG_Meme_PuppetPath)-&gt;Los primeros [memberNamePlural] de [place_summary] [place_name] recorrían las aldeas con un teatro de sombras, y nadie miraba detrás de la pantalla.</li>
+    <li>conflict(tag=meme_CVG_Meme_PuppetPath)-&gt;Un poderoso [foeLeader] llamaba cobardes a los [memberNamePlural] porque no peleaban con sus propias manos.</li>
+    <li>founderJoin(tag=meme_CVG_Meme_PuppetPath)-&gt;[founderName] cortó los hilos de una marioneta para salvar a [memberName] de un incendio, y la marioneta salió de las llamas igual.</li>
+    <li>victory(tag=meme_CVG_Meme_PuppetPath)-&gt;[founderName] mandó cien marionetas contra el [foeLeader], y ni un creyente salió herido cuando los [foeSoldiers] huyeron.</li>
+    <li>setup(tag=meme_CVG_Meme_PuppetPath)-&gt;La Calamidad de Hierro quemó el valle de los creyentes, así que desarmaron las máquinas que lo hicieron y aprendieron cómo caminaban.</li>
+    <li>story(uses=1,tag=meme_CVG_Meme_PuppetPath)-&gt;Los creyentes se extendieron y crecieron en número, cada uno seguido por marionetas hechas con sus manos.</li>
+    <li>lessonIntro(tag=meme_CVG_Meme_PuppetPath)-&gt;Discípulo, los viejos maestros solían decir:</li>
+    <li>lesson(tag=meme_CVG_Meme_PuppetPath)-&gt;quien tira de los hilos no necesita ser fuerte, solo paciente.</li>
+    <li>lessonReinforcement(tag=meme_CVG_Meme_PuppetPath)-&gt;Lo entenderás el día en que olvides qué mano mueve qué hilo.</li>
+    <li>archistFact(tag=meme_CVG_Meme_PuppetPath)-&gt;Los arcotecnólogos también son titiriteros; solo que todavía no encontramos sus hilos.</li>
+    <li>archistProphecy(tag=meme_CVG_Meme_PuppetPath)-&gt;[inTheEnd], toda máquina necesitará un maestro, y el Valle estará listo.</li>
+    <li>animistFact(tag=meme_CVG_Meme_PuppetPath)-&gt;Cada árbol guarda una danza en su veta; el tallador solo la deja salir.</li>
+  </CVG_Meme_PuppetPath.descriptionMaker.rules.rulesStrings>
+  <CVG_Meme_PuppetPath.symbolPacks.0.ideoName>Mil Hilos</CVG_Meme_PuppetPath.symbolPacks.0.ideoName>
+  <CVG_Meme_PuppetPath.symbolPacks.0.theme>hilo</CVG_Meme_PuppetPath.symbolPacks.0.theme>
+  <CVG_Meme_PuppetPath.symbolPacks.0.adjective>enhebrado</CVG_Meme_PuppetPath.symbolPacks.0.adjective>
+  <CVG_Meme_PuppetPath.symbolPacks.0.member>titiritero</CVG_Meme_PuppetPath.symbolPacks.0.member>
+</LanguageData>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TraitDef>
+    <defName>CVG_Body_ThousandThreads</defName>
+    <!-- Thousand Threads body (Invisible Thread Sect): one progressive constitution, valid with or without a spirit root. Degrees 0-3:
+         silk thread, steel thread, jade thread, heart of a thousand threads. A soul that can be split among many bodies: more
+         mechanoid bandwidth (puppets use the vanilla mechanitor system) and, from jade thread on, an extra control group. Biotech
+         only (the stats are Biotech's). Born only at degree 0; the higher grades come from the sect's thread binding. -->
+    <commonality>0</commonality>
+    <exclusionTags>
+      <li>CVG_SpecialBody</li>
+    </exclusionTags>
+    <degreeDatas>
+      <li>
+        <label>silk thread body</label>
+        <degree>0</degree>
+        <description>{PAWN_nameDef} was born with a soul that frays at the edges, like silk pulled from a cocoon. In the Thousand Strings Valley that is not a flaw: each loose strand is a thread waiting for a puppet.</description>
+        <statOffsets>
+          <MechBandwidth>1</MechBandwidth>
+        </statOffsets>
+      </li>
+      <li>
+        <label>steel thread body</label>
+        <degree>1</degree>
+        <description>The threads of {PAWN_nameDef}'s soul have been drawn and tempered like steel wire. {PAWN_pronoun} can feel a puppet's footsteps through the floor, and the puppet can feel {PAWN_possessive} intent before the hand moves.</description>
+        <statOffsets>
+          <MechBandwidth>2</MechBandwidth>
+        </statOffsets>
+      </li>
+      <li>
+        <label>jade thread body</label>
+        <degree>2</degree>
+        <description>{PAWN_nameDef}'s soul threads have turned to jade: cool, unbreakable, almost visible in the right light. The Valley says that a jade-threaded master can split attention like Yan Shi, whose automaton bowed to a king while its maker stood still.</description>
+        <statOffsets>
+          <MechBandwidth>3</MechBandwidth>
+          <MechControlGroups>1</MechControlGroups>
+        </statOffsets>
+      </li>
+      <li>
+        <label>heart of a thousand threads</label>
+        <degree>3</degree>
+        <description>{PAWN_nameDef}'s heart has become a spindle with a thousand threads wound around it. Only the Valley's grand masters ever reached it; they say the master stops feeling where the body ends and the puppets begin, and that this is the point.</description>
+        <statOffsets>
+          <MechBandwidth>4</MechBandwidth>
+          <MechControlGroups>1</MechControlGroups>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpecialBody">
+        <chance>0.006</chance>
+      </li>
+    </modExtensions>
+  </TraitDef>
+</Defs>

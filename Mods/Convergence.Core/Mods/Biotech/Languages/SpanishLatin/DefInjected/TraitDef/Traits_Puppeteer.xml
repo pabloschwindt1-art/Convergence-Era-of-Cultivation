@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Body_ThousandThreads.degreeDatas.0.label>cuerpo de hilo de seda</CVG_Body_ThousandThreads.degreeDatas.0.label>
+  <CVG_Body_ThousandThreads.degreeDatas.0.description>{PAWN_nameDef} nació con un alma que se deshilacha en los bordes, como la seda que se tira de un capullo. En el Valle de los Mil Hilos eso no es un defecto: cada hebra suelta es un hilo esperando una marioneta.</CVG_Body_ThousandThreads.degreeDatas.0.description>
+  <CVG_Body_ThousandThreads.degreeDatas.1.label>cuerpo de hilo de acero</CVG_Body_ThousandThreads.degreeDatas.1.label>
+  <CVG_Body_ThousandThreads.degreeDatas.1.description>Los hilos del alma de {PAWN_nameDef} fueron estirados y templados como alambre de acero. Siente los pasos de una marioneta a través del suelo, y la marioneta siente su intención antes de que se mueva la mano.</CVG_Body_ThousandThreads.degreeDatas.1.description>
+  <CVG_Body_ThousandThreads.degreeDatas.2.label>cuerpo de hilo de jade</CVG_Body_ThousandThreads.degreeDatas.2.label>
+  <CVG_Body_ThousandThreads.degreeDatas.2.description>Los hilos del alma de {PAWN_nameDef} se volvieron de jade: frescos, irrompibles, casi visibles con la luz justa. El Valle dice que un maestro de hilo de jade puede repartir la atención como Yan Shi, cuyo autómata se inclinaba ante un rey mientras su creador seguía inmóvil.</CVG_Body_ThousandThreads.degreeDatas.2.description>
+  <CVG_Body_ThousandThreads.degreeDatas.3.label>corazón de mil hilos</CVG_Body_ThousandThreads.degreeDatas.3.label>
+  <CVG_Body_ThousandThreads.degreeDatas.3.description>El corazón de {PAWN_nameDef} se volvió un huso con mil hilos enrollados. Solo los grandes maestros del Valle llegaron a esto; dicen que el maestro deja de sentir dónde termina su cuerpo y dónde empiezan las marionetas, y que de eso se trata.</CVG_Body_ThousandThreads.degreeDatas.3.description>
+</LanguageData>

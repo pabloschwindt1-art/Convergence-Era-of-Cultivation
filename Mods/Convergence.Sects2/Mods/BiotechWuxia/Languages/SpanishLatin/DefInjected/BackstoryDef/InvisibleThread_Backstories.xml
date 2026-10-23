@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Backstory_IT_ThreadSpinner.title>hilandero</CVG_Backstory_IT_ThreadSpinner.title>
+  <CVG_Backstory_IT_ThreadSpinner.titleFemale>hilandera</CVG_Backstory_IT_ThreadSpinner.titleFemale>
+  <CVG_Backstory_IT_ThreadSpinner.titleShort>hilandero</CVG_Backstory_IT_ThreadSpinner.titleShort>
+  <CVG_Backstory_IT_ThreadSpinner.titleShortFemale>hilandera</CVG_Backstory_IT_ThreadSpinner.titleShortFemale>
+  <CVG_Backstory_IT_ThreadSpinner.description>Todo aprendiz del Valle empieza en la rueca, sacando hilo espiritual de la seda y el qi hasta que le sangran los dedos y un poco más. [PAWN_nameDef] hiló tres años antes de que le dejaran tocar una marioneta.</CVG_Backstory_IT_ThreadSpinner.description>
+  <CVG_Backstory_IT_JointCarver.title>tallador de articulaciones</CVG_Backstory_IT_JointCarver.title>
+  <CVG_Backstory_IT_JointCarver.titleShort>tallador</CVG_Backstory_IT_JointCarver.titleShort>
+  <CVG_Backstory_IT_JointCarver.description>[PAWN_nameDef] tallaba las articulaciones de las marionetas del Valle: rodillas, muñecas y los cien huesitos de una mano. Una articulación mal tallada traiciona a su marioneta en batalla, y el nombre del tallador va escrito dentro de cada una.</CVG_Backstory_IT_JointCarver.description>
+  <CVG_Backstory_IT_Puppeteer.title>titiritero del valle</CVG_Backstory_IT_Puppeteer.title>
+  <CVG_Backstory_IT_Puppeteer.titleFemale>titiritera del valle</CVG_Backstory_IT_Puppeteer.titleFemale>
+  <CVG_Backstory_IT_Puppeteer.titleShort>titiritero</CVG_Backstory_IT_Puppeteer.titleShort>
+  <CVG_Backstory_IT_Puppeteer.titleShortFemale>titiritera</CVG_Backstory_IT_Puppeteer.titleShortFemale>
+  <CVG_Backstory_IT_Puppeteer.description>[PAWN_nameDef] es titiritero pleno del Hilo Invisible, atado a sus marionetas con hilos de su propia alma. La secta enseña que un titiritero que tiene que meterse en una pelea ya la perdió.</CVG_Backstory_IT_Puppeteer.description>
+  <CVG_Backstory_IT_ShadowPlayer.title>actor del teatro de sombras</CVG_Backstory_IT_ShadowPlayer.title>
+  <CVG_Backstory_IT_ShadowPlayer.titleShort>actor de sombras</CVG_Backstory_IT_ShadowPlayer.titleShort>
+  <CVG_Backstory_IT_ShadowPlayer.description>Antes de la Convergencia, [PAWN_nameDef] recorría las aldeas con el teatro de sombras del Valle, el disfraz más antiguo de la secta. El público veía héroes de papel detrás de una pantalla iluminada; los titiriteros contaban quién miraba, y quién miraba demasiado.</CVG_Backstory_IT_ShadowPlayer.description>
+  <CVG_Backstory_IT_PuppetMaster.title>maestro titiritero</CVG_Backstory_IT_PuppetMaster.title>
+  <CVG_Backstory_IT_PuppetMaster.titleFemale>maestra titiritera</CVG_Backstory_IT_PuppetMaster.titleFemale>
+  <CVG_Backstory_IT_PuppetMaster.titleShort>maestro titiritero</CVG_Backstory_IT_PuppetMaster.titleShort>
+  <CVG_Backstory_IT_PuppetMaster.titleShortFemale>maestra titiritera</CVG_Backstory_IT_PuppetMaster.titleShortFemale>
+  <CVG_Backstory_IT_PuppetMaster.description>[PAWN_nameDef] dirige un taller del Valle y maneja una escuadra de marionetas de guerra sin moverse de la retaguardia. Ling Xian, la santa de las marionetas, le enseñó a pelear con diez manos y pensar con una sola cabeza.</CVG_Backstory_IT_PuppetMaster.description>
+  <CVG_Backstory_IT_MachineBreaker.title>desarmador de máquinas</CVG_Backstory_IT_MachineBreaker.title>
+  <CVG_Backstory_IT_MachineBreaker.titleShort>desarmador</CVG_Backstory_IT_MachineBreaker.titleShort>
+  <CVG_Backstory_IT_MachineBreaker.description>Después de la Calamidad de Hierro, [PAWN_nameDef] desarmó los restos de las máquinas que habían quemado el Valle, articulación por articulación, para aprender cómo se movían. La mitad de las marionetas de guerra de hoy caminan como caminaban esas máquinas.</CVG_Backstory_IT_MachineBreaker.description>
+  <CVG_Backstory_IT_GrandPuppeteer.title>gran titiritero</CVG_Backstory_IT_GrandPuppeteer.title>
+  <CVG_Backstory_IT_GrandPuppeteer.titleFemale>gran titiritera</CVG_Backstory_IT_GrandPuppeteer.titleFemale>
+  <CVG_Backstory_IT_GrandPuppeteer.titleShort>gran titiritero</CVG_Backstory_IT_GrandPuppeteer.titleShort>
+  <CVG_Backstory_IT_GrandPuppeteer.titleShortFemale>gran titiritera</CVG_Backstory_IT_GrandPuppeteer.titleShortFemale>
+  <CVG_Backstory_IT_GrandPuppeteer.description>[PAWN_nameDef] es uno de los grandes titiriteros de los Mil Hilos, solo por debajo de Gongshu Yan, que reconstruyó la secta con la chatarra de la Calamidad. Puede sostener una conversación, jugar una partida de weiqi y manejar una docena de marionetas a la vez, y dicen que solo pierde la conversación.</CVG_Backstory_IT_GrandPuppeteer.description>
+  <CVG_Backstory_IT_BlueprintKeeper.title>guardián de los planos</CVG_Backstory_IT_BlueprintKeeper.title>
+  <CVG_Backstory_IT_BlueprintKeeper.titleFemale>guardiana de los planos</CVG_Backstory_IT_BlueprintKeeper.titleFemale>
+  <CVG_Backstory_IT_BlueprintKeeper.titleShort>guardián de planos</CVG_Backstory_IT_BlueprintKeeper.titleShort>
+  <CVG_Backstory_IT_BlueprintKeeper.titleShortFemale>guardiana de planos</CVG_Backstory_IT_BlueprintKeeper.titleShortFemale>
+  <CVG_Backstory_IT_BlueprintKeeper.description>[PAWN_nameDef] guarda los planos sellados del Valle, incluida la copia del autómata de Yan Shi que nadie logró construir jamás. El Viejo Kui, el guardián anterior, quemó la biblioteca del Valle antes que dejársela a la Calamidad; [PAWN_nameDef] la reescribió de memoria.</CVG_Backstory_IT_BlueprintKeeper.description>
+  <CVG_Backstory_IT_ThreadMerchant.title>mercader de hilos</CVG_Backstory_IT_ThreadMerchant.title>
+  <CVG_Backstory_IT_ThreadMerchant.titleFemale>mercadera de hilos</CVG_Backstory_IT_ThreadMerchant.titleFemale>
+  <CVG_Backstory_IT_ThreadMerchant.titleShort>mercader</CVG_Backstory_IT_ThreadMerchant.titleShort>
+  <CVG_Backstory_IT_ThreadMerchant.titleShortFemale>mercadera</CVG_Backstory_IT_ThreadMerchant.titleShortFemale>
+  <CVG_Backstory_IT_ThreadMerchant.description>[PAWN_nameDef] viaja con las caravanas del Valle, vendiendo hilo y planos y comprando cualquier pieza de máquina de la que el Borde quiera desprenderse. Distingue la edad de un mecanoide por el desgaste de una sola articulación.</CVG_Backstory_IT_ThreadMerchant.description>
+</LanguageData>

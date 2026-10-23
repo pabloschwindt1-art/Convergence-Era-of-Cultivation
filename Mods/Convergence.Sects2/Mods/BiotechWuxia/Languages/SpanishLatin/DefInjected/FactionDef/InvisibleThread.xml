@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Faction_InvisibleThread.label>secta del hilo invisible</CVG_Faction_InvisibleThread.label>
+  <CVG_Faction_InvisibleThread.description>Los titiriteros del Valle de los Mil Hilos, herederos del arte de Yan Shi, cuyo autómata se inclinó una vez ante un rey y les guiñó el ojo a sus concubinas. Su credo es la paciencia: una voluntad serena puede guiar cien cuerpos sin arriesgar una sola vida. El Gran Maestro Gongshu Yan reconstruyó la secta después de la Calamidad de Hierro desarmando las máquinas que la habían destruido, y el Valle todavía compra cada pieza de mecanoide que el Borde quiera vender. En Jiuxiao buscan maderas raras, hilos irrompibles y discípulos cuya alma se deshilache en los bordes.</CVG_Faction_InvisibleThread.description>
+  <CVG_Faction_InvisibleThread.fixedName>Secta del Hilo Invisible</CVG_Faction_InvisibleThread.fixedName>
+  <CVG_Faction_InvisibleThread.pawnSingular>titiritero</CVG_Faction_InvisibleThread.pawnSingular>
+  <CVG_Faction_InvisibleThread.pawnsPlural>titiriteros</CVG_Faction_InvisibleThread.pawnsPlural>
+  <CVG_Faction_InvisibleThread.leaderTitle>maestro de secta</CVG_Faction_InvisibleThread.leaderTitle>
+  <CVG_Faction_InvisibleThread.royalFavorLabel>contribución de secta</CVG_Faction_InvisibleThread.royalFavorLabel>
+</LanguageData>
