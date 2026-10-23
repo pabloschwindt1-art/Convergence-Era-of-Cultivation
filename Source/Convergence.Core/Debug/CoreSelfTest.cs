@@ -1011,8 +1011,8 @@ namespace Convergence
 
             var dummy = (Building)ThingMaker.MakeThing(DefDatabase<ThingDef>.GetNamed("CVG_WoodenDummy"));
             dummy.SetFaction(Faction.OfPlayer);
-            // Casilla junto al colono, construible y alcanzable (al azar a veces caía detrás de una pared).
-            var spot = GenRadial.RadialCellsAround(pawn.Position, 4f, false).FirstOrDefault(c => c.InBounds(map) && c.Standable(map)
+            // Casilla cerca del colono, construible y alcanzable sin peligro (al azar a veces caía detrás de una pared o en el frío).
+            var spot = GenRadial.RadialCellsAround(pawn.Position, 12f, false).FirstOrDefault(c => c.InBounds(map) && c.Standable(map)
                 && GenConstruct.CanPlaceBlueprintAt(dummy.def, c, Rot4.North, map).Accepted
                 && ThingUtility.InteractionCellWhenAt(dummy.def, c, Rot4.North, map) is var ic && ic.InBounds(map) && ic.Standable(map)
                 && pawn.CanReach(ic, Verse.AI.PathEndMode.OnCell, Danger.Some));   // el mismo peligro que acepta el work giver
@@ -1020,8 +1020,10 @@ namespace Convergence
             var giver = new WorkGiver_TemperBody();
             Check(comp.CanTemperNow, "can temper now");
             bool danger = CultivatorAI.InDanger(pawn, 20f);
-            Check(giver.HasJobOnThing(pawn, dummy, forced: danger), "work giver finds the dummy" + (danger ? " (forced: enemies near)" : "")
-                + $" [spot {(spot != IntVec3.Zero ? "ok" : "fallback")}, reserve {Verse.AI.ReservationUtility.CanReserve(pawn, dummy, 1, -1, null, danger)}, forbidden {dummy.IsForbidden(pawn)}]");
+            // Sin casilla segura en 12 casillas (mapa al azar del quicktest) el work giver acierta al rechazarlo: no es un fallo.
+            if (spot == IntVec3.Zero) sb.Append("\n    skip work giver finds the dummy (no safe reachable cell near the colonist)");
+            else Check(giver.HasJobOnThing(pawn, dummy, forced: danger), "work giver finds the dummy" + (danger ? " (forced: enemies near)" : "")
+                + $" [reserve {Verse.AI.ReservationUtility.CanReserve(pawn, dummy, 1, -1, null, danger)}, forbidden {dummy.IsForbidden(pawn)}]");
 
             while (!tracker.Bottleneck) tracker.AddProgress(tracker.Realm.progressPerStage);
             tracker.Resource.Fill();
