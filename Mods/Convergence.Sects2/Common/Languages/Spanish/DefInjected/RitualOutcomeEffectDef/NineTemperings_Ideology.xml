@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Outcome_NineTemperings.description>Según la calidad del ritual, los participantes tendrán entre {MINMOOD} y {MAXMOOD} de ánimo durante {MOODDAYS} días. Cuanto mejor la ceremonia, más probable es que el refinamiento prenda.</CVG_Outcome_NineTemperings.description>
+  <CVG_Outcome_NineTemperings.outcomeChances.0.label>Terrible</CVG_Outcome_NineTemperings.outcomeChances.0.label>
+  <CVG_Outcome_NineTemperings.outcomeChances.0.description>¡El {0} fue terrible! El maestro perdió el ritmo y el discípulo se encogía con cada golpe.</CVG_Outcome_NineTemperings.outcomeChances.0.description>
+  <CVG_Outcome_NineTemperings.outcomeChances.1.label>Apagado</CVG_Outcome_NineTemperings.outcomeChances.1.label>
+  <CVG_Outcome_NineTemperings.outcomeChances.1.description>El {0} fue apagado. Los golpes estaban bien y la voluntad ausente.</CVG_Outcome_NineTemperings.outcomeChances.1.description>
+  <CVG_Outcome_NineTemperings.outcomeChances.2.label>Solemne</CVG_Outcome_NineTemperings.outcomeChances.2.label>
+  <CVG_Outcome_NineTemperings.outcomeChances.2.description>El {0} fue solemne. Todos sintieron la vieja disciplina de la secta pasar de un cuerpo a otro.</CVG_Outcome_NineTemperings.outcomeChances.2.description>
+  <CVG_Outcome_NineTemperings.outcomeChances.3.label>Inolvidable</CVG_Outcome_NineTemperings.outcomeChances.3.label>
+  <CVG_Outcome_NineTemperings.outcomeChances.3.description>¡El {0} fue inolvidable! Por un momento, toda la secta respiró como un solo cuerpo.</CVG_Outcome_NineTemperings.outcomeChances.3.description>
+</LanguageData>

@@ -220,6 +220,9 @@
   </TraitDef>
   <TraitDef>
     <defName>CVG_Body_Steel</defName>
+    <!-- Body of the Nine Temperings (Sect of Nine Temperings): one progressive constitution, valid with or without a spirit root.
+         Degrees 0-3: bronze skin, iron bones, golden marrow, adamant body. Born only at degree 0; the higher grades come from the
+         sect's refinement ritual. Saves keep working: the old single-degree steel body was degree 0. -->
     <forcedPassions>
       <li>Melee</li>
     </forcedPassions>
@@ -229,13 +232,68 @@
     </exclusionTags>
     <degreeDatas>
       <li>
-        <label>steel body</label>
-        <description>{PAWN_nameDef}'s skin and bones are hard as metal. {PAWN_pronoun} cannot gather qi, but {PAWN_possessive} body can be tempered into a weapon.</description>
+        <label>bronze skin body</label>
+        <degree>0</degree>
+        <description>{PAWN_nameDef}'s skin has the dull sheen of old bronze: blows that would split another's lip only bruise {PAWN_objective}. The Nine Temperings call it the first refinement, the one every disciple earns with a year of being beaten every morning.</description>
         <statFactors>
           <CVG_BodyTemperingSpeed>1.3</CVG_BodyTemperingSpeed>
         </statFactors>
+        <statOffsets>
+          <CVG_ProjectileResistance>0.05</CVG_ProjectileResistance>
+          <PainShockThreshold>0.05</PainShockThreshold>
+        </statOffsets>
         <skillGains>
           <Melee>2</Melee>
+        </skillGains>
+      </li>
+      <li>
+        <label>iron bones body</label>
+        <degree>1</degree>
+        <description>The second refinement has reached {PAWN_nameDef}'s bones: they ring like iron when struck and do not break where others would. The masters test it with a hammer, and the disciple is expected to thank them.</description>
+        <statFactors>
+          <CVG_BodyTemperingSpeed>1.35</CVG_BodyTemperingSpeed>
+        </statFactors>
+        <statOffsets>
+          <CVG_ProjectileResistance>0.10</CVG_ProjectileResistance>
+          <PainShockThreshold>0.08</PainShockThreshold>
+          <ArmorRating_Blunt>0.04</ArmorRating_Blunt>
+        </statOffsets>
+        <skillGains>
+          <Melee>3</Melee>
+        </skillGains>
+      </li>
+      <li>
+        <label>golden marrow body</label>
+        <degree>2</degree>
+        <description>Beast blood and qi have been boiled into {PAWN_nameDef}'s marrow until it turned the color of old gold. {PAWN_pronoun} heals slowly from nothing, because almost nothing reaches deep enough to wound {PAWN_objective}.</description>
+        <statFactors>
+          <CVG_BodyTemperingSpeed>1.45</CVG_BodyTemperingSpeed>
+        </statFactors>
+        <statOffsets>
+          <CVG_ProjectileResistance>0.15</CVG_ProjectileResistance>
+          <PainShockThreshold>0.12</PainShockThreshold>
+          <ArmorRating_Blunt>0.08</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.04</ArmorRating_Sharp>
+        </statOffsets>
+        <skillGains>
+          <Melee>4</Melee>
+        </skillGains>
+      </li>
+      <li>
+        <label>adamant body</label>
+        <degree>3</degree>
+        <description>The ninth tempering: {PAWN_nameDef}'s body has become adamant, the indestructible body of the old sutras. The Nine Temperings record few such disciples in a century; they are the proof the sect gives every doubter that a body forged through pain needs no sword.</description>
+        <statFactors>
+          <CVG_BodyTemperingSpeed>1.6</CVG_BodyTemperingSpeed>
+        </statFactors>
+        <statOffsets>
+          <CVG_ProjectileResistance>0.20</CVG_ProjectileResistance>
+          <PainShockThreshold>0.15</PainShockThreshold>
+          <ArmorRating_Blunt>0.12</ArmorRating_Blunt>
+          <ArmorRating_Sharp>0.08</ArmorRating_Sharp>
+        </statOffsets>
+        <skillGains>
+          <Melee>5</Melee>
         </skillGains>
       </li>
     </degreeDatas>
@@ -248,8 +306,7 @@
         </conflicts>
       </li>
       <li Class="Convergence.DefModExtension_SpecialBody">
-        <chance>0.015</chance>
-        <rootlessOnly>true</rootlessOnly>
+        <chance>0.01</chance>
       </li>
     </modExtensions>
   </TraitDef>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Sect of Nine Temperings: adult backstories by rank (fixedAdultBackstories). Childhood stays random. -->
+  <BackstoryDef Abstract="True" Name="CVG_NineTemperingsBackstoryBase">
+    <slot>Adulthood</slot>
+    <shuffleable>false</shuffleable>
+    <spawnCategories><li>CVG_Sect_NineTemperings</li></spawnCategories>
+    <requiredWorkTags><li>Violent</li></requiredWorkTags>
+    <bodyTypeGlobal>Hulk</bodyTypeGlobal>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_NineTemperingsBackstoryBase">
+    <defName>CVG_Backstory_NT_OuterDisciple</defName>
+    <title>outer tempered disciple</title>
+    <titleShort>outer disciple</titleShort>
+    <description>[PAWN_nameDef] spent years as an outer disciple of the Nine Temperings, beaten with bamboo every morning until the bamboo broke instead of the skin. The sect calls it the first tempering; [PAWN_pronoun] calls it the worst year of [PAWN_possessive] life, and the proudest.</description>
+    <skillGains>
+      <Melee>4</Melee>
+      <Construction>1</Construction>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_NineTemperingsBackstoryBase">
+    <defName>CVG_Backstory_NT_StoneCarrier</defName>
+    <title>stone carrier of the nine temperings</title>
+    <titleShort>stone carrier</titleShort>
+    <description>Outer disciples carry the stones of the sect's stairs up the mountain, one a day, for as long as it takes. [PAWN_nameDef] carried three thousand, and only then understood that the stairs were never the point.</description>
+    <skillGains>
+      <Melee>3</Melee>
+      <Mining>2</Mining>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_NineTemperingsBackstoryBase">
+    <defName>CVG_Backstory_NT_InnerDisciple</defName>
+    <title>inner tempered disciple</title>
+    <titleShort>inner disciple</titleShort>
+    <description>[PAWN_nameDef] earned the inner rank by standing a whole night in the snow pool without moving. Inner disciples drink the blood broth of spirit beasts every evening and are allowed to spar with the core.</description>
+    <skillGains>
+      <Melee>5</Melee>
+      <Cooking>1</Cooking>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_NineTemperingsBackstoryBase">
+    <defName>CVG_Backstory_NT_BeastHunter</defName>
+    <title>spirit beast hunter</title>
+    <titleShort>beast hunter</titleShort>
+    <description>The Nine Temperings need beast blood the way other sects need spirit stones. [PAWN_nameDef] hunted spirit beasts barehanded to supply the sect's broth, and has the scars of every one that fought back.</description>
+    <skillGains>
+      <Melee>4</Melee>
+      <Animals>2</Animals>
+      <Cooking>1</Cooking>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_NineTemperingsBackstoryBase">
+    <defName>CVG_Backstory_NT_CoreDisciple</defName>
+    <title>core tempered disciple</title>
+    <titleShort>core disciple</titleShort>
+    <description>[PAWN_nameDef] is a core disciple of the Nine Temperings, with bones that ring when struck. The sect has outer disciples to haul and plant; the core train, eat, sleep and train again.</description>
+    <skillGains>
+      <Melee>7</Melee>
+      <Social>1</Social>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_NineTemperingsBackstoryBase">
+    <defName>CVG_Backstory_NT_PitChampion</defName>
+    <title>champion of the tempering pit</title>
+    <titleShort>pit champion</titleShort>
+    <description>Disputes in the Nine Temperings are settled in the tempering pit, with fists and no rules but one: nobody dies. [PAWN_nameDef] went undefeated for nine years, and once fought a Formless Sword disciple who had come to prove a sword beats a fist. [PAWN_pronoun] still says it was a draw.</description>
+    <skillGains>
+      <Melee>6</Melee>
+      <Social>2</Social>
+    </skillGains>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_NineTemperingsBackstoryBase">
+    <defName>CVG_Backstory_NT_TemperingElder</defName>
+    <title>tempering elder</title>
+    <titleShort>tempering elder</titleShort>
+    <description>[PAWN_nameDef] is an elder of the Nine Temperings, one of those who hold the hammer at the morning beatings. The Iron Mountain patriarch taught the elders that a master must have felt every blow [PAWN_pronoun] gives, and [PAWN_pronoun] has.</description>
+    <skillGains>
+      <Melee>8</Melee>
+      <Social>3</Social>
+      <Medicine>2</Medicine>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_NineTemperingsBackstoryBase">
+    <defName>CVG_Backstory_NT_VajraGuardian</defName>
+    <title>guardian of the gate</title>
+    <titleShort>gate guardian</titleShort>
+    <description>[PAWN_nameDef] guarded the sect's gate under Kongming, the elder who once stopped a cart of falling rocks with his back. Guardians do not move from the gate; [PAWN_pronoun] stood there through three sieges and the Convergence itself.</description>
+    <skillGains>
+      <Melee>7</Melee>
+      <Social>2</Social>
+      <Construction>2</Construction>
+    </skillGains>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef ParentName="CVG_NineTemperingsBackstoryBase">
+    <defName>CVG_Backstory_NT_BloodTrader</defName>
+    <title>blood and bone trader</title>
+    <titleShort>blood trader</titleShort>
+    <description>[PAWN_nameDef] buys spirit beast blood and bones across the Rim for the sect's broth, and sells the armor its disciples refuse to wear. Few haggle with [PAWN_objective] for long.</description>
+    <requiredWorkTags Inherit="False" />
+    <skillGains>
+      <Social>5</Social>
+      <Melee>2</Melee>
+      <Animals>2</Animals>
+    </skillGains>
+  </BackstoryDef>
+</Defs>

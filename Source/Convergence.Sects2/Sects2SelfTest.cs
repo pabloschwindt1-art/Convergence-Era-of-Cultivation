@@ -182,6 +182,7 @@ namespace Convergence.Sects2
                     Check(!faction.HostileTo(Faction.OfPlayer), "peace again");
 
                     TestSwordSect();
+                    foreach (var spec in Specs()) TestSect(spec);
 
                     phase = 1;
                     waitUntil = Find.TickManager.TicksGame + 600;
@@ -280,6 +281,111 @@ namespace Convergence.Sects2
             Check(sold.Count > 0 && q.All(x => x >= QualityCategory.Good && x <= QualityCategory.Masterwork), "trade: " + sold.Count + " swords, all Good-Masterwork");
             Check(!q.Contains(QualityCategory.Legendary), "trade: never legendary");
             Check(stock.Any(t => t.def.defName == "CVG_SpiritStone"), "trade: spirit stones in stock");
+            foreach (var t in stock) t.Destroy();
+        }
+
+        private static bool IsSword(Thing t) => t?.def.weaponTags?.Contains("CVG_Sword") ?? false;
+
+        /// <summary>Las sectas del nuevo Sects y sus reglas propias.</summary>
+        private static IEnumerable<SectSpec> Specs()
+        {
+            yield return new SectSpec
+            {
+                id = "FormlessSword", bodyTrait = "CVG_Body_Sword", meme = "CVG_Meme_SwordWay", role = "CVG_Role_SwordMaster", ability = "CombatCommand",
+                outcome = "CVG_Outcome_TemperSwordBody",
+                kinds = new[] { "CVG_FormlessSword_Disciple", "CVG_FormlessSword_Bearer", "CVG_FormlessSword_Blade", "CVG_FormlessSword_Elder" },
+                weaponOk = p => p.equipment?.Primary == null || IsSword(p.equipment.Primary), weaponRule = "swords only",
+                bodyOk = p => p.story.bodyType != BodyTypeDefOf.Hulk, bodyRule = "no Hulk",
+                specialty = IsSword, specialtyLabel = "swords"
+            };
+            yield return new SectSpec
+            {
+                id = "NineTemperings", bodyTrait = "CVG_Body_Steel", meme = "CVG_Meme_BodyWay", role = "CVG_Role_TemperingMaster", ability = "BerserkTrance",
+                outcome = "CVG_Outcome_NineTemperings",
+                kinds = new[] { "CVG_NineTemperings_Disciple", "CVG_NineTemperings_Inner", "CVG_NineTemperings_Core", "CVG_NineTemperings_Elder" },
+                weaponOk = p => p.equipment?.Primary == null, weaponRule = "unarmed",
+                bodyOk = p => p.story.bodyType == BodyTypeDefOf.Hulk && (CompCultivator.For(p)?.IsBodyCultivator ?? false), bodyRule = "Hulk body cultivator",
+                specialty = t => t.def.IsApparel && (t.def.tradeTags?.Contains("Armor") ?? false), specialtyLabel = "armors"
+            };
+        }
+
+        /// <summary>Lo que distingue a cada secta en la prueba genérica de contenido (todo lo demás sale de la plantilla).</summary>
+        public class SectSpec
+        {
+            public string id;                       // FormlessSword, NineTemperings…
+            public string bodyTrait, meme, role, ability, outcome;
+            public string[] kinds;                  // los 4 rangos de combate, el último es el anciano
+            public Func<Pawn, bool> weaponOk = p => true;
+            public string weaponRule = "any weapon";
+            public Func<Pawn, bool> bodyOk = p => true;
+            public string bodyRule = "any body";
+            public Func<Thing, bool> specialty;     // lo que vende con calidad controlada
+            public string specialtyLabel;
+        }
+
+        /// <summary>Prueba de contenido común a toda secta del nuevo Sects (plantilla): facción, títulos, favores, constitución,
+        /// ideología, ritual, discípulos (armas, cuerpo, historias) y comercio de especialidad.</summary>
+        private void TestSect(SectSpec s)
+        {
+            Note("sect: " + s.id);
+            var fdef = DefDatabase<FactionDef>.GetNamedSilentFail("CVG_Faction_" + s.id);
+            if (fdef == null) { Check(false, s.id + ": faction def missing"); return; }
+            var f = Find.FactionManager.FirstFactionOfDef(fdef);
+            Check(f != null, "faction in the world");
+            Check(fdef.RoyalTitlesAwardableInSeniorityOrderForReading.Count == 4, "4 honorary titles");
+            var permits = DefDatabase<RoyalTitlePermitDef>.AllDefsListForReading.Where(p => p.faction == fdef).ToList();
+            Check(permits.Count == 5, "5 favors (" + string.Join(", ", permits.Select(p => p.defName.Replace("CVG_Permit_" + s.id + "_", ""))) + ")");
+            foreach (var gift in permits.Where(p => p.HasModExtension<DefModExtension_SectGift>()))
+            {
+                var ext = gift.GetModExtension<DefModExtension_SectGift>();
+                var made = ext.options.Select(o => o.Make()).Where(t => t != null).ToList();
+                Check(made.Count == ext.options.Count && made.All(t => t.TryGetComp<CompQuality>() == null
+                    || t.TryGetComp<CompQuality>().Quality == ext.options[made.IndexOf(t)].quality), gift.LabelCap + ": " + made.Count + " option(s) make their item");
+                foreach (var t in made) t.Destroy();
+            }
+            var body = DefDatabase<TraitDef>.GetNamed(s.bodyTrait);
+            Check(body.degreeDatas.Count == 4 && body.degreeDatas.Select(d => d.degree).SequenceEqual(new[] { 0, 1, 2, 3 }), "constitution with 4 grades: " + body.degreeDatas[0].label + " ... " + body.degreeDatas[3].label);
+            Check(body.GetModExtension<DefModExtension_SpecialBody>()?.rootlessOnly == false, "constitution with or without a spirit root");
+
+            var meme = DefDatabase<MemeDef>.GetNamed(s.meme);
+            Check(meme.preventApparelRequirements && meme.requireOne?.Count == 4 && meme.requiredRituals?.Count == 1, "meme: no clothing, 4 precepts, its ritual");
+            Check(fdef.forcedMemes?.Contains(meme) ?? false, "the faction follows its meme");
+            var role = DefDatabase<PreceptDef>.GetNamed(s.role);
+            Check(role.activationBelieverCount == 1 && role.GetModExtension<DefModExtension_RoleEmptyMinBelievers>()?.minBelievers == 4
+                && (role.grantedAbilities?.Any(a => a.defName == s.ability) ?? false), "specialist " + role.label + ": from 1 believer, mood from 4, " + s.ability);
+            Check(role.roleRequirements.OfType<RoleRequirement_HasTrait>().Any(r => r.traits.Contains(body)), "specialist requires the constitution");
+
+            var outcome = DefDatabase<RitualOutcomeEffectDef>.GetNamed(s.outcome);
+            var steps = outcome.GetModExtension<DefModExtension_TemperConstitution>()?.steps;
+            var expected = new[] { (0.80f, 1.00f), (0.60f, 1.00f), (0.40f, 0.90f), (0.20f, 0.55f) };
+            Check(steps?.Count == 4 && Enumerable.Range(0, 4).All(i => Mathf.Abs(steps[i].Chance(0f) - expected[i].Item1) < 0.001f
+                && Mathf.Abs(steps[i].Chance(1f) - expected[i].Item2) < 0.001f && steps[i].toTrait == body && steps[i].cost != null), "ritual: 4 steps, approved chances, costs");
+            Check(outcome.comps.OfType<RitualOutcomeComp_MinBelievers>().Any(c => c.count == 2), "ritual needs two more believers");
+
+            for (int k = 0; k < s.kinds.Length; k++)
+            {
+                var kind = DefDatabase<PawnKindDef>.GetNamed(s.kinds[k]);
+                int badWeapon = 0, badBody = 0, bodies = 0, sectStories = 0, adults = 0;
+                for (int i = 0; i < 6; i++)
+                {
+                    var p = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, f, forceGenerateNewPawn: true));
+                    if (p.story.Adulthood != null) { adults++; if (kind.fixedAdultBackstories.Contains(p.story.Adulthood)) sectStories++; }
+                    if (!s.weaponOk(p)) badWeapon++;
+                    if (!s.bodyOk(p)) badBody++;
+                    if (ConstitutionUtility.Degree(p, body) != null) bodies++;
+                    p.Destroy();
+                }
+                bool elder = k == s.kinds.Length - 1;
+                Check(badWeapon == 0 && badBody == 0 && (!elder || bodies == 6) && kind.fixedAdultBackstories.Count > 0 && sectStories == adults,
+                    kind.label + ": " + s.weaponRule + ", " + s.bodyRule + ", " + bodies + "/6 with the constitution, sect backstory " + sectStories + "/" + adults);
+            }
+
+            var trader = DefDatabase<TraderKindDef>.GetNamed("CVG_Trader_" + s.id);
+            var stock = new List<Thing>();
+            for (int i = 0; i < 8; i++) foreach (var g in trader.stockGenerators) stock.AddRange(g.GenerateThings(map.Tile, f));
+            var sold = stock.Where(s.specialty).ToList();
+            var q = sold.Select(t => t.TryGetComp<CompQuality>()?.Quality).Where(x => x != null).Select(x => x.Value).ToList();
+            Check(sold.Count > 0 && q.All(x => x >= QualityCategory.Good && x <= QualityCategory.Masterwork), "trade: " + sold.Count + " " + s.specialtyLabel + ", Good-Masterwork, never legendary");
             foreach (var t in stock) t.Destroy();
         }
 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Meme_BodyWay.label>camino del cuerpo</CVG_Meme_BodyWay.label>
+  <CVG_Meme_BodyWay.description>El cuerpo es el primer templo y la última arma. Témplalo con golpes, hambre y frío hasta que ya no necesite una espada, ni siquiera el qi, para ser un arma. La disciplina y la resistencia importan tanto como la fuerza.</CVG_Meme_BodyWay.description>
+  <CVG_Meme_BodyWay.generalRules.rulesStrings>
+    <li>memeAdjective-&gt;templado</li>
+    <li>memeHyphenPrefix-&gt;hierro</li>
+    <li>memeConcept-&gt;camino del cuerpo</li>
+    <li>memeLeaderNoun-&gt;patriarca</li>
+  </CVG_Meme_BodyWay.generalRules.rulesStrings>
+  <CVG_Meme_BodyWay.descriptionMaker.rules.rulesStrings>
+    <li>creation(tag=meme_CVG_Meme_BodyWay)-&gt;[deity0_name] se rompió las manos contra la montaña de hierro nueve veces, y nueve veces volvió a templarlas.</li>
+    <li>episode(uses=1,tag=meme_CVG_Meme_BodyWay)-&gt;[deity0_name] le mostró al primer [memberName] que el dolor es un martillo, no una herida.</li>
+    <li>intro(tag=meme_CVG_Meme_BodyWay)-&gt;Los primeros [memberNamePlural] de [place_summary] [place_name] subieron una escalinata de piedra a la montaña, una piedra por día.</li>
+    <li>conflict(tag=meme_CVG_Meme_BodyWay)-&gt;Un poderoso [foeLeader] se burlaba de los [memberNamePlural] por pelear sin espadas.</li>
+    <li>founderJoin(tag=meme_CVG_Meme_BodyWay)-&gt;[founderName] aguantó una noche entera en el estanque de nieve, y [memberName] salió detrás de [founderName] al amanecer.</li>
+    <li>victory(tag=meme_CVG_Meme_BodyWay)-&gt;[founderName] recibió cada golpe del [foeLeader] y seguía en pie cuando los [foeSoldiers] huyeron.</li>
+    <li>setup(tag=meme_CVG_Meme_BodyWay)-&gt;La Calamidad de Hierro rompió todas las armas de los creyentes, así que se convirtieron ellos mismos en armas.</li>
+    <li>story(uses=1,tag=meme_CVG_Meme_BodyWay)-&gt;Los creyentes se extendieron y crecieron en número, cada uno soportando sus propios nueve templados.</li>
+    <li>lessonIntro(tag=meme_CVG_Meme_BodyWay)-&gt;Discípulo, los viejos maestros solían decir:</li>
+    <li>lesson(tag=meme_CVG_Meme_BodyWay)-&gt;ninguna espada espiritual reemplaza un cuerpo forjado con dolor y perseverancia.</li>
+    <li>lessonReinforcement(tag=meme_CVG_Meme_BodyWay)-&gt;Lo entenderás después del noveno templado.</li>
+    <li>archistFact(tag=meme_CVG_Meme_BodyWay)-&gt;Los arcotecnólogos construyen cuerpos; los templados se construyen a sí mismos.</li>
+    <li>archistProphecy(tag=meme_CVG_Meme_BodyWay)-&gt;[inTheEnd], toda máquina se oxidará, y solo los templados seguirán en pie.</li>
+    <li>animistFact(tag=meme_CVG_Meme_BodyWay)-&gt;Las bestias espirituales dan su sangre para que el cuerpo recuerde su fuerza.</li>
+  </CVG_Meme_BodyWay.descriptionMaker.rules.rulesStrings>
+  <CVG_Meme_BodyWay.symbolPacks.0.ideoName>Nueve Templados</CVG_Meme_BodyWay.symbolPacks.0.ideoName>
+  <CVG_Meme_BodyWay.symbolPacks.0.theme>cuerpo</CVG_Meme_BodyWay.symbolPacks.0.theme>
+  <CVG_Meme_BodyWay.symbolPacks.0.adjective>templado</CVG_Meme_BodyWay.symbolPacks.0.adjective>
+  <CVG_Meme_BodyWay.symbolPacks.0.member>discípulo templado</CVG_Meme_BodyWay.symbolPacks.0.member>
+</LanguageData>

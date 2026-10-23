@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Sect of Nine Temperings: ideology (meme, preset, specialist, refinement ritual). Template: SECTS2_PLANTILLA.md. -->
+
+  <MemeDef>
+    <defName>CVG_Meme_BodyWay</defName>
+    <label>body way</label>
+    <description>The body is the first temple and the last weapon. Temper it with blows, hunger and cold until it no longer needs a sword, or even the qi, to be a weapon. Discipline and endurance matter as much as strength.</description>
+    <iconPath>UI/Memes/CVG/BodyWay</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>111</renderOrder>
+    <exclusionTags><li>CVG_Sect_BodyWay</li></exclusionTags>
+    <preventApparelRequirements>true</preventApparelRequirements>
+    <requireOne>
+      <li><li>CVG_Cultivation_Venerated</li></li>
+      <li><li>CVG_Duels_Allowed</li></li>
+      <li><li>CVG_Hierarchy_Elders</li></li>
+      <li><li>CVG_Demonic_Forbidden</li></li>
+    </requireOne>
+    <requiredRituals>
+      <li>
+        <precept>CVG_Ritual_NineTemperings</precept>
+        <pattern>CVG_Pattern_NineTemperings</pattern>
+      </li>
+    </requiredRituals>
+    <agreeableTraits>
+      <li>CVG_Body_Steel</li>
+    </agreeableTraits>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->tempered</li>
+        <li>memeHyphenPrefix->iron</li>
+        <li>memeConcept->body way</li>
+        <li>memeLeaderNoun->patriarch</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <li>creation(tag=meme_CVG_Meme_BodyWay)->[deity0_name] broke [deity0_possessive] hands on the iron mountain nine times, and nine times tempered them again.</li>
+          <li>episode(uses=1,tag=meme_CVG_Meme_BodyWay)->[deity0_name] showed the first [memberName] that pain is a hammer, not a wound.</li>
+          <li>intro(tag=meme_CVG_Meme_BodyWay)->The early [memberNamePlural] of the [place_summary] [place_name] carried a stone stair up the mountain, one stone a day.</li>
+          <li>conflict(tag=meme_CVG_Meme_BodyWay)->A powerful [foeLeader] mocked the [memberNamePlural] for fighting without swords.</li>
+          <li>founderJoin(tag=meme_CVG_Meme_BodyWay)->[founderName] stood in the snow pool through a whole night, and [memberName] followed [founderName] out of it at dawn.</li>
+          <li>victory(tag=meme_CVG_Meme_BodyWay)->[founderName] took every blow of the [foeLeader] and was still standing when the [foeSoldiers] fled.</li>
+          <li>setup(tag=meme_CVG_Meme_BodyWay)->The Iron Calamity broke every weapon of the believers, so they made themselves into weapons.</li>
+          <li>story(uses=1,tag=meme_CVG_Meme_BodyWay)->The believers spread out and grew in number, each enduring their own nine temperings.</li>
+          <li>lessonIntro(tag=meme_CVG_Meme_BodyWay)->Disciple, the old masters used to say:</li>
+          <li>lesson(tag=meme_CVG_Meme_BodyWay)->no spirit sword can replace a body forged through pain and perseverance.</li>
+          <li>lessonReinforcement(tag=meme_CVG_Meme_BodyWay)->You will understand it after the ninth tempering.</li>
+          <li>archistFact(tag=meme_CVG_Meme_BodyWay)->The archotechs build bodies; the tempered build themselves.</li>
+          <li>archistProphecy(tag=meme_CVG_Meme_BodyWay)->[inTheEnd], every machine will rust, and only the tempered will still stand.</li>
+          <li>animistFact(tag=meme_CVG_Meme_BodyWay)->The spirit beasts give their blood so the body can remember their strength.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Nine Temperings</ideoName>
+        <theme>body</theme>
+        <adjective>tempered</adjective>
+        <member>tempered disciple</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+
+  <IdeoPresetDef>
+    <defName>CVG_Preset_NineTemperings</defName>
+    <label>sect of nine temperings</label>
+    <description>Disciples of the Nine Temperings: the body is the weapon and the armor, forged through pain, beast blood and discipline. Cultivation is venerated, sparring is allowed, the elders lead and the demonic arts are forbidden. Your colony stays independent; the sect is a discipline, not a master.</description>
+    <categoryDef>Strong</categoryDef>
+    <memes>
+      <li>CVG_Meme_BodyWay</li>
+      <li>Loyalist</li>
+    </memes>
+  </IdeoPresetDef>
+
+  <PreceptDef ParentName="CVG_SectSpecialistBase">
+    <defName>CVG_Role_TemperingMaster</defName>
+    <label>tempering master</label>
+    <description>The master who holds the hammer at the morning beatings and guides each disciple through the nine temperings. Only a body already tempered may hold the office: the sect says you cannot measure a blow you have never taken.</description>
+    <iconPath>UI/Roles/CVG/TemperingMaster</iconPath>
+    <nameMaker>NamerRoleMoralist</nameMaker>
+    <requiredMemes><li>CVG_Meme_BodyWay</li></requiredMemes>
+    <roleRequiredWorkTags><li>Violent</li></roleRequiredWorkTags>
+    <roleRequirements Inherit="False">
+      <li Class="RoleRequirement_SameIdeo">
+        <labelKey>RoleRequirementLabelSameIdeo</labelKey>
+      </li>
+      <li Class="Convergence.RoleRequirement_HasTrait">
+        <traits><li>CVG_Body_Steel</li></traits>
+      </li>
+    </roleRequirements>
+    <roleEffects>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>MeleeHitChance</statDef>
+        <modifier>4</modifier>
+      </li>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>PainShockThreshold</statDef>
+        <modifier>0.1</modifier>
+      </li>
+    </roleEffects>
+    <grantedAbilities>
+      <li>BerserkTrance</li>
+    </grantedAbilities>
+  </PreceptDef>
+
+  <!-- Ritual: Refinement of the Nine Temperings. One grade per ceremony; on failure only the materials are lost. -->
+  <RitualOutcomeEffectDef ParentName="CVG_SectTemperOutcomeBase">
+    <defName>CVG_Outcome_NineTemperings</defName>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_TemperConstitution">
+        <steps>
+          <li>
+            <toTrait>CVG_Body_Steel</toTrait>
+            <toDegree>0</toDegree>
+            <chanceByQuality><points><li>(0, 0.80)</li><li>(1, 1.00)</li></points></chanceByQuality>
+            <cost><CVG_BeastBlood>10</CVG_BeastBlood><CVG_SpiritStone>20</CVG_SpiritStone></cost>
+          </li>
+          <li>
+            <fromTrait>CVG_Body_Steel</fromTrait>
+            <fromDegree>0</fromDegree>
+            <toTrait>CVG_Body_Steel</toTrait>
+            <toDegree>1</toDegree>
+            <chanceByQuality><points><li>(0, 0.60)</li><li>(1, 1.00)</li></points></chanceByQuality>
+            <cost><CVG_BeastBlood>20</CVG_BeastBlood><CVG_SpiritStone>40</CVG_SpiritStone></cost>
+          </li>
+          <li>
+            <fromTrait>CVG_Body_Steel</fromTrait>
+            <fromDegree>1</fromDegree>
+            <toTrait>CVG_Body_Steel</toTrait>
+            <toDegree>2</toDegree>
+            <chanceByQuality><points><li>(0, 0.40)</li><li>(1, 0.90)</li></points></chanceByQuality>
+            <cost><CVG_BeastBlood>40</CVG_BeastBlood><CVG_SpiritStone>80</CVG_SpiritStone><CVG_BeastCore>2</CVG_BeastCore></cost>
+          </li>
+          <li>
+            <fromTrait>CVG_Body_Steel</fromTrait>
+            <fromDegree>2</fromDegree>
+            <toTrait>CVG_Body_Steel</toTrait>
+            <toDegree>3</toDegree>
+            <chanceByQuality><points><li>(0, 0.20)</li><li>(1, 0.55)</li></points></chanceByQuality>
+            <cost><CVG_BeastBlood>80</CVG_BeastBlood><CVG_SpiritStone>150</CVG_SpiritStone><CVG_BeastCore>6</CVG_BeastCore></cost>
+          </li>
+        </steps>
+      </li>
+    </modExtensions>
+  </RitualOutcomeEffectDef>
+
+  <RitualPatternDef ParentName="CVG_SectTemperPatternBase">
+    <defName>CVG_Pattern_NineTemperings</defName>
+    <ritualOutcomeEffect>CVG_Outcome_NineTemperings</ritualOutcomeEffect>
+    <ritualExplanation>The tempering master refines one disciple's body by a single tempering: bronze skin, iron bones, golden marrow, adamant body. A failed refinement costs only the beast blood and the stones.</ritualExplanation>
+  </RitualPatternDef>
+
+  <PreceptDef ParentName="CVG_SectRitualBase">
+    <defName>CVG_Ritual_NineTemperings</defName>
+    <label>refinement of the nine temperings</label>
+    <description>The disciple sits in a tub of boiling beast blood while the tempering master strikes every bone with a bronze hammer, counting the nine temperings aloud. The others chant to keep the rhythm; whoever cries out has to start the count again.</description>
+    <iconPath>UI/Icons/Rituals/CVG/NineTemperings</iconPath>
+    <ritualPatternBase>CVG_Pattern_NineTemperings</ritualPatternBase>
+    <requiredMemes><li>CVG_Meme_BodyWay</li></requiredMemes>
+  </PreceptDef>
+</Defs>

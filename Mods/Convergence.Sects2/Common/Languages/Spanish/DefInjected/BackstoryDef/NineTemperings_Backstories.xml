@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Backstory_NT_OuterDisciple.title>discípulo templado externo</CVG_Backstory_NT_OuterDisciple.title>
+  <CVG_Backstory_NT_OuterDisciple.titleShort>discípulo externo</CVG_Backstory_NT_OuterDisciple.titleShort>
+  <CVG_Backstory_NT_OuterDisciple.description>[PAWN_nameDef] pasó años como discípulo externo de los Nueve Templados, golpeado con bambú cada mañana hasta que se rompía el bambú en vez de la piel. La secta lo llama el primer templado; para [PAWN_objective] fue el peor año de su vida, y el del que más se enorgullece.</CVG_Backstory_NT_OuterDisciple.description>
+  <CVG_Backstory_NT_StoneCarrier.title>cargador de piedras de los nueve templados</CVG_Backstory_NT_StoneCarrier.title>
+  <CVG_Backstory_NT_StoneCarrier.titleShort>cargador de piedras</CVG_Backstory_NT_StoneCarrier.titleShort>
+  <CVG_Backstory_NT_StoneCarrier.description>Los discípulos externos suben a la montaña las piedras de la escalinata de la secta, una por día, el tiempo que haga falta. [PAWN_nameDef] cargó tres mil, y recién entonces entendió que la escalinata nunca fue lo importante.</CVG_Backstory_NT_StoneCarrier.description>
+  <CVG_Backstory_NT_InnerDisciple.title>discípulo templado interno</CVG_Backstory_NT_InnerDisciple.title>
+  <CVG_Backstory_NT_InnerDisciple.titleShort>discípulo interno</CVG_Backstory_NT_InnerDisciple.titleShort>
+  <CVG_Backstory_NT_InnerDisciple.description>[PAWN_nameDef] se ganó el rango interno aguantando una noche entera en el estanque de nieve sin moverse. Los discípulos internos toman cada noche el caldo de sangre de bestia espiritual y pueden entrenar con los principales.</CVG_Backstory_NT_InnerDisciple.description>
+  <CVG_Backstory_NT_BeastHunter.title>cazador de bestias espirituales</CVG_Backstory_NT_BeastHunter.title>
+  <CVG_Backstory_NT_BeastHunter.titleShort>cazador de bestias</CVG_Backstory_NT_BeastHunter.titleShort>
+  <CVG_Backstory_NT_BeastHunter.description>Los Nueve Templados necesitan sangre de bestia como otras sectas necesitan piedras espirituales. [PAWN_nameDef] cazaba bestias espirituales a mano limpia para el caldo de la secta, y tiene las cicatrices de cada una que se defendió.</CVG_Backstory_NT_BeastHunter.description>
+  <CVG_Backstory_NT_CoreDisciple.title>discípulo templado principal</CVG_Backstory_NT_CoreDisciple.title>
+  <CVG_Backstory_NT_CoreDisciple.titleShort>discípulo principal</CVG_Backstory_NT_CoreDisciple.titleShort>
+  <CVG_Backstory_NT_CoreDisciple.description>[PAWN_nameDef] es discípulo principal de los Nueve Templados, con huesos que suenan al golpearlos. La secta tiene discípulos externos para acarrear y sembrar; los principales entrenan, comen, duermen y vuelven a entrenar.</CVG_Backstory_NT_CoreDisciple.description>
+  <CVG_Backstory_NT_PitChampion.title>campeón del foso de templado</CVG_Backstory_NT_PitChampion.title>
+  <CVG_Backstory_NT_PitChampion.titleShort>campeón del foso</CVG_Backstory_NT_PitChampion.titleShort>
+  <CVG_Backstory_NT_PitChampion.description>En los Nueve Templados las disputas se resuelven en el foso de templado, a puño limpio y con una sola regla: nadie muere. [PAWN_nameDef] estuvo invicto nueve años, y una vez peleó contra un discípulo de la Espada Sin Forma que vino a demostrar que la espada vence al puño. Todavía dice que fue empate.</CVG_Backstory_NT_PitChampion.description>
+  <CVG_Backstory_NT_TemperingElder.title>anciano del templado</CVG_Backstory_NT_TemperingElder.title>
+  <CVG_Backstory_NT_TemperingElder.titleShort>anciano del templado</CVG_Backstory_NT_TemperingElder.titleShort>
+  <CVG_Backstory_NT_TemperingElder.description>[PAWN_nameDef] es anciano de los Nueve Templados, de los que sostienen el martillo en las palizas de la mañana. El patriarca Montaña de Hierro enseñó a los ancianos que un maestro debe haber sentido cada golpe que da, y [PAWN_objective] los sintió todos.</CVG_Backstory_NT_TemperingElder.description>
+  <CVG_Backstory_NT_VajraGuardian.title>guardián de la puerta</CVG_Backstory_NT_VajraGuardian.title>
+  <CVG_Backstory_NT_VajraGuardian.titleShort>guardián de la puerta</CVG_Backstory_NT_VajraGuardian.titleShort>
+  <CVG_Backstory_NT_VajraGuardian.description>[PAWN_nameDef] guardó la puerta de la secta bajo Kongming, el anciano que una vez detuvo con la espalda un carro de rocas que caía. Los guardianes no se mueven de la puerta; [PAWN_nameDef] siguió allí durante tres asedios y durante la propia Convergencia.</CVG_Backstory_NT_VajraGuardian.description>
+  <CVG_Backstory_NT_BloodTrader.title>comerciante de sangre y hueso</CVG_Backstory_NT_BloodTrader.title>
+  <CVG_Backstory_NT_BloodTrader.titleShort>comerciante de sangre</CVG_Backstory_NT_BloodTrader.titleShort>
+  <CVG_Backstory_NT_BloodTrader.description>[PAWN_nameDef] compra sangre y huesos de bestia espiritual por todo el Borde para el caldo de la secta, y vende las armaduras que sus discípulos se niegan a usar. Pocos regatean con [PAWN_objective] mucho tiempo.</CVG_Backstory_NT_BloodTrader.description>
+</LanguageData>

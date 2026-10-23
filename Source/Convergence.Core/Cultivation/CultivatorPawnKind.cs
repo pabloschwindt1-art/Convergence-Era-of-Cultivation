@@ -79,18 +79,32 @@ namespace Convergence
             if (comp == null) return false;
 
             comp.Sync();
-            if (!comp.HasRoot)
+            RealmTracker tracker;
+            if (ext.realm?.path != null && ext.realm.path != CVG_DefOf.CVG_Path_Qi)
             {
-                var grade = ext.grades.NullOrEmpty()
-                    ? CultivationGenerator.RandomGrade()
-                    : ext.grades.RandomElementByWeight(g => g.commonality);
-                CultivationGenerator.GiveRoot(pawn, grade, PickElements(ext));
-                comp.Sync();
+                // Otro camino (p. ej. el del cuerpo, Nueve Templados): no usa raíz espiritual, y el del cuerpo exige no tenerla.
+                if (comp.HasRoot && ext.realm.path.requiresSpiritRoot == false)
+                {
+                    CultivationGenerator.RemoveRoot(pawn);
+                    comp.Sync();
+                }
+                tracker = comp.StartPath(ext.realm.path);
+                if (tracker == null || !tracker.EnsureStarted()) return false;
             }
-            if (!comp.IsQiCultivator) return false;
-
-            var tracker = comp.Realm;
-            if (!tracker.EnsureStarted()) return false;
+            else
+            {
+                if (!comp.HasRoot)
+                {
+                    var grade = ext.grades.NullOrEmpty()
+                        ? CultivationGenerator.RandomGrade()
+                        : ext.grades.RandomElementByWeight(g => g.commonality);
+                    CultivationGenerator.GiveRoot(pawn, grade, PickElements(ext));
+                    comp.Sync();
+                }
+                if (!comp.IsQiCultivator) return false;
+                tracker = comp.Realm;
+                if (!tracker.EnsureStarted()) return false;
+            }
 
             var target = ext.realm ?? tracker.Realm;
             if (ext.scaleWithColony && CultivationDifficulty.Current.scaleEnemyRealms && pawn.Faction != null

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Role_TemperingMaster.label>maestro del templado</CVG_Role_TemperingMaster.label>
+  <CVG_Role_TemperingMaster.description>El maestro que sostiene el martillo en las palizas de la mañana y guía a cada discípulo por los nueve templados. Solo puede ocupar el cargo un cuerpo ya templado: la secta dice que no se puede medir un golpe que nunca se recibió.</CVG_Role_TemperingMaster.description>
+  <CVG_Ritual_NineTemperings.label>refinamiento de los nueve templados</CVG_Ritual_NineTemperings.label>
+  <CVG_Ritual_NineTemperings.description>El discípulo se sienta en una tina de sangre de bestia hirviendo mientras el maestro del templado golpea cada hueso con un martillo de bronce, contando en voz alta los nueve templados. Los demás cantan para marcar el ritmo; quien grita tiene que empezar la cuenta de nuevo.</CVG_Ritual_NineTemperings.description>
+</LanguageData>

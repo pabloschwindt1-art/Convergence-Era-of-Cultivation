@@ -24,8 +24,14 @@
   <CVG_Body_Venom.degreeDatas.0.description>El veneno no daña a {PAWN_nameDef}: lo alimenta. Los demás guardan distancia por instinto.</CVG_Body_Venom.degreeDatas.0.description>
   <CVG_Body_InnateSpirit.degreeDatas.0.label>cuerpo espiritual innato</CVG_Body_InnateSpirit.degreeDatas.0.label>
   <CVG_Body_InnateSpirit.degreeDatas.0.description>{PAWN_nameDef} no tiene raíz espiritual, pero su propio cuerpo respira el mundo. Puede recorrer el camino del cuerpo mucho más lejos que otros mortales.</CVG_Body_InnateSpirit.degreeDatas.0.description>
-  <CVG_Body_Steel.degreeDatas.0.label>cuerpo de acero</CVG_Body_Steel.degreeDatas.0.label>
-  <CVG_Body_Steel.degreeDatas.0.description>La piel y los huesos de {PAWN_nameDef} son duros como el metal. No puede reunir qi, pero su cuerpo puede templarse hasta ser un arma.</CVG_Body_Steel.degreeDatas.0.description>
+  <CVG_Body_Steel.degreeDatas.0.label>cuerpo de piel de bronce</CVG_Body_Steel.degreeDatas.0.label>
+  <CVG_Body_Steel.degreeDatas.0.description>La piel de {PAWN_nameDef} tiene el brillo apagado del bronce viejo: golpes que a otro le partirían el labio a {PAWN_objective} solo le dejan un moretón. Los Nueve Templados lo llaman el primer refinamiento, el que todo discípulo se gana con un año de palizas cada mañana.</CVG_Body_Steel.degreeDatas.0.description>
+  <CVG_Body_Steel.degreeDatas.1.label>cuerpo de huesos de hierro</CVG_Body_Steel.degreeDatas.1.label>
+  <CVG_Body_Steel.degreeDatas.1.description>El segundo refinamiento llegó a los huesos de {PAWN_nameDef}: suenan como hierro al golpearlos y no se quiebran donde los de otros sí. Los maestros lo comprueban con un martillo, y se espera que el discípulo les dé las gracias.</CVG_Body_Steel.degreeDatas.1.description>
+  <CVG_Body_Steel.degreeDatas.2.label>cuerpo de médula de oro</CVG_Body_Steel.degreeDatas.2.label>
+  <CVG_Body_Steel.degreeDatas.2.description>La sangre de bestia y el qi se hirvieron en la médula de {PAWN_nameDef} hasta volverla del color del oro viejo. Casi nada le llega lo bastante hondo como para herirle.</CVG_Body_Steel.degreeDatas.2.description>
+  <CVG_Body_Steel.degreeDatas.3.label>cuerpo adamantino</CVG_Body_Steel.degreeDatas.3.label>
+  <CVG_Body_Steel.degreeDatas.3.description>El noveno templado: el cuerpo de {PAWN_nameDef} se volvió adamantino, el cuerpo indestructible de los viejos sutras. Los Nueve Templados registran pocos discípulos así por siglo; son la prueba que la secta le da a todo el que duda de que un cuerpo forjado con dolor no necesita espada.</CVG_Body_Steel.degreeDatas.3.description>
   <CVG_Body_Tribulation.degreeDatas.0.label>cuerpo de tribulación</CVG_Body_Tribulation.degreeDatas.0.label>
   <CVG_Body_Tribulation.degreeDatas.0.description>Los rayos celestiales no destruyen a {PAWN_nameDef}: lo forjan. No puede reunir qi, pero las tribulaciones lo hacen más fuerte.</CVG_Body_Tribulation.degreeDatas.0.description>
   <CVG_Body_Sword.degreeDatas.0.label>cuerpo de espada de hierro</CVG_Body_Sword.degreeDatas.0.label>

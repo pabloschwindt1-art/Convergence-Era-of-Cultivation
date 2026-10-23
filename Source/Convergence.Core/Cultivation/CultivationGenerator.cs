@@ -102,6 +102,16 @@ namespace Convergence
             pawn.story.traits.GainTrait(new Trait(CVG_DefOf.CVG_SpiritRoot, grade.traitDegree, forced: true));
         }
 
+        /// <summary>Quita la raíz espiritual (genes de raíz o el rasgo): p. ej. a los discípulos de una secta del cuerpo, que no la usan.</summary>
+        public static void RemoveRoot(Pawn pawn)
+        {
+            if (pawn.genes != null)
+                foreach (var g in pawn.genes.GenesListForReading.Where(g => g.def.HasModExtension<DefModExtension_SpiritRoot>()).ToList())
+                    pawn.genes.RemoveGene(g);
+            var t = pawn.story?.traits?.GetTrait(CVG_DefOf.CVG_SpiritRoot);
+            if (t != null) pawn.story.traits.RemoveTrait(t);
+        }
+
         private static void TryGiveSpecialBody(Pawn pawn, bool hasRoot)
         {
             foreach (var def in DefDatabase<TraitDef>.AllDefsListForReading.InRandomOrder())
