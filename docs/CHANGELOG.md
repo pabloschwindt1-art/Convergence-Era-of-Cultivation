@@ -25,6 +25,14 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
   en partidas guardadas, se convierte al grado de jade celestial. Los grados suben con el ritual de la Secta de la Espada Sin Forma.
 - Rituales y roles de secta: mínimo de creyentes para empezar un ritual y ánimo por rol vacío solo desde N creyentes (solo en los roles
   que lo piden).
+- Constituciones de 4 grados para las otras sectas (con y sin raíz espiritual; al nacer solo el grado 0; suben con el ritual de su
+  secta): **cuerpo de acero** (piel de bronce, huesos de hierro, médula de oro, cuerpo adamantino: resistencia a proyectiles; el antiguo
+  cuerpo de acero es el grado 0), **cuerpo yang puro** (yang puro, llama del horno, fuego de nueve vueltas, fuego del fénix: alquimia,
+  cocina, calor), nuevo **cuerpo de sangre lunar** (sangre turbia, carmesí, lunar, del demonio interno: curación, daño cuerpo a cuerpo y
+  dolor, a cambio de crisis mentales más fáciles) y, con Biotech, nuevo **cuerpo de mil hilos** (hilo de seda, de acero, de jade, corazón
+  de mil hilos: ancho de banda de mecanoides +1 a +4 y un grupo de control más).
+- Stock de especialidad por lista de objetos con calidad controlada (`StockGenerator_QualityDefs`).
+- Autotest `-cvgselftest` ALL OK en 1.6.4871 después de todo lo anterior.
 
 **Change notes (Steam):**
 ```
@@ -36,6 +44,19 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 ```
 - New setting "Visitor groups at once" (default 2): no more caravans and visitors piling up on your map at the same time. Set 0 for vanilla behaviour.
 ```
+
+### Convergence: Sects 2.0 (preview, sin publicar todavía; 2026-10-22)
+- Mod nuevo, paralelo al Sects actual e incompatible con él. Requiere Royalty e Ideology. Las cinco sectas siguen la misma plantilla
+  (`docs/modulos/SECTS2_PLANTILLA.md`): 4 títulos honorarios permanentes, 5 favores, constitución de 4 grados con su ritual, especialista,
+  meme con arma noble y despreciada, discípulos con historias de fondo propias por rango, armas que pueden usar y nombres propios.
+  - **Espada Sin Forma** (espadas), **Nueve Templados** (cultivo corporal, sin armas), **Pabellón del Caldero Celestial** (alquimia y
+    comercio; píldora a elección).
+  - **Culto de la Luna Sangrienta** (camino demoníaco): enemigo natural, neutral con colonias del Camino Demoníaco, hostil con la Espada
+    y los Nueve Templados; no comercia; hojas; ritual Juramento de Sangre.
+  - **Secta del Hilo Invisible** (marionetas; solo con Biotech Wuxia): sus incursiones y asentamientos traen marionetas; vende materiales
+    de marioneta y atuendo de titiritero; ritual Vinculación de Hilos Espirituales.
+- Arte provisional (íconos del Sects viejo) hasta que llegue el definitivo.
+- Autotest `-cvgsects2test` ALL OK en 1.6.4871, con todos los módulos y también sin Biotech, Alchemy ni Biotech Wuxia.
 
 ### Convergence: Stories & Scenarios (2026-10-22)
 - Las visitas de las historias (VisitAzurePeak, VisitLotus, VisitCauldron, VisitDragon, VisitRogueMarket, LotusPilgrims, SectTradePact y

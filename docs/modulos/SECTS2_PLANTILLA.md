@@ -26,8 +26,12 @@ especialidad, su lore y lo que vende**. Copiá los archivos de la Espada, renomb
    Un archivo `<Secta>_Backstories.xml` con `ParentName` de una base propia (`slot` Adulthood, `shuffleable` false, categoría
    `CVG_Sect_<Secta>`), 1-2 historias por rango con lore y habilidades de la especialidad, y en cada tipo de personaje
    `<fixedAdultBackstories>` (mecanismo de vanilla). Ver `FormlessSword_Backstories.xml`.
-4. **Comercio**: un `TraderKindDef` abstracto con `StockGenerator_QualityTag` para su especialidad (calidades y pesos; nunca Legendario si así
-   se decide) + materiales de Convergence que correspondan; dos hijos (caravana y asentamiento).
+4. **Comercio**: un `TraderKindDef` abstracto con `StockGenerator_QualityTag` (armas por `weaponTags`) o `StockGenerator_QualityDefs`
+   (lista de objetos, aunque sean solo vendibles por el jugador) para su especialidad (calidades y pesos; nunca Legendario) + materiales
+   de Convergence que correspondan; dos hijos (caravana y asentamiento). Una secta que no comercia (la Luna Sangrienta) deja vacíos
+   `caravanTraderKinds`, `visitorTraderKinds` y `baseTraderKinds`.
+   **Armas**: `weaponTags` que el discípulo pueda usar (las historias exigen `Violent`) y, en el meme, `preferredWeaponClasses`
+   (noble y despreciada de Ideology): pueden usar cualquier arma, pero la noble les sube el ánimo y la despreciada se lo baja.
 5. **Títulos**: 4 `RoyalTitleDef` (`ParentName="CVG_SectTitle1..4"`) con su `tags` y su lore.
 6. **Favores**: 5 `RoyalTitlePermitDef` con su facción, título mínimo y contenido:
    - recursos: `itemsToDrop`;
@@ -44,9 +48,25 @@ especialidad, su lore y lo que vende**. Copiá los archivos de la Espada, renomb
    - En `Precepts_Sect.xml`, sumar el meme nuevo a `associatedMemes`/`conflictingMemes` donde corresponda.
 8. **Nombres**: `RulePackDef` de personas (muchas combinaciones: ≥ 25 apellidos × 30 nombres) y de asentamientos.
 9. **Traducciones**: Spanish y SpanishLatin para todo lo anterior (DefInjected) + Keyed si hace falta.
-10. **Autotest**: copiar `TestSwordSect` del autotest del mod y cambiar los nombres; correr `-cvgsects2test` en 1.6 (y en 1.7 cuando toque).
+10. **Autotest**: sumar un `SectSpec` en `Specs()` de `Sects2SelfTest.cs` (constitución, meme, rol, habilidad, ritual, los 4 rangos,
+    regla de armas y de cuerpo, especialidad que vende; `requiresMod`/`specialtyMod` si dependen de otro mod, `extra` para una prueba
+    propia) y correr `-cvgsects2test` en 1.6 (y en 1.7 cuando toque), con todos los módulos y también sin los opcionales.
+    **Sectas que dependen de un mod o DLC** (el Hilo Invisible, de Biotech Wuxia): todo en `Mods/<Mod>/` (Defs y Languages) con
+    `IfModActive` en `LoadFolders.xml`; si su constitución usa stats de una DLC, va en `Mods/<DLC>/` del Core.
 11. **Arte** (después): ícono de facción, meme, especialista y ritual. Mientras tanto, marcadores de íconos existentes.
 12. `docs/CHANGELOG.md`.
+
+## Estado de las cinco sectas (2026-10-22, todas ALL OK en 1.6.4871)
+| Secta | Constitución | Especialista (habilidad) | Ritual | Armas (noble / despreciada) | Comercio |
+|---|---|---|---|---|---|
+| Espada Sin Forma | `CVG_Body_Sword` | maestro de espada (orden de combate) | Templado del cuerpo de espada | espadas | espadas Buena-Obra maestra |
+| Nueve Templados | `CVG_Body_Steel` | maestro del templado (trance berserker) | Refinamiento de los nueve templados | sin armas (contundente / a distancia) | armaduras |
+| Caldero Celestial | `CVG_Body_PureYang` | maestro alquimista (orden de producción) | Bendición del caldero | armas espirituales y armas simples | armas espirituales (con Alchemy), píldoras |
+| Luna Sangrienta | `CVG_Body_BloodMoon` | oficiante de la luna sangrienta (impulso inmunitario) | Juramento de sangre | hojas (perforante / larga distancia) | no comercia |
+| Hilo Invisible (Biotech Wuxia) | `CVG_Body_ThousandThreads` (Biotech) | maestro titiritero (impulso de trabajo) | Vinculación de hilos espirituales | armas de fuego (ligera / contundente) | atuendo de titiritero, materiales de marioneta |
+
+Relaciones: la Luna Sangrienta es enemiga natural (neutral con el Camino Demoníaco) y hostil con la Espada y los Nueve Templados.
+Pendiente: arte definitivo (7 íconos por secta), integración con Stories y prueba en 1.7.
 
 ## Decisiones comunes (del usuario, valen para todas)
 - Títulos permanentes; la hostilidad solo suspende los favores.

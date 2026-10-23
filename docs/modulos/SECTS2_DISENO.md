@@ -5,8 +5,8 @@
 
 Este documento es **material de diseño, no son órdenes**. Lo que manda son las decisiones del usuario (ver `SECTS2_BASE.md` §5). La única
 diferencia con el borrador está en Royalty: el nuevo Sects **requiere Royalty** (decisión del usuario), aunque el borrador diga "sin
-imponer Royalty". Estado de cada secta: Espada Sin Forma y Nueve Templados están conversadas con el usuario; Hilo Invisible, Caldero
-Celestial y Luna Sangrienta son propuestas.
+imponer Royalty". Estado (2026-10-22): las cinco sectas están implementadas con la plantilla y probadas en 1.6 (tabla en `SECTS2_PLANTILLA.md`);
+Hilo Invisible, Caldero Celestial y Luna Sangrienta las completé yo a partir de este diseño y del lore, a revisar por el usuario.
 
 ## Framework común
 - **Roles de Ideology:** como máximo tres. Líder de Secta, Gran Anciano (función moral) y un especialista propio que se desbloquea
@@ -73,7 +73,7 @@ Filosofía: refinar carne, sangre y huesos con qi hasta que el cuerpo sea el arm
   - Camino del cuerpo del Core: reinos del cuerpo (templado con sangre-qi), carne y sangre de bestia espiritual, muñeco de madera y
     equipo de entrenamiento. Cuerpos de Traits & Destinies: Vajra, piel de hierro, hueso de jade de hielo; acero en el Core.
   - Meme ya hecho: **BodyWay** (`CVG_Meme_BodyWay`), con su preset.
-## 3. Secta del Hilo Invisible — Invisible Thread Sect (无形丝宗, Wúxíng Sīzōng, provisional) — PROPUESTA
+## 3. Secta del Hilo Invisible — Invisible Thread Sect (无形丝宗, Wúxíng Sīzōng, provisional) — HECHA (2026-10-22; ver SECTS2_PLANTILLA.md)
 Marionetas espirituales; el poder está en la coordinación y el control.
 - **Combate:** maestros y controladores con marionetas del contenido existente (BiotechWuxia: **solo con Biotech**).
 - **Ideology:** Líder, Gran Anciano y Maestro Titiritero.
@@ -92,7 +92,7 @@ Marionetas espirituales; el poder está en la coordinación y el control.
   - Lore de fondo: Yan Shi y su autómata (citado en la investigación de marionetería).
   - Las marionetas no tienen calidad (son personajes); los favores de Obra maestra y Legendario serían equipo de marioneta o del
     titiritero.
-## 4. Pabellón del Caldero Celestial — Heavenly Cauldron Pavilion — PROPUESTA
+## 4. Pabellón del Caldero Celestial — Heavenly Cauldron Pavilion — HECHA (2026-10-22; ver SECTS2_PLANTILLA.md)
 Alquimia, forja espiritual y comercio. El nombre chino canónico es el del lore (天鼎阁, Tiāndǐng Gé); el borrador propone 天炉阁.
 - **Combate:** técnicas de fuego y madera; sin restricción a cuerpo a cuerpo.
 - **Ideology:** Líder, Gran Anciano y Maestro Alquimista.
@@ -111,7 +111,7 @@ Alquimia, forja espiritual y comercio. El nombre chino canónico es el del lore 
   - Contenido de Alchemy & Artifacts: horno de alquimia y forja espiritual con niveles, píldoras (fundación, templado, purificación,
     recuperación de qi), hierbas espirituales, armas con grado espiritual.
   - Eventos de Stories: VisitCauldron, MissionCauldronCores, PavilionTaxmen, CauldronCreditors.
-## 5. Culto de la Luna Sangrienta — Blood Moon Cult (血月教, Xuèyuè Jiào) — PROPUESTA
+## 5. Culto de la Luna Sangrienta — Blood Moon Cult (血月教, Xuèyuè Jiào) — HECHA (2026-10-22; ver SECTS2_PLANTILLA.md)
 Cultivo heterodoxo y técnicas demoníacas; tiene reglas internas, no es solo una facción hostil genérica.
 - **Ideology:** Líder, Gran Anciano y Oficiante de la Luna Sangrienta (nombre provisional).
 - **Ritual propuesto:** Juramento de Sangre, un pacto con costos y consecuencias narrativas.
