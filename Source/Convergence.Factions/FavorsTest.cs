@@ -79,7 +79,7 @@ namespace Convergence.Factions
             var initial = new HashSet<int>(map.listerThings.AllThings.Select(t => t.thingIDNumber));
 
             // 0) Ideologías de secta: nuestras, sin nada vanilla al azar.
-            GameComponent_SectIdeos.ApplyAll();
+            // Sin llamar a ApplyAll: lo que ve el jugador en una partida normal.
             foreach (var sect in Sects.Concat(new[] { "RogueCultivators" }))
             {
                 var f = FactionOf(sect);
@@ -95,6 +95,10 @@ namespace Convergence.Factions
                 var vanilla = sid.PreceptsListForReading.Where(p => !p.def.defName.StartsWith("CVG_") && !GameComponent_SectIdeos.Kept.Contains(p.def.defName)).ToList();
                 var elder = sid.PreceptsListForReading.OfType<Precept_Role>().FirstOrDefault(r => r.def == PreceptDefOf.IdeoRole_Moralist);
                 Check(elder == null || elder.LabelCap == "CVG_Factions_GrandElder".Translate().CapitalizeFirst(), "second role: " + elder?.LabelCap);
+                var leaderRole = sid.PreceptsListForReading.OfType<Precept_Role>().FirstOrDefault(r => r.def == PreceptDefOf.IdeoRole_Leader);
+                if (ext?.leaderIconPath != null)
+                    Check(leaderRole?.Icon == ext.LeaderIcon && ext.LeaderIcon != null && (elder == null || (elder.Icon == ext.ElderIcon && ext.ElderIcon != null)),
+                        "own icons for the leader and the grand elder (" + ext.leaderIconPath + ", " + ext.elderIconPath + ")");
                 Check(vanilla.Count == 0, "only our precepts and the basic ones (funeral, festival, birth, speech, role change)" + (vanilla.Count > 0 ? ": " + string.Join(", ", vanilla.Select(p => p.def.defName)) : ""));
             }
 

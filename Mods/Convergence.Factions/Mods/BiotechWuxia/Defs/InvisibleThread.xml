@@ -98,6 +98,8 @@
       <li Class="Convergence.Factions.DefModExtension_SectIdeo">
         <icon>CVG_IdeoIcon_PuppetPath</icon>
         <color>CVG_IdeoColor_Natural</color>
+        <leaderIconPath>UI/Roles/CVG/InvisibleThread_Leader</leaderIconPath>
+        <elderIconPath>UI/Roles/CVG/InvisibleThread_Elder</elderIconPath>
       </li>
       <li Class="Convergence.DefModExtension_ConvergenceFaction">
         <extraSettlements>1~2</extraSettlements>

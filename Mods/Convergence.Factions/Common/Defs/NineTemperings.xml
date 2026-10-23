@@ -88,6 +88,8 @@
       <li Class="Convergence.Factions.DefModExtension_SectIdeo">
         <icon>CVG_IdeoIcon_BodyWay</icon>
         <color>CVG_IdeoColor_Natural</color>
+        <leaderIconPath>UI/Roles/CVG/NineTemperings_Leader</leaderIconPath>
+        <elderIconPath>UI/Roles/CVG/NineTemperings_Elder</elderIconPath>
       </li>
       <li Class="Convergence.DefModExtension_ConvergenceFaction">
         <extraSettlements>1~2</extraSettlements>

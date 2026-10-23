@@ -17,6 +17,7 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
   Patriarca de la Montaña de Hierro, el Fénix del Primer Fuego, Xue Jiuyou, Yan Shi), el título de líder de la secta, el **Gran
   Anciano** como segundo rol, su ícono y solo nuestros preceptos más los básicos (funeral, fiesta, nacimiento, discurso, cambio de
   rol). Ya no salen títulos como "primer ministro", dioses al azar, reliquias, juicios ni ejecuciones. También en partidas viejas.
+- El **Líder** y el **Gran Anciano** de cada secta usan su ícono propio (arte de las hojas del usuario), y la ideología queda bien desde que la secta se crea (antes recién se corregía al rato).
 - Títulos con mayúsculas en los nombres propios ("Amigo de la Espada Sin Forma").
 - Los regalos con material (armas y armaduras obra maestra o legendarias) llegan de metal, no de madera.
 - La descripción del artefacto obra maestra del Caldero avisa que a veces son tres píldoras de fundación.
@@ -30,6 +31,7 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 - Sect members are no longer born as random vanilla xenotypes (hussars, genies...): they are human cultivators.
 - Each sect now has its own fixed ideoligion: its name, founder, leader title, a Grand Elder role and only sect precepts (no more random "prime ministers", relics or executions).
 - Masterwork and legendary gifts arrive made of metal, never wood. Proper names capitalized in sect titles.
+- New icons for the leader and the Grand Elder of each sect.
 ```
 ### Convergence: Core (2026-10-22)
 - Nuevo ajuste **"Grupos de huéspedes a la vez"** (2 por defecto; 0 = sin tope, como vanilla): con el mapa lleno de visitantes o caravanas

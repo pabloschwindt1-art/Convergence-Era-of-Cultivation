@@ -1,6 +1,7 @@
 using System.Linq;
 using HarmonyLib;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace Convergence.Factions
@@ -13,6 +14,48 @@ namespace Convergence.Factions
     {
         public IdeoIconDef icon;
         public ColorDef color;
+        /// <summary>Íconos propios del líder y del Gran Anciano (rol moralista) de la secta.</summary>
+        public string leaderIconPath;
+        public string elderIconPath;
+
+        private Texture2D leaderIcon, elderIcon;
+        public Texture2D LeaderIcon => leaderIconPath == null ? null : leaderIcon ??= ContentFinder<Texture2D>.Get(leaderIconPath, false);
+        public Texture2D ElderIcon => elderIconPath == null ? null : elderIcon ??= ContentFinder<Texture2D>.Get(elderIconPath, false);
+    }
+
+    /// <summary>
+    /// El líder y el Gran Anciano de una secta muestran su propio ícono (vanilla usa el mismo para todas las ideologías). Solo en las
+    /// ideologías de las facciones de secta, que tienen color neutro: el arte se ve con sus colores.
+    /// </summary>
+    [HarmonyPatch(typeof(Precept), nameof(Precept.Icon), MethodType.Getter)]
+    public static class Patch_Precept_Icon_SectRoles
+    {
+        public static void Postfix(Precept __instance, ref Texture2D __result)
+        {
+            if (!(__instance is Precept_Role) || __instance.ideo == null) return;
+            if (!GameComponent_SectIdeos.SectOf.TryGetValue(__instance.ideo, out var ext)) return;
+            var tex = __instance.def == PreceptDefOf.IdeoRole_Leader ? ext.LeaderIcon
+                : __instance.def == PreceptDefOf.IdeoRole_Moralist ? ext.ElderIcon : null;
+            if (tex != null) __result = tex;
+        }
+    }
+
+    /// <summary>Una secta recién creada (al generar el mundo o al llegar con la Convergencia) ya nace con su ideología propia.</summary>
+    [HarmonyPatch(typeof(FactionGenerator), nameof(FactionGenerator.NewGeneratedFaction), new[] { typeof(RimWorld.Planet.PlanetLayer), typeof(FactionGeneratorParms) })]
+    public static class Patch_FactionGenerator_NewGeneratedFaction
+    {
+        public static void Postfix(Faction __result)
+        {
+            if (__result?.def.HasModExtension<DefModExtension_SectIdeo>() != true) return;
+            try { GameComponent_SectIdeos.Apply(__result); }
+            catch (System.Exception e) { Log.Error("[Convergence] Sect ideoligion of " + __result.Name + ": " + e); }
+        }
+    }
+
+    [StaticConstructorOnStartup]
+    public static class FactionsHarmony
+    {
+        static FactionsHarmony() => new Harmony("prospero1088.convergence.factions").PatchAll();
     }
 
     /// <summary>
@@ -34,7 +77,25 @@ namespace Convergence.Factions
 
         public GameComponent_SectIdeos(Game game) { }
 
-        public override void FinalizeInit() => ApplyAll();
+        /// <summary>Ideología de cada facción de secta, para el parche de íconos de rol.</summary>
+        public static readonly System.Collections.Generic.Dictionary<Ideo, DefModExtension_SectIdeo> SectOf = new System.Collections.Generic.Dictionary<Ideo, DefModExtension_SectIdeo>();
+
+        private bool pending = true;
+
+        public override void FinalizeInit()
+        {
+            SectOf.Clear();
+            pending = true;
+        }
+
+        // Al iniciar la partida las ideologías de las facciones todavía no están listas: se aplica en el primer cuadro (también en
+        // pausa) y después cada tanto, por si llegan sectas nuevas con la Convergencia.
+        public override void GameComponentUpdate()
+        {
+            if (!pending || Current.ProgramState != ProgramState.Playing) return;
+            pending = false;
+            ApplyAll();
+        }
 
         public override void GameComponentTick()
         {
@@ -58,6 +119,7 @@ namespace Convergence.Factions
             if (ideo == null) return;
             var def = faction.def;
             var ext = def.GetModExtension<DefModExtension_SectIdeo>();
+            SectOf[ideo] = ext;
             if (def.fixedIdeo && !def.ideoName.NullOrEmpty() && ideo.name != def.ideoName) ideo.name = def.ideoName;
             if (def.fixedIdeo && !def.ideoDescription.NullOrEmpty() && ideo.description != def.ideoDescription) ideo.description = def.ideoDescription;
             ideo.leaderTitleMale = def.leaderTitle;

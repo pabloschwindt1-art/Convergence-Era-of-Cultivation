@@ -84,5 +84,5 @@ para que el emblema no se tiña.
 | 5 Ritual | `UI/Icons/Rituals/CVG/TemperSwordBody`, `NineTemperings`, `CauldronBlessing`, `BloodOath`, `ThreadBinding` | ✅ |
 | 6 Emblema | `World/CVG/Factions/<Secta>` (`factionIconPath`) | ✅ |
 | 7 Contribución | `UI/Icons/CVG/Contribution/<Secta>` (`royalFavorIconPath`) | ✅ |
-| 2 Líder de secta | `art/sects2/<Secta>/leader.png` | ⏳ pendiente: Sects 2.0 todavía no tiene un rol de líder propio por secta (usa el de vanilla) |
-| 3 Gran Anciano | `art/sects2/<Secta>/elder.png` | ⏳ pendiente: el rol de gran anciano todavía no existe en Sects 2.0 |
+| 2 Líder de secta | `UI/Roles/CVG/<Secta>_Leader` (parche de `Precept.Icon` en las ideologías de secta) | ✅ |
+| 3 Gran Anciano | `UI/Roles/CVG/<Secta>_Elder` (el rol moralista se llama Gran Anciano) | ✅ |
