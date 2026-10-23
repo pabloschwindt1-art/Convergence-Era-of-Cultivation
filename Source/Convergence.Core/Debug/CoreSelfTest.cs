@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 using Verse.AI.Group;
@@ -1546,6 +1547,23 @@ namespace Convergence
                 Check(!GuestLimit.Full(map), "limit 2 (default): one more group fits");
                 settings.maxGuestGroups = 0;
                 Check(!GuestLimit.Full(map), "limit 0: no limit, as in vanilla");
+
+                // Camino real del narrador: caravanas no forzadas de varias facciones distintas, una tras otra (lo que pasó en una partida).
+                var info = Harmony.GetPatchInfo(AccessTools.Method(typeof(IncidentWorker), nameof(IncidentWorker.CanFireNow)));
+                sb.Append("\n    CanFireNow postfixes: " + (info == null ? "none" : string.Join(", ", info.Postfixes.Select(x => x.owner))));
+                settings.maxGuestGroups = 2;
+                SendHome();
+                var traders = Find.FactionManager.AllFactionsListForReading.Where(x => !x.IsPlayer && !x.Hidden && !x.temporary && x.def.humanlikeFaction
+                    && !x.HostileTo(Faction.OfPlayer) && !x.def.caravanTraderKinds.NullOrEmpty()).Take(4).ToList();
+                int fired = 0;
+                foreach (var tf in traders)
+                {
+                    var p = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.Misc, map);
+                    p.faction = tf;
+                    if (Find.Storyteller.TryFire(new FiringIncident(IncidentDefOf.TraderCaravanArrival, null, p))) fired++;
+                }
+                Check(traders.Count < 3 || GuestLimit.Count(map) <= 2, "storyteller: " + traders.Count + " caravans tried, " + fired + " arrived, "
+                    + GuestLimit.Count(map) + " guest groups (limit 2)");
             }
             finally
             {

@@ -30,6 +30,14 @@ Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod
   escenarios (habilidad 10: 55 fallos y 28 celestiales de 400; habilidad 3 con el horno frío: 101 fallos; habilidad 3 con horno nivel
   3 y cristal de fuego: 57; habilidad 20: 11 fallos y 86 celestiales). ALL OK en 1.6.4871.
 
+- Core/Stories: la investigación **reinos secretos** ya hace algo. Al terminarla se abre la primera puerta cerca de la colonia
+  (ResearchMod_FireIncident nuevo en el Core, dispara un incidente por nombre), y las puertas ya no aparecen solas antes de investigarla.
+  Antes costaba 6000 y no desbloqueaba nada.
+- Core: el autotest del tope de huéspedes prueba también el camino real del narrador (4 caravanas de facciones distintas: entran 2)
+  y lista quién parchea `CanFireNow`. El de ideología del viejo Sects se salta si Sects no está activo. `tools/run-test.ps1` abre la
+  prueba en el monitor secundario (ROG), visible y sin robar el foco (`-NoSecondMonitor` vuelve a la ventana minimizada).
+  Tanda en 1.7.4985 con los 15 mods: Core, Resource, Bloodline, Trait, Stories, Formations, Grafts, Factions, Qi network, Qi-Tech,
+  Crops, Furniture y Flying island ALL OK.
 - Furniture: el bonsái espiritual ya no es maceta (vanilla le sembraba lirio de día encima del árbol). Es decoración, con belleza 15 y qi 4.
 - Factions: arreglado el aviso sin fin "Rol de ... activado / desactivado" con un solo creyente: el rol de especialista de las sectas
   se desactivaba y se activaba en cada recálculo (los dos mínimos valían 1). Ahora se apaga recién sin creyentes.
@@ -41,6 +49,7 @@ Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod
 - Wuxia work rooms: alchemy room, spirit smithy, scribe hall and weaving room. Cleanliness, impressiveness, qi and linked furniture (pill cabinets, censers, scripture shelves, braziers...) raise the quality of what is made there; a good room makes up for a weak artisan.
 - The alchemy furnace needs fire: wood, spirit stones or fire crystals, and a better fire makes better pills.
 - Alchemy can fail: about 30% bad or failed (waste pills), 45% normal, 20% excellent, 5% celestial for an average alchemist; masters, good rooms and alchemist traits push the odds up.
+- The secret realms research now opens the first realm gate near your colony; gates no longer appear before it (Core + Stories).
 ```
 
 ### Lore: el Clan del Dragón pasa a leyenda y las sectas viejas a las 5 de Factions (2026-10-22)

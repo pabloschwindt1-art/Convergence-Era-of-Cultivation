@@ -37,6 +37,7 @@ namespace Convergence.Stories
                     if (p != null && !p.IsFinished) Find.ResearchManager.FinishProject(p, doCompletionDialog: false);
                 }
                 puppet = ScenPart_StartingPuppets.Equip(master, link, kind, 1).First();
+                TestArena.Clear(map, CellRect.CenteredOn(puppet.Position, 9));   // superficie limpia alrededor del títere
                 CellFinder.TryFindRandomCellNear(puppet.Position, map, 15, c => GenAdj.OccupiedRect(c, Rot4.North, new IntVec2(6, 6)).Cells.All(x => x.InBounds(map) && x.Standable(map) && !x.Roofed(map) && x.GetFirstBuilding(map) == null), out var c0);
                 var arrayDef = ThingDef.Named("CVG_SkyBreathArray");
                 var chargerDef = ThingDef.Named("CVG_SpiritCharger");

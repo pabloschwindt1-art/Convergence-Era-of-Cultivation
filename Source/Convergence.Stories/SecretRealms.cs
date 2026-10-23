@@ -515,6 +515,9 @@ namespace Convergence.Stories
         protected override bool CanFireNowSub(IncidentParms parms)
         {
             if (!base.CanFireNowSub(parms)) return false;
+            // Hasta investigar "reinos secretos" no aparecen solas; al terminarla, la investigación abre la primera (forzada).
+            var research = DefDatabase<ResearchProjectDef>.GetNamedSilentFail("CVG_Research_SecretRealms");
+            if (research != null && !research.IsFinished && !parms.forced) return false;
             var def = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_RealmGate");
             return def != null && ((Map)parms.target).listerThings.ThingsOfDef(def).Count == 0;
         }

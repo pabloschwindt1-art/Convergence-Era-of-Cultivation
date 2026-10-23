@@ -131,9 +131,13 @@ namespace Convergence.Stories
             p.jobs.TryTakeOrderedJob(job, JobTag.Misc);
         }
 
-        private void PickArena(Map map) =>
-            CellFinder.TryFindRandomCellNear(map.Center, map, 60, x => GenRadial.RadialCellsAround(x, 10f, true)
-                .All(y => y.InBounds(map) && y.Standable(map) && y.GetFirstBuilding(map) == null && !y.GetTerrain(map).IsWater), out arena);
+        // Arena limpia en el centro (antes buscaba un claro y, si no había, los enemigos caían dentro de una montaña): cubre a los maestros
+        // que miran desde x-20 y a los enemigos en x+7.
+        private void PickArena(Map map)
+        {
+            arena = map.Center;
+            TestArena.Clear(map, CellRect.FromLimits(arena.x - 26, arena.z - 10, arena.x + 14, arena.z + 10));
+        }
 
         private void NextValidCase(Map map)
         {

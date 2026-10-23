@@ -45,7 +45,9 @@ namespace Convergence
 
         private void Run(Map map)
         {
-            if (!ModsConfig.IdeologyActive || DefDatabase<PreceptDef>.GetNamedSilentFail("CVG_Cultivation_Venerated") == null)
+            // Prueba del viejo Convergence: Sects (retirado); Factions tiene su propio autotest (-cvgfactionstest)
+            if (!ModsConfig.IdeologyActive || DefDatabase<PreceptDef>.GetNamedSilentFail("CVG_Cultivation_Venerated") == null
+                || !ModsConfig.IsActive("prospero1088.convergence.sects"))
             {
                 sb.Append("\n  (Ideology or the sects module not loaded: skipped)");
                 return;

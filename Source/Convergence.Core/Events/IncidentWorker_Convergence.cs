@@ -102,4 +102,23 @@ namespace Convergence
             if (map != null) GameComponent_Convergence.Instance?.TryFire(map);
         }
     }
+
+    /// <summary>
+    /// Al completar el proyecto, dispara un incidente (forzado) en el mapa del jugador: p. ej. "reinos secretos" abre una puerta. El incidente
+    /// va por nombre porque puede ser de un módulo (Stories); si ese módulo no está, no pasa nada.
+    /// </summary>
+    public class ResearchMod_FireIncident : ResearchMod
+    {
+        public string incident;
+
+        public override void Apply()
+        {
+            var def = DefDatabase<IncidentDef>.GetNamedSilentFail(incident ?? "");
+            var map = Find.AnyPlayerHomeMap;
+            if (def == null || map == null || Current.ProgramState != ProgramState.Playing) return;
+            var parms = StorytellerUtility.DefaultParmsNow(def.category, map);
+            parms.forced = true;
+            if (def.Worker.CanFireNow(parms)) def.Worker.TryExecute(parms);
+        }
+    }
 }

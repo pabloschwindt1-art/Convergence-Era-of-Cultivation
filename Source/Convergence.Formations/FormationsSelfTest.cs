@@ -87,6 +87,7 @@ namespace Convergence.Formations
         {
             Cleanup();
             center = map.Center;
+            TestArena.Clear(map, CellRect.CenteredOn(center, 24));   // superficie limpia: sin roca ni agua donde van banderas y enemigos
             foreach (var dx in new[] { -6, 6 })
                 foreach (var dz in new[] { -6, 6 })
                 {
