@@ -20,7 +20,7 @@
   <HediffDef ParentName="CVG_RealmHediffBase">
     <defName>CVG_Hediff_QiRefining</defName>
     <label>Qi Refining</label>
-    <description>This cultivator is in the Qi Refining realm: qi flows through the opened meridians and slowly strengthens the body.</description>
+    <description>This cultivator is in the Qi Refining realm: qi flows through the opened meridians and slowly strengthens the body. It is the first of the great realms, and most cultivators of Jiuxiao never leave it. Those who do say the hardest step was the first breath that truly gathered qi.</description>
     <stages>
       <li>
         <minSeverity>1</minSeverity>

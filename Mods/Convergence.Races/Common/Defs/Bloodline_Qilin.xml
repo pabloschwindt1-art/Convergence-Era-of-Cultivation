@@ -478,7 +478,7 @@
   <HediffDef>
     <defName>CVG_QilinBlessed</defName>
     <label>qilin's blessing</label>
-    <description>The calm of the qilin: wounds close faster and the heart is lighter.</description>
+    <description>The calm of the qilin: wounds close faster and the heart is lighter. The qilin walks without crushing a single blade of grass, and those near one feel some of that gentleness. Healers count a patient with qilin blood as already half cured.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(1, 0.85, 0.45)</defaultLabelColor>

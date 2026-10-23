@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <CVG_Passive_LightningReflexes.label>reflejos de relámpago</CVG_Passive_LightningReflexes.label>
-  <CVG_Passive_LightningReflexes.description>El qi del trueno corre por los nervios más rápido que el pensamiento.</CVG_Passive_LightningReflexes.description>
+  <CVG_Passive_LightningReflexes.description>El qi del trueno corre por los nervios más rápido que el pensamiento. Los cultivadores de raíz de trueno se mueven primero y piensan después, algo que sus ancianos encuentran útil y agotador a la vez.</CVG_Passive_LightningReflexes.description>
   <CVG_Passive_StormHeart.label>corazón de la tormenta</CVG_Passive_StormHeart.label>
-  <CVG_Passive_StormHeart.description>Un ojo de tormenta quieto late en el pecho.</CVG_Passive_StormHeart.description>
+  <CVG_Passive_StormHeart.description>Un ojo de tormenta quieto late en el pecho. Los cultivadores del trueno que lo alcanzan dejan de sobresaltarse con el ruido de su propio rayo.</CVG_Passive_StormHeart.description>
   <CVG_Passive_LightningBody.label>cuerpo de relámpago</CVG_Passive_LightningBody.label>
-  <CVG_Passive_LightningBody.description>El cuerpo recuerda el rayo.</CVG_Passive_LightningBody.description>
+  <CVG_Passive_LightningBody.description>El cuerpo recuerda el rayo. Quien sobrevive a una tribulación guarda un rastro de ella en la sangre, y la tormenta siguiente lo encuentra menos extraño.</CVG_Passive_LightningBody.description>
   <CVG_Passive_TribulationBorn.label>nacido de la tribulación</CVG_Passive_TribulationBorn.label>
-  <CVG_Passive_TribulationBorn.description>El rayo reconoce a los suyos.</CVG_Passive_TribulationBorn.description>
+  <CVG_Passive_TribulationBorn.description>El rayo reconoce a los suyos. Pocos cultivadores nacen bajo una tormenta de tribulación; el cielo parece tratar a esos pocos como suyos.</CVG_Passive_TribulationBorn.description>
 </LanguageData>

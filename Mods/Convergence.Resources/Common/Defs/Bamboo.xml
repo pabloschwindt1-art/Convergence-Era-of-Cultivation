@@ -154,7 +154,7 @@
   <ThingDef ParentName="TreeBase">
     <defName>CVG_Plant_JadeBamboo</defName>
     <label>jade spirit bamboo</label>
-    <description>Jade-green bamboo with veins of light in every joint. It only takes root in rich or spirit soil, grows slowly for a bamboo and never runs wild; a grove of it is a treasure sects guard with formations.</description>
+    <description>Jade-green bamboo with veins of light in every joint. It only takes root in rich or spirit soil, grows slowly for a bamboo and never runs wild; a grove of it is a treasure sects guard with formations. Each stalk raises the qi concentration around it a little.</description>
     <graphicData>
       <texPath>Things/Plant/CVG/JadeBamboo</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -294,7 +294,7 @@
   <ThingDef ParentName="PlantBase">
     <defName>CVG_Plant_CelestialPeach</defName>
     <label>celestial peach tree</label>
-    <description>A peach tree of the gardens of Jiuxiao, said to descend from the orchard of the Queen Mother of the West. It only takes root in spirit-rich soil and fruits once in a long while; its peaches lengthen life and steady the breath of cultivators. Sects have gone to war over a single tree.</description>
+    <description>A peach tree of the gardens of Jiuxiao, said to descend from the orchard of the Queen Mother of the West. It only takes root in spirit-rich soil and fruits once in a long while; its peaches lengthen life and steady the breath of cultivators. Sects have gone to war over a single tree. Each tree raises the qi concentration around it a little.</description>
     <graphicData>
       <texPath>Things/Plant/CVG/CelestialPeach</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -374,7 +374,7 @@
   <HediffDef>
     <defName>CVG_PeachBlessing</defName>
     <label>peach blessing</label>
-    <description>The essence of a peach of immortality runs through the body: wounds close faster, the breath is long and the qi flows freely.</description>
+    <description>The essence of a peach of immortality runs through the body: wounds close faster, the breath is long and the qi flows freely. The Queen Mother of the West served these peaches to the immortals once every three thousand years. Even a single bite is said to add years to a mortal life.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(1, 0.75, 0.8)</defaultLabelColor>
     <isBad>false</isBad>

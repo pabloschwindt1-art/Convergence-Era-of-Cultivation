@@ -93,7 +93,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_EdgeOfTheHeart</defName>
     <label>edge of the heart</label>
-    <description>The heart cuts before the hand moves.</description>
+    <description>The heart cuts before the hand moves. Formless Sword masters say the true sword is drawn in the heart; the steel only follows.</description>
     <defaultLabelColor>(0.95,0.85,0.45)</defaultLabelColor>
     <stages>
       <li>
@@ -166,7 +166,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_SwordIntent</defName>
     <label>sword intent</label>
-    <description>An invisible blade presses on everyone nearby.</description>
+    <description>An invisible blade presses on everyone nearby. Formless Sword elders can make a disciple kneel with it without lifting a finger.</description>
     <defaultLabelColor>(0.95,0.85,0.45)</defaultLabelColor>
     <stages>
       <li>
@@ -224,7 +224,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_EvergreenBreath</defName>
     <label>evergreen breath</label>
-    <description>Wood qi enters with every breath and cleans the body.</description>
+    <description>Wood qi enters with every breath and cleans the body. Hermits who live among old forests carry it without trying, and rarely fall ill.</description>
     <defaultLabelColor>(0.5,0.9,0.5)</defaultLabelColor>
     <stages>
       <li>
@@ -296,7 +296,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_TreeHeart</defName>
     <label>heart of the old tree</label>
-    <description>The slow pulse of every living thing beats in the hands.</description>
+    <description>The slow pulse of every living thing beats in the hands. The old gardeners of the sects say a cultivator with it can tell a sick tree from a healthy one by touch alone.</description>
     <defaultLabelColor>(0.5,0.9,0.5)</defaultLabelColor>
     <stages>
       <li>
@@ -364,7 +364,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_CloudSteps</defName>
     <label>cloud steps</label>
-    <description>Every step slides like a cloud over a lake.</description>
+    <description>Every step slides like a cloud over a lake. Formless Sword disciples practice it on the morning mist of the slopes, and the best of them leave no footprints in fresh snow.</description>
     <defaultLabelColor>(0.55,0.8,1)</defaultLabelColor>
     <stages>
       <li>
@@ -417,7 +417,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_StillWaterMind</defName>
     <label>still water mind</label>
-    <description>Storms of the heart pass without a ripple.</description>
+    <description>Storms of the heart pass without a ripple. Inner demons find little to hold on to in a mind like still water.</description>
     <defaultLabelColor>(0.55,0.8,1)</defaultLabelColor>
     <stages>
       <li>
@@ -475,7 +475,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_TideReading</defName>
     <label>reading the tide</label>
-    <description>The flow of the fight is as clear as a tide.</description>
+    <description>The flow of the fight is as clear as a tide. Water-root cultivators learn it by watching the sea, which never hurries and always arrives.</description>
     <defaultLabelColor>(0.55,0.8,1)</defaultLabelColor>
     <stages>
       <li>
@@ -543,7 +543,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_InnerFurnace</defName>
     <label>inner furnace</label>
-    <description>Coals of fire qi glow in the dantian.</description>
+    <description>Coals of fire qi glow in the dantian. An alchemist with an inner furnace can refine a simple pill in the palm of the hand, or so the Heavenly Cauldron boasts.</description>
     <defaultLabelColor>(1,0.6,0.35)</defaultLabelColor>
     <stages>
       <li>
@@ -600,7 +600,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_SunHeart</defName>
     <label>heart of the sun</label>
-    <description>A steady sun burns at the center of the chest.</description>
+    <description>A steady sun burns at the center of the chest. Pure-yang cultivators carry it like a small morning, and the cold of the night keeps away from them.</description>
     <defaultLabelColor>(1,0.6,0.35)</defaultLabelColor>
     <stages>
       <li>
@@ -658,7 +658,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_StoneMarrow</defName>
     <label>stone marrow</label>
-    <description>The marrow is dense as river stone.</description>
+    <description>The marrow is dense as river stone. Nine Temperings disciples soak in mineral springs for years to reach it, and their bones are said to ring like a bell when struck.</description>
     <defaultLabelColor>(0.8,0.7,0.5)</defaultLabelColor>
     <stages>
       <li>
@@ -715,7 +715,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_RootedMountain</defName>
     <label>rooted mountain</label>
-    <description>Roots of earth qi reach deep below the feet.</description>
+    <description>Roots of earth qi reach deep below the feet. A cultivator rooted like this cannot be pushed off a bridge, a wall or a decision.</description>
     <defaultLabelColor>(0.8,0.7,0.5)</defaultLabelColor>
     <stages>
       <li>
@@ -757,7 +757,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_SpringRejuvenation</defName>
     <label>spring rejuvenation</label>
-    <description>Living wood qi knits the flesh without pause.</description>
+    <description>Living wood qi knits the flesh without pause. It is the gentlest art of the wood path, and the healers of the Heavenly Cauldron learn it before any other.</description>
     <defaultLabelColor>(0.5,0.9,0.5)</defaultLabelColor>
     <stages>
       <li>
@@ -794,7 +794,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_BlazingMeridians</defName>
     <label>blazing meridians</label>
-    <description>Fire qi runs hot through the meridians.</description>
+    <description>Fire qi runs hot through the meridians. Heavenly Cauldron alchemists keep this fire lit even in their sleep, and their rooms are always warm.</description>
     <defaultLabelColor>(1,0.6,0.35)</defaultLabelColor>
     <stages>
       <li>
@@ -836,7 +836,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_MountainBody</defName>
     <label>mountain body</label>
-    <description>Earth qi hardens skin and bones like rock.</description>
+    <description>Earth qi hardens skin and bones like rock. Earth-root disciples train it by sleeping on bare stone until the stone feels soft.</description>
     <defaultLabelColor>(0.8,0.7,0.5)</defaultLabelColor>
     <stages>
       <li>

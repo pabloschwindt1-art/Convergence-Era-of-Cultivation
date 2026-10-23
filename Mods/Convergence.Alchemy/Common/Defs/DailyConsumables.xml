@@ -292,7 +292,7 @@
   <HediffDef>
     <defName>CVG_BiguCalm</defName>
     <label>fasting calm</label>
-    <description>The fasting pill keeps the stomach quiet: hunger comes more slowly for a while.</description>
+    <description>The fasting pill keeps the stomach quiet: hunger comes more slowly for a while. Bigu, 'avoiding grain', is the fast of the old hermits, who lived on mist and pine needles for months. The pill is the alchemists' shortcut to it, and the Heavenly Cauldron sells it to every sect that marches far from its kitchens.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -515,7 +515,7 @@
   <HediffDef>
     <defName>CVG_CloudTeaClarity</defName>
     <label>tea clarity</label>
-    <description>A cup of cloud tea: the mind is clear and qi gathers a little faster for a few hours.</description>
+    <description>A cup of cloud tea: the mind is clear and qi gathers a little faster for a few hours. Cloud tea grows only where the mist sits on the slopes all morning, and the disciples of Jiuxiao drink it before their dawn meditation. A second cup, the elders warn, brings nothing but a full bladder.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>
@@ -625,7 +625,7 @@
   <HediffDef>
     <defName>CVG_IncenseCalm</defName>
     <label>incense calm</label>
-    <description>Incense smoke: a quiet heart and freer qi, but slower senses.</description>
+    <description>Incense smoke: a quiet heart and freer qi, but slower senses. Temple incense is rolled with sandalwood and a pinch of spirit herb, the way the mountain temples of Jiuxiao have burned it for a thousand years. Monks say the smoke carries a prayer up; sentries say it makes them miss the thief.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <maxSeverity>1</maxSeverity>

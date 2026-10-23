@@ -129,7 +129,7 @@
   <HediffDef ParentName="CVG_TechniqueBuffBase">
     <defName>CVG_QiShield</defName>
     <label>qi shield</label>
-    <description>A bell of qi wraps the body and swallows blows until it breaks.</description>
+    <description>A bell of qi wraps the body and swallows blows until it breaks. The golden bell is one of the oldest defensive arts in Jiuxiao, and every sect teaches some form of it. A disciple's first bell is famously thin; a master's can stop a charging bull.</description>
     <comps>
       <li Class="HediffCompProperties_Disappears">
         <disappearsAfterTicks>1800~1800</disappearsAfterTicks>
@@ -162,7 +162,7 @@
   <HediffDef ParentName="CVG_TechniqueBuffBase">
     <defName>CVG_SpringRejuvenation</defName>
     <label>spring rejuvenation</label>
-    <description>Living wood qi flows through the wounds, knitting flesh and slowing the bleeding.</description>
+    <description>Living wood qi flows through the wounds, knitting flesh and slowing the bleeding. The healers of the Heavenly Cauldron use it on the battlefield when there is no time to refine a pill. It raises no one from the dead, but it buys time for those who can still be saved.</description>
     <defaultLabelColor>(0.5, 0.9, 0.5)</defaultLabelColor>
     <comps>
       <li Class="HediffCompProperties_Disappears">
@@ -183,7 +183,7 @@
   <HediffDef ParentName="CVG_TechniqueBuffBase">
     <defName>CVG_BlazingMeridians</defName>
     <label>blazing meridians</label>
-    <description>Fire qi rages through the meridians: the body moves and strikes beyond its limits, and it burns.</description>
+    <description>Fire qi rages through the meridians: the body moves and strikes beyond its limits, and it burns. The technique comes from the furnace halls of the Heavenly Cauldron, where alchemists learned to run their own qi as hot as their fires. Used too long, it leaves the meridians scorched for days.</description>
     <defaultLabelColor>(1, 0.6, 0.35)</defaultLabelColor>
     <comps>
       <li Class="HediffCompProperties_Disappears">

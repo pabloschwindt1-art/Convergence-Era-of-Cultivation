@@ -150,7 +150,7 @@
   <ThingDef ParentName="PlantBase">
     <defName>CVG_Plant_Lotus</defName>
     <label>lotus</label>
-    <description>A broad-leaved plant with a single pink flower that opens at dawn and closes at dusk. It wants rich, wet ground, so it fares poorly in dry or poor soil. It is beautiful in the field and gives edible roots; in the mountain temples of Jiuxiao it grows in every pond, and no one remembers who planted the first.</description>
+    <description>A broad-leaved plant with a single pink flower that opens at dawn and closes at dusk. It wants rich, wet ground, so it fares poorly in dry or poor soil. It is beautiful in the field and gives edible roots; in the mountain temples of Jiuxiao it grows in every pond, and no one remembers who planted the first. Each lotus in the water raises the qi concentration around it a little.</description>
     <statBases>
       <MaxHitPoints>85</MaxHitPoints>
       <Nutrition>0.15</Nutrition>

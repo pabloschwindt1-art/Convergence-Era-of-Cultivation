@@ -148,6 +148,7 @@ It must be fed blood essence pills or hemogen packs.</description>
     <defName>CVG_BloodDrumOfReturn</defName>
     <label>blood drum of return</label>
     <description>Chiyou's war-shamans beat drums of hide stretched over blood-red wood to call their fallen back from the edge of death. Set beside a blood pool, its slow beat keeps time with the sleeper's heart and hurries the retreat to its end, like a deathrest accelerator without electricity.</description>
+    <size>(1,1)</size>   <!-- la base es 1x2 (pileta); el tambor es redondo -->
     <graphicData>
       <texPath>Things/Building/CVG/BloodDrum</texPath>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>

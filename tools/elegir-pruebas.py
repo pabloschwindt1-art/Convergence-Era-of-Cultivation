@@ -73,6 +73,20 @@ def changed_files(desde):
     return sorted(f.strip() for f in files if f.strip() and "/obj/" not in f and "/Assemblies/" not in f)
 
 
+TEXT_LINE = re.compile(r'^\s*(<(description|label|labelNoun|jobString|reportString|discoveryText|[\w.]+\.(description|label|labelNoun|'
+                       r'jobString|reportString|discoveryText))>.*|<!--.*|)\s*$')
+
+
+def text_only(f, desde):
+    """True si en el XML solo cambiaron textos (descripciones, labels, comentarios): eso no cambia el comportamiento."""
+    if not f.endswith('.xml'):
+        return False
+    rev = [desde] if desde else ['HEAD']
+    out = subprocess.run(["git", "diff", "-U0", *rev, "--", f], capture_output=True, text=True, encoding="utf-8").stdout
+    lines = [l[1:] for l in out.split('\n') if l[:1] in '+-' and not l.startswith(('+++', '---'))]
+    return bool(lines) and all(TEXT_LINE.match(l) for l in lines)
+
+
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
     args = sys.argv[1:]
@@ -86,6 +100,9 @@ def main():
     tests, motivos, texto, arte = [], {}, False, False
     for f in files:
         f = f.replace("\\", "/")
+        if text_only(f, desde):
+            texto = True
+            continue
         hit = False
         for pat, ts, why in REGLAS:
             if re.search(pat, f):

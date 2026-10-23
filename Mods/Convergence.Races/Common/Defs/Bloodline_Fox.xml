@@ -572,7 +572,7 @@
   <HediffDef>
     <defName>CVG_FoxCharmed</defName>
     <label>charmed</label>
-    <description>Entranced by a fox's glance.</description>
+    <description>Entranced by a fox's glance. The fox spirits of the old tales could make a scholar forget his books and a general his war. The charm fades in time, and its victims rarely remember what they did under it.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>true</isBad>
     <defaultLabelColor>(1, 0.6, 0.35)</defaultLabelColor>

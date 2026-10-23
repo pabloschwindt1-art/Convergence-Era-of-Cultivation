@@ -12,7 +12,7 @@
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>CVG_QT_Gun_InductionTurret</defName>
     <label>qi induction turret emitter</label>
-    <description>The emitter of a qi induction turret: three coils that fold the qi of a spirit stone around each bolt.</description>
+    <description>The emitter of a qi induction turret: three coils that fold the qi of a spirit stone around each bolt. The coils are wound by hand with silver wire, the way a talisman master draws a seal, and no two turrets sound quite the same when they fire.</description>
     <graphicData>
       <!-- Points east like Ludeon _Top art (TurretTop.ArtworkRotation -90); centred on its pivot (the qi core) by tools/art/recorte/turret_sheet.py -->
       <texPath>Things/Building/CVG/QiTech/QiInductionTurret_Top</texPath>
@@ -112,7 +112,7 @@
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>CVG_QT_Gun_ContainmentTurret</defName>
     <label>qi containment cannon emitter</label>
-    <description>The emitter of a qi containment cannon: a magnetic bottle that holds a compressed qi bolt until it is let go.</description>
+    <description>The emitter of a qi containment cannon: a magnetic bottle that holds a compressed qi bolt until it is let go. The design is Qi-Tech's answer to the old talisman bottles in which Jiuxiao sorcerers kept captured lightning. Its engineers joke that the bottle is the easy part; the hard part is letting go at the right moment.</description>
     <graphicData>
       <!-- Points east like Ludeon _Top art (TurretTop.ArtworkRotation -90); centred on its pivot (the qi core) by tools/art/recorte/turret_sheet.py -->
       <texPath>Things/Building/CVG/QiTech/QiContainmentTurret_Top</texPath>

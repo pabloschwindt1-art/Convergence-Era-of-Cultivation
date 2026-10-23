@@ -5,14 +5,16 @@
   <CVG_SmoothedTribulationRock.label>roca de las diez tribulaciones pulida</CVG_SmoothedTribulationRock.label>
   <CVG_SmoothedTribulationRock.description>Roca negra marcada por rayos antiguos. Durísima; los muros de ella aguantan casi todo. Pulido hasta quedar liso.</CVG_SmoothedTribulationRock.description>
   <CVG_ChunkTribulationRock.label>trozo de roca de las diez tribulaciones</CVG_ChunkTribulationRock.label>
+  <CVG_ChunkTribulationRock.description>Un trozo pesado de roca de las diez tribulaciones, negra y marcada por rayos antiguos. Es demasiado dura para usarla así; en la mesa de cantero se convierte en bloques.</CVG_ChunkTribulationRock.description>
   <CVG_BlocksTribulationRock.label>bloques de roca de las diez tribulaciones</CVG_BlocksTribulationRock.label>
-  <CVG_BlocksTribulationRock.description>Bloques de roca de las diez tribulaciones. Roca negra marcada por rayos antiguos. Durísima; los muros de ella aguantan casi todo.</CVG_BlocksTribulationRock.description>
+  <CVG_BlocksTribulationRock.description>Bloques de roca de las diez tribulaciones. Roca negra marcada por rayos antiguos. Durísima; los muros de ella aguantan casi todo. Todo lo que se construye con estos bloques sube un poco la concentración de qi a su alrededor.</CVG_BlocksTribulationRock.description>
   <CVG_BlocksTribulationRock.stuffProps.stuffAdjective>roca de las diez tribulaciones</CVG_BlocksTribulationRock.stuffProps.stuffAdjective>
   <CVG_BlackJade.label>jade negro de montaña</CVG_BlackJade.label>
   <CVG_BlackJade.description>Una montaña entera de jade oscuro y lustroso. Duro y hermoso; guarda algo de qi.</CVG_BlackJade.description>
   <CVG_SmoothedBlackJade.label>jade negro de montaña pulido</CVG_SmoothedBlackJade.label>
   <CVG_SmoothedBlackJade.description>Una montaña entera de jade oscuro y lustroso. Duro y hermoso; guarda algo de qi. Pulido hasta quedar liso.</CVG_SmoothedBlackJade.description>
   <CVG_ChunkBlackJade.label>trozo de jade negro de montaña</CVG_ChunkBlackJade.label>
+  <CVG_ChunkBlackJade.description>Un trozo de jade negro de montaña, oscuro y brillante. Los tallistas de jade de Jiuxiao pagan bien por él; en la mesa de cantero se convierte en bloques.</CVG_ChunkBlackJade.description>
   <CVG_BlocksBlackJade.label>bloques de jade negro de montaña</CVG_BlocksBlackJade.label>
   <CVG_BlocksBlackJade.description>Bloques de jade negro de montaña. Una montaña entera de jade oscuro y lustroso. Duro y hermoso; guarda algo de qi.</CVG_BlocksBlackJade.description>
   <CVG_BlocksBlackJade.stuffProps.stuffAdjective>jade negro de montaña</CVG_BlocksBlackJade.stuffProps.stuffAdjective>
@@ -21,23 +23,26 @@
   <CVG_SmoothedCloudStone.label>piedra nube pulida</CVG_SmoothedCloudStone.label>
   <CVG_SmoothedCloudStone.description>Una piedra pálida y porosa, ligera como una nube. Se construye rápido pero no es muy resistente. Pulido hasta quedar liso.</CVG_SmoothedCloudStone.description>
   <CVG_ChunkCloudStone.label>trozo de piedra nube</CVG_ChunkCloudStone.label>
+  <CVG_ChunkCloudStone.description>Un trozo de piedra nube, pálida y porosa, tan liviano que un niño podría cargarlo. En la mesa de cantero se convierte en bloques.</CVG_ChunkCloudStone.description>
   <CVG_BlocksCloudStone.label>bloques de piedra nube</CVG_BlocksCloudStone.label>
-  <CVG_BlocksCloudStone.description>Bloques de piedra nube. Una piedra pálida y porosa, ligera como una nube. Se construye rápido pero no es muy resistente.</CVG_BlocksCloudStone.description>
+  <CVG_BlocksCloudStone.description>Bloques de piedra nube. Una piedra pálida y porosa, ligera como una nube. Se construye rápido pero no es muy resistente. Todo lo que se construye con estos bloques sube un poco la concentración de qi a su alrededor.</CVG_BlocksCloudStone.description>
   <CVG_BlocksCloudStone.stuffProps.stuffAdjective>piedra nube</CVG_BlocksCloudStone.stuffProps.stuffAdjective>
   <CVG_CelestialMarble.label>mármol celestial</CVG_CelestialMarble.label>
   <CVG_CelestialMarble.description>Mármol blanco con vetas doradas, de donde el cielo toca las cumbres. La mejor piedra para salones y estatuas.</CVG_CelestialMarble.description>
   <CVG_SmoothedCelestialMarble.label>mármol celestial pulido</CVG_SmoothedCelestialMarble.label>
   <CVG_SmoothedCelestialMarble.description>Mármol blanco con vetas doradas, de donde el cielo toca las cumbres. La mejor piedra para salones y estatuas. Pulido hasta quedar liso.</CVG_SmoothedCelestialMarble.description>
   <CVG_ChunkCelestialMarble.label>trozo de mármol celestial</CVG_ChunkCelestialMarble.label>
+  <CVG_ChunkCelestialMarble.description>Un trozo de mármol blanco con vetas de oro, de donde el cielo toca los picos. Los constructores de templos lo cortan en bloques para salas y estatuas.</CVG_ChunkCelestialMarble.description>
   <CVG_BlocksCelestialMarble.label>bloques de mármol celestial</CVG_BlocksCelestialMarble.label>
-  <CVG_BlocksCelestialMarble.description>Bloques de mármol celestial. Mármol blanco con vetas doradas, de donde el cielo toca las cumbres. La mejor piedra para salones y estatuas.</CVG_BlocksCelestialMarble.description>
+  <CVG_BlocksCelestialMarble.description>Bloques de mármol celestial. Mármol blanco con vetas doradas, de donde el cielo toca las cumbres. La mejor piedra para salones y estatuas. Todo lo que se construye con estos bloques sube un poco la concentración de qi a su alrededor.</CVG_BlocksCelestialMarble.description>
   <CVG_BlocksCelestialMarble.stuffProps.stuffAdjective>mármol celestial</CVG_BlocksCelestialMarble.stuffProps.stuffAdjective>
   <CVG_VermilionStone.label>piedra bermellón</CVG_VermilionStone.label>
   <CVG_VermilionStone.description>Roca roja rica en cinabrio, la tinta de los talismanes. Se dice que sus muros mantienen fuera el mal.</CVG_VermilionStone.description>
   <CVG_SmoothedVermilionStone.label>piedra bermellón pulida</CVG_SmoothedVermilionStone.label>
   <CVG_SmoothedVermilionStone.description>Roca roja rica en cinabrio, la tinta de los talismanes. Se dice que sus muros mantienen fuera el mal. Pulido hasta quedar liso.</CVG_SmoothedVermilionStone.description>
   <CVG_ChunkVermilionStone.label>trozo de piedra bermellón</CVG_ChunkVermilionStone.label>
+  <CVG_ChunkVermilionStone.description>Un trozo de piedra bermellón, roja y rica en el cinabrio que los maestros de talismanes muelen para hacer tinta. En la mesa de cantero se convierte en bloques.</CVG_ChunkVermilionStone.description>
   <CVG_BlocksVermilionStone.label>bloques de piedra bermellón</CVG_BlocksVermilionStone.label>
-  <CVG_BlocksVermilionStone.description>Bloques de piedra bermellón. Roca roja rica en cinabrio, la tinta de los talismanes. Se dice que sus muros mantienen fuera el mal.</CVG_BlocksVermilionStone.description>
+  <CVG_BlocksVermilionStone.description>Bloques de piedra bermellón. Roca roja rica en cinabrio, la tinta de los talismanes. Se dice que sus muros mantienen fuera el mal. Todo lo que se construye con estos bloques sube un poco la concentración de qi a su alrededor.</CVG_BlocksVermilionStone.description>
   <CVG_BlocksVermilionStone.stuffProps.stuffAdjective>piedra bermellón</CVG_BlocksVermilionStone.stuffProps.stuffAdjective>
 </LanguageData>

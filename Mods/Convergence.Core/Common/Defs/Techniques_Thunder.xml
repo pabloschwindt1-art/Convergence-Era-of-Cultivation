@@ -152,7 +152,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_LightningReflexes</defName>
     <label>lightning reflexes</label>
-    <description>Thunder qi runs along the nerves faster than thought.</description>
+    <description>Thunder qi runs along the nerves faster than thought. Thunder-root cultivators move first and think afterwards, which their elders find both useful and exhausting.</description>
     <defaultLabelColor>(0.65,0.45,1)</defaultLabelColor>
     <stages>
       <li>
@@ -224,7 +224,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_StormHeart</defName>
     <label>heart of the storm</label>
-    <description>A still eye of the storm beats in the chest.</description>
+    <description>A still eye of the storm beats in the chest. Thunder cultivators who reach it stop flinching at the sound of their own lightning.</description>
     <defaultLabelColor>(0.65,0.45,1)</defaultLabelColor>
     <stages>
       <li>
@@ -286,7 +286,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_LightningBody</defName>
     <label>body of lightning</label>
-    <description>The body remembers the lightning.</description>
+    <description>The body remembers the lightning. Whoever survives a tribulation keeps a trace of it in the blood, and the next storm finds them less of a stranger.</description>
     <defaultLabelColor>(0.65,0.45,1)</defaultLabelColor>
     <stages>
       <li>
@@ -344,7 +344,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_TribulationBorn</defName>
     <label>tribulation-born</label>
-    <description>Lightning recognizes its own.</description>
+    <description>Lightning recognizes its own. Few cultivators are born under a tribulation storm; the heavens seem to treat those few as their own.</description>
     <defaultLabelColor>(0.65,0.45,1)</defaultLabelColor>
     <stages>
       <li>

@@ -38,6 +38,11 @@ Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod
   prueba en el monitor secundario (ROG), visible y sin robar el foco (`-NoSecondMonitor` vuelve a la ventana minimizada).
   Tanda en 1.7.4985 con los 15 mods: Core, Resource, Bloodline, Trait, Stories, Formations, Grafts, Factions, Qi network, Qi-Tech,
   Crops, Furniture y Flying island ALL OK.
+- Textos (EN, ES y ES-Latin): 51 descripciones cortas pasan a tener lore de 2-3 frases (técnicas pasivas, buffs, condiciones de
+  alquimia, linajes y recursos, materiales de marioneta, emisores de torretas de Qi-Tech); los 6 trozos de roca de Resources tienen
+  descripción; los 21 objetos que suben el qi lo dicen (muebles, puertas, bloques, jade, plantas). Biotech Wuxia: el tambor de sangre
+  ocupa 1×1 (heredaba el 1×2 de la pileta y su dibujo redondo no seguía la huella). `tools/audit_funcional.py` sin dos falsos
+  positivos (qi 0 de feng shui, clases usadas desde código). Carga en 1.7 ALL OK; los 3 errores de traducción son de Biotech vanilla.
 - Herramientas de prueba (sin cambio en el juego): skill nueva `rimworld-mod-tester` (docs/skills/) con el criterio de qué probar,
   y `tools/elegir-pruebas.py`, que elige los autotests según lo que cambió y separa los lentos (títeres, playtest), que piden permiso.
   `run-test.ps1 -Mods todos` y espera tantos resultados como pruebas pedidas. `TestArena.Clear` despeja la zona de los tests (roca,

@@ -305,7 +305,7 @@
   <HediffDef>
     <defName>CVG_EvilRepelled</defName>
     <label>repelled by the qilin</label>
-    <description>The auspicious blood of a qilin weakens this creature of the void.</description>
+    <description>The auspicious blood of a qilin weakens this creature of the void. Qilin blood is auspicious, and creatures of the void shy from it like animals from fire. The old scrolls say a qilin appears only when a wise ruler sits on the throne.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>true</isBad>
     <initialSeverity>3</initialSeverity>

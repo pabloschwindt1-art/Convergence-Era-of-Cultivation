@@ -296,7 +296,7 @@
     <defName>CVG_SpiritNourished</defName>
     <hediffClass>HediffWithComps</hediffClass>
     <label>spirit nourished</label>
-    <description>A spirit soup warms the meridians: cultivation and body tempering go a little faster for a day.</description>
+    <description>A spirit soup warms the meridians: cultivation and body tempering go a little faster for a day. Sect kitchens simmer spirit meat and herbs for a whole night to make it. Disciples swear by it before a long retreat.</description>
     <defaultLabelColor>(0.55, 0.8, 1)</defaultLabelColor>
     <isBad>false</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>

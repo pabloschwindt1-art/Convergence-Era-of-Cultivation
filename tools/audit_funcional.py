@@ -209,7 +209,7 @@ for mod, f, el in ours:
 for mod, f, el in ours:
     if el.tag == 'ResearchProjectDef':
         name = el.findtext('defName')
-        if used_elsewhere(name, el) == 0:
+        if used_elsewhere(name, el) == 0 and el.find('researchMods') is None:   # researchMods = hace algo al terminarla
             add('MEDIA', 'Investigaciones que no desbloquean nada', mod, name, 'ningún def ni código la pide')
         if text(el, 'techLevel') is None:
             add('BAJA', 'Investigaciones sin nivel tecnológico', mod, name, 'sin techLevel (el juego lo marca como error de config)')
@@ -271,8 +271,15 @@ for mod, f, el in ours:
     ex = exts(el)
     if re.search(r'raises? (the )?qi concentration|qi concentration of the room', dl) and not any('FengShui' in x for x in ex) and not any('Qi' in c for c in cc):
         add('ALTA', 'Dice que sube la concentración de qi y no tiene con qué', mod, name, 'sin DefModExtension_FengShui ni comp de qi')
-    if any('FengShui' in x for x in ex) and 'qi' not in dl:
-        add('BAJA', 'Sube el qi pero la descripción no lo dice', mod, name, 'tiene DefModExtension_FengShui')
+    # solo cuenta el qi (el campo element de FengShui no lo usa ningún código); qi 0 no sube nada
+    fs_qi = 0.0
+    for e in chain(el):
+        for x in (e.find('modExtensions') or []):
+            if 'FengShui' in (x.get('Class') or ''):
+                try: fs_qi = max(fs_qi, float(x.findtext('qi') or 0))
+                except ValueError: pass
+    if fs_qi > 0 and 'qi' not in dl:
+        add('BAJA', 'Sube el qi pero la descripción no lo dice', mod, name, f'DefModExtension_FengShui con qi {fs_qi:g}')
     if re.search(r'no electricity|needs no power|without power', dl) and any('PowerTrader' in c for c in cc):
         add('ALTA', 'Dice que no usa electricidad y consume energía', mod, name, 'tiene CompPowerTrader')
     m = re.search(r'level (\d) (alchemy furnace|spirit forge|furnace|forge)', dl)
@@ -320,13 +327,21 @@ for f, t in cs_text.items():
             continue
         if not any(base == b or base.startswith(b) for b in BASES):
             continue
-        if base in ('MapComponent', 'WorldComponent', 'GameComponent', 'Alert', 'MainTabWindow', 'Designator') or 'Test' in cls or 'Shot' in cls:
+        if base.startswith(('MapComponent', 'WorldComponent', 'GameComponent', 'Alert', 'MainTabWindow', 'Designator', 'ITab')) or 'Test' in cls or 'Shot' in cls:
             continue  # se registran solos
         if re.search(r'\b' + cls + r'\b', all_xml_lower):
             continue
-        # usado desde código (new X / typeof(X) / : X)
-        uses = len(re.findall(r'\b' + cls + r'\b', all_cs)) - 1
-        if uses <= 1:
+        # usado desde código: new X, GetModExtension<X>/GetComp<X>/<X>, o typeof(X) dentro de una clase que el XML nombra
+        # (CompProperties_AbilityCone -> compClass = typeof(CompAbilityEffect_Cone)); StatParts y parches van por new X
+        if re.search(r'new\s+' + cls + r'\b|<' + cls + r'>', all_cs):
+            continue
+        owner_named = False
+        for t2 in cs_text.values():
+            for tm in re.finditer(r'typeof\(' + cls + r'\)', t2):
+                owners = re.findall(r'class\s+(\w+)', t2[:tm.start()])
+                if owners and re.search(r'\b' + owners[-1] + r'\b', all_xml_lower):
+                    owner_named = True
+        if not owner_named:
             add('MEDIA', 'Código que ningún XML usa (la función nunca se activa)', mod, cls, f'clase {cls} : {base} en {os.path.relpath(f, ROOT)}')
 
 # ---------- Informe ----------

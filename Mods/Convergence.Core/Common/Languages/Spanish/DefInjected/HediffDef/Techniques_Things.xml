@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <CVG_QiShield.label>escudo de qi</CVG_QiShield.label>
-  <CVG_QiShield.description>Una campana de qi envuelve el cuerpo y se traga los golpes hasta romperse.</CVG_QiShield.description>
+  <CVG_QiShield.description>Una campana de qi envuelve el cuerpo y se traga los golpes hasta romperse. La campana dorada es uno de los artes defensivos más antiguos de Jiuxiao, y toda secta enseña alguna versión. La primera campana de un discípulo es famosa por lo fina; la de un maestro puede frenar a un toro embistiendo.</CVG_QiShield.description>
   <CVG_SpringRejuvenation.label>rejuvenecimiento primaveral</CVG_SpringRejuvenation.label>
-  <CVG_SpringRejuvenation.description>El qi de madera vivo recorre las heridas, une la carne y frena el sangrado.</CVG_SpringRejuvenation.description>
+  <CVG_SpringRejuvenation.description>El qi de madera vivo recorre las heridas, une la carne y frena el sangrado. Los sanadores del Caldero Celestial la usan en el campo de batalla cuando no hay tiempo de refinar una píldora. No resucita a nadie, pero da tiempo a los que todavía se pueden salvar.</CVG_SpringRejuvenation.description>
   <CVG_BlazingMeridians.label>meridianos ardientes</CVG_BlazingMeridians.label>
-  <CVG_BlazingMeridians.description>El qi de fuego arrasa los meridianos: el cuerpo se mueve y golpea más allá de sus límites, y arde.</CVG_BlazingMeridians.description>
+  <CVG_BlazingMeridians.description>El qi de fuego arrasa los meridianos: el cuerpo se mueve y golpea más allá de sus límites, y arde. La técnica viene de las salas de hornos del Caldero Celestial, donde los alquimistas aprendieron a hacer correr su qi tan caliente como sus fuegos. Usada demasiado tiempo, deja los meridianos chamuscados por días.</CVG_BlazingMeridians.description>
   <CVG_MountainBody.label>cuerpo de montaña</CVG_MountainBody.label>
   <CVG_MountainBody.description>El qi de tierra endurece la piel y los huesos como la roca. Los golpes resbalan, pero cada paso pesa.</CVG_MountainBody.description>
 </LanguageData>

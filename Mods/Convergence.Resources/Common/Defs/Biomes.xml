@@ -6,7 +6,7 @@
     <defName>CVG_SolarGoldSand</defName>
     <tradeability>Sellable</tradeability>
     <label>solar gold sand</label>
-    <description>Golden sand that drank the desert sun for ten thousand years: pure yang. The refining furnace burns it hotter than wood and can smelt gold out of it.</description>
+    <description>Golden sand that drank the desert sun for ten thousand years: pure yang. The refining furnace burns it hotter than wood and can smelt gold out of it. Anything built from it raises the qi concentration around it a little.</description>
     <graphicData>
       <texPath>Things/Item/Resource/CVG_SolarGoldSand</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -101,7 +101,7 @@
   <HediffDef>
     <defName>CVG_BloodFruitWarmth</defName>
     <label>blood fruit vigor</label>
-    <description>The blood fruit fills the body with warm blood qi: wounds close a little faster.</description>
+    <description>The blood fruit fills the body with warm blood qi: wounds close a little faster. The bushes grow wild in the scarred lands, and the Blood Moon Cult harvests them for its wounded. Eaten raw, the fruit leaves a taste of copper that lasts all day.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.9, 0.4, 0.4)</defaultLabelColor>
@@ -276,7 +276,7 @@
   <HediffDef>
     <defName>CVG_PoisonTempered</defName>
     <label>poison-tempered</label>
-    <description>A small dose of swamp poison trains the body against toxins.</description>
+    <description>A small dose of swamp poison trains the body against toxins. The healers of the Heavenly Cauldron give it to their apprentices drop by drop, year after year, until no common poison can harm them. Those who rush the doses do not become healers.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.6, 0.85, 0.4)</defaultLabelColor>

@@ -51,6 +51,7 @@
   <ThingDef ParentName="ChunkRockBase">
     <defName>CVG_ChunkTribulationRock</defName>
     <label>ten tribulations rock chunk</label>
+    <description>A heavy chunk of ten tribulations rock, black and scarred by ancient lightning. Too hard to use as it is; at a stonecutter's table it becomes blocks.</description>
     <graphicData>
       <color>(58,60,72)</color>
     </graphicData>
@@ -66,7 +67,7 @@
   <ThingDef ParentName="StoneBlocksBase">
     <defName>CVG_BlocksTribulationRock</defName>
     <label>ten tribulations rock blocks</label>
-    <description>Blocks of ten tribulations rock. Black rock scarred by ancient lightning. Extremely hard; walls of it shrug off almost anything.</description>
+    <description>Blocks of ten tribulations rock. Black rock scarred by ancient lightning. Extremely hard; walls of it shrug off almost anything. Anything built from these blocks raises the qi concentration around it a little.</description>
     <graphicData>
       <color>(58,60,72)</color>
     </graphicData>
@@ -181,6 +182,7 @@
   <ThingDef ParentName="ChunkRockBase">
     <defName>CVG_ChunkBlackJade</defName>
     <label>black mountain jade chunk</label>
+    <description>A chunk of dark, glossy mountain jade. The jade carvers of Jiuxiao pay well for it; at a stonecutter's table it becomes blocks.</description>
     <graphicData>
       <color>(42,58,52)</color>
     </graphicData>
@@ -310,6 +312,7 @@
   <ThingDef ParentName="ChunkRockBase">
     <defName>CVG_ChunkCloudStone</defName>
     <label>cloud stone chunk</label>
+    <description>A chunk of pale, porous cloud stone, so light a child could carry it. At a stonecutter's table it becomes blocks.</description>
     <graphicData>
       <color>(208,212,222)</color>
     </graphicData>
@@ -325,7 +328,7 @@
   <ThingDef ParentName="StoneBlocksBase">
     <defName>CVG_BlocksCloudStone</defName>
     <label>cloud stone blocks</label>
-    <description>Blocks of cloud stone. A pale, porous stone, light as a cloud. Quick to build with but not very tough.</description>
+    <description>Blocks of cloud stone. A pale, porous stone, light as a cloud. Quick to build with but not very tough. Anything built from these blocks raises the qi concentration around it a little.</description>
     <graphicData>
       <color>(208,212,222)</color>
     </graphicData>
@@ -440,6 +443,7 @@
   <ThingDef ParentName="ChunkRockBase">
     <defName>CVG_ChunkCelestialMarble</defName>
     <label>celestial marble chunk</label>
+    <description>A chunk of white marble veined with gold, from where the sky touches the peaks. Temple builders cut it into blocks for halls and statues.</description>
     <graphicData>
       <color>(226,220,204)</color>
     </graphicData>
@@ -455,7 +459,7 @@
   <ThingDef ParentName="StoneBlocksBase">
     <defName>CVG_BlocksCelestialMarble</defName>
     <label>celestial marble blocks</label>
-    <description>Blocks of celestial marble. White marble veined with gold, quarried where the sky touches the peaks. The finest stone for halls and statues.</description>
+    <description>Blocks of celestial marble. White marble veined with gold, quarried where the sky touches the peaks. The finest stone for halls and statues. Anything built from these blocks raises the qi concentration around it a little.</description>
     <graphicData>
       <color>(226,220,204)</color>
     </graphicData>
@@ -569,6 +573,7 @@
   <ThingDef ParentName="ChunkRockBase">
     <defName>CVG_ChunkVermilionStone</defName>
     <label>vermilion stone chunk</label>
+    <description>A chunk of red vermilion stone, rich in the cinnabar that talisman masters grind into ink. At a stonecutter's table it becomes blocks.</description>
     <graphicData>
       <color>(132,92,80)</color>
     </graphicData>
@@ -584,7 +589,7 @@
   <ThingDef ParentName="StoneBlocksBase">
     <defName>CVG_BlocksVermilionStone</defName>
     <label>vermilion stone blocks</label>
-    <description>Blocks of vermilion stone. Red rock rich in cinnabar, the ink of talismans. Its walls are said to keep evil out.</description>
+    <description>Blocks of vermilion stone. Red rock rich in cinnabar, the ink of talismans. Its walls are said to keep evil out. Anything built from these blocks raises the qi concentration around it a little.</description>
     <graphicData>
       <color>(132,92,80)</color>
     </graphicData>

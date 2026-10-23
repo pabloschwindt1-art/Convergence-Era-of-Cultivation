@@ -121,7 +121,7 @@
     <defName>CVG_MentorProtection</defName>
     <hediffClass>HediffWithComps</hediffClass>
     <label>guardian's resolve</label>
-    <description>The master fights to protect the colony with all the strength of a Nascent Soul.</description>
+    <description>The master fights to protect the colony with all the strength of a Nascent Soul. A master who arrived wounded with the Convergence repays shelter the old way: with the sword. While the colony is in danger, the master holds nothing back.</description>
     <defaultLabelColor>(1, 0.6, 0.35)</defaultLabelColor>
     <isBad>false</isBad>
     <scenarioCanAdd>false</scenarioCanAdd>

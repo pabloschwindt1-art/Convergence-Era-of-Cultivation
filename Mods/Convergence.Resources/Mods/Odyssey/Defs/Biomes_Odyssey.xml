@@ -6,7 +6,7 @@
     <defName>CVG_FireCrystal</defName>
     <tradeability>Sellable</tradeability>
     <label>fire spirit crystal</label>
-    <description>Crystal grown in rivers of lava. Barely conducts heat; armor and walls of it shrug off fire. The refining furnace burns it as fuel.</description>
+    <description>Crystal grown in rivers of lava. Barely conducts heat; armor and walls of it shrug off fire. The refining furnace burns it as fuel. Anything built from it raises the qi concentration around it a little.</description>
     <graphicData>
       <texPath>Things/Item/Resource/CVG_FireCrystal</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -97,7 +97,7 @@
     <defName>CVG_MoonJade</defName>
     <tradeability>Sellable</tradeability>
     <label>moon jade</label>
-    <description>Pale blue jade from the glowing forests; it shines softly at night. Beautiful, and said to calm the restless dead.</description>
+    <description>Pale blue jade from the glowing forests; it shines softly at night. Beautiful, and said to calm the restless dead. Anything built from it raises the qi concentration around it a little.</description>
     <graphicData>
       <texPath>Things/Item/Resource/CVG_MoonJade</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -187,7 +187,7 @@
     <defName>CVG_BloodJade</defName>
     <tradeability>Sellable</tradeability>
     <label>blood jade</label>
-    <description>Red jade from the scarred lands, veined like flesh. The demonic path treasures it; walls of it feel uneasy.</description>
+    <description>Red jade from the scarred lands, veined like flesh. The demonic path treasures it; walls of it feel uneasy. Anything built from it raises the qi concentration around it a little.</description>
     <graphicData>
       <texPath>Things/Item/Resource/CVG_BloodJade</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -324,6 +324,7 @@
   <ThingDef ParentName="ChunkRockBase">
     <defName>CVG_ChunkDragonObsidian</defName>
     <label>dragon obsidian chunk</label>
+    <description>A chunk of dragon obsidian, black, sharp-edged and cold to the touch even beside a fire. At a stonecutter's table it becomes blocks.</description>
     <graphicData>
       <color>(32,28,36)</color>
     </graphicData>
@@ -339,7 +340,7 @@
   <ThingDef ParentName="StoneBlocksBase">
     <defName>CVG_BlocksDragonObsidian</defName>
     <label>dragon obsidian blocks</label>
-    <description>Blocks of dragon obsidian: hard, sharp and resistant to fire. The vanished Ancient Dragon Clan built its hoard halls of it, because no thief's fire can crack the walls.</description>
+    <description>Blocks of dragon obsidian: hard, sharp and resistant to fire. The vanished Ancient Dragon Clan built its hoard halls of it, because no thief's fire can crack the walls. Anything built from these blocks raises the qi concentration around it a little.</description>
     <graphicData>
       <color>(32,28,36)</color>
     </graphicData>
@@ -410,7 +411,7 @@
   <HediffDef>
     <defName>CVG_FlameWarmth</defName>
     <label>flame lotus warmth</label>
-    <description>The fire of the flame lotus burns inside: the cold barely touches the body.</description>
+    <description>The fire of the flame lotus burns inside: the cold barely touches the body. Travelers who cross the northern passes carry a dried petal of flame lotus in their sleeve. The legend says the flower grew from a drop of the sun that fell into a frozen lake.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(1, 0.6, 0.3)</defaultLabelColor>
@@ -495,7 +496,7 @@
   <HediffDef>
     <defName>CVG_GlowSight</defName>
     <label>glowcap sight</label>
-    <description>The glowing mushroom sharpens the eyes in the dark.</description>
+    <description>The glowing mushroom sharpens the eyes in the dark. Miners of the deep caves chew it before going down, and claim it lets them see the veins of spirit stone shining in the dark.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.6, 0.9, 1)</defaultLabelColor>

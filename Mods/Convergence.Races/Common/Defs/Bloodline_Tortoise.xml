@@ -451,7 +451,7 @@
   <HediffDef>
     <defName>CVG_XuanwuShell</defName>
     <label>xuanwu's shell</label>
-    <description>A shell of black stone covers the body: blows slide off, but movement is heavy.</description>
+    <description>A shell of black stone covers the body: blows slide off, but movement is heavy. Xuanwu, the Black Tortoise, guards the north and carries the world on its back. Its heirs borrow a little of that shell, and with it a little of its slowness.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.45, 0.6, 0.5)</defaultLabelColor>

@@ -108,7 +108,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_UnbreakableEdge</defName>
     <label>golden core of metal</label>
-    <description>Metal qi has condensed into the flesh itself.</description>
+    <description>Metal qi has condensed into the flesh itself. Metal-root cultivators who reach it say that blades no longer feel like strangers to their skin.</description>
     <defaultLabelColor>(0.95,0.85,0.45)</defaultLabelColor>
     <stages>
       <li>
@@ -171,7 +171,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_TenThousandYearPine</defName>
     <label>ten-thousand-year pine</label>
-    <description>The body renews itself like an ancient pine.</description>
+    <description>The body renews itself like an ancient pine. The pine is the emblem of long life in Jiuxiao, and cultivators of the wood path hope to grow old as slowly as one.</description>
     <defaultLabelColor>(0.5,0.9,0.5)</defaultLabelColor>
     <stages>
       <li>
@@ -234,7 +234,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_BoundlessSea</defName>
     <label>boundless sea</label>
-    <description>The mind is as deep and calm as the Eastern Sea.</description>
+    <description>The mind is as deep and calm as the Eastern Sea. The art is said to come from a hermit who meditated on the shore of the Eastern Sea until the tide stopped waking him.</description>
     <defaultLabelColor>(0.55,0.8,1)</defaultLabelColor>
     <stages>
       <li>
@@ -307,7 +307,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_PhoenixEmber</defName>
     <label>phoenix ember</label>
-    <description>An ember of the phoenix glows in the Golden Core.</description>
+    <description>An ember of the phoenix glows in the Golden Core. Legends say the phoenix burns itself to be reborn; a cultivator who carries its ember is very hard to put out.</description>
     <defaultLabelColor>(1,0.6,0.35)</defaultLabelColor>
     <stages>
       <li>
@@ -385,7 +385,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_EndlessMountain</defName>
     <label>mountain without end</label>
-    <description>The body weighs like Mount Tai.</description>
+    <description>The body weighs like Mount Tai. Mount Tai is the first of the five sacred peaks, and whoever carries its weight is almost impossible to knock down.</description>
     <defaultLabelColor>(0.8,0.7,0.5)</defaultLabelColor>
     <stages>
       <li>
@@ -461,7 +461,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_DivineSense</defName>
     <label>divine sense</label>
-    <description>The spirit sense spreads like ripples on a pond.</description>
+    <description>The spirit sense spreads like ripples on a pond. A cultivator with it knows who stands behind a closed door before anyone knocks.</description>
     <defaultLabelColor>(0.75,0.7,1)</defaultLabelColor>
     <stages>
       <li>
@@ -529,7 +529,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_IronShirt</defName>
     <label>iron shirt</label>
-    <description>Tempered skin takes blows like an iron shirt.</description>
+    <description>Tempered skin takes blows like an iron shirt. It is the oldest body art of the Nine Temperings, beaten into disciples one bruise at a time.</description>
     <defaultLabelColor>(0.85,0.6,0.45)</defaultLabelColor>
     <stages>
       <li>
@@ -590,7 +590,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_DragonElephantMight</defName>
     <label>dragon-elephant might</label>
-    <description>The strength of the dragon and the elephant fills the muscles.</description>
+    <description>The strength of the dragon and the elephant fills the muscles. The name comes from an old sutra: on land nothing is stronger than the elephant, in the water nothing stronger than the dragon. The Nine Temperings teach it to disciples who can already lift a temple bell.</description>
     <defaultLabelColor>(0.85,0.6,0.45)</defaultLabelColor>
     <stages>
       <li>
@@ -652,7 +652,7 @@
   <HediffDef ParentName="CVG_TechniquePassiveHediffBase">
     <defName>CVG_Passive_UnbreakableBones</defName>
     <label>unbreakable bones</label>
-    <description>Forged bones bend and come back.</description>
+    <description>Forged bones bend and come back. Nine Temperings masters break and set their disciples' bones on purpose, until the bones learn not to break.</description>
     <defaultLabelColor>(0.85,0.6,0.45)</defaultLabelColor>
     <stages>
       <li>

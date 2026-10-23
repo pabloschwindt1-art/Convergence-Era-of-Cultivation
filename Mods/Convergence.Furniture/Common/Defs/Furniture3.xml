@@ -4,7 +4,7 @@
   <ThingDef ParentName="BedBase">
     <defName>CVG_SectDoubleBed</defName>
     <label>sect double bed</label>
-    <description>A wide bed of dark wood for two, with a red quilt for the wedding night and a hard pillow for every other. Dao partners of the Nine Temperings share one bed and one retreat, and say the second is the harder. The headboard carries two carved cranes, as the marriage contracts of Jiuxiao require.</description>
+    <description>A wide bed of dark wood for two, with a red quilt for the wedding night and a hard pillow for every other. Dao partners of the Nine Temperings share one bed and one retreat, and say the second is the harder. The headboard carries two carved cranes, as the marriage contracts of Jiuxiao require. It raises the qi concentration of the room a little, which Dao partners appreciate.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/SectDoubleBed</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -49,7 +49,7 @@
   <ThingDef ParentName="BedWithQualityBase">
     <defName>CVG_HealerBed</defName>
     <label>healer's bed</label>
-    <description>A bed of pale wood with a bowl of herbs under the pillow and a ring of jade beads on the frame, laid out the way the healers of the Heavenly Cauldron place their patients. The patient lies facing the door, the healer facing the patient, and nobody may speak above a whisper. It mends the sick faster than a plain bed, though nothing there is a machine.</description>
+    <description>A bed of pale wood with a bowl of herbs under the pillow and a ring of jade beads on the frame, laid out the way the healers of the Heavenly Cauldron place their patients. The patient lies facing the door, the healer facing the patient, and nobody may speak above a whisper. It mends the sick faster than a plain bed, though nothing there is a machine. Its jade beads gather qi, raising the concentration of the room.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/HealerBed</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -101,7 +101,7 @@
   <ThingDef ParentName="TableGatherSpotBase">
     <defName>CVG_BanquetTable</defName>
     <label>banquet round table</label>
-    <description>A round table big enough for twelve, with a lazy-susan of lacquered wood in the middle so that no guest has to reach for the dish. At a round table nobody sits at the head, which is the point: the sect's masters have been known to hold a council over rice just to avoid giving a seat of honor.</description>
+    <description>A round table big enough for twelve, with a lazy-susan of lacquered wood in the middle so that no guest has to reach for the dish. At a round table nobody sits at the head, which is the point: the sect's masters have been known to hold a council over rice just to avoid giving a seat of honor. The ring of guests around it gathers a little qi, raising the concentration of the room.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/BanquetTable</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -276,7 +276,7 @@
   <ThingDef Name="CVG_MoonDoor" ParentName="DoorBase">
     <defName>CVG_MoonDoor</defName>
     <label>moon door</label>
-    <description>A round doorway with a double leaf, the kind seen in the gardens of the old Heavenly Court. Stepping through it is said to rid you of one worry, which is why gardeners build it wide: nobody carries only one. A closed moon door looks like a full moon rising out of the wall.</description>
+    <description>A round doorway with a double leaf, the kind seen in the gardens of the old Heavenly Court. Stepping through it is said to rid you of one worry, which is why gardeners build it wide: nobody carries only one. A closed moon door looks like a full moon rising out of the wall. Its round shape lets qi flow without snagging, raising the concentration nearby a little.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/MoonDoor_Mover</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -298,7 +298,7 @@
   <ThingDef ParentName="DoorBase">
     <defName>CVG_LacqueredDoor</defName>
     <label>lacquered door</label>
-    <description>A double door of red lacquered wood with brass studs and a pair of stone lions on the sill, as the gates of every self-respecting sect since the First Convergence. It is sturdier than a plain door, and it makes visitors lower their voices without being asked.</description>
+    <description>A double door of red lacquered wood with brass studs and a pair of stone lions on the sill, as the gates of every self-respecting sect since the First Convergence. It is sturdier than a plain door, and it makes visitors lower their voices without being asked. The stone lions keep the qi from leaking out: the door raises the qi concentration nearby a little.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/LacqueredDoor_Mover</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -322,7 +322,7 @@
   <ThingDef ParentName="Wall" MayRequire="prospero1088.convergence.resources">
     <defName>CVG_BambooWall</defName>
     <label>bamboo wall</label>
-    <description>A wall of bamboo poles lashed side by side and plastered with a thin coat of clay. It goes up fast and costs almost nothing, holds a roof, and burns like a candle. The sect outposts of the Wandering Path use it because it can be rebuilt in a day, which they consider more important than lasting a century.</description>
+    <description>A wall of bamboo poles lashed side by side and plastered with a thin coat of clay. It goes up fast and costs almost nothing, holds a roof, and burns like a candle. The sect outposts of the Wandering Path use it because it can be rebuilt in a day, which they consider more important than lasting a century. Bamboo keeps a little qi in its joints: each section of wall raises the qi concentration nearby.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/BambooWall_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -421,7 +421,7 @@
   <ThingDef ParentName="FurnitureWithQualityBase">
     <defName>CVG_TeaPavilion</defName>
     <label>tea pavilion</label>
-    <description>A small open pavilion on four pillars, with a low table, a clay stove and a kettle that never quite stops boiling. Disciples come here to say the things they would not say in the hall. The pavilion of the Heavenly Cauldron is where its alchemists settle their arguments: by cup, and in order of rank.\n\nThis building requires adjacent chairs or stools to use.</description>
+    <description>A small open pavilion on four pillars, with a low table, a clay stove and a kettle that never quite stops boiling. Disciples come here to say the things they would not say in the hall. The pavilion of the Heavenly Cauldron is where its alchemists settle their arguments: by cup, and in order of rank.\n\nThis building requires adjacent chairs or stools to use. The ever-boiling kettle stirs the qi: the pavilion raises the concentration around it.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/TeaPavilion</texPath>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
@@ -609,7 +609,7 @@
   <ThingDef ParentName="FurnitureBase">
     <defName>CVG_LotusPlanter</defName>
     <label>lotus planter</label>
-    <description>A wide stone basin of still water where a single lotus opens each morning and closes at dusk. It grows on its own, needs no tending, and is never found dead. The temple monks say that is not a miracle but good manners: the flower will not wilt in front of someone who is looking for peace.</description>
+    <description>A wide stone basin of still water where a single lotus opens each morning and closes at dusk. It grows on its own, needs no tending, and is never found dead. The temple monks say that is not a miracle but good manners: the flower will not wilt in front of someone who is looking for peace. Its still water raises the qi concentration of the room.</description>
     <graphicData>
       <texPath>Things/Building/CVG/Furniture/LotusPlanter</texPath>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>

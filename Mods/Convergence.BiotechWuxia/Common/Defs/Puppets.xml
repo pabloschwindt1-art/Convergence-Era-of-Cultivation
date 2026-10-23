@@ -232,7 +232,7 @@ Once woven, it can only be recovered after death.</description>
   <HediffDef>
     <defName>CVG_PuppetMaterial_Wood</defName>
     <label>wooden body</label>
-    <description>Spirit wood moves as lightly as a branch in the wind, and burns like one: fire does double damage.</description>
+    <description>Spirit wood moves as lightly as a branch in the wind, and burns like one: fire does double damage. Peach and spirit wood are the first lesson of every puppeteer of the Thousand Strings Valley: light, cheap and forgiving. Apprentices learn early to keep their wooden puppets far from the forge.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <everCurableByItem>false</everCurableByItem>
@@ -248,7 +248,7 @@ Once woven, it can only be recovered after death.</description>
   <HediffDef>
     <defName>CVG_PuppetMaterial_Iron</defName>
     <label>iron joints</label>
-    <description>Iron and bronze joints are strong, but below freezing they stiffen: the puppet moves and works slower in the cold.</description>
+    <description>Iron and bronze joints are strong, but below freezing they stiffen: the puppet moves and works slower in the cold. The Thousand Strings Valley still casts its gate guardians in bronze for their weight, and wraps their joints in felt every winter.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <everCurableByItem>false</everCurableByItem>
@@ -274,7 +274,7 @@ Once woven, it can only be recovered after death.</description>
   <HediffDef>
     <defName>CVG_PuppetMaterial_Steel</defName>
     <label>spirit steel joints</label>
-    <description>Spirit steel keeps a little qi in the metal, so the cold only stiffens it half as much as iron.</description>
+    <description>Spirit steel keeps a little qi in the metal, so the cold only stiffens it half as much as iron. Its makers call it 'warm metal': a steel puppet left in the snow overnight still moves at dawn. It is the material of choice for puppets meant to cross the northern passes.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <everCurableByItem>false</everCurableByItem>
