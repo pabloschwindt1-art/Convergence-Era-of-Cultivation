@@ -92,4 +92,8 @@ para que el emblema no se tiña.
 - **2026-10-22 — Resources: horno de refinado (CVG_RefiningFurnace, textura Things/Building/CVG/RefiningFurnace).** El diseño
   actual es un resto provisorio: una losa gris con íconos sueltos (llama, cuencos, rodillo), que se ve en rt/capturas/workshop_resources/02_buildings.jpg.
   Hay que rehacerlo como un horno wuxia de verdad, de 2×1 o del tamaño que tenga el def, con la misma calidad que el horno de alquimia y la forja espiritual.
+- **2026-10-22 — Alchemy: ballesta de repetición Zhuge (CVG_RepeatingCrossbow, textura Things/Item/Equipment/CVG/RepeatingCrossbow).**
+  El diseño es malo y está **dado vuelta**: el arco y la punta quedan del lado del tirador, así que parece que dispara hacia quien la usa.
+  Se ve en rt/capturas/workshop_alchemy/05_gear.jpg (segunda de la segunda fila). Hay que rehacerla con el arco hacia adelante y la orientación
+  que usa RimWorld para las armas: la boca apunta a la derecha (este) en el ícono, como las demás armas de rango. Revisar también equippedAngleOffset.
 
