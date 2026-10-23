@@ -10,85 +10,19 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 ## Sin publicar
 
-### Convergence: Factions → 0.1.1 (2026-10-22)
-- Los miembros de las sectas y de los Errantes ya no nacen con xenotipos vanilla al azar (hussars, genies…): la base de facción
-  Outlander traía esa mezcla. Ahora son baseliners (los linajes de Races siguen funcionando aparte).
-- **Ideologías propias:** cada secta (y los Errantes) tiene una ideología fija con su nombre, su fundador como dios (Qing Feng, el
-  Patriarca de la Montaña de Hierro, el Fénix del Primer Fuego, Xue Jiuyou, Yan Shi), el título de líder de la secta, el **Gran
-  Anciano** como segundo rol, su ícono y solo nuestros preceptos más los básicos (funeral, fiesta, nacimiento, discurso, cambio de
-  rol). Ya no salen títulos como "primer ministro", dioses al azar, reliquias, juicios ni ejecuciones. También en partidas viejas.
-- El **Líder** y el **Gran Anciano** de cada secta usan su ícono propio (arte de las hojas del usuario), y la ideología queda bien desde que la secta se crea (antes recién se corregía al rato).
-- Títulos con mayúsculas en los nombres propios ("Amigo de la Espada Sin Forma").
-- Los regalos con material (armas y armaduras obra maestra o legendarias) llegan de metal, no de madera.
-- La descripción del artefacto obra maestra del Caldero avisa que a veces son tres píldoras de fundación.
-- Prueba nueva `-cvgfavorstest`: los cinco favores de las cinco sectas usados en el juego (llega lo prometido, los refuerzos y el
-  golpe pelean y no son hostiles), la Luna Sangrienta neutral con el Camino Demoníaco y las ideologías. ALL OK en 1.6.
-- Capturas de Workshop: `-cvgfactionstest`/`-cvgfactionsshot` (guion `FactionsShot.cs`, inerte sin el argumento); capturas en
-  `art/capturas/workshop_factions/`.
+Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod).
 
-**Change notes (Steam):**
-```
-- Sect members are no longer born as random vanilla xenotypes (hussars, genies...): they are human cultivators.
-- Each sect now has its own fixed ideoligion: its name, founder, leader title, a Grand Elder role and only sect precepts (no more random "prime ministers", relics or executions).
-- Masterwork and legendary gifts arrive made of metal, never wood. Proper names capitalized in sect titles.
-- New icons for the leader and the Grand Elder of each sect.
-```
-### Convergence: Core (2026-10-22)
+### Convergence: Core → 0.1.3 (2026-10-22)
 - **"Hecho por"** en píldoras, armas y talismanes de todos los módulos: el colono que lo fabricó o, si vino de afuera (comercio, sectas,
   botín, eventos), un creador de lore ("Lin Jin, un alquimista errante", "un viejo herrero"…). Las pilas mezcladas dicen "varios artesanos".
 - La ficha de cada píldora muestra lo que hace **esa** píldora con su calidad (qi con la tabla de todas las calidades), sus efectos
   secundarios (toxicidad), el nivel de mesa y la habilidad que pide la receta.
 - Autotest `-cvgselftest`: sección "made by and pill effects" (ALL OK en 1.6.4871).
-- Nuevo ajuste **"Grupos de huéspedes a la vez"** (2 por defecto; 0 = sin tope, como vanilla): con el mapa lleno de visitantes o caravanas
-  de comercio de otras facciones no llegan más caravanas, visitantes, viajeros ni recaudadores; el narrador lo reintenta más tarde. Los
-  forzados (misiones) pasan igual y los ataques no se tocan. Con muchas facciones amistosas (sectas) llegaban 3-4 grupos juntos, con
-  decenas de personas y animales, y el juego se ponía lento.
-- Autotest `-cvgselftest`: nueva sección "guest group limit" (ALL OK en 1.6.4871).
-- Base para el nuevo Sects (sin contenido visible todavía): etiqueta de arma `CVG_Sword` en todas las espadas de vanilla y de Convergence;
-  dos stats nuevos, **desvío de proyectiles** (solo con espada en la mano) y **resistencia a proyectiles** (tope 50%, ocultos mientras
-  valen 0); constituciones con grados, requisito de rol por rasgo, rasgo inicial por meme, ritual de templado genérico, cuerpos y rasgos
-  de los discípulos por XML y stock con calidad mínima. Autotest: sección "sect framework (S1)" (ALL OK en 1.6.4871).
-- **Cuerpo de Espada**: ahora es una constitución de 4 grados (hierro, acero frío, hierro estelar, jade celestial) con y sin raíz
-  espiritual; al nacer solo sale el grado de hierro (el antiguo "cuerpo de espada"). El antiguo "cuerpo de espada celestial" ya no nace y,
-  en partidas guardadas, se convierte al grado de jade celestial. Los grados suben con el ritual de la Secta de la Espada Sin Forma.
-- Rituales y roles de secta: mínimo de creyentes para empezar un ritual y ánimo por rol vacío solo desde N creyentes (solo en los roles
-  que lo piden).
-- Constituciones de 4 grados para las otras sectas (con y sin raíz espiritual; al nacer solo el grado 0; suben con el ritual de su
-  secta): **cuerpo de acero** (piel de bronce, huesos de hierro, médula de oro, cuerpo adamantino: resistencia a proyectiles; el antiguo
-  cuerpo de acero es el grado 0), **cuerpo yang puro** (yang puro, llama del horno, fuego de nueve vueltas, fuego del fénix: alquimia,
-  cocina, calor), nuevo **cuerpo de sangre lunar** (sangre turbia, carmesí, lunar, del demonio interno: curación, daño cuerpo a cuerpo y
-  dolor, a cambio de crisis mentales más fáciles) y, con Biotech, nuevo **cuerpo de mil hilos** (hilo de seda, de acero, de jade, corazón
-  de mil hilos: ancho de banda de mecanoides +1 a +4 y un grupo de control más).
-- Stock de especialidad por lista de objetos con calidad controlada (`StockGenerator_QualityDefs`).
-- Autotest `-cvgselftest` ALL OK en 1.6.4871 después de todo lo anterior.
 
 **Change notes (Steam):**
 ```
 - Pills, weapons and talismans show who made them: your colonist, or a lore maker for items from outside ("an old alchemist", "a wandering bladesmith"...). Pills show their real effect for their quality, side effects and what the recipe needs.
-- The sword, steel and pure yang bodies are now four-grade constitutions, and two new special bodies appear: the blood moon body and, with Biotech, the thousand threads body. Colonists are born at the first grade; the higher grades come from the rituals of Convergence: Factions. Old celestial sword bodies become celestial jade.
 ```
-- Versión: si la 0.1.2 (compatibilidad con 1.7) todavía no se subió, va junto con ella; si ya se subió, 0.1.3.
-
-**Change notes (Steam):**
-```
-- New setting "Visitor groups at once" (default 2): no more caravans and visitors piling up on your map at the same time. Set 0 for vanilla behaviour.
-```
-
-### Convergence: Factions 0.1.0 — subido 2026-10-22 (id 3824674368)
-- Mod nuevo (`prospero1088.convergence.factions`; en desarrollo se llamó "Sects 2.0"). Reemplaza al Sects actual, que se retira más adelante, y es incompatible con él. Requiere Royalty e Ideology. Las cinco sectas siguen la misma plantilla
-  (`docs/modulos/SECTS2_PLANTILLA.md`): 4 títulos honorarios permanentes, 5 favores, constitución de 4 grados con su ritual, especialista,
-  meme con arma noble y despreciada, discípulos con historias de fondo propias por rango, armas que pueden usar y nombres propios.
-  - **Espada Sin Forma** (espadas), **Nueve Templados** (cultivo corporal, sin armas), **Pabellón del Caldero Celestial** (alquimia y
-    comercio; píldora a elección).
-  - **Culto de la Luna Sangrienta** (camino demoníaco): enemigo natural, neutral con colonias del Camino Demoníaco, hostil con la Espada
-    y los Nueve Templados; no comercia; hojas; ritual Juramento de Sangre.
-  - **Secta del Hilo Invisible** (marionetas; solo con Biotech Wuxia): sus incursiones y asentamientos traen marionetas; vende materiales
-    de marioneta y atuendo de titiritero; ritual Vinculación de Hilos Espirituales.
-- Arte provisional (íconos del Sects viejo) hasta que llegue el definitivo.
-- Autotest `-cvgfactionstest` ALL OK en 1.6.4871, con todos los módulos y también sin Biotech, Alchemy ni Biotech Wuxia.
-
-- También trae a los **Cultivadores Errantes** del Sects viejo, como facción sin títulos ni favores (posadas, mercados nocturnos, mercenarios).
-- Imagen de vista previa provisoria con los cinco emblemas.
 
 ### Convergence: Stories & Scenarios: eventos mudados a Convergence: Factions (2026-10-22)
 - Los eventos de las sectas ahora salen con **Convergence: Factions**: los del Pico Azur pasan a la Espada Sin Forma y los del Templo del
@@ -116,7 +50,7 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
   facción en el mapa, y una visita ya decidida se aplaza un día (hasta 6 veces). Antes podían coincidir con las caravanas y visitas de
   vanilla: hasta 3 grupos a la vez.
 - Autotest `-cvgstoriestest`: nueva sección "visits wait for guests to leave" (ALL OK en 1.6.4871).
-- Versión: si la 0.1.1 (compatibilidad con 1.7) todavía no se subió, va junto con ella; si ya se subió, 0.1.2.
+- Versión: va junto con la 0.1.1 (compatibilidad con 1.7), que todavía no se subió.
 
 **Change notes (Steam):**
 ```
@@ -134,7 +68,7 @@ sin errores rojos. Sigue siendo **un solo DLL net472** que carga en 1.6 y en 1.7
 - Nota de pruebas en 1.7: el ejecutable es `RimWorld.exe`, `-logFile` se ignora (log en `...\Logs\Player.log`) y arrancar la ventana
   minimizada crashea el motor (swapchain 0×0). `tools/run-test.ps1 -Version 1.6|1.7` ya lo contempla (1.6 en `C:\Games\RimWorld_1.6`).
 
-Versiones: Core 0.1.1 → **0.1.2**, Formations 0.1.1 → **0.1.2**, Qi-Tech **0.2.2** (junto con el arreglo de abajo, aún sin subir),
+Versiones: Core 0.1.1 → **0.1.2** (ya subido el 2026-10-22, ver Publicadas), Formations 0.1.1 → **0.1.2**, Qi-Tech **0.2.2** (junto con el arreglo de abajo, aún sin subir),
 los otros 12 0.1.0 → **0.1.1**.
 
 **Change notes (Steam)** (Qi-Tech: ver su bloque):
@@ -158,6 +92,83 @@ los otros 12 0.1.0 → **0.1.1**.
 ---
 
 ## Publicadas
+
+### Convergence: Factions 0.1.1 — subido 2026-10-22 15:08
+- Los miembros de las sectas y de los Errantes ya no nacen con xenotipos vanilla al azar (hussars, genies…): la base de facción
+  Outlander traía esa mezcla. Ahora son baseliners (los linajes de Races siguen funcionando aparte).
+- **Ideologías propias:** cada secta (y los Errantes) tiene una ideología fija con su nombre, su fundador como dios (Qing Feng, el
+  Patriarca de la Montaña de Hierro, el Fénix del Primer Fuego, Xue Jiuyou, Yan Shi), el título de líder de la secta, el **Gran
+  Anciano** como segundo rol, su ícono y solo nuestros preceptos más los básicos (funeral, fiesta, nacimiento, discurso, cambio de
+  rol). Ya no salen títulos como "primer ministro", dioses al azar, reliquias, juicios ni ejecuciones. También en partidas viejas.
+- El **Líder** y el **Gran Anciano** de cada secta usan su ícono propio (arte de las hojas del usuario), y la ideología queda bien desde que la secta se crea (antes recién se corregía al rato).
+- Títulos con mayúsculas en los nombres propios ("Amigo de la Espada Sin Forma").
+- Los regalos con material (armas y armaduras obra maestra o legendarias) llegan de metal, no de madera.
+- La descripción del artefacto obra maestra del Caldero avisa que a veces son tres píldoras de fundación.
+- Prueba nueva `-cvgfavorstest`: los cinco favores de las cinco sectas usados en el juego (llega lo prometido, los refuerzos y el
+  golpe pelean y no son hostiles), la Luna Sangrienta neutral con el Camino Demoníaco y las ideologías. ALL OK en 1.6.
+- Capturas de Workshop: `-cvgfactionstest`/`-cvgfactionsshot` (guion `FactionsShot.cs`, inerte sin el argumento); capturas en
+  `art/capturas/workshop_factions/`.
+
+**Change notes (Steam):**
+```
+- Sect members are no longer born as random vanilla xenotypes (hussars, genies...): they are human cultivators.
+- Each sect now has its own fixed ideoligion: its name, founder, leader title, a Grand Elder role and only sect precepts (no more random "prime ministers", relics or executions).
+- Masterwork and legendary gifts arrive made of metal, never wood. Proper names capitalized in sect titles.
+- New icons for the leader and the Grand Elder of each sect.
+```
+
+### Convergence: Core 0.1.2 — subido 2026-10-22 13:57 (con la compatibilidad con 1.7)
+  botín, eventos), un creador de lore ("Lin Jin, un alquimista errante", "un viejo herrero"…). Las pilas mezcladas dicen "varios artesanos".
+- Nuevo ajuste **"Grupos de huéspedes a la vez"** (2 por defecto; 0 = sin tope, como vanilla): con el mapa lleno de visitantes o caravanas
+  de comercio de otras facciones no llegan más caravanas, visitantes, viajeros ni recaudadores; el narrador lo reintenta más tarde. Los
+  forzados (misiones) pasan igual y los ataques no se tocan. Con muchas facciones amistosas (sectas) llegaban 3-4 grupos juntos, con
+  decenas de personas y animales, y el juego se ponía lento.
+- Autotest `-cvgselftest`: nueva sección "guest group limit" (ALL OK en 1.6.4871).
+- Base para el nuevo Sects (sin contenido visible todavía): etiqueta de arma `CVG_Sword` en todas las espadas de vanilla y de Convergence;
+  dos stats nuevos, **desvío de proyectiles** (solo con espada en la mano) y **resistencia a proyectiles** (tope 50%, ocultos mientras
+  valen 0); constituciones con grados, requisito de rol por rasgo, rasgo inicial por meme, ritual de templado genérico, cuerpos y rasgos
+  de los discípulos por XML y stock con calidad mínima. Autotest: sección "sect framework (S1)" (ALL OK en 1.6.4871).
+- **Cuerpo de Espada**: ahora es una constitución de 4 grados (hierro, acero frío, hierro estelar, jade celestial) con y sin raíz
+  espiritual; al nacer solo sale el grado de hierro (el antiguo "cuerpo de espada"). El antiguo "cuerpo de espada celestial" ya no nace y,
+  en partidas guardadas, se convierte al grado de jade celestial. Los grados suben con el ritual de la Secta de la Espada Sin Forma.
+- Rituales y roles de secta: mínimo de creyentes para empezar un ritual y ánimo por rol vacío solo desde N creyentes (solo en los roles
+  que lo piden).
+- Constituciones de 4 grados para las otras sectas (con y sin raíz espiritual; al nacer solo el grado 0; suben con el ritual de su
+  secta): **cuerpo de acero** (piel de bronce, huesos de hierro, médula de oro, cuerpo adamantino: resistencia a proyectiles; el antiguo
+  cuerpo de acero es el grado 0), **cuerpo yang puro** (yang puro, llama del horno, fuego de nueve vueltas, fuego del fénix: alquimia,
+  cocina, calor), nuevo **cuerpo de sangre lunar** (sangre turbia, carmesí, lunar, del demonio interno: curación, daño cuerpo a cuerpo y
+  dolor, a cambio de crisis mentales más fáciles) y, con Biotech, nuevo **cuerpo de mil hilos** (hilo de seda, de acero, de jade, corazón
+  de mil hilos: ancho de banda de mecanoides +1 a +4 y un grupo de control más).
+- Stock de especialidad por lista de objetos con calidad controlada (`StockGenerator_QualityDefs`).
+- Autotest `-cvgselftest` ALL OK en 1.6.4871 después de todo lo anterior.
+
+**Change notes (Steam):**
+```
+- The sword, steel and pure yang bodies are now four-grade constitutions, and two new special bodies appear: the blood moon body and, with Biotech, the thousand threads body. Colonists are born at the first grade; the higher grades come from the rituals of Convergence: Factions. Old celestial sword bodies become celestial jade.
+```
+
+**Change notes (Steam):**
+```
+- New setting "Visitor groups at once" (default 2): no more caravans and visitors piling up on your map at the same time. Set 0 for vanilla behaviour.
+```
+
+
+### Convergence: Factions 0.1.0 — subido 2026-10-22 (id 3824674368)
+- Mod nuevo (`prospero1088.convergence.factions`; en desarrollo se llamó "Sects 2.0"). Reemplaza al Sects actual, que se retira más adelante, y es incompatible con él. Requiere Royalty e Ideology. Las cinco sectas siguen la misma plantilla
+  (`docs/modulos/SECTS2_PLANTILLA.md`): 4 títulos honorarios permanentes, 5 favores, constitución de 4 grados con su ritual, especialista,
+  meme con arma noble y despreciada, discípulos con historias de fondo propias por rango, armas que pueden usar y nombres propios.
+  - **Espada Sin Forma** (espadas), **Nueve Templados** (cultivo corporal, sin armas), **Pabellón del Caldero Celestial** (alquimia y
+    comercio; píldora a elección).
+  - **Culto de la Luna Sangrienta** (camino demoníaco): enemigo natural, neutral con colonias del Camino Demoníaco, hostil con la Espada
+    y los Nueve Templados; no comercia; hojas; ritual Juramento de Sangre.
+  - **Secta del Hilo Invisible** (marionetas; solo con Biotech Wuxia): sus incursiones y asentamientos traen marionetas; vende materiales
+    de marioneta y atuendo de titiritero; ritual Vinculación de Hilos Espirituales.
+- Arte provisional (íconos del Sects viejo) hasta que llegue el definitivo.
+- Autotest `-cvgfactionstest` ALL OK en 1.6.4871, con todos los módulos y también sin Biotech, Alchemy ni Biotech Wuxia.
+
+- También trae a los **Cultivadores Errantes** del Sects viejo, como facción sin títulos ni favores (posadas, mercados nocturnos, mercenarios).
+- Imagen de vista previa provisoria con los cinco emblemas.
+
 
 ### Convergence: Qi-Tech 0.2.1 — subida 2026-10-21
 - El exoesqueleto ya no se tiñe de gris: heredaba el `colorGenerator` de la armadura de reconocimiento vanilla (gris 0,33-0,9).
