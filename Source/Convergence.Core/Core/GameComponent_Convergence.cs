@@ -101,6 +101,7 @@ namespace Convergence
             FloorShot.Update();
             ArtShots.Update();
             WorkshopShot.Update();
+            ModShots.Update();
         }
 
         public override void GameComponentTick()
