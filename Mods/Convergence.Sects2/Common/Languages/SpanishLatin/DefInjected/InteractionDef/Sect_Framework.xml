@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Speech_Tempering.label>discurso de templado</CVG_Speech_Tempering.label>
+  <CVG_Speech_Tempering.logRulesInitiator.rulesStrings>
+    <li>r_logentry-&gt;[INITIATOR_nameDef] [spokeof] [speechtopic].</li>
+    <li>speechtopic-&gt;el cuerpo como primera arma</li>
+    <li>speechtopic-&gt;el dolor como martillo del Dao</li>
+    <li>speechtopic-&gt;la paciencia de la forja</li>
+    <li>speechtopic-&gt;lo que dejaron los viejos maestros</li>
+    <li>speechtopic-&gt;la intención antes que la fuerza</li>
+    <li>speechtopic-&gt;el regreso del qi al mundo</li>
+    <li>speechtopic-&gt;la deuda del discípulo con la secta</li>
+    <li>speechtopic-&gt;la Calamidad de Hierro y lo que enseñó</li>
+  </CVG_Speech_Tempering.logRulesInitiator.rulesStrings>
+</LanguageData>

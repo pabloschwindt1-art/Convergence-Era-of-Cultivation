@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ======================================================================================================================
+       Sect framework (shared by every sect). A new sect reuses all of this and only defines its own content: see
+       docs/modulos/SECTS2_PLANTILLA.md. Code: Convergence.Core/Sects (ConstitutionUtility, TemperConstitution, SectIdeology).
+       ====================================================================================================================== -->
+
+  <!-- Speech of the tempering ritual -->
+  <InteractionDef>
+    <defName>CVG_Speech_Tempering</defName>
+    <label>tempering speech</label>
+    <workerClass>InteractionWorker</workerClass>
+    <ignoreTimeSinceLastInteraction>True</ignoreTimeSinceLastInteraction>
+    <symbol>Things/Mote/SpeechSymbols/Speech</symbol>
+    <logRulesInitiator>
+      <include><li>SpeechUtility</li></include>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] [spokeof] [speechtopic].</li>
+        <li>speechtopic->the body as the first weapon</li>
+        <li>speechtopic->pain as the hammer of the Dao</li>
+        <li>speechtopic->the patience of the forge</li>
+        <li>speechtopic->what the old masters left behind</li>
+        <li>speechtopic->intent before strength</li>
+        <li>speechtopic->the qi returning to the world</li>
+        <li>speechtopic->the debt a disciple owes the sect</li>
+        <li>speechtopic->the Iron Calamity and what it taught</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+
+  <!-- Tempering ceremony: the sect specialist (role tag CVG_SectSpecialist) tempers the constitution of one disciple. -->
+  <RitualBehaviorDef>
+    <defName>CVG_SectTemperBehavior</defName>
+    <durationTicks>5000</durationTicks>
+    <roles>
+      <li Class="RitualRoleTag">
+        <label>master</label>
+        <id>doer</id>
+        <tag>CVG_SectSpecialist</tag>
+        <required>True</required>
+        <maxCount>1</maxCount>
+        <countsAsParticipant>False</countsAsParticipant>
+        <allowChild>false</allowChild>
+        <missingDesc>the sect's master of the art</missingDesc>
+      </li>
+      <li Class="Convergence.RitualRoleConstitutionSubject">
+        <label>disciple</label>
+        <id>subject</id>
+        <required>True</required>
+        <maxCount>1</maxCount>
+        <countsAsParticipant>False</countsAsParticipant>
+        <missingDesc>the disciple to temper</missingDesc>
+      </li>
+    </roles>
+    <stages>
+      <li>
+        <defaultDuty>Spectate</defaultDuty>
+        <endTriggers>
+          <li Class="StageEndTrigger_RolesArrived">
+            <roleIds>
+              <li>doer</li>
+              <li>subject</li>
+            </roleIds>
+          </li>
+        </endTriggers>
+        <roleBehaviors>
+          <li>
+            <roleId>doer</roleId>
+            <dutyDef>ArriveToCell</dutyDef>
+            <customPositions>
+              <li Class="RitualPosition_Lectern">
+                <maxDistanceToFocus>5</maxDistanceToFocus>
+              </li>
+              <li Class="RitualPosition_OnInteractionCell" />
+            </customPositions>
+          </li>
+          <li>
+            <roleId>subject</roleId>
+            <dutyDef>ArriveToCell</dutyDef>
+            <customPositions>
+              <li Class="RitualPosition_InFrontThingCenter" />
+            </customPositions>
+          </li>
+        </roleBehaviors>
+      </li>
+      <li>
+        <defaultDuty>Spectate</defaultDuty>
+        <endTriggers>
+          <li Class="StageEndTrigger_DurationPercentage">
+            <percentage>1</percentage>
+          </li>
+        </endTriggers>
+        <roleBehaviors>
+          <li>
+            <roleId>doer</roleId>
+            <dutyDef>SpeakOnCellFacingSpectators</dutyDef>
+            <speakerInteraction>CVG_Speech_Tempering</speakerInteraction>
+            <customPositions>
+              <li Class="RitualPosition_Lectern">
+                <maxDistanceToFocus>5</maxDistanceToFocus>
+              </li>
+              <li Class="RitualPosition_OnInteractionCell" />
+            </customPositions>
+          </li>
+          <li>
+            <roleId>subject</roleId>
+            <dutyDef>ArriveToCell</dutyDef>
+            <customPositions>
+              <li Class="RitualPosition_InFrontThingCenter" />
+            </customPositions>
+          </li>
+        </roleBehaviors>
+      </li>
+    </stages>
+  </RitualBehaviorDef>
+
+  <!-- Base of each sect's tempering outcome: the sect adds its steps (DefModExtension_TemperConstitution). Needs two more believers. -->
+  <RitualOutcomeEffectDef Abstract="True" Name="CVG_SectTemperOutcomeBase">
+    <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days. The better the ceremony, the likelier the tempering takes hold.</description>
+    <workerClass>Convergence.RitualOutcomeEffectWorker_TemperConstitution</workerClass>
+    <allowAttachableOutcome>false</allowAttachableOutcome>
+    <comps>
+      <li Class="Convergence.RitualOutcomeComp_MinBelievers">
+        <count>2</count>
+      </li>
+      <li Class="RitualOutcomeComp_RitualSeatPresent">
+        <qualityOffset>0.15</qualityOffset>
+      </li>
+      <li Class="RitualOutcomeComp_ParticipantCount">
+        <label>participant count</label>
+        <curve>
+          <points>
+            <li>(2,  0.0)</li>
+            <li>(5,  0.15)</li>
+            <li>(10, 0.25)</li>
+          </points>
+        </curve>
+      </li>
+      <li Class="RitualOutcomeComp_RitualTargetDefs">
+        <allowAltars>true</allowAltars>
+        <label>started at altar</label>
+        <qualityOffset>0.2</qualityOffset>
+        <expectedThingLabelTip>an altar</expectedThingLabelTip>
+      </li>
+      <li Class="RitualOutcomeComp_RoomStat">
+        <label>room impressiveness</label>
+        <statDef>Impressiveness</statDef>
+        <curve>
+          <points>
+            <li>0,  0</li>
+            <li>50,  0.1</li>
+            <li>120, 0.2</li>
+          </points>
+        </curve>
+      </li>
+    </comps>
+    <outcomeChances>
+      <li>
+        <label>Terrible</label>
+        <chance>0.05</chance>
+        <memory>TerribleFestival</memory>
+        <description>The {0} was terrible! The master lost the rhythm and the disciple flinched at every word.</description>
+        <positivityIndex>-2</positivityIndex>
+      </li>
+      <li>
+        <label>Dull</label>
+        <chance>0.15</chance>
+        <memory>BoringFestival</memory>
+        <description>The {0} was dull. The forms were right and the intent absent.</description>
+        <positivityIndex>-1</positivityIndex>
+      </li>
+      <li>
+        <label>Solemn</label>
+        <chance>0.6</chance>
+        <memory>FunFestival</memory>
+        <description>The {0} was solemn. Everyone felt the old discipline of the sect pass from one body to another.</description>
+        <positivityIndex>1</positivityIndex>
+      </li>
+      <li>
+        <label>Unforgettable</label>
+        <chance>0.2</chance>
+        <memory>UnforgettableFestival</memory>
+        <description>The {0} was unforgettable! For a moment the whole sect breathed as one body.</description>
+        <positivityIndex>2</positivityIndex>
+      </li>
+    </outcomeChances>
+  </RitualOutcomeEffectDef>
+
+  <RitualPatternDef Abstract="True" Name="CVG_SectTemperPatternBase">
+    <ritualBehavior>CVG_SectTemperBehavior</ritualBehavior>
+    <ritualTargetFilter>AltarOrRitualSpot</ritualTargetFilter>
+    <ritualObligationTargetFilter>RitualSpotOrAltar</ritualObligationTargetFilter>
+    <alwaysStartAnytime>true</alwaysStartAnytime>
+    <canMergeGizmosFromDifferentIdeos>false</canMergeGizmosFromDifferentIdeos>
+  </RitualPatternDef>
+
+  <PreceptDef Abstract="True" Name="CVG_SectRitualBase">
+    <issue>Ritual</issue>
+    <impact>Medium</impact>
+    <preceptClass>Precept_Ritual</preceptClass>
+    <allowDuplicates>false</allowDuplicates>
+    <countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+    <ignoreLimitsInEditMode>true</ignoreLimitsInEditMode>
+    <receivesExpectationsQualityOffset>true</receivesExpectationsQualityOffset>
+    <selectionWeight>1.0</selectionWeight>
+  </PreceptDef>
+
+  <!-- Sect specialist: the first role the believers want filled (active from 1 believer), but the "role empty" mood only from 4. -->
+  <PreceptDef Abstract="True" Name="CVG_SectSpecialistBase" ParentName="PreceptRoleSingleBase">
+    <activationBelieverCount>1</activationBelieverCount>
+    <deactivationBelieverCount>1</deactivationBelieverCount>
+    <roleTags><li>CVG_SectSpecialist</li></roleTags>
+    <displayOrderInImpact>90</displayOrderInImpact>
+    <canRemoveInUI>true</canRemoveInUI>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RoleEmptyMinBelievers">
+        <minBelievers>4</minBelievers>
+      </li>
+    </modExtensions>
+  </PreceptDef>
+</Defs>

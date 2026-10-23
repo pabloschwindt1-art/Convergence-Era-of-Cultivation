@@ -96,6 +96,7 @@
   </TraitDef>
   <TraitDef>
     <defName>CVG_Body_CelestialSword</defName>
+    <!-- Legacy: merged into CVG_Body_Sword degree 3 (celestial jade). No longer born; old saves convert on load (SwordBodyMigration). -->
     <forcedPassions>
       <li>Melee</li>
     </forcedPassions>
@@ -119,7 +120,7 @@
         </conflicts>
       </li>
       <li Class="Convergence.DefModExtension_SpecialBody">
-        <chance>0.004</chance>
+        <chance>0</chance>
       </li>
     </modExtensions>
   </TraitDef>
@@ -276,6 +277,9 @@
   </TraitDef>
   <TraitDef>
     <defName>CVG_Body_Sword</defName>
+    <!-- Sword Body (Formless Sword Sect): one progressive constitution, valid with or without a spirit root. Degrees 0-3 are symbolic
+         stages of refinement, not implanted materials: iron, cold steel, star-iron, celestial jade. Born only at degree 0 (iron); the
+         higher grades come from the sect's tempering ritual. Saves keep working: the old single-degree sword body was degree 0. -->
     <forcedPassions>
       <li>Melee</li>
     </forcedPassions>
@@ -285,13 +289,64 @@
     </exclusionTags>
     <degreeDatas>
       <li>
-        <label>sword body</label>
-        <description>{PAWN_nameDef}'s body is the blade. {PAWN_pronoun} cannot gather qi, but every strike cuts like a tempered sword.</description>
+        <label>iron sword body</label>
+        <degree>0</degree>
+        <description>{PAWN_nameDef}'s body has the temper of rough iron: bones that hold a stance, hands that do not shake on the hilt. The Formless Sword calls it the first refinement, the one every disciple must earn before the blade will listen.</description>
+        <statFactors>
+          <CVG_BodyTemperingSpeed>1.2</CVG_BodyTemperingSpeed>
+        </statFactors>
+        <statOffsets>
+          <CVG_ProjectileDeflectChance>0.06</CVG_ProjectileDeflectChance>
+        </statOffsets>
+        <skillGains>
+          <Melee>2</Melee>
+        </skillGains>
+      </li>
+      <li>
+        <label>cold steel sword body</label>
+        <degree>1</degree>
+        <description>The iron in {PAWN_nameDef} has been quenched: {PAWN_pronoun} is calm when the blood runs hot, and the cut comes before the anger. The elders say cold steel does not hate its enemy; it simply does not miss.</description>
+        <statFactors>
+          <CVG_BodyTemperingSpeed>1.25</CVG_BodyTemperingSpeed>
+        </statFactors>
+        <statOffsets>
+          <CVG_ProjectileDeflectChance>0.10</CVG_ProjectileDeflectChance>
+          <MeleeHitChance>2</MeleeHitChance>
+        </statOffsets>
+        <skillGains>
+          <Melee>3</Melee>
+        </skillGains>
+      </li>
+      <li>
+        <label>star-iron sword body</label>
+        <degree>2</degree>
+        <description>Star-iron is the metal that falls burning from the sky and does not melt. {PAWN_nameDef}'s body has reached that grade: {PAWN_pronoun} feels a strike before it lands, as the Sword Saint Qing Feng felt the mountain before he split it.</description>
         <statFactors>
           <CVG_BodyTemperingSpeed>1.3</CVG_BodyTemperingSpeed>
         </statFactors>
+        <statOffsets>
+          <CVG_ProjectileDeflectChance>0.15</CVG_ProjectileDeflectChance>
+          <MeleeHitChance>3</MeleeHitChance>
+          <MeleeDodgeChance>2</MeleeDodgeChance>
+        </statOffsets>
         <skillGains>
-          <Melee>3</Melee>
+          <Melee>4</Melee>
+        </skillGains>
+      </li>
+      <li>
+        <label>celestial jade sword body</label>
+        <degree>3</degree>
+        <description>Jade is the stone that keeps the memory of heaven. In {PAWN_nameDef} the blade and the body have become one intent: the Formless Sword records perhaps one such disciple in a generation, and its masters bow to them as to a living sword.</description>
+        <statFactors>
+          <CVG_BodyTemperingSpeed>1.4</CVG_BodyTemperingSpeed>
+        </statFactors>
+        <statOffsets>
+          <CVG_ProjectileDeflectChance>0.20</CVG_ProjectileDeflectChance>
+          <MeleeHitChance>4</MeleeHitChance>
+          <MeleeDodgeChance>4</MeleeDodgeChance>
+        </statOffsets>
+        <skillGains>
+          <Melee>5</Melee>
         </skillGains>
       </li>
     </degreeDatas>
@@ -303,7 +358,6 @@
       </li>
       <li Class="Convergence.DefModExtension_SpecialBody">
         <chance>0.008</chance>
-        <rootlessOnly>true</rootlessOnly>
       </li>
     </modExtensions>
   </TraitDef>

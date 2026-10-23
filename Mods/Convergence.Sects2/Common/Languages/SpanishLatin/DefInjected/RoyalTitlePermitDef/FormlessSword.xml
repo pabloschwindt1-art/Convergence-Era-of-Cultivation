@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Permit_FormlessSword_SpiritResources.label>recursos espirituales</CVG_Permit_FormlessSword_SpiritResources.label>
+  <CVG_Permit_FormlessSword_SpiritResources.description>La secta envía un cofre sellado de sus almacenes: piedras espirituales y jade espiritual reunidos en el Túmulo de Espadas. Los ancianos lo llaman préstamo; a nadie se le ha pedido nunca que lo devuelva.</CVG_Permit_FormlessSword_SpiritResources.description>
+  <CVG_Permit_FormlessSword_Disciples.label>llamar discípulos de espada</CVG_Permit_FormlessSword_Disciples.label>
+  <CVG_Permit_FormlessSword_Disciples.description>Tres discípulos internos de la Espada Sin Forma vienen a pelear a tu lado. No retroceden un paso de la línea, y no se quedan un día más que la batalla.</CVG_Permit_FormlessSword_Disciples.description>
+  <CVG_Permit_FormlessSword_MasterworkSword.label>espada obra maestra</CVG_Permit_FormlessSword_MasterworkSword.label>
+  <CVG_Permit_FormlessSword_MasterworkSword.description>Los forjadores del Pico envían una hoja que se habrían guardado para ellos. Llega sin nombre: una espada se gana el nombre en la mano que la lleva.</CVG_Permit_FormlessSword_MasterworkSword.description>
+  <CVG_Permit_FormlessSword_LegendarySword.label>espada legendaria</CVG_Permit_FormlessSword_LegendarySword.label>
+  <CVG_Permit_FormlessSword_LegendarySword.description>Una hoja sacada del propio Túmulo de Espadas, donde descansan las espadas de los maestros. La secta nunca las vende: se las presta a quien confía, y el anciano invitado elige cuál le responderá.</CVG_Permit_FormlessSword_LegendarySword.description>
+  <CVG_Permit_FormlessSword_SwordStrike.label>golpe de espadas</CVG_Permit_FormlessSword_SwordStrike.label>
+  <CVG_Permit_FormlessSword_SwordStrike.description>Cuatro hojas principales de la Espada Sin Forma descienden donde señalás y cortan lo que haya en pie. La secta lo llama una cortesía entre ancianos; sus enemigos lo llaman la montaña que cae.</CVG_Permit_FormlessSword_SwordStrike.description>
+</LanguageData>

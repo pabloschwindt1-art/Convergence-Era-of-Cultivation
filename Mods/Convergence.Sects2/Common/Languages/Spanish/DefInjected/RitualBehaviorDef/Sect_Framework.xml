@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_SectTemperBehavior.roles.0.label>maestro</CVG_SectTemperBehavior.roles.0.label>
+  <CVG_SectTemperBehavior.roles.0.missingDesc>el maestro del arte de la secta</CVG_SectTemperBehavior.roles.0.missingDesc>
+  <CVG_SectTemperBehavior.roles.1.label>discípulo</CVG_SectTemperBehavior.roles.1.label>
+  <CVG_SectTemperBehavior.roles.1.missingDesc>el discípulo a templar</CVG_SectTemperBehavior.roles.1.missingDesc>
+</LanguageData>

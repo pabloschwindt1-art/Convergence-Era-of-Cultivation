@@ -344,4 +344,6 @@ Algunas van a comerciar, otras van a juzgar, y una de ellas caza. Su buena volun
   <CVG_Temper_MissingCost>Falta en el almacén: {0}</CVG_Temper_MissingCost>
   <CVG_Temper_Success>El templado prendió: {PAWN_labelShort} ahora tiene {1} (probabilidad {2}).</CVG_Temper_Success>
   <CVG_Temper_Failure>El templado no prendió: {PAWN_labelShort} no alcanzó {1} esta vez (probabilidad {2}). El costo se gastó igual.</CVG_Temper_Failure>
+  <CVG_Ritual_NeedBelievers>Necesita al menos {0} {1} más presentes además de los roles (ahora {2}).</CVG_Ritual_NeedBelievers>
+  <CVG_Ritual_NeedBelieversDesc>Deben asistir al menos {0} creyentes más.</CVG_Ritual_NeedBelieversDesc>
 </LanguageData>

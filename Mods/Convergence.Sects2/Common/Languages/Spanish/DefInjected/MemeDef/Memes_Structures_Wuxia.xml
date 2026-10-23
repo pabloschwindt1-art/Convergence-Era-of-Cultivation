@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Structure_DaoOrigin.label>origen daoísta</CVG_Structure_DaoOrigin.label>
+  <CVG_Structure_DaoOrigin.description>Esta ideología desciende de las escuelas daoístas de Jiuxiao, que seguían el Dao mucho antes de que alguien pudiera cultivarlo. No hay dioses a los que rezar, solo un Camino que recorrer: los maestros dicen que el Dao que puede nombrarse no es el verdadero Dao, y después se pasan novecientos años nombrándolo igual.</CVG_Structure_DaoOrigin.description>
+  <CVG_Structure_DaoOrigin.worshipRoomLabel>templo del Dao</CVG_Structure_DaoOrigin.worshipRoomLabel>
+  <CVG_Structure_DaoOrigin.generalRules.rulesStrings>
+    <li>memeLeaderNoun-&gt;maestro celestial</li>
+    <li>memeLeaderNoun-&gt;patriarca</li>
+    <li>memeLeaderNoun-&gt;sabio</li>
+    <li>memeLeaderAdjective-&gt;verdadero</li>
+    <li>memeLeaderAdjective-&gt;inmortal</li>
+    <li>memeLeaderAdjective-&gt;sereno</li>
+    <li>memeMoralist-&gt;sacerdote daoísta</li>
+    <li>memeMoralist-&gt;ermitaño</li>
+    <li>memeConcept-&gt;el camino</li>
+    <li>memeConcept-&gt;la quietud</li>
+    <li>memeConcept-&gt;el Dao</li>
+    <li>memeConcept-&gt;el bloque sin tallar</li>
+    <li>memeCreed-&gt;escuela</li>
+    <li>memeCreed-&gt;camino</li>
+    <li>memeCreed-&gt;templo</li>
+    <li>memeCreed-&gt;ermita</li>
+  </CVG_Structure_DaoOrigin.generalRules.rulesStrings>
+  <CVG_Structure_DaoOrigin.symbolPacks.0.ideoName>Daoísmo</CVG_Structure_DaoOrigin.symbolPacks.0.ideoName>
+  <CVG_Structure_DaoOrigin.symbolPacks.0.adjective>daoísta</CVG_Structure_DaoOrigin.symbolPacks.0.adjective>
+  <CVG_Structure_DaoOrigin.symbolPacks.0.member>daoísta</CVG_Structure_DaoOrigin.symbolPacks.0.member>
+  <CVG_Structure_DaoOrigin.symbolPacks.1.ideoName>Camino de los Nueve Cielos</CVG_Structure_DaoOrigin.symbolPacks.1.ideoName>
+  <CVG_Structure_DaoOrigin.symbolPacks.1.adjective>de los Nueve Cielos</CVG_Structure_DaoOrigin.symbolPacks.1.adjective>
+  <CVG_Structure_DaoOrigin.symbolPacks.1.member>daoísta de los Nueve Cielos</CVG_Structure_DaoOrigin.symbolPacks.1.member>
+  <CVG_Structure_DaoOrigin.symbolPacks.2.ideoName>Camino de la Quietud</CVG_Structure_DaoOrigin.symbolPacks.2.ideoName>
+  <CVG_Structure_DaoOrigin.symbolPacks.2.adjective>quieto</CVG_Structure_DaoOrigin.symbolPacks.2.adjective>
+  <CVG_Structure_DaoOrigin.symbolPacks.2.member>caminante de la quietud</CVG_Structure_DaoOrigin.symbolPacks.2.member>
+  <CVG_Structure_DaoOrigin.symbolPacks.3.ideoName>Camino del Elixir</CVG_Structure_DaoOrigin.symbolPacks.3.ideoName>
+  <CVG_Structure_DaoOrigin.symbolPacks.3.adjective>del elixir</CVG_Structure_DaoOrigin.symbolPacks.3.adjective>
+  <CVG_Structure_DaoOrigin.symbolPacks.3.member>elixirista</CVG_Structure_DaoOrigin.symbolPacks.3.member>
+  <CVG_Structure_DaoOrigin.symbolPacks.4.ideoName>Camino del Talismán</CVG_Structure_DaoOrigin.symbolPacks.4.ideoName>
+  <CVG_Structure_DaoOrigin.symbolPacks.4.adjective>talismánico</CVG_Structure_DaoOrigin.symbolPacks.4.adjective>
+  <CVG_Structure_DaoOrigin.symbolPacks.4.member>talismanista</CVG_Structure_DaoOrigin.symbolPacks.4.member>
+  <CVG_Structure_HeavenMandate.label>Mandato del Cielo</CVG_Structure_HeavenMandate.label>
+  <CVG_Structure_HeavenMandate.description>Esta ideología sostiene que el Cielo es una sola voluntad que observa a cada cultivador. Concede el Mandato a los dignos y envía la tribulación para probar a quienes suben demasiado alto. Los fieles no maldicen el rayo: lo agradecen, porque el Cielo solo castiga lo que se toma en serio.</CVG_Structure_HeavenMandate.description>
+  <CVG_Structure_HeavenMandate.worshipRoomLabel>altar del Cielo</CVG_Structure_HeavenMandate.worshipRoomLabel>
+  <CVG_Structure_HeavenMandate.generalRules.rulesStrings>
+    <li>memeLeaderNoun-&gt;Hijo del Cielo</li>
+    <li>memeLeaderNoun-&gt;enviado celestial</li>
+    <li>memeLeaderNoun-&gt;portador del Mandato</li>
+    <li>memeLeaderAdjective-&gt;enviado del Cielo</li>
+    <li>memeLeaderAdjective-&gt;celestial</li>
+    <li>memeMoralist-&gt;sacerdote de la tribulación</li>
+    <li>memeMoralist-&gt;astrólogo de la corte</li>
+    <li>memeConcept-&gt;el Cielo</li>
+    <li>memeConcept-&gt;el Mandato</li>
+    <li>memeConcept-&gt;la tribulación</li>
+    <li>memeConcept-&gt;el juicio</li>
+    <li>memeCreed-&gt;corte</li>
+    <li>memeCreed-&gt;mandato</li>
+    <li>memeCreed-&gt;fe</li>
+    <li>memeCreed-&gt;altar</li>
+  </CVG_Structure_HeavenMandate.generalRules.rulesStrings>
+  <CVG_Structure_HeavenMandate.symbolPacks.0.ideoName>Mandato del Cielo</CVG_Structure_HeavenMandate.symbolPacks.0.ideoName>
+  <CVG_Structure_HeavenMandate.symbolPacks.0.adjective>del Mandato</CVG_Structure_HeavenMandate.symbolPacks.0.adjective>
+  <CVG_Structure_HeavenMandate.symbolPacks.0.member>mandatista</CVG_Structure_HeavenMandate.symbolPacks.0.member>
+  <CVG_Structure_HeavenMandate.symbolPacks.1.ideoName>Corte Celestial</CVG_Structure_HeavenMandate.symbolPacks.1.ideoName>
+  <CVG_Structure_HeavenMandate.symbolPacks.1.adjective>celestial</CVG_Structure_HeavenMandate.symbolPacks.1.adjective>
+  <CVG_Structure_HeavenMandate.symbolPacks.1.member>cortesano del Cielo</CVG_Structure_HeavenMandate.symbolPacks.1.member>
+  <CVG_Structure_HeavenMandate.symbolPacks.2.ideoName>Camino de la Tribulación</CVG_Structure_HeavenMandate.symbolPacks.2.ideoName>
+  <CVG_Structure_HeavenMandate.symbolPacks.2.adjective>tribulante</CVG_Structure_HeavenMandate.symbolPacks.2.adjective>
+  <CVG_Structure_HeavenMandate.symbolPacks.2.member>tribulante</CVG_Structure_HeavenMandate.symbolPacks.2.member>
+  <CVG_Structure_HeavenMandate.symbolPacks.3.ideoName>Dao Celestial</CVG_Structure_HeavenMandate.symbolPacks.3.ideoName>
+  <CVG_Structure_HeavenMandate.symbolPacks.3.adjective>celestial</CVG_Structure_HeavenMandate.symbolPacks.3.adjective>
+  <CVG_Structure_HeavenMandate.symbolPacks.3.member>seguidor del Cielo</CVG_Structure_HeavenMandate.symbolPacks.3.member>
+  <CVG_Structure_Ancestors.label>culto a los ancestros</CVG_Structure_Ancestors.label>
+  <CVG_Structure_Ancestors.description>Esta ideología venera a los fundadores del clan, los cultivadores cuyos nombres están tallados en las tablillas del salón ancestral. No son dioses lejanos: fueron personas, todavía miran y se avergüenzan de los descendientes que dejan de subir. Cada avance se les informa con incienso.</CVG_Structure_Ancestors.description>
+  <CVG_Structure_Ancestors.worshipRoomLabel>salón ancestral</CVG_Structure_Ancestors.worshipRoomLabel>
+  <CVG_Structure_Ancestors.generalRules.rulesStrings>
+    <li>memeLeaderNoun-&gt;cabeza del clan</li>
+    <li>memeLeaderNoun-&gt;patriarca</li>
+    <li>memeLeaderNoun-&gt;matriarca</li>
+    <li>memeLeaderAdjective-&gt;primogénito</li>
+    <li>memeLeaderAdjective-&gt;ancestral</li>
+    <li>memeMoralist-&gt;guardián de las tablillas</li>
+    <li>memeMoralist-&gt;anciano del clan</li>
+    <li>memeConcept-&gt;los ancestros</li>
+    <li>memeConcept-&gt;el linaje</li>
+    <li>memeConcept-&gt;el clan</li>
+    <li>memeConcept-&gt;las tablillas</li>
+    <li>memeCreed-&gt;clan</li>
+    <li>memeCreed-&gt;salón</li>
+    <li>memeCreed-&gt;linaje</li>
+    <li>memeCreed-&gt;rito</li>
+  </CVG_Structure_Ancestors.generalRules.rulesStrings>
+  <CVG_Structure_Ancestors.symbolPacks.0.ideoName>Camino Ancestral</CVG_Structure_Ancestors.symbolPacks.0.ideoName>
+  <CVG_Structure_Ancestors.symbolPacks.0.adjective>ancestral</CVG_Structure_Ancestors.symbolPacks.0.adjective>
+  <CVG_Structure_Ancestors.symbolPacks.0.member>descendiente</CVG_Structure_Ancestors.symbolPacks.0.member>
+  <CVG_Structure_Ancestors.symbolPacks.1.ideoName>Salón de los Antepasados</CVG_Structure_Ancestors.symbolPacks.1.ideoName>
+  <CVG_Structure_Ancestors.symbolPacks.1.adjective>de los antepasados</CVG_Structure_Ancestors.symbolPacks.1.adjective>
+  <CVG_Structure_Ancestors.symbolPacks.1.member>guardián de los antepasados</CVG_Structure_Ancestors.symbolPacks.1.member>
+  <CVG_Structure_Ancestors.symbolPacks.2.ideoName>Camino del Clan</CVG_Structure_Ancestors.symbolPacks.2.ideoName>
+  <CVG_Structure_Ancestors.symbolPacks.2.adjective>del clan</CVG_Structure_Ancestors.symbolPacks.2.adjective>
+  <CVG_Structure_Ancestors.symbolPacks.2.member>hombre del clan</CVG_Structure_Ancestors.symbolPacks.2.member>
+  <CVG_Structure_Ancestors.symbolPacks.3.ideoName>Rito del Linaje</CVG_Structure_Ancestors.symbolPacks.3.ideoName>
+  <CVG_Structure_Ancestors.symbolPacks.3.adjective>del linaje</CVG_Structure_Ancestors.symbolPacks.3.adjective>
+  <CVG_Structure_Ancestors.symbolPacks.3.member>portador del linaje</CVG_Structure_Ancestors.symbolPacks.3.member>
+  <CVG_Structure_DaoOrigin.symbolPacks.0.theme>Dao</CVG_Structure_DaoOrigin.symbolPacks.0.theme>
+  <CVG_Structure_DaoOrigin.symbolPacks.1.theme>Dao</CVG_Structure_DaoOrigin.symbolPacks.1.theme>
+  <CVG_Structure_DaoOrigin.symbolPacks.2.theme>Dao</CVG_Structure_DaoOrigin.symbolPacks.2.theme>
+  <CVG_Structure_DaoOrigin.symbolPacks.3.theme>Dao</CVG_Structure_DaoOrigin.symbolPacks.3.theme>
+  <CVG_Structure_DaoOrigin.symbolPacks.4.theme>Dao</CVG_Structure_DaoOrigin.symbolPacks.4.theme>
+  <CVG_Structure_HeavenMandate.symbolPacks.0.theme>Cielo</CVG_Structure_HeavenMandate.symbolPacks.0.theme>
+  <CVG_Structure_HeavenMandate.symbolPacks.1.theme>Cielo</CVG_Structure_HeavenMandate.symbolPacks.1.theme>
+  <CVG_Structure_HeavenMandate.symbolPacks.2.theme>Cielo</CVG_Structure_HeavenMandate.symbolPacks.2.theme>
+  <CVG_Structure_HeavenMandate.symbolPacks.3.theme>Cielo</CVG_Structure_HeavenMandate.symbolPacks.3.theme>
+  <CVG_Structure_Ancestors.symbolPacks.0.theme>Linaje</CVG_Structure_Ancestors.symbolPacks.0.theme>
+  <CVG_Structure_Ancestors.symbolPacks.1.theme>Linaje</CVG_Structure_Ancestors.symbolPacks.1.theme>
+  <CVG_Structure_Ancestors.symbolPacks.2.theme>Linaje</CVG_Structure_Ancestors.symbolPacks.2.theme>
+  <CVG_Structure_Ancestors.symbolPacks.3.theme>Linaje</CVG_Structure_Ancestors.symbolPacks.3.theme>
+</LanguageData>

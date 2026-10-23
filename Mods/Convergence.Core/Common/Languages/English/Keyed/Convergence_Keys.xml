@@ -344,4 +344,6 @@ Some will trade, some will judge, and one of them hunts. Their goodwill can be e
   <CVG_Temper_MissingCost>Missing in storage: {0}</CVG_Temper_MissingCost>
   <CVG_Temper_Success>The tempering took hold: {PAWN_labelShort} now has {1} (chance {2}).</CVG_Temper_Success>
   <CVG_Temper_Failure>The tempering did not take hold: {PAWN_labelShort} did not reach {1} this time (chance {2}). The cost is spent.</CVG_Temper_Failure>
+  <CVG_Ritual_NeedBelievers>Needs at least {0} other {1} attending besides the roles (now {2}).</CVG_Ritual_NeedBelievers>
+  <CVG_Ritual_NeedBelieversDesc>At least {0} other believers must attend.</CVG_Ritual_NeedBelieversDesc>
 </LanguageData>

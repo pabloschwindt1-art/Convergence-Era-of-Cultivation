@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Meme_SwordWay.generalRules.rulesStrings>
+    <li>memeAdjective-&gt;de la espada</li>
+    <li>memeHyphenPrefix-&gt;espada</li>
+    <li>memeConcept-&gt;camino de la espada</li>
+    <li>memeLeaderNoun-&gt;maestro de secta</li>
+  </CVG_Meme_SwordWay.generalRules.rulesStrings>
+  <CVG_Meme_SwordWay.symbolPacks.0.ideoName>Espada Sin Forma</CVG_Meme_SwordWay.symbolPacks.0.ideoName>
+  <CVG_Meme_SwordWay.symbolPacks.0.theme>espada</CVG_Meme_SwordWay.symbolPacks.0.theme>
+  <CVG_Meme_SwordWay.symbolPacks.0.adjective>de la espada</CVG_Meme_SwordWay.symbolPacks.0.adjective>
+  <CVG_Meme_SwordWay.symbolPacks.0.member>discípulo de espada</CVG_Meme_SwordWay.symbolPacks.0.member>
+</LanguageData>

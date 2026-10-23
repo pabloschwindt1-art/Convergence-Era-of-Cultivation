@@ -78,6 +78,13 @@ Lo de Royalty (A-E) vive en el mod nuevo porque ese mod exige la DLC. Lo genéri
 
 ## 4. Orden de trabajo
 
+**S2 hecha (2026-10-22): Espada Sin Forma completa**, según `SECTS2_ESPADA_DECISIONES_1_A_7.md` (del usuario): Cuerpo de Espada de 4
+grados en el Core (Hierro, Acero Frío, Hierro Estelar, Jade Celestial; el viejo "cuerpo de espada celestial" se convierte al grado 3 al
+cargar), ideología (meme sin prendas obligatorias, preset, Maestro de Espadas con Combat Command, templado con las probabilidades aprobadas
+y costos en recursos del Core), discípulos solo con espada y sin Hulk, comercio Buena-Obra maestra (nunca Legendaria) y los 5 favores
+(la espada legendaria se elige). Autotest `-cvgsects2test` ALL OK en 1.6, log limpio. Plantilla para las demás sectas:
+`SECTS2_PLANTILLA.md`. Pendiente: Stories (eventos y personajes del Pico Azur → Espada Sin Forma) y arte.
+
 **S1 hecha (2026-10-22):** base común en el Core (`Source/Convergence.Core/Sects/`), autotest `-cvgselftest` sección "sect framework (S1)",
 ALL OK en 1.6.4871. Piezas: etiqueta `CVG_Sword` en todas las espadas (parche XML), constituciones con grados (`ConstitutionUtility`),
 `RoleRequirement_HasTrait`, `DefModExtension_StartingTrait` (en el meme), ritual de templado genérico (`DefModExtension_TemperConstitution` +

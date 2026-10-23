@@ -1,7 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace Convergence.Sects2
@@ -154,7 +156,32 @@ namespace Convergence.Sects2
                     pawn.royalty.GainFavor(faction, 16);
                     Check(pawn.royalty.GetCurrentTitle(faction) == Title("GuestElder"), "-> Guest Elder (" + pawn.royalty.GetCurrentTitle(faction)?.defName + ")");
                     Check(!BestowingQuest(), "still no bestowing ceremony quest");
-                    Check(pawn.royalty.GetPermitPoints(faction) == 2, "2 more permit points: " + pawn.royalty.GetPermitPoints(faction));
+                    Check(pawn.royalty.GetPermitPoints(faction) == 3, "3 more permit points (1 + 2): " + pawn.royalty.GetPermitPoints(faction));
+
+                    // Favores 3-5: obra maestra, legendaria a elección y golpe
+                    foreach (var n in new[] { "MasterworkSword", "LegendarySword", "SwordStrike" }) pawn.royalty.AddPermit(Permit(n), faction);
+                    Check(new[] { "MasterworkSword", "LegendarySword", "SwordStrike" }.All(n => pawn.royalty.HasPermit(Permit(n), faction)), "the five favors chosen");
+                    var master = (RoyalTitlePermitWorker_SectGift)Permit("MasterworkSword").Worker;
+                    var masterOpt = Permit("MasterworkSword").GetModExtension<DefModExtension_SectGift>().options[0];
+                    Check(Gift(master, masterOpt), "masterwork sword sent");
+                    var legend = Permit("LegendarySword").GetModExtension<DefModExtension_SectGift>();
+                    Check(legend.playerChooses && legend.options.Count >= 3, "legendary sword: the colonist chooses among " + legend.options.Count);
+                    Check(Gift((RoyalTitlePermitWorker_SectGift)Permit("LegendarySword").Worker, legend.options[0]), "legendary sword sent (" + legend.options[0].Label + ")");
+                    int beforeStrike = Skyfallers();
+                    if (UsePermit(Permit("SwordStrike"), out var r4)) Check(Skyfallers() > beforeStrike, "sword strike: core blades dropping in");
+                    else if (r4 != null && r4.Contains("BadTemperature".Translate())) Note("sword strike skipped: bad temperature on this map");
+                    else Check(false, "use sword strike: " + r4);
+
+                    // Hostilidad: el título no se pierde, los favores se suspenden
+                    faction.TryAffectGoodwillWith(Faction.OfPlayer, -200, canSendMessage: false, canSendHostilityLetter: false);
+                    Check(faction.HostileTo(Faction.OfPlayer), "faction made hostile");
+                    Check(pawn.royalty.GetCurrentTitle(faction) == Title("GuestElder"), "hostility keeps the title");
+                    var opt = Permit("SpiritResources").Worker.GetRoyalAidOptions(map, pawn, faction).FirstOrDefault();
+                    Check(opt == null || opt.Disabled || opt.action == null, "hostility suspends the favors");
+                    faction.TryAffectGoodwillWith(Faction.OfPlayer, 230, canSendMessage: false, canSendHostilityLetter: false);
+                    Check(!faction.HostileTo(Faction.OfPlayer), "peace again");
+
+                    TestSwordSect();
 
                     phase = 1;
                     waitUntil = Find.TickManager.TicksGame + 600;
@@ -162,14 +189,96 @@ namespace Convergence.Sects2
                 }
                 case 1:
                 {
-                    // Llegaron los discípulos y el cofre
+                    // Llegaron los discípulos, el cofre y las espadas
                     var disciples = map.mapPawns.AllPawnsSpawned.Count(p => p.Faction == faction);
                     Note("sect pawns on the map after the drops: " + disciples);
                     Check(map.listerThings.ThingsOfDef(DefDatabase<ThingDef>.GetNamed("CVG_SpiritStone")).Sum(t => t.stackCount) >= 40, "spirit stones delivered");
+                    var swords = map.listerThings.AllThings.Where(t => t.def.weaponTags != null && t.def.weaponTags.Contains("CVG_Sword") && !t.ParentHolder.IsEnclosingContainer()
+                        && t.ParentHolder is Map).ToList();
+                    Check(swords.Any(t => t.TryGetComp<CompQuality>()?.Quality == QualityCategory.Masterwork), "a masterwork sword lies on the ground");
+                    Check(swords.Any(t => t.TryGetComp<CompQuality>()?.Quality == QualityCategory.Legendary), "a legendary sword lies on the ground");
                     Finish();
                     break;
                 }
             }
+        }
+
+        /// <summary>Un favor de regalo como lo usaría el jugador (ya elegida la opción): cápsula cerca del colono.</summary>
+        private bool Gift(RoyalTitlePermitWorker_SectGift worker, SectGiftOption option)
+        {
+            if (!CellFinder.TryFindRandomCellNear(pawn.Position, map, 10, c => !c.Fogged(map) && c.GetEdifice(map) == null
+                && DropCellFinder.CanPhysicallyDropInto(c, map, canRoofPunch: true) && c.Standable(map), out var cell)) return false;
+            int before = Skyfallers();
+            worker.Begin(pawn, faction, map, free: true, option);
+            worker.OrderForceTarget(new LocalTargetInfo(cell));
+            Find.Targeter.StopTargeting();
+            return Skyfallers() > before;
+        }
+
+        /// <summary>Contenido de la Espada Sin Forma (S2): Cuerpo de Espada, ideología, ritual, discípulos y comercio.</summary>
+        private void TestSwordSect()
+        {
+            var body = DefDatabase<TraitDef>.GetNamed("CVG_Body_Sword");
+            Check(body.degreeDatas.Count == 4 && body.degreeDatas.Select(d => d.degree).SequenceEqual(new[] { 0, 1, 2, 3 }), "Sword Body has 4 grades (0-3)");
+            Check(body.GetModExtension<DefModExtension_SpecialBody>()?.rootlessOnly == false, "Sword Body works with and without a spirit root");
+            var oldCelestial = DefDatabase<TraitDef>.GetNamedSilentFail("CVG_Body_CelestialSword");
+            Check(oldCelestial == null || oldCelestial.GetModExtension<DefModExtension_SpecialBody>()?.chance == 0f, "the old celestial sword body is no longer born");
+
+            // Ideología
+            var meme = DefDatabase<MemeDef>.GetNamed("CVG_Meme_SwordWay");
+            Check(meme.preventApparelRequirements, "the sword way imposes no clothing");
+            Check(meme.requireOne != null && meme.requireOne.Count == 4, "preset precepts: cultivation, duels, elders, no demonic arts");
+            var role = DefDatabase<PreceptDef>.GetNamed("CVG_Role_SwordMaster");
+            Check(role.activationBelieverCount == 1 && role.GetModExtension<DefModExtension_RoleEmptyMinBelievers>()?.minBelievers == 4, "sword master: active from 1 believer, empty-role mood from 4");
+            Check(role.grantedAbilities?.Any(a => a.defName == "CombatCommand") ?? false, "sword master grants combat command");
+            var req = role.roleRequirements.OfType<RoleRequirement_HasTrait>().FirstOrDefault();
+            var test = map.mapPawns.FreeColonistsSpawned.FirstOrDefault(p => p != pawn) ?? pawn;
+            ConstitutionUtility.RemoveTrait(test, body);
+            Check(req != null && !req.Met(test, null), "without a Sword Body the colonist cannot be sword master");
+            ConstitutionUtility.SetTrait(test, body, 0);
+            Check(req.Met(test, null), "with an iron Sword Body they can");
+
+            // Ritual de templado: 4 pasos con las probabilidades aprobadas
+            var outcome = DefDatabase<RitualOutcomeEffectDef>.GetNamed("CVG_Outcome_TemperSwordBody");
+            var ext = outcome.GetModExtension<DefModExtension_TemperConstitution>();
+            Check(ext?.steps?.Count == 4, "tempering ritual: 4 steps");
+            var expected = new[] { (0.80f, 1.00f), (0.60f, 1.00f), (0.40f, 0.90f), (0.20f, 0.55f) };
+            for (int i = 0; i < 4; i++)
+                Check(Mathf.Abs(ext.steps[i].Chance(0f) - expected[i].Item1) < 0.001f && Mathf.Abs(ext.steps[i].Chance(1f) - expected[i].Item2) < 0.001f,
+                    "step " + (i + 1) + ": " + ext.steps[i].Chance(0f).ToStringPercent() + " -> " + ext.steps[i].Chance(1f).ToStringPercent());
+            Check(outcome.comps.OfType<RitualOutcomeComp_MinBelievers>().Any(c => c.count == 2), "the ritual needs two more believers");
+            Check(outcome.comps.OfType<RitualOutcomeComp_MinBelievers>().First().BlockingIssues(null, TargetInfo.Invalid, null).Any(), "without believers it cannot start");
+            Check(ext.StepFor(test) == ext.steps[1], "an iron body is tempered toward cold steel");
+            RitualOutcomeEffectWorker_TemperConstitution.Resolve(new DefModExtension_TemperConstitution { steps = ext.steps }, test, 1f, map);
+            Check(ConstitutionUtility.Degree(test, body) == 1, "perfect ceremony: iron -> cold steel");
+
+            // Discípulos: solo espadas, sin Hulk, el anciano siempre con Cuerpo de Espada
+            foreach (var kindName in new[] { "Disciple", "Bearer", "Blade", "Elder" })
+            {
+                var kind = DefDatabase<PawnKindDef>.GetNamed("CVG_FormlessSword_" + kindName);
+                int hulks = 0, nonSwords = 0, bodies = 0;
+                for (int i = 0; i < 6; i++)
+                {
+                    var p = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind, faction, forceGenerateNewPawn: true));
+                    if (p.story.bodyType == BodyTypeDefOf.Hulk) hulks++;
+                    var w = p.equipment?.Primary;
+                    if (w != null && !(w.def.weaponTags?.Contains("CVG_Sword") ?? false)) nonSwords++;
+                    if (ConstitutionUtility.Degree(p, body) != null) bodies++;
+                    p.Destroy();
+                }
+                Check(hulks == 0 && nonSwords == 0 && (kindName != "Elder" || bodies == 6), kindName + ": no Hulk, swords only, " + bodies + "/6 with Sword Body");
+            }
+
+            // Comercio: espadas Buena-Obra maestra, nunca Legendaria
+            var trader = DefDatabase<TraderKindDef>.GetNamed("CVG_Trader_FormlessSword");
+            var stock = new List<Thing>();
+            for (int i = 0; i < 8; i++) foreach (var g in trader.stockGenerators) stock.AddRange(g.GenerateThings(map.Tile, faction));
+            var sold = stock.Where(t => t.def.weaponTags?.Contains("CVG_Sword") ?? false).ToList();
+            var q = sold.Select(t => t.TryGetComp<CompQuality>()?.Quality).Where(x => x != null).Select(x => x.Value).ToList();
+            Check(sold.Count > 0 && q.All(x => x >= QualityCategory.Good && x <= QualityCategory.Masterwork), "trade: " + sold.Count + " swords, all Good-Masterwork");
+            Check(!q.Contains(QualityCategory.Legendary), "trade: never legendary");
+            Check(stock.Any(t => t.def.defName == "CVG_SpiritStone"), "trade: spirit stones in stock");
+            foreach (var t in stock) t.Destroy();
         }
 
         private void Finish()

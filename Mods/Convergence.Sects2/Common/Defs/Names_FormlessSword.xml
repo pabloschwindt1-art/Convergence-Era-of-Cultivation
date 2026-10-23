@@ -17,6 +17,22 @@
         <li>family->Han</li>
         <li>family->Mu</li>
         <li>family->Xie</li>
+        <li>family->Bai</li>
+        <li>family->Cao</li>
+        <li>family->Chu</li>
+        <li>family->Fang</li>
+        <li>family->Hua</li>
+        <li>family->Jiang</li>
+        <li>family->Lu</li>
+        <li>family->Meng</li>
+        <li>family->Pei</li>
+        <li>family->Qiu</li>
+        <li>family->Song</li>
+        <li>family->Tang</li>
+        <li>family->Wei</li>
+        <li>family->Xu</li>
+        <li>family->Yun</li>
+        <li>family->Zhou</li>
         <li>given->Feng</li>
         <li>given->Ling</li>
         <li>given->Jian</li>
@@ -33,6 +49,24 @@
         <li>given->Rui</li>
         <li>given->Wuxin</li>
         <li>given->Kong</li>
+        <li>given->An</li>
+        <li>given->Bo</li>
+        <li>given->Ci</li>
+        <li>given->Fei</li>
+        <li>given->Heng</li>
+        <li>given->Jing</li>
+        <li>given->Kai</li>
+        <li>given->Lang</li>
+        <li>given->Mo</li>
+        <li>given->Ning</li>
+        <li>given->Qian</li>
+        <li>given->Shuang</li>
+        <li>given->Wu</li>
+        <li>given->Xiao</li>
+        <li>given->Yan</li>
+        <li>given->Ying</li>
+        <li>given->Zhen</li>
+        <li>given->Zhi</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

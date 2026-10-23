@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Meme_SwordWay.descriptionMaker.rules.rulesStrings>
+    <li>creation(tag=meme_CVG_Meme_SwordWay)-&gt;[deity0_name] partió una montaña de un solo tajo y nunca desenvainó.</li>
+    <li>episode(uses=1,tag=meme_CVG_Meme_SwordWay)-&gt;[deity0_name] le mostró al primer [memberName] que el corte se hace antes de que la mano se mueva.</li>
+    <li>intro(tag=meme_CVG_Meme_SwordWay)-&gt;Los primeros [memberNamePlural] de [place_summary] [place_name] levantaron un túmulo de espadas donde descansa la hoja de cada maestro.</li>
+    <li>conflict(tag=meme_CVG_Meme_SwordWay)-&gt;Un poderoso [foeLeader] quebró mil espadas y creyó haber quebrado la secta con ellas.</li>
+    <li>founderJoin(tag=meme_CVG_Meme_SwordWay)-&gt;[founderName] bajó de la montaña sin nada más que su intención, y [memberName] lo siguió.</li>
+    <li>victory(tag=meme_CVG_Meme_SwordWay)-&gt;[founderName] enfrentó al [foeLeader] desarmado, y los [foeSoldiers] huyeron de una hoja que no podían ver.</li>
+    <li>setup(tag=meme_CVG_Meme_SwordWay)-&gt;La Calamidad de Hierro dispersó a los creyentes, que se reunieron alrededor de lo que ninguna máquina podía quebrar.</li>
+    <li>story(uses=1,tag=meme_CVG_Meme_SwordWay)-&gt;Los creyentes se extendieron y crecieron en número, cada uno templando su propia hoja.</li>
+    <li>lessonIntro(tag=meme_CVG_Meme_SwordWay)-&gt;Discípulo, los viejos maestros solían decir:</li>
+    <li>lesson(tag=meme_CVG_Meme_SwordWay)-&gt;el acero puede quebrarse, pero la intención verdadera persiste.</li>
+    <li>lessonReinforcement(tag=meme_CVG_Meme_SwordWay)-&gt;Lo entenderás después de diez mil cortes.</li>
+    <li>archistFact(tag=meme_CVG_Meme_SwordWay)-&gt;Los arcotecnólogos lo miden todo, menos el instante antes de un corte.</li>
+    <li>archistProphecy(tag=meme_CVG_Meme_SwordWay)-&gt;[inTheEnd], las máquinas callarán, y solo quedará la intención.</li>
+    <li>animistFact(tag=meme_CVG_Meme_SwordWay)-&gt;Cada hoja que descansa en el túmulo de espadas guarda un poco del espíritu de su maestro.</li>
+  </CVG_Meme_SwordWay.descriptionMaker.rules.rulesStrings>
+</LanguageData>

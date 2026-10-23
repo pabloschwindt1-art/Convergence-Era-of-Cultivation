@@ -8,7 +8,7 @@ namespace Convergence
 {
     /// <summary>
     /// Como <see cref="StockGenerator_Tag"/>, pero solo con armas de ciertas <c>weaponTags</c> (p. ej. <c>CVG_Sword</c>) y con calidad
-    /// mínima: cada objeto sale con una calidad sorteada de <see cref="qualities"/> (p. ej. Excelente 75%, Obra maestra 20%, Legendaria 5%).
+    /// controlada: cada objeto sale con una calidad sorteada de <see cref="qualities"/> (p. ej. Buena 55%, Excelente 37%, Obra maestra 8%).
     /// Es el stock de especialidad de una secta (espadas de la Espada Sin Forma, armaduras de los Nueve Templados…); el resto del comercio
     /// sigue con los generadores normales.
     /// </summary>
@@ -30,8 +30,8 @@ namespace Convergence
                 var comp = thing.TryGetComp<CompQuality>();
                 if (comp != null && !qualities.NullOrEmpty())
                 {
-                    var q = qualities.RandomElementByWeight(c => c.weight).quality;
-                    if (q > comp.Quality) comp.SetQuality(q, ArtGenerationContext.Outsider);
+                    // Calidad exacta del sorteo (no solo "mínima"): así la secta nunca vende algo fuera de su tabla, p. ej. Legendario.
+                    comp.SetQuality(qualities.RandomElementByWeight(c => c.weight).quality, ArtGenerationContext.Outsider);
                 }
                 yield return thing;
             }

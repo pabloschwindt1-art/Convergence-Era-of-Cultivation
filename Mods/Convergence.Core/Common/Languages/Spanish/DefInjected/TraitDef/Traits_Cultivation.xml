@@ -28,6 +28,12 @@
   <CVG_Body_Steel.degreeDatas.0.description>La piel y los huesos de {PAWN_nameDef} son duros como el metal. No puede reunir qi, pero su cuerpo puede templarse hasta ser un arma.</CVG_Body_Steel.degreeDatas.0.description>
   <CVG_Body_Tribulation.degreeDatas.0.label>cuerpo de tribulación</CVG_Body_Tribulation.degreeDatas.0.label>
   <CVG_Body_Tribulation.degreeDatas.0.description>Los rayos celestiales no destruyen a {PAWN_nameDef}: lo forjan. No puede reunir qi, pero las tribulaciones lo hacen más fuerte.</CVG_Body_Tribulation.degreeDatas.0.description>
-  <CVG_Body_Sword.degreeDatas.0.label>cuerpo de espada</CVG_Body_Sword.degreeDatas.0.label>
-  <CVG_Body_Sword.degreeDatas.0.description>El cuerpo de {PAWN_nameDef} es la hoja. No puede reunir qi, pero cada golpe corta como una espada templada.</CVG_Body_Sword.degreeDatas.0.description>
+  <CVG_Body_Sword.degreeDatas.0.label>cuerpo de espada de hierro</CVG_Body_Sword.degreeDatas.0.label>
+  <CVG_Body_Sword.degreeDatas.0.description>El cuerpo de {PAWN_nameDef} tiene el temple del hierro en bruto: huesos que sostienen la postura, manos que no tiemblan en la empuñadura. La Espada Sin Forma lo llama el primer refinamiento, el que todo discípulo debe ganarse antes de que la hoja le haga caso.</CVG_Body_Sword.degreeDatas.0.description>
+  <CVG_Body_Sword.degreeDatas.1.label>cuerpo de espada de acero frío</CVG_Body_Sword.degreeDatas.1.label>
+  <CVG_Body_Sword.degreeDatas.1.description>El hierro de {PAWN_nameDef} ya fue templado: está en calma cuando la sangre hierve, y el corte llega antes que la ira. Los ancianos dicen que el acero frío no odia a su enemigo; simplemente no falla.</CVG_Body_Sword.degreeDatas.1.description>
+  <CVG_Body_Sword.degreeDatas.2.label>cuerpo de espada de hierro estelar</CVG_Body_Sword.degreeDatas.2.label>
+  <CVG_Body_Sword.degreeDatas.2.description>El hierro estelar es el metal que cae ardiendo del cielo y no se funde. El cuerpo de {PAWN_nameDef} alcanzó ese grado: siente el golpe antes de que llegue, como el Santo de la Espada Qing Feng sintió la montaña antes de partirla.</CVG_Body_Sword.degreeDatas.2.description>
+  <CVG_Body_Sword.degreeDatas.3.label>cuerpo de espada de jade celestial</CVG_Body_Sword.degreeDatas.3.label>
+  <CVG_Body_Sword.degreeDatas.3.description>El jade es la piedra que guarda la memoria del cielo. En {PAWN_nameDef} la hoja y el cuerpo ya son una sola intención: la Espada Sin Forma registra quizá un discípulo así por generación, y sus maestros se inclinan ante él como ante una espada viva.</CVG_Body_Sword.degreeDatas.3.description>
 </LanguageData>

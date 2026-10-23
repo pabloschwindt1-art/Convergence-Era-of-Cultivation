@@ -14,6 +14,7 @@ namespace Convergence
     public class DefModExtension_TemperConstitution : DefModExtension
     {
         public List<TemperStep> steps;
+        /// <summary>Costo común a todos los pasos (si un paso no define el suyo).</summary>
         public List<ThingDefCountClass> cost;
         /// <summary>Id del rol del ritual que recibe el templado.</summary>
         public string subjectRoleId = "subject";
@@ -21,7 +22,11 @@ namespace Convergence
         /// <summary>El paso que le toca al pawn ahora (el de su estado actual), o null si ya no puede subir.</summary>
         public TemperStep StepFor(Pawn pawn) => steps?.FirstOrDefault(s => s.AppliesTo(pawn));
 
-        public bool CanPay(Map map, out string missing)
+        public List<ThingDefCountClass> CostOf(TemperStep step) => step?.cost ?? cost;
+
+        public bool CanPay(Map map, out string missing) => CanPay(map, cost, out missing);
+
+        public static bool CanPay(Map map, List<ThingDefCountClass> cost, out string missing)
         {
             missing = null;
             if (cost.NullOrEmpty() || map == null) return true;
@@ -33,7 +38,7 @@ namespace Convergence
             return true;
         }
 
-        public void Pay(Map map)
+        public static void Pay(Map map, List<ThingDefCountClass> cost)
         {
             if (cost.NullOrEmpty() || map == null) return;
             foreach (var c in cost)
@@ -62,12 +67,16 @@ namespace Convergence
         public SimpleCurve chanceByQuality;
         /// <summary>Rasgos que impiden empezar desde cero (p. ej. ya tiene el Celestial).</summary>
         public List<TraitDef> blockedBy;
+        /// <summary>Materiales de este paso (si falta, el costo común del ritual).</summary>
+        public List<ThingDefCountClass> cost;
 
         public bool AppliesTo(Pawn pawn)
         {
             if (pawn?.story?.traits == null) return false;
             if (fromTrait == null)
-                return ConstitutionUtility.Degree(pawn, toTrait) == null && (blockedBy == null || !blockedBy.Any(b => ConstitutionUtility.Degree(pawn, b) != null));
+                // Desde cero: sin el rasgo, sin lo que lo bloquea y sin otro rasgo incompatible (otro cuerpo especial, p. ej.)
+                return ConstitutionUtility.Degree(pawn, toTrait) == null && (blockedBy == null || !blockedBy.Any(b => ConstitutionUtility.Degree(pawn, b) != null))
+                    && TraitConflictUtility.CanGain(pawn, toTrait, toDegree);
             return ConstitutionUtility.Degree(pawn, fromTrait) == fromDegree;
         }
 
@@ -112,7 +121,7 @@ namespace Convergence
         public static string Resolve(DefModExtension_TemperConstitution ext, Pawn subject, float quality, Map map)
         {
             var step = ext.StepFor(subject);
-            ext.Pay(map);
+            DefModExtension_TemperConstitution.Pay(map, ext.CostOf(step));
             if (step == null) return "CVG_Temper_NothingToTemper".Translate(subject.Named("PAWN"));
             float chance = step.Chance(quality);
             if (Rand.Chance(chance))
@@ -133,12 +142,13 @@ namespace Convergence
             if (!base.AppliesToPawn(p, out reason, selectedTarget, ritual, assignments, precept, skipReason)) return false;
             var ext = (precept ?? ritual?.Ritual)?.outcomeEffect?.def?.GetModExtension<DefModExtension_TemperConstitution>();
             if (ext == null) return true;
-            if (ext.StepFor(p) == null)
+            var step = ext.StepFor(p);
+            if (step == null)
             {
                 if (!skipReason) reason = "CVG_Temper_NoStep".Translate(p.Named("PAWN"));
                 return false;
             }
-            if (!ext.CanPay(p.MapHeld, out string missing))
+            if (!DefModExtension_TemperConstitution.CanPay(p.MapHeld, ext.CostOf(step), out string missing))
             {
                 if (!skipReason) reason = "CVG_Temper_MissingCost".Translate(missing);
                 return false;

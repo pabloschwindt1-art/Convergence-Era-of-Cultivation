@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Role_SwordMaster.label>maestro de espadas</CVG_Role_SwordMaster.label>
+  <CVG_Role_SwordMaster.description>El maestro que guarda la disciplina de la hoja y templa el cuerpo de los discípulos. Solo puede ocupar el cargo alguien cuyo cuerpo ya se volvió espada: la Espada Sin Forma dice que no se puede enseñar un temple que nunca se sintió.</CVG_Role_SwordMaster.description>
+  <CVG_Ritual_TemperSwordBody.label>templado del cuerpo de espada</CVG_Ritual_TemperSwordBody.label>
+  <CVG_Ritual_TemperSwordBody.description>El discípulo se arrodilla ante el túmulo de espadas mientras el maestro de espadas recita los diez mil cortes de Qing Feng. Las piedras espirituales arden a su alrededor como una forja sin fuego; lo que se templa no es el acero, sino el cuerpo que llevará la intención.</CVG_Ritual_TemperSwordBody.description>
+</LanguageData>

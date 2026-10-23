@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ======================================================================================================================
+       Sect framework: abstract bases shared by every sect (faction, disciples, honorary titles, favors). A new sect inherits
+       them and only sets its specialty, lore and trade. Guide: docs/modulos/SECTS2_PLANTILLA.md.
+       ====================================================================================================================== -->
+
+  <!-- Faction: arrives with the Convergence, has Royalty honorary titles (instant, never lost to bad goodwill) and sect contribution. -->
+  <FactionDef Abstract="True" Name="CVG_SectFactionBase" ParentName="OutlanderFactionBase">
+    <techLevel>Medieval</techLevel>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>60</configurationListOrderPriority>
+    <listOrderPriority>40</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <earliestRaidDays>8</earliestRaidDays>
+    <canSiege>false</canSiege>
+    <leaderTitle>sect master</leaderTitle>
+    <backstoryFilters>
+      <li>
+        <categories><li>CVG_Cultivation</li></categories>
+        <commonality>2</commonality>
+      </li>
+    </backstoryFilters>
+    <structureMemeWeights Inherit="False">
+      <CVG_Structure_DaoOrigin>3</CVG_Structure_DaoOrigin>
+      <CVG_Structure_HeavenMandate>2</CVG_Structure_HeavenMandate>
+      <Structure_Ideological>1</Structure_Ideological>
+    </structureMemeWeights>
+    <royalFavorLabel>sect contribution</royalFavorLabel>
+    <!-- Royalty always looks for an heir when it awards a title (it crashes without a worker), even though sect titles are not inherited. -->
+    <royalTitleInheritanceWorkerClass>RoyalTitleInheritanceWorker</royalTitleInheritanceWorkerClass>
+    <royalTitleInheritanceRelations>
+      <li>Child</li>
+      <li>Spouse</li>
+      <li>Sibling</li>
+    </royalTitleInheritanceRelations>
+  </FactionDef>
+
+  <PawnKindDef Abstract="True" Name="CVG_Sect2KindBase">
+    <race>Human</race>
+    <chemicalAddictionChance>0.02</chemicalAddictionChance>
+    <invNutrition>2.55</invNutrition>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <maxGenerationAge>75</maxGenerationAge>
+    <apparelAllowHeadgearChance>0.3</apparelAllowHeadgearChance>
+    <initialWillRange>0~2</initialWillRange>
+    <initialResistanceRange>14~24</initialResistanceRange>
+    <ignoreIdeoApparelColors>true</ignoreIdeoApparelColors>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances />
+    </xenotypeSet>
+  </PawnKindDef>
+
+  <!-- Honorary titles: Royalty titles awarded at once (no bestowing ceremony), with no throne room, apparel, food or psylink demands.
+       Spending contribution never lowers a title, and bad goodwill does not take it away (Royalty only removes titles on renouncing). -->
+  <RoyalTitleDef Abstract="True" Name="CVG_SectTitleBase">
+    <awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass>
+    <awardThought>GainedTitle</awardThought>
+    <lostThought>LostTitle</lostThought>
+    <canBeInherited>false</canBeInherited>
+    <allowDignifiedMeditationFocus>false</allowDignifiedMeditationFocus>
+    <suppressIdleAlert>true</suppressIdleAlert>
+    <permitPointsAwarded>1</permitPointsAwarded>
+    <!-- Required by Royalty for awardable titles even without inheritance (same value as the Empire's freeholder). -->
+    <changeHeirQuestPoints>1000</changeHeirQuestPoints>
+  </RoyalTitleDef>
+
+  <!-- The four ranks, the same in every sect (cumulative contribution 2 / 8 / 18 / 34). -->
+  <RoyalTitleDef Abstract="True" Name="CVG_SectTitle1" ParentName="CVG_SectTitleBase"><seniority>100</seniority><favorCost>2</favorCost></RoyalTitleDef>
+  <RoyalTitleDef Abstract="True" Name="CVG_SectTitle2" ParentName="CVG_SectTitleBase"><seniority>200</seniority><favorCost>6</favorCost></RoyalTitleDef>
+  <RoyalTitleDef Abstract="True" Name="CVG_SectTitle3" ParentName="CVG_SectTitleBase"><seniority>300</seniority><favorCost>10</favorCost></RoyalTitleDef>
+  <!-- The last title awards 2 permit points: 1+1+1+2 = the five favors. -->
+  <RoyalTitleDef Abstract="True" Name="CVG_SectTitle4" ParentName="CVG_SectTitleBase"><seniority>400</seniority><favorCost>16</favorCost><permitPointsAwarded>2</permitPointsAwarded></RoyalTitleDef>
+
+  <!-- The five favors (Royalty permits): free when off cooldown, payable with contribution during it. Unusable while the sect is hostile. -->
+  <RoyalTitlePermitDef Abstract="True" Name="CVG_SectPermitBase">
+    <permitPointCost>1</permitPointCost>
+    <layerBlacklist>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">Orbit</li>
+    </layerBlacklist>
+  </RoyalTitlePermitDef>
+
+  <!-- 1. Resources (Friend): a drop pod with the sect's materials. -->
+  <RoyalTitlePermitDef Abstract="True" Name="CVG_SectFavorResources" ParentName="CVG_SectPermitBase">
+    <workerClass>RoyalTitlePermitWorker_DropResources</workerClass>
+    <cooldownDays>20</cooldownDays>
+    <usableOnWorldMap>true</usableOnWorldMap>
+    <uiPosition>(0,0)</uiPosition>
+    <royalAid>
+      <favorCost>2</favorCost>
+      <targetingRange>39.9</targetingRange>
+    </royalAid>
+  </RoyalTitlePermitDef>
+
+  <!-- 2. Reinforcements (Honored Guest): three disciples. -->
+  <RoyalTitlePermitDef Abstract="True" Name="CVG_SectFavorReinforcements" ParentName="CVG_SectPermitBase">
+    <workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+    <cooldownDays>30</cooldownDays>
+    <uiPosition>(1,0)</uiPosition>
+    <royalAid>
+      <favorCost>4</favorCost>
+      <pawnCount>3</pawnCount>
+      <targetingRange>39.9</targetingRange>
+    </royalAid>
+  </RoyalTitlePermitDef>
+
+  <!-- 3. Masterwork gift (Sect Protector): one item of the sect's specialty, masterwork. -->
+  <RoyalTitlePermitDef Abstract="True" Name="CVG_SectFavorMasterwork" ParentName="CVG_SectPermitBase">
+    <workerClass>Convergence.Sects2.RoyalTitlePermitWorker_SectGift</workerClass>
+    <cooldownDays>45</cooldownDays>
+    <uiPosition>(0,1)</uiPosition>
+    <royalAid>
+      <favorCost>8</favorCost>
+      <targetingRange>39.9</targetingRange>
+    </royalAid>
+  </RoyalTitlePermitDef>
+
+  <!-- 4. Exceptional gift (Guest Elder): the colonist chooses one item from the sect's list (a legendary sword, a pill of choice...). -->
+  <RoyalTitlePermitDef Abstract="True" Name="CVG_SectFavorExceptional" ParentName="CVG_SectPermitBase">
+    <workerClass>Convergence.Sects2.RoyalTitlePermitWorker_SectGift</workerClass>
+    <cooldownDays>60</cooldownDays>
+    <uiPosition>(1,1)</uiPosition>
+    <royalAid>
+      <favorCost>16</favorCost>
+      <targetingRange>39.9</targetingRange>
+    </royalAid>
+  </RoyalTitlePermitDef>
+
+  <!-- 5. Strike (Guest Elder): the sect's elite lands where you point and attacks (vanilla Call Aid aimed at the target). -->
+  <RoyalTitlePermitDef Abstract="True" Name="CVG_SectFavorStrike" ParentName="CVG_SectPermitBase">
+    <workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+    <cooldownDays>60</cooldownDays>
+    <uiPosition>(2,1)</uiPosition>
+    <royalAid>
+      <favorCost>12</favorCost>
+      <targetingRange>39.9</targetingRange>
+    </royalAid>
+  </RoyalTitlePermitDef>
+</Defs>

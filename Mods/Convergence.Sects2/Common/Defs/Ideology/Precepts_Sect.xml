@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Sect precepts (docs/modulos/SECTAS_IDEOLOGIA.md). They react to the cultivation events recorded by the Core (SectEvents.cs). -->
+  <IssueDef>
+    <defName>CVG_Issue_Cultivation</defName>
+    <label>cultivation</label>
+  </IssueDef>
+  <IssueDef>
+    <defName>CVG_Issue_Alchemy</defName>
+    <label>alchemy and pills</label>
+  </IssueDef>
+  <IssueDef>
+    <defName>CVG_Issue_Essence</defName>
+    <label>essence extraction</label>
+  </IssueDef>
+  <IssueDef>
+    <defName>CVG_Issue_Demonic</defName>
+    <label>demonic arts</label>
+  </IssueDef>
+  <IssueDef>
+    <defName>CVG_Issue_Duels</defName>
+    <label>duels between disciples</label>
+  </IssueDef>
+  <IssueDef>
+    <defName>CVG_Issue_Hierarchy</defName>
+    <label>sect hierarchy</label>
+  </IssueDef>
+  <IssueDef>
+    <defName>CVG_Issue_Retreat</defName>
+    <label>breakthrough retreat</label>
+  </IssueDef>
+  <PreceptDef>
+    <defName>CVG_Cultivation_Obligatory</defName>
+    <issue>CVG_Issue_Cultivation</issue>
+    <label>obligatory</label>
+    <description>Every disciple must sit in cultivation every day. A day without cultivation is a day stolen from the Dao.</description>
+    <impact>High</impact>
+    <displayOrderInIssue>30</displayOrderInIssue>
+    <displayOrderInImpact>1000</displayOrderInImpact>
+    <associatedMemes>
+      <li>CVG_Meme_SwordWay</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>CVG_Cultivated</eventDef>
+        <thought>CVG_Cultivation_Obligatory_Self</thought>
+      </li>
+      <li Class="PreceptComp_SituationalThought">
+        <thought>CVG_Cultivation_Obligatory_Missed</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Cultivation_Venerated</defName>
+    <issue>CVG_Issue_Cultivation</issue>
+    <label>venerated</label>
+    <description>Cultivation is the highest of arts; a disciple who sits for hours is admired for it.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>20</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <associatedMemes>
+      <li>CVG_Meme_SwordWay</li>
+    </associatedMemes>
+    <conflictingMemes></conflictingMemes>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>CVG_Cultivated</eventDef>
+        <thought>CVG_Cultivation_Venerated_Self</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Cultivation_Free</defName>
+    <issue>CVG_Issue_Cultivation</issue>
+    <label>free</label>
+    <description>Each disciple cultivates when and how they please.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>0</displayOrderInIssue>
+    <displayOrderInImpact>-100</displayOrderInImpact>
+    <conflictingMemes></conflictingMemes>
+    <comps></comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Cultivation_Frowned</defName>
+    <issue>CVG_Issue_Cultivation</issue>
+    <label>frowned upon</label>
+    <description>Sitting still for hours is idleness. Real disciples work, fight and live; the Dao will find them anyway.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>10</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <conflictingMemes>
+      <li>CVG_Meme_SwordWay</li>
+    </conflictingMemes>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>CVG_Cultivated</eventDef>
+        <thought>CVG_Cultivation_Frowned_Self</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>CVG_Cultivated</eventDef>
+        <thought>CVG_Cultivation_Frowned_Know</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Alchemy_Venerated</defName>
+    <issue>CVG_Issue_Alchemy</issue>
+    <label>venerated</label>
+    <description>Pills are the distilled wisdom of a thousand years of alchemists. Refusing one is arrogance.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>20</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <conflictingMemes></conflictingMemes>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>CVG_TookPill</eventDef>
+        <thought>CVG_Alchemy_Venerated_Self</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Alchemy_Accepted</defName>
+    <issue>CVG_Issue_Alchemy</issue>
+    <label>accepted</label>
+    <description>Pills are a tool like any other, to be used when needed.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>0</displayOrderInIssue>
+    <displayOrderInImpact>-100</displayOrderInImpact>
+    <conflictingMemes></conflictingMemes>
+    <comps></comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Alchemy_Frowned</defName>
+    <issue>CVG_Issue_Alchemy</issue>
+    <label>frowned upon</label>
+    <description>A pill is a crutch. The body and the will must climb on their own.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>10</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <associatedMemes>
+      <li>CVG_Meme_SwordWay</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>CVG_TookPill</eventDef>
+        <thought>CVG_Alchemy_Frowned_Self</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>CVG_TookPill</eventDef>
+        <thought>CVG_Alchemy_Frowned_Know</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Essence_Abhorrent</defName>
+    <issue>CVG_Issue_Essence</issue>
+    <label>abhorrent</label>
+    <description>Draining a living being of its essence is murder, however it is dressed up.</description>
+    <impact>High</impact>
+    <displayOrderInIssue>30</displayOrderInIssue>
+    <displayOrderInImpact>1000</displayOrderInImpact>
+    <associatedMemes>
+      <li>CVG_Meme_SwordWay</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>CVG_ExtractedEssence</eventDef>
+        <thought>CVG_Essence_Abhorrent_Self</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>CVG_ExtractedEssence</eventDef>
+        <thought>CVG_Essence_Abhorrent_Know</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>CVG_ExtractedEssence</eventDef>
+        <thought>CVG_Essence_Abhorrent_KnowMood</thought>
+        <description>Someone extracted an essence from a living being.</description>
+      </li>
+    </comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Essence_Accepted</defName>
+    <issue>CVG_Issue_Essence</issue>
+    <label>accepted</label>
+    <description>Essences are a hard reality of the new world; whoever extracts one must at least do it with respect.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>0</displayOrderInIssue>
+    <displayOrderInImpact>-100</displayOrderInImpact>
+    <conflictingMemes></conflictingMemes>
+    <comps></comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Essence_Honored</defName>
+    <issue>CVG_Issue_Essence</issue>
+    <label>honored</label>
+    <description>A life given for an essence is a life that continues in another. The donor is honored, and the receiver carries a debt.</description>
+    <impact>High</impact>
+    <displayOrderInIssue>20</displayOrderInIssue>
+    <displayOrderInImpact>1000</displayOrderInImpact>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>CVG_ExtractedEssence</eventDef>
+        <thought>CVG_Essence_Honored_Self</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Demonic_Forbidden</defName>
+    <issue>CVG_Issue_Demonic</issue>
+    <label>forbidden</label>
+    <description>The demonic arts bleed the world and the one who uses them. Whoever practices them is cast out.</description>
+    <impact>High</impact>
+    <displayOrderInIssue>30</displayOrderInIssue>
+    <displayOrderInImpact>1000</displayOrderInImpact>
+    <associatedMemes>
+      <li>CVG_Meme_SwordWay</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>CVG_DemonicArt</eventDef>
+        <thought>CVG_Demonic_Forbidden_Self</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>CVG_DemonicArt</eventDef>
+        <thought>CVG_Demonic_Forbidden_Know</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>CVG_DemonicArt</eventDef>
+        <thought>CVG_Demonic_Forbidden_KnowMood</thought>
+        <description>Someone used a demonic art.</description>
+      </li>
+    </comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Demonic_Tolerated</defName>
+    <issue>CVG_Issue_Demonic</issue>
+    <label>tolerated</label>
+    <description>The demonic arts are a dangerous tool, but a tool.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>0</displayOrderInIssue>
+    <displayOrderInImpact>-100</displayOrderInImpact>
+    <conflictingMemes></conflictingMemes>
+    <comps></comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Demonic_Embraced</defName>
+    <issue>CVG_Issue_Demonic</issue>
+    <label>embraced</label>
+    <description>Power is power; the righteous only call it demonic because they could not wield it.</description>
+    <impact>High</impact>
+    <displayOrderInIssue>20</displayOrderInIssue>
+    <displayOrderInImpact>1000</displayOrderInImpact>
+    <conflictingMemes>
+      <li>CVG_Meme_SwordWay</li>
+    </conflictingMemes>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>CVG_DemonicArt</eventDef>
+        <thought>CVG_Demonic_Embraced_Self</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Duels_Encouraged</defName>
+    <issue>CVG_Issue_Duels</issue>
+    <label>encouraged</label>
+    <description>Disciples settle their differences with the sword in the open, and the tournament is the pride of the sect.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>20</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <associatedMemes>
+      <li>CVG_Meme_SwordWay</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>CVG_DuelFought</eventDef>
+        <thought>CVG_Duels_Encouraged_Self</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Duels_Allowed</defName>
+    <issue>CVG_Issue_Duels</issue>
+    <label>allowed</label>
+    <description>A duel is allowed if both sides accept and no one dies.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>0</displayOrderInIssue>
+    <displayOrderInImpact>-100</displayOrderInImpact>
+    <conflictingMemes></conflictingMemes>
+    <comps></comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Duels_Forbidden</defName>
+    <issue>CVG_Issue_Duels</issue>
+    <label>forbidden</label>
+    <description>Disciples do not raise their hands against disciples. Whoever draws a sword in the sect answers to the elders.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>10</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <conflictingMemes>
+      <li>CVG_Meme_SwordWay</li>
+    </conflictingMemes>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>CVG_DuelFought</eventDef>
+        <thought>CVG_Duels_Forbidden_Self</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Hierarchy_Elders</defName>
+    <issue>CVG_Issue_Hierarchy</issue>
+    <label>elders command</label>
+    <description>The elders decide; the junior listen. Every rise in rank is celebrated by the whole sect.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>20</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <associatedMemes>
+      <li>CVG_Meme_SwordWay</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>CVG_Ascended</eventDef>
+        <thought>CVG_Hierarchy_Elders_KnowMood</thought>
+        <description>Someone in the sect rose a realm. The hierarchy grows.</description>
+      </li>
+    </comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Hierarchy_Equals</defName>
+    <issue>CVG_Issue_Hierarchy</issue>
+    <label>all equal</label>
+    <description>No disciple is above another by seniority alone. Strength is each person's own business.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>10</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <conflictingMemes>
+      <li>CVG_Meme_SwordWay</li>
+    </conflictingMemes>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>CVG_Ascended</eventDef>
+        <thought>CVG_Hierarchy_Equals_Self</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Retreat_Revered</defName>
+    <issue>CVG_Issue_Retreat</issue>
+    <label>revered</label>
+    <description>A disciple in retreat is untouchable. No one disturbs them, and their return is a feast.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>20</displayOrderInIssue>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <associatedMemes>
+      <li>CVG_Meme_SwordWay</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>CVG_RetreatCompleted</eventDef>
+        <thought>CVG_Retreat_Revered_Self</thought>
+      </li>
+    </comps>
+  </PreceptDef>
+  <PreceptDef>
+    <defName>CVG_Retreat_Ordinary</defName>
+    <issue>CVG_Issue_Retreat</issue>
+    <label>ordinary</label>
+    <description>A retreat is just a time of work like any other.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>0</displayOrderInIssue>
+    <displayOrderInImpact>-100</displayOrderInImpact>
+    <conflictingMemes></conflictingMemes>
+    <comps></comps>
+  </PreceptDef>
+  <ThoughtDef>
+    <defName>CVG_Cultivation_Obligatory_Self</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>cultivation</label>
+        <description>I did my cultivation today, as I must.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Cultivation_Venerated_Self</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>cultivation</label>
+        <description>My cultivation was a joy and an honor.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Cultivation_Frowned_Self</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>cultivation</label>
+        <description>Sitting there doing nothing felt like a waste.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Cultivation_Frowned_Know</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>6</durationDays>
+    <stackLimit>100</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>cultivating all day like some hermit</label>
+        <baseOpinionOffset>-4</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Alchemy_Venerated_Self</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>alchemy</label>
+        <description>The pill sat well; the alchemists know what they do.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Alchemy_Frowned_Self</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>alchemy</label>
+        <description>I took a pill. It felt like cheating.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Alchemy_Frowned_Know</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>6</durationDays>
+    <stackLimit>100</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>takes pills like a child</label>
+        <baseOpinionOffset>-4</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Essence_Abhorrent_Self</defName>
+    <durationDays>6</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>essence</label>
+        <description>I took part in an essence extraction. It was murder.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Essence_Abhorrent_Know</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>6</durationDays>
+    <stackLimit>100</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>extracted a living essence</label>
+        <baseOpinionOffset>-20</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Essence_Abhorrent_KnowMood</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>3</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+    <stages>
+      <li>
+        <label>essence</label>
+        <description>Someone extracted an essence from a living being.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Essence_Honored_Self</defName>
+    <durationDays>4</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>essence</label>
+        <description>The essence was extracted with honor; the donor lives on.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Demonic_Forbidden_Self</defName>
+    <durationDays>6</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>demonic</label>
+        <description>I used a demonic art. I am no longer clean.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Demonic_Forbidden_Know</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>6</durationDays>
+    <stackLimit>100</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>practices the demonic arts</label>
+        <baseOpinionOffset>-15</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Demonic_Forbidden_KnowMood</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>3</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+    <stages>
+      <li>
+        <label>demonic</label>
+        <description>Someone used a demonic art.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Demonic_Embraced_Self</defName>
+    <durationDays>3</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>demonic</label>
+        <description>My demonic art felt like freedom.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Duels_Encouraged_Self</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>duels</label>
+        <description>I fought honorably before the whole sect.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Duels_Forbidden_Self</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>duels</label>
+        <description>I fought a duel. It was forbidden.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Hierarchy_Elders_KnowMood</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>3</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+    <stages>
+      <li>
+        <label>hierarchy</label>
+        <description>Someone in the sect rose a realm. The hierarchy grows.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Hierarchy_Equals_Self</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>hierarchy</label>
+        <description>I rose, and no one had to give me permission.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Retreat_Revered_Self</defName>
+    <durationDays>3</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>retreat</label>
+        <description>My retreat was respected. I emerged whole.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>CVG_Cultivation_Obligatory_Missed</defName>
+    <workerClass>Convergence.ThoughtWorker_Precept_MissedCultivation</workerClass>
+    <stages>
+      <li>
+        <label>missed cultivation</label>
+        <description>A whole day without sitting in cultivation. The Dao does not wait for those who skip their practice.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

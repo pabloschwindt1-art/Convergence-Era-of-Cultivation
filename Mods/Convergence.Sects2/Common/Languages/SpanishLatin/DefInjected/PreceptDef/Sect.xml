@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Cultivation_Obligatory.label>obligatorio</CVG_Cultivation_Obligatory.label>
+  <CVG_Cultivation_Obligatory.description>Todo discípulo debe sentarse a cultivar cada día. Un día sin cultivo es un día robado al Dao.</CVG_Cultivation_Obligatory.description>
+  <CVG_Cultivation_Venerated.label>venerado</CVG_Cultivation_Venerated.label>
+  <CVG_Cultivation_Venerated.description>El cultivo es la más alta de las artes; un discípulo que se sienta durante horas es admirado por ello.</CVG_Cultivation_Venerated.description>
+  <CVG_Cultivation_Free.label>libre</CVG_Cultivation_Free.label>
+  <CVG_Cultivation_Free.description>Cada discípulo cultiva cuando y como quiera.</CVG_Cultivation_Free.description>
+  <CVG_Cultivation_Frowned.label>mal visto</CVG_Cultivation_Frowned.label>
+  <CVG_Cultivation_Frowned.description>Pasar horas sentado es holgazanería. Los verdaderos discípulos trabajan, luchan y viven; el Dao los encontrará de todos modos.</CVG_Cultivation_Frowned.description>
+  <CVG_Alchemy_Venerated.label>venerada</CVG_Alchemy_Venerated.label>
+  <CVG_Alchemy_Venerated.description>Las píldoras son la sabiduría destilada de mil años de alquimistas. Rechazar una es arrogancia.</CVG_Alchemy_Venerated.description>
+  <CVG_Alchemy_Accepted.label>aceptada</CVG_Alchemy_Accepted.label>
+  <CVG_Alchemy_Accepted.description>Las píldoras son una herramienta como cualquier otra, para usar cuando haga falta.</CVG_Alchemy_Accepted.description>
+  <CVG_Alchemy_Frowned.label>mal vista</CVG_Alchemy_Frowned.label>
+  <CVG_Alchemy_Frowned.description>Una píldora es una muleta. El cuerpo y la voluntad deben ascender por sí solos.</CVG_Alchemy_Frowned.description>
+  <CVG_Essence_Abhorrent.comps.2.description>Alguien extrajo la esencia de un ser vivo.</CVG_Essence_Abhorrent.comps.2.description>
+  <CVG_Essence_Abhorrent.label>aborrecible</CVG_Essence_Abhorrent.label>
+  <CVG_Essence_Abhorrent.description>Drenar la esencia a un ser vivo es asesinato, por mucho que se disfrace.</CVG_Essence_Abhorrent.description>
+  <CVG_Essence_Accepted.label>aceptada</CVG_Essence_Accepted.label>
+  <CVG_Essence_Accepted.description>Las esencias son una dura realidad del mundo nuevo; quien extrae una debe al menos hacerlo con respeto.</CVG_Essence_Accepted.description>
+  <CVG_Essence_Honored.label>honrada</CVG_Essence_Honored.label>
+  <CVG_Essence_Honored.description>Una vida entregada por una esencia es una vida que continúa en otra. Se honra al donante, y el receptor carga con una deuda.</CVG_Essence_Honored.description>
+  <CVG_Demonic_Forbidden.comps.2.description>Alguien usó un arte demoníaco.</CVG_Demonic_Forbidden.comps.2.description>
+  <CVG_Demonic_Forbidden.label>prohibidas</CVG_Demonic_Forbidden.label>
+  <CVG_Demonic_Forbidden.description>Las artes demoníacas desangran el mundo y a quien las usa. Quien las practica es expulsado.</CVG_Demonic_Forbidden.description>
+  <CVG_Demonic_Tolerated.label>toleradas</CVG_Demonic_Tolerated.label>
+  <CVG_Demonic_Tolerated.description>Las artes demoníacas son una herramienta peligrosa, pero una herramienta.</CVG_Demonic_Tolerated.description>
+  <CVG_Demonic_Embraced.label>abrazadas</CVG_Demonic_Embraced.label>
+  <CVG_Demonic_Embraced.description>El poder es poder; los rectos solo lo llaman demoníaco porque no supieron empuñarlo.</CVG_Demonic_Embraced.description>
+  <CVG_Duels_Encouraged.label>fomentados</CVG_Duels_Encouraged.label>
+  <CVG_Duels_Encouraged.description>Los discípulos resuelven sus diferencias con la espada a la vista de todos, y el torneo es el orgullo de la secta.</CVG_Duels_Encouraged.description>
+  <CVG_Duels_Allowed.label>permitidos</CVG_Duels_Allowed.label>
+  <CVG_Duels_Allowed.description>Un duelo está permitido si ambos aceptan y nadie muere.</CVG_Duels_Allowed.description>
+  <CVG_Duels_Forbidden.label>prohibidos</CVG_Duels_Forbidden.label>
+  <CVG_Duels_Forbidden.description>Los discípulos no alzan la mano contra los discípulos. Quien desenvaina en la secta responde ante los ancianos.</CVG_Duels_Forbidden.description>
+  <CVG_Hierarchy_Elders.comps.0.description>Alguien de la secta subió de reino. La jerarquía crece.</CVG_Hierarchy_Elders.comps.0.description>
+  <CVG_Hierarchy_Elders.label>mandan los ancianos</CVG_Hierarchy_Elders.label>
+  <CVG_Hierarchy_Elders.description>Los ancianos deciden; los jóvenes escuchan. Cada ascenso de rango lo celebra toda la secta.</CVG_Hierarchy_Elders.description>
+  <CVG_Hierarchy_Equals.label>todos iguales</CVG_Hierarchy_Equals.label>
+  <CVG_Hierarchy_Equals.description>Ningún discípulo está por encima de otro solo por antigüedad. La fuerza es asunto de cada uno.</CVG_Hierarchy_Equals.description>
+  <CVG_Retreat_Revered.label>venerado</CVG_Retreat_Revered.label>
+  <CVG_Retreat_Revered.description>Un discípulo en retiro es intocable. Nadie lo molesta, y su regreso es una fiesta.</CVG_Retreat_Revered.description>
+  <CVG_Retreat_Ordinary.label>ordinario</CVG_Retreat_Ordinary.label>
+  <CVG_Retreat_Ordinary.description>Un retiro es solo un tiempo de trabajo como cualquier otro.</CVG_Retreat_Ordinary.description>
+</LanguageData>

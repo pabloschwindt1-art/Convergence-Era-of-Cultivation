@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Formless Sword Sect: ideology (meme, preset, specialist, tempering ritual). Template: SECTS2_PLANTILLA.md. -->
+
+  <MemeDef>
+    <defName>CVG_Meme_SwordWay</defName>
+    <label>sword way</label>
+    <description>The sword is neither good nor bad; the hand is. The true sword is the intent (Jian Yi): the steel only carries it. Mastery is won by cutting, and by tempering the body until it becomes a blade.</description>
+    <iconPath>UI/Memes/CVG/SwordWay</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>2</impact>
+    <renderOrder>110</renderOrder>
+    <exclusionTags><li>CVG_Sect_SwordWay</li></exclusionTags>
+    <!-- No mandatory clothing: whoever edits the ideology decides (user decision). -->
+    <preventApparelRequirements>true</preventApparelRequirements>
+    <requireOne>
+      <li><li>CVG_Cultivation_Venerated</li></li>
+      <li><li>CVG_Duels_Encouraged</li></li>
+      <li><li>CVG_Hierarchy_Elders</li></li>
+      <li><li>CVG_Demonic_Forbidden</li></li>
+    </requireOne>
+    <requiredRituals>
+      <li>
+        <precept>CVG_Ritual_TemperSwordBody</precept>
+        <pattern>CVG_Pattern_TemperSwordBody</pattern>
+      </li>
+    </requiredRituals>
+    <agreeableTraits>
+      <li>CVG_Body_Sword</li>
+    </agreeableTraits>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->sword</li>
+        <li>memeHyphenPrefix->sword</li>
+        <li>memeConcept->sword way</li>
+        <li>memeLeaderNoun->sect master</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <li>creation(tag=meme_CVG_Meme_SwordWay)->[deity0_name] split a mountain with a single stroke and never drew the blade.</li>
+          <li>episode(uses=1,tag=meme_CVG_Meme_SwordWay)->[deity0_name] showed the first [memberName] that the cut is made before the hand moves.</li>
+          <li>intro(tag=meme_CVG_Meme_SwordWay)->The early [memberNamePlural] of the [place_summary] [place_name] built a sword mound where every master's blade rests.</li>
+          <li>conflict(tag=meme_CVG_Meme_SwordWay)->A powerful [foeLeader] broke a thousand swords and believed the sect broken with them.</li>
+          <li>founderJoin(tag=meme_CVG_Meme_SwordWay)->[founderName] came down from the mountain with nothing but intent, and [memberName] followed.</li>
+          <li>victory(tag=meme_CVG_Meme_SwordWay)->[founderName] faced the [foeLeader] unarmed, and the [foeSoldiers] fled before a blade they could not see.</li>
+          <li>setup(tag=meme_CVG_Meme_SwordWay)->The believers were scattered by the Iron Calamity, so they gathered around what no machine could break.</li>
+          <li>story(uses=1,tag=meme_CVG_Meme_SwordWay)->The believers spread out and grew in number, each tempering their own blade.</li>
+          <li>lessonIntro(tag=meme_CVG_Meme_SwordWay)->Disciple, the old masters used to say:</li>
+          <li>lesson(tag=meme_CVG_Meme_SwordWay)->steel can break, but true intent endures.</li>
+          <li>lessonReinforcement(tag=meme_CVG_Meme_SwordWay)->You will understand it after ten thousand cuts.</li>
+          <li>archistFact(tag=meme_CVG_Meme_SwordWay)->The archotechs measure everything, except the moment before a cut.</li>
+          <li>archistProphecy(tag=meme_CVG_Meme_SwordWay)->[inTheEnd], the machines will fall silent, and only intent will remain.</li>
+          <li>animistFact(tag=meme_CVG_Meme_SwordWay)->Every blade that rests in the sword mound keeps a little of its master's spirit.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Formless Sword</ideoName>
+        <theme>sword</theme>
+        <adjective>sword</adjective>
+        <member>sword disciple</member>
+      </li>
+    </symbolPacks>
+  </MemeDef>
+
+  <IdeoPresetDef>
+    <defName>CVG_Preset_FormlessSword</defName>
+    <label>formless sword sect</label>
+    <description>Disciples of the Formless Sword: the blade is only a tool, the intent is the sword. Cultivation is venerated, duels are encouraged, the elders lead and the demonic arts are forbidden. Your colony stays independent; the sect is a teaching, not a master.</description>
+    <categoryDef>Strong</categoryDef>
+    <memes>
+      <li>CVG_Meme_SwordWay</li>
+      <li>Loyalist</li>
+    </memes>
+  </IdeoPresetDef>
+
+  <!-- Specialist: Sword Master. Needs any grade of the Sword Body; inspires combat (vanilla Combat Command). -->
+  <PreceptDef ParentName="CVG_SectSpecialistBase">
+    <defName>CVG_Role_SwordMaster</defName>
+    <label>sword master</label>
+    <description>The master who keeps the discipline of the blade and tempers the bodies of the disciples. Only one whose body has become a sword may hold the office: the Formless Sword says you cannot teach a temper you have never felt.</description>
+    <iconPath>UI/Roles/CVG/SwordMaster</iconPath>
+    <nameMaker>NamerRoleMoralist</nameMaker>
+    <requiredMemes><li>CVG_Meme_SwordWay</li></requiredMemes>
+    <roleRequiredWorkTags><li>Violent</li></roleRequiredWorkTags>
+    <roleRequirements Inherit="False">
+      <li Class="RoleRequirement_SameIdeo">
+        <labelKey>RoleRequirementLabelSameIdeo</labelKey>
+      </li>
+      <li Class="Convergence.RoleRequirement_HasTrait">
+        <traits><li>CVG_Body_Sword</li></traits>
+      </li>
+    </roleRequirements>
+    <roleEffects>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>MeleeHitChance</statDef>
+        <modifier>5</modifier>
+      </li>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>MeleeDodgeChance</statDef>
+        <modifier>3</modifier>
+      </li>
+    </roleEffects>
+    <grantedAbilities>
+      <li>CombatCommand</li>
+    </grantedAbilities>
+  </PreceptDef>
+
+  <!-- Ritual: Tempering of the Sword Body. One grade per ceremony; on failure nothing is lost but the materials. Chances: base at the
+       worst ceremony, maximum at the best (celestial jade capped at 55%). Costs in Convergence resources (balance proposal). -->
+  <RitualOutcomeEffectDef ParentName="CVG_SectTemperOutcomeBase">
+    <defName>CVG_Outcome_TemperSwordBody</defName>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_TemperConstitution">
+        <steps>
+          <li>
+            <toTrait>CVG_Body_Sword</toTrait>
+            <toDegree>0</toDegree>
+            <chanceByQuality><points><li>(0, 0.80)</li><li>(1, 1.00)</li></points></chanceByQuality>
+            <cost><CVG_SpiritStone>30</CVG_SpiritStone></cost>
+          </li>
+          <li>
+            <fromTrait>CVG_Body_Sword</fromTrait>
+            <fromDegree>0</fromDegree>
+            <toTrait>CVG_Body_Sword</toTrait>
+            <toDegree>1</toDegree>
+            <chanceByQuality><points><li>(0, 0.60)</li><li>(1, 1.00)</li></points></chanceByQuality>
+            <cost><CVG_SpiritStone>60</CVG_SpiritStone><CVG_SpiritJade>5</CVG_SpiritJade></cost>
+          </li>
+          <li>
+            <fromTrait>CVG_Body_Sword</fromTrait>
+            <fromDegree>1</fromDegree>
+            <toTrait>CVG_Body_Sword</toTrait>
+            <toDegree>2</toDegree>
+            <chanceByQuality><points><li>(0, 0.40)</li><li>(1, 0.90)</li></points></chanceByQuality>
+            <cost><CVG_SpiritStone>120</CVG_SpiritStone><CVG_SpiritJade>15</CVG_SpiritJade></cost>
+          </li>
+          <li>
+            <fromTrait>CVG_Body_Sword</fromTrait>
+            <fromDegree>2</fromDegree>
+            <toTrait>CVG_Body_Sword</toTrait>
+            <toDegree>3</toDegree>
+            <chanceByQuality><points><li>(0, 0.20)</li><li>(1, 0.55)</li></points></chanceByQuality>
+            <cost><CVG_SpiritStone>200</CVG_SpiritStone><CVG_SpiritJade>40</CVG_SpiritJade><CVG_PrimordialCrystal>3</CVG_PrimordialCrystal></cost>
+          </li>
+        </steps>
+      </li>
+    </modExtensions>
+  </RitualOutcomeEffectDef>
+
+  <RitualPatternDef ParentName="CVG_SectTemperPatternBase">
+    <defName>CVG_Pattern_TemperSwordBody</defName>
+    <ritualOutcomeEffect>CVG_Outcome_TemperSwordBody</ritualOutcomeEffect>
+    <ritualExplanation>The sword master tempers one disciple's Sword Body by a single grade: iron, cold steel, star-iron, celestial jade. A failed tempering costs only the materials.</ritualExplanation>
+  </RitualPatternDef>
+
+  <PreceptDef ParentName="CVG_SectRitualBase">
+    <defName>CVG_Ritual_TemperSwordBody</defName>
+    <label>tempering of the sword body</label>
+    <description>The disciple kneels before the sword mound while the sword master recites the ten thousand cuts of Qing Feng. Spirit stones burn around them like a forge without fire; what is tempered is not the steel but the body that will carry the intent.</description>
+    <iconPath>UI/Icons/Rituals/CVG/TemperSwordBody</iconPath>
+    <ritualPatternBase>CVG_Pattern_TemperSwordBody</ritualPatternBase>
+    <requiredMemes><li>CVG_Meme_SwordWay</li></requiredMemes>
+  </PreceptDef>
+</Defs>
