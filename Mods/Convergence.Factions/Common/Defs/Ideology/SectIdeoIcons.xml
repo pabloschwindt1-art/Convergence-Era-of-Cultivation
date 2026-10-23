@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Ideoligion icons of the sects: the meme art of each one (only ideoligions with that meme can pick it). The sect factions set
+       them with a neutral color (GameComponent_SectIdeos), so the art keeps its own colors instead of a random vanilla icon. -->
+  <ColorDef>
+    <defName>CVG_IdeoColor_Natural</defName>
+    <label>natural</label>
+    <color>(1, 1, 1)</color>
+    <colorType>Ideo</colorType>
+  </ColorDef>
+
+  <IdeoIconDef>
+    <defName>CVG_IdeoIcon_SwordWay</defName>
+    <iconPath>UI/Memes/CVG/SwordWay</iconPath>
+    <memes><li>CVG_Meme_SwordWay</li></memes>
+  </IdeoIconDef>
+  <IdeoIconDef>
+    <defName>CVG_IdeoIcon_BodyWay</defName>
+    <iconPath>UI/Memes/CVG/BodyWay</iconPath>
+    <memes><li>CVG_Meme_BodyWay</li></memes>
+  </IdeoIconDef>
+  <IdeoIconDef>
+    <defName>CVG_IdeoIcon_CauldronWay</defName>
+    <iconPath>UI/Memes/CVG/CauldronWay</iconPath>
+    <memes><li>CVG_Meme_CauldronWay</li></memes>
+  </IdeoIconDef>
+  <IdeoIconDef>
+    <defName>CVG_IdeoIcon_DemonicWay</defName>
+    <iconPath>UI/Memes/CVG/DemonicWay</iconPath>
+    <memes><li>CVG_Meme_DemonicWay</li></memes>
+  </IdeoIconDef>
+  <IdeoIconDef>
+    <defName>CVG_IdeoIcon_WanderingPath</defName>
+    <iconPath>UI/Memes/CVG/WanderingPath</iconPath>
+    <memes><li>CVG_Meme_WanderingPath</li></memes>
+  </IdeoIconDef>
+</Defs>

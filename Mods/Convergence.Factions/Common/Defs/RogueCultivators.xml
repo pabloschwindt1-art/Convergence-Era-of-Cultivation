@@ -46,7 +46,13 @@
       <li>(1.00,1.00,1.00)</li>
     </colorSpectrum>
     <basicMemberKind>CVG_RogueCultivators_Wanderer</basicMemberKind>
-    <forcedMemes><li>CVG_Meme_WanderingPath</li></forcedMemes>
+    <!-- Fixed ideoligion: our name, founder and precepts; nothing random from vanilla Ideology (GameComponent_SectIdeos does the rest). -->
+    <forcedMemes><li>CVG_Meme_WanderingPath</li><li>CVG_Structure_DaoOrigin</li></forcedMemes>
+    <fixedIdeo>true</fixedIdeo>
+    <ideoName>The Wandering Path</ideoName>
+    <ideoDescription>Every road is a master and every master is a road: no sect, no chains. The wanderers owe nothing to anyone and learn from everyone who beat them.</ideoDescription>
+    <requiredPreceptsOnly>true</requiredPreceptsOnly>
+    <styles />
     <fixedLeaderKinds><li>CVG_RogueCultivators_Hermit</li></fixedLeaderKinds>
     <caravanTraderKinds Inherit="False"><li>CVG_Trader_RogueCultivators</li><li>CVG_Trader_RogueWanderer</li></caravanTraderKinds>
     <visitorTraderKinds Inherit="False"><li>CVG_Trader_RogueCultivators</li><li>CVG_Trader_RogueWanderer</li></visitorTraderKinds>
@@ -96,6 +102,10 @@
       </li>
     </pawnGroupMakers>
     <modExtensions>
+      <li Class="Convergence.Factions.DefModExtension_SectIdeo">
+        <icon>CVG_IdeoIcon_WanderingPath</icon>
+        <color>CVG_IdeoColor_Natural</color>
+      </li>
       <li Class="Convergence.DefModExtension_ConvergenceFaction">
         <extraSettlements>1~2</extraSettlements>
         <hostileTo>

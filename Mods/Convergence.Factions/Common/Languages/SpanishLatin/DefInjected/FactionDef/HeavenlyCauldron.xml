@@ -7,4 +7,7 @@
   <CVG_Faction_HeavenlyCauldron.pawnsPlural>alquimistas del pabellón</CVG_Faction_HeavenlyCauldron.pawnsPlural>
   <CVG_Faction_HeavenlyCauldron.leaderTitle>maestro del pabellón</CVG_Faction_HeavenlyCauldron.leaderTitle>
   <CVG_Faction_HeavenlyCauldron.royalFavorLabel>contribución de secta</CVG_Faction_HeavenlyCauldron.royalFavorLabel>
+  <CVG_Faction_HeavenlyCauldron.ideoName>Camino del Caldero Celestial</CVG_Faction_HeavenlyCauldron.ideoName>
+  <CVG_Faction_HeavenlyCauldron.ideoDescription>El Dao también se conoce transformando la materia. El Pabellón guarda el fuego alquímico que heredó de un fénix, y enseña que todo tiene precio y que todo precio puede refinarse en una píldora.</CVG_Faction_HeavenlyCauldron.ideoDescription>
+  <CVG_Faction_HeavenlyCauldron.deityPresets.0.nameType.type>Fénix del Primer Fuego</CVG_Faction_HeavenlyCauldron.deityPresets.0.nameType.type>
 </LanguageData>

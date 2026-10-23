@@ -30,7 +30,20 @@
       <li>(1.00,1.00,1.00)</li>
       <li>(0.92,0.92,0.92)</li>
     </colorSpectrum>
-    <forcedMemes><li>CVG_Meme_DemonicWay</li></forcedMemes>
+    <!-- Fixed ideoligion: our name, founder and precepts; nothing random from vanilla Ideology (GameComponent_SectIdeos does the rest). -->
+    <forcedMemes><li>CVG_Meme_DemonicWay</li><li>CVG_Structure_Ancestors</li></forcedMemes>
+    <fixedIdeo>true</fixedIdeo>
+    <ideoName>Way of the Blood Moon</ideoName>
+    <ideoDescription>Heaven is a cage; break it with what you have in your veins. The Cult follows Xue Jiuyou, the Venerable, who was cast out for saying aloud that blood and soul hold more qi than any mountain.</ideoDescription>
+    <deityPresets>
+      <li>
+        <nameType><name>Xue Jiuyou</name><type>the Venerable of the Blood Moon</type></nameType>
+        <gender>Male</gender>
+        <iconPath>UI/Deities/DeityGeneric</iconPath>
+      </li>
+    </deityPresets>
+    <requiredPreceptsOnly>true</requiredPreceptsOnly>
+    <styles />
     <basicMemberKind>CVG_BloodMoon_Servant</basicMemberKind>
     <fixedLeaderKinds><li>CVG_BloodMoon_Elder</li></fixedLeaderKinds>
     <caravanTraderKinds Inherit="False" />
@@ -65,6 +78,10 @@
       </li>
     </pawnGroupMakers>
     <modExtensions>
+      <li Class="Convergence.Factions.DefModExtension_SectIdeo">
+        <icon>CVG_IdeoIcon_DemonicWay</icon>
+        <color>CVG_IdeoColor_Natural</color>
+      </li>
       <li Class="Convergence.DefModExtension_ConvergenceFaction">
         <extraSettlements>1~2</extraSettlements>
         <!-- The orthodox sects that forbid the demonic arts are its sworn enemies. -->
@@ -212,7 +229,7 @@
 
   <RoyalTitleDef ParentName="CVG_SectTitle4">
     <defName>CVG_Title_BloodMoon_GuestElder</defName>
-    <label>guest elder of the blood moon</label>
+    <label>guest elder of the Blood Moon</label>
     <description>A guest elder (客卿长老) sits under the red moon beside the Venerable's empty seat. Xue Jiuyou has granted the title to a handful of outsiders in a century; all of them are still alive, which in the Cult is the highest honor.</description>
     <tags><li>CVG_BloodMoonTitle</li></tags>
   </RoyalTitleDef>

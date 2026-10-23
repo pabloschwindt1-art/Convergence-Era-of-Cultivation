@@ -28,13 +28,25 @@ namespace Convergence.Factions
 
         public string Label => thing != null ? thing.LabelCap.ToString() : ("CVG_Factions_GiftAnyWeapon".Translate(weaponTag ?? "?")).ToString();
 
+        /// <summary>
+        /// Material de un regalo sin material fijo: un metal de los buenos (acero, plastiacero, acero espiritual...) si el objeto lo admite.
+        /// Al azar por frecuencia salía madera: una "hoja de sangre obra maestra" de madera no es lo que promete el favor.
+        /// </summary>
+        private static ThingDef GiftStuff(ThingDef def)
+        {
+            var metals = GenStuff.AllowedStuffsFor(def).Where(x => x.stuffProps?.categories?.Contains(StuffCategoryDefOf.Metallic) == true).ToList();
+            if (metals.Count == 0) return GenStuff.RandomStuffByCommonalityFor(def);
+            var stat = def.IsApparel ? StatDefOf.StuffPower_Armor_Sharp : StatDefOf.SharpDamageMultiplier;
+            return metals.OrderByDescending(x => x.GetStatValueAbstract(stat)).Take(3).RandomElement();
+        }
+
         public Thing Make()
         {
             var def = thing ?? DefDatabase<ThingDef>.AllDefsListForReading
                 .Where(d => d.weaponTags != null && d.weaponTags.Contains(weaponTag) && d.PlayerAcquirable && d.tradeability != Tradeability.None)
                 .RandomElementWithFallback();
             if (def == null) return null;
-            var s = def.MadeFromStuff ? (stuff ?? GenStuff.RandomStuffByCommonalityFor(def)) : null;
+            var s = def.MadeFromStuff ? (stuff ?? GiftStuff(def)) : null;
             var t = ThingMaker.MakeThing(def, s);
             t.stackCount = Mathf.Clamp(count, 1, def.stackLimit);
             t.TryGetComp<CompQuality>()?.SetQuality(quality, ArtGenerationContext.Outsider);

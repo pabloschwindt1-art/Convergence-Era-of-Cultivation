@@ -22,7 +22,20 @@
       <li>(1.00,1.00,1.00)</li>
       <li>(0.92,0.92,0.92)</li>
     </colorSpectrum>
-    <forcedMemes><li>CVG_Meme_BodyWay</li></forcedMemes>
+    <!-- Fixed ideoligion: our name, founder and precepts; nothing random from vanilla Ideology (GameComponent_SectIdeos does the rest). -->
+    <forcedMemes><li>CVG_Meme_BodyWay</li><li>CVG_Structure_Ancestors</li></forcedMemes>
+    <fixedIdeo>true</fixedIdeo>
+    <ideoName>Way of the Nine Temperings</ideoName>
+    <ideoDescription>The body is the first temple and the last weapon. The Nine Temperings follow the Iron Mountain Patriarch, who broke his hands on the machines of the Calamity nine times and tempered them nine times: pain is a hammer, not a wound.</ideoDescription>
+    <deityPresets>
+      <li>
+        <nameType><name>Tie Shan</name><type>Iron Mountain Patriarch</type></nameType>
+        <gender>Male</gender>
+        <iconPath>UI/Deities/DeityGeneric</iconPath>
+      </li>
+    </deityPresets>
+    <requiredPreceptsOnly>true</requiredPreceptsOnly>
+    <styles />
     <basicMemberKind>CVG_NineTemperings_Disciple</basicMemberKind>
     <fixedLeaderKinds><li>CVG_NineTemperings_Elder</li></fixedLeaderKinds>
     <caravanTraderKinds Inherit="False"><li>CVG_Trader_NineTemperings</li></caravanTraderKinds>
@@ -72,6 +85,10 @@
       </li>
     </pawnGroupMakers>
     <modExtensions>
+      <li Class="Convergence.Factions.DefModExtension_SectIdeo">
+        <icon>CVG_IdeoIcon_BodyWay</icon>
+        <color>CVG_IdeoColor_Natural</color>
+      </li>
       <li Class="Convergence.DefModExtension_ConvergenceFaction">
         <extraSettlements>1~2</extraSettlements>
       </li>
@@ -243,28 +260,28 @@
   <!-- Honorary titles -->
   <RoyalTitleDef ParentName="CVG_SectTitle1">
     <defName>CVG_Title_NineTemperings_Friend</defName>
-    <label>friend of the nine temperings</label>
+    <label>friend of the Nine Temperings</label>
     <description>The sect greets its friends with a slap on the back hard enough to bruise; the bruise is the courtesy. A friend may watch the morning beatings and eat at the long table of beast meat.</description>
     <tags><li>CVG_NineTemperingsTitle</li></tags>
   </RoyalTitleDef>
 
   <RoyalTitleDef ParentName="CVG_SectTitle2">
     <defName>CVG_Title_NineTemperings_Guest</defName>
-    <label>honored guest of the nine temperings</label>
+    <label>honored guest of the Nine Temperings</label>
     <description>An honored guest is offered the first cup of the blood broth that tempers the disciples, and nobody laughs if they cannot finish it. In return the sect expects them to speak of its strength, and never of its scars.</description>
     <tags><li>CVG_NineTemperingsTitle</li></tags>
   </RoyalTitleDef>
 
   <RoyalTitleDef ParentName="CVG_SectTitle3">
     <defName>CVG_Title_NineTemperings_Protector</defName>
-    <label>protector of the nine temperings</label>
+    <label>protector of the Nine Temperings</label>
     <description>An outsider who has bled beside the sect has their name beaten into the bronze gong of the training hall. When that gong rings for them, the sect's disciples come running.</description>
     <tags><li>CVG_NineTemperingsTitle</li></tags>
   </RoyalTitleDef>
 
   <RoyalTitleDef ParentName="CVG_SectTitle4">
     <defName>CVG_Title_NineTemperings_GuestElder</defName>
-    <label>guest elder of the nine temperings</label>
+    <label>guest elder of the Nine Temperings</label>
     <description>A guest elder (客卿长老) sits among the elders of the Nine Temperings without having taken the sect's vows. They have earned the right the hard way: the sect does not honor what it has not tested.</description>
     <tags><li>CVG_NineTemperingsTitle</li></tags>
   </RoyalTitleDef>

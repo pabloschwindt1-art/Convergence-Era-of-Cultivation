@@ -22,7 +22,20 @@
       <li>(1.00,1.00,1.00)</li>
       <li>(0.92,0.92,0.92)</li>
     </colorSpectrum>
-    <forcedMemes><li>CVG_Meme_SwordWay</li></forcedMemes>
+    <!-- Fixed ideoligion: our name, founder and precepts; nothing random from vanilla Ideology (GameComponent_SectIdeos does the rest). -->
+    <forcedMemes><li>CVG_Meme_SwordWay</li><li>CVG_Structure_DaoOrigin</li></forcedMemes>
+    <fixedIdeo>true</fixedIdeo>
+    <ideoName>Way of the Formless Sword</ideoName>
+    <ideoDescription>Steel can break; true intent endures. The Formless Sword follows the path of the Sword Saint Qing Feng, who split a mountain with a single stroke and never drew the blade again: understand the cut before making it, and the sword will follow.</ideoDescription>
+    <deityPresets>
+      <li>
+        <nameType><name>Qing Feng</name><type>Sword Saint of the Split Mountain</type></nameType>
+        <gender>Male</gender>
+        <iconPath>UI/Deities/DeityGeneric</iconPath>
+      </li>
+    </deityPresets>
+    <requiredPreceptsOnly>true</requiredPreceptsOnly>
+    <styles />
     <basicMemberKind>CVG_FormlessSword_Disciple</basicMemberKind>
     <fixedLeaderKinds><li>CVG_FormlessSword_Elder</li></fixedLeaderKinds>
     <caravanTraderKinds Inherit="False"><li>CVG_Trader_FormlessSword</li></caravanTraderKinds>
@@ -72,6 +85,10 @@
       </li>
     </pawnGroupMakers>
     <modExtensions>
+      <li Class="Convergence.Factions.DefModExtension_SectIdeo">
+        <icon>CVG_IdeoIcon_SwordWay</icon>
+        <color>CVG_IdeoColor_Natural</color>
+      </li>
       <li Class="Convergence.DefModExtension_ConvergenceFaction">
         <extraSettlements>1~2</extraSettlements>
       </li>
@@ -259,28 +276,28 @@
   <!-- Honorary titles -->
   <RoyalTitleDef ParentName="CVG_SectTitle1">
     <defName>CVG_Title_FormlessSword_Friend</defName>
-    <label>friend of the formless sword</label>
+    <label>friend of the Formless Sword</label>
     <description>The sect's first courtesy to an outsider: the gate of the Peak stays open, and its disciples bow before they speak. The Formless Sword says a friend is someone whose intent it has already seen.</description>
     <tags><li>CVG_FormlessSwordTitle</li></tags>
   </RoyalTitleDef>
 
   <RoyalTitleDef ParentName="CVG_SectTitle2">
     <defName>CVG_Title_FormlessSword_Guest</defName>
-    <label>honored guest of the formless sword</label>
+    <label>honored guest of the Formless Sword</label>
     <description>An honored guest may sit at the elders' table and watch the morning sword forms, a privilege few disciples are given. In return the sect expects the guest to keep its secrets and answer for its name.</description>
     <tags><li>CVG_FormlessSwordTitle</li></tags>
   </RoyalTitleDef>
 
   <RoyalTitleDef ParentName="CVG_SectTitle3">
     <defName>CVG_Title_FormlessSword_Protector</defName>
-    <label>protector of the formless sword</label>
+    <label>protector of the Formless Sword</label>
     <description>An outsider who has drawn a blade for the sect is carved into the Sword Mound's register of debts. The Formless Sword pays its debts in kind: a protector who calls will not call alone.</description>
     <tags><li>CVG_FormlessSwordTitle</li></tags>
   </RoyalTitleDef>
 
   <RoyalTitleDef ParentName="CVG_SectTitle4">
     <defName>CVG_Title_FormlessSword_GuestElder</defName>
-    <label>guest elder of the formless sword</label>
+    <label>guest elder of the Formless Sword</label>
     <description>A guest elder (客卿长老) holds the rank of an elder without being bound to the sect: no master over them, no vow of obedience. It is the highest honor the Formless Sword gives a stranger, granted perhaps once in a generation.</description>
     <tags><li>CVG_FormlessSwordTitle</li></tags>
   </RoyalTitleDef>

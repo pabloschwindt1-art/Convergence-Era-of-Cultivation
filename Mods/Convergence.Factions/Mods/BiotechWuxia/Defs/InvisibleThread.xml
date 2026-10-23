@@ -25,7 +25,20 @@
       <li>(1.00,1.00,1.00)</li>
       <li>(0.92,0.92,0.92)</li>
     </colorSpectrum>
-    <forcedMemes><li>CVG_Meme_PuppetPath</li></forcedMemes>
+    <!-- Fixed ideoligion: our name, founder and precepts; nothing random from vanilla Ideology (GameComponent_SectIdeos does the rest). -->
+    <forcedMemes><li>CVG_Meme_PuppetPath</li><li>CVG_Structure_Ancestors</li></forcedMemes>
+    <fixedIdeo>true</fixedIdeo>
+    <ideoName>Way of the Invisible Thread</ideoName>
+    <ideoDescription>Whoever pulls the strings does not need to be strong, only patient. The Valley honors Yan Shi, whose automaton bowed to a king, and teaches that a calm will can guide a hundred bodies without risking a single life.</ideoDescription>
+    <deityPresets>
+      <li>
+        <nameType><name>Yan Shi</name><type>Maker of the First Automaton</type></nameType>
+        <gender>Male</gender>
+        <iconPath>UI/Deities/DeityGeneric</iconPath>
+      </li>
+    </deityPresets>
+    <requiredPreceptsOnly>true</requiredPreceptsOnly>
+    <styles />
     <basicMemberKind>CVG_InvisibleThread_Apprentice</basicMemberKind>
     <fixedLeaderKinds><li>CVG_InvisibleThread_Elder</li></fixedLeaderKinds>
     <caravanTraderKinds Inherit="False"><li>CVG_Trader_InvisibleThread</li></caravanTraderKinds>
@@ -82,6 +95,10 @@
       </li>
     </pawnGroupMakers>
     <modExtensions>
+      <li Class="Convergence.Factions.DefModExtension_SectIdeo">
+        <icon>CVG_IdeoIcon_PuppetPath</icon>
+        <color>CVG_IdeoColor_Natural</color>
+      </li>
       <li Class="Convergence.DefModExtension_ConvergenceFaction">
         <extraSettlements>1~2</extraSettlements>
       </li>
@@ -273,7 +290,7 @@
 
   <RoyalTitleDef ParentName="CVG_SectTitle2">
     <defName>CVG_Title_InvisibleThread_Guest</defName>
-    <label>guest of the thousand strings</label>
+    <label>guest of the Thousand Strings</label>
     <description>Guests of the Thousand Strings may watch the Valley's shadow theatre from behind the screen, where the threads are visible. The sect considers that the greatest trust it can show.</description>
     <tags><li>CVG_InvisibleThreadTitle</li></tags>
   </RoyalTitleDef>
@@ -287,7 +304,7 @@
 
   <RoyalTitleDef ParentName="CVG_SectTitle4">
     <defName>CVG_Title_InvisibleThread_GuestElder</defName>
-    <label>guest elder of the valley</label>
+    <label>guest elder of the Valley</label>
     <description>A guest elder (客卿长老) sits at the Valley's council behind a silk screen like the masters, so that nobody can tell who speaks. Gongshu Yan grants the title only to those whose hands he has watched work.</description>
     <tags><li>CVG_InvisibleThreadTitle</li></tags>
   </RoyalTitleDef>

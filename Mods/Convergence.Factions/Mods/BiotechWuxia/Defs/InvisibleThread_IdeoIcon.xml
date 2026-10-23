@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <IdeoIconDef>
+    <defName>CVG_IdeoIcon_PuppetPath</defName>
+    <iconPath>UI/Memes/CVG/PuppetPath</iconPath>
+    <memes><li>CVG_Meme_PuppetPath</li></memes>
+  </IdeoIconDef>
+</Defs>

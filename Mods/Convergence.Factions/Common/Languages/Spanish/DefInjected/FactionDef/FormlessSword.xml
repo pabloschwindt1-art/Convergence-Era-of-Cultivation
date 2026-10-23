@@ -7,4 +7,7 @@
   <CVG_Faction_FormlessSword.pawnsPlural>discípulos de espada</CVG_Faction_FormlessSword.pawnsPlural>
   <CVG_Faction_FormlessSword.leaderTitle>maestro de secta</CVG_Faction_FormlessSword.leaderTitle>
   <CVG_Faction_FormlessSword.royalFavorLabel>contribución de secta</CVG_Faction_FormlessSword.royalFavorLabel>
+  <CVG_Faction_FormlessSword.ideoName>Camino de la Espada Sin Forma</CVG_Faction_FormlessSword.ideoName>
+  <CVG_Faction_FormlessSword.ideoDescription>El acero puede quebrarse; la intención verdadera perdura. La Espada Sin Forma sigue el camino del Santo de la Espada Qing Feng, que partió una montaña de un solo tajo y nunca volvió a desenvainar: entiende el corte antes de hacerlo, y la espada te seguirá.</CVG_Faction_FormlessSword.ideoDescription>
+  <CVG_Faction_FormlessSword.deityPresets.0.nameType.type>Santo de la Espada de la Montaña Partida</CVG_Faction_FormlessSword.deityPresets.0.nameType.type>
 </LanguageData>

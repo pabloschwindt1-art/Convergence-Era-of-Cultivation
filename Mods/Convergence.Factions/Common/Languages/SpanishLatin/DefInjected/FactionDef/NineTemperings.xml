@@ -7,4 +7,7 @@
   <CVG_Faction_NineTemperings.pawnsPlural>discípulos templados</CVG_Faction_NineTemperings.pawnsPlural>
   <CVG_Faction_NineTemperings.leaderTitle>maestro de secta</CVG_Faction_NineTemperings.leaderTitle>
   <CVG_Faction_NineTemperings.royalFavorLabel>contribución de secta</CVG_Faction_NineTemperings.royalFavorLabel>
+  <CVG_Faction_NineTemperings.ideoName>Camino de los Nueve Templados</CVG_Faction_NineTemperings.ideoName>
+  <CVG_Faction_NineTemperings.ideoDescription>El cuerpo es el primer templo y la última arma. Los Nueve Templados siguen al Patriarca de la Montaña de Hierro, que se rompió las manos contra las máquinas de la Calamidad nueve veces y nueve veces las templó: el dolor es un martillo, no una herida.</CVG_Faction_NineTemperings.ideoDescription>
+  <CVG_Faction_NineTemperings.deityPresets.0.nameType.type>Patriarca de la Montaña de Hierro</CVG_Faction_NineTemperings.deityPresets.0.nameType.type>
 </LanguageData>

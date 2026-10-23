@@ -7,4 +7,7 @@
   <CVG_Faction_BloodMoon.pawnsPlural>discípulos de sangre</CVG_Faction_BloodMoon.pawnsPlural>
   <CVG_Faction_BloodMoon.leaderTitle>venerable</CVG_Faction_BloodMoon.leaderTitle>
   <CVG_Faction_BloodMoon.royalFavorLabel>contribución de secta</CVG_Faction_BloodMoon.royalFavorLabel>
+  <CVG_Faction_BloodMoon.ideoName>Camino de la Luna Sangrienta</CVG_Faction_BloodMoon.ideoName>
+  <CVG_Faction_BloodMoon.ideoDescription>El Cielo es una jaula; rómpela con lo que tienes en las venas. El Culto sigue a Xue Jiuyou, el Venerable, al que expulsaron por decir en voz alta que la sangre y el alma guardan más qi que cualquier montaña.</CVG_Faction_BloodMoon.ideoDescription>
+  <CVG_Faction_BloodMoon.deityPresets.0.nameType.type>el Venerable de la Luna Sangrienta</CVG_Faction_BloodMoon.deityPresets.0.nameType.type>
 </LanguageData>

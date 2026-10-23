@@ -12,6 +12,7 @@
     <fixedName>Heavenly Cauldron Pavilion</fixedName>
     <factionIconPath>World/CVG/Factions/HeavenlyCauldron</factionIconPath>
     <royalFavorIconPath>UI/Icons/CVG/Contribution/HeavenlyCauldron</royalFavorIconPath>
+    <leaderTitle>pavilion master</leaderTitle>
     <pawnSingular>pavilion alchemist</pawnSingular>
     <pawnsPlural>pavilion alchemists</pawnsPlural>
     <techLevel>Industrial</techLevel>
@@ -23,7 +24,20 @@
       <li>(1.00,1.00,1.00)</li>
       <li>(0.92,0.92,0.92)</li>
     </colorSpectrum>
-    <forcedMemes><li>CVG_Meme_CauldronWay</li></forcedMemes>
+    <!-- Fixed ideoligion: our name, founder and precepts; nothing random from vanilla Ideology (GameComponent_SectIdeos does the rest). -->
+    <forcedMemes><li>CVG_Meme_CauldronWay</li><li>CVG_Structure_DaoOrigin</li></forcedMemes>
+    <fixedIdeo>true</fixedIdeo>
+    <ideoName>Way of the Heavenly Cauldron</ideoName>
+    <ideoDescription>The Dao can also be known by transforming matter. The Pavilion keeps the alchemical fire it inherited from a phoenix, and teaches that everything has a price and every price can be refined into a pill.</ideoDescription>
+    <deityPresets>
+      <li>
+        <nameType><name>Danhuang</name><type>Phoenix of the First Fire</type></nameType>
+        <gender>Female</gender>
+        <iconPath>UI/Deities/DeityGeneric</iconPath>
+      </li>
+    </deityPresets>
+    <requiredPreceptsOnly>true</requiredPreceptsOnly>
+    <styles />
     <basicMemberKind>CVG_HeavenlyCauldron_Apprentice</basicMemberKind>
     <fixedLeaderKinds><li>CVG_HeavenlyCauldron_Grand</li></fixedLeaderKinds>
     <caravanTraderKinds Inherit="False"><li>CVG_Trader_HeavenlyCauldron</li></caravanTraderKinds>
@@ -73,6 +87,10 @@
       </li>
     </pawnGroupMakers>
     <modExtensions>
+      <li Class="Convergence.Factions.DefModExtension_SectIdeo">
+        <icon>CVG_IdeoIcon_CauldronWay</icon>
+        <color>CVG_IdeoColor_Natural</color>
+      </li>
       <li Class="Convergence.DefModExtension_ConvergenceFaction">
         <extraSettlements>1~2</extraSettlements>
       </li>
@@ -263,28 +281,28 @@
   <!-- Honorary titles -->
   <RoyalTitleDef ParentName="CVG_SectTitle1">
     <defName>CVG_Title_HeavenlyCauldron_Friend</defName>
-    <label>friend of the pavilion</label>
+    <label>friend of the Pavilion</label>
     <description>The Pavilion writes its friends into the first page of its ledger, where the prices are fair. Everything has a price, the masters say; friendship only changes who pays it.</description>
     <tags><li>CVG_HeavenlyCauldronTitle</li></tags>
   </RoyalTitleDef>
 
   <RoyalTitleDef ParentName="CVG_SectTitle2">
     <defName>CVG_Title_HeavenlyCauldron_Guest</defName>
-    <label>honored guest of the pavilion</label>
+    <label>honored guest of the Pavilion</label>
     <description>An honored guest may sit in the front row of the Pavilion's auctions and see the lot before it is announced. The Pavilion expects discretion in return: what is sold there is never spoken of outside.</description>
     <tags><li>CVG_HeavenlyCauldronTitle</li></tags>
   </RoyalTitleDef>
 
   <RoyalTitleDef ParentName="CVG_SectTitle3">
     <defName>CVG_Title_HeavenlyCauldron_Protector</defName>
-    <label>protector of the pavilion</label>
+    <label>protector of the Pavilion</label>
     <description>Whoever has guarded a Pavilion caravan with their life has a debt written in red in the ledger. The Pavilion always pays its debts, with interest, and in the currency it chooses.</description>
     <tags><li>CVG_HeavenlyCauldronTitle</li></tags>
   </RoyalTitleDef>
 
   <RoyalTitleDef ParentName="CVG_SectTitle4">
     <defName>CVG_Title_HeavenlyCauldron_GuestElder</defName>
-    <label>guest elder of the pavilion</label>
+    <label>guest elder of the Pavilion</label>
     <description>A guest elder (客卿长老) holds a seat at the Pavilion's council without owning a share of it. Qian Wanli grants the title rarely, and only to people whose word is worth more than their purse.</description>
     <tags><li>CVG_HeavenlyCauldronTitle</li></tags>
   </RoyalTitleDef>
@@ -320,7 +338,7 @@
   <RoyalTitlePermitDef ParentName="CVG_SectFavorMasterwork">
     <defName>CVG_Permit_HeavenlyCauldron_MasterworkArtifact</defName>
     <label>masterwork spirit artifact</label>
-    <description>The Pavilion's spirit forge sends one artifact it had kept off the auction block: a weapon forged with qi and alchemical fire.</description>
+    <description>The Pavilion's spirit forge sends one artifact it had kept off the auction block: a weapon forged with qi and alchemical fire or, when the forge has nothing ready, three foundation pills from its best batch.</description>
     <faction>CVG_Faction_HeavenlyCauldron</faction>
     <minTitle>CVG_Title_HeavenlyCauldron_Protector</minTitle>
     <modExtensions>

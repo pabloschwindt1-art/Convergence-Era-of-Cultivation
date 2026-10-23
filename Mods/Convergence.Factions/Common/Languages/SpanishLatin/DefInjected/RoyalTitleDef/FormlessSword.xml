@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <CVG_Title_FormlessSword_Friend.label>amigo de la espada sin forma</CVG_Title_FormlessSword_Friend.label>
+  <CVG_Title_FormlessSword_Friend.label>amigo de la Espada Sin Forma</CVG_Title_FormlessSword_Friend.label>
   <CVG_Title_FormlessSword_Friend.description>La primera cortesía de la secta con un forastero: la puerta del Pico queda abierta y sus discípulos se inclinan antes de hablar. La Espada Sin Forma dice que un amigo es alguien cuya intención ya vio.</CVG_Title_FormlessSword_Friend.description>
-  <CVG_Title_FormlessSword_Guest.label>invitado de honor de la espada sin forma</CVG_Title_FormlessSword_Guest.label>
+  <CVG_Title_FormlessSword_Guest.label>invitado de honor de la Espada Sin Forma</CVG_Title_FormlessSword_Guest.label>
   <CVG_Title_FormlessSword_Guest.description>Un invitado de honor puede sentarse a la mesa de los ancianos y ver las formas de espada del amanecer, un privilegio que pocos discípulos tienen. A cambio, la secta espera que guarde sus secretos y responda por su nombre.</CVG_Title_FormlessSword_Guest.description>
-  <CVG_Title_FormlessSword_Protector.label>protector de la espada sin forma</CVG_Title_FormlessSword_Protector.label>
+  <CVG_Title_FormlessSword_Protector.label>protector de la Espada Sin Forma</CVG_Title_FormlessSword_Protector.label>
   <CVG_Title_FormlessSword_Protector.description>El forastero que desenvainó por la secta queda grabado en el registro de deudas del Túmulo de Espadas. La Espada Sin Forma paga sus deudas en especie: un protector que llama no llama solo.</CVG_Title_FormlessSword_Protector.description>
-  <CVG_Title_FormlessSword_GuestElder.label>anciano invitado de la espada sin forma</CVG_Title_FormlessSword_GuestElder.label>
+  <CVG_Title_FormlessSword_GuestElder.label>anciano invitado de la Espada Sin Forma</CVG_Title_FormlessSword_GuestElder.label>
   <CVG_Title_FormlessSword_GuestElder.description>Un anciano invitado (客卿长老) tiene el rango de un anciano sin estar atado a la secta: nadie lo manda y no jura obediencia. Es el mayor honor que la Espada Sin Forma concede a un extraño, quizá una vez por generación.</CVG_Title_FormlessSword_GuestElder.description>
 </LanguageData>
