@@ -111,6 +111,33 @@ def check(m):
     return pid, name, size, len(desc), len(deps)
 
 
+def check_load_order():
+    """Bucles de orden entre nuestros mods (loadAfter + dependencias): RimWorld no los puede ordenar y los marca en rojo."""
+    graph = {}
+    for m in os.listdir(MODS):
+        path = os.path.join(MODS, m, 'About', 'About.xml')
+        if not os.path.isfile(path): continue
+        t = open(path, encoding='utf-8-sig').read()
+        pid = re.search(r'<packageId>([^<]+)', t).group(1).lower()
+        after = set()
+        la = re.search(r'(?s)<loadAfter>(.*?)</loadAfter>', t)
+        if la: after |= {x.lower() for x in re.findall(r'<li>([^<]+)</li>', la.group(1))}
+        for deps in re.findall(r'(?s)<modDependencies>(.*?)</modDependencies>', t):
+            after |= {x.lower() for x in re.findall(r'<packageId>([^<]+)', deps)}
+        graph[pid] = {a for a in after if a.startswith('prospero1088.')}
+    state = {}
+    def visit(n, path):
+        state[n] = 1
+        for nxt in graph.get(n, ()):
+            if state.get(nxt) == 1:
+                err('orden de carga', 'bucle: ' + ' -> '.join(path[path.index(nxt):] + [nxt]))
+            elif nxt not in state:
+                visit(nxt, path + [nxt])
+        state[n] = 2
+    for n in sorted(graph):
+        if n not in state: visit(n, [n])
+
+
 def main():
     only = sys.argv[1] if len(sys.argv) > 1 else None
     mods = [m for m in sorted(os.listdir(MODS)) if not only or m.endswith(only)]
@@ -118,6 +145,7 @@ def main():
     for m in mods:
         r = check(m)
         if r: print(f'{m:28s} {r[0]:42s} {r[2]/1e6:5.1f} {r[3]:5d} {r[4]}')
+    check_load_order()
     for line in errors + warnings:
         print(line.encode('ascii', 'replace').decode())
     print(f'\n{len(errors)} error(es), {len(warnings)} aviso(s)')
