@@ -28,6 +28,10 @@
       <CVG_Structure_HeavenMandate>2</CVG_Structure_HeavenMandate>
       <Structure_Ideological>1</Structure_Ideological>
     </structureMemeWeights>
+    <!-- Without this the vanilla outlander mix applies (hussars, genies...): sect members are human cultivators. -->
+    <xenotypeSet Inherit="False">
+      <xenotypeChances />
+    </xenotypeSet>
     <royalFavorLabel>sect contribution</royalFavorLabel>
     <!-- Royalty always looks for an heir when it awards a title (it crashes without a worker), even though sect titles are not inherited. -->
     <royalTitleInheritanceWorkerClass>RoyalTitleInheritanceWorker</royalTitleInheritanceWorkerClass>

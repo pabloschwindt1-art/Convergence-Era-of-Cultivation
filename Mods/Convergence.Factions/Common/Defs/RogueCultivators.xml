@@ -33,6 +33,9 @@
       <Structure_Ideological>2</Structure_Ideological>
       <CVG_Structure_HeavenMandate>1</CVG_Structure_HeavenMandate>
     </structureMemeWeights>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances />
+    </xenotypeSet>
     <settlementGenerationWeight>1</settlementGenerationWeight>
     <earliestRaidDays>8</earliestRaidDays>
     <canSiege>false</canSiege>

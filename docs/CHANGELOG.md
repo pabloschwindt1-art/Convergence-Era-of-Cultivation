@@ -10,6 +10,16 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 ## Sin publicar
 
+### Convergence: Factions → 0.1.1 (2026-10-22)
+- Los miembros de las sectas y de los Errantes ya no nacen con xenotipos vanilla al azar (hussars, genies…): la base de facción
+  Outlander traía esa mezcla. Ahora son baseliners (los linajes de Races siguen funcionando aparte).
+- Capturas de Workshop: `-cvgfactionstest`/`-cvgfactionsshot` (guion `FactionsShot.cs`, inerte sin el argumento); capturas en
+  `art/capturas/workshop_factions/`.
+
+**Change notes (Steam):**
+```
+- Sect members are no longer born as random vanilla xenotypes (hussars, genies...): they are human cultivators.
+```
 ### Convergence: Core (2026-10-22)
 - Nuevo ajuste **"Grupos de huéspedes a la vez"** (2 por defecto; 0 = sin tope, como vanilla): con el mapa lleno de visitantes o caravanas
   de comercio de otras facciones no llegan más caravanas, visitantes, viajeros ni recaudadores; el narrador lo reintenta más tarde. Los
