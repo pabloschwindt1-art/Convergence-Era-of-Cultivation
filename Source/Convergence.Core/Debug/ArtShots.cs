@@ -1,4 +1,4 @@
-using System.IO;
+﻿using System.IO;
 using System.Linq;
 using LudeonTK;
 using RimWorld;
@@ -25,7 +25,7 @@ namespace Convergence
             {
                 night = GenCommandLine.CommandLineArgPassed("cvgnightshot");
                 island = GenCommandLine.CommandLineArgPassed("cvgislandshot");
-                bench = GenCommandLine.CommandLineArgPassed("cvgbenchshot");
+                bench = GenCommandLine.CommandLineArgPassed("cvgbenchshot") || GenCommandLine.TryGetCommandLineArg("cvgbenchshot", out _);
                 if (!night && !island && !bench) { state = 9; return; }
                 state = 1;
             }
@@ -37,9 +37,20 @@ namespace Convergence
                 dir = Path.Combine(GenFilePaths.SaveDataFolderPath, bench ? "cvg_benchshot" : night ? "cvg_nightshot" : "cvg_islandshot");
                 if (Directory.Exists(dir)) Directory.Delete(dir, true);
                 Directory.CreateDirectory(dir);
-                if (bench) PlaceBenches(map); else if (night) PlacePuppets(map); else PlaceIsland(map);
-                SetHour(map, 12);
+                // El estado avanza ANTES de colocar: si algo falla, la escena no se vuelve a armar en cada cuadro
+                // (antes un def faltante repetía la colocación y llenaba el mapa de colonos).
                 state = 2; wait = 40; step = 0;
+                try
+                {
+                    if (bench) PlaceBenches(map); else if (night) PlacePuppets(map); else PlaceIsland(map);
+                }
+                catch (System.Exception e)
+                {
+                    Log.Error("[Convergence] Art shots: " + e + "\n  FAILURES: 1");
+                    state = 9;
+                    return;
+                }
+                SetHour(map, 12);
                 return;
             }
             if (--wait > 0) return;
@@ -68,6 +79,7 @@ namespace Convergence
             }
             Log.Message("[Convergence] Art shots saved in " + dir + "\n  ALL OK");
             state = 9;
+            Root.Shutdown();
         }
 
         private static void SetHour(Map map, int hour)
@@ -122,7 +134,14 @@ namespace Convergence
             var center = map.Center;
             Clear(map, CellRect.CenteredOn(center, 20), TerrainDefOf.Soil);
             map.fogGrid.ClearAllFog();
-            var defs = DefDatabase<ThingDef>.AllDefs.Where(d => d.defName.StartsWith("CVG_") && d.category == ThingCategory.Building && typeof(Building_WorkTable).IsAssignableFrom(d.thingClass) && d.hasInteractionCell || d.defName.StartsWith("CVG_") && d.category == ThingCategory.Building && typeof(Building_WorkTable).IsAssignableFrom(d.thingClass)).Distinct().OrderBy(d => d.defName).ToList();
+            var defs = DefDatabase<ThingDef>.AllDefs.Where(d => d.defName.StartsWith("CVG_") && d.category == ThingCategory.Building && typeof(Building_WorkTable).IsAssignableFrom(d.thingClass)).OrderBy(d => d.defName).ToList();
+            // -cvgbenchshot=CVG_A,CVG_B: solo esas mesas (y la cámara sobre ellas).
+            bool filtered = GenCommandLine.TryGetCommandLineArg("cvgbenchshot", out string only) && !only.NullOrEmpty();
+            if (filtered)
+            {
+                var names = only.Split(',').Select(s => s.Trim()).ToList();
+                defs = defs.Where(d => names.Contains(d.defName)).ToList();
+            }
             int x = -18, z = 8;
             foreach (var d in defs)
             {
@@ -136,16 +155,33 @@ namespace Convergence
                     var p = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Colonist, Faction.OfPlayer, forceGenerateNewPawn: true, tile: map.Tile));
                     GenSpawn.Spawn(p, ic, map, Rot4.North);
                     if (p.drafter != null) p.drafter.Drafted = true;
+                    // -cvgequip=CVG_X: cada colono lleva esa arma (para ver cómo se sostiene en las cuatro direcciones).
+                    if (GenCommandLine.TryGetCommandLineArg("cvgequip", out string weapon) && DefDatabase<ThingDef>.GetNamedSilentFail(weapon) is ThingDef wd)
+                    {
+                        p.equipment?.DestroyAllEquipment();
+                        p.equipment?.AddEquipment((ThingWithComps)ThingMaker.MakeThing(wd, wd.MadeFromStuff ? GenStuff.DefaultStuffFor(wd) : null));
+                        p.Drawer?.renderer?.SetAllGraphicsDirty();
+                        Log.Message("[Convergence] Art shots: " + p.LabelShort + " equipped " + p.equipment?.Primary?.def.defName + ", drafted " + p.Drafted);
+                        p.Rotation = rot;
+                    }
                     Log.Message("[Convergence] bench " + d.defName + " rot " + rot + " size " + d.size + " pos " + cell + " interaction cell offset " + (ic - cell) + " (" + (d.rotatable ? "rotatable" : "fixed") + ")");
                     x += Mathf.Max(d.size.x, d.size.z) + 2;
                     if (x > 18) { x = -18; z -= 6; }
                 }
             }
+            if (filtered)
+            {
+                if (GenCommandLine.TryGetCommandLineArg("cvgequip", out string w2) && DefDatabase<ThingDef>.GetNamedSilentFail(w2) is ThingDef wd2)
+                    GenSpawn.Spawn(ThingMaker.MakeThing(wd2, wd2.MadeFromStuff ? GenStuff.DefaultStuffFor(wd2) : null), center + new IntVec3(-18, 0, 4), map);
+                Find.CameraDriver.SetRootPosAndSize((center + new IntVec3(-18 + defs.Sum(d => (d.rotatable ? 4 : 1) * (Mathf.Max(d.size.x, d.size.z) + 2)) / 2, 0, 5)).ToVector3Shifted(), 12f);
+                return;
+            }
             // fila de muros: la empalizada y el muro bajo con distintos materiales, junto a un muro común de vanilla, para ver que no se tiñen
             Clear(map, new CellRect(center.x - 12, center.z + WallRowZ - 3, 25, 7), TerrainDefOf.Soil);
             void Wall(string def, string stuff, int x0, int count, int dz = 0)
             {
-                var d = DefDatabase<ThingDef>.GetNamed(def);
+                var d = DefDatabase<ThingDef>.GetNamedSilentFail(def);
+                if (d == null) return;
                 for (int i = 0; i < count; i++)
                 {
                     var t = ThingMaker.MakeThing(d, stuff != null ? DefDatabase<ThingDef>.GetNamed(stuff) : null);
