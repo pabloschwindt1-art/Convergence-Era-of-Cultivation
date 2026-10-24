@@ -17,7 +17,7 @@ DURACION = {
     "-cvgselftest": 1.5, "-cvgstoriestest": 0.5, "-cvgformationstest": 1.5, "-cvgformflow": 3, "-cvggraftstest": 1.5,
     "-cvgfactionstest": 1.5, "-cvgfavorstest": 1, "-cvgqitechtest": 1.5, "-cvgqinettest": 0.5, "-cvgqitechwartest": 3,
     "-cvgfurnituretest": 1.5, "-cvgcropstest": 0.5, "-cvgislandtest": 1.5, "-cvgflighttest": 4, "-cvgislandspacetest": 5,
-    "-cvgbandtotemtest": 1.5, "-cvgflowtest": 3, "-cvgmechtabtest": 1.5,
+    "-cvgbandtotemtest": 1.5, "-cvgflowtest": 3, "-cvgmechtabtest": 1.5, "-cvgrootflow": 3,
     # LENTAS: solo si cambió ese código y con permiso del usuario
     "-cvgworktest": 6, "-cvgchargetest": 8, "-cvgpuppetfighttest": 25, "-cvgplaytest": 30,
 }
@@ -32,6 +32,8 @@ REGLAS = [
     (r"/About/", [], "About.xml: tools/check-workshop.py, sin juego"),
     # Código y defs por módulo
     (r"^Source/Convergence\.DevTools/CoreSelfTest", ["-cvgselftest"], "el propio Core self-test"),
+    (r"^Source/Convergence\.Core/Cultivation/(RootSurgery|SealedRoot|SpiritRoot|RootPurification)|^Source/Convergence\.DevTools/RootFlowTest|SpiritRoots\.xml|Ritual_RootPurification|QiTech_RootEngineering",
+     ["-cvgselftest", "-cvgrootflow"], "raíces que cambian: cirugías en altar y mesa de qi, ritual"),
     (r"^Source/Convergence\.Core/QiNetwork/|^Mods/Convergence\.QiTech/.*Network", ["-cvgqinettest"], "red de qi"),
     (r"^Source/Convergence\.Core/Space/|^Mods/Convergence\.Space/", ["-cvgislandtest"], "isla voladora"),
     (r"^Source/Convergence\.Core/Biotech/BandTotem", ["-cvgbandtotemtest"], "tótem de hilos"),

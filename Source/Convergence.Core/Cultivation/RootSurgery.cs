@@ -139,7 +139,12 @@ namespace Convergence
         {
             if (billDoer == null || CheckSurgeryFail(billDoer, pawn, ingredients, part, bill)) return;
             var sealedRoot = ingredients?.Select(t => t.TryGetComp<CompSealedRoot>()).FirstOrDefault(c => c != null);
-            if (sealedRoot == null) return;
+            if (sealedRoot == null)
+            {
+                Log.Warning("[Convergence] implant spirit root: no sealed root among the ingredients (" +
+                    (ingredients == null ? "null" : string.Join(", ", ingredients.Select(t => t.def.defName))) + ")");
+                return;
+            }
             var ext = RootSurgeryUtility.Ext(pawn.CurrentBed());
 
             SpiritRootUtility.ImplantRoot(pawn, sealedRoot.Grade, sealedRoot.elements);

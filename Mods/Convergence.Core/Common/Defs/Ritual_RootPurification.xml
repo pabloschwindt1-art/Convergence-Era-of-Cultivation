@@ -65,6 +65,7 @@
           <li Class="StageEndTrigger_RolesArrived">
             <roleIds>
               <li>officiant</li>
+              <li>target</li>
             </roleIds>
           </li>
         </endTriggers>
@@ -78,7 +79,10 @@
           </li>
           <li>
             <roleId>target</roleId>
-            <dutyDef>Spectate</dutyDef>
+            <dutyDef>ArriveToCell</dutyDef>
+            <customPositions>
+              <li Class="RitualPosition_InFrontThingCenter" />
+            </customPositions>
           </li>
         </roleBehaviors>
       </li>
@@ -101,7 +105,10 @@
           </li>
           <li>
             <roleId>target</roleId>
-            <dutyDef>Spectate</dutyDef>
+            <dutyDef>ArriveToCell</dutyDef>
+            <customPositions>
+              <li Class="RitualPosition_InFrontThingCenter" />
+            </customPositions>
           </li>
         </roleBehaviors>
         <visualEffectDef>Speech</visualEffectDef>
