@@ -170,6 +170,22 @@ para que el resultado herede los elementos y los donantes. La chance de fallo va
 - **Historia:** cada raíz sellada guarda a quién perteneció. La fundida guarda "hecha con las raíces de tres cultivadores", y un
   relato lo cuenta.
 
+## 7b. Raíces selladas como recompensa (Stories)
+
+Pedido del usuario (2026-10-24): usar las raíces para mejorar las recompensas de los eventos que se sumaron el 2026-10-23.
+Los eventos de Stories ya dan objetos con `SO_Items` (que acepta `<chance>`), así que es **solo XML** una vez que existan los
+ThingDefs. Siempre con probabilidad y casi siempre inferior o común, para no llenar el mundo de raíces:
+
+| Evento | Opción | Raíz | Historia |
+|---|---|---|---|
+| `OldGraveOpened` (tumba vieja) | saquear | 30 % común | El cultivador enterrado selló su raíz para que no se perdiera; los sueños inquietos ya están en el evento |
+| `CacheVault` (bóveda antigua) | — | 50 % común, 10 % superior | Tesoro de una secta caída en la Calamidad de Hierro |
+| `OrphanLegacy` (herencia del huérfano) | — | 1 raíz del grado del padre | Lo único que dejó su padre: implantarla en el huérfano es la historia obvia |
+| `DemonBargain` (pacto demoníaco) | aceptar | 1 superior | La Luna Sangrienta paga con raíces arrancadas; aceptarla debería pesar en la conciencia |
+| `SectTournament` (torneo de sectas) | ganar | 1 común (o superior al primer puesto) | Premio clásico de torneo xianxia |
+| `CauldronCreditors` (deudores del Caldero) | pagar | aceptan raíces selladas como pago | El Pabellón comercia raíces |
+| `PuppetCrypt` (cripta de títeres) | — | 25 % inferior | Raíces de los titiriteros, selladas en sus muñecos |
+
 ## 8. Cómo se reparten (resumen)
 
 | Vía | Quién la usa | Tope | Riesgo | Costo |
@@ -199,7 +215,8 @@ Abiertas (va mi propuesta si no se dice otra cosa):
 - **Raíz sellada:** 4 variantes de un mismo diseño (inferior, común, superior, celestial). **Hecha** (2026-10-24, ChatGPT, prompt
   de este documento): recortes de 128×128 en `art/concepts2/items/it_sealed_root/out/SealedRoot_<Grado>.png`; van a
   `Mods/Convergence.Core/Common/Textures/Things/Item/CVG/` cuando existan los ThingDefs.
-- **Píldora de Lavado de Raíz:** 1.
+- **Píldora de Lavado de Raíz:** 1. **Hecha** (2026-10-24, ChatGPT): `art/concepts2/items/it_pill_rootwash/out/RootWashPill.png`,
+  escalada a 72 px dentro de 128 como las otras píldoras; va a `Mods/Convergence.Alchemy/Common/Textures/Things/Item/CVG/`.
 
 El resto (cirugías, hediffs, fusión, avance, ritual) no lleva arte nuevo.
 
