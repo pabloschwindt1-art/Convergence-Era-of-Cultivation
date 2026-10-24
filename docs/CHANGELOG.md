@@ -43,6 +43,8 @@ Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod
   descripción; los 21 objetos que suben el qi lo dicen (muebles, puertas, bloques, jade, plantas). Biotech Wuxia: el tambor de sangre
   ocupa 1×1 (heredaba el 1×2 de la pileta y su dibujo redondo no seguía la huella). `tools/audit_funcional.py` sin dos falsos
   positivos (qi 0 de feng shui, clases usadas desde código). Carga en 1.7 ALL OK; los 3 errores de traducción son de Biotech vanilla.
+- Core: el Maestro que llega herido ya no llega desnudo (las heridas de llegada le rompían la túnica y el pantalón: ahora se saca
+  la ropa antes y se la vuelve a poner). Autotest nuevo: llega derribado y vestido. `-cvgselftest` ALL OK en 1.7.
 - Core: el diálogo de inicio ("La Era del Cultivo") ya no pregunta cómo empieza la Convergencia cuando el escenario la trae
   ocurrida (la parte del escenario corre antes que el diálogo y elegir no cambiaba nada); muestra que ya ocurrió y deja solo la
   dificultad. Lo encontró el usuario con un escenario propio.

@@ -1328,6 +1328,13 @@ namespace Convergence
             Check(wounded.Downed, "DamageUntilDowned works (wounded arrival)");
             wounded.Destroy();
             state.End(died: false);
+            // Llegada herida del Maestro: cae derribado pero vestido (antes las heridas le rompían la túnica y el pantalón)
+            var hurt = state.Arrive(map, def, wounded: true);
+            int clothes = def.apparel.Count(a => a?.IsApparel ?? false);
+            Check(hurt != null && hurt.Downed && hurt.apparel.WornApparel.Count >= clothes,
+                $"wounded mentor arrives downed and dressed ({hurt?.apparel?.WornApparel.Count ?? 0}/{clothes} garments)");
+            state.End(died: false);
+            if (hurt != null && !hurt.Destroyed) hurt.Destroy();
             Check(!mentor.Spawned && map.listerThings.ThingsOfDef(def.farewellItem).Any(), "mentor left and the jade fragment stays");
         }
 

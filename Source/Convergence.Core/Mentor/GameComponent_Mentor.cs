@@ -133,7 +133,12 @@ namespace Convergence
             {
                 FleckMaker.ThrowLightningGlow(pawn.DrawPos, map, 3f);
                 FleckMaker.Static(pawn.Position, map, FleckDefOf.ExplosionFlash, 4f);
+                // La ropa se saca antes de las heridas y se vuelve a poner después: DamageUntilDowned pega con penetración 999 y
+                // destruía la túnica y el pantalón (el Maestro llegaba desnudo, visto por el usuario).
+                var worn = pawn.apparel?.WornApparel.ToList() ?? new List<Apparel>();
+                foreach (var a in worn) pawn.apparel.Remove(a);
                 HealthUtility.DamageUntilDowned(pawn, allowBleedingWounds: false);
+                foreach (var a in worn) if (!a.Destroyed) pawn.apparel.Wear(a, dropReplacedApparel: false);
             }
 
             // Lo primero que enseña: la respiración del qi (los proyectos que trae se completan).
