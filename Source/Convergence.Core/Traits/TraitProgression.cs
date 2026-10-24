@@ -147,7 +147,9 @@ namespace Convergence
             var built = __instance.def.entityDefToBuild as ThingDef;
             if (built == null) return;
             if (TraitProgression.CounterOf(built) is DefModExtension_ProgressCounter c) TraitProgression.Add(worker, c.counter, c.amount);
-            else if (built.HasModExtension<DefModExtension_FengShui>()) TraitProgression.Add(worker, "Formations");
+            // Muebles y paredes con feng shui cuentan muy poco: antes cada tramo de pared de bambú valía lo mismo que un núcleo de formación
+            // (los núcleos suman 3 con su propio contador, en Convergence.Formations).
+            else if (built.GetModExtension<DefModExtension_FengShui>()?.qi > 0f) TraitProgression.Add(worker, "Formations", 0.1f);
         }
     }
 

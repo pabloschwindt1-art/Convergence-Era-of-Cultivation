@@ -43,6 +43,13 @@ Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod
   descripción; los 21 objetos que suben el qi lo dicen (muebles, puertas, bloques, jade, plantas). Biotech Wuxia: el tambor de sangre
   ocupa 1×1 (heredaba el 1×2 de la pileta y su dibujo redondo no seguía la huella). `tools/audit_funcional.py` sin dos falsos
   positivos (qi 0 de feng shui, clases usadas desde código). Carga en 1.7 ALL OK; los 3 errores de traducción son de Biotech vanilla.
+- Traits & Destinies: rebalanceo de los rasgos que suben con el uso (estaban "regalados": un maestro de marionetas con las 3 del
+  escenario llegaba a gran maestro en 40 días). Umbrales nuevos: marionetas 150/720 días-marioneta (antes 30/120), granjero
+  espiritual 150/600 cosechas (30/120), alquimia, forja y talismanes 50/200 (25/100), domador 10/40 (6/20), cuerpo de hierro 200/800
+  horas (120/480), comprensión 4/10 (2/5). Las mesas y plantas vanilla cuentan la mitad. Formaciones: ahora suman los núcleos de
+  formación (3 cada uno); los muebles y paredes con feng shui solo 0.1 (antes cada tramo de pared de bambú contaba como una formación).
+  1.7: Core y Formations ALL OK. El cuerpo de espada y las demás constituciones de secta suben por el ritual de templado (con costo y
+  probabilidad), no por uso.
 - Biotech Wuxia: se borra la ballesta de repetición de marioneta (y su virote): ningún títere la usaba desde que el guardián de
   bronce pelea a puños. La ballesta de repetición de Alchemy (la del jugador) sigue. Stories: las 4 llaves del final valen 1500 /
   2500 / 3500 / 5000 (antes 0) y siguen sin poder venderse. 1.7: Core + Stories ALL OK.

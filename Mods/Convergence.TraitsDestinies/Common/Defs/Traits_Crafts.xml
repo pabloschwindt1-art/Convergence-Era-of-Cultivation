@@ -64,11 +64,11 @@
         <steps>
           <li>
             <degree>1</degree>
-            <threshold>30</threshold>
+            <threshold>150</threshold>
           </li>
           <li>
             <degree>2</degree>
-            <threshold>120</threshold>
+            <threshold>600</threshold>
           </li>
         </steps>
       </li>
@@ -149,11 +149,11 @@
         <steps>
           <li>
             <degree>1</degree>
-            <threshold>25</threshold>
+            <threshold>50</threshold>
           </li>
           <li>
             <degree>2</degree>
-            <threshold>100</threshold>
+            <threshold>200</threshold>
           </li>
         </steps>
       </li>
@@ -225,11 +225,11 @@
         <steps>
           <li>
             <degree>1</degree>
-            <threshold>25</threshold>
+            <threshold>50</threshold>
           </li>
           <li>
             <degree>2</degree>
-            <threshold>100</threshold>
+            <threshold>200</threshold>
           </li>
         </steps>
       </li>
@@ -374,11 +374,11 @@
         <steps>
           <li>
             <degree>1</degree>
-            <threshold>6</threshold>
+            <threshold>10</threshold>
           </li>
           <li>
             <degree>2</degree>
-            <threshold>20</threshold>
+            <threshold>40</threshold>
           </li>
         </steps>
       </li>
@@ -452,11 +452,11 @@
         <steps>
           <li>
             <degree>1</degree>
-            <threshold>25</threshold>
+            <threshold>50</threshold>
           </li>
           <li>
             <degree>2</degree>
-            <threshold>100</threshold>
+            <threshold>200</threshold>
           </li>
         </steps>
       </li>

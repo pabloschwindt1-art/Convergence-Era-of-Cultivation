@@ -97,6 +97,9 @@
       <li Class="CompProperties_Glower"><glowRadius>5</glowRadius><glowColor>(120,180,255,0)</glowColor></li>
     </comps>
     <placeWorkers><li>PlaceWorker_GlowRadius</li><li>Convergence.Formations.PlaceWorker_FormationRange</li></placeWorkers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ProgressCounter"><counter>Formations</counter><amount>3</amount></li>
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -158,6 +161,9 @@
       <li Class="CompProperties_Glower"><glowRadius>5</glowRadius><glowColor>(120,180,255,0)</glowColor></li>
     </comps>
     <placeWorkers><li>PlaceWorker_GlowRadius</li><li>Convergence.Formations.PlaceWorker_FormationRange</li></placeWorkers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ProgressCounter"><counter>Formations</counter><amount>3</amount></li>
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -218,6 +224,9 @@
       <li Class="CompProperties_Glower"><glowRadius>5</glowRadius><glowColor>(120,180,255,0)</glowColor></li>
     </comps>
     <placeWorkers><li>PlaceWorker_GlowRadius</li><li>Convergence.Formations.PlaceWorker_FormationRange</li></placeWorkers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ProgressCounter"><counter>Formations</counter><amount>3</amount></li>
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -279,6 +288,9 @@
       <li Class="CompProperties_Glower"><glowRadius>5</glowRadius><glowColor>(120,180,255,0)</glowColor></li>
     </comps>
     <placeWorkers><li>PlaceWorker_GlowRadius</li><li>Convergence.Formations.PlaceWorker_FormationRange</li></placeWorkers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_ProgressCounter"><counter>Formations</counter><amount>3</amount></li>
+    </modExtensions>
   </ThingDef>
 
   <!-- The qi sword the guardian statue throws (the flying-sword art of the Core technique, smaller and quicker). -->

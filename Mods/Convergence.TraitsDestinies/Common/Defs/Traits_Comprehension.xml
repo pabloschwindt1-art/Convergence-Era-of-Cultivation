@@ -66,11 +66,11 @@
         <steps>
           <li>
             <degree>1</degree>
-            <threshold>2</threshold>
+            <threshold>4</threshold>
           </li>
           <li>
             <degree>2</degree>
-            <threshold>5</threshold>
+            <threshold>10</threshold>
           </li>
         </steps>
       </li>

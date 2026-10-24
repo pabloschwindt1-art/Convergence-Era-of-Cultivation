@@ -68,11 +68,11 @@
         <steps>
           <li>
             <degree>1</degree>
-            <threshold>120</threshold>
+            <threshold>200</threshold>
           </li>
           <li>
             <degree>2</degree>
-            <threshold>480</threshold>
+            <threshold>800</threshold>
           </li>
         </steps>
       </li>
