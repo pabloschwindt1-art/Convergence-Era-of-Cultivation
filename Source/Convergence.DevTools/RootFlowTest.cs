@@ -23,6 +23,13 @@ namespace Convergence
         private Thing ritualSpot;
         private SpiritRootGradeDef donorGrade;
         private int lettersBefore;
+        private Precept_Ritual ritual;
+        private Pawn prisoner;
+        private Faction prisonerFaction;
+        private int goodwillBefore, round;
+        private bool awakened, raised;
+        private List<float> savedChances;
+        private float savedQuality;
 
         public GameComponent_RootFlowTest(Game game) { }
 
@@ -73,6 +80,8 @@ namespace Convergence
                 if (stage == 1) StageExtract(map, elapsed);
                 else if (stage == 2) StageImplant(map, elapsed);
                 else if (stage == 3) StageRitual(map, elapsed);
+                else if (stage == 4) StagePrisoner(map, elapsed);
+                else if (stage == 5) StageForcedCeremony(map, elapsed);
             }
             catch (System.Exception e)
             {
@@ -120,6 +129,9 @@ namespace Convergence
             Find.TickManager.CurTimeSpeed = TimeSpeed.Paused;
             if (!GameComponent_Convergence.Active) GameComponent_Convergence.Instance?.TryFire(map);
             var center = TestArena.ClearAtCenter(map, 30, 20);
+            // Mide las cirugías y el ritual, no la convivencia: sin colapsos mentales al azar y con comida a mano.
+            DebugSettings.enableRandomMentalStates = false;
+            Spawn(ThingDefOf.MealSurvivalPack, 60, center + new IntVec3(2, 0, -3), map);
             // Los colonos del inicio no participan: solo los de la prueba trabajan.
             foreach (var p in map.mapPawns.FreeColonistsSpawned.ToList())
                 if (p.workSettings != null) foreach (var w in DefDatabase<WorkTypeDef>.AllDefsListForReading) if (!p.WorkTypeIsDisabled(w)) p.workSettings.SetPriority(w, 0);
@@ -133,7 +145,13 @@ namespace Convergence
             altar.SetFaction(Faction.OfPlayer);
             altar.Medical = true;
 
+            // El médico tiene que poder hacer de médico (algunos rasgos e infancias lo impiden).
             doctor = MakeColonist(map, center);
+            for (int i = 0; i < 30 && doctor.WorkTypeIsDisabled(WorkTypeDefOf.Doctor); i++)
+            {
+                doctor.Destroy();
+                doctor = MakeColonist(map, center);
+            }
             doctor.skills.GetSkill(SkillDefOf.Medicine).Level = 20;
             doctor.workSettings.SetPriority(WorkTypeDefOf.Doctor, 1);
             donor = MakeColonist(map, center + new IntVec3(-4, 0, 3));
@@ -165,6 +183,8 @@ namespace Convergence
                     Check(torn != null, "the donor remembers losing the root");
                     Check(donor.relations.OpinionOf(doctor) < 0, $"the donor hates the surgeon (opinion {donor.relations.OpinionOf(doctor)})");
                 }
+                // El donante odia al médico y puede pelearlo: se va del mapa para no frenar el resto de la prueba.
+                if (!donor.Dead) donor.DeSpawn();
                 // Paso 2: la mesa de qi con energía, y otro colono para recibir la raíz.
                 var tableDef = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_QT_QiSurgeryTable");
                 if (tableDef == null) { Check(false, "Qi-Tech is not loaded"); Finish(); return; }
@@ -199,6 +219,10 @@ namespace Convergence
             if (elapsed > GenDate.TicksPerDay * 2)
             {
                 Note($"doctor job: {doctor.CurJob?.def?.defName}, donor job: {donor.CurJob?.def?.defName}, donor bed: {donor.CurrentBed()?.def?.defName}");
+                Note($"seeks medical rest: {HealthAIUtility.ShouldSeekMedicalRest(donor)}, bill should do now: {donor.health.surgeryBills.AnyShouldDoNow}, " +
+                    $"bed found: {RestUtility.FindPatientBedFor(donor)?.def?.defName}, altar usable: {RootSurgeryUtility.IsUsable(altar)}, " +
+                    $"doctor active: {doctor.workSettings.WorkIsActive(WorkTypeDefOf.Doctor)}, doctor downed: {doctor.Downed}, mental: {doctor.MentalStateDef?.defName}, " +
+                    $"donor mental: {donor.MentalStateDef?.defName}, medicine on map: {map.listerThings.ThingsOfDef(ThingDefOf.MedicineIndustrial).Sum(t => t.stackCount)}");
                 Check(false, "the extraction did not happen in 2 days");
                 Finish();
             }
@@ -219,7 +243,9 @@ namespace Convergence
                     Check(recipient.genes == null || recipient.genes.GenesListForReading.Any(g => g.def.HasModExtension<DefModExtension_SpiritRoot>() && recipient.genes.IsXenogene(g)),
                         "the implanted root is a xenogene");
                 }
-                else Check(false, "the implant did nothing (sealed roots left on the map: " +
+                else if (recipient.health.hediffSet.hediffs.Any(h => h is Hediff_Injury))
+                    Note("the implant surgery failed (vanilla failure, it left injuries): nothing to check");
+                else Check(false, "the implant did nothing and the surgery did not fail (sealed roots left on the map: " +
                     map.listerThings.AllThings.Count(t => t.TryGetComp<CompSealedRoot>() != null) + ")");
                 StartRitual(map);
                 return;
@@ -237,7 +263,7 @@ namespace Convergence
             var def = DefDatabase<PreceptDef>.GetNamed("CVG_RootPurificationCeremony");
             var ideo = Faction.OfPlayer.ideos?.PrimaryIdeo;
             if (ideo == null) { Check(false, "the player has no ideoligion"); Finish(); return; }
-            var ritual = ideo.PreceptsListForReading.OfType<Precept_Ritual>().FirstOrDefault(p => p.def == def);
+            ritual = ideo.PreceptsListForReading.OfType<Precept_Ritual>().FirstOrDefault(p => p.def == def);
             if (ritual == null)
             {
                 ritual = (Precept_Ritual)PreceptMaker.MakePrecept(def);
@@ -249,11 +275,7 @@ namespace Convergence
             ritualSpot = GenSpawn.Spawn(ThingMaker.MakeThing(ThingDefOf.RitualSpot), center + new IntVec3(0, 0, 5), map);
             ritualSpot.SetFaction(Faction.OfPlayer);
 
-            officiant = MakeColonist(map, ritualSpot.Position);
-            var oc = CompCultivator.For(officiant);
-            SpiritRootUtility.ImplantRoot(officiant, DefDatabase<SpiritRootGradeDef>.GetNamed("CVG_RootGrade_Common"), null);
-            oc.SyncRealm();
-            oc.TrackerFor(CVG_DefOf.CVG_Path_Qi, create: true).AdvanceTo(DefDatabase<CultivationRealmDef>.GetNamed("CVG_Realm_Foundation"), 1f);
+            MakeOfficiant(map);
             // Un discípulo descansado: el donante sigue en cama tras la cirugía y vanilla no deja asignarlo.
             disciple = MakeColonist(map, ritualSpot.Position);
             SpiritRootUtility.RemoveRoot(disciple);
@@ -268,21 +290,43 @@ namespace Convergence
             Check(oRole.AppliesToPawn(officiant, out string why1, target, null, null, ritual), "a Foundation cultivator can officiate" + (why1.NullOrEmpty() ? "" : ": " + why1));
             Check(!oRole.AppliesToPawn(doctor, out string why2, target, null, null, ritual) && !why2.NullOrEmpty(), "a mortal cannot: " + why2);
             Check(tRole.AppliesToPawn(disciple, out string why3, target, null, null, ritual), $"{disciple.LabelShort} can be purified" + (why3.NullOrEmpty() ? "" : ": " + why3));
+            BeginCeremony(map);
+            stage = 3;
+            stageStart = Find.TickManager.TicksGame;
+        }
 
+        private void MakeOfficiant(Map map)
+        {
+            officiant = MakeColonist(map, ritualSpot.Position);
+            var oc = CompCultivator.For(officiant);
+            SpiritRootUtility.ImplantRoot(officiant, DefDatabase<SpiritRootGradeDef>.GetNamed("CVG_RootGrade_Common"), null);
+            oc.SyncRealm();
+            oc.TrackerFor(CVG_DefOf.CVG_Path_Qi, create: true).AdvanceTo(DefDatabase<CultivationRealmDef>.GetNamed("CVG_Realm_Foundation"), 1f);
+        }
+
+        private List<Pawn> Audience() =>
+            new List<Pawn> { doctor, recipient }.Where(p => p != null && !p.Dead && !p.Downed && p.Spawned && p.CurrentBed() == null).ToList();
+
+        private void BeginCeremony(Map map)
+        {
+            var ideo = ritual.ideo;
+            var audience = Audience();
+            foreach (var p in new[] { officiant, disciple }.Concat(audience))
+                if (p.ideo != null && p.Ideo != ideo) p.ideo.SetIdeo(ideo);
+            var target = new TargetInfo(ritualSpot);
+            var roles = ritual.behavior.def.roles;
             var all = new List<Pawn> { officiant, disciple }.Concat(audience).Distinct().ToList();
             var assignments = new RitualRoleAssignments(ritual, target);
             // Como en la ventana del ritual: roles elegidos, no forzados (vanilla no cuenta los forzados al buscar al orador).
             assignments.Setup(all, new List<Pawn>());
-            Check(assignments.TryAssign(officiant, oRole, out _) && assignments.TryAssign(disciple, tRole, out _), "officiant and disciple assigned");
+            Check(assignments.TryAssign(officiant, roles.First(r => r.id == "officiant"), out _), "officiant " + officiant.LabelShort + " assigned");
+            Check(assignments.TryAssign(disciple, roles.First(r => r.id == "target"), out _), "disciple " + disciple.LabelShort + " assigned");
             foreach (var p in audience) assignments.TryAssignSpectate(p);
             string cant = ritual.behavior.CanStartRitualNow(target, ritual);
             Check(cant.NullOrEmpty(), "the ritual can start" + (cant.NullOrEmpty() ? "" : ": " + cant));
-            lettersBefore = Find.LetterStack.LettersListForReading.Count + Find.Archive.ArchivablesListForReading.Count;
             ritual.behavior.TryExecuteOn(target, officiant, ritual, null, assignments, playerForced: true);
             Check(map.lordManager.lords.Any(l => l.LordJob is LordJob_Ritual), "the ceremony started (a ritual lord is running)");
-            Note($"disciple root before: {CompCultivator.For(disciple).Root?.grade?.defName ?? "none"}");
-            stage = 3;
-            stageStart = Find.TickManager.TicksGame;
+            Note($"disciple {disciple.LabelShort} root before: {CompCultivator.For(disciple).Root?.grade?.defName ?? "none"}");
         }
 
         private void StageRitual(Map map, int elapsed)
@@ -297,7 +341,7 @@ namespace Convergence
                 Note("last letter: " + (letter?.Label.ToString() ?? "-") + " | " + (letter is StandardLetter s ? s.Text.ToString().Split('\n').FirstOrDefault() : ""));
                 Note($"disciple root after: {comp.Root?.grade?.defName ?? "none"}");
                 Check(!RootPurification.CanTarget(disciple, out string why) && !why.NullOrEmpty(), "the disciple must wait a year now: " + why);
-                Finish();
+                StartPrisoner(map);
                 return;
             }
             if (elapsed > GenDate.TicksPerDay)
@@ -306,6 +350,167 @@ namespace Convergence
                 Check(false, "the ceremony did not end in a day");
                 Finish();
             }
+        }
+
+        // ===== 4) Extirpar a un prisionero de una facción neutral, en un altar marcado para prisioneros =====
+        private void StartPrisoner(Map map)
+        {
+            var altarDef = DefDatabase<ThingDef>.GetNamed("CVG_GraftingAltar");
+            var center = map.Center;
+            // Una celda cerrada, como la arma un jugador: las camas de prisioneros tienen que estar en una habitación.
+            var cell = new CellRect(center.x - 11, center.z - 8, 5, 6);
+            // Nadie dentro de la celda mientras se levantan las paredes (un muro sobre un pawn lo aplasta).
+            foreach (var c in cell.Cells)
+                foreach (var t in c.GetThingList(map).ToList())
+                {
+                    if (t is Pawn pw)
+                    {
+                        pw.Position = CellFinder.StandableCellNear(center + new IntVec3(0, 0, -6), map, 4f);
+                        pw.Notify_Teleported();
+                    }
+                    else if (t.def.category == ThingCategory.Item || t.def.category == ThingCategory.Building) t.Destroy();
+                }
+            Note($"doctor before the prisoner: {(doctor.Dead ? "dead" : doctor.Downed ? "downed" : "fine")} at {doctor.Position}");
+            foreach (var c in cell.EdgeCells)
+            {
+                bool isDoor = c.x == cell.minX + 2 && c.z == cell.maxZ;
+                var def = isDoor ? ThingDefOf.Door : ThingDefOf.Wall;
+                var t = ThingMaker.MakeThing(def, ThingDefOf.BlocksGranite);
+                t.SetFaction(Faction.OfPlayer);
+                GenSpawn.Spawn(t, c, map);
+            }
+            altar = (Building_Bed)GenSpawn.Spawn(ThingMaker.MakeThing(altarDef), new IntVec3(cell.minX + 2, 0, cell.minZ + 1), map);
+            altar.SetFaction(Faction.OfPlayer);
+            altar.ForPrisoners = true;
+            altar.Medical = true;
+            // Lo mismo que hace el botón de la interfaz: avisar a la habitación para que se vuelva celda de prisión.
+            altar.GetDistrict()?.Notify_RoomShapeOrContainedBedsChanged();
+            altar.GetRoom()?.Notify_RoomShapeChanged();
+            var room = altar.GetRoom();
+            Note($"prison cell: walls {cell.EdgeCells.Count(c => c.GetEdifice(map) != null)}/{cell.EdgeCells.Count()}, room cells {room?.CellCount}, " +
+                $"touches edge {room?.TouchesMapEdge}, outdoors {room?.PsychologicallyOutdoors}, prison cell {room?.IsPrisonCell}, beds {room?.ContainedBeds.Count()}, " +
+                $"for prisoners {altar.ForPrisoners}, edifices: {string.Join(",", cell.EdgeCells.Select(c => c.GetEdifice(map)?.def.defName ?? "-").Distinct())}");
+            prisonerFaction = Find.FactionManager.AllFactionsListForReading.Where(f => !f.IsPlayer && !f.Hidden && !f.HostileTo(Faction.OfPlayer)
+                && f.def.humanlikeFaction && f.def.basicMemberKind != null && f.CanChangeGoodwillFor(Faction.OfPlayer, -10)).RandomElementWithFallback();
+            if (prisonerFaction == null) { Note("no neutral faction: skipping the prisoner"); StartForcedCeremonies(map); return; }
+            prisoner = PawnGenerator.GeneratePawn(new PawnGenerationRequest(prisonerFaction.def.basicMemberKind, prisonerFaction, forceGenerateNewPawn: true,
+                developmentalStages: DevelopmentalStage.Adult));
+            GenSpawn.Spawn(prisoner, altar.Position + new IntVec3(1, 0, 0), map);
+            prisoner.guest.SetGuestStatus(Faction.OfPlayer, GuestStatus.Prisoner);
+            // Los prisioneros vienen con atención "herbal o peor": como haría el jugador, se sube (y hay herbal por si acaso).
+            if (prisoner.playerSettings != null) prisoner.playerSettings.medCare = MedicalCareCategory.Best;
+            Note("prisoner medical care: " + prisoner.playerSettings?.medCare);
+            SpiritRootUtility.ImplantRoot(prisoner, DefDatabase<SpiritRootGradeDef>.GetNamed("CVG_RootGrade_Superior"),
+                new List<QiElementDef> { DefDatabase<QiElementDef>.GetNamed("CVG_Element_Fire") });
+            goodwillBefore = prisonerFaction.GoodwillWith(Faction.OfPlayer);
+            var recipe = DefDatabase<RecipeDef>.GetNamed("CVG_ExtractSpiritRoot");
+            var report = recipe.Worker.AvailableReport(prisoner);
+            Check(report.Accepted, "extraction is offered for a prisoner" + (report.Accepted ? "" : ": " + report.Reason));
+            HealthCardUtility.CreateSurgeryBill(prisoner, recipe, null, null, sendMessages: false);
+            Spawn(ThingDefOf.MedicineIndustrial, 6, center + new IntVec3(-2, 0, -3), map);
+            Spawn(ThingDefOf.MedicineHerbal, 6, center + new IntVec3(-3, 0, -3), map);
+            Spawn(DefDatabase<ThingDef>.GetNamed("CVG_SpiritJade"), 6, center + new IntVec3(-1, 0, -3), map);
+            Note($"prisoner {prisoner.LabelShort} of {prisonerFaction.Name}, goodwill {goodwillBefore}");
+            if (doctor.Dead || doctor.Downed || doctor.InMentalState)
+            {
+                Note("the first doctor cannot work (" + (doctor.Dead ? "dead" : doctor.Downed ? "downed" : doctor.MentalStateDef?.defName) + "): a new one");
+                do { doctor = MakeColonist(map, center); } while (doctor.WorkTypeIsDisabled(WorkTypeDefOf.Doctor));
+                doctor.skills.GetSkill(SkillDefOf.Medicine).Level = 20;
+                doctor.workSettings.SetPriority(WorkTypeDefOf.Doctor, 1);
+            }
+            stage = 4;
+            stageStart = Find.TickManager.TicksGame;
+        }
+
+        private void StagePrisoner(Map map, int elapsed)
+        {
+            if (prisoner.Dead || !CompCultivator.For(prisoner).HasRoot)
+            {
+                Check(prisoner.Dead || prisoner.health.hediffSet.HasHediff(CVG_RootDefOf.CVG_RootTorn),
+                    $"the prisoner lost the root on the prisoners' altar ({elapsed / 2500f:0.0} h, dead: {prisoner.Dead})");
+                int after = prisonerFaction.GoodwillWith(Faction.OfPlayer);
+                Check(after < goodwillBefore, $"{prisonerFaction.Name} resents it: goodwill {goodwillBefore} -> {after}");
+                var sealedRoot = map.listerThings.AllThings.Where(t => t.TryGetComp<CompSealedRoot>() is CompSealedRoot c && c.donor == prisoner.LabelShort).FirstOrDefault();
+                Note("prisoner's sealed root: " + (sealedRoot?.LabelNoCount ?? "none (lost)") + (sealedRoot != null ? " | " + sealedRoot.GetInspectString().Replace("\n", " / ") : ""));
+                StartForcedCeremonies(map);
+                return;
+            }
+            if (elapsed > GenDate.TicksPerDay * 2)
+            {
+                Note($"doctor: {(doctor.Dead ? "dead" : doctor.Downed ? "downed" : doctor.CurJob?.def?.defName)}, prisoner job: {prisoner.CurJob?.def?.defName}, prisoner bed: {prisoner.CurrentBed()?.def?.defName}");
+                Note("prisoner wounds: " + string.Join(", ", prisoner.health.hediffSet.hediffs.Select(h => h.LabelCap.ToString())));
+                Note($"prisoner seeks medical rest: {HealthAIUtility.ShouldSeekMedicalRest(prisoner)}, bill should do now: {prisoner.health.surgeryBills.AnyShouldDoNow}, " +
+                    $"bed found: {RestUtility.FindPatientBedFor(prisoner)?.def?.defName}, altar usable: {RootSurgeryUtility.IsUsable(altar)}, " +
+                    $"valid bed: {RestUtility.IsValidBedFor(altar, prisoner, prisoner, false, true, false, prisoner.GuestStatus)}, in prison cell: {altar.Position.IsInPrisonCell(map)}, " +
+                    $"prisoner downed: {prisoner.Downed}, mental: {prisoner.MentalStateDef?.defName}, doctor active: {doctor.workSettings?.WorkIsActive(WorkTypeDefOf.Doctor)}");
+                Check(false, "the prisoner's extraction did not happen in 2 days");
+                StartForcedCeremonies(map);
+            }
+        }
+
+        // ===== 5) Ceremonias con resultado espectacular forzado: despertar una raíz y subir una común =====
+        private RitualOutcomeEffectDef OutcomeDef => ritual.outcomeEffect.def;
+
+        private void StartForcedCeremonies(Map map)
+        {
+            savedChances = OutcomeDef.outcomeChances.Select(o => o.chance).ToList();
+            // Mínimas, no cero: vanilla elige por peso y con peso total cero se rompe.
+            foreach (var o in OutcomeDef.outcomeChances) o.chance = o.positivityIndex == 2 ? 1f : 0.0001f;
+            // El peso de un resultado positivo es chance × calidad: con calidad inicial 1 sale el espectacular.
+            savedQuality = OutcomeDef.startingQuality;
+            OutcomeDef.startingQuality = 1f;
+            round = 0;
+            NextForcedCeremony(map);
+        }
+
+        private void NextForcedCeremony(Map map)
+        {
+            round++;
+            if (officiant.Dead || officiant.Downed || officiant.InMentalState || !officiant.Spawned || officiant.CurrentBed() != null)
+            {
+                Note("the officiant cannot go on (" + (officiant.MentalStateDef?.defName ?? "downed or in bed") + "): a new one");
+                MakeOfficiant(map);
+            }
+            disciple = MakeColonist(map, ritualSpot.Position);
+            SpiritRootUtility.RemoveRoot(disciple);
+            if (round > 1)
+                SpiritRootUtility.ImplantRoot(disciple, DefDatabase<SpiritRootGradeDef>.GetNamed("CVG_RootGrade_Common"), null);
+            BeginCeremony(map);
+            stage = 5;
+            stageStart = Find.TickManager.TicksGame;
+        }
+
+        private void StageForcedCeremony(Map map, int elapsed)
+        {
+            if (map.lordManager.lords.Any(l => l.LordJob is LordJob_Ritual))
+            {
+                if (elapsed > GenDate.TicksPerDay) { Check(false, "a forced ceremony did not end in a day"); EndForced(); }
+                return;
+            }
+            var comp = CompCultivator.For(disciple);
+            Note($"spectacular ceremony {round}: {disciple.LabelShort} root after: {comp.Root?.grade?.defName ?? "none"}");
+            if (round == 1)
+            {
+                awakened = comp.Root?.grade?.defName == "CVG_RootGrade_Inferior";
+                Check(awakened, "a spectacular ceremony awakens a root in someone born without one");
+                NextForcedCeremony(map);
+                return;
+            }
+            if (comp.Root?.grade?.defName == "CVG_RootGrade_Superior") raised = true;
+            if (raised || round >= 4)
+            {
+                Check(raised, $"a spectacular ceremony raised a common root to superior (in {round - 1} tries, 70% each)");
+                EndForced();
+                return;
+            }
+            NextForcedCeremony(map);
+        }
+
+        private void EndForced()
+        {
+            for (int i = 0; i < savedChances.Count; i++) OutcomeDef.outcomeChances[i].chance = savedChances[i];
+            OutcomeDef.startingQuality = savedQuality;
+            Finish();
         }
     }
 }
