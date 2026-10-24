@@ -21,6 +21,26 @@ Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod
 - EN: *Spirit roots now update immediately when a pawn gains or loses a root trait or gene (xenogerm, gene assembler, ancestral
   blood, dev mode). Root traits and genes now stack to the highest grade instead of the gene always winning.*
 
+### Raíces que cambian (2026-10-24, docs/modulos/RAICES.md)
+- **Core: raíces selladas** (inferior, común, superior y celestial, con arte nuevo): guardan elementos y de quién eran.
+- **Core: extirpar e implantar raíces** (cirugía; necesita el altar del Dao o la mesa de cirugía de qi). El donante queda sin
+  raíz, con "raíz arrancada", un mal recuerdo y odio al cirujano; si falla en Fundación o más, puede morir. Ideology lo juzga como
+  la extracción de órganos. El receptor pasa 30 días con "raíz ajena" y puede rechazarla.
+- **Core: el avance de reino puede aclarar la raíz** (más chance cuanto peor es; superior → celestial solo con tribulación), y
+  llegar a Limpieza de Médula puede despertar una raíz en quien no tenía.
+- **Core: órganos de cultivador:** el corazón, los pulmones, los riñones y el hígado de un cultivador salen "templados" (valen
+  más y dan bonos chicos al implantarlos).
+- **Core: ritual de purificación de raíz** (precepto de Ideology): sube la raíz o despierta una; una vez por año.
+- **Grafts:** investigación "Cirugía de raíces" y fusión de 3 raíces en 1 del grado siguiente en el horno de huesos (purifica).
+- **Qi-Tech:** investigación "Ingeniería de raíces", mesa de cirugía de qi (con arte nuevo), síntesis de raíces en el
+  laboratorio de píldoras de qi (sin purificar) y raíz artificial (con arte nuevo).
+- **Alchemy:** Píldora de Lavado de Raíz (con arte nuevo): sube la raíz hasta superior, con tolerancia.
+- **Stories:** raíces selladas como recompensa en 6 eventos. **Factions:** el Pabellón del Caldero Celestial compra y vende raíces.
+- EN: *Spirit roots can now change. Sealed roots (four grades); extract and implant roots on the Dao grafting altar or the new qi
+  surgery table; fuse three roots into a better one; breakthroughs may clear a root; Marrow Cleansing may awaken one; tempered
+  cultivator organs; a root purification ritual; the root-washing pill; an artificial root from Qi-Tech; sealed roots as event
+  rewards and Heavenly Cauldron trade goods.*
+
 ### Partidas largas de prueba (2026-10-24, madrugada)
 Once partidas de 30 a 60 días con una base autosuficiente y el narrador libre. Lo que salió y se corrigió:
 - **Core: bestias espirituales más justas.** Con la supresión de reino, la vida y el daño extra por rango eran demasiado (una

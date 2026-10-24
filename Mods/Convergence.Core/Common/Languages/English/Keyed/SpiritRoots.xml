@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Root_AwakenedByRealm>{PAWN_labelShort} cleansed the marrow so deeply that something woke beneath it, a {1} (reaching {2}). The road of qi is open.</CVG_Root_AwakenedByRealm>
+  <CVG_Root_RaisedByRealm>The breakthrough washed through {PAWN_labelShort}'s spirit root, which cleared from {1} to {2}.</CVG_Root_RaisedByRealm>
+  <CVG_SealedRoot_Elements>Elements: {0}</CVG_SealedRoot_Elements>
+  <CVG_SealedRoot_Donor>Torn from: {0}</CVG_SealedRoot_Donor>
+  <CVG_SealedRoot_FusedDonor>the roots of {0} cultivators ({1})</CVG_SealedRoot_FusedDonor>
+  <CVG_RootFusion_Failed>The fusion failed in {PAWN_labelShort}'s hands: two of the roots burned away, and only one came back out of the fire.</CVG_RootFusion_Failed>
+  <CVG_NeedsRootSurgeryBed>Needs a Dao grafting altar (with root surgery researched) or a powered qi surgery table</CVG_NeedsRootSurgeryBed>
+  <CVG_RootExtract_Success>{DOCTOR_labelShort} tore the spirit root out of {PAWN_labelShort} and sealed it: {2}.</CVG_RootExtract_Success>
+  <CVG_RootExtract_Lost>The spirit root came apart in {DOCTOR_labelShort}'s hands. Nothing of it was left for the jade; {PAWN_labelShort} has lost it all the same.</CVG_RootExtract_Lost>
+  <CVG_RootImplant_Success>{PAWN_labelShort} now carries a {1} that once belonged to {2}. For thirty days the body will fight it.</CVG_RootImplant_Success>
+  <CVG_RootRejected_Lowered>{PAWN_labelShort}'s body fought the foreign root and won half the battle: the root survived, one grade weaker.</CVG_RootRejected_Lowered>
+  <CVG_RootRejected_Lost>{PAWN_labelShort}'s body rejected the foreign root. It withered and is gone.</CVG_RootRejected_Lost>
+  <CVG_TemperedOrgan_From>Tempered: from {0} ({1})</CVG_TemperedOrgan_From>
+  <CVG_TemperedOrgan_Value>Tempered by qi</CVG_TemperedOrgan_Value>
+  <CVG_Pill_NoRoot>{PAWN_labelShort} has no spirit root to wash: the pill only poisons.</CVG_Pill_NoRoot>
+  <CVG_Pill_RootArtificial>The pill found only metal where {PAWN_labelShort}'s root should be: an artificial root cannot be washed.</CVG_Pill_RootArtificial>
+  <CVG_Pill_RootAtCap>{PAWN_labelShort}'s root is already as clear as this pill can make it.</CVG_Pill_RootAtCap>
+  <CVG_Pill_RootWashFailed>The root-washing pill failed: {PAWN_labelShort}'s root stayed as it was, and the medicine turned to poison.</CVG_Pill_RootWashFailed>
+  <CVG_Pill_RootRaised>The root-washing pill worked: {PAWN_labelShort}'s spirit root cleared from {1} to {2}.</CVG_Pill_RootRaised>
+  <CVG_Pill_RootWashChance>Chance to raise a {0}</CVG_Pill_RootWashChance>
+  <CVG_RootRitual_NotCultivator>cannot cultivate</CVG_RootRitual_NotCultivator>
+  <CVG_RootRitual_Artificial>has an artificial root</CVG_RootRitual_Artificial>
+  <CVG_RootRitual_AtCap>root already superior or better</CVG_RootRitual_AtCap>
+  <CVG_RootRitual_Cooldown>purified recently (wait {0})</CVG_RootRitual_Cooldown>
+  <CVG_RootRitual_OfficiantRealm>must cultivate qi at Foundation or higher</CVG_RootRitual_OfficiantRealm>
+  <CVG_RootRitual_Deviation>The wild qi left {PAWN_labelShort} in qi deviation.</CVG_RootRitual_Deviation>
+  <CVG_RootRitual_Awakened>A spirit root woke in {PAWN_labelShort}: {1}. The road of qi is open.</CVG_RootRitual_Awakened>
+  <CVG_RootRitual_Raised>{PAWN_labelShort}'s spirit root cleared from {1} to {2}.</CVG_RootRitual_Raised>
+  <CVG_RootRitual_Unchanged>{PAWN_labelShort}'s spirit root did not change.</CVG_RootRitual_Unchanged>
+</LanguageData>

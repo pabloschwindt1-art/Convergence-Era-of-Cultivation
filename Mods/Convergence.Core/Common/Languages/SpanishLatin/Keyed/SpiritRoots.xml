@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Root_AwakenedByRealm>{PAWN_labelShort} limpió la médula tan a fondo que algo despertó debajo, una {1} (al llegar a {2}). El camino del qi está abierto.</CVG_Root_AwakenedByRealm>
+  <CVG_Root_RaisedByRealm>El avance arrastró las impurezas de la raíz espiritual de {PAWN_labelShort}, que pasó de {1} a {2}.</CVG_Root_RaisedByRealm>
+  <CVG_SealedRoot_Elements>Elementos: {0}</CVG_SealedRoot_Elements>
+  <CVG_SealedRoot_Donor>Arrancada a: {0}</CVG_SealedRoot_Donor>
+  <CVG_SealedRoot_FusedDonor>las raíces de {0} cultivadores ({1})</CVG_SealedRoot_FusedDonor>
+  <CVG_RootFusion_Failed>La fusión falló en manos de {PAWN_labelShort}: dos de las raíces se consumieron y solo una salió del fuego.</CVG_RootFusion_Failed>
+  <CVG_NeedsRootSurgeryBed>Necesita un altar de injerto del Dao (con cirugía de raíces investigada) o una mesa de cirugía de qi con energía</CVG_NeedsRootSurgeryBed>
+  <CVG_RootExtract_Success>{DOCTOR_labelShort} le arrancó la raíz espiritual a {PAWN_labelShort} y la selló: {2}.</CVG_RootExtract_Success>
+  <CVG_RootExtract_Lost>La raíz espiritual se deshizo en manos de {DOCTOR_labelShort}. No quedó nada para el jade, y {PAWN_labelShort} la perdió igual.</CVG_RootExtract_Lost>
+  <CVG_RootImplant_Success>{PAWN_labelShort} lleva ahora una {1} que fue de {2}. Durante treinta días el cuerpo va a pelear contra ella.</CVG_RootImplant_Success>
+  <CVG_RootRejected_Lowered>El cuerpo de {PAWN_labelShort} peleó contra la raíz ajena y ganó a medias: la raíz sobrevivió, un grado más débil.</CVG_RootRejected_Lowered>
+  <CVG_RootRejected_Lost>El cuerpo de {PAWN_labelShort} rechazó la raíz ajena. Se marchitó y ya no está.</CVG_RootRejected_Lost>
+  <CVG_TemperedOrgan_From>Templado: de {0} ({1})</CVG_TemperedOrgan_From>
+  <CVG_TemperedOrgan_Value>Templado por el qi</CVG_TemperedOrgan_Value>
+  <CVG_Pill_NoRoot>{PAWN_labelShort} no tiene raíz espiritual que lavar: la píldora solo envenena.</CVG_Pill_NoRoot>
+  <CVG_Pill_RootArtificial>La píldora solo encontró metal donde debería estar la raíz de {PAWN_labelShort}: una raíz artificial no se lava.</CVG_Pill_RootArtificial>
+  <CVG_Pill_RootAtCap>La raíz de {PAWN_labelShort} ya es tan clara como esta píldora puede dejarla.</CVG_Pill_RootAtCap>
+  <CVG_Pill_RootWashFailed>La píldora de lavado de raíz falló: la raíz de {PAWN_labelShort} quedó igual y la medicina se volvió veneno.</CVG_Pill_RootWashFailed>
+  <CVG_Pill_RootRaised>La píldora de lavado de raíz funcionó: la raíz espiritual de {PAWN_labelShort} pasó de {1} a {2}.</CVG_Pill_RootRaised>
+  <CVG_Pill_RootWashChance>Chance de subir una {0}</CVG_Pill_RootWashChance>
+  <CVG_RootRitual_NotCultivator>no puede cultivar</CVG_RootRitual_NotCultivator>
+  <CVG_RootRitual_Artificial>tiene una raíz artificial</CVG_RootRitual_Artificial>
+  <CVG_RootRitual_AtCap>su raíz ya es superior o mejor</CVG_RootRitual_AtCap>
+  <CVG_RootRitual_Cooldown>purificado hace poco (faltan {0})</CVG_RootRitual_Cooldown>
+  <CVG_RootRitual_OfficiantRealm>tiene que cultivar qi en Fundación o más</CVG_RootRitual_OfficiantRealm>
+  <CVG_RootRitual_Deviation>El qi desbocado dejó a {PAWN_labelShort} con desviación de qi.</CVG_RootRitual_Deviation>
+  <CVG_RootRitual_Awakened>Una raíz espiritual despertó en {PAWN_labelShort}: {1}. El camino del qi está abierto.</CVG_RootRitual_Awakened>
+  <CVG_RootRitual_Raised>La raíz espiritual de {PAWN_labelShort} pasó de {1} a {2}.</CVG_RootRitual_Raised>
+  <CVG_RootRitual_Unchanged>La raíz espiritual de {PAWN_labelShort} no cambió.</CVG_RootRitual_Unchanged>
+</LanguageData>

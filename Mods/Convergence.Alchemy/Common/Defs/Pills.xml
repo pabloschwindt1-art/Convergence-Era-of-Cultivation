@@ -189,6 +189,99 @@
     </modExtensions>
   </ThingDef>
 
+  <!-- Root-washing pill (docs/modulos/RAICES.md §5): raises a spirit root one grade, never past superior. Tolerance builds up. -->
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>CVG_RootWashPill</defName>
+    <label>root-washing pill</label>
+    <description>A pearl-white pill with a jade swirl inside, ringed in gold (洗根丹). The Heavenly Cauldron Pavilion keeps the formula; they say its first maker brewed it for a son born with a muddy root and burned down his own furnace when it finally worked. Chance to raise a spirit root by one grade (40% inferior, 25% common, higher with quality), never past superior; it does nothing to an artificial root. Each pill builds a tolerance that lowers the next one's chance for about two months. If it fails it poisons, and may throw the qi into deviation. Needs a level 2 alchemy furnace.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/RootWashPill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>0.7</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <WorkToMake>2400</WorkToMake>
+      <MarketValue>450</MarketValue>
+      <Mass>0.01</Mass>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="Convergence.IngestionOutcomeDoer_RefineRoot">
+          <chances>
+            <li><grade>CVG_RootGrade_Inferior</grade><chance>0.40</chance></li>
+            <li><grade>CVG_RootGrade_Common</grade><chance>0.25</chance></li>
+          </chances>
+          <cap>CVG_RootGrade_Superior</cap>
+          <toleranceHediff>CVG_RootWashTolerance</toleranceHediff>
+          <tolerancePerDose>0.1</tolerancePerDose>
+          <failHediff>CVG_PillToxicity</failHediff>
+          <failSeverity>0.35</failSeverity>
+          <deviationHediff>CVG_QiDeviation</deviationHediff>
+          <deviationChance>0.5</deviationChance>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_PillToxicity</hediffDef>
+          <severity>0.2</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>CVG_AlchemyFurnace</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Intellectual>9</Intellectual>
+      </skillRequirements>
+      <displayPriority>2215</displayPriority>
+      <bulkRecipeCount>2</bulkRecipeCount>
+    </recipeMaker>
+    <costList>
+      <CVG_SpiritHerb>6</CVG_SpiritHerb>
+      <CVG_BeastCore>2</CVG_BeastCore>
+      <CVG_SpiritJade>3</CVG_SpiritJade>
+      <CVG_SpiritStone>5</CVG_SpiritStone>
+    </costList>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Drug">
+        <listOrder>1125</listOrder>
+        <overdoseSeverityOffset>0~0</overdoseSeverityOffset>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RequiresWorkbenchLevel">
+        <level>2</level>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>CVG_RootWashTolerance</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>root-washing tolerance</label>
+    <description>The meridians remember the last root-washing pill and brace against the next. Each pill lowers the chance of the following one; the tolerance fades over about two months.</description>
+    <defaultLabelColor>(0.8, 0.85, 0.7)</defaultLabelColor>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <initialSeverity>0.1</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.0017</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+  </HediffDef>
+
   <!-- Nine-turns pill: the high-grade recipe of the level 3 furnace (rare ingredients from Herbs.xml). -->
   <ThingDef ParentName="MakeableDrugPillBase">
     <defName>CVG_NineTurnsPill</defName>

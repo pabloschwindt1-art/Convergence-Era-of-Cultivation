@@ -75,6 +75,9 @@
   </Convergence.CultivationRealmDef>
   <Convergence.CultivationRealmDef>
     <defName>CVG_Realm_MarrowCleansing</defName>
+    <!-- Limpiar la médula puede despertar una raíz en quien no tenía (docs/modulos/RAICES.md §4). -->
+    <awakensRootChance>0.15</awakensRootChance>
+    <awakensRootGrade>CVG_RootGrade_Inferior</awakensRootGrade>
     <label>Marrow Cleansing</label>
     <description>The essence of a beast core washes the marrow clean. The body renews its own blood: wounds close fast and sickness finds no hold.</description>
     <path>CVG_Path_Body</path>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_RootPurificationCeremony.spectatorsLabel>Fieles</CVG_RootPurificationCeremony.spectatorsLabel>
+  <CVG_RootPurificationCeremony.spectatorGerund>prestar qi</CVG_RootPurificationCeremony.spectatorGerund>
+  <CVG_RootPurificationCeremony.roles.0.label>oficiante</CVG_RootPurificationCeremony.roles.0.label>
+  <CVG_RootPurificationCeremony.roles.0.missingDesc>un cultivador de Fundación o más</CVG_RootPurificationCeremony.roles.0.missingDesc>
+  <CVG_RootPurificationCeremony.roles.1.label>discípulo</CVG_RootPurificationCeremony.roles.1.label>
+  <CVG_RootPurificationCeremony.roles.1.missingDesc>la persona cuya raíz se va a purificar</CVG_RootPurificationCeremony.roles.1.missingDesc>
+</LanguageData>

@@ -238,30 +238,7 @@ namespace Convergence
                 CultivationGenerator.GiveRoot(pawn, grades.First(), new List<QiElementDef> { element });
                 comp.SetTraitRootElements(new List<QiElementDef> { element });
             }
-            else
-            {
-                var next = grades.FirstOrDefault(g => g.order > root.grade.order);
-                if (next == null) return false;
-                var gradeGene = pawn.genes?.GenesListForReading.FirstOrDefault(g => g.def.GetModExtension<DefModExtension_SpiritRoot>()?.grade != null);
-                var nextGene = DefDatabase<GeneDef>.AllDefsListForReading.FirstOrDefault(g =>
-                {
-                    var ext = g.GetModExtension<DefModExtension_SpiritRoot>();
-                    return ext != null && ext.grade == next && ext.element == null;
-                });
-                if (gradeGene != null && nextGene != null)
-                {
-                    bool xeno = pawn.genes.IsXenogene(gradeGene);
-                    pawn.genes.RemoveGene(gradeGene);
-                    pawn.genes.AddGene(nextGene, xeno);
-                }
-                else
-                {
-                    var trait = pawn.story?.traits?.GetTrait(CVG_DefOf.CVG_SpiritRoot);
-                    if (trait == null) return false;
-                    pawn.story.traits.RemoveTrait(trait);
-                    pawn.story.traits.GainTrait(new Trait(CVG_DefOf.CVG_SpiritRoot, next.traitDegree, forced: true));
-                }
-            }
+            else if (!SpiritRootUtility.TryRaise(pawn)) return false;
             comp.Sync();
             comp.SyncRealm();
             return true;

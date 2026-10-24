@@ -178,7 +178,7 @@
     <options>
       <li>
         <key>accept</key>
-        <outcomes><li Class="Convergence.Stories.SO_Progress"><amount>900</amount></li><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_DemonDread</thought><target>all</target></li><li Class="Convergence.Stories.SO_Flag"><set>blood_pact</set></li><li Class="Convergence.Stories.SO_Chain"><next>BloodPactDue</next><days>5~8</days></li><li Class="Convergence.Stories.SO_Tale"><tale>CVG_Tale_DemonPact</tale></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Items"><thing>CVG_SealedRoot_Superior</thing><count>1</count></li><li Class="Convergence.Stories.SO_Progress"><amount>900</amount></li><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_DemonDread</thought><target>all</target></li><li Class="Convergence.Stories.SO_Flag"><set>blood_pact</set></li><li Class="Convergence.Stories.SO_Chain"><next>BloodPactDue</next><days>5~8</days></li><li Class="Convergence.Stories.SO_Tale"><tale>CVG_Tale_DemonPact</tale></li></outcomes>
       </li>
       <li>
         <key>refuse</key>
@@ -395,7 +395,7 @@
     <minRefireDays>45</minRefireDays>
     <tone>positive</tone>
     <chainOnly>true</chainOnly>
-    <outcomes><li Class="Convergence.Stories.SO_Items"><thing>CVG_SpiritStone</thing><count>120~200</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_SpiritJade</thing><count>8~14</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_JadeSlip</thing><count>2</count></li><li Class="Convergence.Stories.SO_Items"><chance>0.5</chance><thing>CVG_BeastCore</thing><count>1</count></li><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_OmenGood</thought><target>all</target></li></outcomes>
+    <outcomes><li Class="Convergence.Stories.SO_Items"><chance>0.5</chance><thing>CVG_SealedRoot_Common</thing><count>1</count></li><li Class="Convergence.Stories.SO_Items"><chance>0.1</chance><thing>CVG_SealedRoot_Superior</thing><count>1</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_SpiritStone</thing><count>120~200</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_SpiritJade</thing><count>8~14</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_JadeSlip</thing><count>2</count></li><li Class="Convergence.Stories.SO_Items"><chance>0.5</chance><thing>CVG_BeastCore</thing><count>1</count></li><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_OmenGood</thought><target>all</target></li></outcomes>
   </Convergence.Stories.StoryEventDef>
   <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.faunaflora">
     <defName>CacheLost</defName>
@@ -551,7 +551,7 @@
     <options>
       <li>
         <key>take</key>
-        <outcomes><li Class="Convergence.Stories.SO_Items"><thing>MeleeWeapon_LongSword</thing><stuff>Steel</stuff><count>1</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_SpiritStone</thing><count>30~60</count></li><li Class="Convergence.Stories.SO_Thought"><chance>0.5</chance><thought>CVG_Thought_HauntedDreams</thought><target>all</target></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Items"><chance>0.3</chance><thing>CVG_SealedRoot_Common</thing><count>1</count></li><li Class="Convergence.Stories.SO_Items"><thing>MeleeWeapon_LongSword</thing><stuff>Steel</stuff><count>1</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_SpiritStone</thing><count>30~60</count></li><li Class="Convergence.Stories.SO_Thought"><chance>0.5</chance><thought>CVG_Thought_HauntedDreams</thought><target>all</target></li></outcomes>
       </li>
       <li>
         <key>rebury</key>
@@ -606,7 +606,7 @@
     <tone>positive</tone>
     <chainOnly>true</chainOnly>
     <requiresFlags><li>adopted_orphan</li></requiresFlags>
-    <outcomes><li Class="Convergence.Stories.SO_Items"><thing>CVG_SpiritJade</thing><count>6~10</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_JadeSlip</thing><count>1~2</count></li><li Class="Convergence.Stories.SO_Items"><thing>Silver</thing><count>200~350</count></li><li Class="Convergence.Stories.SO_Flag"><clear>adopted_orphan</clear></li><li Class="Convergence.Stories.SO_Flag"><set>has_mirror_workshop</set></li></outcomes>
+    <outcomes><li Class="Convergence.Stories.SO_Items"><thing>CVG_SealedRoot_Common</thing><count>1</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_SpiritJade</thing><count>6~10</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_JadeSlip</thing><count>1~2</count></li><li Class="Convergence.Stories.SO_Items"><thing>Silver</thing><count>200~350</count></li><li Class="Convergence.Stories.SO_Flag"><clear>adopted_orphan</clear></li><li Class="Convergence.Stories.SO_Flag"><set>has_mirror_workshop</set></li></outcomes>
   </Convergence.Stories.StoryEventDef>
   <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
     <defName>FeudProvocation</defName>
@@ -816,7 +816,7 @@
     <options>
       <li>
         <key>champion</key>
-        <outcomes><li Class="Convergence.Stories.SO_Damage"><chance>0.5</chance><damage>Blunt</damage><amount>6</amount><hits>1</hits></li><li Class="Convergence.Stories.SO_Skill"><skill>Melee</skill><xp>3500</xp></li><li Class="Convergence.Stories.SO_Goodwill"><chance>0.5</chance><faction>sect:friendly</faction><amount>8</amount></li><li Class="Convergence.Stories.SO_Goodwill"><chance>0.5</chance><faction>sect:rival</faction><amount>8</amount></li><li Class="Convergence.Stories.SO_Items"><chance>0.5</chance><thing>CVG_SpiritStone</thing><count>6~14</count></li><li Class="Convergence.Stories.SO_Thought"><chance>0.5</chance><thought>CVG_Thought_ProudOfMercy</thought><target>all</target></li><li Class="Convergence.Stories.SO_Thought"><chance>0.2</chance><thought>CVG_Thought_Ashamed</thought><target>all</target></li><li Class="Convergence.Stories.SO_Tale"><tale>CVG_Tale_DuelWanderer</tale></li><li Class="Convergence.Stories.SO_Favor" MayRequire="Ludeon.RimWorld.Royalty"><faction>sect:friendly</faction><amount>2</amount></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Items"><chance>0.6</chance><thing>CVG_SealedRoot_Common</thing><count>1</count></li><li Class="Convergence.Stories.SO_Damage"><chance>0.5</chance><damage>Blunt</damage><amount>6</amount><hits>1</hits></li><li Class="Convergence.Stories.SO_Skill"><skill>Melee</skill><xp>3500</xp></li><li Class="Convergence.Stories.SO_Goodwill"><chance>0.5</chance><faction>sect:friendly</faction><amount>8</amount></li><li Class="Convergence.Stories.SO_Goodwill"><chance>0.5</chance><faction>sect:rival</faction><amount>8</amount></li><li Class="Convergence.Stories.SO_Items"><chance>0.5</chance><thing>CVG_SpiritStone</thing><count>6~14</count></li><li Class="Convergence.Stories.SO_Thought"><chance>0.5</chance><thought>CVG_Thought_ProudOfMercy</thought><target>all</target></li><li Class="Convergence.Stories.SO_Thought"><chance>0.2</chance><thought>CVG_Thought_Ashamed</thought><target>all</target></li><li Class="Convergence.Stories.SO_Tale"><tale>CVG_Tale_DuelWanderer</tale></li><li Class="Convergence.Stories.SO_Favor" MayRequire="Ludeon.RimWorld.Royalty"><faction>sect:friendly</faction><amount>2</amount></li></outcomes>
       </li>
       <li>
         <key>watch</key>
@@ -977,7 +977,7 @@
     <options>
       <li>
         <key>claim</key>
-        <outcomes><li Class="Convergence.Stories.SO_Items" MayRequire="prospero1088.convergence.biotechwuxia"><thing>CVG_PuppetBlueprint</thing><count>1~2</count></li><li Class="Convergence.Stories.SO_Items" MayRequire="prospero1088.convergence.biotechwuxia"><thing>CVG_SpiritThread</thing><count>10~20</count></li><li Class="Convergence.Stories.SO_Thought"><chance>0.5</chance><thought>CVG_Thought_OmenGood</thought><target>all</target></li></outcomes>
+        <outcomes><li Class="Convergence.Stories.SO_Items"><chance>0.25</chance><thing>CVG_SealedRoot_Inferior</thing><count>1</count></li><li Class="Convergence.Stories.SO_Items" MayRequire="prospero1088.convergence.biotechwuxia"><thing>CVG_PuppetBlueprint</thing><count>1~2</count></li><li Class="Convergence.Stories.SO_Items" MayRequire="prospero1088.convergence.biotechwuxia"><thing>CVG_SpiritThread</thing><count>10~20</count></li><li Class="Convergence.Stories.SO_Thought"><chance>0.5</chance><thought>CVG_Thought_OmenGood</thought><target>all</target></li></outcomes>
       </li>
       <li>
         <key>seal</key>

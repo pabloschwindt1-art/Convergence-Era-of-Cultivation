@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_RootPurificationCeremony.description>Según la calidad del ritual, la raíz espiritual del discípulo puede subir un grado (nunca más allá de superior), o despertar si no tenía.</CVG_RootPurificationCeremony.description>
+  <CVG_RootPurificationCeremony.comps.0.label>fieles que prestan qi</CVG_RootPurificationCeremony.comps.0.label>
+  <CVG_RootPurificationCeremony.comps.1.label>empezó en un altar</CVG_RootPurificationCeremony.comps.1.label>
+  <CVG_RootPurificationCeremony.comps.1.expectedThingLabelTip>un altar</CVG_RootPurificationCeremony.comps.1.expectedThingLabelTip>
+  <CVG_RootPurificationCeremony.outcomeChances.0.label>Terrible</CVG_RootPurificationCeremony.outcomeChances.0.label>
+  <CVG_RootPurificationCeremony.outcomeChances.0.description>¡La {0} fue terrible! El qi de los fieles se desbocó y desgarró los meridianos del discípulo.</CVG_RootPurificationCeremony.outcomeChances.0.description>
+  <CVG_RootPurificationCeremony.outcomeChances.1.label>Débil</CVG_RootPurificationCeremony.outcomeChances.1.label>
+  <CVG_RootPurificationCeremony.outcomeChances.1.description>La {0} fue débil. El qi de los fieles apenas llegó a la raíz del discípulo.</CVG_RootPurificationCeremony.outcomeChances.1.description>
+  <CVG_RootPurificationCeremony.outcomeChances.2.label>Buena</CVG_RootPurificationCeremony.outcomeChances.2.label>
+  <CVG_RootPurificationCeremony.outcomeChances.2.description>La {0} fue buena. El qi de los fieles corrió por el discípulo como agua de manantial.</CVG_RootPurificationCeremony.outcomeChances.2.description>
+  <CVG_RootPurificationCeremony.outcomeChances.3.label>Espectacular</CVG_RootPurificationCeremony.outcomeChances.3.label>
+  <CVG_RootPurificationCeremony.outcomeChances.3.description>¡La {0} fue espectacular! Por un momento el discípulo brilló por dentro, y todos los presentes sintieron responder a la raíz.</CVG_RootPurificationCeremony.outcomeChances.3.description>
+</LanguageData>

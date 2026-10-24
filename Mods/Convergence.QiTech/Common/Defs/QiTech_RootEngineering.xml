@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Root engineering (docs/modulos/RAICES.md §7a): the engineers' road to the same surgeries the sects do on the Dao grafting
+    altar. The extract/implant recipes live in the Core; this table only marks itself as a valid bed (powered, researched).
+    The machine pays in celestial dissonance: a heavier "foreign root" and a permanent qi seam. Fusion runs in the qi pill
+    laboratory (no purification), and the artificial root gives a fixed common root to whoever was born without one.
+    Art by the user: QiSurgeryTable (3 views) and ArtificialRoot.
+  -->
+
+  <ResearchProjectDef>
+    <defName>CVG_Research_RootEngineering</defName>
+    <tab>CVG_SpiritualEngineering</tab>
+    <label>root engineering</label>
+    <description>The first time the engineers put a spirit root under the resonator, the instruments drew a shape no one had seen before; someone called it "an antenna planted in the soul", and the name stuck. Root engineering reads, cuts and sets those antennas. Unlocks the qi surgery table (extract and implant spirit roots), root fusion in the qi pill laboratory and the artificial root. The Heavenly Cauldron Pavilion calls it theft; Ascension Dynamics calls it a product line.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>CVG_Research_AdvancedSpiritInstrumentation</li>
+      <li>CVG_Research_QiBionics</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>4</researchViewX>
+    <researchViewY>1</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <!-- ================= Qi surgery table ================= -->
+  <ThingDef ParentName="BedWithQualityBase">
+    <defName>CVG_QT_QiSurgeryTable</defName>
+    <label>qi surgery table</label>
+    <description>A steel surgical table ringed with copper coils that read the patient's qi while the surgeon works. Linked to a spirit resonator it sees the meridians clearly enough to follow a spirit root to its tip. Surgeons on these tables watch a screen, not the patient; they say it is so they do not hear the root scream. Without power it is only a hard bed.</description>
+    <stuffCategories Inherit="False" />
+    <costStuffCount>0</costStuffCount>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiTech/QiSurgeryTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <castEdgeShadows>True</castEdgeShadows>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>5000</WorkToBuild>
+      <Mass>45</Mass>
+      <Flammability>0.4</Flammability>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
+      <Comfort>0.6</Comfort>
+      <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
+      <MedicalTendQualityOffset>0.12</MedicalTendQualityOffset>
+      <SurgerySuccessChanceFactor>1.25</SurgerySuccessChanceFactor>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>250</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>VitalsMonitor</li>
+          <li>CVG_SpiritResonator</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <size>(1,2)</size>
+    <costList>
+      <Steel>80</Steel>
+      <Plasteel>20</Plasteel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <CVG_PrimordialCrystal>2</CVG_PrimordialCrystal>
+      <CVG_SpiritStone>30</CVG_SpiritStone>
+    </costList>
+    <building>
+      <bed_showSleeperBody>True</bed_showSleeperBody>
+      <bed_healPerDay>10</bed_healPerDay>
+      <bed_defaultMedical>true</bed_defaultMedical>
+      <buildingSizeCategory>Small</buildingSizeCategory>
+    </building>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>42</pathCost>
+    <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <designationCategory>CVG_QiTech</designationCategory>
+    <researchPrerequisites><li>CVG_Research_RootEngineering</li></researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <techLevel>Spacer</techLevel>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RootSurgeryBed">
+        <research>CVG_Research_RootEngineering</research>
+        <needsPower>true</needsPower>
+        <extractionFactor>1.05</extractionFactor>
+        <bonusFacility>CVG_SpiritResonator</bonusFacility>
+        <facilityBonus>0.05</facilityBonus>
+        <foreignRootHediff>CVG_QT_ForeignRootMachine</foreignRootHediff>
+        <permanentHediff>CVG_QT_QiSeam</permanentHediff>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>CVG_QT_ForeignRootMachine</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>foreign root (machine-set)</label>
+    <description>A spirit root that grew in another body, set by a machine. The coils held it in place where a sect surgeon would have coaxed it; for thirty days the meridians fight it, and Heaven hears the hum. When it settles, there is a chance the body rejects it and the root weakens or dies.</description>
+    <defaultLabelColor>(0.5, 0.8, 0.9)</defaultLabelColor>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1800000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="Convergence.HediffCompProperties_RootRejection">
+        <rejectChance>0.1</rejectChance>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <CVG_CelestialDissonance>0.25</CVG_CelestialDissonance>
+        </statOffsets>
+        <statFactors>
+          <CVG_CultivationSpeed>0.8</CVG_CultivationSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>CVG_QT_QiSeam</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>qi seam</label>
+    <description>The scar a machine leaves where it stitched a spirit root into the dantian: a line of qi that never quite closes. It does not hurt. It only hums, faintly, whenever a storm is coming, and the Celestial Dao always knows where it is.</description>
+    <defaultLabelColor>(0.5, 0.8, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <statOffsets>
+          <CVG_CelestialDissonance>0.05</CVG_CelestialDissonance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ================= Root fusion in the qi pill laboratory (no purification) ================= -->
+  <RecipeDef Name="CVG_QT_FuseRootsBase" Abstract="True">
+    <jobString>Fusing spirit roots.</jobString>
+    <workAmount>5000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <skillRequirements><Intellectual>8</Intellectual></skillRequirements>
+    <researchPrerequisite>CVG_Research_RootEngineering</researchPrerequisite>
+    <recipeUsers><li>CVG_QT_PillLab</li></recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CVG_QT_FuseRootsBase">
+    <defName>CVG_QT_FuseRoots_Common</defName>
+    <label>synthesize a common root</label>
+    <description>Dissolve three sealed inferior roots in a resonance bath and let the field draw them into one common root. The machine fails less often than a bone furnace, but it does not understand the Dao: the elements are not purified. A failed synthesis loses two roots.</description>
+    <ingredients>
+      <li><filter><thingDefs><li>CVG_SealedRoot_Inferior</li></thingDefs></filter><count>3</count></li>
+      <li><filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter><count>20</count></li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_SealedRoot_Inferior</li><li>CVG_SpiritStone</li></thingDefs></fixedIngredientFilter>
+    <products><CVG_SealedRoot_Common>1</CVG_SealedRoot_Common></products>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RootFusion"><chance>0.85</chance><skill>Intellectual</skill><skillMin>8</skillMin></li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CVG_QT_FuseRootsBase">
+    <defName>CVG_QT_FuseRoots_Superior</defName>
+    <label>synthesize a superior root</label>
+    <description>Dissolve three sealed common roots into one superior root in a resonance bath. Reliable, unpurified, and in the eyes of every sect an abomination. A failed synthesis loses two roots.</description>
+    <ingredients>
+      <li><filter><thingDefs><li>CVG_SealedRoot_Common</li></thingDefs></filter><count>3</count></li>
+      <li><filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter><count>20</count></li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_SealedRoot_Common</li><li>CVG_SpiritStone</li></thingDefs></fixedIngredientFilter>
+    <products><CVG_SealedRoot_Superior>1</CVG_SealedRoot_Superior></products>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RootFusion"><chance>0.65</chance><skill>Intellectual</skill><skillMin>8</skillMin></li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef ParentName="CVG_QT_FuseRootsBase">
+    <defName>CVG_QT_FuseRoots_Heavenly</defName>
+    <label>synthesize a heavenly root</label>
+    <description>Dissolve three sealed superior roots into one heavenly root in a resonance bath. Ascension Dynamics has done it twice; it does not say what happened to the engineers. A failed synthesis loses two roots.</description>
+    <ingredients>
+      <li><filter><thingDefs><li>CVG_SealedRoot_Superior</li></thingDefs></filter><count>3</count></li>
+      <li><filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter><count>20</count></li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_SealedRoot_Superior</li><li>CVG_SpiritStone</li></thingDefs></fixedIngredientFilter>
+    <products><CVG_SealedRoot_Heavenly>1</CVG_SealedRoot_Heavenly></products>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RootFusion"><chance>0.40</chance><skill>Intellectual</skill><skillMin>8</skillMin></li>
+    </modExtensions>
+  </RecipeDef>
+
+  <!-- ================= Artificial root ================= -->
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>CVG_QT_ArtificialRoot</defName>
+    <hediffClass>Convergence.Hediff_SpiritRootImplant</hediffClass>
+    <label>artificial root</label>
+    <description>A manufactured spirit root: a filament of condensed qi in a steel and glass capsule, wired into the dantian. It works like a common root of one element and never grows better; and when the tribulation comes, the lightning knows exactly where the metal is.</description>
+    <descriptionHyperlinks><ThingDef>CVG_QT_ArtificialRoot</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_QT_ArtificialRoot</spawnThingOnRemoved>
+    <stages>
+      <li>
+        <statOffsets>
+          <CVG_CelestialDissonance>0.35</CVG_CelestialDissonance>
+        </statOffsets>
+      </li>
+    </stages>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_SpiritRoot">
+        <grade>CVG_RootGrade_Common</grade>
+      </li>
+    </modExtensions>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>CVG_QT_ArtificialRoot</defName>
+    <label>artificial root</label>
+    <description>Ascension Dynamics' flagship product, sold under the slogan "cultivation for everyone": a filament of condensed qi grown in a resonance bath and sealed in steel and glass, with a jade chip to keep it tuned. Implanted in someone born without a spirit root, it works like a common root of one element. It never grows better, and it weighs heavily on the tribulation: the sects call its bearers "lightning rods".</description>
+    <descriptionHyperlinks>
+      <RecipeDef>CVG_QT_InstallArtificialRoot</RecipeDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/QiTech/ArtificialRoot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(255,255,255)</color>
+    </graphicData>
+    <costList>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+      <CVG_PrimordialCrystal>3</CVG_PrimordialCrystal>
+      <CVG_SpiritJade>4</CVG_SpiritJade>
+    </costList>
+    <statBases>
+      <WorkToMake>30000</WorkToMake>
+      <MarketValue>2200</MarketValue>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_RootEngineering</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>CVG_QT_PillLab</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+        <Intellectual>8</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>CVG_QT_InstallArtificialRoot</defName>
+    <label>install artificial root</label>
+    <description>Wire an artificial root into the dantian of someone without a spirit root.</description>
+    <descriptionHyperlinks>
+      <ThingDef>CVG_QT_ArtificialRoot</ThingDef>
+      <HediffDef>CVG_QT_ArtificialRoot</HediffDef>
+    </descriptionHyperlinks>
+    <workerClass>Convergence.Recipe_InstallSpiritRootImplant</workerClass>
+    <jobString>Installing artificial root.</jobString>
+    <ingredients>
+      <li>
+        <filter><categories><li>Medicine</li></categories></filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_QT_ArtificialRoot</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories><li>Medicine</li></categories>
+      <thingDefs><li>CVG_QT_ArtificialRoot</li></thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>CVG_QT_ArtificialRoot</addsHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>CVG_QT_RemoveArtificialRoot</defName>
+    <label>remove artificial root</label>
+    <description>Remove the artificial root. The capsule comes out whole and can be implanted again.</description>
+    <descriptionHyperlinks>
+      <ThingDef>CVG_QT_ArtificialRoot</ThingDef>
+      <HediffDef>CVG_QT_ArtificialRoot</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Removing artificial root.</jobString>
+    <removesHediff>CVG_QT_ArtificialRoot</removesHediff>
+  </RecipeDef>
+</Defs>

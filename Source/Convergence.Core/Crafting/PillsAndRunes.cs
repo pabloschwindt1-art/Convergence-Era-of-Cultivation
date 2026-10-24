@@ -93,6 +93,64 @@ namespace Convergence
     }
 
     /// <summary>
+    /// Píldora de Lavado de Raíz (docs/modulos/RAICES.md §5): chance de subir la raíz un grado, sin pasar de <see cref="cap"/>.
+    /// La tolerancia (gravedad del hediff) resta a la chance; si falla, toxicidad y desviación de qi.
+    /// </summary>
+    public class IngestionOutcomeDoer_RefineRoot : IngestionOutcomeDoer
+    {
+        public List<RootGradeChance> chances = new List<RootGradeChance>();
+        public SpiritRootGradeDef cap;
+        public HediffDef toleranceHediff;
+        public float tolerancePerDose = 0.1f;
+        public HediffDef failHediff;
+        public float failSeverity = 0.35f;
+        public HediffDef deviationHediff;
+        public float deviationChance = 0.5f;
+
+        public class RootGradeChance
+        {
+            public SpiritRootGradeDef grade;
+            public float chance;
+        }
+
+        protected override void DoIngestionOutcomeSpecial(Pawn pawn, Thing ingested, int ingestedCount)
+        {
+            var root = CompCultivator.For(pawn)?.Root;
+            float tolerance = toleranceHediff != null ? pawn.health.hediffSet.GetFirstHediffOfDef(toleranceHediff)?.Severity ?? 0f : 0f;
+            if (toleranceHediff != null) HealthUtility.AdjustSeverity(pawn, toleranceHediff, tolerancePerDose);
+            string fail;
+            if (root == null) fail = "CVG_Pill_NoRoot";
+            else if (SpiritRootUtility.IsArtificial(pawn)) fail = "CVG_Pill_RootArtificial";
+            else if (cap != null && root.grade.order >= cap.order) fail = "CVG_Pill_RootAtCap";
+            else
+            {
+                var gradeBefore = root.grade;
+                float baseChance = chances.FirstOrDefault(c => c.grade == root.grade)?.chance ?? 0f;
+                float chance = Mathf.Clamp01(baseChance * PillQuality.FactorOf(ingested) - tolerance);
+                if (Rand.Chance(chance) && SpiritRootUtility.TryRaise(pawn, cap))
+                {
+                    if (pawn.Faction == Faction.OfPlayer)
+                        Messages.Message("CVG_Pill_RootRaised".Translate(pawn.Named("PAWN"), gradeBefore.label,
+                            CompCultivator.For(pawn).Root.grade.label), pawn, MessageTypeDefOf.PositiveEvent);
+                    return;
+                }
+                fail = "CVG_Pill_RootWashFailed";
+                if (deviationHediff != null && Rand.Chance(deviationChance)) pawn.health.AddHediff(deviationHediff);
+            }
+            if (failHediff != null) HealthUtility.AdjustSeverity(pawn, failHediff, failSeverity);
+            if (pawn.Faction == Faction.OfPlayer)
+                Messages.Message(fail.Translate(pawn.Named("PAWN")), pawn, MessageTypeDefOf.NegativeEvent);
+        }
+
+        public override IEnumerable<StatDrawEntry> SpecialDisplayStats(ThingDef parentDef)
+        {
+            foreach (var c in chances)
+                yield return new StatDrawEntry(StatCategoryDefOf.Drug, "CVG_Pill_RootWashChance".Translate(c.grade.label),
+                    c.chance.ToStringPercent(), "CVG_Pill_QualityScales".Translate(), 2000);
+        }
+    }
+
+    /// <summary>
     /// Grabar runas: la receta toma un arma de grado 0 y no la destruye, le suma un grado espiritual
     /// (<see cref="CompSpiritGrade.bonus"/>). Los demás ingredientes (piedras) se consumen normal.
     /// </summary>

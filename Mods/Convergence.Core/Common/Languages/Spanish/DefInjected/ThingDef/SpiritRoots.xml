@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_SealedRoot_Inferior.label>raíz inferior sellada</CVG_SealedRoot_Inferior.label>
+  <CVG_SealedRoot_Inferior.description>Una raíz espiritual arrancada de un cuerpo vivo y sellada en un frasco de jade gris verdoso, donde flota como un hilo turbio y apagado. En Jiuxiao una raíz inferior vale poco, y por eso es la que más se roba: los pobres venden la raíz de sus hijos al Culto de la Luna Sangrienta a cambio de una temporada de arroz. Se puede implantar en otro cuerpo en un altar de injerto del Dao o en una mesa de cirugía de qi, o fundir de a tres en una raíz mejor.</CVG_SealedRoot_Inferior.description>
+  <CVG_SealedRoot_Common.label>raíz común sellada</CVG_SealedRoot_Common.label>
+  <CVG_SealedRoot_Common.description>Una raíz espiritual común sellada en jade verde, que brilla suave como un brote a la luz de la mañana. La mayoría de los discípulos de secta tienen una raíz así; el Pabellón del Caldero Celestial las compra por docenas y nunca pregunta de quién eran. Se puede implantar en un altar de injerto del Dao o en una mesa de cirugía de qi, o fundir de a tres en una raíz superior.</CVG_SealedRoot_Common.description>
+  <CVG_SealedRoot_Superior.label>raíz superior sellada</CVG_SealedRoot_Superior.label>
+  <CVG_SealedRoot_Superior.description>Una raíz espiritual superior sellada en jade blanco azulado, con un hilo que arde claro como un cielo de invierno. Las sectas van a la guerra por raíces así, y se sabe de ancianos que adoptaron a un huérfano ajeno solo para abrirlo en un altar años después. Se puede implantar en un altar de injerto del Dao o en una mesa de cirugía de qi, o fundir de a tres en una raíz celestial.</CVG_SealedRoot_Superior.description>
+  <CVG_SealedRoot_Heavenly.label>raíz celestial sellada</CVG_SealedRoot_Heavenly.label>
+  <CVG_SealedRoot_Heavenly.description>Una raíz espiritual celestial sellada en jade blanco con vetas de oro, tan brillante que el frasco está tibio al tacto. El Cielo concede quizás una raíz así por generación; las leyendas de Jiuxiao dicen que la Calamidad de Hierro empezó cuando un imperio mortal aprendió a quitarlas por la fuerza. Se puede implantar en un altar de injerto del Dao o en una mesa de cirugía de qi.</CVG_SealedRoot_Heavenly.description>
+</LanguageData>

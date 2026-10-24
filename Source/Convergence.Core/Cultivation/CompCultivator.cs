@@ -54,6 +54,11 @@ namespace Convergence
 
         public bool BloodRootRefined { get => bloodRootRefined; set => bloodRootRefined = value; }
 
+        // Último ritual de purificación de raíz (uno por año por colono, docs/modulos/RAICES.md §6). Se guarda.
+        private int lastRootRitualTick = -9999999;
+
+        public int LastRootRitualTick { get => lastRootRitualTick; set => lastRootRitualTick = value; }
+
         /// <summary>Elementos de una raíz que viene de un rasgo (sin Biotech), p. ej. la que despierta la sangre ancestral.</summary>
         public void SetTraitRootElements(List<QiElementDef> elements)
         {
@@ -457,6 +462,19 @@ namespace Convergence
                 }
             }
 
+            // Raíz artificial (implante de Qi-Tech): un hediff con DefModExtension_SpiritRoot y su elemento.
+            if (pawn.health?.hediffSet != null)
+            {
+                foreach (var h in pawn.health.hediffSet.hediffs)
+                {
+                    var rootExt = h.def.GetModExtension<DefModExtension_SpiritRoot>();
+                    if (rootExt == null) continue;
+                    if (rootExt.grade != null && (grade == null || rootExt.grade.order > grade.order)) grade = rootExt.grade;
+                    var element = (h as Hediff_SpiritRootImplant)?.element ?? rootExt.element;
+                    if (element != null && !geneElements.Contains(element)) geneElements.Add(element);
+                }
+            }
+
             if (pawn.story?.traits != null)
             {
                 foreach (var trait in pawn.story.traits.allTraits)
@@ -493,6 +511,7 @@ namespace Convergence
             base.PostExposeData();
             Scribe_Collections.Look(ref traitRootElements, "traitRootElements", LookMode.Def);
             Scribe_Values.Look(ref bloodRootRefined, "bloodRootRefined");
+            Scribe_Values.Look(ref lastRootRitualTick, "lastRootRitualTick", -9999999);
             Scribe_Collections.Look(ref paths, "paths", LookMode.Deep);
             Scribe_Defs.Look(ref breakthroughPath, "breakthroughPath");
             Scribe_Deep.Look(ref techniques, "techniques");

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Root purification (docs/modulos/RAICES.md §6): an Ideology ritual on the pattern of the vanilla role change. A cultivator of
+    Foundation or higher officiates; the target may have its root raised one grade (never past superior) or, on a spectacular
+    outcome, awaken an inferior root. Once a year per colonist. Needs the precept in the ideoligion.
+  -->
+
+  <PreceptDef>
+    <defName>CVG_RootPurificationCeremony</defName>
+    <label>root purification</label>
+    <description>A rite of the Silent Lotus Temple, taught to anyone who will listen: a cultivator draws the qi of the gathered faithful through a disciple's meridians, scrubbing the root like a riverbed after a flood. It rarely works. Nobody leaves without having tried. A spectacular ceremony can raise a spirit root by one grade (never past superior) or awaken a root in someone born without one. Once a year per person.</description>
+    <issue>Ritual</issue>
+    <impact>Low</impact>
+    <iconPath>Things/Item/CVG/SealedRoot_Common</iconPath>
+    <preceptClass>Precept_Ritual</preceptClass>
+    <ritualPatternBase>CVG_RootPurificationCeremony</ritualPatternBase>
+    <allowDuplicates>false</allowDuplicates>
+    <countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+    <selectionWeight>0.5</selectionWeight>
+    <receivesExpectationsQualityOffset>true</receivesExpectationsQualityOffset>
+    <canGenerateAsSpecialPrecept>false</canGenerateAsSpecialPrecept>
+    <notifyPlayerOnOpportunity>false</notifyPlayerOnOpportunity>
+  </PreceptDef>
+
+  <RitualPatternDef>
+    <defName>CVG_RootPurificationCeremony</defName>
+    <alwaysStartAnytime>true</alwaysStartAnytime>
+    <ritualObligationTargetFilter>RitualSpotIdeogramOrAltar</ritualObligationTargetFilter>
+    <ritualTargetFilter>AltarIdeogramOrRitualSpot</ritualTargetFilter>
+    <ritualBehavior>CVG_RootPurificationCeremony</ritualBehavior>
+    <ritualOutcomeEffect>CVG_RootPurificationCeremony</ritualOutcomeEffect>
+  </RitualPatternDef>
+
+  <RitualBehaviorDef>
+    <defName>CVG_RootPurificationCeremony</defName>
+    <durationTicks>5000</durationTicks>
+    <spectatorsLabel>Faithful</spectatorsLabel>
+    <spectatorGerund>lend qi</spectatorGerund>
+    <roles>
+      <li Class="Convergence.RitualRole_RootPurificationOfficiant">
+        <label>officiant</label>
+        <missingDesc>a cultivator of Foundation or higher</missingDesc>
+        <id>officiant</id>
+        <maxCount>1</maxCount>
+        <required>True</required>
+        <countsAsParticipant>False</countsAsParticipant>
+        <allowChild>false</allowChild>
+        <mustBeAbleToReachTarget>True</mustBeAbleToReachTarget>
+      </li>
+      <li Class="Convergence.RitualRole_RootPurificationTarget">
+        <label>disciple</label>
+        <missingDesc>the person whose root will be purified</missingDesc>
+        <id>target</id>
+        <maxCount>1</maxCount>
+        <required>True</required>
+        <countsAsParticipant>False</countsAsParticipant>
+        <mustBeAbleToReachTarget>True</mustBeAbleToReachTarget>
+      </li>
+    </roles>
+    <stages>
+      <li>
+        <defaultDuty>Spectate</defaultDuty>
+        <endTriggers>
+          <li Class="StageEndTrigger_RolesArrived">
+            <roleIds>
+              <li>officiant</li>
+            </roleIds>
+          </li>
+        </endTriggers>
+        <roleBehaviors>
+          <li>
+            <roleId>officiant</roleId>
+            <dutyDef>ArriveToCell</dutyDef>
+            <customPositions>
+              <li Class="RitualPosition_BesideThing" />
+            </customPositions>
+          </li>
+          <li>
+            <roleId>target</roleId>
+            <dutyDef>Spectate</dutyDef>
+          </li>
+        </roleBehaviors>
+      </li>
+      <li>
+        <defaultDuty>Spectate</defaultDuty>
+        <spectatorsRequired>true</spectatorsRequired>
+        <endTriggers>
+          <li Class="StageEndTrigger_DurationPercentage">
+            <percentage>1</percentage>
+          </li>
+        </endTriggers>
+        <roleBehaviors>
+          <li>
+            <roleId>officiant</roleId>
+            <dutyDef>SpeakOnCell_Leader</dutyDef>
+            <speakerInteraction>Speech_Leader</speakerInteraction>
+            <customPositions>
+              <li Class="RitualPosition_BesideThing" />
+            </customPositions>
+          </li>
+          <li>
+            <roleId>target</roleId>
+            <dutyDef>Spectate</dutyDef>
+          </li>
+        </roleBehaviors>
+        <visualEffectDef>Speech</visualEffectDef>
+      </li>
+    </stages>
+  </RitualBehaviorDef>
+
+  <RitualOutcomeEffectDef>
+    <defName>CVG_RootPurificationCeremony</defName>
+    <description>Depending on ritual quality, the disciple's spirit root may be raised by one grade (never past superior), or awakened if there was none.</description>
+    <workerClass>Convergence.RitualOutcomeEffectWorker_RootPurification</workerClass>
+    <allowAttachableOutcome>false</allowAttachableOutcome>
+    <comps>
+      <li Class="RitualOutcomeComp_ParticipantCount">
+        <label>faithful lending qi</label>
+        <curve>
+          <points>
+            <li>(1,  0.0)</li>
+            <li>(5,  0.2)</li>
+            <li>(10, 0.3)</li>
+          </points>
+        </curve>
+      </li>
+      <li Class="RitualOutcomeComp_RitualTargetDefs">
+        <allowAltars>true</allowAltars>
+        <label>started at an altar</label>
+        <expectedThingLabelTip>an altar</expectedThingLabelTip>
+        <qualityOffset>0.2</qualityOffset>
+      </li>
+      <li Class="RitualOutcomeComp_RitualSeatPresent">
+        <qualityOffset>0.1</qualityOffset>
+      </li>
+    </comps>
+    <outcomeChances>
+      <li>
+        <label>Terrible</label>
+        <chance>0.1</chance>
+        <description>The {0} was terrible! The qi of the faithful turned wild and tore through the disciple's meridians.</description>
+        <positivityIndex>-2</positivityIndex>
+      </li>
+      <li>
+        <label>Weak</label>
+        <chance>0.4</chance>
+        <description>The {0} was weak. The qi of the faithful barely reached the disciple's root.</description>
+        <positivityIndex>-1</positivityIndex>
+      </li>
+      <li>
+        <label>Good</label>
+        <chance>0.35</chance>
+        <description>The {0} was good. The qi of the faithful flowed through the disciple like spring water.</description>
+        <positivityIndex>1</positivityIndex>
+      </li>
+      <li>
+        <label>Spectacular</label>
+        <chance>0.15</chance>
+        <description>The {0} was spectacular! For a moment the disciple glowed from within, and everyone present felt the root answer.</description>
+        <positivityIndex>2</positivityIndex>
+      </li>
+    </outcomeChances>
+  </RitualOutcomeEffectDef>
+</Defs>

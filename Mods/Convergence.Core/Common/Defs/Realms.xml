@@ -29,6 +29,7 @@
 
   <Convergence.CultivationRealmDef>
     <defName>CVG_Realm_Foundation</defName>
+    <rootExtractionDeathChance>0.25</rootExtractionDeathChance>
     <label>Foundation Establishment</label>
     <description>The refined qi condenses into a liquid foundation in the dantian. The body becomes sturdier, wounds close faster and the years weigh less.</description>
     <path>CVG_Path_Qi</path>
@@ -56,6 +57,7 @@
 
   <Convergence.CultivationRealmDef>
     <defName>CVG_Realm_GoldenCore</defName>
+    <rootExtractionDeathChance>0.5</rootExtractionDeathChance>
     <label>Golden Core</label>
     <description>The liquid foundation is compressed into a golden core. Heaven notices: the first heavenly tribulation must be endured. A Golden Core cultivator lives for centuries.</description>
     <path>CVG_Path_Qi</path>

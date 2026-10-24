@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_FuseRoots_Common.label>fundir tres raíces inferiores</CVG_FuseRoots_Common.label>
+  <CVG_FuseRoots_Common.description>Derretir tres raíces inferiores selladas en el horno de huesos hasta que sus hilos se trencen en una sola raíz común. El fuego quema el elemento más débil, así que el resultado es más puro que cualquiera de las tres. Los viejos refinadores dicen que el horno recuerda cada raíz que se comió. Falla menos con un cirujano hábil; una fusión fallida pierde dos raíces.</CVG_FuseRoots_Common.description>
+  <CVG_FuseRoots_Common.jobString>Fundiendo raíces espirituales.</CVG_FuseRoots_Common.jobString>
+  <CVG_FuseRoots_Superior.label>fundir tres raíces comunes</CVG_FuseRoots_Superior.label>
+  <CVG_FuseRoots_Superior.description>Derretir tres raíces comunes selladas en una raíz superior, más pura que las tres. Así convierte el Pabellón del Caldero Celestial una temporada de comercio de raíces de arroz en un solo tesoro. Falla menos con un cirujano hábil; una fusión fallida pierde dos raíces.</CVG_FuseRoots_Superior.description>
+  <CVG_FuseRoots_Superior.jobString>Fundiendo raíces espirituales.</CVG_FuseRoots_Superior.jobString>
+  <CVG_FuseRoots_Heavenly.label>fundir tres raíces superiores</CVG_FuseRoots_Heavenly.label>
+  <CVG_FuseRoots_Heavenly.description>Derretir tres raíces superiores selladas en una raíz celestial. Pocos refinadores lo intentaron; los que lo lograron fueron perseguidos por todas las sectas que se enteraron. Falla menos con un cirujano hábil; una fusión fallida pierde dos raíces.</CVG_FuseRoots_Heavenly.description>
+  <CVG_FuseRoots_Heavenly.jobString>Fundiendo raíces espirituales.</CVG_FuseRoots_Heavenly.jobString>
+</LanguageData>

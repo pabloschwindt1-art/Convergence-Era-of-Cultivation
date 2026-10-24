@@ -40,6 +40,7 @@ namespace Convergence
             Section("technique paths and combat sets", () => TestTechniquePaths(map));
             Section("thunder root", () => TestThunder(map));
             Section("spirit root changes (trait, gene, xenogerm)", () => TestRootChanges(map));
+            Section("roots that change (surgery, fusion, breakthrough, pill, artificial, ritual, organs)", () => TestRootWays(map));
             Section("daily consumables", () => TestDailyConsumables(map));
             Section("wuxia art and benches", () => TestWuxiaArt(map));
             Section("cultivation life (thoughts, records, tales, alerts, spots)", () => TestCultivationLife(map));
@@ -381,6 +382,158 @@ namespace Convergence
             if (trait != null) pawn.story.traits.RemoveTrait(trait);
             Check(comp.Root?.grade == Grade("CVG_RootGrade_Common"), "removing the trait leaves the gene: " + comp.Root?.grade?.defName);
             pawn.Destroy();
+        }
+
+        /// <summary>Raíces que cambian (docs/modulos/RAICES.md): utilidades, raíz sellada, cirugías, fusión, avance, píldora, implante y órganos.</summary>
+        private static void TestRootWays(Map map)
+        {
+            SpiritRootGradeDef Grade(string n) => DefDatabase<SpiritRootGradeDef>.GetNamed(n);
+            var fire = new List<QiElementDef> { DefDatabase<QiElementDef>.GetNamed("CVG_Element_Fire") };
+            var spawned = new List<Thing>();
+            try
+            {
+                // Utilidades
+                var a = Colonist(map, root: false); spawned.Add(a);
+                var ca = CompCultivator.For(a);
+                SpiritRootUtility.ImplantRoot(a, Grade("CVG_RootGrade_Common"), fire);
+                Check(ca.Root?.grade == Grade("CVG_RootGrade_Common") && ca.Root.elements.Contains(fire[0]), "implant a common fire root: " + ca.Root?.grade?.defName);
+                Check(a.genes == null || a.genes.GenesListForReading.Any(g => g.def.HasModExtension<DefModExtension_SpiritRoot>() && a.genes.IsXenogene(g)),
+                    "an implanted root goes in as xenogenes");
+                Check(SpiritRootUtility.TryRaise(a) && ca.Root.grade == Grade("CVG_RootGrade_Superior") && ca.Root.elements.Contains(fire[0]), "raise keeps the element: superior");
+                Check(!SpiritRootUtility.TryRaise(a, Grade("CVG_RootGrade_Superior")), "the cap stops it at superior");
+                Check(SpiritRootUtility.Lower(a) && ca.Root.grade == Grade("CVG_RootGrade_Common"), "lower: back to common");
+                var copy = SpiritRootUtility.RemoveRoot(a);
+                Check(copy?.grade == Grade("CVG_RootGrade_Common") && !ca.HasRoot, "remove returns the old root and leaves none");
+                Check(SpiritRootUtility.Awaken(a, Grade("CVG_RootGrade_Inferior")) && ca.Root?.grade == Grade("CVG_RootGrade_Inferior"), "awaken an inferior root");
+
+                // Raíz sellada
+                foreach (var g in SpiritRootUtility.Grades)
+                    Check(SealedRootUtility.DefFor(g) != null, "sealed root for " + g.defName);
+                var sealedRoot = SealedRootUtility.Make(Grade("CVG_RootGrade_Superior"), fire, "Test");
+                var sc = sealedRoot?.TryGetComp<CompSealedRoot>();
+                Check(sc != null && sc.elements.SequenceEqual(fire) && sc.donor == "Test" && !sealedRoot.CanStackWith(SealedRootUtility.Make(Grade("CVG_RootGrade_Superior"), fire, "Test")),
+                    "a sealed root keeps element and donor and does not stack");
+
+                // Avance de reino y Médula
+                var marrow = DefDatabase<CultivationRealmDef>.GetNamed("CVG_Realm_MarrowCleansing");
+                var b = Colonist(map, root: false); spawned.Add(b);
+                float keep = marrow.awakensRootChance; marrow.awakensRootChance = 1f;
+                string line = SpiritRootUtility.Notify_Ascended(b, marrow, 0.5f);
+                marrow.awakensRootChance = keep;
+                Check(CompCultivator.For(b).HasRoot && !line.NullOrEmpty(), "Marrow Cleansing awakens a root: " + line);
+                var common = Grade("CVG_RootGrade_Common");
+                float k1 = common.ascendRaiseChance, k2 = common.ascendRaiseChancePerfect;
+                common.ascendRaiseChance = common.ascendRaiseChancePerfect = 1f;
+                SpiritRootUtility.ImplantRoot(b, common, fire);
+                line = SpiritRootUtility.Notify_Ascended(b, DefDatabase<CultivationRealmDef>.GetNamed("CVG_Realm_Foundation"), 0.5f);
+                common.ascendRaiseChance = k1; common.ascendRaiseChancePerfect = k2;
+                Check(CompCultivator.For(b).Root?.grade == Grade("CVG_RootGrade_Superior") && !line.NullOrEmpty(), "a breakthrough can clear the root: " + line);
+                var superior = Grade("CVG_RootGrade_Superior");
+                Check(superior.ascendRaiseNeedsTribulation && SpiritRootUtility.Notify_Ascended(b, DefDatabase<CultivationRealmDef>.GetNamed("CVG_Realm_Foundation"), 1f) == null,
+                    "superior only rises with a tribulation");
+
+                // Cirugías (sin cama: la receta aparece deshabilitada; el efecto se prueba directo)
+                var extract = DefDatabase<RecipeDef>.GetNamed("CVG_ExtractSpiritRoot");
+                var implant = DefDatabase<RecipeDef>.GetNamed("CVG_ImplantSpiritRoot");
+                var doctor = Colonist(map, root: false); spawned.Add(doctor);
+                doctor.skills.GetSkill(SkillDefOf.Medicine).Level = 20;
+                var donor = Colonist(map, root: false); spawned.Add(donor);
+                SpiritRootUtility.ImplantRoot(donor, common, fire);
+                Check(extract.Worker.AvailableOnNow(donor) && (!extract.Worker.AvailableReport(donor).Accepted || RootSurgeryUtility.UsableBeds(map).Any()),
+                    "extraction is offered, and needs a root surgery bed");
+                int before = map.listerThings.AllThings.Count(t => t.TryGetComp<CompSealedRoot>() != null);
+                extract.Worker.ApplyOnPawn(donor, null, doctor, new List<Thing>(), null);
+                int after = map.listerThings.AllThings.Count(t => t.TryGetComp<CompSealedRoot>() != null);
+                Check(!CompCultivator.For(donor).HasRoot && donor.health.hediffSet.HasHediff(CVG_RootDefOf.CVG_RootTorn),
+                    "the donor loses the root and keeps the torn root wound (sealed roots on the map: " + before + " -> " + after + ")");
+                Check(donor.Dead || donor.needs.mood.thoughts.memories.GetFirstMemoryOfDef(CVG_RootDefOf.CVG_Thought_RootTorn) != null, "the donor remembers it");
+                foreach (var t in map.listerThings.AllThings.Where(t => t.TryGetComp<CompSealedRoot>() != null).ToList()) spawned.Add(t);
+                var patient = Colonist(map, root: false); spawned.Add(patient);
+                var given = SealedRootUtility.Make(superior, fire, "Test");
+                implant.Worker.ApplyOnPawn(patient, null, doctor, new List<Thing> { given }, null);
+                var cp = CompCultivator.For(patient);
+                Check(!cp.HasRoot || (cp.Root.grade == superior && patient.health.hediffSet.HasHediff(CVG_RootDefOf.CVG_ForeignRoot)),
+                    "implant: superior root and foreign root wound (" + (cp.Root?.grade?.defName ?? "surgery failed") + ")");
+
+                // Fusión (receta de Grafts si está cargado)
+                var fuse = DefDatabase<RecipeDef>.GetNamedSilentFail("CVG_FuseRoots_Common");
+                if (fuse != null)
+                {
+                    int ok = 0, back = 0;
+                    for (int i = 0; i < 40; i++)
+                    {
+                        var ing = new List<Thing>();
+                        for (int j = 0; j < 3; j++) ing.Add(SealedRootUtility.Make(Grade("CVG_RootGrade_Inferior"), fire, "D" + j));
+                        foreach (var p in GenRecipe.MakeRecipeProducts(fuse, doctor, ing, null, null))
+                        {
+                            var c = p.TryGetComp<CompSealedRoot>();
+                            if (c?.Grade == common && c.elements.SequenceEqual(fire) && !c.donor.NullOrEmpty()) ok++;
+                            else if (c?.Grade == Grade("CVG_RootGrade_Inferior")) back++;
+                        }
+                    }
+                    Check(ok > 10 && back > 0 && ok + back == 40, "fusion 3 to 1: " + ok + " common, " + back + " failed (one root back)");
+                }
+
+                // Píldora (Alchemy)
+                var pill = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_RootWashPill");
+                if (pill != null)
+                {
+                    var doer = pill.ingestible.outcomeDoers.OfType<IngestionOutcomeDoer_RefineRoot>().First();
+                    var saved = doer.chances.Select(c => c.chance).ToList();
+                    foreach (var c in doer.chances) c.chance = 5f;
+                    var p = Colonist(map, root: false); spawned.Add(p);
+                    SpiritRootUtility.ImplantRoot(p, common, fire);
+                    doer.DoIngestionOutcome(p, ThingMaker.MakeThing(pill), 1);
+                    Check(CompCultivator.For(p).Root?.grade == superior && p.health.hediffSet.HasHediff(doer.toleranceHediff), "root-washing pill: common to superior, with tolerance");
+                    doer.DoIngestionOutcome(p, ThingMaker.MakeThing(pill), 1);
+                    Check(CompCultivator.For(p).Root?.grade == superior, "the pill never passes superior");
+                    for (int i = 0; i < saved.Count; i++) doer.chances[i].chance = saved[i];
+                }
+
+                // Raíz artificial (Qi-Tech)
+                var art = DefDatabase<HediffDef>.GetNamedSilentFail("CVG_QT_ArtificialRoot");
+                if (art != null)
+                {
+                    var p = Colonist(map, root: false); spawned.Add(p);
+                    var h = p.health.AddHediff(art, p.RaceProps.body.corePart);
+                    var cpa = CompCultivator.For(p);
+                    Check(cpa.Root?.grade == common && cpa.Root.elements.Count == 1 && SpiritRootUtility.IsArtificial(p) && !SpiritRootUtility.TryRaise(p),
+                        "artificial root: common, one element, never rises");
+                    Check(!extract.Worker.AvailableOnNow(p) && !RootPurification.CanTarget(p, out _), "an artificial root cannot be extracted or purified");
+                    p.health.RemoveHediff(h);
+                    Check(!cpa.HasRoot, "removing it leaves no root");
+                    var table = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_QT_QiSurgeryTable");
+                    Check(table?.GetModExtension<DefModExtension_RootSurgeryBed>()?.needsPower == true, "the qi surgery table is a powered root surgery bed");
+                }
+
+                // Ritual: objetivo y espera de un año
+                var r = Colonist(map, root: false); spawned.Add(r);
+                Check(RootPurification.CanTarget(r, out _), "a rootless colonist can be purified");
+                CompCultivator.For(r).LastRootRitualTick = Find.TickManager.TicksGame;
+                Check(!RootPurification.CanTarget(r, out string why) && !why.NullOrEmpty(), "once a year: " + why);
+                Check(DefDatabase<PreceptDef>.GetNamedSilentFail("CVG_RootPurificationCeremony") != null, "the ritual precept exists");
+
+                // Órganos templados
+                var cult = Colonist(map, root: true); spawned.Add(cult);
+                CompCultivator.For(cult).SyncRealm();
+                var heartPart = cult.RaceProps.body.AllParts.FirstOrDefault(pt => pt.def == BodyPartDefOf.Heart);
+                var heart = MedicalRecipesUtility.SpawnNaturalPartIfClean(cult, heartPart, cult.Position, map);
+                if (heart != null) spawned.Add(heart);
+                var tc = heart?.TryGetComp<CompTemperedOrgan>();
+                Check(tc != null && tc.tier > 0 && heart.MarketValue > heart.def.BaseMarketValue && heart.LabelNoCount.Contains("("),
+                    "a cultivator's heart comes out tempered: " + heart?.LabelNoCount + ", tier " + tc?.tier + ", $" + heart?.MarketValue);
+                if (tc != null)
+                {
+                    var rec = Colonist(map, root: false); spawned.Add(rec);
+                    Patch_InstallNaturalPart_Tempered.Postfix(rec, rec.RaceProps.body.AllParts.First(pt => pt.def == BodyPartDefOf.Heart), new List<Thing> { heart });
+                    var th = rec.health.hediffSet.hediffs.FirstOrDefault(hd => hd.def.defName == "CVG_TemperedHeart");
+                    Check(th != null && Math.Abs(th.Severity - tc.tier) < 0.01f, "installing it gives a tempered heart (severity " + th?.Severity + ")");
+                }
+            }
+            finally
+            {
+                foreach (var t in spawned) if (!t.Destroyed) t.Destroy();
+            }
         }
 
         private static void TestConvergence(Map map)
@@ -1094,6 +1247,9 @@ namespace Convergence
 
             var pawn = Colonist(map, root: true);
             var comp = CompCultivator.For(pawn);
+            // El colono al azar puede nacer con trueno (raíz o linaje Qilin): se parte siempre de una raíz de fuego.
+            if (comp.Root.elements.Contains(thunder))
+                SpiritRootUtility.ImplantRoot(pawn, comp.Root.grade, new List<QiElementDef> { DefDatabase<QiElementDef>.GetNamed("CVG_Element_Fire") });
             var target = DefDatabase<CultivationRealmDef>.GetNamed("CVG_Realm_Foundation");
             MapComponent_Tribulation.Strength(pawn, target, out _, out float before);
             var purity = new BloodlinePurity { rootElement = thunder, rootElementChance = 1f };

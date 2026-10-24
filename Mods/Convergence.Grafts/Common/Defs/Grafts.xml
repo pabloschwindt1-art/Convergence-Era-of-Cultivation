@@ -822,6 +822,12 @@
     <researchPrerequisites><li>CVG_Research_DaoGrafting</li></researchPrerequisites>
     <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <techLevel>Medieval</techLevel>
+    <!-- Root surgeries (Core recipes) can be done on this bed once root surgery is researched: docs/modulos/RAICES.md §3. -->
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RootSurgeryBed">
+        <research>CVG_Research_RootSurgery</research>
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <ResearchProjectDef ParentName="CVG_DaoResearchBase">
@@ -849,4 +855,122 @@
       <li Class="Convergence.DefModExtension_DaoResearch"><knowledgeCost>9</knowledgeCost></li>
     </modExtensions>
   </ResearchProjectDef>
+  <!-- ================= Roots that change (docs/modulos/RAICES.md §3 and §7) ================= -->
+  <ResearchProjectDef ParentName="CVG_DaoResearchBase">
+    <defName>CVG_Research_RootSurgery</defName>
+    <label>root surgery</label>
+    <description>The forbidden half of grafting: following a spirit root down the meridians, cutting it free and setting it into another body. The righteous sects outlawed it after the Iron Calamity; the Blood Moon Cult never stopped. Unlocks extracting and implanting spirit roots on the Dao grafting altar, and fusing three sealed roots into a better one in the bone refining furnace.</description>
+    <baseCost>3000</baseCost>
+    <prerequisites><li>CVG_Research_BeastGrafting</li></prerequisites>
+    <researchViewX>4</researchViewX>
+    <researchViewY>2</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_DaoResearch"><knowledgeCost>8</knowledgeCost></li>
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <RecipeDef>
+    <defName>CVG_FuseRoots_Common</defName>
+    <label>fuse three inferior roots</label>
+    <description>Melt three sealed inferior roots in the bone furnace until their threads braid into one common root. The fire burns away the weakest element, so the result is purer than any of the three. Old refiners say the furnace remembers every root it has eaten. It fails less often with a skilled surgeon; a failed fusion loses two roots.</description>
+    <jobString>Fusing spirit roots.</jobString>
+    <workAmount>6000</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <workSkill>Medicine</workSkill>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <skillRequirements><Medicine>10</Medicine></skillRequirements>
+    <researchPrerequisite>CVG_Research_RootSurgery</researchPrerequisite>
+    <recipeUsers><li>CVG_BoneRefiningFurnace</li></recipeUsers>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_SealedRoot_Inferior</li></thingDefs></filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritJade</li></thingDefs></filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_SealedRoot_Inferior</li><li>CVG_SpiritJade</li></thingDefs></fixedIngredientFilter>
+    <products><CVG_SealedRoot_Common>1</CVG_SealedRoot_Common></products>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RootFusion">
+        <chance>0.75</chance>
+        <skill>Medicine</skill>
+        <skillMin>10</skillMin>
+        <purifies>true</purifies>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_FuseRoots_Superior</defName>
+    <label>fuse three common roots</label>
+    <description>Melt three sealed common roots into one superior root, purer than the three. It is how the Heavenly Cauldron Pavilion turns a season of rice-root trade into a single treasure. It fails less often with a skilled surgeon; a failed fusion loses two roots.</description>
+    <jobString>Fusing spirit roots.</jobString>
+    <workAmount>6000</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <workSkill>Medicine</workSkill>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <skillRequirements><Medicine>10</Medicine></skillRequirements>
+    <researchPrerequisite>CVG_Research_RootSurgery</researchPrerequisite>
+    <recipeUsers><li>CVG_BoneRefiningFurnace</li></recipeUsers>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_SealedRoot_Common</li></thingDefs></filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritJade</li></thingDefs></filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_SealedRoot_Common</li><li>CVG_SpiritJade</li></thingDefs></fixedIngredientFilter>
+    <products><CVG_SealedRoot_Superior>1</CVG_SealedRoot_Superior></products>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RootFusion">
+        <chance>0.55</chance>
+        <skill>Medicine</skill>
+        <skillMin>10</skillMin>
+        <purifies>true</purifies>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_FuseRoots_Heavenly</defName>
+    <label>fuse three superior roots</label>
+    <description>Melt three sealed superior roots into one heavenly root. Few refiners have ever tried; the ones who succeeded were hunted by every sect that heard of it. It fails less often with a skilled surgeon; a failed fusion loses two roots.</description>
+    <jobString>Fusing spirit roots.</jobString>
+    <workAmount>6000</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <workSkill>Medicine</workSkill>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <skillRequirements><Medicine>10</Medicine></skillRequirements>
+    <researchPrerequisite>CVG_Research_RootSurgery</researchPrerequisite>
+    <recipeUsers><li>CVG_BoneRefiningFurnace</li></recipeUsers>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>CVG_SealedRoot_Superior</li></thingDefs></filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritJade</li></thingDefs></filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>CVG_SealedRoot_Superior</li><li>CVG_SpiritJade</li></thingDefs></fixedIngredientFilter>
+    <products><CVG_SealedRoot_Heavenly>1</CVG_SealedRoot_Heavenly></products>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_RootFusion">
+        <chance>0.30</chance>
+        <skill>Medicine</skill>
+        <skillMin>10</skillMin>
+        <purifies>true</purifies>
+      </li>
+    </modExtensions>
+  </RecipeDef>
 </Defs>

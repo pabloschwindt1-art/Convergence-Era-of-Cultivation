@@ -117,7 +117,7 @@ namespace Convergence.QiTech
         {
             var tab = DefDatabase<ResearchTabDef>.GetNamedSilentFail("CVG_SpiritualEngineering");
             var inTab = DefDatabase<ResearchProjectDef>.AllDefs.Where(p => p.tab == tab).ToList();
-            Check(tab != null && inTab.Count == 16, "spiritual engineering tab with its 16 projects (" + inTab.Count + ")");
+            Check(tab != null && inTab.Count == 17, "spiritual engineering tab with its 17 projects (" + inTab.Count + ")");
             Check(inTab.All(p => p.HasModExtension<DefModExtension_RequiresConvergence>()), "every project of the tab needs the Convergence");
             var fund = DefDatabase<ResearchProjectDef>.GetNamed("CVG_Research_QiFundamentals");
             var reso = DefDatabase<ResearchProjectDef>.GetNamed("CVG_Research_SpiritResonance");

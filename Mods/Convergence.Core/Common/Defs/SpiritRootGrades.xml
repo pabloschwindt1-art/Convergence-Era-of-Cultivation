@@ -9,6 +9,9 @@
     <cultivationSpeedFactor>0.6</cultivationSpeedFactor>
     <traitDegree>1</traitDegree>
     <breakthroughFactor>0.8</breakthroughFactor>
+    <extractionFactor>1.0</extractionFactor>
+    <ascendRaiseChance>0.20</ascendRaiseChance>
+    <ascendRaiseChancePerfect>0.35</ascendRaiseChancePerfect>
   </Convergence.SpiritRootGradeDef>
   <Convergence.SpiritRootGradeDef>
     <defName>CVG_RootGrade_Common</defName>
@@ -19,6 +22,9 @@
     <cultivationSpeedFactor>1.0</cultivationSpeedFactor>
     <traitDegree>2</traitDegree>
     <breakthroughFactor>1.0</breakthroughFactor>
+    <extractionFactor>0.9</extractionFactor>
+    <ascendRaiseChance>0.10</ascendRaiseChance>
+    <ascendRaiseChancePerfect>0.20</ascendRaiseChancePerfect>
   </Convergence.SpiritRootGradeDef>
   <Convergence.SpiritRootGradeDef>
     <defName>CVG_RootGrade_Superior</defName>
@@ -29,6 +35,10 @@
     <cultivationSpeedFactor>1.5</cultivationSpeedFactor>
     <traitDegree>3</traitDegree>
     <breakthroughFactor>1.15</breakthroughFactor>
+    <extractionFactor>0.75</extractionFactor>
+    <ascendRaiseChance>0.04</ascendRaiseChance>
+    <ascendRaiseChancePerfect>0.08</ascendRaiseChancePerfect>
+    <ascendRaiseNeedsTribulation>true</ascendRaiseNeedsTribulation>
   </Convergence.SpiritRootGradeDef>
   <Convergence.SpiritRootGradeDef>
     <defName>CVG_RootGrade_Heavenly</defName>
@@ -39,5 +49,6 @@
     <cultivationSpeedFactor>2.2</cultivationSpeedFactor>
     <traitDegree>4</traitDegree>
     <breakthroughFactor>1.3</breakthroughFactor>
+    <extractionFactor>0.6</extractionFactor>
   </Convergence.SpiritRootGradeDef>
 </Defs>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_RootWashTolerance.label>tolerancia al lavado de raíz</CVG_RootWashTolerance.label>
+  <CVG_RootWashTolerance.description>Los meridianos recuerdan la última píldora de lavado de raíz y se preparan contra la siguiente. Cada píldora baja la chance de la próxima; la tolerancia se va en unos dos meses.</CVG_RootWashTolerance.description>
+</LanguageData>

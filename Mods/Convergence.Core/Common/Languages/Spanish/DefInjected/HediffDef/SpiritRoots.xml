@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_RootTorn.label>raíz arrancada</CVG_RootTorn.label>
+  <CVG_RootTorn.description>Donde crecía una raíz espiritual ahora hay una herida que nunca cierra. El qi se escapa por ella como el agua por un jade rajado, y el cuerpo duele donde no se ve nada. Los viejos cultivadores llaman "los huecos" a quienes sobreviven: todavía pueden templar el cuerpo, pero el camino del qi se les cerró para siempre.</CVG_RootTorn.description>
+  <CVG_ForeignRoot.label>raíz ajena</CVG_ForeignRoot.label>
+  <CVG_ForeignRoot.description>Una raíz espiritual que creció en otro cuerpo. Durante treinta días los meridianos la pelean como a una astilla, y el Cielo nota la costura. Cuando se asienta, hay una chance de que el cuerpo la rechace y la raíz se debilite o muera.</CVG_ForeignRoot.description>
+  <CVG_TemperedHeart.label>corazón templado</CVG_TemperedHeart.label>
+  <CVG_TemperedHeart.description>El corazón de un cultivador, templado por años de qi. Sigue latiendo al ritmo de su primer dueño, un poco más fuerte y más lento que un corazón mortal; algunos dicen que sueñan los recuerdos del muerto. Bombea mejor la sangre y recupera el qi más rápido; el Cielo nota el qi ajeno.</CVG_TemperedHeart.description>
+  <CVG_TemperedHeart.stages.0.label>leve</CVG_TemperedHeart.stages.0.label>
+  <CVG_TemperedHeart.stages.1.label>profundo</CVG_TemperedHeart.stages.1.label>
+  <CVG_TemperedHeart.stages.2.label>dorado</CVG_TemperedHeart.stages.2.label>
+  <CVG_TemperedLung.label>pulmón templado</CVG_TemperedLung.label>
+  <CVG_TemperedLung.description>Un pulmón que respiró qi durante años. Los cultivadores del cuerpo dicen que un pulmón templado aguanta una sola bocanada durante toda una tormenta de arena. Respira mejor y resiste el aire viciado; el Cielo nota el qi ajeno.</CVG_TemperedLung.description>
+  <CVG_TemperedLung.stages.0.label>leve</CVG_TemperedLung.stages.0.label>
+  <CVG_TemperedLung.stages.1.label>profundo</CVG_TemperedLung.stages.1.label>
+  <CVG_TemperedLung.stages.2.label>dorado</CVG_TemperedLung.stages.2.label>
+  <CVG_TemperedKidney.label>riñón templado</CVG_TemperedKidney.label>
+  <CVG_TemperedKidney.description>En la medicina antigua los riñones guardan la raíz de la esencia de la vida (精). El riñón de un cultivador conserva algo de ella: la sangre corre más limpia y el veneno de demasiadas píldoras se va antes. El Cielo nota el qi ajeno.</CVG_TemperedKidney.description>
+  <CVG_TemperedKidney.stages.0.label>leve</CVG_TemperedKidney.stages.0.label>
+  <CVG_TemperedKidney.stages.1.label>profundo</CVG_TemperedKidney.stages.1.label>
+  <CVG_TemperedKidney.stages.2.label>dorado</CVG_TemperedKidney.stages.2.label>
+  <CVG_TemperedLiver.label>hígado templado</CVG_TemperedLiver.label>
+  <CVG_TemperedLiver.description>El hígado guarda la sangre y calma el qi de madera, dicen los médicos de Jiuxiao. El hígado de un cultivador conserva esa calma: filtra la sangre y ayuda al cuerpo a vencer las enfermedades. El Cielo nota el qi ajeno.</CVG_TemperedLiver.description>
+  <CVG_TemperedLiver.stages.0.label>leve</CVG_TemperedLiver.stages.0.label>
+  <CVG_TemperedLiver.stages.1.label>profundo</CVG_TemperedLiver.stages.1.label>
+  <CVG_TemperedLiver.stages.2.label>dorado</CVG_TemperedLiver.stages.2.label>
+</LanguageData>

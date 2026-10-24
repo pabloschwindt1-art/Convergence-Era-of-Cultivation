@@ -38,6 +38,13 @@ namespace Convergence
         public int traitDegree;
         /// <summary>Multiplicador de la probabilidad de avance de reino.</summary>
         public float breakthroughFactor = 1f;
+        /// <summary>Chance de subir un grado al avanzar de reino mayor del qi (con un avance mediocre y con uno perfecto).</summary>
+        public float ascendRaiseChance;
+        public float ascendRaiseChancePerfect;
+        /// <summary>Esa subida solo ocurre si el reino al que se avanza trae tribulación.</summary>
+        public bool ascendRaiseNeedsTribulation;
+        /// <summary>Multiplicador del éxito al extirpar una raíz de este grado.</summary>
+        public float extractionFactor = 1f;
     }
 
     /// <summary>
@@ -72,6 +79,11 @@ namespace Convergence
     {
         public CultivationPathDef path;
         public int order;
+        /// <summary>Chance de que avanzar a este reino despierte una raíz en quien no tiene (Limpieza de Médula).</summary>
+        public float awakensRootChance;
+        public SpiritRootGradeDef awakensRootGrade;
+        /// <summary>Chance de morir si falla la extirpación de su raíz (los reinos altos se resisten).</summary>
+        public float rootExtractionDeathChance;
         public HediffDef hediff;
         public int stages = 4;
         /// <summary>Progreso necesario para llenar cada etapa.</summary>

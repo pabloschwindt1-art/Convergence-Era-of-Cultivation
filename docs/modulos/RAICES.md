@@ -33,8 +33,8 @@ Grados: inferior (×0,6) → común (×1) → superior (×1,5) → celestial (×
 | Objeto **raíz sellada**: **un ThingDef por grado** (`CVG_SealedRoot_Inferior/Common/Superior/Heavenly`) con `CompSealedRoot` (elementos y nombre del donante) | **Core** | Es un bien comerciable y lo usan Grafts, Factions y Stories. Un def por grado deja la fusión como receta XML pura y hace que el precio, el ícono y los filtros de almacén salgan solos |
 | Mejora en el **avance de reino** | **Core** | `BreakthroughUtility.Ascend` |
 | **Ritual** de purificación de raíz | **Core** (carpeta Ideology; el Core ya exige las cinco DLC) | Es parte del cultivo, no de un módulo |
-| Cirugías de **extirpar** y **trasplantar** en el altar | **Grafts** | Ya tiene el altar del Dao y el patrón de instalar y quitar injertos |
-| **Fusión** de raíces | **Grafts** | El horno de refinado de huesos ya "refina partes de bestias en injertos" |
+| Cirugías de **extirpar** y **trasplantar** (`Recipe_ExtractSpiritRoot`, `Recipe_ImplantSpiritRoot`) | **Core** (cambio al implementar, 2026-10-24) | Las usan el altar (Grafts) y la mesa de qi (Qi-Tech); si vivieran en Grafts, Qi-Tech dependería de Grafts. Cada cama se marca con `DefModExtension_RootSurgeryBed` (investigación, energía, bonos y hediffs del trasplante) |
+| **Fusión** de raíces | Recetas en **Grafts** (horno de huesos) y **Qi-Tech** (laboratorio); `DefModExtension_RootFusion` y el parche de `GenRecipe` en el **Core** | Cada módulo trae sus recetas en XML |
 | **Píldora** de lavado de raíz | **Alchemy** | Ahí están todas las píldoras y la toxicidad |
 | `IngestionOutcomeDoer_RefineRoot` (efecto genérico de "subir raíz") | **Core** | Para que cualquier módulo lo use solo con XML |
 
@@ -294,7 +294,19 @@ Abiertas (va mi propuesta si no se dice otra cosa):
 
 El resto (cirugías, hediffs, fusión, avance, ritual) no lleva arte nuevo.
 
-## 11. Orden de implementación (rearmado el 2026-10-24)
+## 11. Notas de la implementación (2026-10-24)
+
+- Ingrediente de las cirugías: 2 medicinas + 2 de jade espiritual en las dos camas (una receta no puede pedir cosas distintas
+  según la cama).
+- La investigación de Grafts es "Cirugía de raíces" (`CVG_Research_RootSurgery`, árbol del Dao, posición 4,2); la habilita en el
+  altar. En la mesa de qi la habilita "Ingeniería de raíces".
+- Órganos templados: corazón, pulmón, riñón e hígado (los ojos vanilla no se pueden extraer). Nivel = reino de qi × 2 o reino
+  del cuerpo + 1 (máx. 6); etapas leve (1-2), profundo (3-4) y dorado (5-6). El rechazo por reino muy alto del donante quedó
+  afuera de esta tanda.
+- Ritual: oficiante en Fundación o más; el objetivo puede no tener raíz. Patrón del cambio de rol vanilla (discurso del
+  oficiante, fieles alrededor). Recompensas de Stories en 6 eventos (los deudores del Caldero quedan para otra tanda).
+
+## 12. Orden de implementación (rearmado el 2026-10-24)
 
 1. **Core, base:** `SpiritRootUtility` (subir, bajar, quitar, dar), `Sync` que también lee hediffs con `DefModExtension_SpiritRoot`,
    4 ThingDefs de raíz sellada con `CompSealedRoot` y su arte. La sangre ancestral pasa a usar la utilidad.

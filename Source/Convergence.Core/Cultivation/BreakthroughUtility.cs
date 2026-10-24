@@ -225,6 +225,8 @@ namespace Convergence
             ThrowAscendEffect(pawn);
             SectEvents.Record(SectEvents.Ascended, pawn);
             CultivationLife.Notify_Ascended(pawn);
+            // El avance puede aclarar la raíz (o despertar una en el camino del cuerpo): docs/modulos/RAICES.md §4.
+            string rootLine = SpiritRootUtility.Notify_Ascended(pawn, target, quality);
 
             if (pawn.Faction == Faction.OfPlayer)
             {
@@ -232,6 +234,7 @@ namespace Convergence
                     Hediff_CultivationRealm.FoundationQualityLabel(quality), quality.ToStringPercent());
                 string gains = RealmBonusUtility.CompareLines(pawn, before, healthBefore);
                 if (!gains.NullOrEmpty()) text += "\n\n" + "CVG_Bonus_LetterHeader".Translate() + "\n" + gains;
+                if (!rootLine.NullOrEmpty()) text += "\n\n" + rootLine;
                 SoundCues.OnCamera("CVG_Cue_BreakthroughSuccess");
                 Find.LetterStack.ReceiveLetter("CVG_Breakthrough_SuccessLabel".Translate(pawn.LabelShortCap), text,
                     LetterDefOf.PositiveEvent, pawn);

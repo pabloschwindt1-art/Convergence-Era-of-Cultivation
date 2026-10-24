@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_QT_FuseRoots_Common.label>sintetizar una raíz común</CVG_QT_FuseRoots_Common.label>
+  <CVG_QT_FuseRoots_Common.description>Disolver tres raíces inferiores selladas en un baño de resonancia y dejar que el campo las junte en una raíz común. La máquina falla menos que un horno de huesos, pero no entiende el Dao: los elementos no se purifican. Una síntesis fallida pierde dos raíces.</CVG_QT_FuseRoots_Common.description>
+  <CVG_QT_FuseRoots_Common.jobString>Sintetizando raíces espirituales.</CVG_QT_FuseRoots_Common.jobString>
+  <CVG_QT_FuseRoots_Superior.label>sintetizar una raíz superior</CVG_QT_FuseRoots_Superior.label>
+  <CVG_QT_FuseRoots_Superior.description>Disolver tres raíces comunes selladas en una raíz superior en un baño de resonancia. Confiable, sin purificar, y a los ojos de todas las sectas una abominación. Una síntesis fallida pierde dos raíces.</CVG_QT_FuseRoots_Superior.description>
+  <CVG_QT_FuseRoots_Superior.jobString>Sintetizando raíces espirituales.</CVG_QT_FuseRoots_Superior.jobString>
+  <CVG_QT_FuseRoots_Heavenly.label>sintetizar una raíz celestial</CVG_QT_FuseRoots_Heavenly.label>
+  <CVG_QT_FuseRoots_Heavenly.description>Disolver tres raíces superiores selladas en una raíz celestial en un baño de resonancia. Ascension Dynamics lo logró dos veces; no dice qué pasó con los ingenieros. Una síntesis fallida pierde dos raíces.</CVG_QT_FuseRoots_Heavenly.description>
+  <CVG_QT_FuseRoots_Heavenly.jobString>Sintetizando raíces espirituales.</CVG_QT_FuseRoots_Heavenly.jobString>
+  <CVG_QT_InstallArtificialRoot.label>instalar raíz artificial</CVG_QT_InstallArtificialRoot.label>
+  <CVG_QT_InstallArtificialRoot.description>Cablear una raíz artificial al dantian de alguien sin raíz espiritual.</CVG_QT_InstallArtificialRoot.description>
+  <CVG_QT_InstallArtificialRoot.jobString>Instalando raíz artificial.</CVG_QT_InstallArtificialRoot.jobString>
+  <CVG_QT_RemoveArtificialRoot.label>quitar raíz artificial</CVG_QT_RemoveArtificialRoot.label>
+  <CVG_QT_RemoveArtificialRoot.description>Quitar la raíz artificial. La cápsula sale entera y se puede volver a implantar.</CVG_QT_RemoveArtificialRoot.description>
+  <CVG_QT_RemoveArtificialRoot.jobString>Quitando raíz artificial.</CVG_QT_RemoveArtificialRoot.jobString>
+</LanguageData>

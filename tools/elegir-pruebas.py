@@ -31,6 +31,7 @@ REGLAS = [
     (r"/Textures/", ["SOLO_ARTE"], "texturas: sin autotest; si hace falta verlas, captura en 1.6 (-cvgbenchshot=CVG_X)"),
     (r"/About/", [], "About.xml: tools/check-workshop.py, sin juego"),
     # Código y defs por módulo
+    (r"^Source/Convergence\.DevTools/CoreSelfTest", ["-cvgselftest"], "el propio Core self-test"),
     (r"^Source/Convergence\.Core/QiNetwork/|^Mods/Convergence\.QiTech/.*Network", ["-cvgqinettest"], "red de qi"),
     (r"^Source/Convergence\.Core/Space/|^Mods/Convergence\.Space/", ["-cvgislandtest"], "isla voladora"),
     (r"^Source/Convergence\.Core/Biotech/BandTotem", ["-cvgbandtotemtest"], "tótem de hilos"),

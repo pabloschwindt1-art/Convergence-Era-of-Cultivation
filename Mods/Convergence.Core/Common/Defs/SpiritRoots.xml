@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Roots that change (docs/modulos/RAICES.md): sealed roots, the surgeries that tear a root out and set it into another body,
+    the wounds they leave and tempered organs. The surgeries live in the Core: the Dao grafting altar (Grafts) and the qi surgery
+    table (Qi-Tech) only mark themselves as valid beds (DefModExtension_RootSurgeryBed), so no module depends on another.
+  -->
+
+  <!-- ================= Sealed roots: one def per grade (a fusion is a plain XML recipe) ================= -->
+  <ThingDef Name="CVG_SealedRootBase" ParentName="ResourceBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <stackLimit>1</stackLimit>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>0.4</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>CVG_SpiritBeastParts</li>
+    </thingCategories>
+    <tradeability>All</tradeability>
+    <!-- Only the Heavenly Cauldron Pavilion deals in sealed roots (Convergence.Factions). -->
+    <tradeTags>
+      <li>CVG_SealedRoot</li>
+    </tradeTags>
+    <descriptionHyperlinks>
+      <RecipeDef>CVG_ImplantSpiritRoot</RecipeDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_SealedRootBase">
+    <defName>CVG_SealedRoot_Inferior</defName>
+    <label>sealed inferior root</label>
+    <description>A spirit root torn out of a living body and sealed in a vial of grey-green jade, where it floats like a dim, cloudy thread. In Jiuxiao an inferior root is worth little, and so it is the one most often stolen: the poor sell their children's roots to the Blood Moon Cult for a season of rice. It can be implanted into another body on a Dao grafting altar or a qi surgery table, or fused three to one into a better root.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/SealedRoot_Inferior</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>600</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="Convergence.CompProperties_SealedRoot">
+        <grade>CVG_RootGrade_Inferior</grade>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_SealedRootBase">
+    <defName>CVG_SealedRoot_Common</defName>
+    <label>sealed common root</label>
+    <description>A common spirit root sealed in green jade, glowing softly like a seedling in morning light. Most sect disciples carry a root like this one; the Heavenly Cauldron Pavilion buys them by the dozen and never asks whose they were. It can be implanted on a Dao grafting altar or a qi surgery table, or fused three to one into a superior root.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/SealedRoot_Common</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="Convergence.CompProperties_SealedRoot">
+        <grade>CVG_RootGrade_Common</grade>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_SealedRootBase">
+    <defName>CVG_SealedRoot_Superior</defName>
+    <label>sealed superior root</label>
+    <description>A superior spirit root sealed in clear blue-white jade, its thread burning bright as a winter sky. Sects go to war over roots like this, and elders are known to adopt a stranger's orphan only to open the child on an altar years later. It can be implanted on a Dao grafting altar or a qi surgery table, or fused three to one into a heavenly root.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/SealedRoot_Superior</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>4000</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="Convergence.CompProperties_SealedRoot">
+        <grade>CVG_RootGrade_Superior</grade>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_SealedRootBase">
+    <defName>CVG_SealedRoot_Heavenly</defName>
+    <label>sealed heavenly root</label>
+    <description>A heavenly spirit root sealed in white jade veined with gold, so bright that the vial is warm to the touch. Heaven grants perhaps one such root in a generation; the legends of Jiuxiao say the Iron Calamity began when a mortal empire learned to take them by force. It can be implanted on a Dao grafting altar or a qi surgery table.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/SealedRoot_Heavenly</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>12000</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="Convergence.CompProperties_SealedRoot">
+        <grade>CVG_RootGrade_Heavenly</grade>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ================= Surgeries (any humanlike; they need a root surgery bed on the map) ================= -->
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>CVG_ExtractSpiritRoot</defName>
+    <label>extract spirit root</label>
+    <description>Tear the spirit root out of the patient and seal it in jade. The surgeon follows the root down the meridians and cuts it free before it can wither. It succeeds less often with better roots; a failed extraction loses the root, and a cultivator of Foundation or higher may not survive it. The donor is left without a root, maimed in body and qi, and will never forgive the surgeon. Needs a Dao grafting altar or a powered qi surgery table.</description>
+    <workerClass>Convergence.Recipe_ExtractSpiritRoot</workerClass>
+    <jobString>Extracting the spirit root of TargetA.</jobString>
+    <workAmount>4000</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+    <isViolation>true</isViolation>
+    <uiIconThing>CVG_SealedRoot_Common</uiIconThing>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SpiritJade</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>CVG_SpiritJade</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+    <descriptionHyperlinks>
+      <ThingDef>CVG_SealedRoot_Common</ThingDef>
+      <HediffDef>CVG_RootTorn</HediffDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>CVG_ImplantSpiritRoot</defName>
+    <label>implant spirit root</label>
+    <description>Set a sealed spirit root into the patient's dantian. It replaces any root the patient had, which is lost. For thirty days the body fights the foreign root; it may reject it, lowering it by one grade or losing it. Needs a Dao grafting altar or a powered qi surgery table.</description>
+    <workerClass>Convergence.Recipe_ImplantSpiritRoot</workerClass>
+    <jobString>Implanting a spirit root into TargetA.</jobString>
+    <workAmount>4000</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <targetsBodyPart>false</targetsBodyPart>
+    <uiIconThing>CVG_SealedRoot_Superior</uiIconThing>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_SealedRoot_Inferior</li>
+            <li>CVG_SealedRoot_Common</li>
+            <li>CVG_SealedRoot_Superior</li>
+            <li>CVG_SealedRoot_Heavenly</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>CVG_SealedRoot_Inferior</li>
+        <li>CVG_SealedRoot_Common</li>
+        <li>CVG_SealedRoot_Superior</li>
+        <li>CVG_SealedRoot_Heavenly</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+    <descriptionHyperlinks>
+      <HediffDef>CVG_ForeignRoot</HediffDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+  <!-- ================= Wounds of the surgeries ================= -->
+  <HediffDef>
+    <defName>CVG_RootTorn</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>torn root</label>
+    <description>Where a spirit root grew there is now a wound that never closes. Qi seeps out through it like water through cracked jade, and the body aches where nothing can be seen. Old cultivators call those who survive it "the hollow": they can still temper the body, but the road of qi is closed to them forever.</description>
+    <defaultLabelColor>(0.75, 0.45, 0.55)</defaultLabelColor>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <painOffset>0.08</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+        <statFactors>
+          <CVG_QiRegen>0.5</CVG_QiRegen>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>CVG_ForeignRoot</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>foreign root</label>
+    <description>A spirit root that grew in another body. For thirty days the meridians fight it like a splinter; Heaven notices the seam. When it settles, there is a chance the body rejects it and the root weakens or dies.</description>
+    <defaultLabelColor>(0.6, 0.8, 0.7)</defaultLabelColor>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>1800000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+      <li Class="Convergence.HediffCompProperties_RootRejection">
+        <rejectChance>0.1</rejectChance>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <CVG_CelestialDissonance>0.1</CVG_CelestialDissonance>
+        </statOffsets>
+        <statFactors>
+          <CVG_CultivationSpeed>0.8</CVG_CultivationSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ================= Thoughts (the vanilla organ-harvest events also fire: Ideology judges it by itself) ================= -->
+  <ThoughtDef>
+    <defName>CVG_Thought_RootTorn</defName>
+    <durationDays>60</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>my spirit root was torn out</label>
+        <description>They opened me and took the root I was born with. I can feel the place where it was. I will never walk the road of qi again.</description>
+        <baseMoodEffect>-30</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_RootTornBy</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>300</durationDays>
+    <stackLimit>10</stackLimit>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>tore out my spirit root</label>
+        <baseOpinionOffset>-100</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- ================= Tempered organs (vanilla organs get CompTemperedOrgan in Patches/TemperedOrgans.xml) ================= -->
+  <HediffDef Name="CVG_TemperedOrganBase" Abstract="True">
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.55, 0.85, 0.75)</defaultLabelColor>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>6</maxSeverity>
+  </HediffDef>
+
+  <HediffDef ParentName="CVG_TemperedOrganBase">
+    <defName>CVG_TemperedHeart</defName>
+    <label>tempered heart</label>
+    <description>The heart of a cultivator, tempered by years of qi. It still beats to its first owner's rhythm, a little stronger and slower than a mortal heart; some say they dream the memories of the dead. Pumps blood better and recovers qi faster; Heaven notices the stranger's qi.</description>
+    <stages>
+      <li>
+        <label>low</label>
+        <capMods><li><capacity>BloodPumping</capacity><offset>0.05</offset></li></capMods>
+        <statOffsets><CVG_QiRegen>0.2</CVG_QiRegen><CVG_CelestialDissonance>0.05</CVG_CelestialDissonance></statOffsets>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <label>deep</label>
+        <capMods><li><capacity>BloodPumping</capacity><offset>0.10</offset></li></capMods>
+        <statOffsets><CVG_QiRegen>0.4</CVG_QiRegen><CVG_CelestialDissonance>0.05</CVG_CelestialDissonance></statOffsets>
+      </li>
+      <li>
+        <minSeverity>5</minSeverity>
+        <label>golden</label>
+        <capMods><li><capacity>BloodPumping</capacity><offset>0.15</offset></li></capMods>
+        <statOffsets><CVG_QiRegen>0.6</CVG_QiRegen><CVG_CelestialDissonance>0.05</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="CVG_TemperedOrganBase">
+    <defName>CVG_TemperedLung</defName>
+    <label>tempered lung</label>
+    <description>A lung that breathed qi for years. Body cultivators say a tempered lung can hold a single breath through a sandstorm. Breathes better and shrugs off foul air; Heaven notices the stranger's qi.</description>
+    <stages>
+      <li>
+        <label>low</label>
+        <capMods><li><capacity>Breathing</capacity><offset>0.05</offset></li></capMods>
+        <statOffsets><ToxicEnvironmentResistance>0.05</ToxicEnvironmentResistance><CVG_CelestialDissonance>0.05</CVG_CelestialDissonance></statOffsets>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <label>deep</label>
+        <capMods><li><capacity>Breathing</capacity><offset>0.10</offset></li></capMods>
+        <statOffsets><ToxicEnvironmentResistance>0.10</ToxicEnvironmentResistance><CVG_CelestialDissonance>0.05</CVG_CelestialDissonance></statOffsets>
+      </li>
+      <li>
+        <minSeverity>5</minSeverity>
+        <label>golden</label>
+        <capMods><li><capacity>Breathing</capacity><offset>0.15</offset></li></capMods>
+        <statOffsets><ToxicEnvironmentResistance>0.15</ToxicEnvironmentResistance><CVG_CelestialDissonance>0.05</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="CVG_TemperedOrganBase">
+    <defName>CVG_TemperedKidney</defName>
+    <label>tempered kidney</label>
+    <description>In the old medicine the kidneys hold the root of life's essence (精). A cultivator's kidney keeps some of it: blood runs cleaner, and the poison of too many pills fades sooner. Heaven notices the stranger's qi.</description>
+    <stages>
+      <li>
+        <label>low</label>
+        <capMods><li><capacity>BloodFiltration</capacity><offset>0.05</offset></li></capMods>
+        <statOffsets><ToxicResistance>0.05</ToxicResistance><CVG_CelestialDissonance>0.05</CVG_CelestialDissonance></statOffsets>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <label>deep</label>
+        <capMods><li><capacity>BloodFiltration</capacity><offset>0.10</offset></li></capMods>
+        <statOffsets><ToxicResistance>0.10</ToxicResistance><CVG_CelestialDissonance>0.05</CVG_CelestialDissonance></statOffsets>
+      </li>
+      <li>
+        <minSeverity>5</minSeverity>
+        <label>golden</label>
+        <capMods><li><capacity>BloodFiltration</capacity><offset>0.15</offset></li></capMods>
+        <statOffsets><ToxicResistance>0.15</ToxicResistance><CVG_CelestialDissonance>0.05</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="CVG_TemperedOrganBase">
+    <defName>CVG_TemperedLiver</defName>
+    <label>tempered liver</label>
+    <description>The liver stores blood and calms the wood qi, say the physicians of Jiuxiao. A cultivator's liver keeps that calm: it filters the blood and helps the body throw off disease. Heaven notices the stranger's qi.</description>
+    <stages>
+      <li>
+        <label>low</label>
+        <capMods><li><capacity>BloodFiltration</capacity><offset>0.05</offset></li></capMods>
+        <statOffsets><ImmunityGainSpeed>0.05</ImmunityGainSpeed><CVG_CelestialDissonance>0.05</CVG_CelestialDissonance></statOffsets>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <label>deep</label>
+        <capMods><li><capacity>BloodFiltration</capacity><offset>0.10</offset></li></capMods>
+        <statOffsets><ImmunityGainSpeed>0.10</ImmunityGainSpeed><CVG_CelestialDissonance>0.05</CVG_CelestialDissonance></statOffsets>
+      </li>
+      <li>
+        <minSeverity>5</minSeverity>
+        <label>golden</label>
+        <capMods><li><capacity>BloodFiltration</capacity><offset>0.15</offset></li></capMods>
+        <statOffsets><ImmunityGainSpeed>0.15</ImmunityGainSpeed><CVG_CelestialDissonance>0.05</CVG_CelestialDissonance></statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

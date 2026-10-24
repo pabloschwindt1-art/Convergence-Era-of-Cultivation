@@ -260,6 +260,11 @@
       <li Class="StockGenerator_SingleDef"><thingDef>MedicineIndustrial</thingDef><countRange>10~30</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>ComponentIndustrial</thingDef><countRange>20~60</countRange></li>
       <li Class="StockGenerator_Tag"><tradeTag>ExoticMisc</tradeTag><thingDefCountRange>1~3</thingDefCountRange><countRange>1~1</countRange></li>
+      <!-- Sealed spirit roots (docs/modulos/RAICES.md): the Pavilion buys them all and sells the low ones; a superior one is rare. -->
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SealedRoot_Inferior</thingDef><countRange>0~2</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SealedRoot_Common</thingDef><countRange>-1~1</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SealedRoot_Superior</thingDef><countRange>-4~1</countRange></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>CVG_SealedRoot</tag></li>
       <li Class="StockGenerator_BuyTradeTag"><tag>ExoticMisc</tag></li>
       <li Class="StockGenerator_BuyTradeTag"><tag>Artifact</tag></li>
       <li Class="StockGenerator_BuyTradeTag"><tag>WeaponMelee</tag></li>

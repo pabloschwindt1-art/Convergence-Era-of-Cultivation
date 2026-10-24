@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_ExtractSpiritRoot.label>extirpar raíz espiritual</CVG_ExtractSpiritRoot.label>
+  <CVG_ExtractSpiritRoot.description>Arrancarle la raíz espiritual al paciente y sellarla en jade. El cirujano sigue la raíz por los meridianos y la corta antes de que se marchite. Sale bien menos veces cuanto mejor es la raíz; si falla, la raíz se pierde, y un cultivador de Fundación o más puede no sobrevivir. El donante queda sin raíz, mutilado en cuerpo y en qi, y nunca va a perdonar al cirujano. Necesita un altar de injerto del Dao o una mesa de cirugía de qi con energía.</CVG_ExtractSpiritRoot.description>
+  <CVG_ExtractSpiritRoot.jobString>Extirpando la raíz espiritual de TargetA.</CVG_ExtractSpiritRoot.jobString>
+  <CVG_ImplantSpiritRoot.label>implantar raíz espiritual</CVG_ImplantSpiritRoot.label>
+  <CVG_ImplantSpiritRoot.description>Asentar una raíz espiritual sellada en el dantian del paciente. Reemplaza la raíz que tuviera, que se pierde. Durante treinta días el cuerpo pelea contra la raíz ajena y puede rechazarla: baja un grado o se pierde. Necesita un altar de injerto del Dao o una mesa de cirugía de qi con energía.</CVG_ImplantSpiritRoot.description>
+  <CVG_ImplantSpiritRoot.jobString>Implantando una raíz espiritual en TargetA.</CVG_ImplantSpiritRoot.jobString>
+</LanguageData>

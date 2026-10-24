@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Tempered organs (docs/modulos/RAICES.md §7c): the vanilla natural organs remember the cultivator they came from. -->
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="Heart"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Heart"]</xpath>
+          <value><comps /></value>
+        </nomatch>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Heart"]/comps</xpath>
+        <value><li Class="Convergence.CompProperties_TemperedOrgan"><hediff>CVG_TemperedHeart</hediff></li></value>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="Lung"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Lung"]</xpath>
+          <value><comps /></value>
+        </nomatch>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Lung"]/comps</xpath>
+        <value><li Class="Convergence.CompProperties_TemperedOrgan"><hediff>CVG_TemperedLung</hediff></li></value>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="Kidney"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Kidney"]</xpath>
+          <value><comps /></value>
+        </nomatch>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Kidney"]/comps</xpath>
+        <value><li Class="Convergence.CompProperties_TemperedOrgan"><hediff>CVG_TemperedKidney</hediff></li></value>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="Liver"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Liver"]</xpath>
+          <value><comps /></value>
+        </nomatch>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Liver"]/comps</xpath>
+        <value><li Class="Convergence.CompProperties_TemperedOrgan"><hediff>CVG_TemperedLiver</hediff></li></value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/StatDef[defName="MarketValue"]/parts</xpath>
+        <value><li Class="Convergence.StatPart_TemperedOrgan" /></value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>
