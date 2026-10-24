@@ -236,7 +236,7 @@
     <stockGenerators>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>42~125</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>150~400</countRange></li>
-      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritJade</thingDef><countRange>5~25</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritJade</thingDef><countRange>20~60</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_FoundationPill</thingDef><countRange>1~4</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_JadeSlip</thingDef><countRange>1~3</countRange></li>
       <li Class="StockGenerator_SingleDef" MayRequire="prospero1088.convergence.alchemy"><thingDef>CVG_HealingPill</thingDef><countRange>2~8</countRange></li>

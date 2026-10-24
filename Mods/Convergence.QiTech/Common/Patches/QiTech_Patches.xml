@@ -7,4 +7,36 @@
       <li>CVG_SpiritResonator</li>
     </value>
   </Operation>
+
+  <!-- The mech tuning station is a facility of the mech rechargers (they have no AffectedByFacilities in vanilla). -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="BasicRecharger" or defName="StandardRecharger"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="BasicRecharger" or defName="StandardRecharger"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+      <value>
+        <li>CVG_QT_MechTuningStation</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="BasicRecharger" or defName="StandardRecharger"]/comps</xpath>
+      <value>
+        <li Class="CompProperties_AffectedByFacilities">
+          <linkableFacilities>
+            <li>CVG_QT_MechTuningStation</li>
+          </linkableFacilities>
+        </li>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <!-- The vanilla rechargers' placing shows the station links. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="BasicRecharger" or defName="StandardRecharger"]/placeWorkers</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="BasicRecharger" or defName="StandardRecharger"]/placeWorkers</xpath>
+      <value>
+        <li>PlaceWorker_ShowFacilitiesConnections</li>
+      </value>
+    </match>
+  </Operation>
 </Patch>

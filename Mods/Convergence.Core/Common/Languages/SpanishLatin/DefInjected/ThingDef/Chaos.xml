@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_ChaosCore.label>núcleo de caos</CVG_ChaosCore.label>
+  <CVG_ChaosCore.description>Un nudo de caos primordial que se endurece donde muere una entidad del vacío: piedra negra veteada de luz roja que nunca termina de quedarse en una forma. Las sectas de Jiuxiao llaman al vacío Hundun, el emperador sin rostro del mundo de antes del Dao, y dicen que cada núcleo es un pedazo de su cuerpo. Es el corazón de los talismanes del caos y de las píldoras prohibidas de la Luna de Sangre.</CVG_ChaosCore.description>
+  <CVG_ChaosTalisman_Ruin.label>talismán de la ruina</CVG_ChaosTalisman_Ruin.label>
+  <CVG_ChaosTalisman_Ruin.description>Una tira de papel de bioferrita envuelta alrededor de un núcleo de caos, escrita con el sello que le dice al caos adónde ir. Al romperlo el núcleo estalla: cada hostil a 6 casillas recibe 35 de daño de vacío puro. El Culto de la Luna de Sangre jura que inventó el sello; la Espada Sin Forma jura que se lo volvió a robar.</CVG_ChaosTalisman_Ruin.description>
+  <CVG_ChaosTalisman_Ruin.comps.CompUsable.useLabel>Usar {0_label}</CVG_ChaosTalisman_Ruin.comps.CompUsable.useLabel>
+  <CVG_ChaosTalisman_Dread.label>talismán del pavor</CVG_ChaosTalisman_Dread.label>
+  <CVG_ChaosTalisman_Dread.description>Un talismán negro escrito con un ojo que no termina de ser un ojo. Al romperlo, por un momento todos los que están cerca ven lo que ve el vacío: las personas hostiles a 8 casillas huyen aterradas, y las bestias y entidades se quedan paralizadas unos segundos. La tinta es núcleo de caos disuelto en bioferrita; quienes lo escriben no duermen bien.</CVG_ChaosTalisman_Dread.description>
+  <CVG_ChaosTalisman_Dread.comps.CompUsable.useLabel>Usar {0_label}</CVG_ChaosTalisman_Dread.comps.CompUsable.useLabel>
+  <CVG_ChaosTalisman_Mending.label>talismán del remiendo</CVG_ChaosTalisman_Mending.label>
+  <CVG_ChaosTalisman_Mending.description>Un talismán rojo que huele a hierro y a tierra mojada. Al romperlo, el caos de adentro cierra las heridas de cada aliado a 5 casillas (hasta 40 puntos cada uno), como la carne se cierra sobre una astilla: rápido y sin preguntar. Los curados oyen susurros durante días. Los sanadores de las Nueve Templanzas se niegan a tocarlo; sus pacientes no siempre están de acuerdo.</CVG_ChaosTalisman_Mending.description>
+  <CVG_ChaosTalisman_Mending.comps.CompUsable.useLabel>Usar {0_label}</CVG_ChaosTalisman_Mending.comps.CompUsable.useLabel>
+</LanguageData>

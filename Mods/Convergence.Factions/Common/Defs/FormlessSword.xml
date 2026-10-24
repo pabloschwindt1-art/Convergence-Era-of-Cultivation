@@ -254,7 +254,7 @@
         </qualities>
       </li>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>20~80</countRange></li>
-      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritJade</thingDef><countRange>0~8</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritJade</thingDef><countRange>10~30</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_JadeSlip</thingDef><countRange>0~2</countRange></li>
       <li Class="StockGenerator_SingleDef" MayRequire="prospero1088.convergence.resources"><thingDef>CVG_SpiritSteel</thingDef><countRange>0~40</countRange></li>
       <li Class="StockGenerator_SingleDef" MayRequire="prospero1088.convergence.alchemy"><thingDef>CVG_SpiritHerb</thingDef><countRange>0~10</countRange></li>

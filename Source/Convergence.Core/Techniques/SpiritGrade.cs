@@ -79,7 +79,8 @@ namespace Convergence
             foreach (var def in DefDatabase<ThingDef>.AllDefsListForReading)
             {
                 ThingDef gun = def.building?.turretGunDef ?? (def.IsWeapon ? def : null);
-                int grade = gun?.GetCompProperties<CompProperties_SpiritGrade>()?.grade ?? 0;
+                int grade = Mathf.Max(gun?.GetCompProperties<CompProperties_SpiritGrade>()?.grade ?? 0,
+                    def.building != null ? def.GetCompProperties<CompProperties_SpiritGrade>()?.grade ?? 0 : 0);
                 if (grade <= 0 || def.description == null) continue;
                 def.description += "\n\n" + Line(grade, realms);
             }
@@ -92,6 +93,17 @@ namespace Convergence
             string above = string.Join(", ", Enumerable.Range(1, 3).Select(gap => SpiritGradeUtility.SuppressionFactor(grade + gap, grade).ToStringPercent()));
             return "CVG_SpiritGrade_Desc".Translate(grade, top.label, above);
         }
+    }
+
+    /// <summary>En un HediffDef: la severidad es el grado espiritual de los ataques del pawn (núcleo de qi de un meca).</summary>
+    public class DefModExtension_GradeHediff : DefModExtension
+    {
+    }
+
+    /// <summary>En un DamageDef: el daño tiene grado espiritual propio (proyectil de mortero de qi de Qi-Tech).</summary>
+    public class DefModExtension_QiDamage : DefModExtension
+    {
+        public int grade = 1;
     }
 
     /// <summary>Curva de la supresión de reino (va en el StatDef <c>CVG_SpiritGrade</c>).</summary>
@@ -185,20 +197,45 @@ namespace Convergence
         /// <summary>Grado espiritual del ataque, o -1 si no se suprime (sin instigador).</summary>
         public static int AttackGrade(DamageInfo dinfo)
         {
+            // Daño de qi (proyectil de mortero de qi…): el DamageDef trae su propio grado.
+            int damageGrade = dinfo.Def?.GetModExtension<DefModExtension_QiDamage>()?.grade ?? -1;
+            int grade = AttackGradeOfSource(dinfo);
+            return damageGrade > grade ? damageGrade : grade;
+        }
+
+        private static int AttackGradeOfSource(DamageInfo dinfo)
+        {
             var instigator = dinfo.Instigator;
             if (instigator == null) return -1;
             var weapon = dinfo.Weapon;
             if (instigator is Pawn pawn)
             {
                 // Marionetas de guerra: pelean con la fuerza del reino que les presta el titiritero (con el techo de su escalón).
-                int puppet = PuppetTierUtility.PowerRealm(pawn);
+                int puppet = Mathf.Max(PuppetTierUtility.PowerRealm(pawn), HediffGrade(pawn));
                 // Técnicas (sin equipo), puños y armas naturales: el reino del atacante.
                 if (weapon == null || weapon == pawn.def) return Mathf.Max(puppet, RealmLevel(pawn));
                 var primary = pawn.equipment?.Primary;
                 return Mathf.Max(puppet, primary != null && primary.def == weapon ? GradeOf(primary) : GradeOf(weapon));
             }
-            // Torretas y edificios: el arma montada o el propio edificio.
-            return weapon != null ? GradeOf(weapon) : GradeOf(instigator.def);
+            // Torretas y edificios: el mayor entre el arma montada y el propio edificio (las torretas de qi llevan el grado en
+            // el edificio: Qi-Tech, QiTurretGenerator).
+            int building = GradeOf(instigator);
+            return weapon != null ? Mathf.Max(GradeOf(weapon), building) : building;
+        }
+
+        /// <summary>
+        /// Grado que da una condición con <see cref="DefModExtension_GradeHediff"/> (núcleo de qi de un meca, Qi-Tech): su
+        /// severidad redondeada. Todo lo que ataca ese pawn tiene al menos ese grado.
+        /// </summary>
+        public static int HediffGrade(Pawn pawn)
+        {
+            var hediffs = pawn.health?.hediffSet?.hediffs;
+            if (hediffs == null) return 0;
+            int grade = 0;
+            for (int i = 0; i < hediffs.Count; i++)
+                if (hediffs[i].def.HasModExtension<DefModExtension_GradeHediff>())
+                    grade = Mathf.Max(grade, Mathf.RoundToInt(hediffs[i].Severity));
+            return grade;
         }
 
         /// <summary>Multiplicador del daño para un objetivo de reino <paramref name="targetLevel"/>.</summary>

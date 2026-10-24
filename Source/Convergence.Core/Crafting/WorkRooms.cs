@@ -275,7 +275,31 @@ namespace Convergence
                 __result = QualityCategory.Awful;
             }
             else __result = (QualityCategory)(band - 1);
+            // Píldoras a máquina (laboratorio de píldoras de qi): calidad tope, salvo que fabrique un alquimista.
+            var cap = WorkRoomUtility.BenchOf(pawn)?.def.GetModExtension<DefModExtension_MachineAlchemy>();
+            if (cap != null && __result > cap.maxQuality && !MachineAlchemy.IsAlchemist(pawn)) __result = cap.maxQuality;
             return false;
+        }
+    }
+
+    /// <summary>
+    /// Mesa que hace píldoras a máquina (laboratorio de píldoras de qi, Qi-Tech): la misma tabla de alquimia con su chance de
+    /// fallar, pero la calidad no pasa de <see cref="maxQuality"/> salvo que trabaje un alquimista (<see cref="MachineAlchemy.IsAlchemist"/>).
+    /// </summary>
+    public class DefModExtension_MachineAlchemy : DefModExtension
+    {
+        public QualityCategory maxQuality = QualityCategory.Excellent;
+    }
+
+    public static class MachineAlchemy
+    {
+        /// <summary>Alquimista: maestría alquímica (rasgo, cuerpo o gen que da <c>CVG_AlchemyQuality</c>) o un pasado de alquimista.</summary>
+        public static bool IsAlchemist(Pawn pawn)
+        {
+            if (pawn == null) return false;
+            if (WorkRoomUtility.AlchemyQuality != null && pawn.GetStatValue(WorkRoomUtility.AlchemyQuality) > 0f) return true;
+            var story = pawn.story;
+            return (story?.Childhood?.defName?.Contains("Alchemist") ?? false) || (story?.Adulthood?.defName?.Contains("Alchemist") ?? false);
         }
     }
 

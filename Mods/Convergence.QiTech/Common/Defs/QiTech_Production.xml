@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Qi-Tech production (plan de fusion, 2026-10-23): spirit hydroponics basin (vanilla hydroponics basin), qi accumulator
+    (vanilla battery) and qi mortar shell (vanilla high-explosive shell).
+  -->
+
+  <ResearchProjectDef>
+    <defName>CVG_Research_SpiritHydroponics</defName>
+    <tab>CVG_SpiritualEngineering</tab>
+    <label>spirit hydroponics</label>
+    <description>A nutrient bath laced with dissolved spirit stone: everything a hydroponics basin grows, plus the spirit herbs of the sects, which grow faster in it than in any sect garden. Unlocks the spirit hydroponics basin. The herb masters of the Heavenly Cauldron Pavilion tasted the first harvest, spat, and ordered twenty basins.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>CVG_Research_QiTech</li>
+      <li>Hydroponics</li>
+    </prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>5</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <!-- Like the vanilla basin: 1x4, LowPlant, placed East by default (the horizontal art is the _east view), fertility 2.8.
+       Its own sow tag (CVG_SpiritHydroponic): Qi-Tech SpiritHydroponics gives it to every hydroponic plant and to the spirit
+       herbs. The water strip of the art sits in the upper half of the drawing: drawOffsetEast/West move it onto the cells,
+       where the plants are drawn. -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_QT_SpiritHydroponics</defName>
+    <label>spirit hydroponics basin</label>
+    <description>A hydroponics basin of black iron and brass whose nutrient bath glows with dissolved spirit stone. It grows everything an ordinary basin grows, and also the spirit herbs of the sects, which grow half again as fast in it while it has spirit stones. The pumps must run all the time; without power the plants die. Sect gardeners call it "a pond without a spring" and still come at night to look at it.</description>
+    <thingClass>Building_PlantGrower</thingClass>
+    <noRightClickDraftAttack>true</noRightClickDraftAttack>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiTech/SpiritHydroponics</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.125,4)</drawSize>
+      <drawOffsetEast>(0,0,-0.17)</drawOffsetEast>
+      <drawOffsetWest>(0,0,-0.17)</drawOffsetWest>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <altitudeLayer>LowPlant</altitudeLayer>
+    <defaultPlacingRot>East</defaultPlacingRot>
+    <passability>PassThroughOnly</passability>
+    <pathCost>30</pathCost>
+    <constructEffect>ConstructMetal</constructEffect>
+    <fillPercent>0.30</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <statBases>
+      <WorkToBuild>3200</WorkToBuild>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <size>(1,4)</size>
+    <costList>
+      <Steel>80</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <CVG_SpiritStone>15</CVG_SpiritStone>
+      <Jade>5</Jade>
+    </costList>
+    <fertility>2.8</fertility>
+    <building>
+      <defaultPlantToGrow>Plant_Rice</defaultPlantToGrow>
+      <sowTag>CVG_SpiritHydroponic</sowTag>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+    </building>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>100</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>1</fuelConsumptionRate>
+        <fuelCapacity>20</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>CVG_SpiritStone</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelLabel>spirit stones</fuelLabel>
+        <fuelGizmoLabel>Spirit stones</fuelGizmoLabel>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>CVG_Research_SpiritHydroponics</li>
+    </researchPrerequisites>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <designationCategory>CVG_QiTech</designationCategory>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_SpiritGrower">
+        <spiritGrowthFactor>1.5</spiritGrowthFactor>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- ================= Qi accumulator: the vanilla battery for the qi network ================= -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_QT_QiAccumulator</defName>
+    <label>qi accumulator</label>
+    <description>A glass cylinder of condensed qi in a frame of black iron and brass, wired to the grid so its coils keep the qi from leaking. It stores qi for the qi network like a sect's qi crystal, but holds far more and loses almost nothing while it has power; without power it leaks like any crystal. The engineers say it is a battery; the sects say it is a dantian with a plug.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiTech/QiAccumulator</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,3)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.40</fillPercent>
+    <tickerType>Normal</tickerType>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsPower</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>1200</WorkToBuild>
+      <Mass>25</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(1,2)</size>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <CVG_SpiritStone>15</CVG_SpiritStone>
+      <CVG_PrimordialCrystal>1</CVG_PrimordialCrystal>
+    </costList>
+    <designationCategory>CVG_QiTech</designationCategory>
+    <researchPrerequisites>
+      <li>CVG_Research_QiTech</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>Convergence.PlaceWorker_QiNodeRadius</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="Convergence.QiTech.CompProperties_QiAccumulator">
+        <storageCapacity>1500</storageCapacity>
+        <leakPerDay>0.1</leakPerDay>
+        <poweredLeakPerDay>0.01</poweredLeakPerDay>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ================= Qi mortar shell: graded damage (Core: DefModExtension_QiDamage on its DamageDef) ================= -->
+  <DamageDef ParentName="Bomb">
+    <defName>CVG_QiBomb</defName>
+    <label>qi blast</label>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_QiDamage">
+        <grade>3</grade>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
+  <ThingDef ParentName="MakeableShellBase">
+    <defName>CVG_QT_Shell_Qi</defName>
+    <label>qi mortar shell</label>
+    <description>A high-explosive mortar shell with a cracked spirit stone packed around the charge. The blast carries qi like a strike from a Golden Core cultivator: it wounds cultivators and spirit beasts up to the third realm with full strength, and tears the entities of the void a quarter harder. Can be fired from mortars or installed as a trap. The first batch was assembled from mining scrap by a colony that had run out of other ideas.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/QiTech/QiMortarShell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.9</explosiveRadius>
+        <explosiveDamageType>CVG_QiBomb</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+        <wickTicks>30~60</wickTicks>
+        <preExplosionSpawnSingleThingDef>Filth_BlastMark</preExplosionSpawnSingleThingDef>
+      </li>
+    </comps>
+    <projectileWhenLoaded>CVG_QT_Bullet_Shell_Qi</projectileWhenLoaded>
+    <costList>
+      <Steel>15</Steel>
+      <Chemfuel>10</Chemfuel>
+      <CVG_SpiritStone>3</CVG_SpiritStone>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>CVG_Research_QiForging</li>
+        <li>Mortars</li>
+      </researchPrerequisites>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>CVG_QT_Bullet_Shell_Qi</defName>
+    <label>qi shell</label>
+    <graphicData>
+      <texPath>Things/Projectile/ShellHighExplosive</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(120,240,230)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>CVG_QiBomb</damageDef>
+      <explosionRadius>2.9</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+      <soundExplode>MortarBomb_Explode</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+      <speed>41</speed>
+      <preExplosionSpawnSingleThingDef>Filth_BlastMark</preExplosionSpawnSingleThingDef>
+    </projectile>
+  </ThingDef>
+</Defs>

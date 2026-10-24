@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Qi forge (plan de fusion, 2026-10-23): the qi version of the machining table. It tempers any weapon, qi or mortal, one
+    spirit grade at a time (+1 quality level each time), and makes the qi cannons that turn any turret into a qi turret.
+    Each temper recipe accepts only weapons of one grade, so the price grows with the grade and there is no fixed cap.
+    Balance (user: be generous): the forge and cannon I come early, right after the Convergence.
+    Art by the user: Things/Building/CVG/QiTech/QiForge, Things/Item/CVG/QiTech/QiCannon_I..III.
+  -->
+
+  <ResearchProjectDef>
+    <defName>CVG_Research_QiForging</defName>
+    <tab>CVG_SpiritualEngineering</tab>
+    <label>qi forging</label>
+    <description>The first thing the smiths of the Rim learned after the Convergence was that a spirit stone in the quench water changes the steel. Qi forging turns that accident into a method: an electric forge that tempers weapons with qi, one grade at a time, and casts the qi cannons that let any turret wound a cultivator. Unlocks the qi forge, the first temperings and the qi cannon I. The sects learned the same art in a thousand years; the smiths of the Rim learned it in one bad winter.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Smithing</li>
+      <li>Electricity</li>
+    </prerequisites>
+    <researchViewX>0</researchViewX>
+    <researchViewY>5</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ThingDef ParentName="BenchBase">
+    <defName>CVG_QiForge</defName>
+    <label>qi forge</label>
+    <description>An electric forge of black iron and brass around a quench basin fed with dissolved spirit stone. It tempers weapons with qi: each tempering raises the spirit grade by one and the quality by one level, so a weapon that only scratched a cultivator learns to wound them. It also casts the qi cannons for turrets and the qi cores for mechanoids. The Heavenly Cauldron Pavilion calls it a crude copy of a sect furnace and keeps three of them in its own workshops.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiTech/QiForge</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,2.25)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <CVG_SpiritStone>20</CVG_SpiritStone>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <Mass>40</Mass>
+      <WorkToBuild>4000</WorkToBuild>
+      <MaxHitPoints>220</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <size>(3,2)</size>
+    <designationCategory>CVG_QiTech</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_ReportWorkSpeed">
+        <workSpeedStat>WorkTableWorkSpeedFactor</workSpeedStat>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>250</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>5</glowRadius>
+        <glowColor>(80,220,210,0)</glowColor>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Breakdownable" />
+    </comps>
+    <building>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workTableRoomRole>Workshop</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+    </building>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>CVG_Research_QiForging</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_ReportWorkSpeedPenalties</li>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_Forge" />
+    </modExtensions>
+  </ThingDef>
+
+  <SpecialThingFilterDef>
+    <defName>CVG_NotSpiritGrade0</defName>
+    <label>not spirit grade 0</label>
+    <description>Weapons whose spirit grade is not 0.</description>
+    <parentCategory>Weapons</parentCategory>
+    <allowedByDefault>false</allowedByDefault>
+    <configurable>false</configurable>
+    <workerClass>Convergence.SpecialThingFilterWorker_NotSpiritGrade0</workerClass>
+  </SpecialThingFilterDef>
+
+  <SpecialThingFilterDef>
+    <defName>CVG_NotSpiritGrade1</defName>
+    <label>not spirit grade 1</label>
+    <description>Weapons whose spirit grade is not 1.</description>
+    <parentCategory>Weapons</parentCategory>
+    <allowedByDefault>false</allowedByDefault>
+    <configurable>false</configurable>
+    <workerClass>Convergence.SpecialThingFilterWorker_NotSpiritGrade1</workerClass>
+  </SpecialThingFilterDef>
+
+  <SpecialThingFilterDef>
+    <defName>CVG_NotSpiritGrade2</defName>
+    <label>not spirit grade 2</label>
+    <description>Weapons whose spirit grade is not 2.</description>
+    <parentCategory>Weapons</parentCategory>
+    <allowedByDefault>false</allowedByDefault>
+    <configurable>false</configurable>
+    <workerClass>Convergence.SpecialThingFilterWorker_NotSpiritGrade2</workerClass>
+  </SpecialThingFilterDef>
+
+  <SpecialThingFilterDef>
+    <defName>CVG_NotSpiritGrade3</defName>
+    <label>not spirit grade 3</label>
+    <description>Weapons whose spirit grade is not 3.</description>
+    <parentCategory>Weapons</parentCategory>
+    <allowedByDefault>false</allowedByDefault>
+    <configurable>false</configurable>
+    <workerClass>Convergence.SpecialThingFilterWorker_NotSpiritGrade3</workerClass>
+  </SpecialThingFilterDef>
+
+  <SpecialThingFilterDef>
+    <defName>CVG_NotSpiritGrade4</defName>
+    <label>not spirit grade 4</label>
+    <description>Weapons whose spirit grade is not 4.</description>
+    <parentCategory>Weapons</parentCategory>
+    <allowedByDefault>false</allowedByDefault>
+    <configurable>false</configurable>
+    <workerClass>Convergence.SpecialThingFilterWorker_NotSpiritGrade4</workerClass>
+  </SpecialThingFilterDef>
+
+  <SpecialThingFilterDef>
+    <defName>CVG_NotSpiritGrade5</defName>
+    <label>not spirit grade 5</label>
+    <description>Weapons whose spirit grade is not 5.</description>
+    <parentCategory>Weapons</parentCategory>
+    <allowedByDefault>false</allowedByDefault>
+    <configurable>false</configurable>
+    <workerClass>Convergence.SpecialThingFilterWorker_NotSpiritGrade5</workerClass>
+  </SpecialThingFilterDef>
+
+  <RecipeDef>
+    <defName>CVG_TemperGrade1</defName>
+    <label>temper to spirit grade 1</label>
+    <description>Quench a weapon of spirit grade 0 in qi: it keeps everything it had, rises to spirit grade 1 (full strength up to the first realm) and gains one level of quality, up to legendary.</description>
+    <jobString>Tempering a weapon.</jobString>
+    <workerClass>Convergence.RecipeWorker_TemperGrade</workerClass>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <researchPrerequisite>CVG_Research_QiForging</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>Weapons</li></categories>
+          <specialFiltersToDisallow><li>CVG_NotSpiritGrade0</li></specialFiltersToDisallow>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>Jade</li></thingDefs></filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories><li>Weapons</li></categories>
+      <thingDefs>
+        <li>CVG_SpiritStone</li>
+        <li>Jade</li>
+      </thingDefs>
+      <specialFiltersToDisallow><li>CVG_NotSpiritGrade0</li></specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Crafting>4</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CVG_QiForge</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_TemperGrade1Bioferrite</defName>
+    <label>temper to spirit grade 1 (bioferrite)</label>
+    <description>Quench a weapon of spirit grade 0 in qi: it keeps everything it had, rises to spirit grade 1 (full strength up to the first realm) and gains one level of quality, up to legendary. Bioferrite from the entities of the void replaces the jade and crystals: chaos quenched in qi, which the smiths prefer not to think about.</description>
+    <jobString>Tempering a weapon.</jobString>
+    <workerClass>Convergence.RecipeWorker_TemperGrade</workerClass>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <researchPrerequisite>CVG_Research_QiForging</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>Weapons</li></categories>
+          <specialFiltersToDisallow><li>CVG_NotSpiritGrade0</li></specialFiltersToDisallow>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>Bioferrite</li></thingDefs></filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories><li>Weapons</li></categories>
+      <thingDefs>
+        <li>CVG_SpiritStone</li>
+        <li>Bioferrite</li>
+      </thingDefs>
+      <specialFiltersToDisallow><li>CVG_NotSpiritGrade0</li></specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Crafting>4</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CVG_QiForge</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_TemperGrade2</defName>
+    <label>temper to spirit grade 2</label>
+    <description>Quench a weapon of spirit grade 1 in qi: it keeps everything it had, rises to spirit grade 2 (full strength up to Foundation Establishment) and gains one level of quality, up to legendary.</description>
+    <jobString>Tempering a weapon.</jobString>
+    <workerClass>Convergence.RecipeWorker_TemperGrade</workerClass>
+    <workAmount>4000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <researchPrerequisite>CVG_Research_QiForging</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>Weapons</li></categories>
+          <specialFiltersToDisallow><li>CVG_NotSpiritGrade1</li></specialFiltersToDisallow>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>25</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>Jade</li></thingDefs></filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_PrimordialCrystal</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories><li>Weapons</li></categories>
+      <thingDefs>
+        <li>CVG_SpiritStone</li>
+        <li>Jade</li>
+        <li>CVG_PrimordialCrystal</li>
+      </thingDefs>
+      <specialFiltersToDisallow><li>CVG_NotSpiritGrade1</li></specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Crafting>6</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CVG_QiForge</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_TemperGrade2Bioferrite</defName>
+    <label>temper to spirit grade 2 (bioferrite)</label>
+    <description>Quench a weapon of spirit grade 1 in qi: it keeps everything it had, rises to spirit grade 2 (full strength up to Foundation Establishment) and gains one level of quality, up to legendary. Bioferrite from the entities of the void replaces the jade and crystals: chaos quenched in qi, which the smiths prefer not to think about.</description>
+    <jobString>Tempering a weapon.</jobString>
+    <workerClass>Convergence.RecipeWorker_TemperGrade</workerClass>
+    <workAmount>4000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <researchPrerequisite>CVG_Research_QiForging</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>Weapons</li></categories>
+          <specialFiltersToDisallow><li>CVG_NotSpiritGrade1</li></specialFiltersToDisallow>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>25</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>Bioferrite</li></thingDefs></filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories><li>Weapons</li></categories>
+      <thingDefs>
+        <li>CVG_SpiritStone</li>
+        <li>Bioferrite</li>
+      </thingDefs>
+      <specialFiltersToDisallow><li>CVG_NotSpiritGrade1</li></specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Crafting>6</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CVG_QiForge</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_TemperGrade3</defName>
+    <label>temper to spirit grade 3</label>
+    <description>Quench a weapon of spirit grade 2 in qi: it keeps everything it had, rises to spirit grade 3 (full strength up to the Golden Core) and gains one level of quality, up to legendary.</description>
+    <jobString>Tempering a weapon.</jobString>
+    <workerClass>Convergence.RecipeWorker_TemperGrade</workerClass>
+    <workAmount>6000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <researchPrerequisite>CVG_Research_QiFundamentals</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>Weapons</li></categories>
+          <specialFiltersToDisallow><li>CVG_NotSpiritGrade2</li></specialFiltersToDisallow>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>Jade</li></thingDefs></filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_PrimordialCrystal</li></thingDefs></filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories><li>Weapons</li></categories>
+      <thingDefs>
+        <li>CVG_SpiritStone</li>
+        <li>Jade</li>
+        <li>CVG_PrimordialCrystal</li>
+      </thingDefs>
+      <specialFiltersToDisallow><li>CVG_NotSpiritGrade2</li></specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CVG_QiForge</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_TemperGrade3Bioferrite</defName>
+    <label>temper to spirit grade 3 (bioferrite)</label>
+    <description>Quench a weapon of spirit grade 2 in qi: it keeps everything it had, rises to spirit grade 3 (full strength up to the Golden Core) and gains one level of quality, up to legendary. Bioferrite from the entities of the void replaces the jade and crystals: chaos quenched in qi, which the smiths prefer not to think about.</description>
+    <jobString>Tempering a weapon.</jobString>
+    <workerClass>Convergence.RecipeWorker_TemperGrade</workerClass>
+    <workAmount>6000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <researchPrerequisite>CVG_Research_QiFundamentals</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>Weapons</li></categories>
+          <specialFiltersToDisallow><li>CVG_NotSpiritGrade2</li></specialFiltersToDisallow>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>Bioferrite</li></thingDefs></filter>
+        <count>50</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories><li>Weapons</li></categories>
+      <thingDefs>
+        <li>CVG_SpiritStone</li>
+        <li>Bioferrite</li>
+      </thingDefs>
+      <specialFiltersToDisallow><li>CVG_NotSpiritGrade2</li></specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CVG_QiForge</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_TemperGrade4</defName>
+    <label>temper to spirit grade 4</label>
+    <description>Quench a weapon of spirit grade 3 in qi: it keeps everything it had, rises to spirit grade 4 (full strength up to the fourth realm) and gains one level of quality, up to legendary.</description>
+    <jobString>Tempering a weapon.</jobString>
+    <workerClass>Convergence.RecipeWorker_TemperGrade</workerClass>
+    <workAmount>9000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <researchPrerequisite>CVG_Research_QiAdvancedMilitary</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>Weapons</li></categories>
+          <specialFiltersToDisallow><li>CVG_NotSpiritGrade3</li></specialFiltersToDisallow>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>90</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritJade</li></thingDefs></filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_PrimordialCrystal</li></thingDefs></filter>
+        <count>6</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories><li>Weapons</li></categories>
+      <thingDefs>
+        <li>CVG_SpiritStone</li>
+        <li>CVG_SpiritJade</li>
+        <li>CVG_PrimordialCrystal</li>
+      </thingDefs>
+      <specialFiltersToDisallow><li>CVG_NotSpiritGrade3</li></specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Crafting>10</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CVG_QiForge</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_TemperGrade4Bioferrite</defName>
+    <label>temper to spirit grade 4 (bioferrite)</label>
+    <description>Quench a weapon of spirit grade 3 in qi: it keeps everything it had, rises to spirit grade 4 (full strength up to the fourth realm) and gains one level of quality, up to legendary. Bioferrite from the entities of the void replaces the jade and crystals: chaos quenched in qi, which the smiths prefer not to think about.</description>
+    <jobString>Tempering a weapon.</jobString>
+    <workerClass>Convergence.RecipeWorker_TemperGrade</workerClass>
+    <workAmount>9000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <researchPrerequisite>CVG_Research_QiAdvancedMilitary</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>Weapons</li></categories>
+          <specialFiltersToDisallow><li>CVG_NotSpiritGrade3</li></specialFiltersToDisallow>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>90</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>Bioferrite</li></thingDefs></filter>
+        <count>90</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories><li>Weapons</li></categories>
+      <thingDefs>
+        <li>CVG_SpiritStone</li>
+        <li>Bioferrite</li>
+      </thingDefs>
+      <specialFiltersToDisallow><li>CVG_NotSpiritGrade3</li></specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Crafting>10</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CVG_QiForge</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_TemperGrade5</defName>
+    <label>temper to spirit grade 5</label>
+    <description>Quench a weapon of spirit grade 4 in qi: it keeps everything it had, rises to spirit grade 5 (full strength up to the fifth realm) and gains one level of quality, up to legendary.</description>
+    <jobString>Tempering a weapon.</jobString>
+    <workerClass>Convergence.RecipeWorker_TemperGrade</workerClass>
+    <workAmount>12000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <researchPrerequisite>CVG_Research_QiAdvancedMilitary</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>Weapons</li></categories>
+          <specialFiltersToDisallow><li>CVG_NotSpiritGrade4</li></specialFiltersToDisallow>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>150</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritJade</li></thingDefs></filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_PrimordialCrystal</li></thingDefs></filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories><li>Weapons</li></categories>
+      <thingDefs>
+        <li>CVG_SpiritStone</li>
+        <li>CVG_SpiritJade</li>
+        <li>CVG_PrimordialCrystal</li>
+      </thingDefs>
+      <specialFiltersToDisallow><li>CVG_NotSpiritGrade4</li></specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Crafting>12</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CVG_QiForge</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_TemperGrade5Bioferrite</defName>
+    <label>temper to spirit grade 5 (bioferrite)</label>
+    <description>Quench a weapon of spirit grade 4 in qi: it keeps everything it had, rises to spirit grade 5 (full strength up to the fifth realm) and gains one level of quality, up to legendary. Bioferrite from the entities of the void replaces the jade and crystals: chaos quenched in qi, which the smiths prefer not to think about.</description>
+    <jobString>Tempering a weapon.</jobString>
+    <workerClass>Convergence.RecipeWorker_TemperGrade</workerClass>
+    <workAmount>12000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <researchPrerequisite>CVG_Research_QiAdvancedMilitary</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>Weapons</li></categories>
+          <specialFiltersToDisallow><li>CVG_NotSpiritGrade4</li></specialFiltersToDisallow>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>150</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>Bioferrite</li></thingDefs></filter>
+        <count>150</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories><li>Weapons</li></categories>
+      <thingDefs>
+        <li>CVG_SpiritStone</li>
+        <li>Bioferrite</li>
+      </thingDefs>
+      <specialFiltersToDisallow><li>CVG_NotSpiritGrade4</li></specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Crafting>12</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CVG_QiForge</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_TemperGrade6</defName>
+    <label>temper to spirit grade 6</label>
+    <description>Quench a weapon of spirit grade 5 in qi: it keeps everything it had, rises to spirit grade 6 (full strength up to the sixth realm) and gains one level of quality, up to legendary.</description>
+    <jobString>Tempering a weapon.</jobString>
+    <workerClass>Convergence.RecipeWorker_TemperGrade</workerClass>
+    <workAmount>16000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <researchPrerequisite>CVG_Research_QiAdvancedMilitary</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>Weapons</li></categories>
+          <specialFiltersToDisallow><li>CVG_NotSpiritGrade5</li></specialFiltersToDisallow>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>250</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritJade</li></thingDefs></filter>
+        <count>40</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_PrimordialCrystal</li></thingDefs></filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories><li>Weapons</li></categories>
+      <thingDefs>
+        <li>CVG_SpiritStone</li>
+        <li>CVG_SpiritJade</li>
+        <li>CVG_PrimordialCrystal</li>
+      </thingDefs>
+      <specialFiltersToDisallow><li>CVG_NotSpiritGrade5</li></specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Crafting>14</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CVG_QiForge</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>CVG_TemperGrade6Bioferrite</defName>
+    <label>temper to spirit grade 6 (bioferrite)</label>
+    <description>Quench a weapon of spirit grade 5 in qi: it keeps everything it had, rises to spirit grade 6 (full strength up to the sixth realm) and gains one level of quality, up to legendary. Bioferrite from the entities of the void replaces the jade and crystals: chaos quenched in qi, which the smiths prefer not to think about.</description>
+    <jobString>Tempering a weapon.</jobString>
+    <workerClass>Convergence.RecipeWorker_TemperGrade</workerClass>
+    <workAmount>16000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <researchPrerequisite>CVG_Research_QiAdvancedMilitary</researchPrerequisite>
+    <ingredients>
+      <li>
+        <filter>
+          <categories><li>Weapons</li></categories>
+          <specialFiltersToDisallow><li>CVG_NotSpiritGrade5</li></specialFiltersToDisallow>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>250</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>Bioferrite</li></thingDefs></filter>
+        <count>250</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories><li>Weapons</li></categories>
+      <thingDefs>
+        <li>CVG_SpiritStone</li>
+        <li>Bioferrite</li>
+      </thingDefs>
+      <specialFiltersToDisallow><li>CVG_NotSpiritGrade5</li></specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <skillRequirements>
+      <Crafting>14</Crafting>
+    </skillRequirements>
+    <recipeUsers>
+      <li>CVG_QiForge</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_QiCannon_I</defName>
+    <label>qi cannon I</label>
+    <description>A short barrel wound with spirit-silver coils and a single qi crystal at the breech. Built into any turret, it makes a qi turret of grade 1: its shots hit cultivators of the first realm with full strength. The first ones were bolted to mini-turrets on the night of the first cultivator raid, and the colony that did it is still standing.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/QiTech/QiCannon_I</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <stackLimit>10</stackLimit>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>80</MarketValue>
+      <Mass>4</Mass>
+      <WorkToMake>4000</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <costList>
+      <Steel>25</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <CVG_SpiritStone>15</CVG_SpiritStone>
+      <Jade>5</Jade>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <researchPrerequisite>CVG_Research_QiForging</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>CVG_QiForge</li>
+      </recipeUsers>
+      <displayPriority>101</displayPriority>
+    </recipeMaker>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_QiCannon">
+        <grade>1</grade>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_QiCannon_II</defName>
+    <label>qi cannon II</label>
+    <description>A longer barrel with two brass rings and a jade panel carved with the cloud seal, its coils glowing along their whole length. Built into any turret, it makes a qi turret of grade 2: full strength against Foundation Establishment cultivators. Sect elders who see one pointed at their gate stop talking about mortals.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/QiTech/QiCannon_II</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <stackLimit>10</stackLimit>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>200</MarketValue>
+      <Mass>4</Mass>
+      <WorkToMake>6000</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <costList>
+      <Steel>40</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <CVG_SpiritStone>30</CVG_SpiritStone>
+      <Jade>10</Jade>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <researchPrerequisite>CVG_Research_QiFundamentals</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>CVG_QiForge</li>
+      </recipeUsers>
+      <displayPriority>102</displayPriority>
+    </recipeMaker>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_QiCannon">
+        <grade>2</grade>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_QiCannon_III</defName>
+    <label>qi cannon III</label>
+    <description>A heavy barrel with a crystal chamber at the breech, held by four clamps and covered in glowing cloud runes. Built into any turret, it makes a qi turret of grade 3: full strength against Golden Core cultivators and the great spirit beasts. The engineers call it "a stolen core with a trigger"; the sects call it worse.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/QiTech/QiCannon_III</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <stackLimit>10</stackLimit>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>450</MarketValue>
+      <Mass>4</Mass>
+      <WorkToMake>9000</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <costList>
+      <Plasteel>20</Plasteel>
+      <ComponentSpacer>1</ComponentSpacer>
+      <CVG_SpiritStone>50</CVG_SpiritStone>
+      <CVG_SpiritJade>15</CVG_SpiritJade>
+      <CVG_PrimordialCrystal>1</CVG_PrimordialCrystal>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <researchPrerequisite>CVG_Research_QiAdvancedMilitary</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>CVG_QiForge</li>
+      </recipeUsers>
+      <displayPriority>103</displayPriority>
+    </recipeMaker>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_QiCannon">
+        <grade>3</grade>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>

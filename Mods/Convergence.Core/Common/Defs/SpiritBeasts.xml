@@ -29,7 +29,6 @@
         <statFactors>
           <MoveSpeed>1.1</MoveSpeed>
           <MeleeDamageFactor>1.3</MeleeDamageFactor>
-          <IncomingDamageFactor>0.9</IncomingDamageFactor>
         </statFactors>
       </li>
       <li>
@@ -38,7 +37,6 @@
         <statFactors>
           <MoveSpeed>1.2</MoveSpeed>
           <MeleeDamageFactor>1.7</MeleeDamageFactor>
-          <IncomingDamageFactor>0.75</IncomingDamageFactor>
         </statFactors>
       </li>
       <li>
@@ -47,7 +45,6 @@
         <statFactors>
           <MoveSpeed>1.3</MoveSpeed>
           <MeleeDamageFactor>2.2</MeleeDamageFactor>
-          <IncomingDamageFactor>0.6</IncomingDamageFactor>
         </statFactors>
       </li>
       <li>
@@ -56,7 +53,6 @@
         <statFactors>
           <MoveSpeed>1.45</MoveSpeed>
           <MeleeDamageFactor>3</MeleeDamageFactor>
-          <IncomingDamageFactor>0.45</IncomingDamageFactor>
         </statFactors>
       </li>
       <li>
@@ -65,7 +61,6 @@
         <statFactors>
           <MoveSpeed>1.55</MoveSpeed>
           <MeleeDamageFactor>3.8</MeleeDamageFactor>
-          <IncomingDamageFactor>0.35</IncomingDamageFactor>
         </statFactors>
       </li>
       <li>
@@ -74,7 +69,6 @@
         <statFactors>
           <MoveSpeed>1.65</MoveSpeed>
           <MeleeDamageFactor>4.8</MeleeDamageFactor>
-          <IncomingDamageFactor>0.28</IncomingDamageFactor>
         </statFactors>
       </li>
     </stages>

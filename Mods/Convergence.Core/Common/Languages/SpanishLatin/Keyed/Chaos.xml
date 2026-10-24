@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Chaos_StudyDemon>mirar el caos demasiado de cerca</CVG_Chaos_StudyDemon>
+  <CVG_Chaos_RealmPsychic>Mente asentada del reino</CVG_Chaos_RealmPsychic>
+  <CVG_Chaos_RealmResistance>Reino de cultivo</CVG_Chaos_RealmResistance>
+  <CVG_Chaos_DreadReason>talismán del pavor</CVG_Chaos_DreadReason>
+  <CVG_ChaosSage_ArrivalLabel>Un sabio del vacío: {0}</CVG_ChaosSage_ArrivalLabel>
+  <CVG_ChaosSage_FarewellLabel>{0} se va</CVG_ChaosSage_FarewellLabel>
+  <CVG_ChaosSage_TalkClose>«Lo voy a recordar.»</CVG_ChaosSage_TalkClose>
+  <CVG_ChaosSage_Talk>{PAWN_nameDef} no mira a {SPEAKER_nameDef} cuando se sienta a su lado; sigue mirando el monolito.\n\n«Ustedes lo llaman el vacío. Las sectas de Jiuxiao tienen un nombre más viejo: Hundun, el caos primordial, el emperador sin rostro del mundo de antes del Dao. Cuando el Dao talló el mundo en él, no murió. Se durmió debajo.\n\n»La Convergencia rasgó la piel entre los mundos y pasó el qi. Él también. Lo que despertaron no es una puerta a otro lugar: es una ventana a lo que había acá antes de que algo tuviera forma.\n\n»Sus criaturas no son demonios ni bestias. Son pedazos de él que olvidaron que eran pedazos. Las armas de los mortales los lastiman como siempre; el qi los lastima más, porque el qi es orden y ellos no. Cuando uno muere, el caos se endurece donde cayó. Guarden esos núcleos: con ellos se escriben talismanes, y cosas peores.\n\n»Estúdienlos si tienen que hacerlo. Una mente que mira el caos ve el Dao del otro lado, y aprende. Pero el cultivador que mira demasiado encuentra un demonio que le devuelve la mirada.\n\n»Me quedo hasta que venga el primero. Después no les va a hacer falta un viejo para saber qué hay ahí afuera.»</CVG_ChaosSage_Talk>
+</LanguageData>

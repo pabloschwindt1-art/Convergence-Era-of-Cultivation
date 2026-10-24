@@ -17,12 +17,6 @@ namespace Convergence.QiTech
         public float flashScale = 9f;
     }
 
-    [StaticConstructorOnStartup]
-    public static class QiTechHarmony
-    {
-        static QiTechHarmony() => new Harmony("prospero1088.convergence.qitech").PatchAll();
-    }
-
     [HarmonyPatch(typeof(Projectile), nameof(Projectile.Launch), typeof(Thing), typeof(Vector3), typeof(LocalTargetInfo), typeof(LocalTargetInfo),
         typeof(ProjectileHitFlags), typeof(bool), typeof(Thing), typeof(ThingDef))]
     public static class Patch_Projectile_Launch_Muzzle

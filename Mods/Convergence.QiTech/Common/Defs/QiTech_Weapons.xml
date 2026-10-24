@@ -65,6 +65,9 @@
       <AccuracyLong>0.55</AccuracyLong>
       <RangedWeapon_Cooldown>1.70</RangedWeapon_Cooldown>
     </statBases>
+    <equippedStatOffsets>
+      <CVG_ChaosResistance>0.05</CVG_ChaosResistance>
+    </equippedStatOffsets>
     <costList>
       <Steel>70</Steel>
       <ComponentIndustrial>7</ComponentIndustrial>
@@ -130,6 +133,9 @@
       <AccuracyLong>0.88</AccuracyLong>
       <RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
     </statBases>
+    <equippedStatOffsets>
+      <CVG_ChaosResistance>0.05</CVG_ChaosResistance>
+    </equippedStatOffsets>
     <costList>
       <Plasteel>45</Plasteel>
       <ComponentSpacer>2</ComponentSpacer>
@@ -210,6 +216,7 @@
       <RangedWeapon_Cooldown>3.2</RangedWeapon_Cooldown>
     </statBases>
     <equippedStatOffsets>
+      <CVG_ChaosResistance>0.05</CVG_ChaosResistance>
       <MoveSpeed>-0.25</MoveSpeed>
     </equippedStatOffsets>
     <costList>
@@ -251,6 +258,182 @@
     <comps>
       <li Class="Convergence.CompProperties_SpiritGrade">
         <grade>3</grade>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- ================= Qi shotgun and qi pistol (grade 1, plan de fusion 2026-10-23) =================
+       The vanilla pump shotgun and autopistol with part of the steel swapped for spirit stones and jade. Made at the qi forge
+       right after qi forging (they have to arrive before the first cultivator raids), and tempered there to higher grades. -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>CVG_QT_QiShot</defName>
+    <label>qi shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(120,240,230)</color>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <stoppingPower>3</stoppingPower>
+      <armorPenetrationBase>0.16</armorPenetrationBase>
+      <speed>60</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>CVG_QT_QiShotgun</defName>
+    <label>qi shotgun</label>
+    <description>A pump shotgun whose shells are packed around a sliver of spirit stone, so every pellet leaves the barrel wrapped in a thread of qi. Close up it hits a Qi Refining cultivator like any mortal, which is to say very hard. Colonists on the Rim started calling it "the doorkeeper" after the first sect disciple who tried to walk through one.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/QiTech/QiShotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Shotgun</soundInteract>
+    <statBases>
+      <WorkToMake>14000</WorkToMake>
+      <Mass>3.4</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.87</AccuracyShort>
+      <AccuracyMedium>0.77</AccuracyMedium>
+      <AccuracyLong>0.64</AccuracyLong>
+      <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+    </statBases>
+    <equippedStatOffsets>
+      <CVG_ChaosResistance>0.05</CVG_ChaosResistance>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>40</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <CVG_SpiritStone>8</CVG_SpiritStone>
+      <Jade>4</Jade>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>CVG_Research_QiForging</li>
+        <li>Gunsmithing</li>
+      </researchPrerequisites>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>CVG_QiForge</li>
+      </recipeUsers>
+      <displayPriority>200</displayPriority>
+    </recipeMaker>
+    <weaponTags Inherit="False">
+      <li>CVG_QiTechGun</li>
+    </weaponTags>
+    <tradeTags Inherit="False">
+      <li>CVG_QiTechWeapon</li>
+    </tradeTags>
+    <weaponClasses>
+      <li>Ranged</li>
+      <li>ShortShots</li>
+    </weaponClasses>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>CVG_QT_QiShot</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>15.9</range>
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Convergence.CompProperties_SpiritGrade">
+        <grade>1</grade>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>CVG_QT_QiPistolBullet</defName>
+    <label>qi pistol bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(120,240,230)</color>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <speed>60</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>CVG_QT_QiPistol</defName>
+    <label>qi pistol</label>
+    <description>A blowback pistol with a qi coil around the barrel and a spirit stone chip in the grip. It is the first weapon most mortals of the Rim ever held that could make a cultivator bleed, and it is cheap enough that some settlements hand them out at weddings. Sect disciples sneer at it until the third shot.</description>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Equipment/CVG/QiTech/QiPistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.4</uiIconScale>
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <statBases>
+      <WorkToMake>6000</WorkToMake>
+      <Mass>1.2</Mass>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.72</AccuracyShort>
+      <AccuracyMedium>0.42</AccuracyMedium>
+      <AccuracyLong>0.30</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <equippedStatOffsets>
+      <CVG_ChaosResistance>0.05</CVG_ChaosResistance>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>20</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <CVG_SpiritStone>5</CVG_SpiritStone>
+      <Jade>2</Jade>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>CVG_Research_QiForging</li>
+        <li>BlowbackOperation</li>
+      </researchPrerequisites>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>CVG_QiForge</li>
+      </recipeUsers>
+      <displayPriority>201</displayPriority>
+    </recipeMaker>
+    <weaponTags Inherit="False">
+      <li>CVG_QiTechGun</li>
+    </weaponTags>
+    <tradeTags Inherit="False">
+      <li>CVG_QiTechWeapon</li>
+    </tradeTags>
+    <weaponClasses>
+      <li>Ranged</li>
+      <li>RangedLight</li>
+    </weaponClasses>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>CVG_QT_QiPistolBullet</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>25.9</range>
+        <soundCast>Shot_Autopistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Convergence.CompProperties_SpiritGrade">
+        <grade>1</grade>
       </li>
     </comps>
   </ThingDef>

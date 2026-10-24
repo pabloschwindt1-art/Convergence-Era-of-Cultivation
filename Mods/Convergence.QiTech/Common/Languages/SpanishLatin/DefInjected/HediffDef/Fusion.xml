@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_QiBionicArm.label>brazo biónico de qi</CVG_QiBionicArm.label>
+  <CVG_QiBionicArm.labelNoun>un brazo biónico de qi</CVG_QiBionicArm.labelNoun>
+  <CVG_QiBionicArm.description>Un brazo biónico de qi instalado. Un brazo biónico reconstruido alrededor de una columna de acero templado en qi, con tendones de plata espiritual que llevan un hilo de qi a los servos. Más fuerte y firme que el modelo mortal, y más ruidoso para el Cielo: el Dao Celestial cuenta cada cable.</CVG_QiBionicArm.description>
+  <CVG_QiBionicArm.comps.0.tools.0.label>puño</CVG_QiBionicArm.comps.0.tools.0.label>
+  <CVG_QiBionicLeg.label>pierna biónica de qi</CVG_QiBionicLeg.label>
+  <CVG_QiBionicLeg.labelNoun>una pierna biónica de qi</CVG_QiBionicLeg.labelNoun>
+  <CVG_QiBionicLeg.description>Una pierna biónica de qi instalada. Articulaciones templadas en qi y una pequeña celda de piedra espiritual en la pantorrilla que mantiene tibios los servos. Corre un poco más rápido que el modelo mortal y nunca deja del todo de zumbar.</CVG_QiBionicLeg.description>
+  <CVG_QiBionicEye.label>ojo biónico de qi</CVG_QiBionicEye.label>
+  <CVG_QiBionicEye.labelNoun>un ojo biónico de qi</CVG_QiBionicEye.labelNoun>
+  <CVG_QiBionicEye.description>Un ojo biónico de qi instalado. La lente de jade espiritual ve un poco mejor que el modelo mortal y capta el brillo tenue del qi en el aire.</CVG_QiBionicEye.description>
+  <CVG_MechQiCore.label>núcleo de qi</CVG_MechQiCore.label>
+  <CVG_MechQiCore.description>Un cristal de qi condensado cableado al núcleo de este mecanoide. Cada ataque que hace lleva qi y hiere a cultivadores y bestias espirituales como un arma espiritual de su grado. Una estación de afinación junto a su recargador sube el grado mientras carga.</CVG_MechQiCore.description>
+  <CVG_MechQiCore.stages.0.label>grado 1</CVG_MechQiCore.stages.0.label>
+  <CVG_MechQiCore.stages.1.label>grado 2</CVG_MechQiCore.stages.1.label>
+  <CVG_MechQiCore.stages.2.label>grado 3</CVG_MechQiCore.stages.2.label>
+  <CVG_MechQiCore.stages.3.label>grado 4</CVG_MechQiCore.stages.3.label>
+  <CVG_MechQiCore.stages.4.label>grado 5</CVG_MechQiCore.stages.4.label>
+  <CVG_MechQiCore.stages.5.label>grado 6</CVG_MechQiCore.stages.5.label>
+</LanguageData>

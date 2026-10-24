@@ -187,6 +187,8 @@
       <li Class="Convergence.DefModExtension_MeteorContents">
         <mineable>CVG_MineableSpiritStone</mineable>
         <count>6~12</count>
+        <extraMineable>CVG_MineableSpiritJade</extraMineable>
+        <extraChance>0.3</extraChance>
       </li>
     </modExtensions>
   </IncidentDef>

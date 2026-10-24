@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Chaos_StudyDemon>studying the chaos too closely</CVG_Chaos_StudyDemon>
+  <CVG_Chaos_RealmPsychic>Settled mind of the realm</CVG_Chaos_RealmPsychic>
+  <CVG_Chaos_RealmResistance>Cultivation realm</CVG_Chaos_RealmResistance>
+  <CVG_Chaos_DreadReason>talisman of dread</CVG_Chaos_DreadReason>
+  <CVG_ChaosSage_ArrivalLabel>A sage of the void: {0}</CVG_ChaosSage_ArrivalLabel>
+  <CVG_ChaosSage_FarewellLabel>{0} leaves</CVG_ChaosSage_FarewellLabel>
+  <CVG_ChaosSage_TalkClose>"I will remember."</CVG_ChaosSage_TalkClose>
+  <CVG_ChaosSage_Talk>{PAWN_nameDef} does not look at {SPEAKER_nameDef} when they sit down beside him; he keeps watching the monolith.\n\n"You call it the void. The sects of Jiuxiao have an older name: Hundun, primordial chaos, the faceless emperor of the world before the Dao. When the Dao carved the world out of him, he did not die. He slept under it.\n\n"The Convergence tore the skin between the worlds, and qi came through. So did he. What you woke up is not a door to somewhere else: it is a window to what was here before anything had a shape.\n\n"His creatures are not demons and not beasts. They are pieces of him that forgot they were pieces. Weapons of mortals hurt them as they always did; qi hurts them more, because qi is order and they are not. When one dies, chaos hardens where it fell. Keep those cores: talismans can be written with them, and worse things too.\n\n"Study them if you must. A mind that looks into chaos sees the Dao from the other side, and learns. But a cultivator who looks too long finds a demon looking back.\n\n"I will stay until the first of them comes. After that you will not need an old man to tell you what is out there."</CVG_ChaosSage_Talk>
+</LanguageData>

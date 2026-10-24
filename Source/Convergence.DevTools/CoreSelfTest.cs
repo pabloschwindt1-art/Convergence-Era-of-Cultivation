@@ -1330,7 +1330,7 @@ namespace Convergence
         private static void TestMentor(Map map)
         {
             var state = GameComponent_Mentor.Instance;
-            var def = DefDatabase<MentorDef>.AllDefsListForReading.FirstOrDefault();
+            var def = DefDatabase<MentorDef>.AllDefsListForReading.FirstOrDefault(m => m.commonality > 0f);
             Check(state != null && def != null, "mentor component and def");
             if (state == null || def == null || state.Mentor != null) return;
             var mentor = state.Arrive(map, def, wounded: false);

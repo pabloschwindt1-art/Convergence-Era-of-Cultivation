@@ -61,4 +61,33 @@
       <li Class="Convergence.DefModExtension_PostConvergence" />
     </modExtensions>
   </ThingDef>
+  <!-- Silk koi (plan de fusion, 2026-10-23): the rarest spirit fish. Eaten whole it gives qi and a chance to rise one stage
+       within the current realm (never a breakthrough). Art by the user. -->
+  <ThingDef ParentName="FishBase">
+    <defName>CVG_Fish_SilkKoi</defName>
+    <label>silk koi</label>
+    <description>A koi with fins like silk veils and scales that shift from white to gold. It only swims in waters where the Convergence pooled the most qi, and sect elders pay fortunes for one. Eaten whole, as the old masters did, it gives qi and may lift the eater one stage within their realm, though never across a breakthrough. Legend says the first silk koi swam out of the pond of the Jade Emperor when the sky of Jiuxiao cracked.</description>
+    <graphicData>
+      <texPath>Things/Item/Fish/CVG_SilkKoi</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>180</MarketValue>
+      <Nutrition>0.35</Nutrition>
+    </statBases>
+    <ingestible>
+      <outcomeDoers>
+        <li Class="Convergence.IngestionOutcomeDoer_GainCultivationResource">
+          <path>CVG_Path_Qi</path>
+          <amount>60</amount>
+          <startsPath>false</startsPath>
+        </li>
+        <li Class="Convergence.IngestionOutcomeDoer_AdvanceStage">
+          <chance>0.25</chance>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_PostConvergence" />
+    </modExtensions>
+  </ThingDef>
 </Defs>

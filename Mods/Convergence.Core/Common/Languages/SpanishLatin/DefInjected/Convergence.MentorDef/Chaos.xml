@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Mentor_ChaosSage.label>el sabio del vacío</CVG_Mentor_ChaosSage.label>
+  <CVG_Mentor_ChaosSage.description>Un ermitaño errante sin secta que pasó tres siglos siguiendo los lugares donde el mundo se adelgaza. Llega cuando despierta el monolito.</CVG_Mentor_ChaosSage.description>
+  <CVG_Mentor_ChaosSage.archetype>ermitaño del vacío</CVG_Mentor_ChaosSage.archetype>
+  <CVG_Mentor_ChaosSage.arrivalWalkerText>El aire sobre el monolito todavía zumba cuando un viejo de túnica gris entra desde el borde del mapa, apoyado en un bastón de madera negra. No mira a los colonos; mira el monolito, como se mira a un viejo enemigo que acaba de despertarse.\n\n{PAWN_nameDef} se sienta a una distancia prudente y espera que alguien venga a hablarle. Se va a quedar con la colonia hasta que salga de la oscuridad la primera cosa.</CVG_Mentor_ChaosSage.arrivalWalkerText>
+  <CVG_Mentor_ChaosSage.farewellText>La última de las criaturas del vacío queda quieta. {PAWN_nameDef} se levanta, se sacude el polvo de la túnica y asiente, como si se hubiera saldado una deuda.\n\n«La puerta ya está abierta. No se va a cerrar. Alimenten su qi, achiquen su miedo y no escuchen lo que habla desde la oscuridad», dice, y se va por donde vino.\n\nDonde estaba sentado dejó una muestra de lo que da el caos: núcleos de caos, piedras espirituales y un talismán escrito de su puño y letra.</CVG_Mentor_ChaosSage.farewellText>
+</LanguageData>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Qi bionics (plan de fusion, 2026-10-23): the technical version of the grafts. The vanilla bionic arm, leg and eye, about 10%
+    better (part efficiency 1.375), with part of the plasteel swapped for spirit stones and jade. No altar and no Dao: they
+    are installed with the normal vanilla surgery, and they carry more celestial dissonance than a vanilla bionic (0.25,
+    set on the hediff so the Core's per-tech-level default does not apply).
+    Art by the user: Things/Item/Health/CVG/QiTech/QiBionic*.
+  -->
+
+  <ResearchProjectDef>
+    <defName>CVG_Research_QiBionics</defName>
+    <tab>CVG_SpiritualEngineering</tab>
+    <label>qi bionics</label>
+    <description>Bionic limbs with qi-tempered frames and spirit-silver tendons, the engineers' answer to the grafts of the sects: no altar, no Dao, no beast to kill, only a fabrication bench and a surgeon. Unlocks the qi bionic arm, leg and eye. The Celestial Dao, the sects warn, likes them even less than the vanilla ones.</description>
+    <baseCost>2400</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>CVG_Research_QiTech</li>
+      <li>Bionics</li>
+    </prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>4</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_QiBionicArm</defName>
+    <label>qi bionic arm</label>
+    <labelNoun>a qi bionic arm</labelNoun>
+    <description>An installed qi bionic arm. A bionic arm rebuilt around a spine of qi-tempered steel, with spirit-silver tendons that carry a trickle of qi to the servos. Stronger and steadier than the mortal model, and noisier to Heaven: the Celestial Dao counts every wire.</description>
+    <descriptionHyperlinks>
+      <ThingDef>CVG_QiBionicArm</ThingDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>14</power>
+            <cooldownTime>2</cooldownTime>
+            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>CVG_QiBionicArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.375</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <CVG_CelestialDissonance>0.25</CVG_CelestialDissonance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>CVG_QiBionicArm</defName>
+    <label>qi bionic arm</label>
+    <description>A bionic arm rebuilt around a spine of qi-tempered steel, with spirit-silver tendons that carry a trickle of qi to the servos. Stronger and steadier than the mortal model, and noisier to Heaven: the Celestial Dao counts every wire.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>CVG_InstallQiBionicArm</RecipeDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/QiTech/QiBionicArm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(255,255,255)</color>
+    </graphicData>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+      <CVG_SpiritStone>15</CVG_SpiritStone>
+      <Jade>5</Jade>
+    </costList>
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_QiBionics</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>CVG_InstallQiBionicArm</defName>
+    <label>install qi bionic arm</label>
+    <description>Install a qi bionic arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>CVG_QiBionicArm</ThingDef>
+      <HediffDef>CVG_QiBionicArm</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing qi bionic arm.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_QiBionicArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>CVG_QiBionicArm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>CVG_QiBionicArm</addsHediff>
+  </RecipeDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_QiBionicLeg</defName>
+    <label>qi bionic leg</label>
+    <labelNoun>a qi bionic leg</labelNoun>
+    <description>An installed qi bionic leg. A bionic leg with qi-quenched joints and a small spirit stone cell in the calf that keeps the servos warm. It runs a little faster than the mortal model and never quite stops humming. The sects call these "iron roots": legs that walk without a meridian to walk them.</description>
+    <descriptionHyperlinks>
+      <ThingDef>CVG_QiBionicLeg</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_QiBionicLeg</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.375</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <CVG_CelestialDissonance>0.25</CVG_CelestialDissonance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>CVG_QiBionicLeg</defName>
+    <label>qi bionic leg</label>
+    <description>A bionic leg with qi-quenched joints and a small spirit stone cell in the calf that keeps the servos warm. It runs a little faster than the mortal model and never quite stops humming. The sects call these "iron roots": legs that walk without a meridian to walk them.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>CVG_InstallQiBionicLeg</RecipeDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/QiTech/QiBionicLeg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(255,255,255)</color>
+    </graphicData>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+      <CVG_SpiritStone>15</CVG_SpiritStone>
+      <Jade>5</Jade>
+    </costList>
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_QiBionics</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>CVG_InstallQiBionicLeg</defName>
+    <label>install qi bionic leg</label>
+    <description>Install a qi bionic leg.</description>
+    <descriptionHyperlinks>
+      <ThingDef>CVG_QiBionicLeg</ThingDef>
+      <HediffDef>CVG_QiBionicLeg</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing qi bionic leg.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_QiBionicLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>CVG_QiBionicLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Leg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>CVG_QiBionicLeg</addsHediff>
+  </RecipeDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CVG_QiBionicEye</defName>
+    <label>qi bionic eye</label>
+    <labelNoun>a qi bionic eye</labelNoun>
+    <description>An installed qi bionic eye. A bionic eye whose lens is cut from spirit jade, so it sees a little better than the mortal model and catches the faint glow of qi in the air. Engineers of the Rim insist it reads light, not qi; the people who wear one stop arguing after their first night watch.</description>
+    <descriptionHyperlinks>
+      <ThingDef>CVG_QiBionicEye</ThingDef>
+    </descriptionHyperlinks>
+    <spawnThingOnRemoved>CVG_QiBionicEye</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.375</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <CVG_CelestialDissonance>0.25</CVG_CelestialDissonance>
+        </statOffsets>
+      </li>
+    </stages>
+    <renderNodeProperties>
+      <li Class="PawnRenderNodeProperties_Eye">
+        <workerClass>PawnRenderNodeWorker_HediffEye</workerClass>
+        <texPath>Things/Pawn/Wounds/BionicEye</texPath>
+        <parentTagDef>Head</parentTagDef>
+        <drawSize>0.15</drawSize>
+        <color>(120,240,230)</color>
+        <drawData>
+          <defaultData>
+            <layer>56</layer>
+            <offset>(0, 0, -0.25)</offset>
+          </defaultData>
+          <dataWest>
+            <flip>true</flip>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>CVG_QiBionicEye</defName>
+    <label>qi bionic eye</label>
+    <description>A bionic eye whose lens is cut from spirit jade, so it sees a little better than the mortal model and catches the faint glow of qi in the air. Engineers of the Rim insist it reads light, not qi; the people who wear one stop arguing after their first night watch.</description>
+    <descriptionHyperlinks>
+      <RecipeDef>CVG_InstallQiBionicEye</RecipeDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Health/CVG/QiTech/QiBionicEye</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(255,255,255)</color>
+    </graphicData>
+    <costList>
+      <Plasteel>10</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+      <CVG_SpiritStone>15</CVG_SpiritStone>
+      <Jade>5</Jade>
+    </costList>
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_QiBionics</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>CVG_InstallQiBionicEye</defName>
+    <label>install qi bionic eye</label>
+    <description>Install a qi bionic eye.</description>
+    <descriptionHyperlinks>
+      <ThingDef>CVG_QiBionicEye</ThingDef>
+      <HediffDef>CVG_QiBionicEye</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing qi bionic eye.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>CVG_QiBionicEye</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>CVG_QiBionicEye</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Eye</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>CVG_QiBionicEye</addsHediff>
+  </RecipeDef>
+</Defs>

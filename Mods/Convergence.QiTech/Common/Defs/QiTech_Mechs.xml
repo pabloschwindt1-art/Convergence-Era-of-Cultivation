@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Qi mechs (plan de fusion, 2026-10-23): three qi cores (basic for light mechs, medium for medium mechs, advanced for heavy and
+    ultraheavy mechs), made at the qi forge with the matching vanilla subcore. A mechanitor implants one in a mech of their own
+    like the vanilla psychic lance is used (right-click the core, then click the mech). The mech gets CVG_MechQiCore: its severity
+    is the spirit grade of all its attacks (starts at 1), and the tuning station next to its recharger raises it to the station
+    level (1-3, upgraded with spirit stones). After the Convergence, enemy mechs can carry cores too.
+    The difference with the puppets of BiotechWuxia: puppets are the cultivator path (threads and the puppeteer's qi); qi mechs
+    are the engineer path (a core and a station).
+    Art by the user: Things/Item/CVG/QiTech/MechQiCore_*, Things/Building/CVG/QiTech/MechTuningStation. The aura is procedural.
+  -->
+
+  <ResearchProjectDef>
+    <defName>CVG_Research_QiMechs</defName>
+    <tab>CVG_SpiritualEngineering</tab>
+    <label>qi mechs</label>
+    <description>A mechanoid core wrapped around a condensed qi crystal: the mech's weapons start to carry qi like a sect artifact, and a tuning station next to its recharger can sharpen it further. Unlocks the basic and medium qi cores and the tuning station; the advanced core also needs high mechtech. The puppeteers of the sects say a mech with a qi core is a puppet that forgot who holds its threads.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>CVG_Research_QiForging</li>
+      <li>StandardMechtech</li>
+    </prerequisites>
+    <researchViewX>4</researchViewX>
+    <researchViewY>5</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <HediffDef>
+    <defName>CVG_MechQiCore</defName>
+    <label>qi core</label>
+    <description>A condensed qi crystal wired into this mechanoid's core. Every attack it makes carries qi and wounds cultivators and spirit beasts as a spirit weapon of its grade would. A tuning station next to its recharger raises the grade while it charges.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.47, 0.94, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <initialSeverity>1</initialSeverity>
+    <minSeverity>1</minSeverity>
+    <maxSeverity>6</maxSeverity>
+    <stages>
+      <li>
+        <minSeverity>1</minSeverity>
+        <label>grade 1</label>
+        <statOffsets><CVG_ChaosResistance>0.05</CVG_ChaosResistance></statOffsets>
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <label>grade 2</label>
+        <statOffsets><CVG_ChaosResistance>0.1</CVG_ChaosResistance></statOffsets>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <label>grade 3</label>
+        <statOffsets><CVG_ChaosResistance>0.15</CVG_ChaosResistance></statOffsets>
+      </li>
+      <li>
+        <minSeverity>4</minSeverity>
+        <label>grade 4</label>
+        <statOffsets><CVG_ChaosResistance>0.2</CVG_ChaosResistance></statOffsets>
+      </li>
+      <li>
+        <minSeverity>5</minSeverity>
+        <label>grade 5</label>
+        <statOffsets><CVG_ChaosResistance>0.25</CVG_ChaosResistance></statOffsets>
+      </li>
+      <li>
+        <minSeverity>6</minSeverity>
+        <label>grade 6</label>
+        <statOffsets><CVG_ChaosResistance>0.3</CVG_ChaosResistance></statOffsets>
+      </li>
+    </stages>
+    <renderNodeProperties>
+      <li>
+        <workerClass>Convergence.QiTech.PawnRenderNodeWorker_MechQiAura</workerClass>
+        <texPath>Things/Pawn/CVG/QiTech/MechQiAura</texPath>
+        <shaderTypeDef>MoteGlow</shaderTypeDef>
+        <parentTagDef>Body</parentTagDef>
+        <drawSize>1.6</drawSize>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>-2</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_GradeHediff" />
+    </modExtensions>
+  </HediffDef>
+
+  <ThingDef Name="CVG_MechQiCoreBase" ParentName="ResourceBase" Abstract="True">
+    <techLevel>Industrial</techLevel>
+    <stackLimit>10</stackLimit>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+      <recipeUsers>
+        <li>CVG_QiForge</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_MechQiCoreBase">
+    <defName>CVG_QT_MechQiCore_Basic</defName>
+    <label>basic mech qi core</label>
+    <description>A small ring of black iron and brass around a swirl of condensed qi, sized for a light mechanoid's subcore. A mechanitor implants it in one of their light mechs; from then on the mech's attacks carry qi of grade 1 and wound first-realm cultivators and spirit beasts with full strength. The first ones were fitted to militors on a colony that had just lost three people to a single sect disciple.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/QiTech/MechQiCore_Basic</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <MarketValue>250</MarketValue>
+      <Mass>1</Mass>
+      <WorkToMake>4000</WorkToMake>
+    </statBases>
+    <costList>
+      <SubcoreBasic>1</SubcoreBasic>
+      <CVG_SpiritStone>20</CVG_SpiritStone>
+      <Jade>5</Jade>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_QiMechs</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <displayPriority>120</displayPriority>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Implant {0_label} in a mech</useLabel>
+        <useDuration>300</useDuration>
+      </li>
+      <li Class="Convergence.QiTech.CompProperties_TargetableMechQiCore">
+        <weightClasses>
+          <li>Light</li>
+        </weightClasses>
+      </li>
+      <li Class="Convergence.QiTech.CompProperties_TargetEffectMechQiCore">
+        <grade>1</grade>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_MechQiCoreBase">
+    <defName>CVG_QT_MechQiCore_Medium</defName>
+    <label>medium mech qi core</label>
+    <description>A heavier ring with a sphere of glowing qi held by four brass clamps, sized for a medium mechanoid's subcore. A mechanitor implants it in one of their medium mechs; its attacks start carrying qi of grade 1, and a tuning station can raise it further. Sect elders who have seen a lancer with one of these say it shoots like a disciple who never needs to breathe.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/QiTech/MechQiCore_Medium</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>500</MarketValue>
+      <Mass>2</Mass>
+      <WorkToMake>6000</WorkToMake>
+    </statBases>
+    <costList>
+      <SubcoreRegular>1</SubcoreRegular>
+      <CVG_SpiritStone>35</CVG_SpiritStone>
+      <Jade>10</Jade>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>CVG_Research_QiMechs</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <displayPriority>121</displayPriority>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Implant {0_label} in a mech</useLabel>
+        <useDuration>400</useDuration>
+      </li>
+      <li Class="Convergence.QiTech.CompProperties_TargetableMechQiCore">
+        <weightClasses>
+          <li>Medium</li>
+        </weightClasses>
+      </li>
+      <li Class="Convergence.QiTech.CompProperties_TargetEffectMechQiCore">
+        <grade>1</grade>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_MechQiCoreBase">
+    <defName>CVG_QT_MechQiCore_Advanced</defName>
+    <label>advanced mech qi core</label>
+    <description>A block of black iron and brass around a large qi crystal, banded with glowing cloud runes, sized for the subcore of a heavy or ultraheavy mechanoid. A mechanitor implants it in one of their heavy mechs; it starts at grade 2, already enough to make a Foundation cultivator take a centurion seriously. The sects call such mechs "iron tribulations".</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/QiTech/MechQiCore_Advanced</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <MarketValue>1000</MarketValue>
+      <Mass>3</Mass>
+      <WorkToMake>9000</WorkToMake>
+    </statBases>
+    <costList>
+      <SubcoreHigh>1</SubcoreHigh>
+      <CVG_SpiritStone>50</CVG_SpiritStone>
+      <CVG_SpiritJade>10</CVG_SpiritJade>
+      <CVG_PrimordialCrystal>1</CVG_PrimordialCrystal>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>CVG_Research_QiMechs</li>
+        <li>HighMechtech</li>
+      </researchPrerequisites>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+      <displayPriority>122</displayPriority>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Implant {0_label} in a mech</useLabel>
+        <useDuration>500</useDuration>
+      </li>
+      <li Class="Convergence.QiTech.CompProperties_TargetableMechQiCore">
+        <weightClasses>
+          <li>Heavy</li>
+          <li>UltraHeavy</li>
+        </weightClasses>
+      </li>
+      <li Class="Convergence.QiTech.CompProperties_TargetEffectMechQiCore">
+        <grade>2</grade>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+  </ThingDef>
+
+  <!-- ================= Tuning station: facility of the mech rechargers (Qi-Tech patches) ================= -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>CVG_QT_MechTuningStation</defName>
+    <label>mech tuning station</label>
+    <description>A small altar of iron and brass with a qi crystal held under a tuning spike. Placed next to a mech recharger, it sharpens the qi core of every mech that charges there up to its own level. Its level is raised on the spot with spirit stones and jade, up to 3. Mechanitors say it hums in the same key as their band node; puppeteers say it hums out of tune.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiTech/MechTuningStation</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.5,1.5)</drawSize>
+      <damageData>
+        <rect>(0.1,0.1,0.8,0.8)</rect>
+      </damageData>
+    </graphicData>
+    <size>(1,1)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>42</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <tickerType>Rare</tickerType>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <designationCategory>CVG_QiTech</designationCategory>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Mass>20</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <CVG_SpiritStone>20</CVG_SpiritStone>
+    </costList>
+    <researchPrerequisites>
+      <li>CVG_Research_QiMechs</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>100</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Facility">
+        <maxSimultaneous>2</maxSimultaneous>
+        <maxDistance>6</maxDistance>
+      </li>
+      <li Class="Convergence.CompProperties_WorkbenchLevel">
+        <levels>
+          <li />
+          <li>
+            <upgradeCost>
+              <CVG_SpiritStone>60</CVG_SpiritStone>
+              <Jade>15</Jade>
+            </upgradeCost>
+          </li>
+          <li>
+            <upgradeCost>
+              <CVG_SpiritStone>120</CVG_SpiritStone>
+              <CVG_SpiritJade>15</CVG_SpiritJade>
+              <CVG_PrimordialCrystal>2</CVG_PrimordialCrystal>
+            </upgradeCost>
+          </li>
+        </levels>
+      </li>
+      <li Class="Convergence.QiTech.CompProperties_MechTuning" />
+    </comps>
+  </ThingDef>
+</Defs>

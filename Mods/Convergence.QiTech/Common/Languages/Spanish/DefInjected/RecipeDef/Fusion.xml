@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_QT_InfuseSpiritJade.label>infundir jade espiritual</CVG_QT_InfuseSpiritJade.label>
+  <CVG_QT_InfuseSpiritJade.description>Remojar jade común en un baño de piedra espiritual disuelta bajo un campo de qi hasta que beba: quince de jade espiritual con diez de jade y dos piedras espirituales.</CVG_QT_InfuseSpiritJade.description>
+  <CVG_QT_InfuseSpiritJade.jobString>Infundiendo jade espiritual.</CVG_QT_InfuseSpiritJade.jobString>
+  <CVG_InstallQiBionicArm.label>instalar brazo biónico de qi</CVG_InstallQiBionicArm.label>
+  <CVG_InstallQiBionicArm.description>Instalar un brazo biónico de qi.</CVG_InstallQiBionicArm.description>
+  <CVG_InstallQiBionicArm.jobString>Instalando brazo biónico de qi.</CVG_InstallQiBionicArm.jobString>
+  <CVG_InstallQiBionicLeg.label>instalar pierna biónica de qi</CVG_InstallQiBionicLeg.label>
+  <CVG_InstallQiBionicLeg.description>Instalar una pierna biónica de qi.</CVG_InstallQiBionicLeg.description>
+  <CVG_InstallQiBionicLeg.jobString>Instalando pierna biónica de qi.</CVG_InstallQiBionicLeg.jobString>
+  <CVG_InstallQiBionicEye.label>instalar ojo biónico de qi</CVG_InstallQiBionicEye.label>
+  <CVG_InstallQiBionicEye.description>Instalar un ojo biónico de qi.</CVG_InstallQiBionicEye.description>
+  <CVG_InstallQiBionicEye.jobString>Instalando ojo biónico de qi.</CVG_InstallQiBionicEye.jobString>
+  <CVG_TemperGrade1.label>templar a grado espiritual 1</CVG_TemperGrade1.label>
+  <CVG_TemperGrade1.description>Templar en qi un arma de grado espiritual 0: conserva todo lo que tenía, sube a grado espiritual 1 (toda su fuerza hasta el primer reino) y gana un nivel de calidad, hasta legendaria.</CVG_TemperGrade1.description>
+  <CVG_TemperGrade1.jobString>Templando un arma.</CVG_TemperGrade1.jobString>
+  <CVG_TemperGrade1Bioferrite.label>templar a grado espiritual 1 (bioferrita)</CVG_TemperGrade1Bioferrite.label>
+  <CVG_TemperGrade1Bioferrite.description>Templar en qi un arma de grado espiritual 0: conserva todo lo que tenía, sube a grado espiritual 1 (toda su fuerza hasta el primer reino) y gana un nivel de calidad, hasta legendaria. La bioferrita de las entidades del vacío reemplaza al jade y los cristales: caos templado en qi, en lo que los herreros prefieren no pensar.</CVG_TemperGrade1Bioferrite.description>
+  <CVG_TemperGrade1Bioferrite.jobString>Templando un arma.</CVG_TemperGrade1Bioferrite.jobString>
+  <CVG_TemperGrade2.label>templar a grado espiritual 2</CVG_TemperGrade2.label>
+  <CVG_TemperGrade2.description>Templar en qi un arma de grado espiritual 1: conserva todo lo que tenía, sube a grado espiritual 2 (toda su fuerza hasta Establecimiento de Fundación) y gana un nivel de calidad, hasta legendaria.</CVG_TemperGrade2.description>
+  <CVG_TemperGrade2.jobString>Templando un arma.</CVG_TemperGrade2.jobString>
+  <CVG_TemperGrade2Bioferrite.label>templar a grado espiritual 2 (bioferrita)</CVG_TemperGrade2Bioferrite.label>
+  <CVG_TemperGrade2Bioferrite.description>Templar en qi un arma de grado espiritual 1: conserva todo lo que tenía, sube a grado espiritual 2 (toda su fuerza hasta Establecimiento de Fundación) y gana un nivel de calidad, hasta legendaria. La bioferrita de las entidades del vacío reemplaza al jade y los cristales: caos templado en qi, en lo que los herreros prefieren no pensar.</CVG_TemperGrade2Bioferrite.description>
+  <CVG_TemperGrade2Bioferrite.jobString>Templando un arma.</CVG_TemperGrade2Bioferrite.jobString>
+  <CVG_TemperGrade3.label>templar a grado espiritual 3</CVG_TemperGrade3.label>
+  <CVG_TemperGrade3.description>Templar en qi un arma de grado espiritual 2: conserva todo lo que tenía, sube a grado espiritual 3 (toda su fuerza hasta el Núcleo Dorado) y gana un nivel de calidad, hasta legendaria.</CVG_TemperGrade3.description>
+  <CVG_TemperGrade3.jobString>Templando un arma.</CVG_TemperGrade3.jobString>
+  <CVG_TemperGrade3Bioferrite.label>templar a grado espiritual 3 (bioferrita)</CVG_TemperGrade3Bioferrite.label>
+  <CVG_TemperGrade3Bioferrite.description>Templar en qi un arma de grado espiritual 2: conserva todo lo que tenía, sube a grado espiritual 3 (toda su fuerza hasta el Núcleo Dorado) y gana un nivel de calidad, hasta legendaria. La bioferrita de las entidades del vacío reemplaza al jade y los cristales: caos templado en qi, en lo que los herreros prefieren no pensar.</CVG_TemperGrade3Bioferrite.description>
+  <CVG_TemperGrade3Bioferrite.jobString>Templando un arma.</CVG_TemperGrade3Bioferrite.jobString>
+  <CVG_TemperGrade4.label>templar a grado espiritual 4</CVG_TemperGrade4.label>
+  <CVG_TemperGrade4.description>Templar en qi un arma de grado espiritual 3: conserva todo lo que tenía, sube a grado espiritual 4 (toda su fuerza hasta el cuarto reino) y gana un nivel de calidad, hasta legendaria.</CVG_TemperGrade4.description>
+  <CVG_TemperGrade4.jobString>Templando un arma.</CVG_TemperGrade4.jobString>
+  <CVG_TemperGrade4Bioferrite.label>templar a grado espiritual 4 (bioferrita)</CVG_TemperGrade4Bioferrite.label>
+  <CVG_TemperGrade4Bioferrite.description>Templar en qi un arma de grado espiritual 3: conserva todo lo que tenía, sube a grado espiritual 4 (toda su fuerza hasta el cuarto reino) y gana un nivel de calidad, hasta legendaria. La bioferrita de las entidades del vacío reemplaza al jade y los cristales: caos templado en qi, en lo que los herreros prefieren no pensar.</CVG_TemperGrade4Bioferrite.description>
+  <CVG_TemperGrade4Bioferrite.jobString>Templando un arma.</CVG_TemperGrade4Bioferrite.jobString>
+  <CVG_TemperGrade5.label>templar a grado espiritual 5</CVG_TemperGrade5.label>
+  <CVG_TemperGrade5.description>Templar en qi un arma de grado espiritual 4: conserva todo lo que tenía, sube a grado espiritual 5 (toda su fuerza hasta el quinto reino) y gana un nivel de calidad, hasta legendaria.</CVG_TemperGrade5.description>
+  <CVG_TemperGrade5.jobString>Templando un arma.</CVG_TemperGrade5.jobString>
+  <CVG_TemperGrade5Bioferrite.label>templar a grado espiritual 5 (bioferrita)</CVG_TemperGrade5Bioferrite.label>
+  <CVG_TemperGrade5Bioferrite.description>Templar en qi un arma de grado espiritual 4: conserva todo lo que tenía, sube a grado espiritual 5 (toda su fuerza hasta el quinto reino) y gana un nivel de calidad, hasta legendaria. La bioferrita de las entidades del vacío reemplaza al jade y los cristales: caos templado en qi, en lo que los herreros prefieren no pensar.</CVG_TemperGrade5Bioferrite.description>
+  <CVG_TemperGrade5Bioferrite.jobString>Templando un arma.</CVG_TemperGrade5Bioferrite.jobString>
+  <CVG_TemperGrade6.label>templar a grado espiritual 6</CVG_TemperGrade6.label>
+  <CVG_TemperGrade6.description>Templar en qi un arma de grado espiritual 5: conserva todo lo que tenía, sube a grado espiritual 6 (toda su fuerza hasta el sexto reino) y gana un nivel de calidad, hasta legendaria.</CVG_TemperGrade6.description>
+  <CVG_TemperGrade6.jobString>Templando un arma.</CVG_TemperGrade6.jobString>
+  <CVG_TemperGrade6Bioferrite.label>templar a grado espiritual 6 (bioferrita)</CVG_TemperGrade6Bioferrite.label>
+  <CVG_TemperGrade6Bioferrite.description>Templar en qi un arma de grado espiritual 5: conserva todo lo que tenía, sube a grado espiritual 6 (toda su fuerza hasta el sexto reino) y gana un nivel de calidad, hasta legendaria. La bioferrita de las entidades del vacío reemplaza al jade y los cristales: caos templado en qi, en lo que los herreros prefieren no pensar.</CVG_TemperGrade6Bioferrite.description>
+  <CVG_TemperGrade6Bioferrite.jobString>Templando un arma.</CVG_TemperGrade6Bioferrite.jobString>
+</LanguageData>

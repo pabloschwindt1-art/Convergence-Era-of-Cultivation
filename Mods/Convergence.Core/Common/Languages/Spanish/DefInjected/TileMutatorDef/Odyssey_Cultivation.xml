@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_SpiritVeins.label>vetas espirituales</CVG_SpiritVeins.label>
+  <CVG_SpiritVeins.description>Desde la Convergencia el qi se juntó en la roca de este lugar: hay vetas de piedra espiritual y de jade espiritual en su piedra.</CVG_SpiritVeins.description>
+  <CVG_SectCache.label>escondite de secta</CVG_SectCache.label>
+  <CVG_SectCache.description>Una secta que no sobrevivió a la Convergencia escondió aquí su tesoro: piedras espirituales, jade y alguna tablilla o píldora, todavía esperando que alguien vuelva a buscarlos.</CVG_SectCache.description>
+  <CVG_FallenCultivator.label>cultivador caído</CVG_FallenCultivator.label>
+  <CVG_FallenCultivator.description>Alguien vino a buscar algo a este lugar y no se fue. Lo que llevaba encima sigue con él.</CVG_FallenCultivator.description>
+</LanguageData>

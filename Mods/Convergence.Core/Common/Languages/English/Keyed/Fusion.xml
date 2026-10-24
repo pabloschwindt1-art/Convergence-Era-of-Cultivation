@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Koi_StageUp>{PAWN_nameDef} ate the silk koi and rose to stage {2} of {1}.</CVG_Koi_StageUp>
+  <CVG_Stat_AdvanceStage>Chance to rise a stage</CVG_Stat_AdvanceStage>
+  <CVG_Stat_AdvanceStageDesc>Chance that eating it raises the eater one stage within the current realm of each path they follow. It never crosses into the next realm: that still needs a breakthrough.</CVG_Stat_AdvanceStageDesc>
+</LanguageData>

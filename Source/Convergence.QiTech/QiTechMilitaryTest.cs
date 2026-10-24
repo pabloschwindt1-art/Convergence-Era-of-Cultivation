@@ -223,7 +223,7 @@ namespace Convergence.QiTech
             {
                 p = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Colonist, Faction.OfPlayer, forceGenerateNewPawn: true));
                 var c = CompCultivator.For(p);
-                if (c == null || (!c.HasRoot && c.RealmLevel == 0)) return p;
+                if ((c == null || (!c.HasRoot && c.RealmLevel == 0)) && !(p.skills?.GetSkill(SkillDefOf.Crafting).TotallyDisabled ?? true)) return p;
                 p.Destroy();
             }
             Check(false, "could not generate a colonist without a spirit root");

@@ -68,6 +68,8 @@ namespace Convergence
         public bool IsConnector => Props.radius > 0f;
         public virtual bool IsConsumer => Props.consumeDay > 0f;
         public bool IsStorage => Props.storageCapacity > 0f;
+        /// <summary>Fracción de lo almacenado que se pierde por día (el acumulador de qi de Qi-Tech pierde menos con energía).</summary>
+        public virtual float LeakPerDay => Props.leakPerDay;
         public bool IsCondenser => Props.condenseDay > 0f && Props.condenseProduct != null;
         private float condensed;
 
@@ -342,7 +344,7 @@ namespace Convergence
                     if (nd.IsStorage) { storages.Add(nd); cap += nd.Props.storageCapacity; stored += nd.Stored; }
                 }
                 if (dt > 0f)
-                    foreach (var s in storages) s.Stored -= s.Stored * s.Props.leakPerDay * dt;
+                    foreach (var s in storages) s.Stored -= s.Stored * s.LeakPerDay * dt;
                 stored = storages.Sum(s => s.Stored);
                 float delta = (supply - demand) * dt;
                 if (dt <= 0f) net.Satisfied = supply >= demand || stored > 0f;

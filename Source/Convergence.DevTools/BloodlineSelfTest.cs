@@ -27,6 +27,7 @@ namespace Convergence
             ResourceSelfTest.Run();
             if (BloodlineUtility.AnyBloodlines) Run(allowConvergence: true);
             TraitSelfTest.Run();
+            FusionSelfTest.Run();
         }
 
         /// <param name="allowConvergence">

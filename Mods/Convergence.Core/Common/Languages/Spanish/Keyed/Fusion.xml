@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Koi_StageUp>{PAWN_nameDef} se comió el koi de seda y subió a la etapa {2} de {1}.</CVG_Koi_StageUp>
+  <CVG_Stat_AdvanceStage>Chance de subir una etapa</CVG_Stat_AdvanceStage>
+  <CVG_Stat_AdvanceStageDesc>Chance de que comerlo suba una etapa dentro del reino actual de cada camino que sigue quien lo come. Nunca pasa al reino siguiente: eso sigue necesitando un avance.</CVG_Stat_AdvanceStageDesc>
+</LanguageData>

@@ -37,6 +37,11 @@ namespace Convergence
         public HediffDef sovereignHediff;
         /// <summary>Piedras espirituales que deja al morir, por rango (índice 0 = rango 1).</summary>
         public List<int> deathStonesByLevel = new List<int>();
+        /// <summary>
+        /// Reino equivalente por rango (índice 0 = rango 1) para la supresión de reino: el daño de un arma de grado menor se
+        /// reduce como contra un cultivador de ese reino (Core: <see cref="BeastAndChaosDamage"/>). Solo las armas de qi pegan entero.
+        /// </summary>
+        public List<int> realmByLevel = new List<int> { 1, 1, 2, 2, 3, 3 };
     }
 
     /// <summary>

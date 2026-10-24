@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- In space qi is scarce (plan de fusion, 2026-10-23): cultivating in orbit is slow, except in the forgotten realms. -->
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/BiomeDef[defName="Space" or defName="Orbit"]</xpath>
+    <value>
+      <li Class="Convergence.DefModExtension_MapQi">
+        <ambientFactor>0.3</ambientFactor>
+      </li>
+    </value>
+  </Operation>
+
+  <!-- Landmarks of the planet can carry spirit veins, a sect cache or a fallen cultivator. -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>Defs/LandmarkDef[defName="AncientQuarry" or defName="Cavern" or defName="Chasm" or defName="Crevasse" or defName="Hollow" or defName="Plateau" or defName="Valley" or defName="LavaCrater"]/mutatorChances</xpath>
+    <value>
+      <CVG_SpiritVeins>0.3</CVG_SpiritVeins>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>Defs/LandmarkDef[defName="AbandonedColonyOutlander" or defName="AbandonedColonyTribal" or defName="AncientGarrison" or defName="AncientWarehouse" or defName="Ruins" or defName="FrozenRuins"]/mutatorChances</xpath>
+    <value>
+      <CVG_SectCache>0.2</CVG_SectCache>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>Defs/LandmarkDef[defName="AncientGarrison" or defName="AncientInfestedSettlement" or defName="AncientLaunchSite" or defName="Ruins" or defName="FrozenRuins" or defName="TerraformingScar"]/mutatorChances</xpath>
+    <value>
+      <CVG_FallenCultivator>0.2</CVG_FallenCultivator>
+    </value>
+  </Operation>
+</Patch>

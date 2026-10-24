@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- High realms resist the psychic howl of the void (plan de fusion, 2026-10-23): less psychic sensitivity from realm 2 up. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/StatDef[defName="PsychicSensitivity"]/parts</xpath>
+    <value>
+      <li Class="Convergence.StatPart_RealmPsychic">
+        <perRealm>0.15</perRealm>
+        <minFactor>0.4</minFactor>
+      </li>
+    </value>
+  </Operation>
+</Patch>

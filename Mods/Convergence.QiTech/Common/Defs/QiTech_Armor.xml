@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Qi armor (plan de fusion, 2026-10-23): the vanilla flak vest, flak pants and flak helmet with about 15% more armor, part of
+    the steel swapped for spirit stones and jade, and resistance to the primordial chaos (CVG_ChaosResistance). The helmet also
+    shields from the psychic effects of the void like the vanilla psychic foil helmet. Made at the qi forge.
+    Art by the user: icons in Things/Item/Apparel/CVG/QiTech; the worn helmet in Things/Pawn/Humanlike/Apparel/CVG/QiTech.
+    The worn vest uses the vanilla flak vest, dark grey, until its own art exists.
+  -->
+
+  <ResearchProjectDef>
+    <defName>CVG_Research_QiArmor</defName>
+    <tab>CVG_SpiritualEngineering</tab>
+    <label>qi armor</label>
+    <description>Flak plates quenched in qi and lined with jade, so that a strike carrying qi loses part of its strength before it reaches the body. Unlocks the qi vest, qi pants and qi helmet at the qi forge. The helmet visor is etched with the calming seal of the Nine Temperings, which mortal soldiers swear keeps the whispers of the void out of their heads.</description>
+    <baseCost>1200</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>CVG_Research_QiForging</li>
+      <li>FlakArmor</li>
+    </prerequisites>
+    <researchViewX>1</researchViewX>
+    <researchViewY>5</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ThingDef Name="CVG_QiArmorBase" ParentName="ApparelMakeableBase" Abstract="True">
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers Inherit="False">
+        <li>CVG_QiForge</li>
+      </recipeUsers>
+      <researchPrerequisite>CVG_Research_QiArmor</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Armor</li>
+    </tradeTags>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_QiArmorBase">
+    <defName>CVG_Apparel_QiVest</defName>
+    <label>qi vest</label>
+    <description>A flak vest whose plates were quenched in qi and backed with thin jade tiles. It stops bullets a little better than its mortal model and takes some of the bite out of the claws of the void. Sect disciples who strip one off a dead raider usually keep wearing it, and pretend they found it in a ruin.</description>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+      <texPath>Things/Item/Apparel/CVG/QiTech/QiFlakVest</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.90</drawSize>
+    </graphicData>
+    <statBases>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-2</Beauty>
+      <WorkToMake>10000</WorkToMake>
+      <MaxHitPoints>230</MaxHitPoints>
+      <Mass>4</Mass>
+      <Flammability>0.5</Flammability>
+      <ArmorRating_Sharp>1.15</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.42</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.31</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+      <CVG_ChaosResistance>0.15</CVG_ChaosResistance>
+    </equippedStatOffsets>
+    <costList>
+      <Cloth>30</Cloth>
+      <Steel>40</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <CVG_SpiritStone>10</CVG_SpiritStone>
+      <Jade>5</Jade>
+    </costList>
+    <recipeMaker>
+      <displayPriority>300</displayPriority>
+    </recipeMaker>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/FlakVest/FlakVest</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>CVG_QiTech</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Single">
+      <color>(0.24,0.26,0.27)</color>
+    </colorGenerator>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_QiArmorBase">
+    <defName>CVG_Apparel_QiPants</defName>
+    <label>qi pants</label>
+    <description>Flak pants with qi-quenched plates sewn over the thighs and knees, and a jade thread through every seam. A little tougher than the mortal pattern and a little kinder to the legs that have to run from the void. Old soldiers of the Iron Calamity wore something very like them, before anyone knew what the jade thread was for.</description>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+      <texPath>Things/Item/Apparel/CVG/QiTech/QiFlakPants</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.90</drawSize>
+    </graphicData>
+    <statBases>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-2</Beauty>
+      <WorkToMake>10000</WorkToMake>
+      <MaxHitPoints>230</MaxHitPoints>
+      <Mass>4</Mass>
+      <Flammability>0.5</Flammability>
+      <ArmorRating_Sharp>0.63</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.12</ArmorRating_Heat>
+      <Insulation_Cold>3.5</Insulation_Cold>
+      <Insulation_Heat>1</Insulation_Heat>
+      <EquipDelay>5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.12</MoveSpeed>
+      <CVG_ChaosResistance>0.05</CVG_ChaosResistance>
+    </equippedStatOffsets>
+    <costList>
+      <Cloth>30</Cloth>
+      <Steel>40</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <CVG_SpiritStone>8</CVG_SpiritStone>
+      <Jade>3</Jade>
+    </costList>
+    <recipeMaker>
+      <displayPriority>301</displayPriority>
+    </recipeMaker>
+    <apparel>
+      <bodyPartGroups>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li>OnSkin</li>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>CVG_QiTech</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Single">
+      <color>(0.30,0.32,0.33)</color>
+    </colorGenerator>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_QiArmorBase">
+    <defName>CVG_Apparel_QiHelmet</defName>
+    <label>qi helmet</label>
+    <description>A dark flak helmet with a jade visor and a ring of glowing seals around the crown. The seals are the calming script of the Nine Temperings, cut by machine: they keep the psychic howl of the void out almost as well as a psychic foil helmet, and the qi in the plates blunts the harm of its entities. Soldiers say the visor hums when something from the dark is close.</description>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+      <texPath>Things/Item/Apparel/CVG/QiTech/QiHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <statBases>
+      <Flammability>0.6</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-2</Beauty>
+      <WorkToMake>9000</WorkToMake>
+      <MaxHitPoints>140</MaxHitPoints>
+      <Mass>1.3</Mass>
+      <ArmorRating_Sharp>0.74</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.36</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.30</ArmorRating_Heat>
+      <Insulation_Cold>2</Insulation_Cold>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <PsychicSensitivity>-0.9</PsychicSensitivity>
+      <CVG_ChaosResistance>0.10</CVG_ChaosResistance>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>30</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <CVG_SpiritStone>8</CVG_SpiritStone>
+      <Jade>4</Jade>
+    </costList>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <displayPriority>302</displayPriority>
+    </recipeMaker>
+    <apparel>
+      <parentTagDef>ApparelHead</parentTagDef>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/QiTech/QiHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>CVG_QiTech</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
+  </ThingDef>
+</Defs>

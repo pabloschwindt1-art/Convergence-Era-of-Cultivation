@@ -4,7 +4,7 @@
   <Operation Class="PatchOperationAdd">
     <success>Always</success>
     <xpath>/Defs/BiomeDef/fishTypes/freshwater_Uncommon</xpath>
-    <value><CVG_Fish_GoldenCarp>0.25</CVG_Fish_GoldenCarp><CVG_Fish_JadeEel>0.2</CVG_Fish_JadeEel><CVG_Fish_ThunderFish>0.15</CVG_Fish_ThunderFish></value>
+    <value><CVG_Fish_GoldenCarp>0.25</CVG_Fish_GoldenCarp><CVG_Fish_JadeEel>0.2</CVG_Fish_JadeEel><CVG_Fish_ThunderFish>0.15</CVG_Fish_ThunderFish><CVG_Fish_SilkKoi>0.04</CVG_Fish_SilkKoi></value>
   </Operation>
   <Operation Class="PatchOperationAdd">
     <success>Always</success>

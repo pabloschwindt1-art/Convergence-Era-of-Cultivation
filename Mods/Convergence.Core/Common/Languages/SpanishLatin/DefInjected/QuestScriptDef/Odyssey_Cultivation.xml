@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_OpportunitySite_ForgottenRealm.questNameRules.rulesStrings>
+    <li>questName->el reino olvidado de [realmName]</li>
+    <li>questName->[realmName], a la deriva</li>
+    <li>realmName->el Pico de la Aguja de Nubes</li>
+    <li>realmName->la Terraza de Jade</li>
+    <li>realmName->el Salón de los Nueve Vientos</li>
+    <li>realmName->el Pabellón del Loto Celeste</li>
+    <li>realmName->la Secta de la Estrella Caída</li>
+    <li>realmName->el Monte Qingxu</li>
+    <li>realmName->la Escalera de los Mil Pasos</li>
+  </CVG_OpportunitySite_ForgottenRealm.questNameRules.rulesStrings>
+  <CVG_OpportunitySite_ForgottenRealm.questDescriptionRules.rulesStrings>
+    <li>questDescription->[discoveryMethod] un fragmento de Jiuxiao a la deriva en órbita: un reino olvidado arrancado de los cielos altos cuando la Convergencia rompió el cielo. Su qi es tan espeso que se siente en la lengua, sus tesoros están intactos y algo todavía custodia sus salones.\n\nSe puede viajar a lugares orbitales con gravinaves, lanzaderas o cápsulas de transporte.</li>
+  </CVG_OpportunitySite_ForgottenRealm.questDescriptionRules.rulesStrings>
+</LanguageData>

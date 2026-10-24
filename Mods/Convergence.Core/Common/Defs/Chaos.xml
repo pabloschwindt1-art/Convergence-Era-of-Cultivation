@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Primordial chaos (Anomaly, plan de fusion 2026-10-23): what the void of Anomaly is in the lore of the mod (Hundun). Core
+    because the Core already requires every DLC and several modules use the chaos core.
+  -->
+
+  <!-- Less damage from the entities of the void (Core: BeastAndChaosDamage). Qi armor and qi weapons give it; realms too. -->
+  <StatDef>
+    <defName>CVG_ChaosResistance</defName>
+    <label>chaos resistance</label>
+    <description>How much of the harm done by the entities of the void this person shrugs off. Qi-tempered armor and weapons carry a little of the order of qi against the primordial chaos, and so does a cultivator of a high realm. It reduces the damage received from entities.</description>
+    <category>PawnCombat</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <maxValue>0.8</maxValue>
+    <hideAtValue>0</hideAtValue>
+    <toStringStyle>PercentZero</toStringStyle>
+    <showOnAnimals>false</showOnAnimals>
+    <showOnMechanoids>false</showOnMechanoids>
+    <showOnEntities>false</showOnEntities>
+    <displayPriorityInCategory>3900</displayPriorityInCategory>
+    <parts>
+      <li Class="Convergence.StatPart_RealmChaosResistance">
+        <perRealm>0.08</perRealm>
+      </li>
+    </parts>
+  </StatDef>
+
+  <!-- ================= Chaos core: what an entity of the void leaves when it dies (Core: Patch_Pawn_Kill_ChaosDrops) ================= -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CVG_ChaosCore</defName>
+    <label>chaos core</label>
+    <description>A knot of primordial chaos that hardens where an entity of the void dies: black stone veined with red light that never settles into one shape. The sects of Jiuxiao call the void Hundun, the faceless emperor of the world before the Dao, and they say each core is a scrap of his body. It is the heart of the chaos talismans and of the forbidden pills of the Blood Moon.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/Chaos/ChaosCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>ChunkRock_Drop</soundInteract>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <stackLimit>25</stackLimit>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <statBases>
+      <MarketValue>90</MarketValue>
+      <Mass>0.4</Mass>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <tradeability>All</tradeability>
+  </ThingDef>
+
+  <!-- ================= Chaos talismans: single use, made at the vanilla bioferrite shaper ================= -->
+  <ThingDef Name="CVG_ChaosTalismanBase" ParentName="ResourceBase" Abstract="True">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <statBases>
+      <MarketValue>200</MarketValue>
+      <Mass>0.05</Mass>
+      <Flammability>0.5</Flammability>
+      <WorkToMake>2500</WorkToMake>
+    </statBases>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <tradeability>All</tradeability>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>BioferriteShaper</li>
+      </recipeUsers>
+      <researchPrerequisite>BioferriteShaping</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <displayPriority>600</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_ChaosTalismanBase">
+    <defName>CVG_ChaosTalisman_Ruin</defName>
+    <label>talisman of ruin</label>
+    <description>A strip of bioferrite paper wrapped around a chaos core, written with the seal that tells chaos where to go. Tear it and the core bursts: every hostile within 6 cells takes 35 damage of raw void. The Blood Moon Cult swears it invented the seal; the Formless Sword swears it stole it back.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/Chaos/ChaosTalisman_Ruin</texPath>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use {0_label}</useLabel>
+        <useDuration>60</useDuration>
+      </li>
+      <li Class="Convergence.CompProperties_UseEffectSpiritBurst">
+        <damageDef>Bomb</damageDef>
+        <amount>35</amount>
+        <radius>5.9</radius>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+    <costList>
+      <CVG_ChaosCore>1</CVG_ChaosCore>
+      <Bioferrite>10</Bioferrite>
+      <CVG_SpiritStone>5</CVG_SpiritStone>
+    </costList>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_ChaosTalismanBase">
+    <defName>CVG_ChaosTalisman_Dread</defName>
+    <label>talisman of dread</label>
+    <description>A black talisman written with an eye that is not quite an eye. Tear it and for a moment everyone nearby sees what the void sees: hostile people within 8 cells flee in terror, and beasts and entities freeze for a few seconds. The ink is chaos core dissolved in bioferrite; those who write it do not sleep well.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/Chaos/ChaosTalisman_Dread</texPath>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use {0_label}</useLabel>
+        <useDuration>60</useDuration>
+      </li>
+      <li Class="Convergence.CompProperties_UseEffectChaosDread">
+        <radius>7.9</radius>
+        <stunTicks>300</stunTicks>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+    <costList>
+      <CVG_ChaosCore>1</CVG_ChaosCore>
+      <Bioferrite>10</Bioferrite>
+    </costList>
+  </ThingDef>
+
+  <ThingDef ParentName="CVG_ChaosTalismanBase">
+    <defName>CVG_ChaosTalisman_Mending</defName>
+    <label>talisman of mending</label>
+    <description>A red talisman that smells of iron and wet earth. Tear it and the chaos inside closes the wounds of every ally within 5 cells (up to 40 points each), the way flesh closes over a splinter: fast and without asking. Those healed hear whispers for days. Healers of the Nine Temperings refuse to touch it; their patients do not always agree.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/Chaos/ChaosTalisman_Mending</texPath>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use {0_label}</useLabel>
+        <useDuration>60</useDuration>
+      </li>
+      <li Class="Convergence.CompProperties_UseEffectChaosMending">
+        <radius>4.9</radius>
+        <healAmount>40</healAmount>
+        <thought>CVG_ChaosWhispers</thought>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+    <costList>
+      <CVG_ChaosCore>1</CVG_ChaosCore>
+      <Bioferrite>5</Bioferrite>
+      <MedicineHerbal>2</MedicineHerbal>
+    </costList>
+  </ThingDef>
+
+  <ThoughtDef>
+    <defName>CVG_ChaosWhispers</defName>
+    <durationDays>3</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>whispers of chaos</label>
+        <description>My wounds closed by themselves, and since then something talks to me when it is quiet.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <JobDef>
+    <defName>CVG_TalkChaosSage</defName>
+    <driverClass>Convergence.JobDriver_TalkChaosSage</driverClass>
+    <reportString>talking to TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+  <!-- ================= The sage of the void: arrives when the monolith awakens (Core: GameComponent_ChaosSage) ================= -->
+  <Convergence.MentorDef>
+    <defName>CVG_Mentor_ChaosSage</defName>
+    <label>the sage of the void</label>
+    <description>A wandering hermit of no sect who has spent three centuries following the places where the world thins. He arrives when the monolith awakens.</description>
+    <archetype>hermit of the void</archetype>
+    <commonality>0</commonality>
+    <pawnKind>Colonist</pawnKind>
+    <firstName>Wuming</firstName>
+    <nickName>Hermit Mo</nickName>
+    <lastName>Mo</lastName>
+    <gender>Male</gender>
+    <biologicalAge>74</biologicalAge>
+    <chronologicalAge>390</chronologicalAge>
+    <traits>
+      <li>Ascetic</li>
+      <li>GreatMemory</li>
+    </traits>
+    <rootGrade>CVG_RootGrade_Superior</rootGrade>
+    <rootElements>
+      <li>CVG_Element_Water</li>
+      <li>CVG_Element_Earth</li>
+    </rootElements>
+    <realm>CVG_Realm_GoldenCore</realm>
+    <stage>2</stage>
+    <foundationQuality>1.2</foundationQuality>
+    <apparel>
+      <li>Apparel_Pants</li>
+      <li MayRequire="prospero1088.convergence.apparel">CVG_Apparel_RobeElder</li>
+    </apparel>
+    <manuals>
+      <li>CVG_Manual_MountainHeart</li>
+    </manuals>
+    <farewellItems>
+      <CVG_ChaosCore>2</CVG_ChaosCore>
+      <CVG_SpiritStone>30</CVG_SpiritStone>
+    </farewellItems>
+    <farewellChoice>
+      <li>CVG_ChaosTalisman_Ruin</li>
+      <li>CVG_ChaosTalisman_Dread</li>
+      <li>CVG_ChaosTalisman_Mending</li>
+    </farewellChoice>
+    <arrivalWalkerText>The air over the monolith is still humming when an old man in a grey robe walks in from the edge of the map, leaning on a staff of black wood. He does not look at the colonists; he looks at the monolith, the way one looks at an old enemy who has woken up.\n\n{PAWN_nameDef} sits down at a safe distance and waits for someone to come and talk to him. He will stay with the colony until the first thing comes out of the dark.</arrivalWalkerText>
+    <farewellText>The last of the creatures of the void lies still. {PAWN_nameDef} stands, brushes the dust from his robe and nods, as if a debt had been paid.\n\n"The door is open now. It will not close. Feed your qi, keep your fear small, and do not listen to what speaks from the dark," he says, and walks out the way he came.\n\nWhere he sat he left a sample of what the chaos gives: chaos cores, spirit stones and a talisman written in his own hand.</farewellText>
+  </Convergence.MentorDef>
+</Defs>

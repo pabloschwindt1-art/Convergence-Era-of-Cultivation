@@ -47,6 +47,9 @@ namespace Convergence
     {
         public ThingDef mineable;
         public IntRange count = new IntRange(6, 12);
+        /// <summary>Otra veta que puede traer cada roca del meteorito (p. ej. jade espiritual) y su chance por roca.</summary>
+        public ThingDef extraMineable;
+        public float extraChance;
     }
 
     public class IncidentWorker_SpiritMeteor : IncidentWorker_MeteoriteImpact
@@ -61,7 +64,7 @@ namespace Convergence
             int n = ext.count.RandomInRange;
             for (int i = 0; i < n; i++)
             {
-                var b = (Building)ThingMaker.MakeThing(ext.mineable);
+                var b = (Building)ThingMaker.MakeThing(ext.extraMineable != null && Rand.Chance(ext.extraChance) ? ext.extraMineable : ext.mineable);
                 b.canChangeTerrainOnDestroyed = false;
                 list.Add(b);
             }

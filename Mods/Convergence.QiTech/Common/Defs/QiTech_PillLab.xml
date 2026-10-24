@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Qi pill laboratory (plan de fusion, 2026-10-23; user: an alchemy bench of spiritual engineering): the qi version of the vanilla
+    drug lab. It makes every pill of the alchemy furnace (Qi-Tech: PillLabRecipes adds them at startup) with the same quality
+    table and the same chance to fail, but the quality stops at excellent unless an alchemist works it (Core:
+    DefModExtension_MachineAlchemy). It also refines spirit jade better than the refining furnace. Grid power + spirit stones.
+    Art by the user: Things/Building/CVG/QiTech/PillLab (drawn taller than the 3x1 footprint, like the qi forge).
+  -->
+
+  <ResearchProjectDef>
+    <defName>CVG_Research_QiAlchemy</defName>
+    <tab>CVG_SpiritualEngineering</tab>
+    <label>machine alchemy</label>
+    <description>A powered laboratory that does what an alchemist does by feel: it weighs the herbs, holds the cauldron at the right heat and stirs it in the five-element rhythm. Unlocks the qi pill laboratory. The pills come out good, sometimes excellent, never celestial: the Heavenly Cauldron Pavilion says the last step still needs a heart, and for once the engineers agree.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>CVG_Research_QiTech</li>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>5</researchViewY>
+    <modExtensions>
+      <li Class="Convergence.QiTech.DefModExtension_RequiresConvergence" />
+    </modExtensions>
+  </ResearchProjectDef>
+
+  <ThingDef ParentName="BenchBase">
+    <defName>CVG_QT_PillLab</defName>
+    <label>qi pill laboratory</label>
+    <description>A long bench of black iron and brass around an electric alchemy cauldron, with jade control panels, pill trays and a rack of flasks fed by copper pipes. It refines every pill an alchemy furnace can, with the same risk of a ruined batch, but by machine the pills stop at excellent; an alchemist at the panel can push them further, even to celestial. It also infuses common jade with qi into spirit jade, better than any furnace. Burns a little spirit stone per batch besides grid power.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/CVG/QiTech/PillLab</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,2.2)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <CVG_SpiritStone>20</CVG_SpiritStone>
+      <Jade>10</Jade>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <Mass>30</Mass>
+      <WorkToBuild>3500</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <size>(3,1)</size>
+    <designationCategory>CVG_QiTech</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_ReportWorkSpeed">
+        <workSpeedStat>WorkTableWorkSpeedFactor</workSpeedStat>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>300</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>6</fuelConsumptionRate>
+        <fuelCapacity>30</fuelCapacity>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelFilter>
+          <thingDefs>
+            <li>CVG_SpiritStone</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelLabel>spirit stones</fuelLabel>
+        <fuelGizmoLabel>Spirit stones</fuelGizmoLabel>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>4</glowRadius>
+        <glowColor>(80,220,210,0)</glowColor>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Breakdownable" />
+    </comps>
+    <building>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workTableRoomRole>Laboratory</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+    </building>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>CVG_Research_QiAlchemy</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_ReportWorkSpeedPenalties</li>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_MachineAlchemy">
+        <maxQuality>Excellent</maxQuality>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Spirit jade by infusion: the refining furnace gives 10 for the same price. -->
+  <RecipeDef>
+    <defName>CVG_QT_InfuseSpiritJade</defName>
+    <label>infuse spirit jade</label>
+    <description>Soak common jade in a bath of dissolved spirit stone under a qi field until it drinks: fifteen spirit jade from ten jade and two spirit stones.</description>
+    <jobString>Infusing spirit jade.</jobString>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>Jade</li></thingDefs></filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Jade</li>
+        <li>CVG_SpiritStone</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_SpiritJade>15</CVG_SpiritJade>
+    </products>
+    <recipeUsers>
+      <li>CVG_QT_PillLab</li>
+    </recipeUsers>
+  </RecipeDef>
+</Defs>

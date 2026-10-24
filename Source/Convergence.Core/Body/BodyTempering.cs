@@ -47,6 +47,34 @@ namespace Convergence
         }
     }
 
+    /// <summary>
+    /// Koi de seda (Odyssey, plan de fusión 2026-10-23): al comerlo, chance de subir una etapa dentro del reino actual de cada
+    /// camino que sigue. Nunca pasa de reino (eso sigue siendo un avance con tribulación).
+    /// </summary>
+    public class IngestionOutcomeDoer_AdvanceStage : IngestionOutcomeDoer
+    {
+        public float chance = 0.25f;
+
+        protected override void DoIngestionOutcomeSpecial(Pawn pawn, Thing ingested, int ingestedCount)
+        {
+            var comp = CompCultivator.For(pawn);
+            if (comp == null) return;
+            foreach (var tracker in comp.ActiveTrackers.ToList())
+            {
+                if (!tracker.Started || tracker.Stage >= tracker.Realm.stages || !Rand.Chance(chance)) continue;
+                tracker.SetStage(tracker.Stage + 1);
+                if (PawnUtility.ShouldSendNotificationAbout(pawn))
+                    Messages.Message("CVG_Koi_StageUp".Translate(pawn.Named("PAWN"), tracker.Realm.label, tracker.Stage), pawn, MessageTypeDefOf.PositiveEvent);
+            }
+        }
+
+        public override IEnumerable<StatDrawEntry> SpecialDisplayStats(ThingDef parentDef)
+        {
+            yield return new StatDrawEntry(StatCategoryDefOf.BasicsNonPawn, "CVG_Stat_AdvanceStage".Translate(), chance.ToStringPercent(),
+                "CVG_Stat_AdvanceStageDesc".Translate(), 1990);
+        }
+    }
+
     /// <summary>Marca un edificio como aparato de templado corporal (muñeco de madera, piedras de pesas…).</summary>
     public class DefModExtension_BodyTrainingSpot : DefModExtension
     {

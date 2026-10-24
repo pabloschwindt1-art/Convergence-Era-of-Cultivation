@@ -12,6 +12,35 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod).
 
+### Fusión, Anomaly y Odyssey (2026-10-24, plan de fusión)
+- **Qi-Tech: forja de qi** (versión de qi de la mesa de maquinado, sale temprano tras la Convergencia con "forja de qi"). Templa
+  cualquier arma, de qi o mortal: +1 grado espiritual y +1 nivel de calidad por templado, costo creciente por grado (piedras, jade,
+  cristal; o bioferrita), sin techo.
+- **Qi-Tech: torretas de qi para todas las torretas.** Cada torreta del juego que dispara daño (vanilla, nuestras, Vanilla
+  Expanded Security, cualquier mod) tiene su versión qi I, II y III en un desplegable del menú de construcción: cuesta lo mismo
+  que la normal más el cañón de qi de su nivel (se hace en la forja; el I es barato y temprano). Pega entero hasta el reino de su
+  grado.
+- **Qi-Tech:** escopeta y pistola de qi (grado 1); chaleco, pantalón y casco de qi (más armadura y resistencia al caos; el casco
+  frena lo psíquico como el casco de lámina psíquica); biónicos de qi (brazo, pierna, ojo: mejores que los vanilla, más
+  disonancia); laboratorio de píldoras de qi (todas las píldoras, tope excelente salvo con un alquimista; refina jade espiritual);
+  bandeja hidropónica espiritual (hierbas espirituales 50% más rápido); acumulador de qi (batería de la red de qi); proyectil de
+  mortero de qi (grado 3).
+- **Qi-Tech: mecas de qi.** Tres núcleos de qi (básico, medio, avanzado: uno por peso) que el mecanitor implanta en su meca; la
+  estación de afinación junto al recargador sube su grado hasta 3. Tras la Convergencia los mecas enemigos también traen núcleo.
+- **Core: bestias espirituales** ahora resisten las armas mortales con la misma supresión de reino que los cultivadores (rango
+  1-2 = reino 1, 3-4 = reino 2, 5-6 = reino 3); las armas, torretas y proyectiles de qi les pegan entero.
+- **Core: jade.** Más vetas de jade vanilla (0,15) y espiritual (0,12); piedra y jade espirituales salen con el taladro profundo y
+  el escáner (solo tras la Convergencia), vienen en la estrella de qi, los venden las sectas y se muelen en la mesa de cantería
+  (3 trozos de piedra + 3 piedras espirituales = 10 de jade espiritual).
+- **Core: Anomaly = caos primordial.** Al despertar el monolito llega el sabio del vacío (signo de pregunta, se le habla con clic
+  derecho): explica el caos, se queda hasta la primera amenaza y deja núcleos de caos y un talismán. Las entidades dejan núcleos de
+  caos, piedras y sangre según su rango; estudiarlas da comprensión del Dao (con riesgo de demonio interno). Tres talismanes del
+  caos en el moldeador de bioferrita (ruina, pavor, remiendo). El qi les pega +25%; los reinos altos resisten lo psíquico; nueva
+  resistencia al caos. Alchemy: píldora de sangre del caos (Luna de Sangre).
+- **Odyssey:** koi de seda (pez espiritual raro: qi y chance de subir una etapa); en órbita hay poco qi; reinos olvidados
+  (fragmentos de Jiuxiao) que encuentra el escáner orbital, con qi altísimo, guardianes mecánicos de qi y botín del mod de alta
+  calidad; los lugares notables pueden traer vetas espirituales, escondites de secta o cultivadores caídos.
+
 ### Bestias, comida, eventos y correcciones (2026-10-23, segunda tanda)
 - **Core: bestias espirituales.** Despierta cerca de la mitad del mundo (antes 1-15% de los animales comunes), con la Convergencia
   y al aparecer después. Rango 1 a 6 según la especie, alineado con los reinos (gallina 1, oso 4, trumbo 5; las grandes bestias de

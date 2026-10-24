@@ -54,6 +54,10 @@ namespace Convergence
         public List<ResearchProjectDef> teachesResearch = new List<ResearchProjectDef>();
         /// <summary>Lo que deja al irse (fragmento de jade).</summary>
         public ThingDef farewellItem;
+        /// <summary>Lo que deja además al irse (el sabio del caos: núcleos de caos, piedras).</summary>
+        public List<ThingDefCountClass> farewellItems = new List<ThingDefCountClass>();
+        /// <summary>Deja uno de estos al azar (el sabio del caos: un talismán del caos).</summary>
+        public List<ThingDef> farewellChoice = new List<ThingDef>();
 
         // Textos de cartas ({PAWN_*} = el Maestro).
         [MustTranslate] public string arrivalWalkerText;
@@ -67,7 +71,7 @@ namespace Convergence
             foreach (var e in base.ConfigErrors()) yield return e;
             if (pawnKind == null) yield return "pawnKind is null";
             if (realm == null) yield return "realm is null";
-            if (lessons.NullOrEmpty()) yield return "no lessons";
+            if (commonality > 0f && lessons.NullOrEmpty()) yield return "no lessons";
         }
     }
 

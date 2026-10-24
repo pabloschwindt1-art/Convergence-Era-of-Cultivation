@@ -7,4 +7,12 @@
   <CVG_QiConverter_ToggleDesc>Changes the direction of the conversion. Qi to electricity: consumes {1} qi/day from the network and gives {0} W. Electricity to qi: takes {0} W and gives {2} qi/day.</CVG_QiConverter_ToggleDesc>
   <CVG_QiConverter_Watts>Electricity: {0} W</CVG_QiConverter_Watts>
   <CVG_QT_RequiresConvergence>Requires the Convergence: before it, qi cannot be measured and this project cannot be started.</CVG_QT_RequiresConvergence>
+  <CVG_QiTurret_Label>{0} (qi {1})</CVG_QiTurret_Label>
+  <CVG_QiTurret_Desc>Qi version: built with a {0} in its barrel, it fires with spirit grade {1}. Its shots hit cultivators and spirit beasts up to realm {1} with full strength and strike the entities of the void a quarter harder.</CVG_QiTurret_Desc>
+  <CVG_MechQiCore_WrongMech>{0} does not fit {1}: it needs a mech of its own weight class, without a qi core.</CVG_MechQiCore_WrongMech>
+  <CVG_MechQiCore_NeedsMechanitor>Only a mechanitor can implant it.</CVG_MechQiCore_NeedsMechanitor>
+  <CVG_MechQiCore_Installed>{1} implanted a qi core in {0}.</CVG_MechQiCore_Installed>
+  <CVG_MechQiCore_Tuned>The qi core of {0} was tuned to grade {1}.</CVG_MechQiCore_Tuned>
+  <CVG_MechQiCore_KindLabel>qi {0}</CVG_MechQiCore_KindLabel>
+  <CVG_MechTuning_Inspect>Tunes qi cores up to grade {0}.</CVG_MechTuning_Inspect>
 </LanguageData>

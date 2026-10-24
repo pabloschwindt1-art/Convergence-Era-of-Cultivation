@@ -7,4 +7,12 @@
   <CVG_QiConverter_ToggleDesc>Cambia el sentido de la conversión. Qi a electricidad: consume {1} de qi/día de la red y entrega {0} W. Electricidad a qi: toma {0} W y entrega {2} de qi/día.</CVG_QiConverter_ToggleDesc>
   <CVG_QiConverter_Watts>Electricidad: {0} W</CVG_QiConverter_Watts>
   <CVG_QT_RequiresConvergence>Requiere la Convergencia: antes de ella el qi no se puede medir y este proyecto no se puede empezar.</CVG_QT_RequiresConvergence>
+  <CVG_QiTurret_Label>{0} (qi {1})</CVG_QiTurret_Label>
+  <CVG_QiTurret_Desc>Versión de qi: lleva un {0} en el cañón y dispara con grado espiritual {1}. Sus disparos pegan con toda su fuerza a cultivadores y bestias espirituales hasta el reino {1}, y un cuarto más fuerte a las entidades del vacío.</CVG_QiTurret_Desc>
+  <CVG_MechQiCore_WrongMech>{0} no le sirve a {1}: necesita un meca propio de su peso y sin núcleo de qi.</CVG_MechQiCore_WrongMech>
+  <CVG_MechQiCore_NeedsMechanitor>Solo un mecanitor puede implantarlo.</CVG_MechQiCore_NeedsMechanitor>
+  <CVG_MechQiCore_Installed>{1} le implantó un núcleo de qi a {0}.</CVG_MechQiCore_Installed>
+  <CVG_MechQiCore_Tuned>El núcleo de qi de {0} quedó afinado en grado {1}.</CVG_MechQiCore_Tuned>
+  <CVG_MechQiCore_KindLabel>{0} de qi</CVG_MechQiCore_KindLabel>
+  <CVG_MechTuning_Inspect>Afina los núcleos de qi hasta el grado {0}.</CVG_MechTuning_Inspect>
 </LanguageData>

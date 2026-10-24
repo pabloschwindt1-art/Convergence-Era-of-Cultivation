@@ -74,6 +74,12 @@ namespace Convergence
             }
         }
 
+        /// <summary>Vetas nuevas en la roca natural del mapa (lugares de Odyssey, eventos).</summary>
+        public static void SpawnLumps(Map map, ThingDef def, int count, IntRange size)
+        {
+            for (int i = 0; i < count; i++) SpawnLump(map, def, size.RandomInRange);
+        }
+
         private static void SpawnLump(Map map, ThingDef def, int size)
         {
             if (!CellFinder.TryFindRandomCell(map, c => IsPlainRock(map, c), out var start)) return;
@@ -113,6 +119,34 @@ namespace Convergence
                 if (ConvergenceMineables.IsGated(d) && (!active || !ConvergenceMineables.AllowedOn(d, map))) return 0f;
                 return d.building.mineableThing != null && d.building.mineableThing.BaseMarketValue > maxValue ? 0f : d.building.mineableScatterCommonality;
             });
+        }
+    }
+
+    /// <summary>
+    /// El escáner profundo (vanilla: CompDeepScanner elige por <c>deepCommonality</c>) no encuentra recursos de vetas de la
+    /// Convergencia antes de que ocurra, ni fuera de su clima/bioma: se elige otro.
+    /// </summary>
+    [HarmonyPatch(typeof(CompDeepScanner), "ChooseLumpThingDef")]
+    public static class Patch_CompDeepScanner_ChooseLumpThingDef
+    {
+        private static HashSet<ThingDef> gatedResources;
+
+        private static HashSet<ThingDef> GatedResources => gatedResources ??= new HashSet<ThingDef>(DefDatabase<ThingDef>.AllDefs
+            .Where(d => d.building?.mineableThing != null && ConvergenceMineables.IsGated(d)).Select(d => d.building.mineableThing));
+
+        public static bool Blocked(ThingDef resource, Map map)
+        {
+            if (resource == null || !GatedResources.Contains(resource)) return false;
+            if (!GameComponent_Convergence.Active) return true;
+            return !DefDatabase<ThingDef>.AllDefs.Any(d => d.building?.mineableThing == resource && ConvergenceMineables.IsGated(d) && ConvergenceMineables.AllowedOn(d, map));
+        }
+
+        public static void Postfix(CompDeepScanner __instance, ref ThingDef __result)
+        {
+            var map = __instance.parent?.Map;
+            if (!Blocked(__result, map)) return;
+            __result = DefDatabase<ThingDef>.AllDefs.Where(d => d.deepCommonality > 0f && !Blocked(d, map))
+                .RandomElementByWeightWithFallback(d => d.deepCommonality, __result);
         }
     }
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--
+    Jade is the second material of the mod after spirit stones (user, 2026-10-23: "vanilla jade is almost as rare as gold").
+    Vanilla jade veins: 0.065 -> 0.15 (more than silver, 0.10) and 50 per cell instead of 40.
+  -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MineableJade"]/building/mineableScatterCommonality</xpath>
+    <value><mineableScatterCommonality>0.15</mineableScatterCommonality></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MineableJade"]/building/mineableYield</xpath>
+    <value><mineableYield>50</mineableYield></value>
+  </Operation>
+
+  <!-- The long-range mineral scanner can look for spirit stone and spirit jade too (its list is this genstep's). -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/GenStepDef[defName="PreciousLump"]/genStep/mineables</xpath>
+    <value>
+      <li>CVG_MineableSpiritStone</li>
+      <li>CVG_MineableSpiritJade</li>
+    </value>
+  </Operation>
+</Patch>

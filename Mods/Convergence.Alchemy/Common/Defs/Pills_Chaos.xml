@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Demonic pill of the Blood Moon (plan de fusion, 2026-10-23: "the Blood Moon uses chaos cores in demonic arts and pills").
+    A chaos core refined with beast blood: a huge burst of qi for a heavy load of toxicity. No art of its own yet: the qi
+    recovery pill tinted blood red.
+  -->
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>CVG_ChaosBloodPill</defName>
+    <label>chaos blood pill</label>
+    <description>A pill the colour of a clot, refined from a chaos core drowned in beast blood. The Blood Moon Cult feeds them to its disciples before a raid: the dantian fills three times over in a single breath, and the chaos left behind gnaws at the body for days. Other sects call it a demonic art and forbid it, which has never made it any less popular. Restores a great deal of qi (more with higher quality) and leaves heavy toxicity.</description>
+    <graphicData>
+      <texPath>Things/Item/CVG/QiRecoveryPill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>0.7</drawSize>
+      <color>(175,45,55)</color>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <WorkToMake>2500</WorkToMake>
+      <MarketValue>120</MarketValue>
+      <Mass>0.01</Mass>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="Convergence.IngestionOutcomeDoer_GainResourceByQuality">
+          <path>CVG_Path_Qi</path>
+          <amount>150</amount>
+          <startsPath>false</startsPath>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>CVG_PillToxicity</hediffDef>
+          <severity>0.3</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>CVG_AlchemyFurnace</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Intellectual>7</Intellectual>
+      </skillRequirements>
+      <displayPriority>2240</displayPriority>
+    </recipeMaker>
+    <costList>
+      <CVG_ChaosCore>1</CVG_ChaosCore>
+      <CVG_BeastBlood>2</CVG_BeastBlood>
+      <CVG_SpiritStone>2</CVG_SpiritStone>
+    </costList>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Drug">
+        <listOrder>1140</listOrder>
+        <overdoseSeverityOffset>0~0</overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

@@ -59,7 +59,7 @@ namespace Convergence
 
         private static float OutdoorConcentration(IntVec3 cell, Map map)
         {
-            float total = Ambient;
+            float total = MapQi.AmbientFor(map, Ambient);
             float radius = Props?.outdoorRadius ?? 2.9f;
             counted.Clear();
             int cells = GenRadial.NumCellsInRadius(radius);
@@ -101,9 +101,9 @@ namespace Convergence
 
         public override float GetScore(Room room)
         {
-            float total = QiConcentrationUtility.Ambient;
-            counted.Clear();
             var map = room.Map;
+            float total = MapQi.AmbientFor(map, QiConcentrationUtility.Ambient);
+            counted.Clear();
             foreach (var c in room.Cells) total += QiConcentrationUtility.TerrainQi(c, map);
             var things = room.ContainedAndAdjacentThings;
             for (int i = 0; i < things.Count; i++)

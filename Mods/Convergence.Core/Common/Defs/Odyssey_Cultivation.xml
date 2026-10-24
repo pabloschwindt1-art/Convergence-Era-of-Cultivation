@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Odyssey (plan de fusion, 2026-10-23): cultivation inside what Odyssey brings. Landmarks of the planet can carry spirit
+    veins, a sect cache or a fallen cultivator (tile mutators, Core: OdysseyCultivation). In orbit qi is scarce (Patches:
+    Odyssey_Cultivation), except in the forgotten realms: fragments of Jiuxiao adrift in the void, found by the orbital scanner
+    like the vanilla abandoned platforms, with very high qi, qi mech guardians and the mod's own loot at high quality.
+  -->
+
+  <TileMutatorDef>
+    <defName>CVG_SpiritVeins</defName>
+    <label>spirit veins</label>
+    <description>Since the Convergence, qi has pooled in the rock of this place: there are seams of spirit stone and spirit jade in its stone.</description>
+    <workerClass>Convergence.TileMutatorWorker_SpiritVeins</workerClass>
+  </TileMutatorDef>
+
+  <TileMutatorDef>
+    <defName>CVG_SectCache</defName>
+    <label>sect cache</label>
+    <description>A sect that did not survive the Convergence hid its treasury here: spirit stones, jade and the odd tablet or pill, still waiting for someone to come back for them.</description>
+    <workerClass>Convergence.TileMutatorWorker_SectCache</workerClass>
+    <biomeBlacklist>
+      <li>SeaIce</li>
+    </biomeBlacklist>
+  </TileMutatorDef>
+
+  <TileMutatorDef>
+    <defName>CVG_FallenCultivator</defName>
+    <label>fallen cultivator</label>
+    <description>Someone came here looking for something and did not leave. What they carried is still with them.</description>
+    <workerClass>Convergence.TileMutatorWorker_FallenCultivator</workerClass>
+    <biomeBlacklist>
+      <li>SeaIce</li>
+    </biomeBlacklist>
+  </TileMutatorDef>
+
+  <!-- ================= Forgotten realm: an orbital site (vanilla abandoned platform layout + our contents) ================= -->
+  <SitePartDef>
+    <defName>CVG_ForgottenRealm</defName>
+    <label>forgotten realm</label>
+    <description>A fragment of Jiuxiao torn off during the Convergence and left adrift in orbit: halls of an old sect sealed in a shell of stone and metal, thick with qi. Guardians still keep it, and its treasuries are full.\n\nBe careful: orbital locations are extremely dangerous. Bring vacsuits and an airtight gravship, and plan the way back.</description>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>World/WorldObjects/Expanding/AbandonedPlatform</expandingIconTexture>
+    <gravShipsCanLandOn>true</gravShipsCanLandOn>
+    <wantsThreatPoints>true</wantsThreatPoints>
+    <disallowsAutomaticDetectionTimerStart>true</disallowsAutomaticDetectionTimerStart>
+    <minMapSize>(200, 0, 200)</minMapSize>
+    <copyQuestName>true</copyQuestName>
+    <considerEnteringAsAttack>false</considerEnteringAsAttack>
+    <tags>
+      <li>CVG_ForgottenRealm</li>
+    </tags>
+    <modExtensions>
+      <!-- A fragment of the high heavens: qi is many times the ambient of the planet. -->
+      <li Class="Convergence.DefModExtension_MapQi">
+        <ambientFactor>1</ambientFactor>
+        <ambientOffset>3</ambientOffset>
+      </li>
+    </modExtensions>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>CVG_ForgottenRealm_Platform</defName>
+    <linkWithSite>CVG_ForgottenRealm</linkWithSite>
+    <order>200</order>
+    <genStep Class="GenStep_OrbitalPlatform">
+      <factionDef>AncientsHostile</factionDef>
+      <platformTerrain>OrbitalPlatform</platformTerrain>
+      <layoutDef>Opportunity_AbandonedPlatform</layoutDef>
+      <orbitalDebrisDef>Manmade</orbitalDebrisDef>
+      <temperature>20</temperature>
+      <spawnSentryDrones>false</spawnSentryDrones>
+    </genStep>
+  </GenStepDef>
+
+  <GenStepDef>
+    <defName>CVG_ForgottenRealm_Contents</defName>
+    <linkWithSite>CVG_ForgottenRealm</linkWithSite>
+    <order>460</order>
+    <genStep Class="Convergence.GenStep_ForgottenRealm">
+      <lootStacks>8~12</lootStacks>
+      <minQuality>Excellent</minQuality>
+      <loot>
+        <li><thing>CVG_SpiritStone</thing><count>60~150</count><weight>3</weight></li>
+        <li><thing>CVG_SpiritJade</thing><count>20~60</count><weight>2</weight></li>
+        <li><thing>CVG_PrimordialCrystal</thing><count>2~6</count><weight>1.5</weight></li>
+        <li><thing>CVG_JadeSlip</thing><count>1~2</count><weight>1.5</weight></li>
+        <li><thing>CVG_FoundationPill</thing><count>1~3</count><weight>1</weight></li>
+        <li><thing>CVG_ChaosCore</thing><count>1~2</count><weight>0.5</weight></li>
+        <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_HealingPill</thing><count>2~5</count><weight>1</weight></li>
+        <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_QiRecoveryPill</thing><count>2~5</count><weight>1</weight></li>
+        <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_TemperingPill</thing><count>2~4</count><weight>1</weight></li>
+        <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_NineTurnsPill</thing><count>1</count><weight>0.3</weight></li>
+        <li MayRequire="prospero1088.convergence.qitech"><thing>CVG_QiCannon_II</thing><count>1</count><weight>0.6</weight></li>
+        <li MayRequire="prospero1088.convergence.qitech"><thing>CVG_QiCannon_III</thing><count>1</count><weight>0.3</weight></li>
+        <li MayRequire="prospero1088.convergence.qitech"><thing>CVG_QT_MechQiCore_Medium</thing><count>1</count><weight>0.4</weight></li>
+        <li MayRequire="prospero1088.convergence.qitech"><thing>CVG_QT_QiShotgun</thing><count>1</count><weight>0.5</weight></li>
+      </loot>
+      <guardians>
+        <li>Mech_Scyther</li>
+        <li>Mech_Lancer</li>
+        <li>Mech_Pikeman</li>
+        <li>Mech_CentipedeGunner</li>
+      </guardians>
+      <guardianPointsFactor>0.6~0.9</guardianPointsFactor>
+      <guardianCore>CVG_MechQiCore</guardianCore>
+      <guardianGrade>2~3</guardianGrade>
+    </genStep>
+  </GenStepDef>
+
+  <QuestScriptDef>
+    <defName>CVG_OpportunitySite_ForgottenRealm</defName>
+    <randomlySelectable>false</randomlySelectable>
+    <givenBy>
+      <li>OrbitalScanner</li>
+    </givenBy>
+    <rootSelectionWeight>0.6</rootSelectionWeight>
+    <isRootSpecial>true</isRootSpecial>
+    <autoAccept>true</autoAccept>
+    <questAvailableLetterTextIsDescription>true</questAvailableLetterTextIsDescription>
+    <canOccurOnAllPlanetLayers>true</canOccurOnAllPlanetLayers>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->the forgotten realm of [realmName]</li>
+        <li>questName->[realmName], adrift</li>
+        <li>realmName->Cloudspire Peak</li>
+        <li>realmName->the Jade Terrace</li>
+        <li>realmName->the Hall of Nine Winds</li>
+        <li>realmName->the Azure Lotus Pavilion</li>
+        <li>realmName->the Starfall Sect</li>
+        <li>realmName->Mount Qingxu</li>
+        <li>realmName->the Thousand-Step Stair</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->[discoveryMethod] a fragment of Jiuxiao adrift in orbit: a forgotten realm torn from the high heavens when the Convergence broke the sky. Its qi is thick enough to taste, its treasuries are untouched, and something still guards its halls.\n\nYou can travel to orbital locations using gravships, shuttles, or transport pods.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="Convergence.QuestNode_ConvergenceActive" />
+        <li Class="QuestNode_IsSet">
+          <name>discoveryMethod</name>
+          <elseNode Class="QuestNode_Set">
+            <name>discoveryMethod</name>
+            <value>Your orbital scanner has found</value>
+          </elseNode>
+        </li>
+        <li Class="QuestNode_Root_Site">
+          <layerWhitelist>
+            <li>Orbit</li>
+          </layerWhitelist>
+          <canBeSpace>true</canBeSpace>
+          <sitePartDef>CVG_ForgottenRealm</sitePartDef>
+          <worldObjectDef>ClaimableSpaceSite</worldObjectDef>
+          <distanceFromColonyRange>1~4</distanceFromColonyRange>
+        </li>
+        <li Class="QuestNode_WorldObjectTimeout">
+          <worldObject>$site</worldObject>
+          <isQuestTimeout>true</isQuestTimeout>
+          <delayTicks>$(randInt(45,60)*60000)</delayTicks>
+          <inSignalDisable>site.MapGenerated</inSignalDisable>
+          <node Class="QuestNode_Sequence">
+            <nodes>
+              <li Class="QuestNode_Letter">
+                <label TKey="LetterLabelQuestExpired">Quest expired: [resolvedQuestName]</label>
+                <text TKey="LetterTextQuestExpired">The forgotten realm has drifted out of reach. The quest [resolvedQuestName] has expired.</text>
+              </li>
+              <li Class="QuestNode_End">
+                <outcome>Fail</outcome>
+              </li>
+            </nodes>
+          </node>
+        </li>
+        <li Class="QuestNode_NoWorldObject">
+          <worldObject>$site</worldObject>
+          <node Class="QuestNode_End" />
+        </li>
+        <li Class="QuestNode_Signal">
+          <inSignal>site.NoActiveThreats</inSignal>
+          <node Class="QuestNode_End">
+            <outcome>Success</outcome>
+          </node>
+        </li>
+      </nodes>
+    </root>
+  </QuestScriptDef>
+</Defs>

@@ -24,7 +24,11 @@
     </thingCategories>
     <burnableByRecipe>false</burnableByRecipe>
     <smeltable>false</smeltable>
-    <deepCommonality>0</deepCommonality>
+    <!-- Deep drill: the deep scanner only finds it after the Convergence (Core: Patch_CompDeepScanner_ChooseLumpThingDef). -->
+    <deepCommonality>1.5</deepCommonality>
+    <deepCountPerPortion>20</deepCountPerPortion>
+    <deepCountPerCell>200</deepCountPerCell>
+    <deepLumpSizeRange>3~8</deepLumpSizeRange>
     <modExtensions>
       <li Class="Convergence.DefModExtension_FengShui">
         <qi>0.05</qi>
@@ -59,7 +63,10 @@
     </thingCategories>
     <burnableByRecipe>false</burnableByRecipe>
     <smeltable>false</smeltable>
-    <deepCommonality>0</deepCommonality>
+    <deepCommonality>0.8</deepCommonality>
+    <deepCountPerPortion>15</deepCountPerPortion>
+    <deepCountPerCell>150</deepCountPerCell>
+    <deepLumpSizeRange>2~6</deepLumpSizeRange>
     <stuffProps>
       <categories>
         <li>Stony</li>
@@ -144,14 +151,16 @@
       <isResourceRock>true</isResourceRock>
       <mineableThing>CVG_SpiritJade</mineableThing>
       <mineableYield>30</mineableYield>
-      <mineableScatterCommonality>0.03</mineableScatterCommonality>
-      <mineableScatterLumpSizeRange>2~6</mineableScatterLumpSizeRange>
+      <mineableScatterCommonality>0.12</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>4~10</mineableScatterLumpSizeRange>
       <veinMineable>true</veinMineable>
     </building>
     <modExtensions>
       <li Class="Convergence.DefModExtension_ConvergenceMineable">
         <convertFrom>MineableJade</convertFrom>
         <convertFraction>0.5</convertFraction>
+        <eventLumps>4~6</eventLumps>
+        <eventLumpSize>4~10</eventLumpSize>
       </li>
     </modExtensions>
   </ThingDef>
@@ -211,6 +220,41 @@
     <fixedIngredientFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fixedIngredientFilter>
     <products>
       <CVG_PrimordialCrystal>1</CVG_PrimordialCrystal>
+    </products>
+    <recipeUsers>
+      <li>TableStonecutter</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  <!-- Spirit jade from common stone (user, 2026-10-23): since the Convergence, qi seeps into ordinary rock, and a stonecutter
+       who grinds it with spirit stones draws the jade out. The spirit stones are only there after the Convergence. -->
+  <RecipeDef>
+    <defName>CVG_GrindSpiritJade</defName>
+    <label>grind spirit jade</label>
+    <description>Grind three chunks of common stone together with three spirit stones: the qi that seeped into the rock during the Convergence gathers around the spirit stones and settles as ten spirit jade. Old miners swear the rock sings while it is ground.</description>
+    <jobString>Grinding spirit jade.</jobString>
+    <workAmount>2500</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <requiredGiverWorkType>Crafting</requiredGiverWorkType>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <ingredients>
+      <li>
+        <filter><categories><li>StoneChunks</li></categories></filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>CVG_SpiritStone</li></thingDefs></filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories><li>StoneChunks</li></categories>
+      <thingDefs><li>CVG_SpiritStone</li></thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CVG_SpiritJade>10</CVG_SpiritJade>
     </products>
     <recipeUsers>
       <li>TableStonecutter</li>
