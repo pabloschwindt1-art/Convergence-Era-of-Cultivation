@@ -123,6 +123,9 @@ namespace Convergence
             var step = ext.StepFor(subject);
             DefModExtension_TemperConstitution.Pay(map, ext.CostOf(step));
             if (step == null) return "CVG_Temper_NothingToTemper".Translate(subject.Named("PAWN"));
+            // Reposo de 15 días tras cada intento, salga bien o mal (pedido del usuario: los cuatro grados no se hacen el mismo día).
+            var rest = DefDatabase<HediffDef>.GetNamedSilentFail("CVG_TemperRest");
+            if (rest != null) subject.health?.AddHediff(rest);
             float chance = step.Chance(quality);
             if (Rand.Chance(chance))
             {
@@ -146,6 +149,17 @@ namespace Convergence
             if (step == null)
             {
                 if (!skipReason) reason = "CVG_Temper_NoStep".Translate(p.Named("PAWN"));
+                return false;
+            }
+            var rest = DefDatabase<HediffDef>.GetNamedSilentFail("CVG_TemperRest");
+            var resting = rest == null ? null : p.health?.hediffSet?.GetFirstHediffOfDef(rest);
+            if (resting != null)
+            {
+                if (!skipReason)
+                {
+                    int left = resting.TryGetComp<HediffComp_Disappears>()?.ticksToDisappear ?? 0;
+                    reason = "CVG_Temper_Resting".Translate(p.Named("PAWN"), left.ToStringTicksToPeriod());
+                }
                 return false;
             }
             if (!DefModExtension_TemperConstitution.CanPay(p.MapHeld, ext.CostOf(step), out string missing))

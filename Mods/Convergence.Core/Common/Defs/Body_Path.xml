@@ -178,4 +178,21 @@
       </li>
     </modExtensions>
   </ThingDef>
+  <!-- After a sect tempering ritual (success or failure): the same disciple cannot be tempered again until it fades (15 days). -->
+  <HediffDef>
+    <defName>CVG_TemperRest</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>resting after tempering</label>
+    <description>The body is still settling after a sect tempering ritual: the new grade, or the failed attempt, has to sink into bone and meridian before the masters will temper it again. Every sect of Jiuxiao keeps this rest; the Nine Temperings say that a body tempered twice in the same moon cracks like a blade quenched twice in the same breath.</description>
+    <defaultLabelColor>(0.8, 0.75, 0.55)</defaultLabelColor>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
 </Defs>

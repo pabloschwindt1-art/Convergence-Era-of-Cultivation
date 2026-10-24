@@ -2,4 +2,6 @@
 <LanguageData>
   <CVG_BloodBackflow.label>reflujo de sangre-qi</CVG_BloodBackflow.label>
   <CVG_BloodBackflow.description>El avance falló y la sangre-qi refluyó por el cuerpo, desgarrando músculos y vasos. Sana solo, despacio.</CVG_BloodBackflow.description>
+  <CVG_TemperRest.label>reposo tras el templado</CVG_TemperRest.label>
+  <CVG_TemperRest.description>El cuerpo todavía se está asentando tras un ritual de templado de secta: el nuevo grado, o el intento fallido, tiene que llegar al hueso y a los meridianos antes de que los maestros vuelvan a templarlo. Todas las sectas de Jiuxiao respetan este reposo; los Nueve Templados dicen que un cuerpo templado dos veces en la misma luna se raja como una hoja templada dos veces en el mismo aliento.</CVG_TemperRest.description>
 </LanguageData>

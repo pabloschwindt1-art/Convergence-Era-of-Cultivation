@@ -342,6 +342,7 @@ Algunas comerciarán, otras juzgarán, y una de ellas caza. Su buena voluntad se
   <CVG_Temper_NothingToTemper>A {PAWN_labelShort} no le queda nada por templar.</CVG_Temper_NothingToTemper>
   <CVG_Temper_NoStep>{PAWN_labelShort} no puede templarse más.</CVG_Temper_NoStep>
   <CVG_Temper_MissingCost>Falta en el almacén: {0}</CVG_Temper_MissingCost>
+  <CVG_Temper_Resting>{PAWN_labelShort} todavía reposa tras el último templado (faltan {1}).</CVG_Temper_Resting>
   <CVG_Temper_Success>El templado prendió: {PAWN_labelShort} ahora tiene {1} (probabilidad {2}).</CVG_Temper_Success>
   <CVG_Temper_Failure>El templado no prendió: {PAWN_labelShort} no alcanzó {1} esta vez (probabilidad {2}). El costo se gastó igual.</CVG_Temper_Failure>
   <CVG_Ritual_NeedBelievers>Necesita al menos {0} {1} más presentes además de los roles (ahora {2}).</CVG_Ritual_NeedBelievers>

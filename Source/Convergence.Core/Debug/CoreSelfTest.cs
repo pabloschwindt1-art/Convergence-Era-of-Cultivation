@@ -1442,6 +1442,9 @@ namespace Convergence
             Check(ext.StepFor(pawn) == ext.steps[0], "untempered pawn: first step");
             RitualOutcomeEffectWorker_TemperConstitution.Resolve(ext, pawn, 1f, map);
             Check(ConstitutionUtility.Degree(pawn, industry) == 1, "quality 100%: none -> degree 1");
+            var rest = pawn.health.hediffSet.GetFirstHediffOfDef(DefDatabase<HediffDef>.GetNamed("CVG_TemperRest"));
+            Check(rest != null && (rest.TryGetComp<HediffComp_Disappears>()?.ticksToDisappear ?? 0) > 14 * GenDate.TicksPerDay,
+                "the disciple rests ~15 days before the next tempering");
             RitualOutcomeEffectWorker_TemperConstitution.Resolve(ext, pawn, 0f, map);
             Check(ConstitutionUtility.Degree(pawn, industry) == 1, "quality 0%: the step fails, nothing changes");
             RitualOutcomeEffectWorker_TemperConstitution.Resolve(ext, pawn, 1f, map);
