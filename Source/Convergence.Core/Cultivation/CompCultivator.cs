@@ -410,6 +410,15 @@ namespace Convergence
                 yield return TechniqueSetUtility.MakeSwitchGizmo(this);
         }
 
+        /// <summary>Un rasgo o gen de raíz (o de cuerpo especial) cambió: recalcula la raíz y, en el mapa, el reino.</summary>
+        public void Notify_RootSourcesChanged()
+        {
+            synced = false;
+            var pawn = Pawn;
+            if (Current.ProgramState == ProgramState.Playing && pawn != null && (pawn.SpawnedOrAnyParentSpawned || RimWorld.Planet.CaravanUtility.IsCaravanMember(pawn)))
+                SyncRealm();
+        }
+
         private void EnsureSynced()
         {
             if (!synced) Sync();
@@ -452,8 +461,12 @@ namespace Convergence
             {
                 foreach (var trait in pawn.story.traits.allTraits)
                 {
-                    if (trait.def == CVG_DefOf.CVG_SpiritRoot && grade == null)
-                        grade = DefDatabase<SpiritRootGradeDef>.AllDefsListForReading.FirstOrDefault(g => g.traitDegree == trait.Degree);
+                    // Rasgo y gen valen lo mismo: gana el grado más alto (un rasgo superior sobre un gen común sí mejora).
+                    if (trait.def == CVG_DefOf.CVG_SpiritRoot)
+                    {
+                        var traitGrade = DefDatabase<SpiritRootGradeDef>.AllDefsListForReading.FirstOrDefault(g => g.traitDegree == trait.Degree);
+                        if (traitGrade != null && (grade == null || traitGrade.order > grade.order)) grade = traitGrade;
+                    }
                     if (specialBody == null && trait.def.HasModExtension<DefModExtension_SpecialBody>()) specialBody = trait.def;
                 }
             }

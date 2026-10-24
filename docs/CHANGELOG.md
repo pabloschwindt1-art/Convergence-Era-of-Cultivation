@@ -12,6 +12,15 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod).
 
+### Raíz espiritual que cambia (2026-10-24)
+- **Core: la raíz espiritual se actualiza al momento.** Si un colono gana o pierde un rasgo o gen de raíz (xenogerm, ensamblador
+  de genes, sangre ancestral, modo desarrollador), la pestaña Cultivo y la velocidad de cultivo cambian enseguida; antes seguía
+  la raíz vieja hasta recargar la partida.
+- **Core: rasgo y gen de raíz valen lo mismo:** gana el grado más alto. Antes, con Biotech, el gen de raíz común tapaba a un rasgo
+  de raíz superior.
+- EN: *Spirit roots now update immediately when a pawn gains or loses a root trait or gene (xenogerm, gene assembler, ancestral
+  blood, dev mode). Root traits and genes now stack to the highest grade instead of the gene always winning.*
+
 ### Partidas largas de prueba (2026-10-24, madrugada)
 Once partidas de 30 a 60 días con una base autosuficiente y el narrador libre. Lo que salió y se corrigió:
 - **Core: bestias espirituales más justas.** Con la supresión de reino, la vida y el daño extra por rango eran demasiado (una

@@ -39,6 +39,7 @@ namespace Convergence
             Section("techniques", () => TestTechniques(map, qi));
             Section("technique paths and combat sets", () => TestTechniquePaths(map));
             Section("thunder root", () => TestThunder(map));
+            Section("spirit root changes (trait, gene, xenogerm)", () => TestRootChanges(map));
             Section("daily consumables", () => TestDailyConsumables(map));
             Section("wuxia art and benches", () => TestWuxiaArt(map));
             Section("cultivation life (thoughts, records, tales, alerts, spots)", () => TestCultivationLife(map));
@@ -355,6 +356,31 @@ namespace Convergence
             GenSpawn.Spawn(pawn, CellFinder.RandomClosewalkCellNear(map.Center, map, 8), map);
             comp.SyncRealm();
             return pawn;
+        }
+
+        /// <summary>La raíz se recalcula sola al ganar o perder rasgos y genes, sin Sync manual (antes quedaba la vieja hasta recargar).</summary>
+        private static void TestRootChanges(Map map)
+        {
+            var pawn = Colonist(map, root: false);
+            var comp = CompCultivator.For(pawn);
+            SpiritRootGradeDef Grade(string n) => DefDatabase<SpiritRootGradeDef>.GetNamed(n);
+            Check(!comp.HasRoot, "starts without a root");
+            CultivationGenerator.GiveRoot(pawn, Grade("CVG_RootGrade_Common"), new List<QiElementDef> { DefDatabase<QiElementDef>.GetNamed("CVG_Element_Fire") });
+            Check(comp.Root?.grade == Grade("CVG_RootGrade_Common"), "common root given: " + comp.Root?.grade?.defName);
+            pawn.story.traits.GainTrait(new Trait(CVG_DefOf.CVG_SpiritRoot, Grade("CVG_RootGrade_Superior").traitDegree, forced: true));
+            Check(comp.Root?.grade == Grade("CVG_RootGrade_Superior"), "a superior root trait improves a common root gene: " + comp.Root?.grade?.defName);
+            if (pawn.genes != null)
+            {
+                var heavenly = DefDatabase<GeneDef>.GetNamed("CVG_Gene_RootGrade_Heavenly");
+                var xeno = pawn.genes.AddGene(heavenly, xenogene: true);
+                Check(comp.Root?.grade == Grade("CVG_RootGrade_Heavenly"), "a heavenly xenogene takes over: " + comp.Root?.grade?.defName);
+                pawn.genes.RemoveGene(xeno);
+                Check(comp.Root?.grade == Grade("CVG_RootGrade_Superior"), "removing the xenogene goes back: " + comp.Root?.grade?.defName);
+            }
+            var trait = pawn.story.traits.GetTrait(CVG_DefOf.CVG_SpiritRoot);
+            if (trait != null) pawn.story.traits.RemoveTrait(trait);
+            Check(comp.Root?.grade == Grade("CVG_RootGrade_Common"), "removing the trait leaves the gene: " + comp.Root?.grade?.defName);
+            pawn.Destroy();
         }
 
         private static void TestConvergence(Map map)
@@ -931,7 +957,12 @@ namespace Convergence
                         Check(after - before > 0.1f, $"a vanilla bionic arm adds celestial dissonance ({before:0.00} -> {after:0.00})");
                         float keep = ConvergenceMod.Settings.implantDissonanceFactor;
                         ConvergenceMod.Settings.implantDissonanceFactor = 0f;
-                        Check(System.Math.Abs(cy.GetStatValue(CVG_DefOf.CVG_CelestialDissonance, cacheStaleAfterTicks: 0) - before) < 0.001f, "implant dissonance setting at 0% turns it off");
+                        // Al 0% el brazo no suma nada (se compara con y sin él: el colono al azar puede traer otro implante de serie).
+                        float withArm = cy.GetStatValue(CVG_DefOf.CVG_CelestialDissonance, cacheStaleAfterTicks: 0);
+                        var arm = cy.health.hediffSet.hediffs.FirstOrDefault(h => h.def == bionic);
+                        if (arm != null) cy.health.RemoveHediff(arm);
+                        float withoutArm = cy.GetStatValue(CVG_DefOf.CVG_CelestialDissonance, cacheStaleAfterTicks: 0);
+                        Check(System.Math.Abs(withArm - withoutArm) < 0.001f, "implant dissonance setting at 0% turns it off");
                         ConvergenceMod.Settings.implantDissonanceFactor = keep;
                     }
                     cy.Destroy();
