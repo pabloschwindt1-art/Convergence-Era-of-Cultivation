@@ -4,6 +4,7 @@ Mod de RimWorld 1.6 de **Prospero1088** (packageId `prospero1088.convergence.cor
 Cultivo xianxia / wuxia con tecno-cultivo, inspirado en *Tale of Immortal* y en el subgénero del renacimiento del qi. Documentación y textos del proyecto en español.
 
 ## Lee primero
+- **`docs/CONOCIMIENTO.md`: dónde buscar ANTES de implementar** ("siempre ves cómo lo hace vanilla primero"): datos vanilla indexados, wiki resumida y análisis de otros mods. No se abre el juego ni se adivina algo que está ahí.
 - `docs/LORE.md`: lore aprobado (la Convergencia, Jiuxiao, la Calamidad de Hierro, facciones, glosario).
 - `docs/DISENO.md`: diseño general y decisiones tomadas.
 - `docs/DISENO_CORE.md`: diseño técnico del Core e hitos.
@@ -19,7 +20,8 @@ Cultivo xianxia / wuxia con tecno-cultivo, inspirado en *Tale of Immortal* y en 
 - **Las sectas no son anti-tecnología:** la postura ante la tecnología la decide la Ideología del jugador.
 - Cada implante tiene una **disonancia celestial** configurable (stat) que afecta a la tribulación.
 - Raíz espiritual = gen con Biotech / rasgo sin Biotech. Cuerpos especiales latentes hasta la Convergencia. La tribulación puede matar (con opción en los ajustes).
-- El Maestro llega herido con la Convergencia, enseña, se va y deja un jade (cadena de búsqueda).
+- El Maestro es la **misión de inicio**: "un viejo sabio busca refugio" llega a la pestaña Misiones, puede quedar pendiente y **aceptarla desata la Convergencia** (como el monolito de Anomaly); si nunca se acepta, la Convergencia llega sola a los 60 días. Enseña, lo persiguen, se va caminando y deja un jade. Arquetipos aleatorios.
+- **RimWorld como generador de historias:** cada sistema se juzga por las historias que genera por canales vanilla (pensamientos, relaciones, interacciones, relatos, misiones, narrador, Ideology). Nada de sistemas paralelos ni contenido nuevo sin necesidad.
 
 ## Estructura de mods
 - **Convergence: Core** = base y framework (cultivo, qi, reinos, Convergencia, tipos genéricos como `BloodlineDef`, `CultivationPathDef`).
@@ -28,7 +30,7 @@ Cultivo xianxia / wuxia con tecno-cultivo, inspirado en *Tale of Immortal* y en 
 
 ## Reglas técnicas
 - RimWorld **1.6** (net472, Krafs.Rimworld.Ref 1.6.4871, Lib.Harmony 2.4.3 con `ExcludeAssets=runtime`, sin `0Harmony.dll` en los mods). Un solo DLL por proyecto que también carga en 1.7 (verificado en 1.7.4985: los 15 mods cargan y los autotests pasan).
-- Dependencia externa: solo Harmony. Se diseña usando **todas las DLC**, pero cada función de DLC va en `Mods/<DLC>` (LoadFolders `IfModActive`), con `MayRequire` o `ModsConfig.XActive`, para que sin la DLC el mod funcione sin esa parte (si es demasiado trabajo, ese módulo requiere la DLC). **Nada de AssetBundles, `GL` ni `Shader.Find`**: solo flecks/effecters vanilla y `renderNodeProperties`.
+- Dependencias: Harmony y **las cinco DLC** (decisión del autor, 2026-10-23: el Core las exige; no se degrada sin DLC). Ningún otro mod. **Nada de AssetBundles, `GL` ni `Shader.Find`**: solo flecks/effecters vanilla y `renderNodeProperties`.
 - Datos en XML, lógica en C#. Sin enums cerrados para contenido: cada cosa nueva debe poder agregarse con XML.
 - Textos siempre en `Keyed`/`DefInjected`: inglés + Spanish + SpanishLatin. Las traducciones de un def condicional (`MayRequire`) van en la carpeta condicional correspondiente, no en `Common`.
 - Compilar (el Core primero): `dotnet build Source/Convergence.Core/Convergence.Core.csproj -c Release` y los otros cuatro proyectos (ver README). Los DLL salen en `Mods/<Mod>/1.6/Assemblies/` y no se versionan.

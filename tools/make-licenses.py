@@ -202,7 +202,8 @@ def expected_files():
     files = {os.path.join(ROOT, 'LICENSE'): MIT, os.path.join(ROOT, 'LICENSES.md'): OVERVIEW}
     cc = open(os.path.join(ROOT, 'LICENSE-CC-BY-NC-SA-4.0.txt'), encoding='utf-8', newline='').read()
     for mod in sorted(os.listdir(MODS)):
-        if not os.path.isfile(os.path.join(MODS, mod, 'About', 'About.xml')):
+        # Convergence.DevTools: mod de desarrollo (autotests), no se publica.
+        if mod == 'Convergence.DevTools' or not os.path.isfile(os.path.join(MODS, mod, 'About', 'About.xml')):
             continue
         files[os.path.join(MODS, mod, 'LICENSE.txt')] = mod_notice(mod)
         files[os.path.join(MODS, mod, 'LICENSE-CC-BY-NC-SA-4.0.txt')] = cc

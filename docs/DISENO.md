@@ -38,6 +38,7 @@ y el lore conviene esbozarlo primero (da nombres y reglas a todo lo demás):
 | 4b | **Edificios, forja y feng shui** ([detalle](modulos/EDIFICIOS.md)) | Forja Espiritual por niveles, lugares de cultivo, muebles y joyas de jade, concentración de qi por habitación | Core + Recursos |
 | 4e | **Ropa, armaduras y telas** ([detalle](modulos/ROPA.md)) | Algodón de las Nubes, seda espiritual, cuero de bestia, túnicas de secta, armaduras con grado espiritual, telar | Core + Resources (+ Fauna & Flora) |
 | 4f | **Implantes del Dao y genética de bestias** ([detalle](modulos/IMPLANTES.md)) | Injertos míticos (huesos del Dao, venas de dragón, tercer ojo…), genepacks de bestia, altar de injerto y cuba de sangre | Core + Biotech + Fauna & Flora |
+| 4h | **Raíces que cambian** ([detalle](modulos/RAICES.md)) | Extirpar, trasplantar y fusionar raíces en el altar y el horno de huesos, mejora en el avance de reino, píldora de lavado de raíz, ritual de purificación y la vía de ingeniería de Qi-Tech | Core + Grafts + Qi-Tech + Alchemy |
 | 4g | **Escenarios e historias** (detalle en un documento reservado: contiene spoilers) | Escenarios con historia encadenada (marionetista, superviviente, huida, familia destruida…), eventos de historia, sitios y landmarks | Core + Sects (+ todos) |
 | 5 | **Artefactos y alquimia** | Píldoras, talismanes, armas y tesoros | Core + Recursos + Flora + Edificios |
 | 6 | **Sectas y facciones** | Facciones, rangos de secta, misiones, maestro/discípulo | Core (+ Razas) |
