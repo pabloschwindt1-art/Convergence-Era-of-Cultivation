@@ -16,11 +16,13 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODS = os.path.join(ROOT, 'Mods')
 DIST = os.path.join(ROOT, 'dist')
 SKIP_EXT = ('.pdb',)
+# No van en la release: DevTools son los autotests de desarrollo y Sects es el mod viejo, retirado (lo reemplaza Factions).
+SKIP_MODS = {'Convergence.DevTools', 'Convergence.Sects'}
 DOTNET = 'dotnet'
 
 
 def build():
-    order = ['Core', 'Formations', 'Grafts', 'QiTech', 'Stories']       # el Core primero: los demas lo referencian
+    order = ['Core', 'Formations', 'Grafts', 'QiTech', 'Stories', 'Factions']       # el Core primero: los demas lo referencian
     for name in order:
         proj = os.path.join(ROOT, 'Source', 'Convergence.' + name, 'Convergence.' + name + '.csproj')
         r = subprocess.run([DOTNET, 'build', proj, '-c', 'Release'], capture_output=True, text=True)
@@ -46,7 +48,7 @@ def main():
         build()
     version = ET.parse(os.path.join(MODS, 'Convergence.Core', 'About', 'About.xml')).getroot().findtext('modVersion').strip()
     os.makedirs(DIST, exist_ok=True)
-    mods = sorted(d for d in os.listdir(MODS) if os.path.isfile(os.path.join(MODS, d, 'About', 'About.xml')))
+    mods = sorted(d for d in os.listdir(MODS) if d not in SKIP_MODS and os.path.isfile(os.path.join(MODS, d, 'About', 'About.xml')))
     for mod in mods:
         asm = os.path.join(MODS, mod, '1.6', 'Assemblies')
         if os.path.isdir(os.path.join(ROOT, 'Source', mod)) and not os.path.isdir(asm):
