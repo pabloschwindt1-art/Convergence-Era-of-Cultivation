@@ -84,6 +84,7 @@ namespace Convergence
             Spawn(map, "HorseshoesPin", new IntVec3(x0 + 3, 0, z0 + 3), Rot4.North, null);
             // Calefacción: una fogata en la sala (la base caía en invierno sin calor y los colonos morían congelados).
             Spawn(map, "Campfire", new IntVec3(x0 + 6, 0, z0 + 9), Rot4.North, null);
+            Spawn(map, "Campfire", new IntVec3(x0 + 2, 0, z0 + 4), Rot4.North, null);
             Spawn(map, "ChessTable", new IntVec3(x0 + 8, 0, z0 + 9), Rot4.North, wood);
             // Tumbas al oeste: un colono sin enterrar hunde el ánimo de todos.
             for (int k = 0; k < 4; k++) Spawn(map, "Grave", new IntVec3(x0 - 4 + 2 * (k % 2), 0, z0 + 10 + 3 * (k / 2)), Rot4.North, null);
@@ -134,7 +135,7 @@ namespace Convergence
 
             // Provisiones: comida en la heladera, lo demás en el depósito.
             var fridgeCell = new IntVec3(x0 + 15, 0, z0 + 6);
-            Drop(map, "MealSurvivalPack", 250, fridgeCell);
+            Drop(map, "MealSurvivalPack", 600, fridgeCell);
             Drop(map, "RawRice", 250, fridgeCell);
             Drop(map, "Meat_Cow", 150, fridgeCell);
             Drop(map, "MedicineIndustrial", 20, fridgeCell);
@@ -190,14 +191,20 @@ namespace Convergence
 
         private static bool TryFindSite(Map map, out IntVec3 origin)
         {
+            // Primero con campo fértil; si el mapa no tiene, sin esa condición (la comida guardada alcanza para la prueba).
+            return TryFindSite(map, 90, out origin) || TryFindSite(map, 0, out origin);
+        }
+
+        private static bool TryFindSite(Map map, int fertileCells, out IntVec3 origin)
+        {
             var center = map.Center;
-            foreach (var c in GenRadial.RadialCellsAround(center, 40f, true))
+            foreach (var c in GenRadial.RadialCellsAround(center, 56f, true))
             {
                 var rect = new CellRect(c.x - 8, c.z - 16, W + 16, H + 22);
                 if (!rect.InBounds(map)) continue;
                 if (rect.Cells.All(x => x.GetTerrain(map) is TerrainDef t && !t.IsWater && t.affordances.Contains(TerrainAffordanceDefOf.Heavy)
                                         && (x.GetEdifice(map) == null || x.GetEdifice(map).def.building.isNaturalRock == false))
-                    && new CellRect(c.x, c.z - 15, 12, 9).Cells.Count(x => map.fertilityGrid.FertilityAt(x) >= 0.7f) >= 90)
+                    && new CellRect(c.x, c.z - 15, 12, 9).Cells.Count(x => map.fertilityGrid.FertilityAt(x) >= 0.7f) >= fertileCells)
                 {
                     origin = c;
                     return true;

@@ -196,5 +196,7 @@
     <destroyable>false</destroyable>
     <!-- Indestructible, so it must not take damage either (playtest 2026-10-24: a melee attacker "killed" it 332 times). -->
     <useHitPoints>false</useHitPoints>
+    <!-- Raiders cannot steal it either: leaving the map destroys what they carry (playtest 2026-10-24). -->
+    <stealable>false</stealable>
   </ThingDef>
 </Defs>

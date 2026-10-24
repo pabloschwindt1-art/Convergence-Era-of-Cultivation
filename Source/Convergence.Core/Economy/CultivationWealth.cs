@@ -164,7 +164,11 @@ namespace Convergence
                     rec.pawns += v;
                     removedPawns += v * (1f - f);
                 }
-                if (main != null && p.IsFreeColonist) AddCultivator(rec, p, main);
+                // El Maestro y el sabio del vacío están de paso, como un huésped de misión: no cuentan (playtest 2026-10-24: un
+                // Núcleo Dorado sumaba más de 50.000 de riqueza y las incursiones del día 11 venían con 130 puntos).
+                if (main != null && p.IsFreeColonist && !(GameComponent_Mentor.Instance?.IsMentor(p) ?? false)
+                    && !(GameComponent_ChaosSage.Instance?.IsSage(p) ?? false))
+                    AddCultivator(rec, p, main);
             }
 
             itemsRef(watcher) = Mathf.Max(0f, itemsRef(watcher) - removedItems);

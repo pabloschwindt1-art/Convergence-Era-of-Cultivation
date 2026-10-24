@@ -103,7 +103,8 @@ namespace Convergence
             // reclutados días enteros, sin comer ni dormir (playtest 2026-10-24: golpes de calor en una ola de calor).
             var colonists = map.mapPawns.FreeColonistsSpawned;
             bool threat = map.mapPawns.AllPawnsSpawned.Any(p => !p.Downed && !p.Dead && p.HostileTo(Faction.OfPlayer) && !p.IsPrisoner
-                && (p.RaceProps.Humanlike || p.RaceProps.IsMechanoid || p.InAggroMentalState)
+                // Animales cazahombres no: un jugador deja a los colonos adentro (reclutados afuera se congelaban en invierno).
+                && (p.RaceProps.Humanlike || p.RaceProps.IsMechanoid)
                 && colonists.Any(c => c.Position.InHorDistOf(p.Position, 30f)));
             foreach (var c in map.mapPawns.FreeColonistsSpawned.ToList())
             {

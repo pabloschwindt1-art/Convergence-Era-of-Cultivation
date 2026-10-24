@@ -12,6 +12,21 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod).
 
+### Partidas largas de prueba (2026-10-24, madrugada)
+Once partidas de 30 a 60 días con una base autosuficiente y el narrador libre. Lo que salió y se corrigió:
+- **Core: bestias espirituales más justas.** Con la supresión de reino, la vida y el daño extra por rango eran demasiado (una
+  manada de wargos de rango 4 mataba a la colonia el día 20). Ahora los multiplicadores son suaves (x1,1 a x2,5), la supresión
+  empieza en rango 2 y el mundo despierta de a poco: la chance va del 30% al 100% en 60 días desde la Convergencia y el rango
+  tope empieza en 2 y sube uno cada 15 días.
+- **Core: el Maestro ya no cuenta como riqueza de la colonia** (un Núcleo Dorado de paso inflaba todas las amenazas: incursiones
+  de 130 puntos el día 11).
+- **Core: el Maestro herido sobrevive a su llegada.** Llegaba con golpes "hasta caer", y como un Núcleo Dorado casi no siente
+  dolor, los golpes seguían hasta matarlo. Ahora llega con golpes en los miembros y desmayado por agotamiento de qi unos días.
+- **Core: el jade del Maestro** no recibe daño ni se puede robar (daba cientos de errores).
+- **Biotech Wuxia: noche de los jiangshi** con mínimo 1 (con pocos puntos mandaba el doble).
+- **Qi-Tech: los mecas de qi se ven distintos:** acento verde jade en lugar del color de su facción y un aura suave.
+- **Apparel:** gorros del mod aptos para chicos. **Factions:** los cascos de titiritero se pueden comprar a su secta.
+
 ### Fusión, Anomaly y Odyssey (2026-10-24, plan de fusión)
 - **Qi-Tech: forja de qi** (versión de qi de la mesa de maquinado, sale temprano tras la Convergencia con "forja de qi"). Templa
   cualquier arma, de qi o mortal: +1 grado espiritual y +1 nivel de calidad por templado, costo creciente por grado (piedras, jade,
