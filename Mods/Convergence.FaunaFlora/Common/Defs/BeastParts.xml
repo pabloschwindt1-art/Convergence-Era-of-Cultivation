@@ -4,7 +4,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>CVG_CraneFeather</defName>
     <label>crane feather</label>
-    <description>A long white feather with a thread of red at the quill, light enough to float on its own breath. The fan-makers of Jiuxiao pay by the feather, and sword saints stuff pillows with them to keep their qi from souring at night.</description>
+    <description>A long white feather with a thread of red at the quill, light enough to float on its own breath. The fan-makers of Jiuxiao pay by the feather, and sword saints stuff pillows with them to keep their qi from souring at night. Talisman makers fold one into every swift talisman: the crane lends its lightness.</description>
     <graphicData>
       <texPath>Things/Item/Resource/CVG_CraneFeather</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -17,14 +17,14 @@
       <DeteriorationRate>0.5</DeteriorationRate>
     </statBases>
     <stackLimit>100</stackLimit>
-    <thingCategories><li>ResourcesRaw</li></thingCategories>
+    <thingCategories><li>CVG_SpiritBeastParts</li></thingCategories>
     <healthAffectsPrice>false</healthAffectsPrice>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
     <defName>CVG_WolfFang</defName>
     <label>wind wolf fang</label>
-    <description>A curved fang that hums faintly in the wind. Hunters string them into necklaces, believing they keep wolves away; the wolves do not agree. Collectors from the cities pay for them as if each fang were a talisman.</description>
+    <description>A curved fang that hums faintly in the wind. Hunters string them into necklaces, believing they keep wolves away; the wolves do not agree. Collectors from the cities pay for them as if each fang were a talisman, and the heart-guard amulets of the sects carry two, one for each side of the heart.</description>
     <graphicData>
       <texPath>Things/Item/Resource/CVG_WolfFang</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -37,14 +37,14 @@
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <stackLimit>75</stackLimit>
-    <thingCategories><li>ResourcesRaw</li></thingCategories>
+    <thingCategories><li>CVG_SpiritBeastParts</li></thingCategories>
     <healthAffectsPrice>false</healthAffectsPrice>
   </ThingDef>
 
   <ThingDef ParentName="ResourceBase">
     <defName>CVG_NetherChitin</defName>
     <label>nether chitin</label>
-    <description>Black, glossy plates stripped from the carapace of a nine nether spider. They shed blades like water and carry a trace of the poison that grew them. Traders pay well for them and wash their hands twice.</description>
+    <description>Black, glossy plates stripped from the carapace of a nine nether spider. They shed blades like water and carry a trace of the poison that grew them. Traders pay well for them and wash their hands twice; the rune battle robes of the sects are lined with them.</description>
     <graphicData>
       <texPath>Things/Item/Resource/CVG_NetherChitin</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -57,7 +57,7 @@
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
     <stackLimit>50</stackLimit>
-    <thingCategories><li>ResourcesRaw</li></thingCategories>
+    <thingCategories><li>CVG_SpiritBeastParts</li></thingCategories>
     <healthAffectsPrice>false</healthAffectsPrice>
   </ThingDef>
 
@@ -106,7 +106,7 @@
     </stuffProps>
     <stackLimit>75</stackLimit>
     <smallVolume>true</smallVolume>
-    <thingCategories><li>ResourcesRaw</li></thingCategories>
+    <thingCategories><li>CVG_SpiritBeastParts</li></thingCategories>
     <healthAffectsPrice>false</healthAffectsPrice>
   </ThingDef>
 </Defs>

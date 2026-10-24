@@ -12,6 +12,35 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod).
 
+### Bestias, comida, eventos y correcciones (2026-10-23, segunda tanda)
+- **Core: bestias espirituales.** Despierta cerca de la mitad del mundo (antes 1-15% de los animales comunes), con la Convergencia
+  y al aparecer después. Rango 1 a 6 según la especie, alineado con los reinos (gallina 1, oso 4, trumbo 5; las grandes bestias de
+  600+ de poder, 6), con un 15% de élites un rango más arriba: pelean y aguantan como un cultivador de ese reino. Funciona con
+  cualquier animal de cualquier mod (Alpha Animals, Vanilla Animals Expanded, ReGrowth). Las especies de 600+ despiertan como
+  **bestias soberanas**: no sienten dolor, se curan rápido, su aura frena a los enemigos de reino más bajo y una carta avisa cuando
+  llegan a la colonia. Al morir dejan piedras espirituales según su rango; al carnearlas, carne, sangre, cuero y núcleos. Se ven en
+  el nombre ("alce espiritual", "gran trumbo").
+- **Core: comida.** La carne y la sangre espirituales cuelgan de Comida (se guardan y se pudren como comida, sin que las comidas
+  comunes las gasten); núcleos, plumas, colmillos y caparazones van a "partes de bestia espiritual".
+- **Fauna & Flora + Alchemy + Apparel:** la pluma de grulla va en el talismán veloz, el colmillo de lobo en el amuleto guardacorazón
+  y el quitina del Nueve Infiernos en la túnica de batalla rúnica (antes solo se vendían).
+- **Core: dos eventos que arman el mundo.** Lluvia espiritual (llueve de un cielo despejado, las plantas crecen 60% más rápido, el
+  qi vuelve antes, ánimo +5) y estrella de qi (el meteorito vanilla, pero cae una veta de piedra espiritual).
+- **Stories:** vuelven 14 eventos: siete baratos que arman el mundo (buen augurio, hierbas que florecen, campos que brillan, puente
+  de siete colores, día de los fundadores, luces extrañas, animales inquietos) y siete con algo propio (el mendigo que no era
+  mendigo, el manual robado, la alianza matrimonial, el maestro del té, la estela rota, la jabalina de las colinas rojas, el peaje
+  del río), más la cacería de la araña.
+- **Correcciones:** vuelve la torreta de contención de Qi-Tech (era la torreta pesada de largo alcance de la colonia tecnológica) y
+  "armas templadas en qi" ya no pide respiración del qi (la colonia sin cultivadores la puede investigar).
+- **Formations + Qi-Tech: más carga de piedras.** Ballesta rúnica 50 (antes 10), balista del trueno 80 (20), torreta de inducción 80
+  (12), torreta de contención 100 (12), formaciones de espadas y de atadura 60 (15), gran formación protectora 100 (40): una
+  incursión grande ya no obliga a recargar a cada rato.
+- **Core: más vetas de piedra espiritual.** La Convergencia abre 10-14 vetas de 5-10 celdas por mapa (antes 3-5 de 3-7) y en los
+  mapas nuevos aparecen entre la plata y el acero (antes como el oro).
+- **Formations: torretas competitivas contra cultivadores.** Ballesta rúnica grado 2 y balista del trueno grado 3 (antes 0: pegaban
+  como un arma común). Toda arma y torreta con grado dice en su descripción hasta qué reino pega con toda su fuerza y cuánto pierde
+  más arriba. Probado en combate real: la balista le pega con todo a un cultivador del Núcleo Dorado.
+
 ### Plan de integración: el wuxia dentro de RimWorld como generador de historias (2026-10-23)
 Plan cerrado con el usuario (docs/revision/PLAN_INTEGRACION.md). Nada de sistemas nuevos: reconectar lo que había con los canales
 vanilla y recortar lo que sobraba. **El Core ahora exige las cinco DLC** (el mod es para el usuario).

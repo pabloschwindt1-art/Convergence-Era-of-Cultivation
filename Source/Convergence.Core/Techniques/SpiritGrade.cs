@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -62,6 +63,35 @@ namespace Convergence
 
         public override string GetExplanationUnfinalized(StatRequest req, ToStringNumberSense numberSense) =>
             "CVG_SpiritGrade_Explanation".Translate();
+    }
+
+    /// <summary>
+    /// Toda arma o torreta con grado espiritual dice en su descripción hasta qué reino pega con toda su fuerza y cuánto pierde
+    /// contra los reinos de arriba (pedido del usuario, 2026-10-23). Se arma sola desde los datos: grado, reinos y curva.
+    /// </summary>
+    [StaticConstructorOnStartup]
+    public static class SpiritGradeDescriptions
+    {
+        static SpiritGradeDescriptions()
+        {
+            var realms = DefDatabase<CultivationRealmDef>.AllDefsListForReading.Where(r => r.path == CVG_DefOf.CVG_Path_Qi).OrderBy(r => r.order).ToList();
+            if (realms.Count == 0) return;
+            foreach (var def in DefDatabase<ThingDef>.AllDefsListForReading)
+            {
+                ThingDef gun = def.building?.turretGunDef ?? (def.IsWeapon ? def : null);
+                int grade = gun?.GetCompProperties<CompProperties_SpiritGrade>()?.grade ?? 0;
+                if (grade <= 0 || def.description == null) continue;
+                def.description += "\n\n" + Line(grade, realms);
+            }
+        }
+
+        public static string Line(int grade, List<CultivationRealmDef> realms)
+        {
+            var top = realms.LastOrDefault(r => r.order <= grade) ?? realms[0];
+            if (grade >= realms[realms.Count - 1].order) return "CVG_SpiritGrade_DescAll".Translate(grade);
+            string above = string.Join(", ", Enumerable.Range(1, 3).Select(gap => SpiritGradeUtility.SuppressionFactor(grade + gap, grade).ToStringPercent()));
+            return "CVG_SpiritGrade_Desc".Translate(grade, top.label, above);
+        }
     }
 
     /// <summary>Curva de la supresión de reino (va en el StatDef <c>CVG_SpiritGrade</c>).</summary>

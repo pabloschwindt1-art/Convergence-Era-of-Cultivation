@@ -123,4 +123,71 @@
     <earliestDay>15</earliestDay>
     <durationDays>1~2.5</durationDays>
   </IncidentDef>
+  <!-- World-building events of the Convergence (integration plan, 2026-10-23): cheap, no choices, they make the world feel
+       changed. Spirit rain: vanilla forced weather (rain), plants grow faster, qi comes back faster, a mood like the aurora. -->
+  <GameConditionDef>
+    <defName>CVG_SpiritRain</defName>
+    <conditionClass>GameCondition_ForceWeather</conditionClass>
+    <weatherDef>Rain</weatherDef>
+    <label>spirit rain</label>
+    <description>A warm rain that smells of pine resin falls from a clear sky. Where it lands, buds open and crops shoot up a finger a day; cultivators standing in it feel their qi come back faster. In Jiuxiao the farmers called it the tears of the Dao and left their bowls out to catch it.</description>
+    <endMessage>The spirit rain stops.</endMessage>
+    <letterText>A warm rain falls from a clear sky and the fields drink it: a spirit rain. For a day or two everything that grows grows faster, qi comes back faster, and nobody can stay in a bad mood under it.</letterText>
+    <letterDef>PositiveEvent</letterDef>
+    <canBePermanent>false</canBePermanent>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_CelestialCondition">
+        <statFactors>
+          <CVG_QiRegen>1.25</CVG_QiRegen>
+        </statFactors>
+        <plantGrowthFactor>1.6</plantGrowthFactor>
+      </li>
+    </modExtensions>
+  </GameConditionDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_SpiritRain</defName>
+    <workerClass>ThoughtWorker_GameCondition</workerClass>
+    <gameCondition>CVG_SpiritRain</gameCondition>
+    <stages>
+      <li>
+        <label>spirit rain</label>
+        <description>Warm rain from a clear sky, smelling of resin. The old people say it is the Dao weeping for joy. I believe them today.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <IncidentDef ParentName="CVG_CelestialIncidentBase">
+    <defName>CVG_SpiritRain</defName>
+    <label>spirit rain</label>
+    <gameCondition>CVG_SpiritRain</gameCondition>
+    <letterLabel>Spirit rain</letterLabel>
+    <letterDef>PositiveEvent</letterDef>
+    <baseChance>0.6</baseChance>
+    <minRefireDays>12</minRefireDays>
+    <earliestDay>3</earliestDay>
+    <durationDays>1~2</durationDays>
+  </IncidentDef>
+
+  <!-- Qi star: the vanilla meteorite, but what falls is a seam of spirit stone. -->
+  <IncidentDef>
+    <defName>CVG_SpiritMeteor</defName>
+    <label>qi star</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>Convergence.IncidentWorker_SpiritMeteor</workerClass>
+    <baseChance>0.4</baseChance>
+    <minRefireDays>20</minRefireDays>
+    <letterLabel>Qi star</letterLabel>
+    <letterText>A star fell from the sky of Jiuxiao and struck the ground nearby, still humming with qi. It has left a mass of {0}.</letterText>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_MeteorContents">
+        <mineable>CVG_MineableSpiritStone</mineable>
+        <count>6~12</count>
+      </li>
+    </modExtensions>
+  </IncidentDef>
 </Defs>

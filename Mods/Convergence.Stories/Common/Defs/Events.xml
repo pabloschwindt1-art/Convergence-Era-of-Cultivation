@@ -1093,4 +1093,269 @@
       </li>
     </stages>
   </ThoughtDef>
+
+  <!-- Restored (integration plan, 2026-10-23): cheap world-building events and the ones with something of their own. -->
+  <Convergence.Stories.StoryEventDef>
+    <defName>GoodOmen</defName>
+    <category>opportunity</category>
+    <weight>1.0</weight>
+    <minDays>5</minDays>
+    <minRefireDays>45</minRefireDays>
+    <tone>positive</tone>
+    <outcomes><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_OmenGood</thought><target>all</target></li><li Class="Convergence.Stories.SO_Inspire"><chance>0.2</chance><inspiration>Inspired_Recruitment</inspiration></li></outcomes>
+  </Convergence.Stories.StoryEventDef>
+  <Convergence.Stories.StoryEventDef>
+    <defName>SpiritHerbBloom</defName>
+    <category>opportunity</category>
+    <weight>0.9</weight>
+    <minDays>8</minDays>
+    <minRefireDays>45</minRefireDays>
+    <tone>positive</tone>
+    <outcomes><li Class="Convergence.Stories.SO_Items"><thing>MedicineHerbal</thing><count>20~40</count></li><li Class="Convergence.Stories.SO_Items" MayRequire="prospero1088.convergence.alchemy"><thing>CVG_SpiritHerb</thing><count>10~20</count></li><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_OmenGood</thought><target>all</target></li></outcomes>
+  </Convergence.Stories.StoryEventDef>
+  <Convergence.Stories.StoryEventDef>
+    <defName>FieldsGlow</defName>
+    <category>opportunity</category>
+    <weight>1.0</weight>
+    <minDays>6</minDays>
+    <minRefireDays>45</minRefireDays>
+    <tone>positive</tone>
+    <options>
+      <li>
+        <key>harvest</key>
+        <outcomes><li Class="Convergence.Stories.SO_Condition"><condition>CVG_QiTide</condition><days>2~3</days></li><li Class="Convergence.Stories.SO_Items" MayRequire="prospero1088.convergence.alchemy"><chance>0.6</chance><thing>CVG_SpiritHerb</thing><count>6~12</count></li></outcomes>
+      </li>
+      <li>
+        <key>leave</key>
+        <outcomes><li Class="Convergence.Stories.SO_Thought"><chance>0.6</chance><thought>CVG_Thought_OmenGood</thought><target>all</target></li></outcomes>
+      </li>
+    </options>
+  </Convergence.Stories.StoryEventDef>
+  <Convergence.Stories.StoryEventDef>
+    <defName>RainbowBridge</defName>
+    <category>opportunity</category>
+    <weight>0.7</weight>
+    <minDays>10</minDays>
+    <minRefireDays>45</minRefireDays>
+    <tone>positive</tone>
+    <outcomes><li Class="Convergence.Stories.SO_Condition"><condition>CVG_QiTide</condition><days>1~2</days></li><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_LotusBlessing</thought><target>all</target></li></outcomes>
+  </Convergence.Stories.StoryEventDef>
+  <Convergence.Stories.StoryEventDef>
+    <defName>FoundersDay</defName>
+    <category>opportunity</category>
+    <weight>0.8</weight>
+    <minDays>20</minDays>
+    <minRefireDays>60</minRefireDays>
+    <tone>positive</tone>
+    <options>
+      <li>
+        <key>celebrate</key>
+        <costThing>Silver</costThing>
+        <costCount>30</costCount>
+        <outcomes><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_FeastOfLights</thought><target>all</target></li><li Class="Convergence.Stories.SO_Thought"><chance>0.4</chance><thought>CVG_Thought_LotusBlessing</thought><target>all</target></li></outcomes>
+      </li>
+      <li>
+        <key>skip</key>
+      </li>
+    </options>
+  </Convergence.Stories.StoryEventDef>
+  <Convergence.Stories.StoryEventDef>
+    <defName>PreOddLights</defName>
+    <category>pre</category>
+    <weight>1.0</weight>
+    <minDays>4</minDays>
+    <minRefireDays>30</minRefireDays>
+    <tone>neutral</tone>
+    <pre>true</pre>
+    <outcomes><li Class="Convergence.Stories.SO_Flag"><set>omen_lights</set></li><li Class="Convergence.Stories.SO_Thought"><chance>0.6</chance><thought>CVG_Thought_OmenGood</thought><target>all</target></li></outcomes>
+  </Convergence.Stories.StoryEventDef>
+  <Convergence.Stories.StoryEventDef>
+    <defName>PreRestlessAnimals</defName>
+    <category>pre</category>
+    <weight>1.0</weight>
+    <minDays>7</minDays>
+    <minRefireDays>30</minRefireDays>
+    <tone>neutral</tone>
+    <pre>true</pre>
+    <outcomes><li Class="Convergence.Stories.SO_Flag"><set>omen_animals</set></li><li Class="Convergence.Stories.SO_Thought"><chance>0.4</chance><thought>CVG_Thought_DemonDread</thought><target>all</target></li></outcomes>
+  </Convergence.Stories.StoryEventDef>
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
+    <defName>HungryBeggar</defName>
+    <category>encounter</category>
+    <weight>0.9</weight>
+    <minDays>6</minDays>
+    <minRefireDays>45</minRefireDays>
+    <tone>neutral</tone>
+    <factionToken>rogue</factionToken>
+    <requiresFaction>true</requiresFaction>
+    <options>
+      <li>
+        <key>feed</key>
+        <costThing>Pemmican</costThing>
+        <costCount>8</costCount>
+        <outcomes><li Class="Convergence.Stories.SO_TakeItems"><thing>Pemmican</thing><count>5~8</count></li><li Class="Convergence.Stories.SO_Thought"><chance>0.8</chance><thought>CVG_Thought_ProudOfMercy</thought><target>all</target></li><li Class="Convergence.Stories.SO_Items"><chance>0.35</chance><thing>CVG_JadeSlip</thing><count>1</count></li><li Class="Convergence.Stories.SO_Goodwill"><faction>rogue</faction><amount>8</amount></li></outcomes>
+      </li>
+      <li>
+        <key>refuse</key>
+        <outcomes><li Class="Convergence.Stories.SO_Thought"><chance>0.5</chance><thought>CVG_Thought_Ashamed</thought><target>random</target></li><li Class="Convergence.Stories.SO_Goodwill"><faction>rogue</faction><amount>-4</amount></li></outcomes>
+      </li>
+    </options>
+  </Convergence.Stories.StoryEventDef>
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
+    <defName>StolenManual</defName>
+    <category>dilemma</category>
+    <weight>0.8</weight>
+    <minDays>8</minDays>
+    <minRefireDays>45</minRefireDays>
+    <tone>neutral</tone>
+    <factionToken>cauldron</factionToken>
+    <requiresFaction>true</requiresFaction>
+    <options>
+      <li>
+        <key>return</key>
+        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>cauldron</faction><amount>12</amount></li><li Class="Convergence.Stories.SO_Thought"><chance>0.6</chance><thought>CVG_Thought_ProudOfMercy</thought><target>all</target></li></outcomes>
+      </li>
+      <li>
+        <key>keep</key>
+        <outcomes><li Class="Convergence.Stories.SO_Progress"><amount>500</amount></li><li Class="Convergence.Stories.SO_Goodwill"><faction>cauldron</faction><amount>-10</amount></li><li Class="Convergence.Stories.SO_Thought"><chance>0.5</chance><thought>CVG_Thought_Ashamed</thought><target>random</target></li></outcomes>
+      </li>
+    </options>
+  </Convergence.Stories.StoryEventDef>
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions">
+    <defName>AllianceProposal</defName>
+    <category>dilemma</category>
+    <weight>0.7</weight>
+    <minDays>14</minDays>
+    <minRefireDays>90</minRefireDays>
+    <tone>neutral</tone>
+    <factionToken>sect:friendly</factionToken>
+    <requiresFaction>true</requiresFaction>
+    <options>
+      <li>
+        <key>accept</key>
+        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>sect:friendly</faction><amount>25</amount></li><li Class="Convergence.Stories.SO_Join" MayRequire="prospero1088.convergence.factions"><kind>CVG_HeavenlyCauldron_Alchemist</kind><count>1</count></li><li Class="Convergence.Stories.SO_Flag"><set>allied_by_marriage</set></li></outcomes>
+      </li>
+      <li>
+        <key>decline</key>
+        <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>sect:friendly</faction><amount>-4</amount></li></outcomes>
+      </li>
+    </options>
+  </Convergence.Stories.StoryEventDef>
+  <Convergence.Stories.StoryEventDef>
+    <defName>TeaMaster</defName>
+    <category>encounter</category>
+    <weight>1.0</weight>
+    <minDays>5</minDays>
+    <minRefireDays>40</minRefireDays>
+    <tone>positive</tone>
+    <options>
+      <li>
+        <key>share</key>
+        <outcomes><li Class="Convergence.Stories.SO_Thought"><thought>CVG_Thought_OmenGood</thought><target>all</target></li><li Class="Convergence.Stories.SO_Inspire"><chance>0.3</chance><inspiration>Inspired_Creativity</inspiration></li></outcomes>
+      </li>
+      <li>
+        <key>buy</key>
+        <costThing>Silver</costThing>
+        <costCount>40</costCount>
+        <outcomes><li Class="Convergence.Stories.SO_Items" MayRequire="prospero1088.convergence.faunaflora"><thing>CVG_CloudTeaLeaf</thing><count>15~25</count></li><li Class="Convergence.Stories.SO_Thought"><chance>0.5</chance><thought>CVG_Thought_OmenGood</thought><target>all</target></li></outcomes>
+      </li>
+    </options>
+  </Convergence.Stories.StoryEventDef>
+  <Convergence.Stories.StoryEventDef>
+    <defName>BrokenStele</defName>
+    <category>disaster</category>
+    <weight>0.7</weight>
+    <minDays>14</minDays>
+    <minRefireDays>70</minRefireDays>
+    <tone>negative</tone>
+    <options>
+      <li>
+        <key>repair</key>
+        <costThing>Steel</costThing>
+        <costCount>30</costCount>
+        <outcomes><li Class="Convergence.Stories.SO_Thought"><chance>0.6</chance><thought>CVG_Thought_ProudOfMercy</thought><target>all</target></li><li Class="Convergence.Stories.SO_Skill"><skill>Crafting</skill><xp>2500</xp></li></outcomes>
+      </li>
+      <li>
+        <key>ignore</key>
+        <outcomes><li Class="Convergence.Stories.SO_Condition"><condition>CVG_QiEbb</condition><days>1~3</days></li><li Class="Convergence.Stories.SO_Thought"><chance>0.5</chance><thought>CVG_Thought_HauntedDreams</thought><target>all</target></li></outcomes>
+      </li>
+    </options>
+  </Convergence.Stories.StoryEventDef>
+  <Convergence.Stories.StoryEventDef>
+    <defName>SpiritBoarSow</defName>
+    <category>disaster</category>
+    <weight>0.8</weight>
+    <minDays>10</minDays>
+    <minRefireDays>50</minRefireDays>
+    <tone>threat</tone>
+    <options>
+      <li>
+        <key>fight</key>
+        <outcomes><li Class="Convergence.Stories.SO_Beasts"><kinds><li>WildBoar</li></kinds><count>1</count><hostile>true</hostile></li><li Class="Convergence.Stories.SO_Thought"><chance>0.4</chance><thought>CVG_Thought_ProudOfMercy</thought><target>all</target></li></outcomes>
+      </li>
+      <li>
+        <key>help</key>
+        <outcomes><li Class="Convergence.Stories.SO_Thought"><chance>0.7</chance><thought>CVG_Thought_LotusBlessing</thought><target>all</target></li><li Class="Convergence.Stories.SO_Inspire"><chance>0.3</chance><inspiration>Inspired_Taming</inspiration></li></outcomes>
+      </li>
+    </options>
+  </Convergence.Stories.StoryEventDef>
+  <Convergence.Stories.StoryEventDef>
+    <defName>RiverToll</defName>
+    <category>dilemma</category>
+    <weight>0.8</weight>
+    <minDays>10</minDays>
+    <minRefireDays>55</minRefireDays>
+    <tone>neutral</tone>
+    <options>
+      <li>
+        <key>pay</key>
+        <costThing>MealSimple</costThing>
+        <costCount>2</costCount>
+        <outcomes><li Class="Convergence.Stories.SO_Thought"><chance>0.7</chance><thought>CVG_Thought_LotusBlessing</thought><target>all</target></li><li Class="Convergence.Stories.SO_Flag"><set>river_spirit_pacified</set></li></outcomes>
+      </li>
+      <li>
+        <key>refuse</key>
+        <outcomes><li Class="Convergence.Stories.SO_Condition"><chance>0.5</chance><condition>CVG_QiEbb</condition><days>2~3</days></li><li Class="Convergence.Stories.SO_Thought"><chance>0.4</chance><thought>CVG_Thought_HauntedDreams</thought><target>all</target></li></outcomes>
+      </li>
+    </options>
+  </Convergence.Stories.StoryEventDef>
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions,prospero1088.convergence.faunaflora">
+    <defName>MissionSpider</defName>
+    <category>mission</category>
+    <weight>0.7</weight>
+    <minDays>16</minDays>
+    <minRefireDays>45</minRefireDays>
+    <tone>threat</tone>
+    <factionToken>cauldron</factionToken>
+    <requiresFaction>true</requiresFaction>
+    <options>
+      <li>
+        <key>hunt</key>
+        <outcomes><li Class="Convergence.Stories.SO_Hunt" MayRequire="prospero1088.convergence.faunaflora"><kind>CVG_NineNetherSpider</kind><count>1</count><success>MissionSpiderDone</success><fail>MissionSpiderFail</fail><days>10</days></li></outcomes>
+      </li>
+      <li>
+        <key>pass</key>
+      </li>
+    </options>
+  </Convergence.Stories.StoryEventDef>
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions,prospero1088.convergence.faunaflora">
+    <defName>MissionSpiderDone</defName>
+    <category>mission</category>
+    <weight>1.0</weight>
+    <minDays>3</minDays>
+    <minRefireDays>45</minRefireDays>
+    <tone>positive</tone>
+    <chainOnly>true</chainOnly>
+    <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>cauldron</faction><amount>18</amount></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_SpiritStone</thing><count>150~250</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_BeastCore</thing><count>2</count></li><li Class="Convergence.Stories.SO_Items"><thing>CVG_JadeSlip</thing><count>1</count></li></outcomes>
+  </Convergence.Stories.StoryEventDef>
+  <Convergence.Stories.StoryEventDef MayRequire="prospero1088.convergence.factions,prospero1088.convergence.faunaflora">
+    <defName>MissionSpiderFail</defName>
+    <category>mission</category>
+    <weight>1.0</weight>
+    <minDays>3</minDays>
+    <minRefireDays>45</minRefireDays>
+    <tone>negative</tone>
+    <chainOnly>true</chainOnly>
+    <outcomes><li Class="Convergence.Stories.SO_Goodwill"><faction>cauldron</faction><amount>-4</amount></li></outcomes>
+  </Convergence.Stories.StoryEventDef>
 </Defs>

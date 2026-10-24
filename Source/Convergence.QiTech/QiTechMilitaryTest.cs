@@ -94,7 +94,7 @@ namespace Convergence.QiTech
                         if (phaseTicks > 700) EndSilent();
                         break;
                     case Phase.Containment:
-                        if ((captured.ContainsKey(Def("CVG_QT_Gun_InductionTurret")) && shots >= 2) || phaseTicks > 3000)
+                        if ((captured.ContainsKey(Def("CVG_QT_Gun_ContainmentTurret")) && shots >= 2) || phaseTicks > 3000)
                             EndContainment();
                         break;
                 }
@@ -162,7 +162,7 @@ namespace Convergence.QiTech
                 Tex(d.Verbs[0].defaultProjectile.graphicData.texPath, d.Verbs[0].defaultProjectile.defName);
             }
             mortal.Destroy();
-            foreach (var (name, gunName, grade, perShot) in new[] { ("CVG_QT_InductionTurret", "CVG_QT_Gun_InductionTurret", 2, 0.1f) })
+            foreach (var (name, gunName, grade, perShot) in new[] { ("CVG_QT_InductionTurret", "CVG_QT_Gun_InductionTurret", 2, 0.1f), ("CVG_QT_ContainmentTurret", "CVG_QT_Gun_ContainmentTurret", 3, 0.4f) })
             {
                 var d = Def(name);
                 var g = Def(gunName);
@@ -263,6 +263,8 @@ namespace Convergence.QiTech
             var fuel = t.GetComp<CompRefuelable>();
             Check(fuel.Fuel == 0f && !t.AttackVerb.Available(), def + ": built empty, cannot fire before it is fed");
             fuel.Refuel(12f);
+            // Con capacidad 80-100, 12 piedras quedan por debajo del umbral y un colono vendría a recargarla en medio de la prueba.
+            fuel.allowAutoRefuel = false;
             t.GetComp<CompPowerTrader>().PowerOn = true; // sin red eléctrica en el mapa de prueba: se simula la corriente
             fuelAtStart = fuel.Fuel;
             shots = 0;
@@ -344,9 +346,7 @@ namespace Convergence.QiTech
                 case Phase.NoFuel:
                     Check(silent && turret.Active, "powered but with less stone than one shot: no shots (" + Fuel.ToString("0.##") + " left)");
                     turret.Destroy();
-                    // La torreta de contención se recortó (plan de integración): la fase de guardado usa otra vez la de inducción.
-                    turret = SpawnTurret("CVG_QT_InductionTurret");
-                    captured.Remove(Def("CVG_QT_Gun_InductionTurret")); // que cuente un impacto de esta torreta, no el de la primera
+                    turret = SpawnTurret("CVG_QT_ContainmentTurret");
                     Next(Phase.Containment);
                     break;
             }
@@ -355,9 +355,9 @@ namespace Convergence.QiTech
 
         private static void EndContainment()
         {
-            CheckDinfo("CVG_QT_Gun_InductionTurret", 2, turret);
+            CheckDinfo("CVG_QT_Gun_ContainmentTurret", 3, turret);
             float used = fuelAtStart - Fuel;
-            Check(shots > 0 && Mathf.Abs(used - shots * 0.1f) < 0.001f, $"induction turret again: {shots} shots used {used:0.###} stones (0.1 per shot)");
+            Check(shots > 0 && Mathf.Abs(used - shots * 0.4f) < 0.001f, $"containment cannon: {shots} shots used {used:0.###} stones (0.4 per shot)");
 
             // Guardar y cargar: combustible de la torreta y bonus de grado del rifle (Scribe del Core).
             shooter.equipment.Primary.GetComp<CompSpiritGrade>().bonus = 1;
@@ -379,12 +379,12 @@ namespace Convergence.QiTech
         private static void AfterLoad()
         {
             map = Find.CurrentMap;
-            var t = map.listerThings.ThingsOfDef(Def("CVG_QT_InductionTurret")).FirstOrDefault(x => x.ThingID == savedTurretId) as Building_TurretGun;
+            var t = map.listerThings.ThingsOfDef(Def("CVG_QT_ContainmentTurret")).FirstOrDefault(x => x.ThingID == savedTurretId) as Building_TurretGun;
             Check(t != null, "after load: the turret is there");
             if (t != null)
             {
                 Check(Mathf.Abs(t.GetComp<CompRefuelable>().Fuel - savedFuel) < 0.001f, $"after load: turret fuel kept ({savedFuel:0.##})");
-                Check(SpiritGradeUtility.GradeOf(t.GunCompEq.parent) == 2, "after load: turret gun grade 2");
+                Check(SpiritGradeUtility.GradeOf(t.GunCompEq.parent) == 3, "after load: turret gun grade 3");
                 t.Destroy();
             }
             var p = map.mapPawns.AllPawnsSpawned.FirstOrDefault(x => x.ThingID == savedShooterId);

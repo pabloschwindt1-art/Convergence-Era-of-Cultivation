@@ -274,4 +274,74 @@
   <CVG_Ev_PuppetCrypt_Opt_seal>Sellar la puerta</CVG_Ev_PuppetCrypt_Opt_seal>
   <CVG_Ev_PuppetCrypt_Res_seal>La puerta se cierra como una boca. Durante una semana, las marionetas de tu colonia se mantienen un poco más rectas.</CVG_Ev_PuppetCrypt_Res_seal>
   <CVG_Story_NeedItems>Faltan {0} {1}</CVG_Story_NeedItems>
+  <CVG_Ev_GoodOmen_Label>Un buen augurio</CVG_Ev_GoodOmen_Label>
+  <CVG_Ev_GoodOmen_Text>Nueve grullas sobrevuelan la colonia en línea perfecta y un arcoíris pálido se curva sobre el pozo. La persona más anciana del campamento dice que este es el tipo de augurio que solo llega cuando el Dao mira a otro lado, y que sería de mala educación preguntarle algo.</CVG_Ev_GoodOmen_Text>
+  <CVG_Ev_SpiritHerbBloom_Label>Las hierbas florecen fuera de temporada</CVG_Ev_SpiritHerbBloom_Label>
+  <CVG_Ev_SpiritHerbBloom_Text>Un prado detrás de la colonia ha florecido fuera de época, con colores que no son los de ninguna flor de este mundo. Bajo las flores hay hierbas espirituales, densas y fragantes. Los viejos herbolarios dicen que esto ocurre una vez por generación y que las hierbas se marchitan en una semana.</CVG_Ev_SpiritHerbBloom_Text>
+  <CVG_Ev_FieldsGlow_Label>Los campos brillan de noche</CVG_Ev_FieldsGlow_Label>
+  <CVG_Ev_FieldsGlow_Text>Una noche los cultivos del campo más lejano empiezan a brillar, débilmente, como un aliento contenido en la oscuridad. Por la mañana el qi se ha acumulado en la tierra; los viejos granjeros dicen que se desvanecerá en unos días, y que lo que se plante en él lo recordará. Es una oportunidad, y una tranquila.</CVG_Ev_FieldsGlow_Text>
+  <CVG_Ev_FieldsGlow_Opt_harvest>Cosechar el brillo</CVG_Ev_FieldsGlow_Opt_harvest>
+  <CVG_Ev_FieldsGlow_Res_harvest>La cosecha es pequeña y excepcionalmente sabrosa.</CVG_Ev_FieldsGlow_Res_harvest>
+  <CVG_Ev_FieldsGlow_Opt_leave>Dejarlo estar</CVG_Ev_FieldsGlow_Opt_leave>
+  <CVG_Ev_RainbowBridge_Label>Un puente de siete colores</CVG_Ev_RainbowBridge_Label>
+  <CVG_Ev_RainbowBridge_Text>Un arcoíris toca el suelo en el borde del prado y no se desvanece. Una tarde entera se mantiene, grueso como un camino. Quienes lo pisan sienten estar sobre el lomo de algo amable. Los cultivadores que se sientan en él notan su qi inusualmente sereno.</CVG_Ev_RainbowBridge_Text>
+  <CVG_Ev_FoundersDay_Label>El día de los fundadores</CVG_Ev_FoundersDay_Label>
+  <CVG_Ev_FoundersDay_Text>Alguien recuerda que hoy es el aniversario del día en que este asentamiento encendió su primer fuego. Nadie sabe quién lo contó. Se forma por sí sola una pequeña procesión, con un estandarte que alguien cosió en secreto, para poner una varilla de incienso en el primer hogar. Cuesta muy poco y significa mucho.</CVG_Ev_FoundersDay_Text>
+  <CVG_Ev_FoundersDay_Opt_celebrate>Celebrar la ceremonia</CVG_Ev_FoundersDay_Opt_celebrate>
+  <CVG_Ev_FoundersDay_Res_celebrate>El incienso arde derecho hacia arriba, lo que los viejos leen como una muy buena señal.</CVG_Ev_FoundersDay_Res_celebrate>
+  <CVG_Ev_FoundersDay_Opt_skip>Dejar que pase</CVG_Ev_FoundersDay_Opt_skip>
+  <CVG_Ev_PreOddLights_Label>Luces extrañas</CVG_Ev_PreOddLights_Label>
+  <CVG_Ev_PreOddLights_Text>De noche, tenues luces de colores brillan sobre las colinas del norte, sin tormenta ni aurora que las expliquen. Uno de los vigías jura que las luces parpadeaban con el patrón de una canción. Nadie sabe cuál.</CVG_Ev_PreOddLights_Text>
+  <CVG_Ev_PreRestlessAnimals_Label>Animales inquietos</CVG_Ev_PreRestlessAnimals_Label>
+  <CVG_Ev_PreRestlessAnimals_Text>Todos los animales de la colonia están despiertos a medianoche y todos miran en la misma dirección. No hacen ruido. Observan. Los perros gruñen al aire vacío, se echan y se vuelven a levantar. Por la mañana todo parece normal, salvo que las ovejas no quieren pastar hacia el norte.</CVG_Ev_PreRestlessAnimals_Text>
+  <CVG_Ev_HungryBeggar_Label>El mendigo que no era mendigo</CVG_Ev_HungryBeggar_Label>
+  <CVG_Ev_HungryBeggar_Text>Un viejo mendigo en harapos pide comida a la puerta y nadie se apresura a abrir. Quienes han vivido en Jiuxiao dicen que un mendigo en harapos puede ser un anciano del Alma Naciente que prueba el corazón de los jóvenes. Quienes no, dicen que huele mal.</CVG_Ev_HungryBeggar_Text>
+  <CVG_Ev_HungryBeggar_Opt_feed>Darle de comer</CVG_Ev_HungryBeggar_Opt_feed>
+  <CVG_Ev_HungryBeggar_Res_feed>Come en silencio, te da las gracias con una reverencia demasiado profunda para un mendigo y se ha ido antes del amanecer.</CVG_Ev_HungryBeggar_Res_feed>
+  <CVG_Ev_HungryBeggar_Opt_refuse>Rechazarlo</CVG_Ev_HungryBeggar_Opt_refuse>
+  <CVG_Ev_HungryBeggar_Res_refuse>El mendigo mira la puerta un largo rato. Esa noche nadie en la colonia duerme bien.</CVG_Ev_HungryBeggar_Res_refuse>
+  <CVG_Ev_StolenManual_Label>El manual robado</CVG_Ev_StolenManual_Label>
+  <CVG_Ev_StolenManual_Text>A alguien de tu gente lo vieron con una receta de píldoras del Pabellón del Caldero Celestial que nadie recuerda haber comprado. Esa misma tarde llega una alquimista del Pabellón buscando, con buenos modales, una receta robada. Las dos cosas se van a encontrar en la cena.</CVG_Ev_StolenManual_Text>
+  <CVG_Ev_StolenManual_Opt_return>Devolverlo</CVG_Ev_StolenManual_Opt_return>
+  <CVG_Ev_StolenManual_Res_return>La alquimista hace una reverencia, más profunda de lo que merece la receta.</CVG_Ev_StolenManual_Res_return>
+  <CVG_Ev_StolenManual_Opt_keep>Quedárselo y negarlo</CVG_Ev_StolenManual_Opt_keep>
+  <CVG_Ev_StolenManual_Res_keep>La alquimista no discute. Solo anota algo en su libro de cuentas y mira largo rato a quien la robó.</CVG_Ev_StolenManual_Res_keep>
+  <CVG_Ev_AllianceProposal_Label>Una alianza matrimonial</CVG_Ev_AllianceProposal_Label>
+  <CVG_Ev_AllianceProposal_Text>Un emisario de una secta recta propone unir familias: la sobrina nieta de su maestro y uno de tus cultivadores. No va de amor. Va de dos pueblos que quizá un día necesiten las espadas del otro. Ella, dice, está notablemente bien leída.</CVG_Ev_AllianceProposal_Text>
+  <CVG_Ev_AllianceProposal_Opt_accept>Aceptar la alianza</CVG_Ev_AllianceProposal_Opt_accept>
+  <CVG_Ev_AllianceProposal_Res_accept>La boda es modesta y el banquete no. Un nuevo miembro se une a la colonia.</CVG_Ev_AllianceProposal_Res_accept>
+  <CVG_Ev_AllianceProposal_Opt_decline>Declinar con cortesía</CVG_Ev_AllianceProposal_Opt_decline>
+  <CVG_Ev_AllianceProposal_Res_decline>El emisario dice que la oferta era una cortesía. No parece pensarlo.</CVG_Ev_AllianceProposal_Res_decline>
+  <CVG_Ev_TeaMaster_Label>Un maestro del té a la puerta</CVG_Ev_TeaMaster_Label>
+  <CVG_Ev_TeaMaster_Text>Un anciano con una vara de bambú y dos cestas pide agua caliente, nada más. Pone una olla de barro al fuego, echa una pizca de hojas y espera. Cuando el té está listo lo sirve a todos los que están cerca, por orden de edad, él el último. Nadie habla. Cuando la olla se vacía, la tensión de toda la semana se ha ido a algún sitio.</CVG_Ev_TeaMaster_Text>
+  <CVG_Ev_TeaMaster_Opt_share>Compartir la olla</CVG_Ev_TeaMaster_Opt_share>
+  <CVG_Ev_TeaMaster_Res_share>Se marcha antes del alba sin decir palabra, y con la olla lavada.</CVG_Ev_TeaMaster_Res_share>
+  <CVG_Ev_TeaMaster_Opt_buy>Comprar sus hojas</CVG_Ev_TeaMaster_Opt_buy>
+  <CVG_Ev_TeaMaster_Res_buy>Te vende dos puñados y te dice dónde crece mejor el té.</CVG_Ev_TeaMaster_Res_buy>
+  <CVG_Ev_BrokenStele_Label>Una estela rota</CVG_Ev_BrokenStele_Label>
+  <CVG_Ev_BrokenStele_Text>Una tablilla de piedra junto al camino que nadie había leído jamás se parte por la mitad en la noche. La grieta atraviesa la primera línea, como si la piedra hubiera elegido qué romper. Los aldeanos callan. Alguien dice que contenía algo, y nadie pregunta qué.</CVG_Ev_BrokenStele_Text>
+  <CVG_Ev_BrokenStele_Opt_repair>Intentar repararla</CVG_Ev_BrokenStele_Opt_repair>
+  <CVG_Ev_BrokenStele_Res_repair>Lleva tres noches y mucho pegamento hecho de arroz. La línea vuelve, algo distinta.</CVG_Ev_BrokenStele_Res_repair>
+  <CVG_Ev_BrokenStele_Opt_ignore>Dejarla rota</CVG_Ev_BrokenStele_Opt_ignore>
+  <CVG_Ev_SpiritBoarSow_Label>La jabalina de las colinas rojas</CVG_Ev_SpiritBoarSow_Label>
+  <CVG_Ev_SpiritBoarSow_Text>Una jabalina con un anillo de luz pálida alrededor de los colmillos baja de las colinas. No quiere tu comida. Quiere a sus crías, que cree que tienes tú. No las tienes. Ella no te cree.</CVG_Ev_SpiritBoarSow_Text>
+  <CVG_Ev_SpiritBoarSow_Opt_fight>Ahuyentarla</CVG_Ev_SpiritBoarSow_Opt_fight>
+  <CVG_Ev_SpiritBoarSow_Res_fight>Embiste. Alguien dice por fin que las crías están al otro lado de la colina.</CVG_Ev_SpiritBoarSow_Res_fight>
+  <CVG_Ev_SpiritBoarSow_Opt_help>Ayudarla a buscar</CVG_Ev_SpiritBoarSow_Opt_help>
+  <CVG_Ev_SpiritBoarSow_Res_help>Tres horas de búsqueda. Las crías estaban en una zanja. Te gruñe una vez, con algo muy parecido al agradecimiento.</CVG_Ev_SpiritBoarSow_Res_help>
+  <CVG_Ev_RiverToll_Label>El peaje del río</CVG_Ev_RiverToll_Label>
+  <CVG_Ev_RiverToll_Text>Un río pasa por el borde de tus tierras, y un espíritu del río ha decidido que es hora de que pagues por él. Un niño viene a decírtelo, porque el espíritu habla por los niños de la aldea cuando está cansado. Quiere un cuenco de arroz, un cuenco de vino y una disculpa al agua. A cambio mantendrá sus crecidas dentro de las orillas.</CVG_Ev_RiverToll_Text>
+  <CVG_Ev_RiverToll_Opt_pay>Pagar el peaje</CVG_Ev_RiverToll_Opt_pay>
+  <CVG_Ev_RiverToll_Res_pay>Los cuencos están vacíos por la mañana, y el río está en calma.</CVG_Ev_RiverToll_Res_pay>
+  <CVG_Ev_RiverToll_Opt_refuse>Negarse</CVG_Ev_RiverToll_Opt_refuse>
+  <CVG_Ev_RiverToll_Res_refuse>El niño se encoge de hombros. «Solo era un mensaje», dice.</CVG_Ev_RiverToll_Res_refuse>
+  <CVG_Ev_MissionSpider_Label>Una recompensa por la Madre de los Nueve Infiernos</CVG_Ev_MissionSpider_Label>
+  <CVG_Ev_MissionSpider_Text>El Pabellón del Caldero Celestial publica una recompensa por una araña negra que ha estado disolviendo caravanas en el paso. Quieren su glándula de veneno intacta, que es una petición muy precisa. La recompensa es enorme. La nota al pie dice «sin reembolso por cazadores muertos».</CVG_Ev_MissionSpider_Text>
+  <CVG_Ev_MissionSpider_Opt_hunt>Cazar a la araña</CVG_Ev_MissionSpider_Opt_hunt>
+  <CVG_Ev_MissionSpider_Res_hunt>El paso queda a un día de camino. Lleva cuerda.</CVG_Ev_MissionSpider_Res_hunt>
+  <CVG_Ev_MissionSpider_Opt_pass>Demasiado peligroso</CVG_Ev_MissionSpider_Opt_pass>
+  <CVG_Ev_MissionSpiderDone_Label>La araña cae</CVG_Ev_MissionSpiderDone_Label>
+  <CVG_Ev_MissionSpiderDone_Text>El representante del Pabellón mira la glándula, el cadáver, a ti, y escribe una cifra en una tablilla. La cifra tiene muchos ceros. «El Pabellón honra sus deudas», dice con la dulzura de quien acaba de ganar mucho dinero.</CVG_Ev_MissionSpiderDone_Text>
+  <CVG_Ev_MissionSpiderFail_Label>La araña conserva su telaraña</CVG_Ev_MissionSpiderFail_Label>
+  <CVG_Ev_MissionSpiderFail_Text>Otra caravana desaparece en el paso. El Pabellón tacha el contrato del libro sin amargura. La amargura no es una partida contable.</CVG_Ev_MissionSpiderFail_Text>
 </LanguageData>

@@ -564,7 +564,7 @@ namespace Convergence
 
             comp.Techniques.AddMasteryLevel(comp.Techniques.Unlocked[0]);
             Check(comp.Techniques.Mastery(comp.Techniques.Unlocked[0]).order >= 2, "mastery level up");
-            enemy.Destroy();
+            if (!enemy.Destroyed) enemy.Destroy();   // la técnica de prueba puede haberlo matado (y el cadáver ya se fue)
         }
 
         private static void TestSuppression(Map map, Pawn pawn)
@@ -1291,7 +1291,11 @@ namespace Convergence
             Check(Hediff_SpiritBeast.LevelOf(beast) == 3, "awakened at level 3");
             Check(beast.HealthScale > before, $"beast health scale {before:0.##} -> {beast.HealthScale:0.##}");
             Check(SpiritGradeUtility.RealmLevel(beast) == 3, "beast bites at grade 3");
+            Check(beast.KindLabel != GenLabel.BestKindLabel(beast), "the name shows it: " + beast.KindLabel);
+            var stone = DefDatabase<ThingDef>.GetNamed("CVG_SpiritStone");
+            int stonesBefore = map.listerThings.ThingsOfDef(stone).Sum(t => t.stackCount);
             beast.Kill(null);
+            Check(map.listerThings.ThingsOfDef(stone).Sum(t => t.stackCount) > stonesBefore, "a dead spirit beast leaves spirit stones");
             var butcher = map.mapPawns.FreeColonistsSpawned.First();
             var products = beast.Corpse.ButcherProducts(butcher, 1f).ToList();
             Check(products.Any(t => t.def == CVG_DefOf.CVG_SpiritMeat) && products.Any(t => t.def == CVG_DefOf.CVG_BeastBlood)
@@ -1300,6 +1304,27 @@ namespace Convergence
             foreach (var p in products) if (!p.Destroyed) p.Destroy();
             beast.Corpse?.Destroy();
             Check(SpiritBeastUtility.AwakenChance(PawnGenerator.GeneratePawn(kind)) > 0f, "awaken chance > 0 for " + kind.defName);
+            // Rango por especie (plan de integración): gallina 1, oso 4, trumbo 5; cerca de la mitad del mundo despierta.
+            var animals = DefDatabase<PawnKindDef>.AllDefsListForReading.Where(k => k.RaceProps?.Animal == true && k.combatPower > 0).ToList();
+            float avg = animals.Average(k => SpiritBeastUtility.Ext.awakenChanceCurve.Evaluate(k.combatPower));
+            Check(avg > 0.4f && avg < 0.8f, $"about half of the world awakens (mean chance {avg:P0} over {animals.Count} animal kinds)");
+            var chicken = DefDatabase<PawnKindDef>.GetNamedSilentFail("Chicken");
+            var thrumbo = DefDatabase<PawnKindDef>.GetNamedSilentFail("Thrumbo");
+            if (chicken != null && thrumbo != null)
+                Check(SpiritBeastUtility.SpeciesLevel(chicken) == 1 && SpiritBeastUtility.SpeciesLevel(kind) == 4 && SpiritBeastUtility.SpeciesLevel(thrumbo) == 5,
+                    $"rank by species: chicken {SpiritBeastUtility.SpeciesLevel(chicken)}, {kind.defName} {SpiritBeastUtility.SpeciesLevel(kind)}, thrumbo {SpiritBeastUtility.SpeciesLevel(thrumbo)}");
+            var big = animals.Where(k => k.combatPower >= 600).OrderBy(k => k.combatPower).FirstOrDefault();
+            if (big != null)
+            {
+                var boss = PawnGenerator.GeneratePawn(big);
+                GenSpawn.Spawn(boss, CellFinder.RandomClosewalkCellNear(map.Center, map, 10), map);
+                var h = boss.health.hediffSet.GetFirstHediffOfDef(CVG_DefOf.CVG_SpiritBeast);
+                if (h != null) boss.health.RemoveHediff(h);
+                SpiritBeastUtility.Awaken(boss, SpiritBeastUtility.SpeciesLevel(big));
+                Check(boss.health.hediffSet.HasHediff(SpiritBeastUtility.Ext.sovereignHediff), $"{big.defName} (power {big.combatPower}) is a beast sovereign: {boss.KindLabel}");
+                boss.Destroy();
+            }
+            else sb.Append("\n    note no animal of 600+ combat power loaded: sovereign not checked");
         }
 
         private static void TestMentor(Map map)

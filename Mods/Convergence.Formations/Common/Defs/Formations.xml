@@ -137,7 +137,7 @@
     <comps>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>0.0</fuelConsumptionRate>
-        <fuelCapacity>15</fuelCapacity>
+        <fuelCapacity>60</fuelCapacity>
         <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
         <initialFuelPercent>0.5</initialFuelPercent>
         <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
@@ -201,7 +201,7 @@
     <comps>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>0.0</fuelConsumptionRate>
-        <fuelCapacity>15</fuelCapacity>
+        <fuelCapacity>60</fuelCapacity>
         <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
         <initialFuelPercent>0.5</initialFuelPercent>
         <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
@@ -265,7 +265,7 @@
     <comps>
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>0.5</fuelConsumptionRate>
-        <fuelCapacity>40</fuelCapacity>
+        <fuelCapacity>100</fuelCapacity>
         <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
         <initialFuelPercent>0.5</initialFuelPercent>
         <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
@@ -322,6 +322,11 @@
         <consumeFuelPerShot>0.1</consumeFuelPerShot>
       </li>
     </verbs>
+  <comps>
+      <li Class="Convergence.CompProperties_SpiritGrade">
+        <grade>2</grade>
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -357,7 +362,7 @@
       <li Class="CompProperties_Forbiddable" />
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>0</fuelConsumptionRate>
-        <fuelCapacity>10</fuelCapacity>
+        <fuelCapacity>50</fuelCapacity>
         <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
         <initialFuelPercent>0.5</initialFuelPercent>
         <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>

@@ -12,4 +12,8 @@
   <CVG_InnerDemonMoon.description>Sale una luna roja de Jiuxiao. Las dudas y los deseos se oyen fuerte en la mente de los cultivadores: los avances son más difíciles y el demonio interno despierta con facilidad.</CVG_InnerDemonMoon.description>
   <CVG_InnerDemonMoon.endMessage>La luna del demonio interno se pone.</CVG_InnerDemonMoon.endMessage>
   <CVG_InnerDemonMoon.letterText>Una luna roja como la sangre sale sobre la colonia: la luna del demonio interno. Mientras brille, los avances son más difíciles y los demonios internos de los cultivadores despiertan ante la menor duda; quien cae en uno sale con el qi corriendo al revés. Algunos cultivadores prefieren esperar.</CVG_InnerDemonMoon.letterText>
+  <CVG_SpiritRain.label>lluvia espiritual</CVG_SpiritRain.label>
+  <CVG_SpiritRain.description>Una lluvia tibia que huele a resina de pino cae de un cielo despejado. Donde toca, los brotes se abren y los cultivos crecen un dedo por día; los cultivadores que la reciben sienten que el qi les vuelve más rápido. En Jiuxiao los campesinos la llamaban las lágrimas del Dao y dejaban afuera sus cuencos para juntarla.</CVG_SpiritRain.description>
+  <CVG_SpiritRain.endMessage>Para la lluvia espiritual.</CVG_SpiritRain.endMessage>
+  <CVG_SpiritRain.letterText>Cae una lluvia tibia de un cielo despejado y los campos la beben: una lluvia espiritual. Durante uno o dos días todo lo que crece crece más rápido, el qi vuelve antes y nadie puede seguir de mal humor bajo ella.</CVG_SpiritRain.letterText>
 </LanguageData>

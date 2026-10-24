@@ -6,4 +6,9 @@
   <CVG_QiEbb.letterLabel>Reflujo del qi</CVG_QiEbb.letterLabel>
   <CVG_InnerDemonMoon.label>luna del demonio interno</CVG_InnerDemonMoon.label>
   <CVG_InnerDemonMoon.letterLabel>Luna del demonio interno</CVG_InnerDemonMoon.letterLabel>
+  <CVG_SpiritRain.label>lluvia espiritual</CVG_SpiritRain.label>
+  <CVG_SpiritRain.letterLabel>Lluvia espiritual</CVG_SpiritRain.letterLabel>
+  <CVG_SpiritMeteor.label>estrella de qi</CVG_SpiritMeteor.label>
+  <CVG_SpiritMeteor.letterLabel>Estrella de qi</CVG_SpiritMeteor.letterLabel>
+  <CVG_SpiritMeteor.letterText>Una estrella cayó del cielo de Jiuxiao y golpeó el suelo cerca, todavía vibrando de qi. Dejó una masa de {0}.</CVG_SpiritMeteor.letterText>
 </LanguageData>

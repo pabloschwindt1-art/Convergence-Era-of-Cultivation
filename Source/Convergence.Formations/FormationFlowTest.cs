@@ -107,6 +107,37 @@ namespace Convergence.Formations
                 float fuelNow = turret.TryGetComp<CompRefuelable>().Fuel;
                 Check(fuelNow < fuelBefore, $"the turret fired (spirit stones {fuelBefore:0.0} -> {fuelNow:0.0})");
                 Check(hurt, $"the turret shoots and hurts an enemy in range (health {hpBefore:P0} -> {(enemy.Dead ? 0f : enemy.health.summaryHealth.SummaryHealthPercent):P0})");
+                if (!enemy.Destroyed) enemy.Destroy();
+                turret.Destroy();
+                // Contra un cultivador del Núcleo Dorado (reino 3): la balista del trueno (grado 3) le pega como a un mortal.
+                turret = Build("CVG_ThunderBallistaTurret", center, map);
+                enemy = SpawnEnemy(map, center + new IntVec3(14, 0, 0), disarm: false);
+                var ec = CompCultivator.For(enemy);
+                var golden = DefDatabase<CultivationRealmDef>.AllDefsListForReading.FirstOrDefault(r => r.path == CVG_DefOf.CVG_Path_Qi && r.order == 3);
+                if (ec != null && golden != null)
+                {
+                    if (!ec.HasRoot) CultivationGenerator.GiveRoot(enemy, CultivationGenerator.RandomGrade(), CultivationGenerator.RandomElements());
+                    ec.Sync();
+                    var tr = ec.TrackerFor(CVG_DefOf.CVG_Path_Qi, create: true);
+                    tr.EnsureStarted();
+                    tr.AdvanceTo(golden, 1f);
+                }
+                int realm = SpiritGradeUtility.RealmLevel(enemy);
+                int grade = SpiritGradeUtility.GradeOf(turret is Building_TurretGun tg ? tg.gun : null);
+                Check(realm == 3 && grade == 3 && SpiritGradeUtility.SuppressionFactor(realm, grade) == 1f,
+                    $"thunder ballista grade {grade} vs a realm {realm} cultivator: full damage");
+                Check(golden != null && (turret.def.description.Contains(golden.label) || turret.def.description.Contains("CVG_SpiritGrade_DescAll".Translate(3).ToString())), "its description says up to which realm it is strong: ..." + turret.def.description.Substring(System.Math.Max(0, turret.def.description.Length - 160)));
+                hpBefore = enemy.health.summaryHealth.SummaryHealthPercent;
+                fuelBefore = turret.TryGetComp<CompRefuelable>().Fuel;
+                stageStart = now; stage = 3;
+                return;
+            }
+            if (stage == 3)
+            {
+                bool hurt = enemy.Dead || enemy.Downed || enemy.health.summaryHealth.SummaryHealthPercent < hpBefore - 0.05f;
+                if (!hurt && now - stageStart < 3500) return;
+                Check(turret.TryGetComp<CompRefuelable>().Fuel < fuelBefore, "the thunder ballista fired at the cultivator");
+                Check(hurt, $"the thunder ballista really hurts a Golden Core cultivator (health {hpBefore:P0} -> {(enemy.Dead ? 0f : enemy.health.summaryHealth.SummaryHealthPercent):P0})");
                 Finish();
             }
         }

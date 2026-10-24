@@ -2,10 +2,17 @@
 <LanguageData>
   <CVG_SpiritBeast.label>bestia espiritual</CVG_SpiritBeast.label>
   <CVG_SpiritBeast.description>El qi ha despertado a este animal. Es más fuerte, rápido y resistente que los de su especie, y su carne y su sangre llevan el poder espiritual que necesitan los cultivadores del cuerpo.</CVG_SpiritBeast.description>
-  <CVG_SpiritBeast.stages.0.label>nivel 1</CVG_SpiritBeast.stages.0.label>
-  <CVG_SpiritBeast.stages.1.label>nivel 2</CVG_SpiritBeast.stages.1.label>
-  <CVG_SpiritBeast.stages.2.label>nivel 3</CVG_SpiritBeast.stages.2.label>
-  <CVG_SpiritBeast.stages.3.label>nivel 4</CVG_SpiritBeast.stages.3.label>
   <CVG_SpiritNourished.label>nutrido de espíritu</CVG_SpiritNourished.label>
   <CVG_SpiritNourished.description>Una sopa espiritual calienta los meridianos: el cultivo y el templado del cuerpo van un poco más rápido durante un día. Las cocinas de secta hierven carne espiritual y hierbas toda una noche para prepararla. Los discípulos la juran antes de un retiro largo.</CVG_SpiritNourished.description>
+
+  <CVG_SpiritBeast.stages.0.label>rango 1</CVG_SpiritBeast.stages.0.label>
+  <CVG_SpiritBeast.stages.1.label>rango 2</CVG_SpiritBeast.stages.1.label>
+  <CVG_SpiritBeast.stages.2.label>rango 3</CVG_SpiritBeast.stages.2.label>
+  <CVG_SpiritBeast.stages.3.label>rango 4</CVG_SpiritBeast.stages.3.label>
+  <CVG_SpiritBeast.stages.4.label>rango 5</CVG_SpiritBeast.stages.4.label>
+  <CVG_SpiritBeast.stages.5.label>rango 6</CVG_SpiritBeast.stages.5.label>
+  <CVG_BeastSovereign.label>bestia soberana</CVG_BeastSovereign.label>
+  <CVG_BeastSovereign.description>Las grandes bestias no solo despertaron con la Convergencia: recordaron lo que fueron en Jiuxiao, cuando las sectas les pagaban tributo y les ponían su nombre a las montañas. Una soberana no siente dolor, sus heridas se cierran mientras la mirás y el aire a su alrededor pesa tanto de qi que los corazones débiles flaquean. Los viejos bestiarios dicen: a una soberana no se la caza, se negocia con ella.</CVG_BeastSovereign.description>
+  <CVG_BeastPressure.label>presión de bestia</CVG_BeastPressure.label>
+  <CVG_BeastPressure.description>El aura de una bestia soberana pesa sobre esta persona: las piernas se vuelven de plomo y la mente lenta, como un ratón que se congela bajo la mirada de un halcón. Solo un cultivador de un reino tan alto como el de la bestia se mantiene derecho.</CVG_BeastPressure.description>
 </LanguageData>

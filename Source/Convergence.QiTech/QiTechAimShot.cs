@@ -25,7 +25,7 @@ namespace Convergence.QiTech
         private IntVec3 center;
         private readonly List<Building_TurretGun> turrets = new List<Building_TurretGun>();
         private readonly List<Pawn> enemies = new List<Pawn>();
-        private static readonly string[] Defs = { "CVG_QT_InductionTurret", "CVG_RuneCrossbowTurret" };
+        private static readonly string[] Defs = { "CVG_QT_InductionTurret", "CVG_QT_ContainmentTurret", "CVG_RuneCrossbowTurret" };
 
         public GameComponent_QiTechAimShot(Game game) { }
 

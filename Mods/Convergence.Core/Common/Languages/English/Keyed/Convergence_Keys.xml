@@ -331,4 +331,13 @@ Some will trade, some will judge, and one of them hunts. Their goodwill can be e
   <CVG_BloodFeud_Text>{KILLER_nameDef} killed {VICTIM_nameDef}. {2} will not forget the face: from today {KILLER_nameDef} is a blood enemy.
 
 If {KILLER_nameDef} ever comes back, they will know. And if {KILLER_pronoun} dies, the blood will be paid.</CVG_BloodFeud_Text>
+  <!-- Spirit beasts: name, sovereign letter -->
+  <CVG_SpiritBeastKind>spirit {0}</CVG_SpiritBeastKind>
+  <CVG_SovereignKind>sovereign {0}</CVG_SovereignKind>
+  <CVG_BeastSovereign_Label>Beast sovereign: {0}</CVG_BeastSovereign_Label>
+  <CVG_BeastSovereign_Text>{BEAST_nameDef} has come into the colony's lands: a beast sovereign of rank {1}, one of the great beasts that remembered what they were in Jiuxiao.
+
+Its aura presses on anyone of a lower realm who fights it, pain does not stop it and its wounds close as you watch. Its death would leave spirit stones and cores enough for a whole sect; so would the death of whoever hunts it carelessly.</CVG_BeastSovereign_Text>
+  <CVG_SpiritGrade_Desc>Spirit grade {0}: full force against cultivators up to the {1} realm. One, two and three realms higher it only does {2} of its damage.</CVG_SpiritGrade_Desc>
+  <CVG_SpiritGrade_DescAll>Spirit grade {0}: full force against cultivators of any realm.</CVG_SpiritGrade_DescAll>
 </LanguageData>

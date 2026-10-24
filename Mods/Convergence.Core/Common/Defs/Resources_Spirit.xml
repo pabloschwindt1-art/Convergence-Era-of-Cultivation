@@ -114,14 +114,14 @@
       <isResourceRock>true</isResourceRock>
       <mineableThing>CVG_SpiritStone</mineableThing>
       <mineableYield>25</mineableYield>
-      <mineableScatterCommonality>0.05</mineableScatterCommonality>
-      <mineableScatterLumpSizeRange>2~8</mineableScatterLumpSizeRange>
+      <mineableScatterCommonality>0.25</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>4~12</mineableScatterLumpSizeRange>
       <veinMineable>true</veinMineable>
     </building>
     <modExtensions>
       <li Class="Convergence.DefModExtension_ConvergenceMineable">
-        <eventLumps>3~5</eventLumps>
-        <eventLumpSize>3~7</eventLumpSize>
+        <eventLumps>10~14</eventLumps>
+        <eventLumpSize>5~10</eventLumpSize>
       </li>
     </modExtensions>
   </ThingDef>

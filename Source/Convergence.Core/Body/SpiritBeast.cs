@@ -30,6 +30,13 @@ namespace Convergence
         /// <summary>Cuero que deja la bestia al carnear (opcional): × tamaño corporal × nivel.</summary>
         public ThingDef leatherDef;
         public float leatherPerBodySize = 3f;
+        /// <summary>Probabilidad de que salga un rango por encima del de su especie (élite).</summary>
+        public float eliteChance = 0.15f;
+        /// <summary>Desde este combatPower la especie despierta como bestia soberana (jefe).</summary>
+        public float sovereignMinCombatPower = 600f;
+        public HediffDef sovereignHediff;
+        /// <summary>Piedras espirituales que deja al morir, por rango (índice 0 = rango 1).</summary>
+        public List<int> deathStonesByLevel = new List<int>();
     }
 
     /// <summary>
@@ -97,11 +104,18 @@ namespace Convergence
             return Mathf.Clamp01(chance);
         }
 
+        /// <summary>Rango de la especie (siempre el mismo: lo decide su combatPower), a veces uno más (élite).</summary>
+        public static int SpeciesLevel(PawnKindDef kind) =>
+            Mathf.Clamp(Mathf.RoundToInt(Ext?.levelCurve?.Evaluate(kind?.combatPower ?? 0f) ?? 1f), 1, MaxLevel);
+
         public static int RollLevel(Pawn pawn)
         {
-            float mean = Ext?.levelCurve?.Evaluate(pawn.kindDef.combatPower) ?? 1f;
-            return Mathf.Clamp(Mathf.RoundToInt(mean + Rand.Range(-0.6f, 0.9f)), 1, MaxLevel);
+            int level = SpeciesLevel(pawn.kindDef);
+            if (Rand.Chance(Ext?.eliteChance ?? 0f)) level++;
+            return Mathf.Clamp(level, 1, MaxLevel);
         }
+
+        public static bool IsSovereignSpecies(PawnKindDef kind) => kind != null && Ext?.sovereignHediff != null && kind.combatPower >= Ext.sovereignMinCombatPower;
 
         /// <summary>Tira el despertar (tras la Convergencia). Devuelve true si despertó.</summary>
         public static bool TryAwaken(Pawn pawn)
@@ -125,6 +139,8 @@ namespace Convergence
             var hediff = HediffMaker.MakeHediff(CVG_DefOf.CVG_SpiritBeast, pawn);
             hediff.Severity = Mathf.Clamp(level, 1, MaxLevel);
             pawn.health.AddHediff(hediff);
+            if (IsSovereignSpecies(pawn.kindDef) && !pawn.health.hediffSet.HasHediff(Ext.sovereignHediff))
+                pawn.health.AddHediff(Ext.sovereignHediff);
             if (pawn.Spawned)
             {
                 FleckMaker.ThrowLightningGlow(pawn.DrawPos, pawn.Map, 1.5f);
@@ -167,6 +183,90 @@ namespace Convergence
                 count -= t.stackCount;
                 yield return t;
             }
+        }
+    }
+
+    /// <summary>
+    /// Presión de la bestia soberana (aura): cada pocos segundos, los enemigos humanos cerca y de reino más bajo que el rango de la
+    /// bestia reciben <see cref="HediffCompProperties_BeastPressure.hediff"/>. La primera vez que aparece en un mapa del jugador, una
+    /// carta lo avisa.
+    /// </summary>
+    public class HediffCompProperties_BeastPressure : HediffCompProperties
+    {
+        public float radius = 9.9f;
+        public HediffDef hediff;
+        public HediffCompProperties_BeastPressure() { compClass = typeof(HediffComp_BeastPressure); }
+    }
+
+    public class HediffComp_BeastPressure : HediffComp
+    {
+        private bool announced;
+        private HediffCompProperties_BeastPressure Props => (HediffCompProperties_BeastPressure)props;
+
+        public override void CompPostTick(ref float severityAdjustment)
+        {
+            var beast = Pawn;
+            if (!beast.IsHashIntervalTick(250) || !beast.Spawned || beast.Downed || !GameComponent_Convergence.Active) return;
+            var map = beast.Map;
+            if (!announced && map.IsPlayerHome)
+            {
+                announced = true;
+                Find.LetterStack.ReceiveLetter("CVG_BeastSovereign_Label".Translate(beast.LabelShortCap),
+                    "CVG_BeastSovereign_Text".Translate(beast.Named("BEAST"), Hediff_SpiritBeast.LevelOf(beast)), LetterDefOf.ThreatSmall, beast);
+            }
+            if (Props.hediff == null) return;
+            int level = Hediff_SpiritBeast.LevelOf(beast);
+            foreach (var p in map.mapPawns.AllPawnsSpawned)
+            {
+                if (p == beast || !p.RaceProps.Humanlike || p.Dead || !p.HostileTo(beast)) continue;
+                if (p.Position.DistanceToSquared(beast.Position) > Props.radius * Props.radius) continue;
+                if (SpiritGradeUtility.RealmLevel(p) >= level) continue;
+                var h = p.health.hediffSet.GetFirstHediffOfDef(Props.hediff);
+                if (h == null) p.health.AddHediff(Props.hediff);
+                else h.TryGetComp<HediffComp_Disappears>()?.ResetElapsedTicks();
+            }
+        }
+
+        public override void CompExposeData()
+        {
+            base.CompExposeData();
+            Scribe_Values.Look(ref announced, "announced");
+        }
+    }
+
+    /// <summary>Al morir, el qi de la bestia se condensa: deja piedras espirituales según su rango (como los núcleos de maná del Isekai).</summary>
+    [HarmonyPatch(typeof(Pawn), nameof(Pawn.Kill))]
+    public static class Patch_Pawn_Kill_SpiritStones
+    {
+        private static ThingDef SpiritStoneDef;
+
+        public static void Postfix(Pawn __instance)
+        {
+            if (!__instance.Dead || !__instance.RaceProps.Animal) return;
+            int level = Hediff_SpiritBeast.LevelOf(__instance);
+            var list = SpiritBeastUtility.Ext?.deathStonesByLevel;
+            var stone = SpiritStoneDef ??= DefDatabase<ThingDef>.GetNamedSilentFail("CVG_SpiritStone");
+            if (level <= 0 || list == null || list.Count == 0 || stone == null) return;
+            var map = __instance.MapHeld;
+            if (map == null) return;
+            int count = list[Mathf.Clamp(level - 1, 0, list.Count - 1)];
+            if (count <= 0) return;
+            var t = ThingMaker.MakeThing(stone);
+            t.stackCount = count;
+            GenPlace.TryPlaceThing(t, __instance.PositionHeld, map, ThingPlaceMode.Near);
+        }
+    }
+
+    /// <summary>Se nota en el nombre: "alce espiritual", "trumbo soberano".</summary>
+    [HarmonyPatch(typeof(Pawn), nameof(Pawn.KindLabel), MethodType.Getter)]
+    public static class Patch_Pawn_KindLabel_SpiritBeast
+    {
+        public static void Postfix(Pawn __instance, ref string __result)
+        {
+            if (Hediff_SpiritBeast.For(__instance) == null) return;
+            var sov = SpiritBeastUtility.Ext?.sovereignHediff;
+            bool sovereign = sov != null && __instance.health.hediffSet.HasHediff(sov);
+            __result = (sovereign ? "CVG_SovereignKind" : "CVG_SpiritBeastKind").Translate(__result);
         }
     }
 

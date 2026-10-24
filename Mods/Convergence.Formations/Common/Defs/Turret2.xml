@@ -50,6 +50,11 @@
         <consumeFuelPerShot>0.5</consumeFuelPerShot>
       </li>
     </verbs>
+  <comps>
+      <li Class="Convergence.CompProperties_SpiritGrade">
+        <grade>3</grade>
+      </li>
+    </comps>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -86,7 +91,7 @@
       <li Class="CompProperties_Forbiddable" />
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>0</fuelConsumptionRate>
-        <fuelCapacity>20</fuelCapacity>
+        <fuelCapacity>80</fuelCapacity>
         <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
         <initialFuelPercent>0.5</initialFuelPercent>
         <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>

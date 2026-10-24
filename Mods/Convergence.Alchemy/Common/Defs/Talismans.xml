@@ -210,7 +210,7 @@
     <costList>
       <Cloth>2</Cloth>
       <CVG_SpiritStone>1</CVG_SpiritStone>
-    </costList>
+    <CVG_CraneFeather MayRequire="prospero1088.convergence.faunaflora">1</CVG_CraneFeather></costList>
   </ThingDef>
 
   <HediffDef>

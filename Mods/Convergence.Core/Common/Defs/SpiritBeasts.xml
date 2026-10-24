@@ -2,9 +2,13 @@
 <Defs>
   <!--
     Spirit beasts (M4b, base of the Fauna module, docs/modulos/FAUNA_FLORA.md §1): after the Convergence any animal (of any
-    mod) may awaken. It is a state, not a new animal: hediff CVG_SpiritBeast, level = severity 1-4.
-    Awakening: at the Convergence (animals on the map) and when animals are generated afterwards; chance and level by
-    combatPower (curves below) x the mod setting. Butchering adds spirit meat, beast blood and (level 3+) beast cores.
+    mod) may awaken. It is a state, not a new animal: hediff CVG_SpiritBeast, rank = severity 1-6, aligned with the six realms
+    (a rank 4 beast fights and endures like a cultivator of the fourth realm; realm suppression applies both ways).
+    Integration plan (2026-10-23): about half of the world awakens, or the Convergence is an anecdote and body cultivators
+    never advance. The rank belongs to the SPECIES (vanilla combatPower: a chicken is rank 1, a bear rank 4, a thrumbo rank 5), with a small
+    chance of an elite one rank higher, so any modded creature is ranked the moment it has a combatPower.
+    Death drops spirit stones by rank; butchering adds spirit meat, beast blood, spirit leather and (rank 3+) beast cores.
+    Species of combatPower 600+ awaken as beast sovereigns (CVG_BeastSovereign): bosses with an aura of pressure.
   -->
   <HediffDef>
     <defName>CVG_SpiritBeast</defName>
@@ -17,11 +21,11 @@
     <scenarioCanAdd>false</scenarioCanAdd>
     <initialSeverity>1</initialSeverity>
     <minSeverity>1</minSeverity>
-    <maxSeverity>4</maxSeverity>
+    <maxSeverity>6</maxSeverity>
     <stages>
       <li>
         <minSeverity>1</minSeverity>
-        <label>level 1</label>
+        <label>rank 1</label>
         <statFactors>
           <MoveSpeed>1.1</MoveSpeed>
           <MeleeDamageFactor>1.3</MeleeDamageFactor>
@@ -30,7 +34,7 @@
       </li>
       <li>
         <minSeverity>2</minSeverity>
-        <label>level 2</label>
+        <label>rank 2</label>
         <statFactors>
           <MoveSpeed>1.2</MoveSpeed>
           <MeleeDamageFactor>1.7</MeleeDamageFactor>
@@ -39,7 +43,7 @@
       </li>
       <li>
         <minSeverity>3</minSeverity>
-        <label>level 3</label>
+        <label>rank 3</label>
         <statFactors>
           <MoveSpeed>1.3</MoveSpeed>
           <MeleeDamageFactor>2.2</MeleeDamageFactor>
@@ -48,47 +52,84 @@
       </li>
       <li>
         <minSeverity>4</minSeverity>
-        <label>level 4</label>
+        <label>rank 4</label>
         <statFactors>
           <MoveSpeed>1.45</MoveSpeed>
           <MeleeDamageFactor>3</MeleeDamageFactor>
           <IncomingDamageFactor>0.45</IncomingDamageFactor>
         </statFactors>
       </li>
+      <li>
+        <minSeverity>5</minSeverity>
+        <label>rank 5</label>
+        <statFactors>
+          <MoveSpeed>1.55</MoveSpeed>
+          <MeleeDamageFactor>3.8</MeleeDamageFactor>
+          <IncomingDamageFactor>0.35</IncomingDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <minSeverity>6</minSeverity>
+        <label>rank 6</label>
+        <statFactors>
+          <MoveSpeed>1.65</MoveSpeed>
+          <MeleeDamageFactor>4.8</MeleeDamageFactor>
+          <IncomingDamageFactor>0.28</IncomingDamageFactor>
+        </statFactors>
+      </li>
     </stages>
     <modExtensions>
       <li Class="Convergence.DefModExtension_SpiritBeast">
         <leatherDef>CVG_SpiritLeather</leatherDef>
-        <!-- combatPower -> chance to awaken (wild; tamed x0.5). Squirrel ~30, boar ~70, bear ~200, thrumbo ~500. -->
+        <!-- combatPower -> chance to awaken (wild; tamed x0.5): about half of the world. Squirrel ~30, boar ~70, bear ~200,
+             thrumbo ~500. Mod setting multiplies it. -->
         <awakenChanceCurve>
           <points>
-            <li>(0, 0.01)</li>
-            <li>(30, 0.03)</li>
-            <li>(70, 0.08)</li>
-            <li>(120, 0.15)</li>
-            <li>(200, 0.3)</li>
-            <li>(350, 0.6)</li>
-            <li>(500, 0.85)</li>
-            <li>(1000, 0.95)</li>
+            <li>(0, 0.35)</li>
+            <li>(35, 0.42)</li>
+            <li>(80, 0.5)</li>
+            <li>(150, 0.58)</li>
+            <li>(300, 0.75)</li>
+            <li>(600, 1)</li>
           </points>
         </awakenChanceCurve>
         <tameChanceFactor>0.5</tameChanceFactor>
-        <!-- combatPower -> mean level (a little randomness is added). -->
+        <!-- combatPower -> rank of the species (steps; an elite is one rank higher). Calibrated on vanilla and Alpha Animals:
+             chicken 1, boar 2, muffalo 3, bear 4, elephant/thrumbo 5-6, the great beasts of 600+ are 6. -->
         <levelCurve>
           <points>
             <li>(0, 1)</li>
-            <li>(90, 1)</li>
-            <li>(160, 1.6)</li>
-            <li>(260, 2.3)</li>
-            <li>(400, 3)</li>
-            <li>(700, 3.6)</li>
+            <li>(34, 1)</li>
+            <li>(35, 2)</li>
+            <li>(79, 2)</li>
+            <li>(80, 3)</li>
+            <li>(149, 3)</li>
+            <li>(150, 4)</li>
+            <li>(299, 4)</li>
+            <li>(300, 5)</li>
+            <li>(599, 5)</li>
+            <li>(600, 6)</li>
           </points>
         </levelCurve>
+        <eliteChance>0.15</eliteChance>
+        <sovereignMinCombatPower>600</sovereignMinCombatPower>
+        <sovereignHediff>CVG_BeastSovereign</sovereignHediff>
+        <!-- Spirit stones that condense from the qi of a dead beast, by rank (index 0 = rank 1). -->
+        <deathStonesByLevel>
+          <li>1</li>
+          <li>2</li>
+          <li>4</li>
+          <li>7</li>
+          <li>11</li>
+          <li>16</li>
+        </deathStonesByLevel>
         <healthScaleByLevel>
           <li>1.3</li>
           <li>1.8</li>
           <li>2.5</li>
           <li>3.5</li>
+          <li>4.8</li>
+          <li>6.5</li>
         </healthScaleByLevel>
         <meatPerBodySize>8</meatPerBodySize>
         <bloodPerBodySize>2</bloodPerBodySize>
@@ -97,11 +138,74 @@
     </modExtensions>
   </HediffDef>
 
+  <!-- Beast sovereign: the boss form of the great beasts (combatPower 600+). Pain does not stop it, wounds close fast, and its
+       aura presses on every enemy of lower realm nearby (CVG_BeastPressure). A letter announces it when it reaches the colony. -->
+  <HediffDef>
+    <defName>CVG_BeastSovereign</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>beast sovereign</label>
+    <description>The great beasts did not just wake with the Convergence: they remembered what they were in Jiuxiao, when sects paid tribute to them and named mountains after them. A sovereign does not feel pain, its wounds close as you watch, and the air around it is so heavy with its qi that weaker hearts falter. The old bestiaries say: do not hunt a sovereign, negotiate with it.</description>
+    <defaultLabelColor>(1, 0.65, 0.25)</defaultLabelColor>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <painFactor>0</painFactor>
+        <statFactors>
+          <InjuryHealingFactor>4</InjuryHealingFactor>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="Convergence.HediffCompProperties_BeastPressure">
+        <radius>9.9</radius>
+        <hediff>CVG_BeastPressure</hediff>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>CVG_BeastPressure</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>beast pressure</label>
+    <description>The aura of a beast sovereign weighs on this person: the legs go heavy and the mind slow, the way a mouse freezes under the gaze of a hawk. Only a cultivator of a realm as high as the beast's stands straight under it.</description>
+    <defaultLabelColor>(0.9, 0.5, 0.3)</defaultLabelColor>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>600</disappearsAfterTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
   <!-- ================= Products ================= -->
-  <!-- Own category so ordinary meals do not eat the spirit meat. -->
+  <!-- Own category so ordinary meals do not eat the spirit meat (it is not under MeatRaw), but under raw food so it is stored,
+       hauled and spoils like food (integration plan, 2026-10-23). Cores, feathers, fangs and shells are beast parts. -->
   <ThingCategoryDef>
     <defName>CVG_SpiritBeastProducts</defName>
-    <label>spirit beast products</label>
+    <label>spirit beast meat and blood</label>
+    <parent>FoodRaw</parent>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>CVG_SpiritBeastParts</defName>
+    <label>spirit beast parts</label>
     <parent>ResourcesRaw</parent>
   </ThingCategoryDef>
 
@@ -212,7 +316,7 @@
       </outcomeDoers>
     </ingestible>
     <thingCategories>
-      <li>CVG_SpiritBeastProducts</li>
+      <li>CVG_SpiritBeastParts</li>
     </thingCategories>
     <tradeability>All</tradeability>
     <tradeTags>

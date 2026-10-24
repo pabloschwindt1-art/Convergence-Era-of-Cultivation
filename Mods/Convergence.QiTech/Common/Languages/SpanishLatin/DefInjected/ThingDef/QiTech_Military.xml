@@ -15,4 +15,10 @@
   <CVG_QT_InductionTurret.comps.CompRefuelable.fuelLabel>Piedras espirituales</CVG_QT_InductionTurret.comps.CompRefuelable.fuelLabel>
   <CVG_QT_InductionTurret.comps.CompRefuelable.fuelGizmoLabel>Piedras espirituales</CVG_QT_InductionTurret.comps.CompRefuelable.fuelGizmoLabel>
   <CVG_QT_CompressedBolt.label>proyectil de qi comprimido</CVG_QT_CompressedBolt.label>
+  <CVG_QT_Gun_ContainmentTurret.label>emisor de cañón de contención de qi</CVG_QT_Gun_ContainmentTurret.label>
+  <CVG_QT_Gun_ContainmentTurret.description>El emisor de un cañón de contención de qi: una botella magnética que retiene un proyectil de qi comprimido hasta soltarlo. El diseño es la respuesta del Qi-Tech a las viejas botellas talismán en que los hechiceros de Jiuxiao guardaban rayos atrapados. Sus ingenieros bromean con que la botella es lo fácil; lo difícil es soltarla en el momento justo.</CVG_QT_Gun_ContainmentTurret.description>
+  <CVG_QT_ContainmentTurret.label>cañón de contención de qi</CVG_QT_ContainmentTurret.label>
+  <CVG_QT_ContainmentTurret.description>Una torreta de largo alcance que dispara de a un proyectil de qi comprimido, cada uno de casi media piedra espiritual, tan denso que hiere a un cultivador de Núcleo Dorado como si fuera mortal. Consume mucha corriente y no puede acertarle a lo que tiene justo al lado. La Espada Sin Forma mandó un enviado a pedir que no apuntaran a su montaña, y el enviado fue lo primero a lo que apuntó.</CVG_QT_ContainmentTurret.description>
+  <CVG_QT_ContainmentTurret.comps.CompRefuelable.fuelLabel>Piedras espirituales</CVG_QT_ContainmentTurret.comps.CompRefuelable.fuelLabel>
+  <CVG_QT_ContainmentTurret.comps.CompRefuelable.fuelGizmoLabel>Piedras espirituales</CVG_QT_ContainmentTurret.comps.CompRefuelable.fuelGizmoLabel>
 </LanguageData>

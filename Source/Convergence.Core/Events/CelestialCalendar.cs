@@ -18,6 +18,55 @@ namespace Convergence
         public float daoComprehensionFactor = 1f;
         /// <summary>Multiplicador de la probabilidad de la crisis "demonio interno" (MentalBreakWorker_InnerDemon).</summary>
         public float innerDemonBreakFactor = 1f;
+        /// <summary>Multiplicador del crecimiento de las plantas del mapa (lluvia espiritual).</summary>
+        public float plantGrowthFactor = 1f;
+    }
+
+    /// <summary>Las condiciones celestes con <see cref="DefModExtension_CelestialCondition.plantGrowthFactor"/> aceleran las plantas del mapa.</summary>
+    [HarmonyLib.HarmonyPatch(typeof(Plant), nameof(Plant.GrowthRate), HarmonyLib.MethodType.Getter)]
+    public static class Patch_Plant_GrowthRate_Celestial
+    {
+        public static void Postfix(Plant __instance, ref float __result)
+        {
+            var map = __instance.Map;
+            if (map == null || __result <= 0f) return;
+            var list = map.gameConditionManager.ActiveConditions;
+            for (int i = 0; i < list.Count; i++)
+            {
+                var ext = list[i].def.GetModExtension<DefModExtension_CelestialCondition>();
+                if (ext != null && ext.plantGrowthFactor != 1f) __result *= ext.plantGrowthFactor;
+            }
+        }
+    }
+
+    /// <summary>
+    /// Estrella de qi: el meteorito vanilla, pero lo que cae es una veta de piedra espiritual (solo después de la Convergencia).
+    /// El contenido sale del XML del incidente (<see cref="DefModExtension_MeteorContents"/>).
+    /// </summary>
+    public class DefModExtension_MeteorContents : DefModExtension
+    {
+        public ThingDef mineable;
+        public IntRange count = new IntRange(6, 12);
+    }
+
+    public class IncidentWorker_SpiritMeteor : IncidentWorker_MeteoriteImpact
+    {
+        protected override bool CanFireNowSub(IncidentParms parms) => GameComponent_Convergence.Active && base.CanFireNowSub(parms);
+
+        protected override List<Thing> GenerateMeteorContents(IncidentParms parms)
+        {
+            var ext = def.GetModExtension<DefModExtension_MeteorContents>();
+            if (ext?.mineable == null) return base.GenerateMeteorContents(parms);
+            var list = new List<Thing>();
+            int n = ext.count.RandomInRange;
+            for (int i = 0; i < n; i++)
+            {
+                var b = (Building)ThingMaker.MakeThing(ext.mineable);
+                b.canChangeTerrainOnDestroyed = false;
+                list.Add(b);
+            }
+            return list;
+        }
     }
 
     /// <summary>Solo se dispara después de la Convergencia (el cielo de Jiuxiao todavía no se ve antes).</summary>

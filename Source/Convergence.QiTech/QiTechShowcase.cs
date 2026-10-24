@@ -46,6 +46,7 @@ namespace Convergence.QiTech
                 map.roofGrid.SetRoof(cell, null);
             }
             turrets.Add(SpawnTurret(map, "CVG_QT_InductionTurret", center + new IntVec3(0, 0, 5)));
+            turrets.Add(SpawnTurret(map, "CVG_QT_ContainmentTurret", center + new IntVec3(0, 0, -5)));
 
             var guns = new[] { "CVG_QT_InductionRifle", "CVG_QT_FocusedRifle", "CVG_QT_CompressionCannon" };
             for (int i = 0; i < guns.Length; i++)

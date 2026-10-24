@@ -274,4 +274,74 @@
   <CVG_Ev_PuppetCrypt_Opt_seal>Seal the door</CVG_Ev_PuppetCrypt_Opt_seal>
   <CVG_Ev_PuppetCrypt_Res_seal>The door closes like a mouth. For a week, the puppets in your colony stand a little straighter.</CVG_Ev_PuppetCrypt_Res_seal>
   <CVG_Story_NeedItems>Needs {0} {1}</CVG_Story_NeedItems>
+  <CVG_Ev_GoodOmen_Label>A good omen</CVG_Ev_GoodOmen_Label>
+  <CVG_Ev_GoodOmen_Text>Nine cranes fly over the colony in a perfect line, and a pale rainbow bends over the well. The oldest person in the camp says this is the kind of omen that only comes when the Dao is looking elsewhere, and that it would be bad manners to ask it anything.</CVG_Ev_GoodOmen_Text>
+  <CVG_Ev_SpiritHerbBloom_Label>The herbs bloom out of season</CVG_Ev_SpiritHerbBloom_Label>
+  <CVG_Ev_SpiritHerbBloom_Text>A meadow behind the colony has burst into bloom, in the wrong season, in colors that are not the colors of any flower in this world. Beneath the flowers are spirit herbs, thick and fragrant. Old herbalists say this happens only once in a generation, and that the herbs wilt in a week.</CVG_Ev_SpiritHerbBloom_Text>
+  <CVG_Ev_FieldsGlow_Label>The fields glow at night</CVG_Ev_FieldsGlow_Label>
+  <CVG_Ev_FieldsGlow_Text>One night the crops in the farthest field begin to glow, faintly, like a breath held in the dark. By morning the qi has pooled in the soil; the old farmers say it will fade in a few days, and that anything planted in it will remember. It is an opportunity, and a quiet one.</CVG_Ev_FieldsGlow_Text>
+  <CVG_Ev_FieldsGlow_Opt_harvest>Harvest the glow</CVG_Ev_FieldsGlow_Opt_harvest>
+  <CVG_Ev_FieldsGlow_Res_harvest>The harvest is small and exceptionally tasty.</CVG_Ev_FieldsGlow_Res_harvest>
+  <CVG_Ev_FieldsGlow_Opt_leave>Let it be</CVG_Ev_FieldsGlow_Opt_leave>
+  <CVG_Ev_RainbowBridge_Label>A bridge of seven colors</CVG_Ev_RainbowBridge_Label>
+  <CVG_Ev_RainbowBridge_Text>A rainbow touches the ground at the edge of the meadow and does not fade. For one afternoon it holds, thick as a road. People who step on it feel like they are standing on the back of something kind. Cultivators who sit on it find their qi unusually calm.</CVG_Ev_RainbowBridge_Text>
+  <CVG_Ev_FoundersDay_Label>Founders' day</CVG_Ev_FoundersDay_Label>
+  <CVG_Ev_FoundersDay_Text>Someone remembers that today is the anniversary of the day this settlement first lit a fire. Nobody knows who counted. A small procession forms by itself, with a banner somebody sewed in secret, to put an incense stick on the first hearth. It costs very little and means a great deal.</CVG_Ev_FoundersDay_Text>
+  <CVG_Ev_FoundersDay_Opt_celebrate>Hold the ceremony</CVG_Ev_FoundersDay_Opt_celebrate>
+  <CVG_Ev_FoundersDay_Res_celebrate>The incense burns straight up, which the old ones read as a very good sign.</CVG_Ev_FoundersDay_Res_celebrate>
+  <CVG_Ev_FoundersDay_Opt_skip>Let it pass</CVG_Ev_FoundersDay_Opt_skip>
+  <CVG_Ev_PreOddLights_Label>Strange lights</CVG_Ev_PreOddLights_Label>
+  <CVG_Ev_PreOddLights_Text>At night, faint colored lights shimmer over the northern hills, with no storm and no aurora to explain them. One of the watchers swears the lights flickered in the pattern of a song. No one knows which song.</CVG_Ev_PreOddLights_Text>
+  <CVG_Ev_PreRestlessAnimals_Label>Restless animals</CVG_Ev_PreRestlessAnimals_Label>
+  <CVG_Ev_PreRestlessAnimals_Text>Every animal in the colony is awake at midnight and all of them are facing the same direction. They do not make noise. They watch. The dogs growl at the empty air, then lie down, then get up again. In the morning, everything seems normal, except that the sheep will not graze to the north.</CVG_Ev_PreRestlessAnimals_Text>
+  <CVG_Ev_HungryBeggar_Label>The beggar who was not a beggar</CVG_Ev_HungryBeggar_Label>
+  <CVG_Ev_HungryBeggar_Text>An old beggar in rags asks for food at the gate, and nobody hurries to open it. Those who have lived in Jiuxiao say that a beggar in rags may be a Nascent Soul elder testing the hearts of the young. Those who have not say he smells.</CVG_Ev_HungryBeggar_Text>
+  <CVG_Ev_HungryBeggar_Opt_feed>Feed him</CVG_Ev_HungryBeggar_Opt_feed>
+  <CVG_Ev_HungryBeggar_Res_feed>He eats in silence, thanks you with a bow too deep for a beggar, and is gone before morning.</CVG_Ev_HungryBeggar_Res_feed>
+  <CVG_Ev_HungryBeggar_Opt_refuse>Turn him away</CVG_Ev_HungryBeggar_Opt_refuse>
+  <CVG_Ev_HungryBeggar_Res_refuse>The beggar looks at the gate for a long moment. No one in the colony sleeps well that night.</CVG_Ev_HungryBeggar_Res_refuse>
+  <CVG_Ev_StolenManual_Label>The stolen manual</CVG_Ev_StolenManual_Label>
+  <CVG_Ev_StolenManual_Text>One of your people has been seen with a pill recipe of the Heavenly Cauldron Pavilion that nobody remembers buying. An alchemist of the Pavilion arrives that same afternoon, looking, with good manners, for a stolen recipe. The two things are going to meet at supper.</CVG_Ev_StolenManual_Text>
+  <CVG_Ev_StolenManual_Opt_return>Return it</CVG_Ev_StolenManual_Opt_return>
+  <CVG_Ev_StolenManual_Res_return>The alchemist bows, deeper than the recipe deserves.</CVG_Ev_StolenManual_Res_return>
+  <CVG_Ev_StolenManual_Opt_keep>Keep it and deny</CVG_Ev_StolenManual_Opt_keep>
+  <CVG_Ev_StolenManual_Res_keep>The alchemist does not argue. She only writes something in her ledger, and looks at the thief for a long time.</CVG_Ev_StolenManual_Res_keep>
+  <CVG_Ev_AllianceProposal_Label>A marriage of sects</CVG_Ev_AllianceProposal_Label>
+  <CVG_Ev_AllianceProposal_Text>An emissary of a righteous sect proposes to join families: his master's grand-niece for one of your cultivators. It is not about love. It is about two peoples who may one day need each other's swords. She is, he says, remarkably well read.</CVG_Ev_AllianceProposal_Text>
+  <CVG_Ev_AllianceProposal_Opt_accept>Accept the alliance</CVG_Ev_AllianceProposal_Opt_accept>
+  <CVG_Ev_AllianceProposal_Res_accept>The wedding is modest and the feast is not. A new member joins the colony.</CVG_Ev_AllianceProposal_Res_accept>
+  <CVG_Ev_AllianceProposal_Opt_decline>Decline politely</CVG_Ev_AllianceProposal_Opt_decline>
+  <CVG_Ev_AllianceProposal_Res_decline>The emissary says that the offer was a courtesy. He does not seem to think so.</CVG_Ev_AllianceProposal_Res_decline>
+  <CVG_Ev_TeaMaster_Label>A tea master at the gate</CVG_Ev_TeaMaster_Label>
+  <CVG_Ev_TeaMaster_Text>An old man with a bamboo pole and two baskets asks for hot water, no more. He sets a clay pot on your fire, drops in a pinch of leaves and waits. When the tea is ready he pours it for everyone who is nearby, in order of age, himself last. Nobody speaks. When the pot is empty the tension of the whole week has gone somewhere.</CVG_Ev_TeaMaster_Text>
+  <CVG_Ev_TeaMaster_Opt_share>Share the pot</CVG_Ev_TeaMaster_Opt_share>
+  <CVG_Ev_TeaMaster_Res_share>He leaves before dawn without a word, and the pot washed.</CVG_Ev_TeaMaster_Res_share>
+  <CVG_Ev_TeaMaster_Opt_buy>Buy his leaves</CVG_Ev_TeaMaster_Opt_buy>
+  <CVG_Ev_TeaMaster_Res_buy>He sells you two handfuls and tells you where the tea grows best.</CVG_Ev_TeaMaster_Res_buy>
+  <CVG_Ev_BrokenStele_Label>A broken stele</CVG_Ev_BrokenStele_Label>
+  <CVG_Ev_BrokenStele_Text>A stone tablet by the road that nobody had ever read splits down the middle in the night. The crack runs straight through the first line, as if the stone had chosen what to break. The villagers go quiet. Somebody says it was holding something in, and nobody asks what.</CVG_Ev_BrokenStele_Text>
+  <CVG_Ev_BrokenStele_Opt_repair>Try to repair it</CVG_Ev_BrokenStele_Opt_repair>
+  <CVG_Ev_BrokenStele_Res_repair>It takes three nights and a lot of glue made from rice. The line comes back, a little different.</CVG_Ev_BrokenStele_Res_repair>
+  <CVG_Ev_BrokenStele_Opt_ignore>Leave it broken</CVG_Ev_BrokenStele_Opt_ignore>
+  <CVG_Ev_SpiritBoarSow_Label>The sow of the red hills</CVG_Ev_SpiritBoarSow_Label>
+  <CVG_Ev_SpiritBoarSow_Text>A boar sow with a ring of pale light around her tusks comes out of the hills. She does not want your food. She wants her piglets, which she believes you have. You do not. She does not believe you.</CVG_Ev_SpiritBoarSow_Text>
+  <CVG_Ev_SpiritBoarSow_Opt_fight>Drive her off</CVG_Ev_SpiritBoarSow_Opt_fight>
+  <CVG_Ev_SpiritBoarSow_Res_fight>She charges. Somebody finally says the piglets are on the other side of the hill.</CVG_Ev_SpiritBoarSow_Res_fight>
+  <CVG_Ev_SpiritBoarSow_Opt_help>Help her look</CVG_Ev_SpiritBoarSow_Opt_help>
+  <CVG_Ev_SpiritBoarSow_Res_help>Three hours of searching. The piglets were in a ditch. She grunts once at you, with something very like gratitude.</CVG_Ev_SpiritBoarSow_Res_help>
+  <CVG_Ev_RiverToll_Label>The toll of the river</CVG_Ev_RiverToll_Label>
+  <CVG_Ev_RiverToll_Text>A river runs through the edge of your land, and a river spirit has decided it is time you paid for it. A boy comes to tell you, because the spirit speaks through the village children when it is tired. It wants a bowl of rice, a bowl of wine and an apology to the water. In exchange it will keep its floods inside its banks.</CVG_Ev_RiverToll_Text>
+  <CVG_Ev_RiverToll_Opt_pay>Pay the toll</CVG_Ev_RiverToll_Opt_pay>
+  <CVG_Ev_RiverToll_Res_pay>The bowls are empty in the morning, and the river is calm.</CVG_Ev_RiverToll_Res_pay>
+  <CVG_Ev_RiverToll_Opt_refuse>Refuse</CVG_Ev_RiverToll_Opt_refuse>
+  <CVG_Ev_RiverToll_Res_refuse>The boy shrugs. 'It was only a message', he says.</CVG_Ev_RiverToll_Res_refuse>
+  <CVG_Ev_MissionSpider_Label>A bounty for the Mother of Nine Hells</CVG_Ev_MissionSpider_Label>
+  <CVG_Ev_MissionSpider_Text>The Heavenly Cauldron Pavilion posts a bounty on a black spider that has been dissolving caravans in the pass. They want its poison gland intact, which is a very precise thing to ask. The reward is enormous. The footnote reads 'no refunds for dead hunters'.</CVG_Ev_MissionSpider_Text>
+  <CVG_Ev_MissionSpider_Opt_hunt>Hunt the spider</CVG_Ev_MissionSpider_Opt_hunt>
+  <CVG_Ev_MissionSpider_Res_hunt>The pass is a day's walk away. Bring rope.</CVG_Ev_MissionSpider_Res_hunt>
+  <CVG_Ev_MissionSpider_Opt_pass>Too dangerous</CVG_Ev_MissionSpider_Opt_pass>
+  <CVG_Ev_MissionSpiderDone_Label>The spider falls</CVG_Ev_MissionSpiderDone_Label>
+  <CVG_Ev_MissionSpiderDone_Text>The Pavilion's representative looks at the gland, at the carcass, at you, and writes a figure on a slip. The figure has many zeroes. 'The Pavilion honors its debts', he says, with the sweetness of a man who has just made a lot of money.</CVG_Ev_MissionSpiderDone_Text>
+  <CVG_Ev_MissionSpiderFail_Label>The spider keeps its web</CVG_Ev_MissionSpiderFail_Label>
+  <CVG_Ev_MissionSpiderFail_Text>Another caravan vanishes in the pass. The Pavilion strikes the contract from the ledger without bitterness. Bitterness is not a line item.</CVG_Ev_MissionSpiderFail_Text>
 </LanguageData>

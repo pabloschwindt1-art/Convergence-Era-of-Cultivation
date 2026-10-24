@@ -56,7 +56,7 @@
       <drawSize>0.7</drawSize>
     </graphicData>
     <thingCategories Inherit="False"><li>ApparelMisc</li></thingCategories>
-    <costList><Silver>30</Silver><CVG_SpiritStone>3</CVG_SpiritStone></costList>
+    <costList><Silver>30</Silver><CVG_SpiritStone>3</CVG_SpiritStone><CVG_WolfFang MayRequire="prospero1088.convergence.faunaflora">2</CVG_WolfFang></costList>
     <statBases>
       <WorkToMake>8000</WorkToMake>
       <Mass>0.15</Mass>

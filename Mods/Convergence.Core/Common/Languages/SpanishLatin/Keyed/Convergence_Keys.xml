@@ -331,4 +331,13 @@ Algunas van a comerciar, otras van a juzgar, y una de ellas caza. Su buena volun
   <CVG_BloodFeud_Text>{KILLER_nameDef} mató a {VICTIM_nameDef}. {2} no van a olvidar esa cara: desde hoy {KILLER_nameDef} es un enemigo de sangre.
 
 Si alguna vez vuelve, lo van a reconocer. Y si muere, la sangre estará pagada.</CVG_BloodFeud_Text>
+  <!-- Bestias espirituales: nombre, carta de la soberana -->
+  <CVG_SpiritBeastKind>{0} espiritual</CVG_SpiritBeastKind>
+  <CVG_SovereignKind>gran {0}</CVG_SovereignKind>
+  <CVG_BeastSovereign_Label>Bestia soberana: {0}</CVG_BeastSovereign_Label>
+  <CVG_BeastSovereign_Text>{BEAST_nameDef} llegó a las tierras de la colonia: una bestia soberana de rango {1}, una de las grandes bestias que recordaron lo que fueron en Jiuxiao.
+
+Su aura pesa sobre cualquiera de reino más bajo que la enfrente, el dolor no la detiene y sus heridas se cierran mientras la mirás. Su muerte dejaría piedras espirituales y núcleos para una secta entera; la de quien la cace sin cuidado, también.</CVG_BeastSovereign_Text>
+  <CVG_SpiritGrade_Desc>Grado espiritual {0}: toda su fuerza contra cultivadores hasta el reino de {1}. Uno, dos y tres reinos más arriba solo hace {2} de su daño.</CVG_SpiritGrade_Desc>
+  <CVG_SpiritGrade_DescAll>Grado espiritual {0}: toda su fuerza contra cultivadores de cualquier reino.</CVG_SpiritGrade_DescAll>
 </LanguageData>

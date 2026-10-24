@@ -381,7 +381,7 @@
     </graphicData>
     <costStuffCount>100</costStuffCount>
     <stuffCategories><li>Fabric</li><li>Leathery</li></stuffCategories>
-    <costList><CVG_SpiritStone>6</CVG_SpiritStone></costList>
+    <costList><CVG_SpiritStone>6</CVG_SpiritStone><CVG_NetherChitin MayRequire="prospero1088.convergence.faunaflora">4</CVG_NetherChitin></costList>
     <thingCategories><li>ApparelMisc</li></thingCategories>
     <statBases>
       <MaxHitPoints>220</MaxHitPoints>
