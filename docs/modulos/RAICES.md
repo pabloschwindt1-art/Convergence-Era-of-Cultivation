@@ -170,6 +170,76 @@ para que el resultado herede los elementos y los donantes. La chance de fallo va
 - **Historia:** cada raíz sellada guarda a quién perteneció. La fundida guarda "hecha con las raíces de tres cultivadores", y un
   relato lo cuenta.
 
+## 7a. Vía de ingeniería (Qi-Tech): la mesa de cirugía de qi
+
+Pedido del usuario (2026-10-24): "la mesa de injertos, pero para el mod de ingeniería". La regla de jugar **con y sin
+tecnología** pide las dos puertas: el altar del Dao (Grafts, sin electricidad) es la vía de cultivo; Qi-Tech tiene la suya, a la
+que se llega investigando, sin cultivadores. Las dos dan el mismo resultado (raíces selladas, implantadas, fundidas) por caminos
+distintos, y cada una cobra a su manera: el altar purifica y la máquina suma disonancia.
+
+**Equivalente vanilla:** la cama de hospital (cama médica con monitor de signos vitales) y la cadena de investigación de biónicos.
+
+### Investigación: "Ingeniería de raíces" (`CVG_Research_RootEngineering`)
+- Pestaña **Ingeniería espiritual**, nivel espacial, costo 3000, mesa de investigación de alta tecnología.
+- Requisitos: `CVG_Research_AdvancedSpiritInstrumentation` (el resonador) y `CVG_Research_QiBionics`. Posición en el árbol: (4, 1).
+- Como toda la pestaña, lleva `DefModExtension_RequiresConvergence`: no se empieza antes de la Convergencia.
+- Desbloquea la mesa, las dos cirugías en ella, la fusión en el laboratorio de píldoras de qi y la raíz artificial.
+- Lore: los ingenieros midieron por primera vez una raíz con el resonador y la llamaron "una antena que alguien plantó en el
+  alma". Los del Caldero Celestial lo consideran robo; Ascension Dynamics, una línea de producto.
+
+### Mesa: "Mesa de cirugía de qi" (`CVG_QT_QiSurgeryTable`)
+- **Cama médica de 1×2** (como el altar y la cama de hospital), `Graphic_Multi` con vistas sur, este y norte, `drawSize (2,2)`.
+- Pide **energía (250 W)**; sin energía funciona como una camilla común y no permite las cirugías de raíz.
+- Stats: `SurgerySuccessChanceFactor` 1,25 (el altar 1,15), `MedicalTendQualityOffset` 0,12, `ImmunityGainSpeedFactor` 1,1.
+- Se enlaza con el monitor de signos vitales vanilla y con el **resonador espiritual** (si está al lado, +5 % de éxito en las
+  cirugías de raíz).
+- Costo: acero 80, plastiacero 20, componentes 4, cristal primordial 2, piedra espiritual 30.
+- Lore: una camilla de acero con un anillo de bobinas que lee el flujo de qi del paciente mientras se opera. Los cirujanos
+  trabajan mirando una pantalla, no al paciente; dicen que así no se oye cuando la raíz grita.
+
+### Proceso
+| Paso | Altar del Dao (Grafts) | Mesa de cirugía de qi (Qi-Tech) |
+|---|---|---|
+| Extirpar | Medicina 8, 2 de jade espiritual | Medicina 8, 10 piedras espirituales y energía. Algo más de éxito (por la mesa); los mismos riesgos para el donante |
+| Implantar | "Raíz ajena" 30 días, +0,1 de disonancia | "Raíz ajena" 30 días con **+0,25** de disonancia, y una **costura de qi** permanente de +0,05: el Cielo nota la máquina |
+| Fundir 3 a 1 | Horno de refinado de huesos, Medicina 10, purifica un elemento | **Laboratorio de píldoras de qi** (`CVG_QT_PillLab`), Intelectual 8, energía y 20 piedras espirituales; 10 puntos más de éxito, **no purifica** |
+| Algo propio | — | **Raíz artificial** (abajo) |
+
+Las cirugías son las mismas recetas con un `RecipeWorker` que mira la cama: el altar o la mesa de qi encendida. Así no se
+duplican defs, y el paciente busca la que haya, como el altar hoy (`Patch_RestUtility_FindPatientBedFor`).
+
+### Raíz artificial (`CVG_QT_ArtificialRoot`)
+- Implante hecho en el laboratorio de píldoras de qi: plastiacero, cristal primordial 3, componentes avanzados 2.
+- Da una **raíz común de un elemento al azar** a quien no tiene raíz (con raíz, no se puede instalar). Va como hediff con
+  `DefModExtension_SpiritRoot`: hay que sumar a `CompCultivator.Sync` la lectura de hediffs además de genes y rasgos.
+- **+0,35 de disonancia** permanente: la tribulación de Núcleo Dorado pega fuerte. Nunca sube de grado (ni por avance, ni por
+  píldora, ni por ritual): es una máquina.
+- Lore: el producto estrella de Ascension Dynamics, "cultivo para todos". Los que la llevan avanzan, pero cuando llega la
+  tribulación el rayo sabe dónde está el metal.
+- Arte: necesita su propio sprite (128×128).
+
+## 7c. Órganos de cultivador (idea del usuario, 2026-10-24)
+
+"Si le quito el corazón a un cultivador, ¿es distinto del de un colono normal?" Hoy no: sale el corazón vanilla. En el xianxia
+el cuerpo de un cultivador está templado por el qi, y sus órganos valen más (y se roban).
+
+**Equivalente vanilla:** la extracción de órganos (`Recipe_RemoveBodyPart` → `MedicalRecipesUtility.SpawnNaturalPartIfClean`
+suelta `spawnThingOnRemoved` del órgano) y la instalación (`Recipe_InstallNaturalBodyPart`). No se crean órganos nuevos:
+- Un **comp** (`CompTemperedOrgan`) que se agrega por parche XML a los órganos naturales vanilla (corazón, pulmón, riñón,
+  hígado, ojo, y los de otros mods si usan la misma base). Guarda el **reino** y el **camino** del donante.
+- Un postfix a `SpawnNaturalPartIfClean` lo llena cuando el donante cultiva. El objeto se llama "corazón (Fundación)", vale
+  ×1,5 por reino y la ventana de información dice de quién era.
+- Al **instalarlo**, el receptor recibe el hediff **"órgano templado"** en esa parte, con bonos chicos según el reino y el
+  órgano: corazón → regeneración de qi y de vida; pulmones → respiración y resistencia al ambiente; riñones y hígado →
+  filtrado de sangre y resistencia a la toxicidad de píldoras; ojos → vista. Los del **camino corporal** valen el doble,
+  porque ese camino templa justamente los órganos.
+- **Disonancia +0,05** por órgano ajeno templado (el qi de otro dentro del cuerpo) y rechazo leve si el reino del donante es
+  mucho más alto que el del receptor.
+- Ideology y la moral, gratis: se usan los mismos eventos de extracción de órganos de vanilla.
+- Historias: el Culto de la Luna Sangrienta los compra, los piratas cazan cultivadores para venderlos por partes (LORE §6) y
+  un colono puede vivir con el corazón de su maestro.
+- Sin arte nuevo: usa los sprites vanilla de cada órgano.
+
 ## 7b. Raíces selladas como recompensa (Stories)
 
 Pedido del usuario (2026-10-24): usar las raíces para mejorar las recompensas de los eventos que se sumaron el 2026-10-23.
@@ -217,6 +287,10 @@ Abiertas (va mi propuesta si no se dice otra cosa):
   `Mods/Convergence.Core/Common/Textures/Things/Item/CVG/` cuando existan los ThingDefs.
 - **Píldora de Lavado de Raíz:** 1. **Hecha** (2026-10-24, ChatGPT): `art/concepts2/items/it_pill_rootwash/out/RootWashPill.png`,
   escalada a 72 px dentro de 128 como las otras píldoras; va a `Mods/Convergence.Alchemy/Common/Textures/Things/Item/CVG/`.
+
+- **Mesa de cirugía de qi** (Qi-Tech): 3 vistas (sur, este, norte), 256×256 cada una, como el altar. Prompt en la conversación
+  del 2026-10-24; pendiente.
+- **Raíz artificial** (Qi-Tech): 1 objeto de 128×128. Pendiente.
 
 El resto (cirugías, hediffs, fusión, avance, ritual) no lleva arte nuevo.
 
