@@ -319,6 +319,7 @@ Algunas van a comerciar, otras van a juzgar, y una de ellas caza. Su buena volun
   <CVG_Ritual_NeedBelievers>Necesita al menos {0} {1} más presentes además de los roles (ahora {2}).</CVG_Ritual_NeedBelievers>
   <CVG_Ritual_NeedBelieversDesc>Deben asistir al menos {0} creyentes más.</CVG_Ritual_NeedBelieversDesc>
   <!-- Misión del Maestro: el inicio de la Convergencia (plan de integración, 2026-10-23) -->
+  <CVG_Setting_Trigger>Cómo llega la Convergencia</CVG_Setting_Trigger>
   <CVG_Setting_ForcedDay>La Convergencia llega sola a los {0} días si nunca se acoge al sabio</CVG_Setting_ForcedDay>
   <CVG_Setting_ForcedDayTip>La Convergencia empieza cuando aceptás la misión del viejo sabio que pide refugio. Si nunca la aceptás, llega igual pasados estos días (60 = el comienzo del segundo año), como el monolito del vacío.</CVG_Setting_ForcedDayTip>
   <CVG_MentorQuest_BeforeConvergence>Habla de una grieta a punto de abrirse en el cielo y de un qi que no fluye en este mundo desde hace diez mil años. Si lo acogés, lo que viene va a venir con él.</CVG_MentorQuest_BeforeConvergence>

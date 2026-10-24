@@ -459,6 +459,7 @@ namespace Convergence
                 var fuse = DefDatabase<RecipeDef>.GetNamedSilentFail("CVG_FuseRoots_Common");
                 if (fuse != null)
                 {
+                    doctor.skills.GetSkill(SkillDefOf.Medicine).Level = 10; // la chance base (75 %), sin el bono de un cirujano experto
                     int ok = 0, back = 0;
                     for (int i = 0; i < 40; i++)
                     {
@@ -517,6 +518,8 @@ namespace Convergence
                 var cult = Colonist(map, root: true); spawned.Add(cult);
                 CompCultivator.For(cult).SyncRealm();
                 var heartPart = cult.RaceProps.body.AllParts.FirstOrDefault(pt => pt.def == BodyPartDefOf.Heart);
+                // Vanilla solo extrae órganos sanos: el colono al azar puede traer el corazón dañado o artificial.
+                foreach (var hd in cult.health.hediffSet.hediffs.Where(hd => hd.Part == heartPart).ToList()) cult.health.RemoveHediff(hd);
                 var heart = MedicalRecipesUtility.SpawnNaturalPartIfClean(cult, heartPart, cult.Position, map);
                 if (heart != null) spawned.Add(heart);
                 var tc = heart?.TryGetComp<CompTemperedOrgan>();

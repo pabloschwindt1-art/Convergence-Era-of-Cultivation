@@ -8,9 +8,12 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 ---
 
-## Sin publicar
+## Sin publicar (en Workshop)
 
 Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod).
+
+**Versión 0.5.0 en GitHub (2026-10-24, tag `v0.5.0`):** los 15 mods pasan a `modVersion` 0.5.0 e incluyen todo lo de esta
+sección. Workshop sigue en 0.1.x hasta que el usuario decida subir.
 
 ### Raíz espiritual que cambia (2026-10-24)
 - **Core: la raíz espiritual se actualiza al momento.** Si un colono gana o pierde un rasgo o gen de raíz (xenogerm, ensamblador

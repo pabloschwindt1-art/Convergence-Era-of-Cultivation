@@ -319,6 +319,7 @@ Some will trade, some will judge, and one of them hunts. Their goodwill can be e
   <CVG_Ritual_NeedBelievers>Needs at least {0} other {1} attending besides the roles (now {2}).</CVG_Ritual_NeedBelievers>
   <CVG_Ritual_NeedBelieversDesc>At least {0} other believers must attend.</CVG_Ritual_NeedBelieversDesc>
   <!-- Mentor quest: the start of the Convergence (integration plan, 2026-10-23) -->
+  <CVG_Setting_Trigger>How the Convergence arrives</CVG_Setting_Trigger>
   <CVG_Setting_ForcedDay>The Convergence arrives on its own after {0} days if the sage is never welcomed</CVG_Setting_ForcedDay>
   <CVG_Setting_ForcedDayTip>The Convergence starts when you accept the quest of the old sage who asks for shelter. If you never accept it, it comes anyway after this many days (60 = the start of the second year), like the monolith of the void.</CVG_Setting_ForcedDayTip>
   <CVG_MentorQuest_BeforeConvergence>He speaks of a rift about to open in the sky and of a qi that has not flowed in this world for ten thousand years. If you take him in, whatever is coming will come with him.</CVG_MentorQuest_BeforeConvergence>

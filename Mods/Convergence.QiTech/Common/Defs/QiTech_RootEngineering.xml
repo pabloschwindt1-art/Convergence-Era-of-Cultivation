@@ -157,11 +157,11 @@
     <soundWorking>Recipe_Machining</soundWorking>
     <skillRequirements><Intellectual>8</Intellectual></skillRequirements>
     <researchPrerequisite>CVG_Research_RootEngineering</researchPrerequisite>
-    <recipeUsers><li>CVG_QT_PillLab</li></recipeUsers>
   </RecipeDef>
 
   <RecipeDef ParentName="CVG_QT_FuseRootsBase">
     <defName>CVG_QT_FuseRoots_Common</defName>
+    <recipeUsers><li>CVG_QT_PillLab</li></recipeUsers>
     <label>synthesize a common root</label>
     <description>Dissolve three sealed inferior roots in a resonance bath and let the field draw them into one common root. The machine fails less often than a bone furnace, but it does not understand the Dao: the elements are not purified. A failed synthesis loses two roots.</description>
     <ingredients>
@@ -177,6 +177,7 @@
 
   <RecipeDef ParentName="CVG_QT_FuseRootsBase">
     <defName>CVG_QT_FuseRoots_Superior</defName>
+    <recipeUsers><li>CVG_QT_PillLab</li></recipeUsers>
     <label>synthesize a superior root</label>
     <description>Dissolve three sealed common roots into one superior root in a resonance bath. Reliable, unpurified, and in the eyes of every sect an abomination. A failed synthesis loses two roots.</description>
     <ingredients>
@@ -192,6 +193,7 @@
 
   <RecipeDef ParentName="CVG_QT_FuseRootsBase">
     <defName>CVG_QT_FuseRoots_Heavenly</defName>
+    <recipeUsers><li>CVG_QT_PillLab</li></recipeUsers>
     <label>synthesize a heavenly root</label>
     <description>Dissolve three sealed superior roots into one heavenly root in a resonance bath. Ascension Dynamics has done it twice; it does not say what happened to the engineers. A failed synthesis loses two roots.</description>
     <ingredients>

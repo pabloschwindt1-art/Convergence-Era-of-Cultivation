@@ -145,7 +145,7 @@ la del lugar) y la **ceremonia de escarificación** de Ideology (ritual con obje
   - **Excelente:** 70 % de subir un grado. **Sin raíz: despierta una raíz inferior.**
   - Tope: **superior**, igual que la píldora.
 - **Una vez por año por colono** (enfriamiento por pawn guardado en el comp).
-- Lore: los monjes del Templo del Loto Silencioso la practican con niños sin raíz; casi nunca funciona, pero nadie se va
+- Lore: la Secta de los Nueve Templados la practica con discípulos de raíz turbia antes de pasarlos al cuerpo; casi nunca funciona, pero nadie se va
   sin intentarlo.
 
 ## 7. Vía 5: fusión de raíces (Grafts, horno de refinado de huesos)

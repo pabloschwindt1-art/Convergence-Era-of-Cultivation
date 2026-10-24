@@ -9,7 +9,7 @@
   <PreceptDef>
     <defName>CVG_RootPurificationCeremony</defName>
     <label>root purification</label>
-    <description>A rite of the Silent Lotus Temple, taught to anyone who will listen: a cultivator draws the qi of the gathered faithful through a disciple's meridians, scrubbing the root like a riverbed after a flood. It rarely works. Nobody leaves without having tried. A spectacular ceremony can raise a spirit root by one grade (never past superior) or awaken a root in someone born without one. Once a year per person.</description>
+    <description>A rite of the Sect of Nine Temperings, taught to any disciple born with a muddy root before they give up and turn to the body: a cultivator draws the qi of the gathered faithful through a disciple's meridians, scrubbing the root like a riverbed after a flood. It rarely works. Nobody leaves without having tried. A spectacular ceremony can raise a spirit root by one grade (never past superior) or awaken a root in someone born without one. Once a year per person.</description>
     <issue>Ritual</issue>
     <impact>Low</impact>
     <iconPath>Things/Item/CVG/SealedRoot_Common</iconPath>
