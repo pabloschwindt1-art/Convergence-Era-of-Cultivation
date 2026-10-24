@@ -43,6 +43,9 @@ Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod
   descripción; los 21 objetos que suben el qi lo dicen (muebles, puertas, bloques, jade, plantas). Biotech Wuxia: el tambor de sangre
   ocupa 1×1 (heredaba el 1×2 de la pileta y su dibujo redondo no seguía la huella). `tools/audit_funcional.py` sin dos falsos
   positivos (qi 0 de feng shui, clases usadas desde código). Carga en 1.7 ALL OK; los 3 errores de traducción son de Biotech vanilla.
+- Core: el diálogo de inicio ("La Era del Cultivo") ya no pregunta cómo empieza la Convergencia cuando el escenario la trae
+  ocurrida (la parte del escenario corre antes que el diálogo y elegir no cambiaba nada); muestra que ya ocurrió y deja solo la
+  dificultad. Lo encontró el usuario con un escenario propio.
 - Core (rituales de templado de las sectas de Factions): después de cada templado, salga bien o mal, el discípulo queda 15 días en
   "reposo tras el templado" (estado visible en su salud, con el tiempo que falta) y el ritual no lo deja elegir hasta que pase.
   Antes los cuatro grados del cuerpo de espada se podían hacer el mismo día. Textos EN/ES/ES-Latin. `-cvgselftest` ALL OK en 1.7.

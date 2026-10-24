@@ -211,7 +211,12 @@ namespace Convergence
             listing.Label("CVG_StartDialog_Intro".Translate());
             listing.GapLine();
             listing.Label("CVG_Setting_Trigger".Translate());
-            StartModeEditor(listing, ref trigger, ref minDay, ref maxDay);
+            // Un escenario que ya trae la Convergencia (ScenPart_ConvergenceOccurred corre antes que este diálogo): no se pregunta
+            // cómo empieza, porque elegir no cambiaría nada; solo queda la dificultad.
+            if (GameComponent_Convergence.Instance?.Occurred ?? false)
+                listing.Label("CVG_StartDialog_AlreadyOccurred".Translate());
+            else
+                StartModeEditor(listing, ref trigger, ref minDay, ref maxDay);
             listing.GapLine();
             listing.Label("CVG_Difficulty_Title".Translate());
             values.DoEditor(listing);

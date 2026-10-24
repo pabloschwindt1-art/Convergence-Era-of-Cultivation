@@ -250,6 +250,7 @@ If {PAWN_pronoun} is still standing when the clouds part, {PAWN_pronoun} will re
   <CVG_Difficulty_StatPart>Cultivation difficulty ({0})</CVG_Difficulty_StatPart>
   <CVG_StartDialog_Title>The Era of Cultivation</CVG_StartDialog_Title>
   <CVG_StartDialog_Intro>Choose how hard the path of cultivation will be in this game and when the Convergence pours qi into this world. You can change the difficulty later in the mod settings.</CVG_StartDialog_Intro>
+  <CVG_StartDialog_AlreadyOccurred>The Convergence has already happened: this scenario starts with it. Only the difficulty is left to choose.</CVG_StartDialog_AlreadyOccurred>
   <CVG_Tab_CultivationWealth>Cultivation wealth of the colony: {0}</CVG_Tab_CultivationWealth>
   <CVG_CultivationWealthTip>Cultivation wealth: {0}\n\n  Cultivation items: {1}\n  Cultivation buildings: {2}\n  Puppets and spirit beasts: {3}\n  Realms of the colonists: {4}\n  Techniques: {5}\n\nTaken out of the vanilla wealth: {6} (vanilla raids ignore most of the value of cultivation things).\nExtra threat points for sects and cultivation events: {7}</CVG_CultivationWealthTip>
   <CVG_Tab_NoFreeSlot>This set is full ({0} techniques): remove one first.</CVG_Tab_NoFreeSlot>

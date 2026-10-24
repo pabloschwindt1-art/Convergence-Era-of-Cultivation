@@ -34,7 +34,12 @@ salas, calidad, narrador e incidentes, comercio, Ideology, Royalty, Biotech, Ano
 combate, cultivos, animales, energía y temperatura, trabajo y mesas) y las guías de modding (defs, parches, Harmony, idiomas,
 gráficos). Si un número de la wiki choca con `referencias/vanilla/`, manda el de vanilla (es tu versión exacta).
 
-## 3. Cómo lo resolvieron otros mods (solo estudio, nunca copiar)
+## 3. Cómo lo resolvieron otros mods (y cuáles podemos aprovechar)
+
+**Primero `referencias/mods/INDEX.md`** (no está en git): catálogo de los mods que juega el usuario y de las copias de estudio.
+Por cada uno dice qué sistema ofrece, cómo se enchufan otros mods, su licencia y para qué sistema de Convergence sirve, más
+un ranking de las mejores oportunidades de integración. Recordar la regla: **nada se vuelve obligatorio** salvo Harmony;
+integrar = compatibilidad opcional (`MayRequire`, `IfModActive`), copiar el patrón, o reutilizar código solo con licencia libre.
 
 | Documento | Qué tiene |
 |---|---|
