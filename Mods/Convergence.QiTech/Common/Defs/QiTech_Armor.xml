@@ -5,7 +5,7 @@
     the steel swapped for spirit stones and jade, and resistance to the primordial chaos (CVG_ChaosResistance). The helmet also
     shields from the psychic effects of the void like the vanilla psychic foil helmet. Made at the qi forge.
     Art by the user: icons in Things/Item/Apparel/CVG/QiTech; the worn helmet in Things/Pawn/Humanlike/Apparel/CVG/QiTech.
-    The worn vest uses the vanilla flak vest, dark grey, until its own art exists.
+    The worn vest is the vanilla flak vest, vanilla colors (user, 2026-10-24).
   -->
 
   <ResearchProjectDef>
@@ -103,8 +103,13 @@
         <li>Soldier</li>
       </defaultOutfitTags>
     </apparel>
-    <colorGenerator Class="ColorGenerator_Single">
-      <color>(0.24,0.26,0.27)</color>
+    <!-- User (2026-10-24): for now the worn vest looks exactly like the vanilla flak vest (same colors). -->
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li><only>(0.33,0.33,0.33)</only></li>
+        <li><only>(0.65,0.65,0.65)</only></li>
+        <li><weight>0.5</weight><min>(0.3,0.3,0.3)</min><max>(0.5,0.5,0.5)</max></li>
+      </options>
     </colorGenerator>
   </ThingDef>
 

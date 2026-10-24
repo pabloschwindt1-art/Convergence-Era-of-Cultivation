@@ -41,7 +41,16 @@ namespace Convergence
         /// Reino equivalente por rango (índice 0 = rango 1) para la supresión de reino: el daño de un arma de grado menor se
         /// reduce como contra un cultivador de ese reino (Core: <see cref="BeastAndChaosDamage"/>). Solo las armas de qi pegan entero.
         /// </summary>
-        public List<int> realmByLevel = new List<int> { 1, 1, 2, 2, 3, 3 };
+        public List<int> realmByLevel = new List<int> { 0, 1, 1, 2, 2, 3 };
+        /// <summary>
+        /// El mundo despierta de a poco (playtest 2026-10-24: una manada de wargos de rango 4 al día 20 mató a la colonia): la
+        /// chance de despertar va de <see cref="awakenRampStart"/> a 1 en <see cref="awakenRampDays"/> días desde la
+        /// Convergencia, y el rango tope empieza en <see cref="rankCapStart"/> y sube uno cada <see cref="rankCapDaysPerRank"/> días.
+        /// </summary>
+        public float awakenRampStart = 0.3f;
+        public float awakenRampDays = 60f;
+        public int rankCapStart = 2;
+        public float rankCapDaysPerRank = 15f;
     }
 
     /// <summary>
@@ -126,9 +135,40 @@ namespace Convergence
         public static bool TryAwaken(Pawn pawn)
         {
             if (!GameComponent_Convergence.Active || Hediff_SpiritBeast.For(pawn) != null) return false;
-            if (!Rand.Chance(AwakenChance(pawn))) return false;
-            Awaken(pawn, RollLevel(pawn));
+            if (!Rand.Chance(AwakenChance(pawn) * AwakenRamp)) return false;
+            Awaken(pawn, Mathf.Min(RollLevel(pawn), RankCapNow));
             return true;
+        }
+
+        private static float DaysSinceConvergence
+        {
+            get
+            {
+                var c = GameComponent_Convergence.Instance;
+                return c == null || !c.Occurred ? 0f : (Find.TickManager.TicksGame - c.OccurredTick) / (float)GenDate.TicksPerDay;
+            }
+        }
+
+        /// <summary>Factor de la chance de despertar según los días desde la Convergencia (el qi se filtra de a poco).</summary>
+        public static float AwakenRamp
+        {
+            get
+            {
+                var e = Ext;
+                if (e == null || e.awakenRampDays <= 0f) return 1f;
+                return Mathf.Lerp(e.awakenRampStart, 1f, Mathf.Clamp01(DaysSinceConvergence / e.awakenRampDays));
+            }
+        }
+
+        /// <summary>Rango más alto que puede despertar hoy.</summary>
+        public static int RankCapNow
+        {
+            get
+            {
+                var e = Ext;
+                if (e == null || e.rankCapDaysPerRank <= 0f) return MaxLevel;
+                return Mathf.Clamp(e.rankCapStart + Mathf.FloorToInt(DaysSinceConvergence / e.rankCapDaysPerRank), 1, MaxLevel);
+            }
         }
 
         public static void Awaken(Pawn pawn, int level)
@@ -144,7 +184,7 @@ namespace Convergence
             var hediff = HediffMaker.MakeHediff(CVG_DefOf.CVG_SpiritBeast, pawn);
             hediff.Severity = Mathf.Clamp(level, 1, MaxLevel);
             pawn.health.AddHediff(hediff);
-            if (IsSovereignSpecies(pawn.kindDef) && !pawn.health.hediffSet.HasHediff(Ext.sovereignHediff))
+            if (IsSovereignSpecies(pawn.kindDef) && level >= SpeciesLevel(pawn.kindDef) && !pawn.health.hediffSet.HasHediff(Ext.sovereignHediff))
                 pawn.health.AddHediff(Ext.sovereignHediff);
             if (pawn.Spawned)
             {

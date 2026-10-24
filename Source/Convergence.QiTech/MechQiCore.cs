@@ -141,6 +141,43 @@ namespace Convergence.QiTech
             base.ScaleFor(node, parms) * Mathf.Max(0.8f, Mathf.Sqrt(parms.pawn.BodySize) * 1.3f);
     }
 
+    /// <summary>Colores del meca de qi (en el HediffDef del núcleo).</summary>
+    public class DefModExtension_QiMechColors : DefModExtension
+    {
+        /// <summary>Color de las partes de acento (las que vanilla pinta con el color de la facción).</summary>
+        public Color accentColor = new Color(0.3f, 0.95f, 0.55f);
+        public float accentOpacity = 0.9f;
+        /// <summary>Tinte del cuerpo entero (blanco = sin tinte).</summary>
+        public Color bodyTint = Color.white;
+    }
+
+    /// <summary>
+    /// El meca de qi se ve distinto (usuario: "cambiarle el color para identificar los de acá"): vanilla pinta el acento de cada
+    /// meca con el color de su facción (PawnRenderNodeWorker.GetMaterialPropertyBlock, máscara CutoutWithOverlay); al meca con
+    /// núcleo de qi se le pone el color de qi en su lugar, y un tinte suave en el cuerpo.
+    /// </summary>
+    [HarmonyPatch(typeof(PawnRenderNodeWorker), nameof(PawnRenderNodeWorker.GetMaterialPropertyBlock))]
+    public static class Patch_PawnRenderNodeWorker_QiMechColor
+    {
+        private static DefModExtension_QiMechColors colors;
+        private static bool resolved;
+
+        public static void Postfix(PawnRenderNode node, Material material, PawnDrawParms parms, MaterialPropertyBlock __result)
+        {
+            var pawn = parms.pawn;
+            if (__result == null || pawn == null || !pawn.RaceProps.IsMechanoid || parms.Statue) return;
+            if (MechQiCore.CoreOf(pawn) == null) return;
+            if (!resolved)
+            {
+                resolved = true;
+                colors = MechQiCore.HediffDef?.GetModExtension<DefModExtension_QiMechColors>() ?? new DefModExtension_QiMechColors();
+            }
+            if (colors.bodyTint != Color.white) __result.SetColor(ShaderPropertyIDs.Color, parms.tint * material.color * colors.bodyTint);
+            if (material.shader == ShaderDatabase.CutoutWithOverlay && material.GetMaskTexture() != null)
+                PawnRenderUtility.SetMatPropBlockOverlay(__result, colors.accentColor, colors.accentOpacity);
+        }
+    }
+
     /// <summary>"Mecanoide de qi": el nombre del tipo dice que tiene núcleo (como "bestia espiritual" en el Core).</summary>
     [HarmonyPatch(typeof(Pawn), nameof(Pawn.KindLabel), MethodType.Getter)]
     public static class Patch_Pawn_KindLabel_QiMech

@@ -33,7 +33,8 @@
       <effectWorking>Tailor</effectWorking>
       <soundWorking>Recipe_Tailor</soundWorking>
     </recipeMaker>
-    <tradeability>Sellable</tradeability>
+    <!-- The Invisible Thread merchants sell the puppeteer headgear (playtest 2026-10-24: they carried it but could not). -->
+    <tradeability>All</tradeability>
     <apparel>
       <layers><li>Overhead</li></layers>
       <bodyPartGroups><li>UpperHead</li></bodyPartGroups>

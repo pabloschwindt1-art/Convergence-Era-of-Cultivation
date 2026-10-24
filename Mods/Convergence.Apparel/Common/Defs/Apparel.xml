@@ -207,6 +207,7 @@
     </statBases>
     <equippedStatOffsets><SocialImpact>0.05</SocialImpact></equippedStatOffsets>
     <apparel>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <bodyPartGroups><li>UpperHead</li></bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/BambooHat</wornGraphicPath>
@@ -249,6 +250,7 @@
     </statBases>
     <equippedStatOffsets><CVG_BreakthroughChance>0.03</CVG_BreakthroughChance><SocialImpact>0.10</SocialImpact></equippedStatOffsets>
     <apparel>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <bodyPartGroups><li>UpperHead</li></bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/CVG/JadeCrown</wornGraphicPath>

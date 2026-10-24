@@ -20,6 +20,7 @@ namespace Convergence
             TranslationReportShot.Update();
             FloorShot.Update();
             ArtShots.Update();
+            FusionShot.Update();
             WorkshopShot.Update();
             ModShots.Update();
         }

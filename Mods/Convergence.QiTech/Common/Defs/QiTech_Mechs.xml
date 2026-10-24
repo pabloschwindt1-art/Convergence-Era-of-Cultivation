@@ -79,7 +79,8 @@
         <texPath>Things/Pawn/CVG/QiTech/MechQiAura</texPath>
         <shaderTypeDef>MoteGlow</shaderTypeDef>
         <parentTagDef>Body</parentTagDef>
-        <drawSize>1.6</drawSize>
+        <pawnType>Any</pawnType>
+        <drawSize>1.4</drawSize>
         <rotDrawMode>Fresh, Rotting</rotDrawMode>
         <drawData>
           <defaultData>
@@ -90,6 +91,12 @@
     </renderNodeProperties>
     <modExtensions>
       <li Class="Convergence.DefModExtension_GradeHediff" />
+      <!-- Jade accent instead of the faction color, and a faint green tint: qi mechs are recognisable at a glance. -->
+      <li Class="Convergence.QiTech.DefModExtension_QiMechColors">
+        <accentColor>(0.3, 0.95, 0.55)</accentColor>
+        <accentOpacity>0.9</accentOpacity>
+        <bodyTint>(0.85, 1, 0.9)</bodyTint>
+      </li>
     </modExtensions>
   </HediffDef>
 

@@ -32,14 +32,15 @@ namespace Convergence
         private readonly StringBuilder setup = new StringBuilder();
 
         // Presupuesto de tiempo real (minutos) por si la partida va demasiado lenta: se reporta lo que se alcanzó.
-        private const float RealTimeBudgetMinutes = 50f;
+        private static float RealTimeBudgetMinutes =>
+            GenCommandLine.TryGetCommandLineArg("cvgplaybudget", out string b) && float.TryParse(b, out float m) && m > 0f ? m : 50f;
 
         public GameComponent_PlayTest(Game game) { }
 
         public override void GameComponentTick()
         {
             if (!Enabled || phase != Phase.Waiting || Find.CurrentMap == null || Find.TickManager.TicksGame < 200) return;
-            try { Setup(Find.CurrentMap); }
+            try { if (PlayBase.Natural) PlayBase.Setup(Find.CurrentMap, setup); else Setup(Find.CurrentMap); }
             catch (Exception e) { Log.Error("[Convergence] playtest setup failed: " + e); }
             int days = 30;
             if (GenCommandLine.TryGetCommandLineArg("cvgplaydays", out string arg) && int.TryParse(arg, out int d) && d > 0) days = d;
@@ -67,6 +68,7 @@ namespace Convergence
                 PlayTestProbe.AddTick(System.Diagnostics.Stopwatch.GetTimestamp() - t0);
                 if (tm.TicksGame % 250 == 0) AutoDefend();
                 if (tm.TicksGame % 2500 == 0) AutoBreakthrough();
+                if (PlayBase.Natural && tm.TicksGame % 2500 == 0) PlayBase.AcceptMentorQuest();
                 if ((tm.TicksGame - startTick) % (5 * GenDate.TicksPerDay) == 0) Snapshot();
             }
             int day = (tm.TicksGame - startTick) / GenDate.TicksPerDay;
@@ -97,8 +99,12 @@ namespace Convergence
         {
             var map = Find.CurrentMap;
             if (map == null) return;
+            // Solo con enemigos cerca de algún colono (30 casillas): un enemigo perdido en la otra punta del mapa dejaba a todos
+            // reclutados días enteros, sin comer ni dormir (playtest 2026-10-24: golpes de calor en una ola de calor).
+            var colonists = map.mapPawns.FreeColonistsSpawned;
             bool threat = map.mapPawns.AllPawnsSpawned.Any(p => !p.Downed && !p.Dead && p.HostileTo(Faction.OfPlayer) && !p.IsPrisoner
-                && (p.RaceProps.Humanlike || p.RaceProps.IsMechanoid || p.InAggroMentalState));
+                && (p.RaceProps.Humanlike || p.RaceProps.IsMechanoid || p.InAggroMentalState)
+                && colonists.Any(c => c.Position.InHorDistOf(p.Position, 30f)));
             foreach (var c in map.mapPawns.FreeColonistsSpawned.ToList())
             {
                 if (c.drafter == null || c.Downed || c.WorkTagIsDisabled(WorkTags.Violent)) continue;
@@ -331,6 +337,10 @@ namespace Convergence
                           $"breakthroughs {Rec(p, "CVG_Breakthroughs")}, tribulations {Rec(p, "CVG_TribulationsSurvived")}, techniques cast {Rec(p, "CVG_TechniquesCast")}, " +
                           $"hours cultivating {Rec(p, "CVG_TimeCultivating") / (float)GenDate.TicksPerHour:0}, mood {p.needs?.mood?.CurLevelPercentage ?? 0f:P0}");
             }
+            if (PlayBase.Natural) sb.Append(PlayBase.RelationsReport());
+            if (map != null)
+                sb.Append($"\n- colony: {map.mapPawns.FreeColonistsSpawnedCount} colonists, food {map.resourceCounter.TotalHumanEdibleNutrition:0} nutrition, " +
+                          $"wealth {map.wealthWatcher.WealthTotal:0}, Convergence {GameComponent_Convergence.Active}");
             sb.Append($"\n- deaths of colonists ({PlayTestProbe.Deaths.Count})");
             foreach (var d in PlayTestProbe.Deaths) sb.Append("\n    " + d);
             sb.Append($"\n- orders: {BreakthroughsOrdered} breakthrough retreats, {TechniquesOrdered} techniques");
