@@ -294,13 +294,23 @@ Abiertas (va mi propuesta si no se dice otra cosa):
 
 El resto (cirugías, hediffs, fusión, avance, ritual) no lleva arte nuevo.
 
-## 11. Orden de implementación propuesto
+## 11. Orden de implementación (rearmado el 2026-10-24)
 
-1. Core: `SpiritRootUtility` (subir, bajar, quitar, dar) + raíz sellada + avance de reino + despertar en Médula.
-2. Grafts: extirpar, implantar, rechazo, preceptos y pensamientos; después la fusión.
-3. Alchemy: píldora con tolerancia.
-4. Core: ritual.
-5. Factions: comercio de raíces en el Pabellón del Caldero Celestial.
+1. **Core, base:** `SpiritRootUtility` (subir, bajar, quitar, dar), `Sync` que también lee hediffs con `DefModExtension_SpiritRoot`,
+   4 ThingDefs de raíz sellada con `CompSealedRoot` y su arte. La sangre ancestral pasa a usar la utilidad.
+2. **Core, avance:** subida de raíz al pasar de reino mayor y despertar de raíz en Limpieza de Médula.
+3. **Core, órganos templados:** `CompTemperedOrgan` por parche a los órganos naturales, postfix de `SpawnNaturalPartIfClean` y
+   hediff "órgano templado" al instalar.
+4. **Grafts:** extirpar e implantar (un `RecipeWorker` que acepta el altar o la mesa de qi), "raíz arrancada", "raíz ajena",
+   pensamientos y eventos de órganos; fusión 3 a 1 en el horno de huesos.
+5. **Qi-Tech:** investigación "Ingeniería de raíces", mesa de cirugía de qi, fusión en el laboratorio de píldoras de qi y raíz
+   artificial (espera los dos sprites; mientras tanto, la mesa usa la cama de hospital teñida).
+6. **Alchemy:** Píldora de Lavado de Raíz con tolerancia.
+7. **Stories:** raíces selladas como recompensa en 7 eventos.
+8. **Core, ritual** de purificación (Ideology). Es lo más pesado: va último y puede pasar a otra tanda.
+9. **Factions:** el Pabellón del Caldero Celestial compra y vende raíces (stock de sus comerciantes).
+10. **Prueba única** en 1.7 con `-cvgselftest`, `-cvggraftstest` y `-cvgqitechtest` (~5 min), una partida por prueba. Después,
+    changelog, commit y aviso al celular.
 
-Cada paso con autotest en su mod (`-cvgselftest` en el Core, `-cvggraftstest` en Grafts) y con lore en inglés y español en cada
-def, como exige "todo lleva lore".
+Cada paso lleva lore en inglés, español y español latino en cada def, como exige "todo lleva lore", y su caso en el autotest
+de su mod.
