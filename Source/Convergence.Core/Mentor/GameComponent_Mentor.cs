@@ -8,19 +8,26 @@ using Verse;
 namespace Convergence
 {
     /// <summary>
-    /// El Maestro (M6, versión mínima): llega con la Convergencia (herido o caminante), se une a la colonia como un
-    /// residente muy poderoso y sin defectos, da sus lecciones una a una (objetivos simples con recompensa), protege de
-    /// la primera incursión de cultivadores y, al acabar su estancia, se va dejando el fragmento de jade.
+    /// El Maestro: a los pocos días de empezar llega la misión "un viejo sabio busca refugio" (<see cref="QuestPart_MentorRefuge"/>);
+    /// aceptarla desata la Convergencia y el Maestro cae herido. Se une a la colonia como un residente muy poderoso y sin
+    /// defectos, da sus lecciones una a una (objetivos simples con recompensa), protege de la primera incursión de cultivadores,
+    /// quienes lo persiguen pueden venir a buscarlo y, al acabar su estancia, se va caminando y deja el fragmento de jade.
     /// Estado de la partida en este GameComponent; los datos del Maestro, en <see cref="MentorDef"/>.
     /// </summary>
     public class GameComponent_Mentor : GameComponent
     {
         private const int CheckInterval = 250;
-        private const int ArrivalDelayTicks = 2 * GenDate.TicksPerHour;
+        /// <summary>Días desde el inicio de la partida hasta que llega la misión.</summary>
+        private static readonly IntRange OfferDays = new IntRange(2, 4);
+        /// <summary>Probabilidad de que quienes lo persiguen vengan a buscarlo durante su estancia.</summary>
+        private const float HuntersChance = 0.6f;
 
         private MentorDef def;
         private Pawn mentor;
-        private int arrivalTick = -1;
+        private int offerTick = -1;
+        private bool offered;
+        private int huntTick = -1;
+        private bool wasDowned;
         private int leaveTick = -1;
         private int lessonIndex;
         private bool lessonStarted;
@@ -75,12 +82,26 @@ namespace Convergence
 
         public bool IsMentor(Pawn pawn) => pawn != null && pawn == mentor && !finished;
 
-        /// <summary>Programa la llegada (lo llama la Convergencia). Una sola vez por partida.</summary>
-        public void ScheduleArrival()
+        public override void StartedNewGame() => EnsureOffer();
+
+        public override void LoadedGame() => EnsureOffer();
+
+        /// <summary>Programa la misión del sabio (una sola vez por partida).</summary>
+        private void EnsureOffer()
         {
-            if (!ConvergenceMod.Settings.mentorEnabled || mentor != null || arrivalTick >= 0 || finished) return;
-            if (!DefDatabase<MentorDef>.AllDefsListForReading.Any()) return;
-            arrivalTick = Find.TickManager.TicksGame + ArrivalDelayTicks;
+            if (offered || offerTick >= 0 || mentor != null || finished) return;
+            offerTick = Find.TickManager.TicksGame + OfferDays.RandomInRange * GenDate.TicksPerDay;
+        }
+
+        private void Offer(Map map)
+        {
+            offered = true;
+            if (QuestPart_MentorRefuge.AnyOffered() || CVG_DefOf.CVG_MentorRefuge == null) return;
+            var slate = new RimWorld.QuestGen.Slate();
+            slate.Set("map", map);
+            slate.Set("points", StorytellerUtility.DefaultThreatPointsNow(map));
+            var quest = QuestUtility.GenerateQuestAndMakeAvailable(CVG_DefOf.CVG_MentorRefuge, slate);
+            if (quest != null) QuestUtility.SendLetterQuestAvailable(quest);
         }
 
         public override void GameComponentTick()
@@ -90,10 +111,10 @@ namespace Convergence
 
             if (mentor == null)
             {
-                if (arrivalTick >= 0 && now >= arrivalTick)
+                if (!offered && offerTick >= 0 && now >= offerTick)
                 {
                     var map = Find.AnyPlayerHomeMap;
-                    if (map != null) Arrive(map, RandomMentor(), wounded: null);
+                    if (map != null) Offer(map);
                 }
                 return;
             }
@@ -103,15 +124,44 @@ namespace Convergence
                 End(died: true);
                 return;
             }
+            CheckHurt();
             CheckLesson();
             CheckProtection();
+            CheckHunters(now);
             if (now >= leaveTick && mentor.Spawned && !mentor.Downed && !mentor.InMentalState) End(died: false);
             // secuestrado, en caravana o en otro mapa: pasados 5 días de su partida igual se despide y deja el jade en casa
             else if (now >= leaveTick + 5 * GenDate.TicksPerDay && !mentor.Spawned) End(died: false);
         }
 
-        private static MentorDef RandomMentor() =>
-            DefDatabase<MentorDef>.AllDefsListForReading.RandomElementByWeightWithFallback(m => m.commonality);
+        /// <summary>"Mi maestro resultó herido": cada vez que cae, la colonia lo siente.</summary>
+        private void CheckHurt()
+        {
+            bool downed = mentor.Downed;
+            if (downed && !wasDowned)
+            {
+                var thought = DefDatabase<ThoughtDef>.GetNamedSilentFail("CVG_Thought_MentorHurt");
+                if (thought != null)
+                    foreach (var p in PawnsFinder.AllMaps_FreeColonistsSpawned)
+                        if (p != mentor) p.needs?.mood?.thoughts.memories.TryGainMemory(thought, mentor);
+            }
+            wasDowned = downed;
+        }
+
+        /// <summary>Quienes lo perseguían lo encontraron: una incursión enemiga que viene por él (una vez).</summary>
+        private void CheckHunters(int now)
+        {
+            if (huntTick < 0 || now < huntTick || !mentor.Spawned) return;
+            huntTick = -1;
+            var map = mentor.Map;
+            var faction = Find.FactionManager.RandomEnemyFaction(allowHidden: false, allowDefeated: false, allowNonHumanlike: false);
+            if (faction == null || !map.IsPlayerHome) return;
+            var parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, map);
+            parms.faction = faction;
+            parms.forced = true;
+            parms.customLetterLabel = "CVG_Mentor_HuntersLabel".Translate(mentor.LabelShortCap);
+            parms.customLetterText = "CVG_Mentor_HuntersText".Translate(mentor.Named("PAWN"), faction.Named("FACTION"));
+            IncidentDefOf.RaidEnemy.Worker.TryExecute(parms);
+        }
 
         /// <summary>Genera y trae al Maestro. <paramref name="wounded"/> null = según la probabilidad del Def.</summary>
         public Pawn Arrive(Map map, MentorDef mentorDef, bool? wounded)
@@ -151,8 +201,11 @@ namespace Convergence
 
             def = mentorDef;
             mentor = pawn;
-            arrivalTick = -1;
-            leaveTick = Find.TickManager.TicksGame + Mathf.RoundToInt(mentorDef.stayDays.RandomInRange * GenDate.TicksPerDay);
+            offered = true;
+            int stay = Mathf.RoundToInt(mentorDef.stayDays.RandomInRange * GenDate.TicksPerDay);
+            leaveTick = Find.TickManager.TicksGame + stay;
+            huntTick = Rand.Chance(HuntersChance) ? Find.TickManager.TicksGame + Mathf.RoundToInt(stay * Rand.Range(0.25f, 0.7f)) : -1;
+            wasDowned = pawn.Downed;
             lessonIndex = 0;
             lessonStarted = false;
             finished = false;
@@ -238,13 +291,24 @@ namespace Convergence
 
             if (!died && mentor.Spawned)
             {
+                // Se va caminando, como un huésped vanilla: deja la colonia y sale por el borde del mapa.
                 FleckMaker.ThrowLightningGlow(mentor.DrawPos, mentor.Map, 3f);
-                FleckMaker.Static(mentor.Position, mentor.Map, FleckDefOf.PsycastAreaEffect, 5f);
                 mentor.jobs?.StopAll();
-                mentor.SetFaction(null);
-                mentor.DeSpawn();
-                if (!Find.WorldPawns.Contains(mentor)) Find.WorldPawns.PassToWorld(mentor, PawnDiscardDecideMode.KeepForever);
+                var leaveFaction = Find.FactionManager.RandomNonHostileFaction(allowHidden: false, allowDefeated: false, allowNonHumanlike: false);
+                if (leaveFaction != null)
+                {
+                    mentor.SetFaction(leaveFaction);
+                    Verse.AI.Group.LordMaker.MakeNewLord(leaveFaction, new Verse.AI.Group.LordJob_ExitMapBest(Verse.AI.LocomotionUrgency.Walk, canDig: false), mentor.Map,
+                        new List<Pawn> { mentor });
+                }
+                else
+                {
+                    mentor.SetFaction(null);
+                    mentor.DeSpawn();
+                    if (!Find.WorldPawns.Contains(mentor)) Find.WorldPawns.PassToWorld(mentor, PawnDiscardDecideMode.KeepForever);
+                }
             }
+            QuestPart_MentorRefuge.OpenQuest()?.End(died ? QuestEndOutcome.Fail : QuestEndOutcome.Success, sendLetter: false);
 
             SoundCues.OnCamera(died ? "CVG_Cue_MentorDeath" : "CVG_Cue_MentorFarewell");
             string text = (died ? def.deathText : def.farewellText).Formatted(mentor.Named("PAWN")).Resolve();
@@ -257,7 +321,10 @@ namespace Convergence
         {
             Scribe_Defs.Look(ref def, "def");
             Scribe_References.Look(ref mentor, "mentor", saveDestroyedThings: true);
-            Scribe_Values.Look(ref arrivalTick, "arrivalTick", -1);
+            Scribe_Values.Look(ref offerTick, "offerTick", -1);
+            Scribe_Values.Look(ref offered, "offered");
+            Scribe_Values.Look(ref huntTick, "huntTick", -1);
+            Scribe_Values.Look(ref wasDowned, "wasDowned");
             Scribe_Values.Look(ref leaveTick, "leaveTick", -1);
             Scribe_Values.Look(ref lessonIndex, "lessonIndex");
             Scribe_Values.Look(ref lessonStarted, "lessonStarted");

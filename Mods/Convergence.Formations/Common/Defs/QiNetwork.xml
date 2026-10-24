@@ -35,6 +35,7 @@
 
   <ThingDef ParentName="CVG_QiNetBuildingBase">
     <defName>CVG_QiVeinWell</defName>
+    <designationCategory>CVG_Formations</designationCategory>
     <label>qi vein well</label>
     <description>A stone collar sunk into a qi vein, with a jade core at the bottom that lets the qi rise instead of spill. It needs no fuel and never stops, which is why sects fought over the ground before they fought over anything else. It must be built on a qi vein, and connected to the rest by pillars.</description>
     <graphicData>
@@ -77,6 +78,7 @@
 
   <ThingDef ParentName="CVG_QiNetBuildingBase">
     <defName>CVG_QiGatherArray</defName>
+    <designationCategory>CVG_Formations</designationCategory>
     <label>qi gathering array</label>
     <description>A brazier of spirit stones ringed by slate tablets, the small sister of the vein well: it cannot draw qi from the ground, only from the stones it burns, but it makes the most of whatever qi already lingers in the air. It yields more where the qi is thick, and nothing without stones.</description>
     <graphicData>
@@ -125,6 +127,7 @@
 
   <ThingDef ParentName="CVG_QiNetBuildingBase">
     <defName>CVG_FormationPillar</defName>
+    <designationCategory>CVG_Formations</designationCategory>
     <label>formation pillar</label>
     <description>A flat matrix stone set flush into the ground, carved with the five-element wheel around a jade eye, which hums when another stone with the same wheel lies within sight. Everything inside its circle shares one network of qi: wells, arrays, crystals and the buildings that drink from them. No cable, no gap, no fuss.</description>
     <graphicData>
@@ -153,6 +156,7 @@
 
   <ThingDef ParentName="CVG_QiNetBuildingBase">
     <defName>CVG_QiCrystal</defName>
+    <designationCategory>CVG_Formations</designationCategory>
     <label>accumulator crystal</label>
     <description>A raw jade crystal that soaks up the qi the network does not need and gives it back when the network runs dry. It leaks a little each day, like all things that hold qi. A cultivator can also pour their own qi into it by hand.</description>
     <graphicData>
@@ -185,6 +189,7 @@
   <!-- Estanque de condensación: el qi que ya no cabe en los cristales se condensa en piedras espirituales (idea del usuario). -->
   <ThingDef ParentName="CVG_QiNetBuildingBase">
     <defName>CVG_CondensationPool</defName>
+    <designationCategory>CVG_Formations</designationCategory>
     <label>condensation pool</label>
     <description>A shallow basin of jade-lined stone where surplus qi, with nowhere left to go, slowly rains down and crystallizes. It only drinks what the accumulators can no longer hold, and every so often a fresh spirit stone settles at the bottom. The old sects dug these under their veins, and the elders say every spirit stone in the world was once qi that nobody needed.</description>
     <graphicData>

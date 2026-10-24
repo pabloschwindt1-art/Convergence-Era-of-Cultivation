@@ -61,7 +61,6 @@
       <li>Campfire</li>
       <li>FueledStove</li>
       <li>ElectricStove</li>
-      <li MayRequire="prospero1088.convergence.furniture">CVG_SectKitchen</li>
     </recipeUsers>
   </RecipeDef>
 </Defs>

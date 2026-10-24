@@ -106,7 +106,7 @@ namespace Convergence
             Check(DefDatabase<JoyKindDef>.GetNamed("CVG_Music") != null, "music joy kind exists");
 
             // revisión: lugares de cultivo, bandeja de cabecera, esterilla, sillón
-            foreach (var spot in new[] { "CVG_JadePlatform", "CVG_SpiritJadeDais" })
+            foreach (var spot in new[] { "CVG_SpiritJadeDais" })
             {
                 var sd = DefDatabase<ThingDef>.GetNamed(spot);
                 var ext = sd.GetModExtension<DefModExtension_CultivationSpot>();

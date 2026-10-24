@@ -188,9 +188,9 @@
     </recipeMaker>
   </ThingDef>
   <ThingDef ParentName="CVG_AccessoryBase">
-    <defName>CVG_Earrings_Metal</defName>
-    <label>white gold earrings of metal</label>
-    <description>Earrings of white gold cast with the sign of Metal. Metal is the element of the autumn and of the sword, and the smiths of Gengjin say that a Metal root hears a blade's intent the way a musician hears a string; the earrings keep that ear sharp. Cultivation +15% for a spirit root with Metal.</description>
+    <defName>CVG_Earrings_FiveElements</defName>
+    <label>five-element earrings</label>
+    <description>A pair of plain earrings with a bead of each of the five elements strung on a single thread. Worn for a season, they turn toward whatever element runs in the wearer's root, as a compass turns north; the wandering cultivators of Jiuxiao say a master can read a disciple's root from the colour the beads settle into. Cultivation +15% for any spirit root.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/CVG/Accessory/Earrings_Metal</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -216,143 +216,7 @@
     </recipeMaker>
     <modExtensions>
       <li Class="Convergence.DefModExtension_ElementalResonance">
-        <element>CVG_Element_Metal</element>
-        <factor>1.15</factor>
-      </li>
-    </modExtensions>
-  </ThingDef>
-  <ThingDef ParentName="CVG_AccessoryBase">
-    <defName>CVG_Earrings_Wood</defName>
-    <label>green jade earrings of wood</label>
-    <description>Earrings of green jade carved with the sign of Wood. Wood is the element of spring and of growth, and the herbalists of the Qilin Valley wear these while they tend the spirit gardens, so that the life in the plants and the life in their meridians grow in step. Cultivation +15% for a spirit root with Wood.</description>
-    <graphicData>
-      <texPath>Things/Item/Equipment/CVG/Accessory/Earrings_Wood</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>0.7</drawSize>
-    </graphicData>
-    <thingCategories Inherit="False"><li>ApparelMisc</li></thingCategories>
-    <costList><Silver>10</Silver><CVG_SpiritStone>1</CVG_SpiritStone></costList>
-    <statBases>
-      <WorkToMake>5000</WorkToMake>
-      <Mass>0.05</Mass>
-    </statBases>
-    <equippedStatOffsets><CVG_QiRegen>0.1</CVG_QiRegen></equippedStatOffsets>
-    <apparel>
-      <bodyPartGroups><li>UpperHead</li></bodyPartGroups>
-      <layers><li>CVG_Ear</li></layers>
-    </apparel>
-    <recipeMaker>
-      <recipeUsers Inherit="False"><li>FueledSmithy</li><li>ElectricSmithy</li><li>CraftingSpot</li></recipeUsers>
-      <researchPrerequisite>CVG_Research_QiBreathing</researchPrerequisite>
-      <workSkill>Crafting</workSkill>
-      <skillRequirements><Crafting>5</Crafting></skillRequirements>
-      <displayPriority>600</displayPriority>
-    </recipeMaker>
-    <modExtensions>
-      <li Class="Convergence.DefModExtension_ElementalResonance">
-        <element>CVG_Element_Wood</element>
-        <factor>1.15</factor>
-      </li>
-    </modExtensions>
-  </ThingDef>
-  <ThingDef ParentName="CVG_AccessoryBase">
-    <defName>CVG_Earrings_Water</defName>
-    <label>river pearl earrings of water</label>
-    <description>Earrings of river pearl strung with the sign of Water. Water is the element of winter and of patience, and the Black Tortoise lineage says that water does not fight the rock, it outlasts it; a Water root wearing them gathers qi as slowly and as surely as a lake fills. Cultivation +15% for a spirit root with Water.</description>
-    <graphicData>
-      <texPath>Things/Item/Equipment/CVG/Accessory/Earrings_Water</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>0.7</drawSize>
-    </graphicData>
-    <thingCategories Inherit="False"><li>ApparelMisc</li></thingCategories>
-    <costList><Silver>10</Silver><CVG_SpiritStone>1</CVG_SpiritStone></costList>
-    <statBases>
-      <WorkToMake>5000</WorkToMake>
-      <Mass>0.05</Mass>
-    </statBases>
-    <equippedStatOffsets><CVG_QiRegen>0.1</CVG_QiRegen></equippedStatOffsets>
-    <apparel>
-      <bodyPartGroups><li>UpperHead</li></bodyPartGroups>
-      <layers><li>CVG_Ear</li></layers>
-    </apparel>
-    <recipeMaker>
-      <recipeUsers Inherit="False"><li>FueledSmithy</li><li>ElectricSmithy</li><li>CraftingSpot</li></recipeUsers>
-      <researchPrerequisite>CVG_Research_QiBreathing</researchPrerequisite>
-      <workSkill>Crafting</workSkill>
-      <skillRequirements><Crafting>5</Crafting></skillRequirements>
-      <displayPriority>600</displayPriority>
-    </recipeMaker>
-    <modExtensions>
-      <li Class="Convergence.DefModExtension_ElementalResonance">
-        <element>CVG_Element_Water</element>
-        <factor>1.15</factor>
-      </li>
-    </modExtensions>
-  </ThingDef>
-  <ThingDef ParentName="CVG_AccessoryBase">
-    <defName>CVG_Earrings_Fire</defName>
-    <label>cinnabar earrings of fire</label>
-    <description>Earrings of cinnabar set in red gold with the sign of Fire. Fire is the element of summer and of the alchemist's furnace; the Vermilion Bird clans gave them to children whose roots burned too hot, so that the fire would rise steadily instead of all at once. Cultivation +15% for a spirit root with Fire.</description>
-    <graphicData>
-      <texPath>Things/Item/Equipment/CVG/Accessory/Earrings_Fire</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>0.7</drawSize>
-    </graphicData>
-    <thingCategories Inherit="False"><li>ApparelMisc</li></thingCategories>
-    <costList><Silver>10</Silver><CVG_SpiritStone>1</CVG_SpiritStone></costList>
-    <statBases>
-      <WorkToMake>5000</WorkToMake>
-      <Mass>0.05</Mass>
-    </statBases>
-    <equippedStatOffsets><CVG_QiRegen>0.1</CVG_QiRegen></equippedStatOffsets>
-    <apparel>
-      <bodyPartGroups><li>UpperHead</li></bodyPartGroups>
-      <layers><li>CVG_Ear</li></layers>
-    </apparel>
-    <recipeMaker>
-      <recipeUsers Inherit="False"><li>FueledSmithy</li><li>ElectricSmithy</li><li>CraftingSpot</li></recipeUsers>
-      <researchPrerequisite>CVG_Research_QiBreathing</researchPrerequisite>
-      <workSkill>Crafting</workSkill>
-      <skillRequirements><Crafting>5</Crafting></skillRequirements>
-      <displayPriority>600</displayPriority>
-    </recipeMaker>
-    <modExtensions>
-      <li Class="Convergence.DefModExtension_ElementalResonance">
-        <element>CVG_Element_Fire</element>
-        <factor>1.15</factor>
-      </li>
-    </modExtensions>
-  </ThingDef>
-  <ThingDef ParentName="CVG_AccessoryBase">
-    <defName>CVG_Earrings_Earth</defName>
-    <label>yellow agate earrings of earth</label>
-    <description>Earrings of yellow agate cut with the sign of Earth. Earth is the element of the centre, the one that holds the other four, and the mountain sects bury new pairs under the gate stone for a season before wearing them; an Earth root feels the weight of the mountain behind its breathing. Cultivation +15% for a spirit root with Earth.</description>
-    <graphicData>
-      <texPath>Things/Item/Equipment/CVG/Accessory/Earrings_Earth</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>0.7</drawSize>
-    </graphicData>
-    <thingCategories Inherit="False"><li>ApparelMisc</li></thingCategories>
-    <costList><Silver>10</Silver><CVG_SpiritStone>1</CVG_SpiritStone></costList>
-    <statBases>
-      <WorkToMake>5000</WorkToMake>
-      <Mass>0.05</Mass>
-    </statBases>
-    <equippedStatOffsets><CVG_QiRegen>0.1</CVG_QiRegen></equippedStatOffsets>
-    <apparel>
-      <bodyPartGroups><li>UpperHead</li></bodyPartGroups>
-      <layers><li>CVG_Ear</li></layers>
-    </apparel>
-    <recipeMaker>
-      <recipeUsers Inherit="False"><li>FueledSmithy</li><li>ElectricSmithy</li><li>CraftingSpot</li></recipeUsers>
-      <researchPrerequisite>CVG_Research_QiBreathing</researchPrerequisite>
-      <workSkill>Crafting</workSkill>
-      <skillRequirements><Crafting>5</Crafting></skillRequirements>
-      <displayPriority>600</displayPriority>
-    </recipeMaker>
-    <modExtensions>
-      <li Class="Convergence.DefModExtension_ElementalResonance">
-        <element>CVG_Element_Earth</element>
+        <attunes>true</attunes>
         <factor>1.15</factor>
       </li>
     </modExtensions>

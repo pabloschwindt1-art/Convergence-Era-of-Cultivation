@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <CVG_DualCultivation>Cultivo dual con {0}</CVG_DualCultivation>
-  <CVG_Vow_Label>Voto de {0} con {1}</CVG_Vow_Label>
-  <CVG_Vow_Desc>Jurar el voto de {0} con {1}. Mientras ambos cultiven cerca uno del otro, cada uno cultiva un {2} más rápido.</CVG_Vow_Desc>
-  <CVG_Vow_LetterLabel>Voto: {0}</CVG_Vow_LetterLabel>
-  <CVG_Vow_LetterText>{A_nameDef} y {B_nameDef} han jurado el voto de {2} ante el Cielo y la Tierra. Desde ahora sus caminos son uno.</CVG_Vow_LetterText>
   <CVG_Premonition_Label>Presagio</CVG_Premonition_Label>
   <CVG_Premonition_Text>{PAWN_nameDef} despierta temblando: ya vio esto antes. {1} atacará en unas {2} horas. Todavía hay tiempo para prepararse.</CVG_Premonition_Text>
   <CVG_SonOfHeaven_Used>El Cielo no ha terminado con {PAWN_nameDef}. El golpe mortal falló por un pelo, como si el destino lo hubiera movido. (Se recupera en {1} días.)</CVG_SonOfHeaven_Used>

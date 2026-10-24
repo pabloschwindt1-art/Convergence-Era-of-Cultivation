@@ -84,10 +84,14 @@
       </statFactors>
     </stuffProps>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <!-- Feng shui by material: walls, columns and furniture of spirit jade add qi to the room. -->
+    <!-- Feng shui by material: walls, columns and furniture of spirit jade add qi to the room. A weapon of spirit jade
+         carries qi in its edge: +1 spirit grade (Convergence.DefModExtension_SpiritGradeMaterial). -->
     <modExtensions>
       <li Class="Convergence.DefModExtension_FengShui">
         <qi>0.05</qi>
+      </li>
+      <li Class="Convergence.DefModExtension_SpiritGradeMaterial">
+        <minGrade>1</minGrade>
       </li>
     </modExtensions>
   </ThingDef>

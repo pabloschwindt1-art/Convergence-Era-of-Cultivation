@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Architect tab of this module (integration plan, 2026-10-23). -->
+  <DesignationCategoryDef>
+    <defName>CVG_QiTech</defName>
+    <label>qi-tech</label>
+    <description>Machines that run on qi and current at once.</description>
+    <order>453</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+</Defs>

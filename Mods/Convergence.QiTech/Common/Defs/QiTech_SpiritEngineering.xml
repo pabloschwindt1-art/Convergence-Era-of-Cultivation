@@ -88,7 +88,7 @@
     <passability>PassThroughOnly</passability>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>0.5</fillPercent>
-    <designationCategory>Misc</designationCategory>
+    <designationCategory>CVG_QiTech</designationCategory>
     <minifiedDef>MinifiedThing</minifiedDef>
     <canOverlapZones>false</canOverlapZones>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>

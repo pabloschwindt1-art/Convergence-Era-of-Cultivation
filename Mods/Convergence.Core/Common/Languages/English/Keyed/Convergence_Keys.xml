@@ -6,18 +6,11 @@
   <CVG_Setting_WorldMode>World mode</CVG_Setting_WorldMode>
   <CVG_WorldMode_TechCultivation>Techno-cultivation (technology and cultivation together)</CVG_WorldMode_TechCultivation>
   <CVG_WorldMode_Classic>Classic cultivation (no technology content)</CVG_WorldMode_Classic>
-  <CVG_Setting_Trigger>How the Convergence begins</CVG_Setting_Trigger>
-  <CVG_Trigger_Storyteller>Vanilla first: the storyteller brings it later</CVG_Trigger_Storyteller>
-  <CVG_Trigger_Research>Research: colonists trigger it by studying an artifact</CVG_Trigger_Research>
-  <CVG_Trigger_Immediate>Immediate: the game starts with the Convergence</CVG_Trigger_Immediate>
-  <CVG_Setting_MinDay>Earliest day: {0}</CVG_Setting_MinDay>
-  <CVG_Setting_MaxDay>Latest day: {0}</CVG_Setting_MaxDay>
   <CVG_Setting_RootChance>Chance of being born with a spirit root: {0}</CVG_Setting_RootChance>
   <CVG_Setting_Dissonance>Celestial dissonance strength (implants vs. tribulation): {0}</CVG_Setting_Dissonance>
   <CVG_Setting_TribulationCanKill>Failed tribulations can kill</CVG_Setting_TribulationCanKill>
   <CVG_Setting_ScaleEnemyRealms>Cap enemy cultivators by your highest realm</CVG_Setting_ScaleEnemyRealms>
   <CVG_Setting_ScaleEnemyRealmsTip>Generated hostile cultivators (raids, sect attacks) never exceed the highest realm in your colony by more than the bonus below, so a Golden Core cannot show up in year one.</CVG_Setting_ScaleEnemyRealmsTip>
-  <CVG_Setting_Mentor>The Master arrives with the Convergence</CVG_Setting_Mentor>
 
   <!-- Cultivation tab -->
   <CVG_Tab_Cultivation>Cultivation</CVG_Tab_Cultivation>
@@ -91,6 +84,8 @@ Lightning bolts: {2} (damage {3} each).
 Celestial dissonance: {4}.
 {5}
 
+The colony comes out to watch from a safe distance, as at a birth: every witness steadies the qi of the one below the clouds, and the lightning bites a little less.
+
 If {PAWN_pronoun} is still standing when the clouds part, {PAWN_pronoun} will reach {1}.</CVG_Tribulation_LetterText>
   <CVG_Tribulation_CanKill>The tribulation can kill.</CVG_Tribulation_CanKill>
   <CVG_Tribulation_CannotKill>The tribulation will not kill (mod settings), but it can leave the cultivator broken.</CVG_Tribulation_CannotKill>
@@ -117,15 +112,10 @@ If {PAWN_pronoun} is still standing when the clouds part, {PAWN_pronoun} will re
   <!-- Bloodlines (Races modules) -->
   <CVG_Setting_BloodlineChance>Chance of being born with beast blood (bloodlines): x{0}</CVG_Setting_BloodlineChance>
   <CVG_Tab_Bloodline>Bloodline</CVG_Tab_Bloodline>
-  <CVG_Tab_BloodlineAwakened>Awakened: the blood answers the qi.</CVG_Tab_BloodlineAwakened>
-  <CVG_Tab_BloodlineLatent>Latent: only the looks show; its gifts will awaken with the Convergence.</CVG_Tab_BloodlineLatent>
   <CVG_Bloodline_None>none</CVG_Bloodline_None>
   <CVG_Bloodline_Label>{0} ({1})</CVG_Bloodline_Label>
   <CVG_Bloodline_Purified>{PAWN_nameDef}'s {1} blood has been purified: it is now {2}.</CVG_Bloodline_Purified>
   <CVG_Bloodline_XenotypeName>{0}-blooded ({1})</CVG_Bloodline_XenotypeName>
-  <CVG_Tab_BloodlineAffinityActive>Blood affinity ({0}): cultivation x{1}</CVG_Tab_BloodlineAffinityActive>
-  <CVG_Tab_BloodlineAffinityInactive>Blood affinity ({0}): x{1}, inactive (the spirit root has none of these elements)</CVG_Tab_BloodlineAffinityInactive>
-  <CVG_Tab_BloodlineAffinityTip>The blood resonates with its elements: if the spirit root shares one of them, cultivation is faster. It grows with purity. When the blood becomes ancestral, it refines the spirit root by one grade (once).</CVG_Tab_BloodlineAffinityTip>
   <CVG_Bloodline_RootRefined>The ancestral blood of {PAWN_nameDef} has cleansed the spirit root: {1}.</CVG_Bloodline_RootRefined>
   <CVG_Bloodline_EffectsHeader>Awakened gifts of {0} blood ({1}):</CVG_Bloodline_EffectsHeader>
   <CVG_Bloodline_StatusAwake>Active: the Convergence has awakened the blood.</CVG_Bloodline_StatusAwake>
@@ -133,8 +123,6 @@ If {PAWN_pronoun} is still standing when the clouds part, {PAWN_pronoun} will re
   <CVG_Bloodline_AbilityLine>Innate ability: {0}</CVG_Bloodline_AbilityLine>
   <CVG_Bloodline_AffinityLine>Affinity with {0}: cultivation x{1} if the spirit root has that element</CVG_Bloodline_AffinityLine>
   <CVG_Bloodline_AspectNote>Look of the {0} bloodline: cosmetic. The gifts and flaws come from the purity gene of the blood.</CVG_Bloodline_AspectNote>
-  <CVG_Tab_BloodlineEffects>Gifts of the blood</CVG_Tab_BloodlineEffects>
-  <CVG_Tab_BloodlineEffectsLatent>Its gifts will awaken with the Convergence (hover to see them).</CVG_Tab_BloodlineEffectsLatent>
   <!-- Techniques (M5) -->
   <CVG_Setting_RealmSuppression>Realm suppression strength: {0}</CVG_Setting_RealmSuppression>
   <CVG_Setting_RealmSuppressionOff>Realm suppression: off</CVG_Setting_RealmSuppressionOff>
@@ -203,14 +191,9 @@ If {PAWN_pronoun} is still standing when the clouds part, {PAWN_pronoun} will re
   <CVG_Mentor_ProtectionLabel>{0} protects the colony</CVG_Mentor_ProtectionLabel>
   <CVG_Mentor_FarewellLabel>{0} leaves</CVG_Mentor_FarewellLabel>
   <CVG_Mentor_DeathLabel>{0} has fallen</CVG_Mentor_DeathLabel>
-  <CVG_Mentor_TabHeader>Master ({0}): leaves in {1} days</CVG_Mentor_TabHeader>
-  <CVG_Mentor_TabLesson>Lesson {0}/{1}: {2}</CVG_Mentor_TabLesson>
-  <CVG_Mentor_TabNoLessons>All lessons learned.</CVG_Mentor_TabNoLessons>
   <!-- Dao Comprehension and celestial calendar -->
   <CVG_Breakthrough_RequiresResearch>Requires comprehending {0} (Cultivation research tab).</CVG_Breakthrough_RequiresResearch>
   <CVG_Manual_RequiresResearch>Requires comprehending {0} (Cultivation research tab).</CVG_Manual_RequiresResearch>
-  <CVG_Dao_SuddenLabel>Sudden enlightenment: {0}</CVG_Dao_SuddenLabel>
-  <CVG_Dao_SuddenText>While {1}, {PAWN_nameDef} suddenly saw through a knot in the Dao (顿悟). A large leap in Dao comprehension.</CVG_Dao_SuddenText>
   <CVG_Dao_EnlightenmentLabel>Enlightenment: {0}</CVG_Dao_EnlightenmentLabel>
   <CVG_Dao_EnlightenmentText>{PAWN_nameDef} became enlightened while {1} and comprehended {2}.</CVG_Dao_EnlightenmentText>
   <CVG_Dao_EnlightenmentTextNoOne>The colony has comprehended {0}.</CVG_Dao_EnlightenmentTextNoOne>
@@ -219,7 +202,6 @@ If {PAWN_pronoun} is still standing when the clouds part, {PAWN_pronoun} will re
   <CVG_Dao_Source_Studying>studying a jade slip</CVG_Dao_Source_Studying>
   <CVG_Dao_Source_Absorbing>absorbing a beast core</CVG_Dao_Source_Absorbing>
   <CVG_Dao_Source_Breathing>breathing the qi of the world</CVG_Dao_Source_Breathing>
-  <CVG_Calendar_Deviation>Under the {1}, the qi of {PAWN_nameDef} went astray while cultivating: qi deviation.</CVG_Calendar_Deviation>
   <CVG_Rank_Label>{0} of {1}</CVG_Rank_Label>
   <CVG_Rank_Text>The {0} now recognise you as {1}. Their goodwill towards you and the realm of your cultivators open this rank.</CVG_Rank_Text>
   <CVG_Rank_Reward>The sect sends a gift: {0}.</CVG_Rank_Reward>
@@ -230,10 +212,6 @@ If {PAWN_pronoun} is still standing when the clouds part, {PAWN_pronoun} will re
   <CVG_Tab_PreCultivated>Cultivated before the Convergence: fell through a rift of Jiuxiao or remembers a past life.</CVG_Tab_PreCultivated>
   <CVG_Tab_LatentCultivation>Latent: {0} · {1}</CVG_Tab_LatentCultivation>
   <CVG_Tab_LatentCultivationTip>This cultivation sleeps: it will awaken, with all its power, when the Convergence brings qi to this world (or when this person can follow the path again).</CVG_Tab_LatentCultivationTip>
-  <CVG_Trigger_StorytellerTip>The game starts as plain RimWorld and the Convergence arrives between the days below (by default in the middle of the first year), so the mod comes in little by little.</CVG_Trigger_StorytellerTip>
-  <CVG_Trigger_ImmediateTip>Qi floods the world in the first hour: roots awaken, sects arrive and cultivation starts right away.</CVG_Trigger_ImmediateTip>
-  <CVG_Setting_AskOnNewGame>Ask for difficulty and start mode when a new game begins</CVG_Setting_AskOnNewGame>
-  <CVG_Setting_AskOnNewGameTip>When a new game starts, a window lets you pick the cultivation difficulty and how the Convergence arrives for that game. The values here are its defaults.</CVG_Setting_AskOnNewGameTip>
   <CVG_Difficulty_Title>Cultivation difficulty</CVG_Difficulty_Title>
   <CVG_Difficulty_NewGames>Cultivation difficulty (new games)</CVG_Difficulty_NewGames>
   <CVG_Difficulty_ThisGame>Cultivation difficulty (this game)</CVG_Difficulty_ThisGame>
@@ -248,10 +226,6 @@ If {PAWN_pronoun} is still standing when the clouds part, {PAWN_pronoun} will re
   <CVG_Difficulty_VanillaWealth>Cultivation items in vanilla wealth: {0}</CVG_Difficulty_VanillaWealth>
   <CVG_Difficulty_VanillaWealthTip>How much of the value of pills, spirit stones, treasures, spirit weapons, puppets and cultivation furniture counts in the wealth that sets vanilla raid points. Their trade value does not change; the rest goes to the cultivation wealth.</CVG_Difficulty_VanillaWealthTip>
   <CVG_Difficulty_StatPart>Cultivation difficulty ({0})</CVG_Difficulty_StatPart>
-  <CVG_StartDialog_Title>The Era of Cultivation</CVG_StartDialog_Title>
-  <CVG_StartDialog_Intro>Choose how hard the path of cultivation will be in this game and when the Convergence pours qi into this world. You can change the difficulty later in the mod settings.</CVG_StartDialog_Intro>
-  <CVG_StartDialog_AlreadyOccurred>The Convergence has already happened: this scenario starts with it. Only the difficulty is left to choose.</CVG_StartDialog_AlreadyOccurred>
-  <CVG_Tab_CultivationWealth>Cultivation wealth of the colony: {0}</CVG_Tab_CultivationWealth>
   <CVG_CultivationWealthTip>Cultivation wealth: {0}\n\n  Cultivation items: {1}\n  Cultivation buildings: {2}\n  Puppets and spirit beasts: {3}\n  Realms of the colonists: {4}\n  Techniques: {5}\n\nTaken out of the vanilla wealth: {6} (vanilla raids ignore most of the value of cultivation things).\nExtra threat points for sects and cultivation events: {7}</CVG_CultivationWealthTip>
   <CVG_Tab_NoFreeSlot>This set is full ({0} techniques): remove one first.</CVG_Tab_NoFreeSlot>
   <CVG_Technique_PassiveLine>Passive: always active once learned, no button. It grows with realm and mastery.</CVG_Technique_PassiveLine>
@@ -278,7 +252,7 @@ If {PAWN_pronoun} is still standing when the clouds part, {PAWN_pronoun} will re
   <CVG_Dev_TabTechniques>Techniques</CVG_Dev_TabTechniques>
   <CVG_Dev_RealmLine>Realm: {0}, stage {1}</CVG_Dev_RealmLine>
   <CVG_Dev_Bottleneck>Bottleneck: ready for a breakthrough</CVG_Dev_Bottleneck>
-  <CVG_Dev_ProgressHint>Progress by cultivating on a cultivation spot; qi concentration and the root speed it up.</CVG_Dev_ProgressHint>
+  <CVG_Dev_ProgressHint>Progress by meditating (hours of Meditate in the Schedule); qi concentration and the root speed it up.</CVG_Dev_ProgressHint>
   <CVG_Dev_ProgressHintBody>Progress by tempering the body on training equipment.</CVG_Dev_ProgressHintBody>
   <CVG_Dev_PointsAvailable>Comprehension points available: {0}</CVG_Dev_PointsAvailable>
   <CVG_Dev_PointsHint>Spend points on unlocking paths and learning techniques. Each new stage gives 1, each realm 2.</CVG_Dev_PointsHint>
@@ -303,13 +277,9 @@ If {PAWN_pronoun} is still standing when the clouds part, {PAWN_pronoun} will re
   <CVG_Alert_ReadyToBreakthroughDesc>These cultivators are at the bottleneck of their realm, with full qi, and can attempt a breakthrough now (button on the colonist):\n\n{0}</CVG_Alert_ReadyToBreakthroughDesc>
   <CVG_Alert_QiDeviation>Qi deviation</CVG_Alert_QiDeviation>
   <CVG_Alert_QiDeviationDesc>These cultivators suffer a qi deviation or an inner demon. Let them rest; it fades with time:\n\n{0}</CVG_Alert_QiDeviationDesc>
-  <CVG_Alert_NoCultivationSpot>No place to cultivate</CVG_Alert_NoCultivationSpot>
-  <CVG_Alert_NoCultivationSpotDesc>Your cultivators have nowhere to cultivate. Mark a cultivation spot (free) or build a cushion or a meditation platform in the Cultivation tab of the architect menu.</CVG_Alert_NoCultivationSpotDesc>
-  <CVG_Alert_IdleCultivator>Cultivator not cultivating</CVG_Alert_IdleCultivator>
-  <CVG_Alert_IdleCultivatorDesc>These colonists have an awakened spirit root, but the Cultivate work is disabled in their work tab:\n\n{0}</CVG_Alert_IdleCultivatorDesc>
   <CVG_ElementalResonance>{0} resonates with the {1} root</CVG_ElementalResonance>
   <CVG_GuideLetterLabel>Cultivator's guide</CVG_GuideLetterLabel>
-  <CVG_GuideLetterText>An old saying of Jiuxiao: the Dao is not far from people; people walk away from the Dao. Here is where to find it.\n\n- SPIRIT ROOT: select a colonist and open the CULTIVATION tab. It shows root, realm, stage, qi and what the realm grants. Only colonists with an awakened root can gather qi; the others can temper the body.\n- CULTIVATING: build a cultivation spot or cushion (Cultivation build menu) and enable the CULTIVATE job in the Work tab (priority 1 or 2, or nobody will have time for it). Qi concentration and the root speed it up.\n- RESEARCH: cultivation research is done at the contemplation desk (Production tab) and lives in the Cultivation tab of the research tree. Reading jade slips needs "technique manuals"; the Foundation realm needs its own research.
+  <CVG_GuideLetterText>An old saying of Jiuxiao: the Dao is not far from people; people walk away from the Dao. Here is where to find it.\n\n- SPIRIT ROOT: select a colonist and open the CULTIVATION tab. It shows root, realm, stage, qi and what the realm grants. Only colonists with an awakened root can gather qi; the others can temper the body.\n- CULTIVATING IS MEDITATING: give hours of Meditate in the Schedule tab. The cultivator meditates and gathers qi, preferably on a cushion or platform (Cultivation build menu) or a meditation spot. Qi concentration and the root speed it up.\n- RESEARCH: cultivation research is done at the contemplation desk (Production tab) and lives in the Cultivation tab of the research tree. Reading jade slips needs "technique manuals"; the Foundation realm needs its own research.
 - TECHNIQUES: the TECHNIQUES command on the colonist, or the button at the top of the Cultivation tab. Spend comprehension points there and put abilities in a combat set.\n- BREAKTHROUGH: at the last stage of a realm the BREAKTHROUGH command appears. Great realms bring a heavenly tribulation.\n- QI NETWORK: generators, conduits and formations work like power. The qi overlay (map buttons, bottom right) shows where qi gathers.\n\nThe Learning Helper explains each step when it comes up.</CVG_GuideLetterText>
   <CVG_QiNet_Condensing>Condensing surplus qi: {0} / {1} for the next {2}.</CVG_QiNet_Condensing>
   <CVG_Setting_LegendaryBackstories>Rare backstories (tiers 2-4): {0}</CVG_Setting_LegendaryBackstories>
@@ -348,4 +318,17 @@ Some will trade, some will judge, and one of them hunts. Their goodwill can be e
   <CVG_Temper_Failure>The tempering did not take hold: {PAWN_labelShort} did not reach {1} this time (chance {2}). The cost is spent.</CVG_Temper_Failure>
   <CVG_Ritual_NeedBelievers>Needs at least {0} other {1} attending besides the roles (now {2}).</CVG_Ritual_NeedBelievers>
   <CVG_Ritual_NeedBelieversDesc>At least {0} other believers must attend.</CVG_Ritual_NeedBelieversDesc>
+  <!-- Mentor quest: the start of the Convergence (integration plan, 2026-10-23) -->
+  <CVG_Setting_ForcedDay>The Convergence arrives on its own after {0} days if the sage is never welcomed</CVG_Setting_ForcedDay>
+  <CVG_Setting_ForcedDayTip>The Convergence starts when you accept the quest of the old sage who asks for shelter. If you never accept it, it comes anyway after this many days (60 = the start of the second year), like the monolith of the void.</CVG_Setting_ForcedDayTip>
+  <CVG_MentorQuest_BeforeConvergence>He speaks of a rift about to open in the sky and of a qi that has not flowed in this world for ten thousand years. If you take him in, whatever is coming will come with him.</CVG_MentorQuest_BeforeConvergence>
+  <CVG_MentorQuest_AfterConvergence>Since the sky opened, his kind have been hunted from one end of the world to the other. He asks only for a corner and a few months; in return he will teach whoever has a spirit root.</CVG_MentorQuest_AfterConvergence>
+  <CVG_Mentor_HuntersLabel>They came for {0}</CVG_Mentor_HuntersLabel>
+  <CVG_Mentor_HuntersText>Those who hunted {PAWN_nameDef} across the world have found the colony that took {PAWN_objective} in. {FACTION_name} is attacking: they want the old master, and anyone who stands between them.</CVG_Mentor_HuntersText>
+  <!-- Bonds born from play (integration plan, 2026-10-23) -->
+  <CVG_LifeDebt_Message>{PAWN_nameDef} owes {OTHER_nameDef} a life: {OTHER_pronoun} carried {PAWN_objective} out when {PAWN_pronoun} could not stand.</CVG_LifeDebt_Message>
+  <CVG_BloodFeud_Label>Blood feud: {0}</CVG_BloodFeud_Label>
+  <CVG_BloodFeud_Text>{KILLER_nameDef} killed {VICTIM_nameDef}. {2} will not forget the face: from today {KILLER_nameDef} is a blood enemy.
+
+If {KILLER_nameDef} ever comes back, they will know. And if {KILLER_pronoun} dies, the blood will be paid.</CVG_BloodFeud_Text>
 </LanguageData>

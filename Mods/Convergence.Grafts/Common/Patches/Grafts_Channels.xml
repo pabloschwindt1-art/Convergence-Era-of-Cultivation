@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Integration plan (2026-10-23): grafts in the vanilla bionic channels. Only when Convergence: Factions is active. -->
+
+  <!-- Sect cultivators may come with grafts installed, like raiders with bionics. -->
+  <Operation Class="PatchOperationFindMod">
+    <mods><li>Convergence: Factions</li></mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/PawnKindDef[@Name="CVG_Sect2KindBase"]/techHediffsTags</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/PawnKindDef[@Name="CVG_Sect2KindBase"]/techHediffsTags</xpath>
+            <value><li>CVG_Graft</li></value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/PawnKindDef[@Name="CVG_Sect2KindBase"]</xpath>
+            <value>
+              <techHediffsTags><li>CVG_Graft</li></techHediffsTags>
+              <techHediffsMoney>400~1400</techHediffsMoney>
+              <techHediffsChance>0.2</techHediffsChance>
+            </value>
+          </nomatch>
+        </li>
+        <!-- Sect merchants sell one or two grafts. -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/TraderKindDef[starts-with(@Name,"CVG_Trader")]/stockGenerators</xpath>
+          <value>
+            <li Class="StockGenerator_Tag">
+              <tradeTag>CVG_Graft</tradeTag>
+              <thingDefCountRange>1~2</thingDefCountRange>
+              <countRange>1~1</countRange>
+            </li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

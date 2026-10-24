@@ -12,6 +12,48 @@ Estado de partida: los 15 mods se publicaron (ocultos) en la **0.1.0** (tag git 
 
 Próxima subida (juntar todo en una sola vez; ver la nota de abajo para cada mod).
 
+### Plan de integración: el wuxia dentro de RimWorld como generador de historias (2026-10-23)
+Plan cerrado con el usuario (docs/revision/PLAN_INTEGRACION.md). Nada de sistemas nuevos: reconectar lo que había con los canales
+vanilla y recortar lo que sobraba. **El Core ahora exige las cinco DLC** (el mod es para el usuario).
+- **Core: cultivar es meditar.** Se borró el trabajo "Cultivar": los cultivadores avanzan meditando (franja Meditar del horario,
+  recreación, psyfoco de Royalty). El punto de meditación vanilla es el lugar de cultivo gratis; cojín, plataforma y estrado lo
+  mejoran. Se fueron el punto de cultivo propio y la plataforma de jade (Furniture), la tirada propia de iluminación (queda la
+  inspiración vanilla, que ahora da la comprensión del Dao), la desviación de qi por hora de la luna (quedan avance fallido y demonio
+  interno), las alertas de cultivador inactivo y sin lugar, y el diálogo de inicio. La pestaña Cultivo solo sale en cultivadores y ya
+  no repite linaje, Maestro ni riqueza.
+- **Core: el Maestro es la misión de inicio.** "Un viejo sabio busca refugio" llega a la pestaña Misiones a los 2-4 días y puede
+  quedar pendiente; aceptarla desata la Convergencia y el Maestro cae herido. Si nunca se acepta, la Convergencia llega sola a los
+  60 días (ajustable). Quienes lo persiguen pueden venir a buscarlo, la colonia sufre cuando lo hieren y al final se va caminando.
+  Sin modos de inicio ni investigación de la anomalía espiritual.
+- **Core + Traits & Destinies: relaciones que nacen jugando.** Interacciones sociales vanilla: hablar del Dao, jurar hermandad,
+  desafío entre rivales, voto del Dao y tomar un discípulo (maestro y discípulo; los discípulos del mismo maestro son condiscípulos).
+  Una pelea entre cultivadores puede dejar rivales de por vida; rescatar a alguien caído, una deuda de vida; matar a un ser querido
+  de un colono, una enemistad de sangre. Estados nuevos: dejé atrás a mi rival, falló el avance de alguien cercano, arruiné una
+  píldora, hirieron a nuestro maestro, muertes de maestro, discípulo, condiscípulo y benefactor, enemigo de sangre muerto. La envidia
+  ya no le toca a cualquiera que le caiga mal al que avanza, solo a su rival. Sin botón de voto.
+- **Core: la tribulación se vive como un parto.** La colonia sale a mirar desde una distancia segura; cada testigo le resta un 7% al
+  daño del rayo (hasta 40%) y el ánimo es solo para quien la vio.
+- **Core: contramedida contra cultivadores.** Investigación "armas templadas en qi": toda arma y torreta, vanilla incluida, llega a
+  grado espiritual 1. El material espiritual (jade espiritual en el Core; acero espiritual y demás con Resources) suma su grado encima.
+- **Stories: 29 eventos en vez de 80**, colgados del narrador vanilla (dos incidentes: relato y amenaza de Jiuxiao). Las cadenas que
+  chocaban con una amenaza ya no se pierden (se reintentan un día después). Cada evento tiene un protagonista fijo, los memorables
+  dejan relatos para el arte y los de sectas dan favor (Royalty). Una secta que ataca manda la carta de ruptura. Quien se une llega
+  ya con la ideología de la colonia. Sin simulación de guerras de sectas (el pedido de ayuda y el torneo quedan como eventos) ni puerta
+  de reino al minar. Resources: el hierro meteórico y la arena estelar caen en los meteoritos vanilla.
+- **Factions: las sectas comercian solo con piedras espirituales.** Precios en plata como siempre; el total se paga en piedras según
+  su valor. Sus mercaderes traen piedras en vez de plata y los tributos de los eventos se pagan en piedras.
+- **Grafts:** los injertos entran a los canales de biónicos: saqueadores de secta pueden traerlos, los mercaderes de secta los
+  venden y salen como recompensa. Quien espera un injerto se acuesta en el altar.
+- **Recortes:** Furniture pierde la cocina, carnicería, cantería y cervecería (copias exactas de las vanilla) y la mesa de jade (sus
+  esculturas pasan a la mesa de escultura vanilla); el Core, el escritorio de contemplación. Formations pierde la estatua guardiana
+  (repetía la formación de espadas) y Qi-Tech la torreta de contención (repetía a la balista). Alchemy: se van la espada, el sable,
+  la lanza y el arco espirituales (un arma wuxia de material espiritual hace lo mismo); queda la espada voladora. Apparel: los cinco
+  pendientes elementales pasan a ser los aros de los cinco elementos, que se sintonizan con la raíz de quien los lleva.
+- **Pestañas de construcción propias:** Cultivo (asientos y todas las mesas), Mobiliario wuxia, Formaciones y Qi-Tech.
+- **Interno:** los autotests y capturas del Core pasan a un mod de desarrollo (Convergence: DevTools, solo lo carga el lanzador de
+  pruebas). Caché en los chequeos que corren todo el tiempo (Convergencia activa, caminos de cultivo, energía de la red de qi,
+  sombras, color, escudo de formación, incidentes).
+
 ### Alquimia y salas de trabajo (2026-10-22)
 - **Salas de trabajo wuxia** (Core): sala de alquimia (horno), herrería espiritual (forja), sala de escribas (mesa de runas, de
   talismanes, escritorio de caligrafía) y sala de tejido (telar espiritual), la versión del taller y el laboratorio vanilla. Nuevo stat

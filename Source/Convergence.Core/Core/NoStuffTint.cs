@@ -16,9 +16,13 @@ namespace Convergence
     [HarmonyPatch(typeof(Building), nameof(Building.DrawColor), MethodType.Getter)]
     public static class Patch_Building_DrawColor_NoStuffTint
     {
+        private static readonly System.Collections.Generic.Dictionary<ThingDef, bool> noTint = new System.Collections.Generic.Dictionary<ThingDef, bool>();
+
         public static void Postfix(Building __instance, ref Color __result)
         {
-            if (__instance.def.HasModExtension<DefModExtension_NoStuffTint>()) __result = Color.white;
+            var def = __instance.def;
+            if (!noTint.TryGetValue(def, out bool v)) noTint[def] = v = def.HasModExtension<DefModExtension_NoStuffTint>();
+            if (v) __result = Color.white;
         }
     }
 }

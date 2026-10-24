@@ -507,10 +507,21 @@ namespace Convergence
     [HarmonyPatch(typeof(CompPowerTrader), nameof(CompPowerTrader.PowerOn), MethodType.Getter)]
     public static class Patch_CompPowerTrader_PowerOn_Qi
     {
+        private static readonly System.Collections.Generic.Dictionary<ThingDef, bool> hasQiNode = new System.Collections.Generic.Dictionary<ThingDef, bool>();
+
+        /// <summary>¿El def tiene nodo de qi? (caché: PowerOn se consulta muchísimas veces por tick en edificios vanilla).</summary>
+        public static bool HasQiNode(ThingDef def)
+        {
+            if (def == null) return false;
+            if (!hasQiNode.TryGetValue(def, out bool has))
+                hasQiNode[def] = has = def.comps != null && def.comps.Any(c => c is CompProperties_QiNode);
+            return has;
+        }
+
         public static void Postfix(CompPowerTrader __instance, ref bool __result)
         {
             var parent = __instance.parent;
-            if (parent?.def == null || parent.def.comps == null) return;
+            if (!HasQiNode(parent?.def)) return;
             var node = parent.TryGetComp<CompQiNode>();
             // el interruptor de la formacion manda: apagada con el boton, no esta encendida aunque haya qi
             if (node != null && node.IsConsumer) __result = node.Powered && (parent.TryGetComp<CompFlickable>()?.SwitchIsOn ?? true);
@@ -522,7 +533,7 @@ namespace Convergence
     {
         public static void Postfix(CompPower __instance, ref string __result)
         {
-            if (__instance.parent.TryGetComp<CompQiNode>() != null) __result = null;
+            if (Patch_CompPowerTrader_PowerOn_Qi.HasQiNode(__instance.parent?.def)) __result = null;
         }
     }
 
@@ -532,7 +543,7 @@ namespace Convergence
     {
         public static void Postfix(CompPowerTrader __instance, ref string __result)
         {
-            if (__instance.parent.TryGetComp<CompQiNode>() != null) __result = null;
+            if (Patch_CompPowerTrader_PowerOn_Qi.HasQiNode(__instance.parent?.def)) __result = null;
         }
     }
 }

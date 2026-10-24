@@ -19,14 +19,14 @@ namespace Convergence
             int fails = 0;
             var traits = DefDatabase<TraitDef>.AllDefsListForReading.Where(t => t.defName.StartsWith("CVG_")).ToList();
             sb.Append($"\n  CVG traits: {traits.Count}, destinies: {traits.Count(t => t.exclusionTags.Contains("CVG_Destiny"))}");
-            var dual = DefDatabase<PawnRelationDef>.AllDefsListForReading.FirstOrDefault(r => r.GetModExtension<DefModExtension_DualCultivation>()?.vowFromRelations != null);
+            var dual = DefDatabase<PawnRelationDef>.GetNamedSilentFail("CVG_DaoPartner");
             if (map != null && dual != null)
             {
                 var a = Generate(map);
                 var b = Generate(map);
                 a.relations.AddDirectRelation(dual, b);
                 float alone = a.GetStatValue(CVG_DefOf.CVG_CultivationSpeed, cacheStaleAfterTicks: 0);
-                b.jobs.StartJob(JobMaker.MakeJob(CVG_DefOf.CVG_Cultivate, b.Position), JobCondition.InterruptForced);
+                b.jobs.StartJob(JobMaker.MakeJob(JobDefOf.Meditate, b.Position), JobCondition.InterruptForced);
                 float together = TraitMechanics.DualFactor(a, out var partner);
                 sb.Append($"\n  {dual.defName}: relation {a.relations.DirectRelationExists(dual, b)}, dual factor x{together:0.##} (partner {partner?.LabelShort ?? "none"}), speed {alone:0.##}");
                 if (!b.relations.DirectRelationExists(dual, a)) { sb.Append("  FAIL relation not reflexive"); fails++; }

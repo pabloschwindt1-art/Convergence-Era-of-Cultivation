@@ -4,7 +4,7 @@
   <ThingDef ParentName="FurnitureBase">
     <defName>CVG_CultivationCushion</defName>
     <label>cultivation cushion</label>
-    <description>A round padded cushion on a low wooden base, where a cultivator sits cross-legged to gather qi. It raises the qi concentration of the room a little. Colonists with an awakened spirit root use it for the Cultivate work type.</description>
+    <description>A round padded cushion on a low wooden base, where a cultivator sits cross-legged to gather qi. It raises the qi concentration of the room a little. Anyone can meditate on it, but a colonist with an awakened spirit root gathers qi with every breath taken here: the old masters said cultivation is only meditation that does not stop.</description>
     <graphicData>
       <texPath>Things/Building/CVG/CultivationCushion</texPath>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
@@ -47,53 +47,10 @@
     <modExtensions>
       <li Class="Convergence.DefModExtension_CultivationSpot">
         <qiRegenFactor>5</qiRegenFactor>
-        <sessionTicks>2500</sessionTicks>
       </li>
       <li Class="Convergence.DefModExtension_FengShui">
         <qi>2</qi>
         <element>CVG_Element_Wood</element>
-      </li>
-    </modExtensions>
-  </ThingDef>
-  <!-- Cultivation spot: free, like the meditation spot of Royalty; the first thing to mark the day of the Convergence.
-       Final art: Things/Building/CVG/CultivationSpot (today the vanilla party spot, tinted). -->
-  <ThingDef ParentName="BuildingBase">
-    <defName>CVG_CultivationSpot</defName>
-    <label>cultivation spot</label>
-    <description>A circle of pebbles on bare ground where a cultivator sits to gather qi. It costs nothing, and it is how every sect began: the founder of the Formless Sword Sect cultivated thirty years on a flat rock before anyone built him a hall. A cushion or a platform gathers qi better.</description>
-    <graphicData>
-      <texPath>Things/Building/CVG/CultivationSpot</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawRotated>false</drawRotated>
-    </graphicData>
-    <altitudeLayer>FloorEmplacement</altitudeLayer>
-    <statBases>
-      <WorkToBuild>0</WorkToBuild>
-    </statBases>
-    <rotatable>false</rotatable>
-    <scatterableOnMapGen>false</scatterableOnMapGen>
-    <useHitPoints>False</useHitPoints>
-    <designationCategory>CVG_Cultivation</designationCategory>
-    <uiOrder>2440</uiOrder>
-    <passability>Standable</passability>
-    <drawGUIOverlay>true</drawGUIOverlay>
-    <building>
-      <isSittable>true</isSittable>
-      <sowTag>SupportPlantsOnly</sowTag>
-      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
-      <ai_chillDestination>false</ai_chillDestination>
-      <wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
-    </building>
-    <comps>
-      <li Class="CompProperties_AssignableToPawn">
-        <drawUnownedAssignmentOverlay>false</drawUnownedAssignmentOverlay>
-        <maxAssignedPawnsCount>1</maxAssignedPawnsCount>
-      </li>
-    </comps>
-    <modExtensions>
-      <li Class="Convergence.DefModExtension_CultivationSpot">
-        <qiRegenFactor>3</qiRegenFactor>
-        <sessionTicks>2500</sessionTicks>
       </li>
     </modExtensions>
   </ThingDef>
@@ -150,7 +107,6 @@
     <modExtensions>
       <li Class="Convergence.DefModExtension_CultivationSpot">
         <qiRegenFactor>7</qiRegenFactor>
-        <sessionTicks>2500</sessionTicks>
       </li>
       <li Class="Convergence.DefModExtension_FengShui">
         <qi>3</qi>

@@ -72,4 +72,49 @@
     <skillRequirements><Crafting>4</Crafting></skillRequirements>
     <recipeUsers><li>CVG_RefiningFurnace</li></recipeUsers>
   </RecipeDef>
+  <!-- Integration plan (2026-10-23): the Starfall and Dawn Sands events are gone; meteoric iron and star sand now fall in
+       vanilla meteorites (ThingSetMaker_Meteorite takes every resource rock). Not scattered on map generation. -->
+  <ThingDef ParentName="RockBase">
+    <defName>CVG_MineableMeteoricIron</defName>
+    <label>meteoric iron</label>
+    <description>A black, pitted mass that fell burning from the sky of Jiuxiao. Smiths of the old sects paid a city for a fist of it: iron that has crossed the heavens remembers the cold between the stars and never quite forgets it.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(60,58,62)</color>
+      <colorTwo>(150,160,190)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>4000</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>CVG_MeteoricIron</mineableThing>
+      <mineableYield>15</mineableYield>
+      <mineableScatterCommonality>0</mineableScatterCommonality>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="RockBase">
+    <defName>CVG_MineableStarSand</defName>
+    <label>star sand crust</label>
+    <description>A glassy crust that glitters faintly even at noon: sand the sky melted on its way down. The alchemists of the Heavenly Cauldron say it binds herbs so tightly that nothing of their qi is lost in the fire.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(120,115,140)</color>
+      <colorTwo>(230,220,255)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>2500</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>CVG_StarSand</mineableThing>
+      <mineableYield>12</mineableYield>
+      <mineableScatterCommonality>0</mineableScatterCommonality>
+    </building>
+  </ThingDef>
 </Defs>

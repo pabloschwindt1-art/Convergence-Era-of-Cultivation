@@ -40,6 +40,12 @@
       <li>Spouse</li>
       <li>Sibling</li>
     </royalTitleInheritanceRelations>
+    <!-- Sects trade only in spirit stones (integration plan, 2026-10-23; Convergence.Factions.SpiritCurrency). -->
+    <modExtensions>
+      <li Class="Convergence.Factions.DefModExtension_SpiritStoneCurrency">
+        <currency>CVG_SpiritStone</currency>
+      </li>
+    </modExtensions>
   </FactionDef>
 
   <PawnKindDef Abstract="True" Name="CVG_Sect2KindBase">

@@ -61,6 +61,62 @@
   </ThoughtDef>
 
   <ThoughtDef>
+    <defName>CVG_Thought_SurpassedRival</defName>
+    <durationDays>6</durationDays>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>left {0} behind</label>
+        <description>For years we walked side by side and I could hear their footsteps. Now I hear only mine. The sweetest qi is the one a rival will never reach.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_CloseOneFailed</defName>
+    <durationDays>3</durationDays>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>{0} failed a breakthrough</label>
+        <description>I watched them come out of the retreat pale and shaking, the qi still running wrong. Heaven owes them another chance.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_MentorHurt</defName>
+    <durationDays>3</durationDays>
+    <stackLimit>2</stackLimit>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>our master {0} was hurt</label>
+        <description>I thought nothing under heaven could touch the old master. I saw him fall. If he can bleed, what are we?</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_RuinedPill</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>ruined a pill</label>
+        <description>The herbs burned, the qi scattered and the furnace gave back a grey lump. Every master has a mountain of them behind the workshop; today mine grew.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
     <defName>CVG_Thought_BreakthroughFailed</defName>
     <durationDays>4</durationDays>
     <stackLimit>1</stackLimit>

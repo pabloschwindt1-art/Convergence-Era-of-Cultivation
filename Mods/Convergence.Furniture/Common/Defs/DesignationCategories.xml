@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Architect tab of this module (integration plan, 2026-10-23). -->
+  <DesignationCategoryDef>
+    <defName>CVG_Furniture</defName>
+    <label>wuxia furniture</label>
+    <description>Furniture, statues and ornaments of the sects: beds, tables, screens, lanterns and pavilions.</description>
+    <order>451</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+</Defs>

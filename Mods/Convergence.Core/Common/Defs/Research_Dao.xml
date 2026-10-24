@@ -2,11 +2,9 @@
 <Defs>
   <!--
     Dao Comprehension (docs/modulos/INVESTIGACION.md). Projects of the Cultivation tab with DefModExtension_DaoResearch:
-    - With Anomaly: at startup they become knowledge projects of the category CVG_DaoComprehension (knowledgeCost).
-      Comprehension comes from cultivating (0.25/h), tempering the body (0.15/h), breathing as an awakened cultivator
-      (0.02/h), reading jade slips (1.5) and absorbing beast cores (1); sudden enlightenment while practicing (+3).
-    - Without Anomaly: normal research (baseCost) at the contemplation desk; cultivating also adds to the current
-      Dao project (200 research points per comprehension point).
+    At startup they become knowledge projects of the category CVG_DaoComprehension (knowledgeCost; Anomaly is required).
+    Comprehension comes from meditating as a cultivator (0.25/h), tempering the body (0.15/h), breathing as an awakened
+    cultivator (0.02/h), reading jade slips (1.5) and absorbing beast cores (1); the sudden enlightenment inspiration gives +3.
     Completing a project sends an enlightenment letter naming the colonist who contributed most.
   -->
   <KnowledgeCategoryDef>
@@ -19,7 +17,6 @@
   <ResearchProjectDef Name="CVG_DaoResearchBase" Abstract="True">
     <techLevel>Neolithic</techLevel>
     <tab>CVG_Cultivation</tab>
-    <requiredResearchBuilding>CVG_ContemplationDesk</requiredResearchBuilding>
   </ResearchProjectDef>
 
   <ResearchProjectDef ParentName="CVG_DaoResearchBase">
@@ -123,50 +120,4 @@
     </modExtensions>
   </ResearchProjectDef>
 
-  <!-- Without Anomaly the Dao projects are researched here (with Anomaly it is optional decoration). -->
-  <ThingDef ParentName="BenchBase">
-    <defName>CVG_ContemplationDesk</defName>
-    <label>contemplation desk</label>
-    <description>A low desk with brushes, old manuals and a bowl of clear water. Colonists study the Dao here (the research projects of the Cultivation tab).\n\nWith Anomaly, Dao comprehension comes from cultivating instead.</description>
-    <thingClass>Building_ResearchBench</thingClass>
-    <size>(3,2)</size>
-    <stuffCategories>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>60</costStuffCount>
-    <graphicData>
-      <texPath>Things/Building/CVG/ContemplationDesk</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <shaderType>Cutout</shaderType>
-      <drawSize>(3,3)</drawSize>
-    </graphicData>
-    <castEdgeShadows>false</castEdgeShadows>
-    <staticSunShadowHeight>0</staticSunShadowHeight>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
-    <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <WorkToBuild>2000</WorkToBuild>
-      <Flammability>1.0</Flammability>
-      <ResearchSpeedFactor>0.8</ResearchSpeedFactor>
-    </statBases>
-    <placeWorkers>
-      <li>PlaceWorker_ShowFacilitiesConnections</li>
-      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
-    </placeWorkers>
-    <fillPercent>0.5</fillPercent>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-    <hasInteractionCell>true</hasInteractionCell>
-    <designationCategory>Production</designationCategory>
-    <uiOrder>2470</uiOrder>
-    <comps>
-      <li Class="CompProperties_AffectedByFacilities">
-        <linkableFacilities>
-          <li MayRequire="prospero1088.convergence.furniture">CVG_ScriptureShelf</li>
-        </linkableFacilities>
-      </li>
-    </comps>
-  </ThingDef>
 </Defs>

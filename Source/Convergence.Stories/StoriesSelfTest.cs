@@ -51,7 +51,7 @@ namespace Convergence.Stories
             Section("story event definitions", () => TestEventDefs(map));
             Section("secret realms", () => TestRealms(map));
             Section("forgotten sanctuary", () => TestSanctuary(map));
-            Section("sect world", () => TestSectWorld(map));
+            Section("sect events", () => TestSectEvents(map));
             Section("endgame", () => TestEndgame(map));
             Section("puppet master scenario", () => TestPuppetMaster(map));
             Section("visits wait for guests to leave", () => TestGuests(map));
@@ -152,7 +152,8 @@ namespace Convergence.Stories
         {
             var defs = StoryEngine.All.ToList();
             bool allModules = new[] { "prospero1088.convergence.factions", "prospero1088.convergence.resources", "prospero1088.convergence.faunaflora", "prospero1088.convergence.alchemy" }.All(id => ModsConfig.IsActive(id));
-            Check(defs.Count >= (allModules ? 60 : 45), defs.Count + " story event definitions" + (allModules ? "" : " (sin todos los addons)"));
+            // 29 eventos sueltos más sus pasos de cadena (plan de integración: de 80 a 29).
+            Check(defs.Count >= (allModules ? 50 : 35), defs.Count + " story event definitions" + (allModules ? "" : " (sin todos los addons)"));
             int missing = 0;
             foreach (var d in defs)
             {
@@ -188,7 +189,7 @@ namespace Convergence.Stories
                 }
                 catch (Exception e) { Check(false, "event " + d.defName + " threw: " + e.Message); }
             }
-            Check(fired >= 40, fired + " events fired, " + decided + " option outcomes resolved");
+            Check(fired >= 20, fired + " events fired, " + decided + " option outcomes resolved");
         }
 
         // Pone las banderas que requiere el evento para poder probarlo.
@@ -393,41 +394,22 @@ namespace Convergence.Stories
             }
         }
 
-        private void TestSectWorld(Map map)
+        /// <summary>Eventos de sectas (sin la vieja simulación de guerras) y los dos incidentes del narrador.</summary>
+        private void TestSectEvents(Map map)
         {
-            foreach (var n in new[] { "SectWarAppeal", "SectTradePact", "SectRivalry", "SectTournament", "SectTribute", "DisciplesTransfer", "Starfall", "DawnSands", "CraneMolt" })
+            foreach (var n in new[] { "SectWarAppeal", "SectTournament", "SectTribute", "DisciplesTransfer" })
             {
-                // Algunos eventos son de un addon (MayRequire): sin él, no tienen que existir.
-                var needs = new Dictionary<string, string> { { "DisciplesTransfer", "sects" }, { "SectWarAppeal", "sects" }, { "SectTradePact", "sects" }, { "SectRivalry", "sects" }, { "SectTournament", "sects" }, { "SectTribute", "sects" }, { "Starfall", "resources" }, { "DawnSands", "resources" }, { "CraneMolt", "faunaflora" } };
-                if (needs.TryGetValue(n, out var mod) && !ModsConfig.IsActive("prospero1088.convergence." + mod)) continue;
+                // Son de Factions (MayRequire): sin ese módulo, no tienen que existir.
+                if (!ModsConfig.IsActive("prospero1088.convergence.factions")) continue;
                 Check(DefDatabase<StoryEventDef>.GetNamedSilentFail(n) != null, "event " + n + " exists");
             }
-            Check("CVG_SectWorld_Peace".TryTranslate(out _) && "CVG_SectWorld_WarEnded".TryTranslate(out _), "sect world texts");
-            var gc = GameComponent_SectWorld.Instance;
-            Check(gc != null, "GameComponent_SectWorld exists");
-            if (gc == null) return;
-            var sects = GameComponent_SectWorld.Players();
-            if (sects.Count < 2) { sb.Append("\n    (fewer than two sects: simulation skipped)"); return; }
-            Check(gc.Act("pact") == "pact" && gc.LastPair != null, "pact fires and records the pair");
-            Check(gc.Act("feud") == "feud", "feud fires");
-            Check(gc.Act("tournament") == "tournament", "tournament fires");
-            Check(gc.Act("war") == "war", "war fires");
-            var war = gc.CurrentWar;
-            Check(war != null && !war.over && war.A.HostileTo(war.B), "war makes both sects hostile");
-            var appeal = DefDatabase<StoryEventDef>.GetNamed("SectWarAppeal");
+            foreach (var n in new[] { "CVG_StoryEvent", "CVG_StoryThreat" })
+                Check(DefDatabase<IncidentDef>.GetNamedSilentFail(n)?.Worker is IncidentWorker_StoryEvent, "storyteller incident " + n);
+            var appeal = DefDatabase<StoryEventDef>.GetNamedSilentFail("SectWarAppeal");
+            if (appeal == null || StoryUtility.Sects().Count < 2) { sb.Append("\n    (fewer than two sects: sect events skipped)"); return; }
             var ctx = new StoryContext(map, appeal);
-            Check(ctx.Primary == war.A && ctx.Resolve("war:b") == war.B, "war tokens resolve");
+            Check(ctx.Primary != null && ctx.Resolve("sect:rival") != null && ctx.Primary != ctx.Resolve("sect:rival"), "a friendly sect and a rival sect resolve");
             Check(ctx.Args().Length >= 2, "text arguments include the other sect");
-            new SO_SectWar { action = "favorA" }.TryApply(ctx);
-            Check(war.favored == 1, "player favor recorded");
-            new SO_SectWar { action = "peace" }.TryApply(ctx);
-            Check(war.over && !war.A.HostileTo(war.B), "mediation ends the war and the sects stop being hostile");
-            gc.Act("war");
-            var w2 = gc.CurrentWar;
-            gc.EndWar(w2, true);
-            Check(w2.over && !w2.A.HostileTo(w2.B), "war resolves to a winner without leaving hostility");
-            foreach (var n in new[] { "CVG_MeteoricIron", "CVG_StarSand", "CVG_CraneFeather", "CVG_WolfFang", "CVG_NetherChitin" })
-                Check(DefDatabase<ThingDef>.GetNamedSilentFail(n) != null || !ModsConfig.IsActive("prospero1088.convergence.resources"), "item " + n);
         }
 
         private void TestSanctuary(Map map)

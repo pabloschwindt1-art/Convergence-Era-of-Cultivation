@@ -479,34 +479,6 @@ namespace Convergence.Stories
 
     // ====================================================================== descubrimiento y sitio
 
-    /// <summary>Al minar la montaña puede aparecer la puerta de un reino secreto (raro, solo tras la Convergencia).</summary>
-    [HarmonyPatch(typeof(Mineable), nameof(Mineable.DestroyMined))]
-    public static class Patch_Mineable_DestroyMined
-    {
-        private static int lastGateTick = -999999;
-
-        public static void Prefix(Mineable __instance, out (Map, IntVec3, bool) __state)
-        {
-            __state = (__instance.Map, __instance.Position, __instance.def.building != null && __instance.def.building.isResourceRock);
-        }
-
-        public static void Postfix((Map, IntVec3, bool) __state)
-        {
-            var (map, cell, ore) = __state;
-            if (map == null || ore || !map.IsPlayerHome || !GameComponent_Convergence.Active) return;
-            if (!Rand.Chance(0.0025f * Mathf.Max(0.1f, StoryEngine.FrequencyFactor()))) return;
-            int now = Find.TickManager.TicksGame;
-            if (now - lastGateTick < 12 * GenDate.TicksPerDay) return;
-            var gateDef = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_RealmGate");
-            if (gateDef == null || map.listerThings.ThingsOfDef(gateDef).Count > 0) return;
-            if (cell.GetEdifice(map) != null) return;
-            lastGateTick = now;
-            var gate = SecretRealmUtility.SpawnGate(map, cell);
-            if (gate == null) return;
-            Find.LetterStack.ReceiveLetter("CVG_RealmGate_Found_Label".Translate(), "CVG_RealmGate_Found_Text".Translate(gate.realm.LabelCap), LetterDefOf.PositiveEvent, gate);
-        }
-    }
-
     /// <summary>Incidente: una puerta de reino secreto aparece en el mapa (en la roca junto a un paso, o en campo abierto).</summary>
     public class IncidentWorker_RealmGate : IncidentWorker_Story
     {

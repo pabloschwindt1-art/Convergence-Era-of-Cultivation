@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    "An old sage seeks shelter": the start of the Convergence (integration plan, 2026-10-23), like the monolith of Anomaly,
+    the gravship of Odyssey or the Empire's quest. Offered a few days into the game by GameComponent_Mentor; it never expires.
+    Accepting it triggers the Convergence (if it has not happened yet) and the Master falls wounded through the rift.
+  -->
+  <QuestScriptDef>
+    <defName>CVG_MentorRefuge</defName>
+    <isRootSpecial>true</isRootSpecial>
+    <randomlySelectable>false</randomlySelectable>
+    <autoAccept>false</autoAccept>
+    <affectedByPoints>false</affectedByPoints>
+    <defaultChallengeRating>1</defaultChallengeRating>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->An old sage seeks shelter</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription->An old man in a patched robe waits at the edge of your land, leaning on a hoe. He calls himself [archetype] and asks for shelter: a roof, a bowl of rice and a quiet corner to sit.\n\n[convergenceLine]\n\nIf you accept, he will stay for a season, teach those with a spirit root and leave behind something of his own. Those who hunt him may follow.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="Convergence.QuestNode_Root_MentorRefuge" />
+  </QuestScriptDef>
+</Defs>

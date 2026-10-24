@@ -241,7 +241,7 @@
   <!-- Trade: swords Good to Masterwork (never Legendary), plus spirit materials and manuals depending on stock. -->
   <TraderKindDef Abstract="True" Name="CVG_TraderFormlessSwordBase">
     <stockGenerators>
-      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>300~900</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>25~75</countRange></li>
       <li Class="Convergence.StockGenerator_QualityTag">
         <tradeTag>WeaponMelee</tradeTag>
         <weaponTags><li>CVG_Sword</li></weaponTags>
@@ -356,7 +356,7 @@
         <playerChooses>true</playerChooses>
         <options>
           <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_Jian</thing><quality>Legendary</quality></li>
-          <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_SpiritSword</thing><quality>Legendary</quality></li>
+          <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_FlyingSword</thing><quality>Legendary</quality></li>
           <li MayRequire="prospero1088.convergence.alchemy"><thing>CVG_Dao</thing><quality>Legendary</quality></li>
           <li><thing>MeleeWeapon_LongSword</thing><quality>Legendary</quality></li>
           <li><thing>MeleeWeapon_MonoSword</thing><quality>Legendary</quality></li>

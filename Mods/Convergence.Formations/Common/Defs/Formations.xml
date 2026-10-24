@@ -17,7 +17,7 @@
     <fillPercent>0.1</fillPercent>
     <rotatable>false</rotatable>
     <selectable>true</selectable>
-    <designationCategory>Security</designationCategory>
+    <designationCategory>CVG_Formations</designationCategory>
     <uiOrder>2520</uiOrder>
     <statBases>
       <MaxHitPoints>80</MaxHitPoints>
@@ -57,7 +57,7 @@
     <rotatable>false</rotatable>
     <tickerType>Normal</tickerType>
     <selectable>true</selectable>
-    <designationCategory>CVG_Cultivation</designationCategory>
+    <designationCategory>CVG_Formations</designationCategory>
     <uiOrder>2530</uiOrder>
     <statBases>
       <MaxHitPoints>180</MaxHitPoints>
@@ -120,7 +120,7 @@
     <rotatable>false</rotatable>
     <tickerType>Normal</tickerType>
     <selectable>true</selectable>
-    <designationCategory>Security</designationCategory>
+    <designationCategory>CVG_Formations</designationCategory>
     <uiOrder>2531</uiOrder>
     <statBases>
       <MaxHitPoints>180</MaxHitPoints>
@@ -184,7 +184,7 @@
     <rotatable>false</rotatable>
     <tickerType>Normal</tickerType>
     <selectable>true</selectable>
-    <designationCategory>Security</designationCategory>
+    <designationCategory>CVG_Formations</designationCategory>
     <uiOrder>2532</uiOrder>
     <statBases>
       <MaxHitPoints>180</MaxHitPoints>
@@ -247,7 +247,7 @@
     <rotatable>false</rotatable>
     <tickerType>Normal</tickerType>
     <selectable>true</selectable>
-    <designationCategory>Security</designationCategory>
+    <designationCategory>CVG_Formations</designationCategory>
     <uiOrder>2533</uiOrder>
     <statBases>
       <MaxHitPoints>180</MaxHitPoints>
@@ -293,58 +293,6 @@
     </modExtensions>
   </ThingDef>
 
-  <!-- The qi sword the guardian statue throws (the flying-sword art of the Core technique, smaller and quicker). -->
-  <ThingDef ParentName="CVG_TechniqueBulletBase">
-    <defName>CVG_Projectile_GuardianQiSword</defName>
-    <label>guardian qi sword</label>
-    <graphicData>
-      <texPath>Things/Projectile/CVG/FlyingSword</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>Transparent</shaderType>
-      <drawSize>1.1</drawSize>
-    </graphicData>
-    <projectile>
-      <damageDef>Cut</damageDef>
-      <damageAmountBase>11</damageAmountBase>
-      <armorPenetrationBase>0.4</armorPenetrationBase>
-      <stoppingPower>1</stoppingPower>
-      <speed>80</speed>
-    </projectile>
-  </ThingDef>
-
-  <ThingDef ParentName="BaseWeaponTurret">
-    <defName>CVG_Gun_GuardianStatue</defName>
-    <label>guardian statue sword</label>
-    <description>The qi sword that the guardian statue throws. Every guardian statue swears to guard a gate until it turns to dust, and keeps the oath with a sword of qi.</description>
-    <graphicData>
-      <texPath>Things/Building/CVG/Formations/GuardianStatue_Top</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <AccuracyTouch>0.9</AccuracyTouch>
-      <AccuracyShort>0.85</AccuracyShort>
-      <AccuracyMedium>0.7</AccuracyMedium>
-      <AccuracyLong>0.5</AccuracyLong>
-      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
-      <DeteriorationRate>0</DeteriorationRate>
-      <Mass>5</Mass>
-      <Flammability>0</Flammability>
-    </statBases>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <defaultProjectile>CVG_Projectile_GuardianQiSword</defaultProjectile>
-        <warmupTime>0.6</warmupTime>
-        <range>24.9</range>
-        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-        <burstShotCount>3</burstShotCount>
-        <soundCast>Shot_ChargeBlaster</soundCast>
-        <muzzleFlashScale>0</muzzleFlashScale>
-        <consumeFuelPerShot>0.05</consumeFuelPerShot>
-      </li>
-    </verbs>
-  </ThingDef>
-
   <ThingDef ParentName="BaseWeaponTurret">
     <defName>CVG_Gun_RuneCrossbow</defName>
     <label>rune crossbow</label>
@@ -374,75 +322,6 @@
         <consumeFuelPerShot>0.1</consumeFuelPerShot>
       </li>
     </verbs>
-  </ThingDef>
-
-  <ThingDef ParentName="BuildingBase">
-    <defName>CVG_GuardianStatue</defName>
-    <label>guardian statue</label>
-    <description>A statue of spirit stone that comes to life when enemies get close and throws qi swords at them. Uses a little spirit stone per shot. Needs no power. At the empty gates of the vanished Ancient Dragon Clan still stand guardians carved from a single block of spirit stone, with eyes left unfinished on purpose: the sculptors say an open eye would never close again. When an enemy crosses the threshold the stone remembers it was once a mountain.</description>
-    <thingClass>Building_TurretGun</thingClass>
-    <drawerType>MapMeshAndRealTime</drawerType>
-    <drawHighlight>true</drawHighlight>
-    <drawHighlightOnlyForHostile>true</drawHighlightOnlyForHostile>
-    <uiIconPath>Things/Building/CVG/Formations/GuardianStatue_MenuIcon</uiIconPath>
-    <graphicData>
-      <texPath>Things/Building/CVG/Formations/GuardianStatue</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawRotated>false</drawRotated>
-      <drawSize>(1.57,1.57)</drawSize>
-      <damageData><rect>(0.2,0.2,0.6,0.6)</rect></damageData>
-    </graphicData>
-    <category>Building</category>
-    <altitudeLayer>Building</altitudeLayer>
-    <stealable>false</stealable>
-    <rotatable>false</rotatable>
-    <statBases>
-      <MaxHitPoints>300</MaxHitPoints>
-      <Flammability>0.2</Flammability>
-      <WorkToBuild>3500</WorkToBuild>
-      <Mass>40</Mass>
-      <Beauty>3</Beauty>
-      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
-    </statBases>
-    <tickerType>Normal</tickerType>
-    <comps>
-      <li Class="CompProperties_Forbiddable" />
-      <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>0</fuelConsumptionRate>
-        <fuelCapacity>10</fuelCapacity>
-        <fuelFilter><thingDefs><li>CVG_SpiritStone</li></thingDefs></fuelFilter>
-        <initialFuelPercent>0.5</initialFuelPercent>
-        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
-        <autoRefuelPercent>0.4</autoRefuelPercent>
-        <fuelLabel>Spirit stones</fuelLabel>
-        <fuelGizmoLabel>Spirit stones</fuelGizmoLabel>
-      </li>
-      <li Class="CompProperties_Stunnable"><affectedDamageDefs><li>Stun</li><li>EMP</li></affectedDamageDefs></li>
-    </comps>
-    <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
-    <fillPercent>0.4</fillPercent>
-    <hasTooltip>true</hasTooltip>
-    <costList>
-      <CVG_SpiritStone>20</CVG_SpiritStone>
-      <Steel>30</Steel>
-    </costList>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <designationCategory>Security</designationCategory>
-    <uiOrder>2540</uiOrder>
-    <building>
-      <combatPower>90</combatPower>
-      <ai_combatDangerous>true</ai_combatDangerous>
-      <turretGunDef>CVG_Gun_GuardianStatue</turretGunDef>
-      <turretTopDrawSize>1.8</turretTopDrawSize>
-      <turretBurstCooldownTime>3.5</turretBurstCooldownTime>
-    </building>
-    <placeWorkers>
-      <li>PlaceWorker_TurretTop</li>
-      <li>PlaceWorker_ShowTurretRadius</li>
-    </placeWorkers>
-    <researchPrerequisites><li>CVG_Research_DefensiveFormations</li></researchPrerequisites>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -499,7 +378,7 @@
       <CVG_SpiritStone>5</CVG_SpiritStone>
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <designationCategory>Security</designationCategory>
+    <designationCategory>CVG_Formations</designationCategory>
     <uiOrder>2541</uiOrder>
     <building>
       <combatPower>55</combatPower>

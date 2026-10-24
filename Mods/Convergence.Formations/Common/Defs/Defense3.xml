@@ -53,7 +53,7 @@
     <neverMultiSelect>true</neverMultiSelect>
     <useStuffTerrainAffordance>true</useStuffTerrainAffordance>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <designationCategory>Security</designationCategory>
+    <designationCategory>CVG_Formations</designationCategory>
     <staticSunShadowHeight>0.20</staticSunShadowHeight>
     <modExtensions><li Class="Convergence.DefModExtension_NoStuffTint" /></modExtensions>
   </ThingDef>
@@ -106,7 +106,7 @@
     <neverMultiSelect>true</neverMultiSelect>
     <useStuffTerrainAffordance>true</useStuffTerrainAffordance>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <designationCategory>Security</designationCategory>
+    <designationCategory>CVG_Formations</designationCategory>
     <staticSunShadowHeight>0.20</staticSunShadowHeight>
     <modExtensions><li Class="Convergence.DefModExtension_NoStuffTint" /></modExtensions>
   </ThingDef>
@@ -147,7 +147,7 @@
     <costList>
       <CVG_SpiritStone>2</CVG_SpiritStone>
     </costList>
-    <designationCategory>Security</designationCategory>
+    <designationCategory>CVG_Formations</designationCategory>
     <building>
       <isTrap>true</isTrap>
       <trapDestroyOnSpring>false</trapDestroyOnSpring>

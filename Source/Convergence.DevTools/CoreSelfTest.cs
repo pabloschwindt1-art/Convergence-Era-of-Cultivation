@@ -872,9 +872,9 @@ namespace Convergence
             Check(pawn.needs.mood.thoughts.memories.GetFirstMemoryOfDef(DefDatabase<ThoughtDef>.GetNamed("CVG_Thought_BreakthroughSuccess")) != null
                 && pawn.records.GetAsInt(DefDatabase<RecordDef>.GetNamed("CVG_Breakthroughs")) == before + 1, "breakthrough: memory and record");
             var other = Colonist(map, root: false);
-            CultivationLife.Notify_TribulationSurvived(pawn);
+            CultivationLife.Notify_TribulationSurvived(pawn, new List<Pawn> { other });
             Check(other.needs.mood.thoughts.memories.GetFirstMemoryOfDef(DefDatabase<ThoughtDef>.GetNamed("CVG_Thought_WitnessedTribulation")) != null,
-                "colonists on the map witness the tribulation");
+                "witnesses of the tribulation remember it");
             // Los cercanos sienten el avance: la pareja se alegra con el nombre de quien avanzó.
             var lover = Colonist(map, root: false);
             lover.relations.AddDirectRelation(PawnRelationDefOf.Lover, pawn);
@@ -885,13 +885,13 @@ namespace Convergence
             var tale = Find.TaleManager.AllTalesListForReading.LastOrDefault(t => t.def.defName == "CVG_Tale_SurvivedTribulation");
             Check(tale != null && tale.def.usableForArt, "tribulation tale recorded for art");
             Check(new Alert_CVG_ReadyToBreakthrough().GetReport() is AlertReport, "alerts build their reports");
-            var spot = DefDatabase<ThingDef>.GetNamed("CVG_CultivationSpot");
+            var spot = ThingDefOf.MeditationSpot;
             Check(spot.HasModExtension<DefModExtension_CultivationSpot>() && spot.GetStatValueAbstract(StatDefOf.WorkToBuild) == 0f
-                && spot.HasComp(typeof(CompAssignableToPawn)), "free cultivation spot, assignable");
+                && spot.comps.Any(c => typeof(CompAssignableToPawn).IsAssignableFrom(c.compClass)), "the vanilla meditation spot is the free cultivation spot, assignable");
             var placed = (Building)GenSpawn.Spawn(ThingMaker.MakeThing(spot), CellFinder.RandomClosewalkCellNear(pawn.Position, map, 4), map);
             placed.SetFaction(Faction.OfPlayer);
             placed.TryGetComp<CompAssignableToPawn>().TryAssignPawn(other);
-            Check(!new WorkGiver_Cultivate().HasJobOnThing(pawn, placed, forced: true), "an assigned spot is only for its owner");
+            Check(MeditationCultivation.BestSpotFor(pawn) != placed && MeditationCultivation.BestSpotFor(other) == placed, "an assigned spot is only for its owner");
             placed.Destroy();
             other.Destroy();
             pawn.Destroy();
@@ -916,10 +916,7 @@ namespace Convergence
                 if (steel != null)
                 {
                     var spiritJian = ThingMaker.MakeThing(jian, steel);
-                    Check(SpiritGradeUtility.GradeOf(spiritJian) == 1, "a spirit steel jian has spirit grade 1 (material floor)");
-                    var sword = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_SpiritSword");
-                    if (sword != null)
-                        Check(SpiritGradeUtility.GradeOf(ThingMaker.MakeThing(sword, steel)) == 2, "...a spirit sword of spirit steel stays at 2 (a floor, not a sum)");
+                    Check(SpiritGradeUtility.GradeOf(spiritJian) == SpiritGradeUtility.ResearchFloor + 1, "a spirit steel jian adds its material grade (+1)");
                 }
                 {
                     // disonancia de implantes vanilla (StatPart_ImplantDissonance)
@@ -967,10 +964,10 @@ namespace Convergence
             float ringOffset = space.def.equippedStatOffsets.GetStatOffsetFromList(StatDefOf.CarryingCapacity);
             Check(pawn.GetStatValue(StatDefOf.CarryingCapacity) >= carry + ringOffset * 0.5f, $"the spatial ring adds carrying capacity ({carry:0} -> {pawn.GetStatValue(StatDefOf.CarryingCapacity):0})");
 
-            var element = CompCultivator.For(pawn)?.Root?.elements.FirstOrDefault(e => DefDatabase<ThingDef>.GetNamedSilentFail("CVG_Earrings_" + e.defName.Replace("CVG_Element_", "")) != null);
-            if (element != null)
+            var element = CompCultivator.For(pawn)?.Root?.elements.FirstOrDefault();
+            var earDef = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_Earrings_FiveElements");
+            if (element != null && earDef != null)
             {
-                var earDef = DefDatabase<ThingDef>.GetNamed("CVG_Earrings_" + element.defName.Replace("CVG_Element_", ""));
                 float before = pawn.GetStatValue(CVG_DefOf.CVG_CultivationSpeed, cacheStaleAfterTicks: 0);
                 pawn.apparel.Wear((Apparel)ThingMaker.MakeThing(earDef), dropReplacedApparel: false);
                 float after = pawn.GetStatValue(CVG_DefOf.CVG_CultivationSpeed, cacheStaleAfterTicks: 0);
@@ -1001,18 +998,15 @@ namespace Convergence
         /// <summary>Arte wuxia (parte 3b) y mesas wuxia: recetas y trabajadores (WorkGiver) de su mesa vanilla.</summary>
         private static void TestWuxiaArt(Map map)
         {
-            var kitchen = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_SectKitchen");
-            if (kitchen != null)
-                Check(DefDatabase<WorkGiverDef>.GetNamed("DoBillsCook").fixedBillGiverDefs.Contains(kitchen), "the sect kitchen is worked by the cooking work giver");
             var desk = DefDatabase<ThingDef>.GetNamed("CVG_CalligraphyDesk");
             var scroll = DefDatabase<ThingDef>.GetNamed("CVG_CalligraphyScroll");
             Check(desk.AllRecipes.Any(r => r.ProducedThingDef == scroll) && DefDatabase<WorkGiverDef>.AllDefs.Any(w => w.fixedBillGiverDefs?.Contains(desk) ?? false),
                 "calligraphy desk makes scroll art and has a work giver");
-            var table = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_JadeCarvingTable");
+            // La mesa de tallado de jade se fundió con la de escultura vanilla (plan de integración).
+            var table = DefDatabase<ThingDef>.GetNamed("TableSculpting");
             var sculpture = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_JadeSculptureSmall");
-            if (table == null || sculpture == null) return;
-            Check(table.AllRecipes.Any(r => r.ProducedThingDef == sculpture)
-                && DefDatabase<WorkGiverDef>.GetNamed("DoBillsSculpt").fixedBillGiverDefs.Contains(table), "jade sculptures at the jade carver's table, worked by the art work giver");
+            if (sculpture == null) return;
+            Check(table.AllRecipes.Any(r => r.ProducedThingDef == sculpture), "jade sculptures at the vanilla sculpting table");
             foreach (var def in new[] { sculpture, scroll })
             {
                 var thing = ThingMaker.MakeThing(def);
@@ -1033,9 +1027,8 @@ namespace Convergence
             Check(buns.ingestible.preferability == FoodPreferability.MealSimple && rice.ingestible.preferability == FoodPreferability.MealFine
                 && banquet.ingestible.preferability == FoodPreferability.MealLavish, "buns / spirit rice / banquet = simple / fine / lavish meals");
             var stove = DefDatabase<ThingDef>.GetNamed("FueledStove");
-            var kitchen = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_SectKitchen");
             var cook = DefDatabase<RecipeDef>.GetNamed("CVG_CookSteamedBuns");
-            Check(stove.AllRecipes.Contains(cook) && (kitchen == null || kitchen.AllRecipes.Contains(cook)), "meals cook at the stove and the sect kitchen");
+            Check(stove.AllRecipes.Contains(cook), "meals cook at the stove");
             float h = DefDatabase<ThingDef>.GetNamed("CVG_HerbalOintment").GetStatValueAbstract(StatDefOf.MedicalPotency);
             float p = DefDatabase<ThingDef>.GetNamed("CVG_HealingPill").GetStatValueAbstract(StatDefOf.MedicalPotency);
             float j = DefDatabase<ThingDef>.GetNamed("CVG_JadeElixir").GetStatValueAbstract(StatDefOf.MedicalPotency);
@@ -1335,7 +1328,8 @@ namespace Convergence
                 $"wounded mentor arrives downed and dressed ({hurt?.apparel?.WornApparel.Count ?? 0}/{clothes} garments)");
             state.End(died: false);
             if (hurt != null && !hurt.Destroyed) hurt.Destroy();
-            Check(!mentor.Spawned && map.listerThings.ThingsOfDef(def.farewellItem).Any(), "mentor left and the jade fragment stays");
+            // Ahora se va caminando (deja la colonia y sale por el borde) en vez de desaparecer en el lugar.
+            Check((!mentor.Spawned || mentor.Faction != Faction.OfPlayer) && map.listerThings.ThingsOfDef(def.farewellItem).Any(), "mentor left the colony and the jade fragment stays");
         }
 
         /// <summary>Errores de carga del idioma activo (Keyed duplicados, DefInjected de Defs o campos inexistentes…).</summary>

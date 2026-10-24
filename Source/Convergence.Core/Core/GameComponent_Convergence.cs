@@ -18,7 +18,25 @@ namespace Convergence
         private bool guideSent;
         private CultivationDifficultyValues difficulty;
 
-        public static GameComponent_Convergence Instance => Current.Game?.GetComponent<GameComponent_Convergence>();
+        private static Game cachedGame;
+        private static GameComponent_Convergence cached;
+
+        /// <summary>Con caché por partida: <see cref="Active"/> se consulta en rutas calientes (stats, incidentes, comps) y
+        /// GetComponent recorre la lista de componentes en cada llamada.</summary>
+        public static GameComponent_Convergence Instance
+        {
+            get
+            {
+                var game = Current.Game;
+                // Se recalcula mientras dé null: al cargar, la partida existe un momento antes que sus componentes.
+                if (game != cachedGame || cached == null)
+                {
+                    cachedGame = game;
+                    cached = game?.GetComponent<GameComponent_Convergence>();
+                }
+                return cached;
+            }
+        }
 
         /// <summary>True cuando la Era del Cultivo ya comenzó en esta partida.</summary>
         public static bool Active => Instance?.occurred ?? false;
@@ -45,19 +63,6 @@ namespace Convergence
             factionsFromWorldGen = !GenCommandLine.CommandLineArgPassed("quicktest");
             ConvergenceFactionUtility.ApplyRelationsToExisting();
             EnsureScheduled();
-            // Elección de dificultad y modo de inicio (no en las pruebas automáticas).
-            if (ConvergenceMod.Settings.askOnNewGame && !GenCommandLine.CommandLineArgPassed("quicktest"))
-                Find.WindowStack.Add(new Dialog_CultivationStart());
-        }
-
-        /// <summary>Lo elegido en el diálogo de inicio: dificultad de esta partida y cómo llega la Convergencia.</summary>
-        public void SetStart(CultivationDifficultyValues values, ConvergenceTrigger trigger, int minDay, int maxDay)
-        {
-            difficulty = values.Copy();
-            CultivationWealth.ClearCache();
-            if (occurred) return;
-            scheduledTick = -1;
-            Schedule(trigger, minDay, maxDay);
         }
 
         public override void LoadedGame()
@@ -67,49 +72,18 @@ namespace Convergence
             if (!factionsFromWorldGen) ConvergenceFactionUtility.EnsureFactions();
         }
 
-        /// <summary>Programa el evento según los ajustes, si no está programado ya.</summary>
+        /// <summary>
+        /// La Convergencia la desata el jugador al aceptar la misión del sabio (<see cref="QuestPart_MentorRefuge"/>), como el
+        /// monolito de Anomaly. Si nunca la acepta, llega igual: por defecto al empezar el segundo año (ajustes del mod).
+        /// </summary>
         private void EnsureScheduled()
         {
             if (occurred || scheduledTick >= 0) return;
-            var s = ConvergenceMod.Settings;
-            Schedule(s.convergenceTrigger, s.convergenceMinDay, s.convergenceMaxDay);
-        }
-
-        private void Schedule(ConvergenceTrigger trigger, int minDay, int maxDay)
-        {
-            switch (trigger)
-            {
-                case ConvergenceTrigger.Immediate:
-                    scheduledTick = Find.TickManager.TicksGame + GenDate.TicksPerHour;
-                    break;
-                case ConvergenceTrigger.Storyteller:
-                    int day = Rand.RangeInclusive(minDay, System.Math.Max(minDay, maxDay));
-                    scheduledTick = Find.TickManager.TicksGame + day * GenDate.TicksPerDay;
-                    break;
-                case ConvergenceTrigger.Research:
-                    // Lo dispara el proyecto de investigación (ResearchMod_TriggerConvergence).
-                    break;
-            }
-        }
-
-        public override void GameComponentUpdate()
-        {
-            RenderTest.CheckCommandLine();
-            Showcase.Update();
-            AnimationShot.Update();
-            TranslationReportShot.Update();
-            FloorShot.Update();
-            ArtShots.Update();
-            WorkshopShot.Update();
-            ModShots.Update();
+            scheduledTick = Find.TickManager.TicksGame + ConvergenceMod.Settings.convergenceForcedDay * GenDate.TicksPerDay;
         }
 
         public override void GameComponentTick()
         {
-            BloodlineSelfTest.CheckCommandLine();
-            DevelopmentShot.CheckCommandLine();
-            TabShot.CheckCommandLine();
-            WorkshopShot.CheckCommandLine();
             if (guideTick >= 0 && Find.TickManager.TicksGame >= guideTick)
             {
                 guideTick = -1;

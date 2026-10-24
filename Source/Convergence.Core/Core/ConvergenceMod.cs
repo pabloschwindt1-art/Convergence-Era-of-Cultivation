@@ -45,8 +45,8 @@ namespace Convergence
             listing.GapLine();
 
             listing.Label("CVG_Setting_Trigger".Translate());
-            Dialog_CultivationStart.StartModeEditor(listing, ref s.convergenceTrigger, ref s.convergenceMinDay, ref s.convergenceMaxDay);
-            listing.CheckboxLabeled("CVG_Setting_AskOnNewGame".Translate(), ref s.askOnNewGame, "CVG_Setting_AskOnNewGameTip".Translate());
+            listing.Label("CVG_Setting_ForcedDay".Translate(s.convergenceForcedDay), tooltip: "CVG_Setting_ForcedDayTip".Translate());
+            s.convergenceForcedDay = Mathf.RoundToInt(listing.Slider(s.convergenceForcedDay, 5f, 240f));
             listing.GapLine();
 
             listing.Label("CVG_Difficulty_NewGames".Translate());
@@ -81,7 +81,6 @@ namespace Convergence
                 listing.Label("CVG_Setting_PreCultivationChance".Translate(s.preCultivationChanceFactor.ToStringPercent()));
                 s.preCultivationChanceFactor = Mathf.Round(listing.Slider(s.preCultivationChanceFactor, 0f, 5f) * 20f) / 20f;
             }
-            listing.CheckboxLabeled("CVG_Setting_Mentor".Translate(), ref s.mentorEnabled);
             if (BloodlineUtility.AnyBloodlines)
             {
                 listing.Label("CVG_Setting_BloodlineChance".Translate(s.bloodlineChanceFactor.ToStringPercent()));

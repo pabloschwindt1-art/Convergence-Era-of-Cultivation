@@ -158,10 +158,8 @@ namespace Convergence
     /// <summary>Marca un edificio como lugar de cultivo (cojín, plataforma de jade…).</summary>
     public class DefModExtension_CultivationSpot : DefModExtension
     {
-        /// <summary>Multiplicador de la regeneración de qi mientras se cultiva aquí.</summary>
+        /// <summary>Multiplicador de la regeneración de qi mientras se medita (cultiva) aquí.</summary>
         public float qiRegenFactor = 3f;
-        /// <summary>Duración de cada sesión de cultivo, en ticks.</summary>
-        public int sessionTicks = 2500;
     }
 
     /// <summary>
@@ -203,8 +201,9 @@ namespace Convergence
         public static StatDef CVG_TechniqueCost;
         public static StatDef CVG_SpiritGrade;
         public static StatDef CVG_PurificationChance;
-        public static JobDef CVG_Cultivate;
         public static JobDef CVG_Breakthrough;
+        public static JobDef CVG_WatchTribulation;
+        public static QuestScriptDef CVG_MentorRefuge;
         public static ThingDef CVG_JadeSlip;
         public static JobDef CVG_TemperBody;
         public static StatDef CVG_BodyTemperingSpeed;

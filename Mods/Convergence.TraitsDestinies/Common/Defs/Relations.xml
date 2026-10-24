@@ -13,11 +13,6 @@
       <li Class="Convergence.DefModExtension_DualCultivation">
         <factor>1.3</factor>
         <radius>8</radius>
-        <vowFromRelations>
-          <li>Lover</li>
-          <li>Fiance</li>
-          <li>Spouse</li>
-        </vowFromRelations>
       </li>
     </modExtensions>
   </PawnRelationDef>
@@ -46,8 +41,137 @@
         <radius>20</radius>
         <requireBothCultivating>false</requireBothCultivating>
       </li>
+      <!-- A social fight between two cultivators can turn into a lifelong rivalry. -->
+      <li Class="Convergence.DefModExtension_RivalryFromFights">
+        <chance>0.35</chance>
+        <thought>CVG_Thought_NewRival</thought>
+        <letterLabel>Rivals: {INITIATOR_nameDef} and {RECIPIENT_nameDef}</letterLabel>
+        <letterText>The fight between {INITIATOR_nameDef} and {RECIPIENT_nameDef} did not end with the blows. They are lifelong rivals now: each one will measure every breakthrough against the other.</letterText>
+      </li>
     </modExtensions>
   </PawnRelationDef>
+
+  <!-- Master and disciple (born from the CVG_TakeDisciple interaction). Non-reflexive: the master has a "disciple", the disciple has a "master". -->
+  <PawnRelationDef>
+    <defName>CVG_Master</defName>
+    <label>master</label>
+    <importance>130</importance>
+    <opinionOffset>30</opinionOffset>
+    <generationChanceFactor>0</generationChanceFactor>
+    <diedThought>CVG_Thought_MasterDied</diedThought>
+  </PawnRelationDef>
+
+  <PawnRelationDef>
+    <defName>CVG_Disciple</defName>
+    <label>disciple</label>
+    <importance>110</importance>
+    <opinionOffset>20</opinionOffset>
+    <generationChanceFactor>0</generationChanceFactor>
+    <diedThought>CVG_Thought_DiscipleDied</diedThought>
+  </PawnRelationDef>
+
+  <!-- Fellow disciples: two disciples of the same master (implied, like vanilla siblings). -->
+  <PawnRelationDef>
+    <defName>CVG_FellowDisciple</defName>
+    <label>fellow disciple</label>
+    <workerClass>Convergence.PawnRelationWorker_FellowDisciple</workerClass>
+    <implied>true</implied>
+    <importance>70</importance>
+    <opinionOffset>10</opinionOffset>
+    <generationChanceFactor>0</generationChanceFactor>
+    <diedThought>CVG_Thought_FellowDiscipleDied</diedThought>
+  </PawnRelationDef>
+
+  <!-- Life debt: whoever carried me to a bed when I was down (Convergence.LifeBonds). -->
+  <PawnRelationDef>
+    <defName>CVG_Benefactor</defName>
+    <label>benefactor</label>
+    <importance>80</importance>
+    <opinionOffset>25</opinionOffset>
+    <generationChanceFactor>0</generationChanceFactor>
+    <diedThought>CVG_Thought_BenefactorDied</diedThought>
+  </PawnRelationDef>
+
+  <!-- Blood feud: whoever killed a loved one (Convergence.LifeBonds). Their death is a relief. -->
+  <PawnRelationDef>
+    <defName>CVG_BloodFeud</defName>
+    <label>blood enemy</label>
+    <importance>100</importance>
+    <opinionOffset>-60</opinionOffset>
+    <generationChanceFactor>0</generationChanceFactor>
+    <diedThought>CVG_Thought_BloodFeudAvenged</diedThought>
+  </PawnRelationDef>
+
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>CVG_Thought_MasterDied</defName>
+    <durationDays>30</durationDays>
+    <stages>
+      <li>
+        <label>my master {0} died</label>
+        <description>A master is a father for this life and the next. Everything I know of the Dao I learned at their feet, and now there is no one to tell me when I am wrong.</description>
+        <baseMoodEffect>-16</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>CVG_Thought_DiscipleDied</defName>
+    <stages>
+      <li>
+        <label>my disciple {0} died</label>
+        <description>I taught them to breathe, to sit, to bear the pain. I did not teach them to live long enough. What kind of master outlives the disciple?</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>CVG_Thought_FellowDiscipleDied</defName>
+    <stages>
+      <li>
+        <label>my fellow disciple {0} died</label>
+        <description>We knelt in the same courtyard and were scolded by the same voice. One fewer bowl at the master's table.</description>
+        <baseMoodEffect>-7</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="DeathMemoryFamily">
+    <defName>CVG_Thought_BenefactorDied</defName>
+    <stages>
+      <li>
+        <label>my benefactor {0} died</label>
+        <description>They carried me out when I could not stand, and I never repaid the debt. Now I never will. A debt of life does not die with the creditor.</description>
+        <baseMoodEffect>-9</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_BloodFeudAvenged</defName>
+    <durationDays>15</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>{0} is dead at last</label>
+        <description>The one who killed someone I loved is dead. The blood is paid. I thought it would feel like more.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_LifeDebt</defName>
+    <durationDays>10</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>{0} saved my life</label>
+        <description>I was on the ground and the world was going grey, and someone carried me out. I owe them a life. Among cultivators, that debt is paid or it becomes a heart demon.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
 
   <ThoughtDef ParentName="DeathMemoryFamily">
     <defName>CVG_Thought_DaoPartnerDied</defName>

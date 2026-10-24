@@ -3,7 +3,7 @@
   <!-- Wuxia weapons (docs/modulos/CONTENIDO_TOI_ACS.md): mortal versions of the classic Chinese arms, built like the vanilla
        medieval/neolithic weapons (same bases, recipes at the smithy; the spirit forge copies them). Spirit grade 0: the
        material raises it (DefModExtension_SpiritGradeMaterial on spirit steel, moon silver, jade bamboo, peach timber...).
-       The CVG_SpiritSword/Sabre/Spear/Bow in Weapons.xml are the spirit-grade ones. -->
+       A spirit-grade weapon is one of these made of a spirit material or engraved with runes (integration plan, 2026-10-23). -->
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>CVG_Jian</defName>
     <label>jian</label>

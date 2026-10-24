@@ -16,4 +16,12 @@
   <CVG_Thought_KinAscended.stages.0.description>Sangre de la familia subiendo un reino. Esta noche se desempolvan las tablillas de los ancestros.</CVG_Thought_KinAscended.stages.0.description>
   <CVG_Thought_RivalAscended.stages.0.label>{0} me superó</CVG_Thought_RivalAscended.stages.0.label>
   <CVG_Thought_RivalAscended.stages.0.description>Avanzó antes que yo. Todo cultivador conoce el sabor amargo de ver la espalda de un rival.</CVG_Thought_RivalAscended.stages.0.description>
+  <CVG_Thought_SurpassedRival.stages.0.label>dejé atrás a {0}</CVG_Thought_SurpassedRival.stages.0.label>
+  <CVG_Thought_SurpassedRival.stages.0.description>Durante años caminamos lado a lado y oía sus pasos. Ahora solo oigo los míos. El qi más dulce es el que un rival nunca va a alcanzar.</CVG_Thought_SurpassedRival.stages.0.description>
+  <CVG_Thought_CloseOneFailed.stages.0.label>{0} falló un avance</CVG_Thought_CloseOneFailed.stages.0.label>
+  <CVG_Thought_CloseOneFailed.stages.0.description>Lo vi salir del retiro pálido y temblando, con el qi todavía corriendo mal. El cielo le debe otra oportunidad.</CVG_Thought_CloseOneFailed.stages.0.description>
+  <CVG_Thought_RuinedPill.stages.0.label>arruiné una píldora</CVG_Thought_RuinedPill.stages.0.label>
+  <CVG_Thought_RuinedPill.stages.0.description>Las hierbas se quemaron, el qi se dispersó y el horno devolvió un terrón gris. Todo maestro tiene una montaña de esos detrás del taller; hoy la mía creció.</CVG_Thought_RuinedPill.stages.0.description>
+  <CVG_Thought_MentorHurt.stages.0.label>hirieron a nuestro maestro {0}</CVG_Thought_MentorHurt.stages.0.label>
+  <CVG_Thought_MentorHurt.stages.0.description>Creía que nada bajo el cielo podía tocar al viejo maestro. Lo vi caer. Si él sangra, ¿qué somos nosotros?</CVG_Thought_MentorHurt.stages.0.description>
 </LanguageData>

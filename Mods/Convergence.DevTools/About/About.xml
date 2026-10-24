@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Convergence: DevTools</name>
+  <author>Prospero1088</author>
+  <packageId>prospero1088.convergence.devtools</packageId>
+  <modVersion>0.1.0</modVersion>
+  <supportedVersions>
+    <li>1.6</li>
+    <li>1.7</li>
+  </supportedVersions>
+  <description>Development only: the autotests and captures of Convergence (loaded by tools/run-test.ps1). Not needed to play and not published.
+
+License: code is MIT.</description>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+    </li>
+    <li>
+      <packageId>prospero1088.convergence.core</packageId>
+      <displayName>Convergence: Era of Cultivation</displayName>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>prospero1088.convergence.core</li>
+    <li>prospero1088.convergence.traitsdestinies</li>
+    <li>prospero1088.convergence.resources</li>
+    <li>prospero1088.convergence.races</li>
+    <li>prospero1088.convergence.alchemy</li>
+    <li>prospero1088.convergence.formations</li>
+    <li>prospero1088.convergence.apparel</li>
+    <li>prospero1088.convergence.biotechwuxia</li>
+    <li>prospero1088.convergence.factions</li>
+    <li>prospero1088.convergence.faunaflora</li>
+    <li>prospero1088.convergence.stories</li>
+    <li>prospero1088.convergence.qitech</li>
+    <li>prospero1088.convergence.grafts</li>
+    <li>prospero1088.convergence.furniture</li>
+    <li>prospero1088.convergence.space</li>
+  </loadAfter>
+</ModMetaData>

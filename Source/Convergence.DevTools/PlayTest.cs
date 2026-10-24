@@ -262,9 +262,9 @@ namespace Convergence
             foreach (var d in nearHub) TrySpawn(d, map, hub, 12, out _);
             string[] rest =
             {
-                "CVG_SpiritBrazier", "CVG_RitualBrazier", "CVG_SpiritForge", "CVG_AlchemyFurnace", "CVG_SpiritLoom", "CVG_JadeCarvingTable",
-                "CVG_SectKitchen", "CVG_CalligraphyDesk", "CVG_ContemplationDesk", "CVG_TalismanTable", "CVG_RuneTable", "CVG_StonecutterWorkshop",
-                "CVG_GraftingAltar", "CVG_CultivationCushion", "CVG_CultivationCushion", "CVG_MeditationPlatform", "CVG_CultivationSpot",
+                "CVG_SpiritBrazier", "CVG_RitualBrazier", "CVG_SpiritForge", "CVG_AlchemyFurnace", "CVG_SpiritLoom", 
+                "CVG_CalligraphyDesk", "CVG_TalismanTable", "CVG_RuneTable", 
+                "CVG_GraftingAltar", "CVG_CultivationCushion", "CVG_CultivationCushion", "CVG_MeditationPlatform", 
                 "CVG_MahjongTable", "CVG_BoneRefiningFurnace",
             };
             foreach (var d in rest) TrySpawn(d, map, map.Center, 40, out _);

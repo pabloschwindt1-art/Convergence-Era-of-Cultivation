@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- Architect tab for everything the mod builds (cultivation spots, later formations, alchemy, qi veins...). -->
+  <!-- Architect tabs of their own (integration plan, 2026-10-23): fifteen mods in the vanilla tabs made them endless.
+       Core: cultivation seats and every workbench of the mod. Each module brings its own tab (Furniture, Formations, Qi-Tech);
+       floors, walls, the island and the puppets stay in the vanilla tabs of their vanilla counterparts. -->
   <DesignationCategoryDef>
     <defName>CVG_Cultivation</defName>
     <label>cultivation</label>
-    <description>Cultivation spots, formations and other buildings of the Era of Cultivation.</description>
+    <description>Cultivation seats and the workbenches of the Era of Cultivation: alchemy, forging, talismans, grafting, refining.</description>
     <order>450</order>
     <specialDesignatorClasses>
       <li>Designator_Cancel</li>

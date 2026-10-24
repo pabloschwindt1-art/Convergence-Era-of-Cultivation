@@ -60,7 +60,6 @@ namespace Convergence.Stories
         private List<string> firedKeys = new List<string>();
         private List<int> firedTicks = new List<int>();
         private List<StoryTask> tasks = new List<StoryTask>();
-        private int nextEventTick = -1;
         private HashSet<string> flagSet;
         private Dictionary<string, int> lastFired;
 
@@ -92,19 +91,7 @@ namespace Convergence.Stories
                 catch (Exception e) { Log.Error("[Convergence] Story event " + s.key + " failed: " + e); }
             }
             UpdateTasks(now);
-            var conv = GameComponent_Convergence.Instance;
-            if (conv != null)
-            {
-                if (nextEventTick < 0) nextEventTick = now + (int)((conv.Occurred ? Rand.Range(1.5f, 4f) : Rand.Range(8f, 14f)) * GenDate.TicksPerDay);
-                var map = Find.AnyPlayerHomeMap;
-                if (now >= nextEventTick && map != null)
-                {
-                    float freq = StoryEngine.FrequencyFactor();
-                    nextEventTick = now + (int)(Rand.Range(conv.Occurred ? 2.5f : 6f, conv.Occurred ? 6f : 12f) * GenDate.TicksPerDay / Mathf.Max(0.05f, freq));
-                    try { if (freq > 0f) StoryEngine.PickAndFire(map); }
-                    catch (Exception e) { Log.Error("[Convergence] Story scheduler failed: " + e); }
-                }
-            }
+            // Ya no hay reloj propio: los eventos los reparte el narrador (IncidentWorker_StoryEvent, plan de integración).
             if (now >= nextGrudgeCheck)
             {
                 nextGrudgeCheck = now + GenDate.TicksPerHour * 6;
@@ -166,7 +153,6 @@ namespace Convergence.Stories
             Scribe_Collections.Look(ref scheduled, "scheduled", LookMode.Deep);
             Scribe_Collections.Look(ref grudges, "grudges", LookMode.Deep);
             Scribe_Values.Look(ref nextGrudgeCheck, "nextGrudgeCheck");
-            Scribe_Values.Look(ref nextEventTick, "nextEventTick", -1);
             if (Scribe.mode == LoadSaveMode.Saving)
             {
                 flags = Flags.ToList();
@@ -376,8 +362,9 @@ namespace Convergence.Stories
             faction ??= AnyHostileHumanlike();
             if (faction == null) return false;
             // Justo por debajo del umbral de hostilidad: la secta ataca, pero el jugador puede reconciliarse con regalos después.
+            // La ruptura llega con la carta vanilla de hostilidad: el jugador ve por qué una secta amiga lo ataca.
             if (!faction.HostileTo(Faction.OfPlayer))
-                faction.TryAffectGoodwillWith(Faction.OfPlayer, -(faction.PlayerGoodwill + 80), canSendMessage: false, canSendHostilityLetter: false);
+                faction.TryAffectGoodwillWith(Faction.OfPlayer, -(faction.PlayerGoodwill + 80), canSendMessage: true, canSendHostilityLetter: true);
             var parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, map);
             parms.faction = faction;
             parms.forced = true;

@@ -35,7 +35,7 @@
       <effectWorking>Sculpt</effectWorking>
       <soundWorking>Recipe_Sculpt</soundWorking>
       <recipeUsers>
-        <li>CVG_JadeCarvingTable</li>
+        <li>TableSculpting</li>
       </recipeUsers>
     </recipeMaker>
   </ThingDef>

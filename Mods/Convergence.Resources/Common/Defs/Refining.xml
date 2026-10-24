@@ -40,7 +40,7 @@
       <Cleanliness>-3</Cleanliness>
     </statBases>
     <size>(3,1)</size>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>CVG_Cultivation</designationCategory>
     <uiOrder>2510</uiOrder>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>

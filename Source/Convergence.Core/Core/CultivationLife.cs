@@ -43,7 +43,7 @@ namespace Convergence
             NotifyCloseOnes(pawn);
         }
 
-        /// <summary>Pareja o compañero del Dao (+10), familia o hermano jurado (+4), rival (−5).</summary>
+        /// <summary>Pareja o compañero del Dao (+10), familia o hermano jurado (+4), rival de por vida (−5; solo la relación, no cualquiera que le caiga mal).</summary>
         private static void NotifyCloseOnes(Pawn pawn)
         {
             if (pawn?.relations == null) return;
@@ -56,8 +56,13 @@ namespace Convergence
                 string thought = null;
                 if (LovePartnerRelationUtility.LovePartnerRelationExists(other, pawn) || (daoPartner != null && other.relations.DirectRelationExists(daoPartner, pawn)))
                     thought = "CVG_Thought_PartnerAscended";
-                else if ((rivalRel != null && other.relations.DirectRelationExists(rivalRel, pawn)) || other.relations.OpinionOf(pawn) <= -20)
+                else if (rivalRel != null && other.relations.DirectRelationExists(rivalRel, pawn))
+                {
                     thought = "CVG_Thought_RivalAscended";
+                    // Y el que avanzó lo saborea si ahora está por encima de su rival.
+                    if (SpiritGradeUtility.RealmLevel(pawn) > SpiritGradeUtility.RealmLevel(other))
+                        SocialMemory(pawn, "CVG_Thought_SurpassedRival", other);
+                }
                 else if (other.relations.FamilyByBlood.Contains(pawn) || (sworn != null && other.relations.DirectRelationExists(sworn, pawn)))
                     thought = "CVG_Thought_KinAscended";
                 var def = thought == null ? null : T(thought);
@@ -65,17 +70,40 @@ namespace Convergence
             }
         }
 
-        public static void Notify_BreakthroughFailed(Pawn pawn) => Memory(pawn, "CVG_Thought_BreakthroughFailed");
+        public static void Notify_BreakthroughFailed(Pawn pawn)
+        {
+            Memory(pawn, "CVG_Thought_BreakthroughFailed");
+            // Los cercanos se preocupan (pareja, compañero del Dao, familia, hermano jurado).
+            if (pawn?.relations == null) return;
+            var daoPartner = DefDatabase<PawnRelationDef>.GetNamedSilentFail("CVG_DaoPartner");
+            var sworn = DefDatabase<PawnRelationDef>.GetNamedSilentFail("CVG_SwornSibling");
+            foreach (var other in PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_FreeColonists)
+            {
+                if (other == pawn || other.relations == null) continue;
+                if (LovePartnerRelationUtility.LovePartnerRelationExists(other, pawn) || other.relations.FamilyByBlood.Contains(pawn)
+                    || (daoPartner != null && other.relations.DirectRelationExists(daoPartner, pawn))
+                    || (sworn != null && other.relations.DirectRelationExists(sworn, pawn)))
+                    SocialMemory(other, "CVG_Thought_CloseOneFailed", pawn);
+            }
+        }
 
-        /// <summary>Superó la tribulación: él, orgulloso; los colonos del mapa, admirados.</summary>
-        public static void Notify_TribulationSurvived(Pawn pawn)
+        private static void SocialMemory(Pawn pawn, string thought, Pawn about)
+        {
+            var def = T(thought);
+            if (def != null && pawn?.needs?.mood?.thoughts?.memories != null) pawn.needs.mood.thoughts.memories.TryGainMemory(def, about);
+        }
+
+        /// <summary>Una refinación salió mal: el alquimista se lo toma a pecho.</summary>
+        public static void Notify_RuinedPill(Pawn pawn) => Memory(pawn, "CVG_Thought_RuinedPill");
+
+        /// <summary>Superó la tribulación: él, orgulloso; quienes la vieron (no todo el mapa), admirados.</summary>
+        public static void Notify_TribulationSurvived(Pawn pawn, List<Pawn> witnesses)
         {
             Memory(pawn, "CVG_Thought_SurvivedTribulation");
             Increment(pawn, "CVG_TribulationsSurvived");
             RecordTale("CVG_Tale_SurvivedTribulation", pawn);
-            var map = pawn.MapHeld;
-            if (map == null) return;
-            foreach (var other in map.mapPawns.FreeColonistsSpawned)
+            if (witnesses == null) return;
+            foreach (var other in witnesses)
                 if (other != pawn) Memory(other, "CVG_Thought_WitnessedTribulation");
         }
 
@@ -90,7 +118,7 @@ namespace Convergence
         public override bool ShouldMeasureTimeNow(Pawn pawn)
         {
             var job = pawn.CurJobDef;
-            return job != null && (job == CVG_DefOf.CVG_Cultivate || job.defName == "CVG_TemperBody");
+            return MeditationCultivation.IsCultivating(pawn) || job?.defName == "CVG_TemperBody";
         }
     }
 
@@ -154,62 +182,6 @@ namespace Convergence
 
         public override TaggedString GetExplanation() =>
             "CVG_Alert_QiDeviationDesc".Translate(culprits.Select(p => p.LabelShortCap).ToLineList("  - "));
-
-        public override AlertReport GetReport() => AlertReport.CulpritsAre(Culprits);
-    }
-
-    /// <summary>Tras la Convergencia hay cultivadores y ningún lugar de cultivo en el mapa.</summary>
-    public class Alert_CVG_NoCultivationSpot : Alert
-    {
-        public Alert_CVG_NoCultivationSpot()
-        {
-            defaultLabel = "CVG_Alert_NoCultivationSpot".Translate();
-            defaultExplanation = "CVG_Alert_NoCultivationSpotDesc".Translate();
-            defaultPriority = AlertPriority.Medium;
-        }
-
-        public override AlertReport GetReport()
-        {
-            if (!GameComponent_Convergence.Active) return false;
-            foreach (var map in Find.Maps)
-            {
-                if (!map.IsPlayerHome) continue;
-                var cultivators = map.mapPawns.FreeColonistsSpawned.Where(p => CompCultivator.For(p)?.IsQiCultivator ?? false).ToList();
-                if (cultivators.Count == 0) continue;
-                if (!WorkGiver_Cultivate.AllSpots(map).Any()) return AlertReport.CulpritsAre(cultivators);
-            }
-            return false;
-        }
-    }
-
-    /// <summary>Un cultivador tiene desactivado el trabajo de cultivar (el jugador puede no haberlo notado).</summary>
-    public class Alert_CVG_IdleCultivator : Alert
-    {
-        private readonly List<Pawn> culprits = new List<Pawn>();
-
-        public Alert_CVG_IdleCultivator()
-        {
-            defaultLabel = "CVG_Alert_IdleCultivator".Translate();
-            defaultPriority = AlertPriority.Medium;
-        }
-
-        private List<Pawn> Culprits
-        {
-            get
-            {
-                culprits.Clear();
-                var work = DefDatabase<WorkTypeDef>.GetNamedSilentFail("CVG_Cultivation");
-                if (work == null || !GameComponent_Convergence.Active) return culprits;
-                foreach (var p in PawnsFinder.AllMaps_FreeColonistsSpawned)
-                    if (p.workSettings != null && p.workSettings.EverWork && !p.WorkTypeIsDisabled(work) && !p.workSettings.WorkIsActive(work)
-                        && (CompCultivator.For(p)?.IsQiCultivator ?? false))
-                        culprits.Add(p);
-                return culprits;
-            }
-        }
-
-        public override TaggedString GetExplanation() =>
-            "CVG_Alert_IdleCultivatorDesc".Translate(culprits.Select(p => p.LabelShortCap).ToLineList("  - "));
 
         public override AlertReport GetReport() => AlertReport.CulpritsAre(Culprits);
     }

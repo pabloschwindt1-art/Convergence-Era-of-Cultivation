@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Architect tab of this module (integration plan, 2026-10-23). -->
+  <DesignationCategoryDef>
+    <defName>CVG_Formations</defName>
+    <label>formations</label>
+    <description>Formation cores and flags, qi sources and the qi network, defenses and traps.</description>
+    <order>452</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+</Defs>

@@ -182,7 +182,7 @@
       <WorkTableWorkSpeedFactor>0.8</WorkTableWorkSpeedFactor>
     </statBases>
     <size>(3,1)</size>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>CVG_Cultivation</designationCategory>
     <uiOrder>2410</uiOrder>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>

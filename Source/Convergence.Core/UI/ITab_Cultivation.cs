@@ -5,7 +5,8 @@ using Verse;
 
 namespace Convergence
 {
-    /// <summary>Pestaña "Cultivo" del colono: Convergencia, raíz espiritual y cuerpo especial.</summary>
+    /// <summary>Pestaña "Cultivo" del colono: raíz espiritual, reino por camino y cuerpo especial. Lo que ya muestran otras
+    /// pestañas (genes del linaje, misiones del Maestro, riqueza) no se repite acá.</summary>
     [StaticConstructorOnStartup]
     public class ITab_Cultivation : ITab
     {
@@ -31,7 +32,17 @@ namespace Convergence
 
         private Pawn SelPawnForCultivation => SelPawn ?? (SelThing as Corpse)?.InnerPawn;
 
-        public override bool IsVisible => SelPawnForCultivation != null && CompCultivator.For(SelPawnForCultivation) != null;
+        /// <summary>Solo cultivadores (raíz, cultivo empezado o latente, cuerpo especial o linaje): no en cualquier humano.</summary>
+        public override bool IsVisible
+        {
+            get
+            {
+                var pawn = SelPawnForCultivation;
+                var comp = CompCultivator.For(pawn);
+                return comp != null && (comp.HasRoot || comp.SpecialBody != null || comp.ActiveTrackers.Any(t => t.Started)
+                                        || comp.LatentTrackers.Any() || BloodlineUtility.Get(pawn) != null);
+            }
+        }
 
         protected override void FillTab()
         {
@@ -81,37 +92,8 @@ namespace Convergence
                 var bloodline = BloodlineUtility.Get(pawn);
                 var bloodRect = listing.Label("CVG_Tab_Bloodline".Translate() + ": " + BloodlineUtility.Label(bloodline));
                 if (bloodline != null)
-                {
-                    var purity = bloodline.Purity;
-                    TooltipHandler.TipRegion(bloodRect, bloodline.bloodline.description + "\n\n" + (purity.gene ?? (Def)purity.trait)?.description);
-                    GUI.color = Color.gray;
-                    listing.Label(GameComponent_Convergence.Active ? "CVG_Tab_BloodlineAwakened".Translate() : "CVG_Tab_BloodlineLatent".Translate());
-                    if (bloodline.bloodline.affinities.Count > 0)
-                    {
-                        string elements = bloodline.bloodline.affinities.Select(e => e.LabelCap.ToString()).ToCommaList();
-                        string factor = purity.affinityCultivationFactor.ToStringPercent();
-                        var affinityRect = listing.Label(BloodlineUtility.HasAffinity(pawn, bloodline)
-                            ? "CVG_Tab_BloodlineAffinityActive".Translate(elements, factor)
-                            : "CVG_Tab_BloodlineAffinityInactive".Translate(elements, factor));
-                        TooltipHandler.TipRegion(affinityRect, "CVG_Tab_BloodlineAffinityTip".Translate());
-                    }
-                    GUI.color = Color.white;
-                    // Efectos de la pureza (generados del hediff): activos o pendientes de la Convergencia.
-                    if (GameComponent_Convergence.Active)
-                    {
-                        listing.Label("CVG_Tab_BloodlineEffects".Translate() + ":");
-                        GUI.color = new Color(1f, 0.85f, 0.6f);
-                        Text.Font = GameFont.Tiny;
-                        foreach (var line in BloodlineText.EffectLines(bloodline.bloodline, bloodline.index)) listing.Label("   " + line);
-                        Text.Font = GameFont.Small;
-                        GUI.color = Color.white;
-                    }
-                    else
-                    {
-                        var latentRect = listing.Label("CVG_Tab_BloodlineEffectsLatent".Translate());
-                        TooltipHandler.TipRegion(latentRect, BloodlineText.EffectLines(bloodline.bloodline, bloodline.index).ToLineList("- "));
-                    }
-                }
+                    TooltipHandler.TipRegion(bloodRect, bloodline.bloodline.description + "\n\n" + (bloodline.Purity.gene ?? (Def)bloodline.Purity.trait)?.description
+                        + "\n\n" + BloodlineText.EffectLines(bloodline.bloodline, bloodline.index).ToLineList("- "));
             }
 
             // Un bloque por camino: reino, etapa, progreso, fundamento y recurso.
@@ -180,28 +162,6 @@ namespace Convergence
                 GUI.color = Color.white;
             }
 
-            // El Maestro (M6): lección actual y cuánto le queda.
-            var mentorState = GameComponent_Mentor.Instance;
-            if (mentorState != null && mentorState.IsMentor(pawn))
-            {
-                listing.GapLine();
-                listing.Label("CVG_Mentor_TabHeader".Translate(mentorState.Def.archetype, (mentorState.LeaveTicksLeft / (float)GenDate.TicksPerDay).ToString("0")));
-                var lesson = mentorState.CurrentLesson;
-                GUI.color = new Color(1f, 0.9f, 0.6f);
-                if (lesson != null)
-                {
-                    string progress = mentorState.LessonProgress;
-                    var lessonRect = listing.Label("CVG_Mentor_TabLesson".Translate(mentorState.LessonNumber, mentorState.Def.lessons.Count, lesson.label)
-                        + (progress.NullOrEmpty() ? "" : " (" + progress + ")"));
-                    // La espera también se ve: la lección siguiente todavía no empezó, o el Anciano observa unos días antes de darla por cumplida.
-                    string wait = mentorState.LessonWaitText;
-                    if (!wait.NullOrEmpty()) { GUI.color = Color.gray; listing.Label("   " + wait); GUI.color = new Color(1f, 0.9f, 0.6f); }
-                    TooltipHandler.TipRegion(lessonRect, lesson.description);
-                }
-                else listing.Label("CVG_Mentor_TabNoLessons".Translate());
-                GUI.color = Color.white;
-            }
-
             // Cuerpo especial
             // Longevidad: cuánto frenan el envejecimiento los reinos.
             float aging = comp.AgingFactor;
@@ -216,20 +176,6 @@ namespace Convergence
                 listing.Gap();
                 var bodyRect = listing.Label("CVG_Tab_SpecialBody".Translate() + ": " + comp.SpecialBody.LabelCap);
                 TooltipHandler.TipRegion(bodyRect, comp.SpecialBody.description);
-            }
-
-            // Riqueza de cultivo de la colonia (economía paralela): la que atrae a sectas y bestias.
-            var map = pawn.MapHeld;
-            if (map != null && pawn.Faction == Faction.OfPlayer && GameComponent_Convergence.Active)
-            {
-                listing.Gap();
-                Text.Font = GameFont.Tiny;
-                GUI.color = Color.gray;
-                var wealthRect = listing.Label("CVG_Tab_CultivationWealth".Translate(CultivationWealth.For(map).Total.ToStringMoney()));
-                GUI.color = Color.white;
-                Text.Font = GameFont.Small;
-                Widgets.DrawHighlightIfMouseover(wealthRect);
-                TooltipHandler.TipRegion(wealthRect, () => CultivationWealth.Explain(map), 71920131);
             }
 
             viewHeight = Mathf.Max(listing.CurHeight + 12f, outRect.height);

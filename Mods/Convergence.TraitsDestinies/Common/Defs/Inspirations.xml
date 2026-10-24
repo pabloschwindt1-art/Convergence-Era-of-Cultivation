@@ -22,6 +22,12 @@
       <statOffsets>
         <CVG_BreakthroughChance>0.1</CVG_BreakthroughChance>
       </statOffsets>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_InspirationDao">
+        <daoComprehension>3</daoComprehension>
+        <traitCounter>Enlightenment</traitCounter>
+      </li>
+    </modExtensions>
 
   </InspirationDef>
 

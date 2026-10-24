@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Text;
 using RimWorld;
 using Verse;
@@ -13,6 +14,8 @@ namespace Convergence
     {
         public QiElementDef element;
         public float factor = 1.15f;
+        /// <summary>Sin elemento fijo: se sintoniza con el elemento de la raíz de quien lo lleva (aros de los cinco elementos).</summary>
+        public bool attunes;
     }
 
     /// <summary>Multiplica un stat de cultivo por la resonancia de los accesorios puestos con la raíz del portador.</summary>
@@ -39,10 +42,12 @@ namespace Convergence
             foreach (var ap in pawn.apparel.WornApparel)
             {
                 var ext = ap.def.GetModExtension<DefModExtension_ElementalResonance>();
-                if (ext?.element == null || !root.elements.Contains(ext.element)) continue;
+                if (ext == null) continue;
+                var element = ext.attunes ? root.elements.FirstOrDefault() : ext.element;
+                if (element == null || !root.elements.Contains(element)) continue;
                 factor *= ext.factor;
                 any = true;
-                sb?.AppendLine("CVG_ElementalResonance".Translate(ap.LabelShortCap, ext.element.LabelCap) + ": x" + ext.factor.ToStringPercent());
+                sb?.AppendLine("CVG_ElementalResonance".Translate(ap.LabelShortCap, element.LabelCap) + ": x" + ext.factor.ToStringPercent());
             }
             return any;
         }

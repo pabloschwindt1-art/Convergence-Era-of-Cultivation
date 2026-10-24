@@ -136,11 +136,18 @@ namespace Convergence
         public static CultivationDifficultyValues Current => GameComponent_Convergence.Instance?.Difficulty ?? ConvergenceMod.Settings.difficulty;
 
         /// <summary>El def pertenece a un mod de Convergence (para la frecuencia de eventos).</summary>
+        private static readonly System.Collections.Generic.Dictionary<Def, bool> convergenceDefCache = new System.Collections.Generic.Dictionary<Def, bool>();
+
+        /// <summary>¿El def es de un mod de Convergence? (con caché: se pregunta en cada evaluación de incidente).</summary>
         public static bool IsConvergenceDef(Def def)
         {
-            string package = def?.modContentPack?.PackageId;
+            if (def == null) return false;
+            if (convergenceDefCache.TryGetValue(def, out bool cached)) return cached;
+            string package = def.modContentPack?.PackageId;
             var main = CultivationWealthDef.Main;
-            return package != null && main != null && main.packageIdPrefixes.Any(p => package.StartsWith(p, System.StringComparison.OrdinalIgnoreCase));
+            bool result = package != null && main != null && main.packageIdPrefixes.Any(p => package.StartsWith(p, System.StringComparison.OrdinalIgnoreCase));
+            convergenceDefCache[def] = result;
+            return result;
         }
     }
 
@@ -169,82 +176,6 @@ namespace Convergence
         {
             if (__result <= 0f || __instance.def == null || !CultivationDifficulty.IsConvergenceDef(__instance.def)) return;
             __result *= CultivationDifficulty.Current.eventFrequency;
-        }
-    }
-
-    /// <summary>
-    /// Elección al empezar una partida nueva: dificultad de cultivo y cómo llega la Convergencia (inmediata o vanilla
-    /// primero). Parte de los ajustes del mod.
-    /// </summary>
-    public class Dialog_CultivationStart : Window
-    {
-        private readonly CultivationDifficultyValues values;
-        private ConvergenceTrigger trigger;
-        private int minDay, maxDay;
-        private Vector2 scroll;
-
-        public override Vector2 InitialSize => new Vector2(620f, 720f);
-
-        public Dialog_CultivationStart()
-        {
-            var s = ConvergenceMod.Settings;
-            values = s.difficulty.Copy();
-            trigger = s.convergenceTrigger;
-            minDay = s.convergenceMinDay;
-            maxDay = s.convergenceMaxDay;
-            forcePause = true;
-            absorbInputAroundWindow = true;
-            doCloseX = false;
-            closeOnCancel = false;
-        }
-
-        public override void DoWindowContents(Rect inRect)
-        {
-            Text.Font = GameFont.Medium;
-            Widgets.Label(new Rect(inRect.x, inRect.y, inRect.width, 36f), "CVG_StartDialog_Title".Translate());
-            Text.Font = GameFont.Small;
-            var outRect = new Rect(inRect.x, inRect.y + 40f, inRect.width, inRect.height - 90f);
-            var viewRect = new Rect(0f, 0f, outRect.width - 20f, 900f);
-            Widgets.BeginScrollView(outRect, ref scroll, viewRect);
-            var listing = new Listing_Standard();
-            listing.Begin(viewRect);
-            listing.Label("CVG_StartDialog_Intro".Translate());
-            listing.GapLine();
-            listing.Label("CVG_Setting_Trigger".Translate());
-            // Un escenario que ya trae la Convergencia (ScenPart_ConvergenceOccurred corre antes que este diálogo): no se pregunta
-            // cómo empieza, porque elegir no cambiaría nada; solo queda la dificultad.
-            if (GameComponent_Convergence.Instance?.Occurred ?? false)
-                listing.Label("CVG_StartDialog_AlreadyOccurred".Translate());
-            else
-                StartModeEditor(listing, ref trigger, ref minDay, ref maxDay);
-            listing.GapLine();
-            listing.Label("CVG_Difficulty_Title".Translate());
-            values.DoEditor(listing);
-            listing.End();
-            Widgets.EndScrollView();
-            if (Widgets.ButtonText(new Rect(inRect.xMax - 200f, inRect.yMax - 40f, 200f, 38f), "OK".Translate()))
-            {
-                GameComponent_Convergence.Instance?.SetStart(values, trigger, minDay, maxDay);
-                Close();
-            }
-        }
-
-        /// <summary>Modo de inicio: Convergencia inmediata, vanilla primero (narrador, días) o por investigación.</summary>
-        public static void StartModeEditor(Listing_Standard listing, ref ConvergenceTrigger trigger, ref int minDay, ref int maxDay)
-        {
-            if (listing.RadioButton("CVG_Trigger_Immediate".Translate(), trigger == ConvergenceTrigger.Immediate, tooltip: "CVG_Trigger_ImmediateTip".Translate()))
-                trigger = ConvergenceTrigger.Immediate;
-            if (listing.RadioButton("CVG_Trigger_Storyteller".Translate(), trigger == ConvergenceTrigger.Storyteller, tooltip: "CVG_Trigger_StorytellerTip".Translate()))
-                trigger = ConvergenceTrigger.Storyteller;
-            if (listing.RadioButton("CVG_Trigger_Research".Translate(), trigger == ConvergenceTrigger.Research))
-                trigger = ConvergenceTrigger.Research;
-            if (trigger == ConvergenceTrigger.Storyteller)
-            {
-                listing.Label("CVG_Setting_MinDay".Translate(minDay));
-                minDay = (int)listing.Slider(minDay, 1, 120);
-                listing.Label("CVG_Setting_MaxDay".Translate(maxDay));
-                maxDay = Mathf.Max(minDay, (int)listing.Slider(maxDay, 1, 180));
-            }
         }
     }
 }

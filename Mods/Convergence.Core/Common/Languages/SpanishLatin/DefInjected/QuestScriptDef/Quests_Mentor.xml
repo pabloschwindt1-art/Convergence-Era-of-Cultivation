@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_MentorRefuge.questNameRules.rulesStrings>
+    <li>questName-&gt;Un viejo sabio busca refugio</li>
+  </CVG_MentorRefuge.questNameRules.rulesStrings>
+  <CVG_MentorRefuge.questDescriptionRules.rulesStrings>
+    <li>questDescription-&gt;Un viejo con una túnica remendada espera en el borde de tus tierras, apoyado en una azada. Dice ser [archetype] y pide refugio: un techo, un cuenco de arroz y un rincón tranquilo donde sentarse.\n\n[convergenceLine]\n\nSi aceptás, se va a quedar una temporada, va a enseñar a quienes tengan raíz espiritual y va a dejar algo suyo al irse. Los que lo persiguen pueden seguirlo.</li>
+  </CVG_MentorRefuge.questDescriptionRules.rulesStrings>
+</LanguageData>

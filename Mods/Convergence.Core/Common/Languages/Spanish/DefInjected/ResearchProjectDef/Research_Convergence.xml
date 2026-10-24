@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <CVG_SpiritualAnomalyStudy.label>estudio de la anomalía espiritual</CVG_SpiritualAnomalyStudy.label>
-  <CVG_SpiritualAnomalyStudy.description>Luces extrañas en el cielo, animales inquietos de noche, una piedra que vibra al tocarla. Estudia la anomalía y descubre lo que se avecina. Completar este proyecto desencadena la Convergencia si todavía no ocurrió.</CVG_SpiritualAnomalyStudy.description>
+  <CVG_Research_QiTemperedArms.label>armas templadas en qi</CVG_Research_QiTemperedArms.label>
+  <CVG_Research_QiTemperedArms.description>Desde que volvió el qi, un cultivador se sacude una bala de rifle como una picadura de mosquito. Los herreros que sobrevivieron a los primeros años aprendieron por qué: una hoja mortal no tiene qi con qué morder. Templá el acero en agua donde se remojaron piedras espirituales, recitá la vieja cuenta del templado, y hasta un rifle de cerrojo recuerda cómo herir a un inmortal.
+
+Todas las armas y torretas llegan a grado espiritual 1. Las armas hechas de un material espiritual suman su grado encima.</CVG_Research_QiTemperedArms.description>
 </LanguageData>

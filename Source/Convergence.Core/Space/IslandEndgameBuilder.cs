@@ -160,10 +160,10 @@ namespace Convergence
 
             // ------------------------------------------------------------ salas
             Room(r, "dining hall", -12, 7, 7, 5, 'S', new[] { ("CVG_BanquetTable", 1), ("CVG_CarvedChair", 6), ("CVG_StoneBench", 1), ("CVG_PaperLantern", 2), ("CVG_SpiritBonsai", 1) }, true, "CVG_QiBarrier");
-            Room(r, "kitchen and pantry", 6, 7, 7, 5, 'S', new[] { ("CVG_SectKitchen", 2), ("CVG_SpiritWinery", 1), ("CVG_WarehouseShelf", 2), ("CVG_PillCabinet", 1), ("CVG_GrainJar", 2), ("CVG_ButcherBlock", 1), ("CVG_SpiritWineJar", 2) }, false);
+            Room(r, "kitchen and pantry", 6, 7, 7, 5, 'S', new[] { ("FueledStove", 2), ("Brewery", 1), ("CVG_WarehouseShelf", 2), ("CVG_PillCabinet", 1), ("CVG_GrainJar", 2), ("TableButcher", 1), ("CVG_SpiritWineJar", 2) }, false);
             Room(r, "ancestral hall", -3, 7, 7, 4, 'S', new[] { ("CVG_AncestralAltar", 1), ("CVG_ScriptureStele", 1), ("CVG_RitualBrazier", 2), ("CVG_BronzeCenser", 1), ("CVG_ScriptureShelf", 2), ("CVG_CalligraphyDesk", 1) }, false);
-            Room(r, "cultivation hall", -15, -4, 7, 8, 'E', new[] { ("CVG_CultivationCushion", 4), ("CVG_CultivationSpot", 2), ("CVG_MeditationPlatform", 1), ("CVG_BronzeCenser", 2), ("CVG_SpiritJadeDais", 1), ("CVG_SpiritStoneLantern", 1) }, true);
-            Room(r, "workshop", 9, -4, 7, 8, 'W', new[] { ("CVG_AlchemyFurnace", 1), ("CVG_SpiritForge", 1), ("CVG_RuneTable", 1), ("CVG_TalismanTable", 1), ("CVG_SpiritLoom", 1), ("CVG_JadeCarvingTable", 1), ("CVG_WarehouseShelf", 1) }, false);
+            Room(r, "cultivation hall", -15, -4, 7, 8, 'E', new[] { ("CVG_CultivationCushion", 4), ("MeditationSpot", 2), ("CVG_MeditationPlatform", 1), ("CVG_BronzeCenser", 2), ("CVG_SpiritJadeDais", 1), ("CVG_SpiritStoneLantern", 1) }, true);
+            Room(r, "workshop", 9, -4, 7, 8, 'W', new[] { ("CVG_AlchemyFurnace", 1), ("CVG_SpiritForge", 1), ("CVG_RuneTable", 1), ("CVG_TalismanTable", 1), ("CVG_SpiritLoom", 1), ("TableSculpting", 1), ("CVG_WarehouseShelf", 1) }, false);
             Room(r, "infirmary", 6, -9, 6, 3, 'W', new[] { ("CVG_HealerBed", 3), ("CVG_PillCabinet", 1), ("CVG_BedsideTray", 2) }, true, "CVG_QiBarrier");
             int n = 1;
             foreach (var x in new[] { -12, -8, -4, 0 })

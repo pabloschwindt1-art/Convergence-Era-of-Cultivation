@@ -3,6 +3,7 @@ using System.Linq;
 using RimWorld;
 using UnityEngine;
 using Verse;
+using Verse.AI;
 
 namespace Convergence
 {
@@ -14,7 +15,13 @@ namespace Convergence
     /// </summary>
     public class MapComponent_Tribulation : MapComponent
     {
-        private const int WarningTicks = 180;
+        // Unos segundos de nubes antes del primer rayo: el tiempo de que la colonia salga a mirar.
+        private const int WarningTicks = 900;
+        private const float SafeDistanceMin = 6f;
+        private const float SafeDistanceMax = 13f;
+        /// <summary>Cada testigo resta este porcentaje al daño de los rayos, hasta <see cref="MinWitnessFactor"/>.</summary>
+        private const float PerWitness = 0.07f;
+        private const float MinWitnessFactor = 0.6f;
 
         private List<Tribulation> active = new List<Tribulation>();
 
@@ -61,7 +68,54 @@ namespace Convergence
                     CultivationDifficulty.Current.tribulationCanKill ? "CVG_Tribulation_CanKill".Translate() : "CVG_Tribulation_CannotKill".Translate()),
                 LetterDefOf.ThreatBig, pawn);
             Find.CameraDriver.shaker.DoShake(1f);
+            GatherWitnesses(pawn);
         }
+
+        /// <summary>
+        /// La colonia sale a mirar, como en un parto: los colonos libres van a una celda a distancia segura con vista al que
+        /// enfrenta el cielo. No se acercan más: el rayo no elige.
+        /// </summary>
+        private void GatherWitnesses(Pawn tribulant)
+        {
+            if (tribulant.Faction != Faction.OfPlayer) return;
+            foreach (var p in map.mapPawns.FreeColonistsSpawned)
+            {
+                if (p == tribulant || p.Downed || p.Drafted || p.InMentalState || !p.Awake() || p.InBed() || p.IsBurning()) continue;
+                if (HealthAIUtility.ShouldSeekMedicalRest(p) || p.CurJob?.def == CVG_DefOf.CVG_WatchTribulation) continue;
+                if (!CellFinder.TryFindRandomCellNear(tribulant.Position, map, (int)SafeDistanceMax, c =>
+                        c.Standable(map) && !c.IsForbidden(p) && c.DistanceTo(tribulant.Position) >= SafeDistanceMin
+                        && GenSight.LineOfSight(c, tribulant.Position, map) && p.CanReserveAndReach(c, PathEndMode.OnCell, Danger.Some),
+                        out var cell))
+                    continue;
+                var job = JobMaker.MakeJob(CVG_DefOf.CVG_WatchTribulation, tribulant, cell);
+                job.expiryInterval = 6000;
+                job.checkOverrideOnExpire = true;
+                p.jobs.StartJob(job, JobCondition.InterruptForced, resumeCurJobAfterwards: true);
+            }
+        }
+
+        /// <summary>Quienes la vieron: los que salieron a mirar y los que estaban cerca con vista.</summary>
+        public List<Pawn> Witnesses(Pawn tribulant)
+        {
+            var list = new List<Pawn>();
+            foreach (var p in map.mapPawns.FreeColonistsSpawned)
+                if (p != tribulant && (JobDriver_WatchTribulation.IsWatching(p, tribulant)
+                    || (p.Position.DistanceTo(tribulant.Position) <= 20f && p.Awake() && GenSight.LineOfSight(p.Position, tribulant.Position, map))))
+                    list.Add(p);
+            return list;
+        }
+
+        /// <summary>Testigos en su lugar mirando a <paramref name="tribulant"/>.</summary>
+        public int WitnessCount(Pawn tribulant)
+        {
+            int n = 0;
+            foreach (var p in map.mapPawns.FreeColonistsSpawned)
+                if (JobDriver_WatchTribulation.IsWatching(p, tribulant)) n++;
+            return n;
+        }
+
+        /// <summary>Multiplicador del daño del rayo según los testigos presentes.</summary>
+        public float WitnessFactor(Pawn tribulant) => UnityEngine.Mathf.Max(MinWitnessFactor, 1f - PerWitness * WitnessCount(tribulant));
 
         public override void MapComponentTick()
         {
@@ -98,7 +152,7 @@ namespace Convergence
             var cell = pawn.PositionHeld;
             map.weatherManager.eventHandler.AddEvent(new WeatherEvent_TribulationStrike(map, cell));
 
-            var dinfo = new DamageInfo(DamageDefOf.Burn, t.damage, armorPenetration: 1f);
+            var dinfo = new DamageInfo(DamageDefOf.Burn, t.damage * WitnessFactor(pawn), armorPenetration: 1f);
             if (!canKill)
             {
                 var part = NonVitalPart(pawn, t.damage);
@@ -143,7 +197,7 @@ namespace Convergence
             }
             if (t.strikesLeft <= 0 && !pawn.Downed && pawn.MapHeld != null)
             {
-                CultivationLife.Notify_TribulationSurvived(pawn);
+                CultivationLife.Notify_TribulationSurvived(pawn, For(pawn.MapHeld)?.Witnesses(pawn));
                 BreakthroughUtility.Ascend(pawn, t.target, t.foundationQuality);
                 return;
             }

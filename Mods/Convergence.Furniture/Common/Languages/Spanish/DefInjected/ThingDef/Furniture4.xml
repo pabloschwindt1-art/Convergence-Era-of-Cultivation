@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <CVG_JadePlatform.label>plataforma de jade</CVG_JadePlatform.label>
-  <CVG_JadePlatform.description>Una plataforma baja y cuadrada de jade verde pulido con una esterilla redonda encima, donde un cultivador se sienta horas sin que el frío de la piedra lo alcance. El qi del jade sube al sentado y el qi del propio cultivador vuelve el doble de rápido. Las sectas dan un sitio en una como premio por diez años de servicio, y el sitio en la más antigua se hereda.</CVG_JadePlatform.description>
   <CVG_SpiritJadeDais.label>estrado de jade espiritual</CVG_SpiritJadeDais.label>
   <CVG_SpiritJadeDais.description>Un estrado de jade espiritual en bruto donde el qi es tan denso que sentarse sobre él es como respirar bajo el agua. Se dice que quien intenta un avance aquí tiene el corazón más sereno, y el qi espeso hace el intento más probable. La Corte Celestial usaba un estrado así para sentar a sus jueces, y los jueces nunca necesitaron alzar la voz.</CVG_SpiritJadeDais.description>
   <CVG_BedsideTray.label>bandeja de cabecera</CVG_BedsideTray.label>

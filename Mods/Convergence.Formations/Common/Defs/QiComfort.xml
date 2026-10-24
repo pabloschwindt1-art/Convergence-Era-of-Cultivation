@@ -9,6 +9,7 @@
   <!-- Middle tier generator, like solar/wind: no fuel, takes qi from the air -->
   <ThingDef ParentName="CVG_QiNetBuildingBase">
     <defName>CVG_SkyBreathArray</defName>
+    <designationCategory>CVG_Formations</designationCategory>
     <label>sky-breath array</label>
     <description>A ring of slate tablets open to the sky, carved so that the wind itself has to pass through the five-element wheel. It burns nothing: it breathes the qi of the air, more where the qi is thick and much more under the Qi Tide, and almost nothing during the Ebb. A roof chokes it. The Cloud Sects kept whole terraces of these on the peaks of Jiuxiao, and called them the lungs of the mountain.</description>
     <graphicData>
@@ -49,6 +50,7 @@
   <!-- Thunder rod: bursts of qi from storms and tribulations -->
   <ThingDef ParentName="CVG_QiNetBuildingBase">
     <defName>CVG_ThunderRod</defName>
+    <designationCategory>CVG_Formations</designationCategory>
     <label>celestial thunder rod</label>
     <description>A bronze pillar crowned by a coiled dragon and hung with thunder talismans. Storm lightning that would fall nearby falls on it instead, and the dragon swallows it: no fire, only qi, stored in its core and passed on to the accumulator crystals of its network. When a cultivator faces a tribulation close by, the rod drinks from heaven's lightning too. The Thunder Peak sect said that a tribulation wasted is a tribulation twice suffered.</description>
     <graphicData>
@@ -86,6 +88,7 @@
   <!-- Sun lamp -->
   <ThingDef ParentName="CVG_QiNetBuildingBase">
     <defName>CVG_SunLantern</defName>
+    <designationCategory>CVG_Formations</designationCategory>
     <label>sun lantern</label>
     <description>A stone lantern with a sphere of captured sunlight in its heart, fed by the qi network. It lights the ground brightly enough for crops to grow indoors and rests at night, as the plants do. The farmer sects of the plains raised them in their granary halls, so that rice would ripen even through the long winters of the Calamity.</description>
     <thingClass>Building_SunLamp</thingClass>
@@ -141,7 +144,7 @@
   <!-- Heater -->
   <ThingDef ParentName="CVG_QiNetBuildingBase">
     <defName>CVG_SpiritBrazier</defName>
-    <designationCategory>Temperature</designationCategory>
+    <designationCategory>CVG_Formations</designationCategory>
     <label>spirit brazier</label>
     <description>A bronze tripod cauldron burning with a pale fire that eats qi instead of wood. It warms the room to the temperature you ask of it and never smokes. In the cold halls of the Northern Sword Sect, a disciple's first duty each morning was to bow to the brazier, for it had kept them alive through the night.</description>
     <thingClass>Building_Heater</thingClass>
@@ -197,7 +200,7 @@
   <!-- Cooler -->
   <ThingDef ParentName="CVG_QiNetBuildingBase">
     <defName>CVG_FrostFormation</defName>
-    <designationCategory>Temperature</designationCategory>
+    <designationCategory>CVG_Formations</designationCategory>
     <label>frost formation</label>
     <description>A stone disk set into the floor, inlaid with ice crystals from the Snow Lotus peaks and carved with water runes. It drinks qi and breathes out cold, cooling the room it lies in to the temperature you ask, with no hot exhaust: the heat is not moved elsewhere, it is simply refused. Alchemists build cellars around them to keep spirit herbs fresh for years.</description>
     <thingClass>Convergence.Building_FrostFormation</thingClass>

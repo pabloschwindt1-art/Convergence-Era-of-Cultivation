@@ -6,18 +6,11 @@
   <CVG_Setting_WorldMode>Modo de mundo</CVG_Setting_WorldMode>
   <CVG_WorldMode_TechCultivation>Tecno-cultivo (tecnología y cultivo juntos)</CVG_WorldMode_TechCultivation>
   <CVG_WorldMode_Classic>Cultivo clásico (sin contenido tecnológico)</CVG_WorldMode_Classic>
-  <CVG_Setting_Trigger>Cómo empieza la Convergencia</CVG_Setting_Trigger>
-  <CVG_Trigger_Storyteller>Vanilla primero: el narrador la trae más tarde</CVG_Trigger_Storyteller>
-  <CVG_Trigger_Research>Investigación: los colonos la provocan al estudiar un artefacto</CVG_Trigger_Research>
-  <CVG_Trigger_Immediate>Inmediata: la partida empieza con la Convergencia</CVG_Trigger_Immediate>
-  <CVG_Setting_MinDay>Día más temprano: {0}</CVG_Setting_MinDay>
-  <CVG_Setting_MaxDay>Día más tardío: {0}</CVG_Setting_MaxDay>
   <CVG_Setting_RootChance>Probabilidad de nacer con raíz espiritual: {0}</CVG_Setting_RootChance>
   <CVG_Setting_Dissonance>Fuerza de la disonancia celestial (implantes y tribulación): {0}</CVG_Setting_Dissonance>
   <CVG_Setting_TribulationCanKill>Las tribulaciones fallidas pueden matar</CVG_Setting_TribulationCanKill>
   <CVG_Setting_ScaleEnemyRealms>Limitar a los cultivadores enemigos por tu reino más alto</CVG_Setting_ScaleEnemyRealms>
   <CVG_Setting_ScaleEnemyRealmsTip>Los cultivadores hostiles generados (asaltos, ataques de secta) nunca superan el reino más alto de tu colonia en más de la bonificación de abajo: no llegará un Núcleo Dorado el primer año.</CVG_Setting_ScaleEnemyRealmsTip>
-  <CVG_Setting_Mentor>El Maestro llega con la Convergencia</CVG_Setting_Mentor>
 
   <!-- Pestaña de cultivo -->
   <CVG_Tab_Cultivation>Cultivo</CVG_Tab_Cultivation>
@@ -91,6 +84,8 @@ Rayos: {2} (daño {3} cada uno).
 Disonancia celestial: {4}.
 {5}
 
+La colonia sale a mirar desde una distancia segura, como en un parto: cada testigo le da firmeza al qi del que está bajo las nubes, y el rayo muerde un poco menos.
+
 Si sigue en pie cuando se abran las nubes, alcanzará {1}.</CVG_Tribulation_LetterText>
   <CVG_Tribulation_CanKill>La tribulación puede matar.</CVG_Tribulation_CanKill>
   <CVG_Tribulation_CannotKill>La tribulación no matará (ajustes del mod), pero puede dejar al cultivador destrozado.</CVG_Tribulation_CannotKill>
@@ -117,15 +112,10 @@ Si sigue en pie cuando se abran las nubes, alcanzará {1}.</CVG_Tribulation_Lett
   <!-- Linajes (módulos de razas) -->
   <CVG_Setting_BloodlineChance>Probabilidad de nacer con sangre de bestia (linajes): x{0}</CVG_Setting_BloodlineChance>
   <CVG_Tab_Bloodline>Linaje</CVG_Tab_Bloodline>
-  <CVG_Tab_BloodlineAwakened>Despierto: la sangre responde al qi.</CVG_Tab_BloodlineAwakened>
-  <CVG_Tab_BloodlineLatent>Latente: solo se nota el aspecto; sus dones despertarán con la Convergencia.</CVG_Tab_BloodlineLatent>
   <CVG_Bloodline_None>ninguno</CVG_Bloodline_None>
   <CVG_Bloodline_Label>{0} ({1})</CVG_Bloodline_Label>
   <CVG_Bloodline_Purified>La sangre de {1} de {PAWN_nameDef} se ha purificado: ahora es {2}.</CVG_Bloodline_Purified>
   <CVG_Bloodline_XenotypeName>sangre de {0} ({1})</CVG_Bloodline_XenotypeName>
-  <CVG_Tab_BloodlineAffinityActive>Afinidad de sangre ({0}): cultivo x{1}</CVG_Tab_BloodlineAffinityActive>
-  <CVG_Tab_BloodlineAffinityInactive>Afinidad de sangre ({0}): x{1}, inactiva (la raíz espiritual no tiene esos elementos)</CVG_Tab_BloodlineAffinityInactive>
-  <CVG_Tab_BloodlineAffinityTip>La sangre resuena con sus elementos: si la raíz espiritual comparte alguno, el cultivo es más rápido. Crece con la pureza. Cuando la sangre llega a ancestral, limpia la raíz espiritual y la sube un grado (una sola vez).</CVG_Tab_BloodlineAffinityTip>
   <CVG_Bloodline_RootRefined>La sangre ancestral de {PAWN_nameDef} ha limpiado su raíz espiritual: {1}.</CVG_Bloodline_RootRefined>
   <CVG_Bloodline_EffectsHeader>Dones de la sangre de {0} ({1}) al despertar:</CVG_Bloodline_EffectsHeader>
   <CVG_Bloodline_StatusAwake>Activos: la Convergencia ya despertó la sangre.</CVG_Bloodline_StatusAwake>
@@ -133,8 +123,6 @@ Si sigue en pie cuando se abran las nubes, alcanzará {1}.</CVG_Tribulation_Lett
   <CVG_Bloodline_AbilityLine>Capacidad innata: {0}</CVG_Bloodline_AbilityLine>
   <CVG_Bloodline_AffinityLine>Afinidad con {0}: cultivo x{1} si la raíz espiritual tiene ese elemento</CVG_Bloodline_AffinityLine>
   <CVG_Bloodline_AspectNote>Aspecto del linaje de {0}: cosmético. Los dones y defectos los da el gen de pureza de la sangre.</CVG_Bloodline_AspectNote>
-  <CVG_Tab_BloodlineEffects>Dones de la sangre</CVG_Tab_BloodlineEffects>
-  <CVG_Tab_BloodlineEffectsLatent>Sus dones despertarán con la Convergencia (pasa el ratón para verlos).</CVG_Tab_BloodlineEffectsLatent>
   <!-- Techniques (M5) -->
   <CVG_Setting_RealmSuppression>Fuerza de la supresión de reino: {0}</CVG_Setting_RealmSuppression>
   <CVG_Setting_RealmSuppressionOff>Supresión de reino: desactivada</CVG_Setting_RealmSuppressionOff>
@@ -203,14 +191,9 @@ Si sigue en pie cuando se abran las nubes, alcanzará {1}.</CVG_Tribulation_Lett
   <CVG_Mentor_ProtectionLabel>{0} protege la colonia</CVG_Mentor_ProtectionLabel>
   <CVG_Mentor_FarewellLabel>{0} se va</CVG_Mentor_FarewellLabel>
   <CVG_Mentor_DeathLabel>{0} cayó</CVG_Mentor_DeathLabel>
-  <CVG_Mentor_TabHeader>Maestro ({0}): se va en {1} días</CVG_Mentor_TabHeader>
-  <CVG_Mentor_TabLesson>Lección {0}/{1}: {2}</CVG_Mentor_TabLesson>
-  <CVG_Mentor_TabNoLessons>Todas las lecciones aprendidas.</CVG_Mentor_TabNoLessons>
   <!-- Dao Comprehension and celestial calendar -->
   <CVG_Breakthrough_RequiresResearch>Requiere comprender {0} (pestaña de investigación Cultivo).</CVG_Breakthrough_RequiresResearch>
   <CVG_Manual_RequiresResearch>Requiere comprender {0} (pestaña de investigación Cultivo).</CVG_Manual_RequiresResearch>
-  <CVG_Dao_SuddenLabel>Iluminación súbita: {0}</CVG_Dao_SuddenLabel>
-  <CVG_Dao_SuddenText>Mientras estaba {1}, {PAWN_nameDef} vio de pronto a través de un nudo del Dao (顿悟). Un gran salto en la comprensión del Dao.</CVG_Dao_SuddenText>
   <CVG_Dao_EnlightenmentLabel>Iluminación: {0}</CVG_Dao_EnlightenmentLabel>
   <CVG_Dao_EnlightenmentText>{PAWN_nameDef} se iluminó mientras estaba {1} y comprendió {2}.</CVG_Dao_EnlightenmentText>
   <CVG_Dao_EnlightenmentTextNoOne>La colonia comprendió {0}.</CVG_Dao_EnlightenmentTextNoOne>
@@ -219,7 +202,6 @@ Si sigue en pie cuando se abran las nubes, alcanzará {1}.</CVG_Tribulation_Lett
   <CVG_Dao_Source_Studying>estudiando una tablilla de jade</CVG_Dao_Source_Studying>
   <CVG_Dao_Source_Absorbing>absorbiendo un núcleo de bestia</CVG_Dao_Source_Absorbing>
   <CVG_Dao_Source_Breathing>respirando el qi del mundo</CVG_Dao_Source_Breathing>
-  <CVG_Calendar_Deviation>Bajo la {1}, el qi de {PAWN_nameDef} se desvió mientras cultivaba: desviación de qi.</CVG_Calendar_Deviation>
   <CVG_Rank_Label>{0} de {1}</CVG_Rank_Label>
   <CVG_Rank_Text>{0} te reconoce ahora como {1}. Su buena voluntad hacia ti y el reino de tus cultivadores abren este rango.</CVG_Rank_Text>
   <CVG_Rank_Reward>La secta envía un regalo: {0}.</CVG_Rank_Reward>
@@ -230,10 +212,6 @@ Si sigue en pie cuando se abran las nubes, alcanzará {1}.</CVG_Tribulation_Lett
   <CVG_Tab_PreCultivated>Cultivó antes de la Convergencia: cayó por una grieta de Jiuxiao o recuerda una vida anterior.</CVG_Tab_PreCultivated>
   <CVG_Tab_LatentCultivation>Latente: {0} · {1}</CVG_Tab_LatentCultivation>
   <CVG_Tab_LatentCultivationTip>Este cultivo duerme: despertará con todo su poder cuando la Convergencia traiga el qi a este mundo (o cuando esta persona pueda volver a seguir el camino).</CVG_Tab_LatentCultivationTip>
-  <CVG_Trigger_StorytellerTip>La partida empieza como RimWorld normal y la Convergencia llega entre los días de abajo (por defecto, a mitad del primer año), para que el mod entre de a poco.</CVG_Trigger_StorytellerTip>
-  <CVG_Trigger_ImmediateTip>El qi inunda el mundo en la primera hora: despiertan las raíces, llegan las sectas y el cultivo empieza enseguida.</CVG_Trigger_ImmediateTip>
-  <CVG_Setting_AskOnNewGame>Preguntar dificultad y modo de inicio al empezar una partida</CVG_Setting_AskOnNewGame>
-  <CVG_Setting_AskOnNewGameTip>Al empezar una partida nueva, una ventana te deja elegir la dificultad de cultivo y cómo llega la Convergencia en esa partida. Los valores de aquí son los predeterminados.</CVG_Setting_AskOnNewGameTip>
   <CVG_Difficulty_Title>Dificultad de cultivo</CVG_Difficulty_Title>
   <CVG_Difficulty_NewGames>Dificultad de cultivo (partidas nuevas)</CVG_Difficulty_NewGames>
   <CVG_Difficulty_ThisGame>Dificultad de cultivo (esta partida)</CVG_Difficulty_ThisGame>
@@ -248,10 +226,6 @@ Si sigue en pie cuando se abran las nubes, alcanzará {1}.</CVG_Tribulation_Lett
   <CVG_Difficulty_VanillaWealth>Objetos de cultivo en la riqueza vanilla: {0}</CVG_Difficulty_VanillaWealth>
   <CVG_Difficulty_VanillaWealthTip>Cuánto del valor de píldoras, piedras espirituales, tesoros, armas espirituales, marionetas y muebles de cultivo cuenta en la riqueza que fija los puntos de los asaltos vanilla. Su valor de comercio no cambia; el resto va a la riqueza de cultivo.</CVG_Difficulty_VanillaWealthTip>
   <CVG_Difficulty_StatPart>Dificultad de cultivo ({0})</CVG_Difficulty_StatPart>
-  <CVG_StartDialog_Title>La Era del Cultivo</CVG_StartDialog_Title>
-  <CVG_StartDialog_Intro>Elige lo difícil que será el camino del cultivo en esta partida y cuándo derramará la Convergencia el qi sobre este mundo. La dificultad se puede cambiar después en los ajustes del mod.</CVG_StartDialog_Intro>
-  <CVG_StartDialog_AlreadyOccurred>La Convergencia ya ocurrió: este escenario empieza con ella. Solo queda elegir la dificultad.</CVG_StartDialog_AlreadyOccurred>
-  <CVG_Tab_CultivationWealth>Riqueza de cultivo de la colonia: {0}</CVG_Tab_CultivationWealth>
   <CVG_CultivationWealthTip>Riqueza de cultivo: {0}\n\n  Objetos de cultivo: {1}\n  Edificios de cultivo: {2}\n  Marionetas y bestias espirituales: {3}\n  Reinos de los colonos: {4}\n  Técnicas: {5}\n\nQuitado de la riqueza vanilla: {6} (los asaltos vanilla ignoran casi todo el valor de lo de cultivo).\nPuntos de amenaza extra para sectas y eventos de cultivo: {7}</CVG_CultivationWealthTip>
   <CVG_Tab_NoFreeSlot>Este conjunto está lleno ({0} técnicas): quita una primero.</CVG_Tab_NoFreeSlot>
   <CVG_Technique_PassiveLine>Pasiva: siempre activa una vez aprendida, sin botón. Crece con el reino y la maestría.</CVG_Technique_PassiveLine>
@@ -278,7 +252,7 @@ Si sigue en pie cuando se abran las nubes, alcanzará {1}.</CVG_Tribulation_Lett
   <CVG_Dev_TabTechniques>Técnicas</CVG_Dev_TabTechniques>
   <CVG_Dev_RealmLine>Reino: {0}, etapa {1}</CVG_Dev_RealmLine>
   <CVG_Dev_Bottleneck>Cuello de botella: listo para un avance</CVG_Dev_Bottleneck>
-  <CVG_Dev_ProgressHint>Se avanza cultivando en un lugar de cultivo; la concentración de qi y la raíz lo aceleran.</CVG_Dev_ProgressHint>
+  <CVG_Dev_ProgressHint>Se avanza meditando (horas de Meditar en el Horario); la concentración de qi y la raíz lo aceleran.</CVG_Dev_ProgressHint>
   <CVG_Dev_ProgressHintBody>Se avanza templando el cuerpo en el equipo de entrenamiento.</CVG_Dev_ProgressHintBody>
   <CVG_Dev_PointsAvailable>Puntos de comprensión disponibles: {0}</CVG_Dev_PointsAvailable>
   <CVG_Dev_PointsHint>Se gastan en desbloquear caminos y aprender técnicas. Cada etapa nueva da 1 y cada reino, 2.</CVG_Dev_PointsHint>
@@ -303,13 +277,9 @@ Si sigue en pie cuando se abran las nubes, alcanzará {1}.</CVG_Tribulation_Lett
   <CVG_Alert_ReadyToBreakthroughDesc>Estos cultivadores están en el cuello de botella de su reino, con el qi lleno, y pueden intentar el avance ahora (botón en el colono):\n\n{0}</CVG_Alert_ReadyToBreakthroughDesc>
   <CVG_Alert_QiDeviation>Desviación de qi</CVG_Alert_QiDeviation>
   <CVG_Alert_QiDeviationDesc>Estos cultivadores sufren una desviación de qi o un demonio interno. Que descansen; se va con el tiempo:\n\n{0}</CVG_Alert_QiDeviationDesc>
-  <CVG_Alert_NoCultivationSpot>No hay dónde cultivar</CVG_Alert_NoCultivationSpot>
-  <CVG_Alert_NoCultivationSpotDesc>Tus cultivadores no tienen dónde cultivar. Marca un lugar de cultivo (gratis) o construye un cojín o una plataforma de meditación en la pestaña Cultivo del menú de arquitecto.</CVG_Alert_NoCultivationSpotDesc>
-  <CVG_Alert_IdleCultivator>Cultivador sin cultivar</CVG_Alert_IdleCultivator>
-  <CVG_Alert_IdleCultivatorDesc>Estos colonos tienen la raíz espiritual despierta, pero el trabajo Cultivar está desactivado en su pestaña de trabajo:\n\n{0}</CVG_Alert_IdleCultivatorDesc>
   <CVG_ElementalResonance>{0} resuena con la raíz de {1}</CVG_ElementalResonance>
   <CVG_GuideLetterLabel>Guía del cultivador</CVG_GuideLetterLabel>
-  <CVG_GuideLetterText>Un viejo dicho de Jiuxiao: el Dao no está lejos de la gente; es la gente la que se aleja del Dao. Acá está dónde encontrarlo.\n\n- RAÍZ ESPIRITUAL: seleccioná un colono y abrí la pestaña CULTIVO. Muestra raíz, reino, etapa, qi y lo que da el reino. Solo los colonos con la raíz despierta reúnen qi; los demás pueden templar el cuerpo.\n- CULTIVAR: construí un lugar o un cojín de cultivo (menú de construcción Cultivo) y activá el trabajo CULTIVAR en la pestaña Trabajo (en prioridad 1 o 2, si no nadie tiene tiempo). La concentración de qi y la raíz lo aceleran.\n- INVESTIGACIÓN: la del cultivo se hace en el escritorio de contemplación (pestaña Producción) y está en la pestaña Cultivo del árbol de investigación. Para leer tablillas de jade hace falta «manuales de técnica»; el reino de Fundación pide su propia investigación.
+  <CVG_GuideLetterText>Un viejo dicho de Jiuxiao: el Dao no está lejos de la gente; es la gente la que se aleja del Dao. Acá está dónde encontrarlo.\n\n- RAÍZ ESPIRITUAL: seleccioná un colono y abrí la pestaña CULTIVO. Muestra raíz, reino, etapa, qi y lo que da el reino. Solo los colonos con la raíz despierta reúnen qi; los demás pueden templar el cuerpo.\n- CULTIVAR ES MEDITAR: asigná horas de Meditar en la pestaña Horario. El cultivador medita y reúne qi; prefiere un cojín o una plataforma (menú de construcción Cultivo) o un punto de meditación. La concentración de qi y la raíz lo aceleran.\n- INVESTIGACIÓN: la del cultivo se hace en el escritorio de contemplación (pestaña Producción) y está en la pestaña Cultivo del árbol de investigación. Para leer tablillas de jade hace falta «manuales de técnica»; el reino de Fundación pide su propia investigación.
 - TÉCNICAS: el comando TÉCNICAS del colono, o el botón de arriba en la pestaña Cultivo. Ahí se gastan los puntos de comprensión y se arman los conjuntos de combate.\n- AVANCE: en la última etapa de un reino aparece el comando AVANCE. Los grandes reinos traen una tribulación celestial.\n- RED DE QI: generadores, conductos y formaciones funcionan como la electricidad. La capa de qi (botones del mapa, abajo a la derecha) muestra dónde se concentra.\n\nEl Ayudante de aprendizaje explica cada paso cuando llega el momento.</CVG_GuideLetterText>
   <CVG_QiNet_Condensing>Condensando el qi sobrante: {0} / {1} para la próxima {2}.</CVG_QiNet_Condensing>
   <CVG_Setting_LegendaryBackstories>Historias raras (tiers 2-4): {0}</CVG_Setting_LegendaryBackstories>
@@ -348,4 +318,17 @@ Algunas van a comerciar, otras van a juzgar, y una de ellas caza. Su buena volun
   <CVG_Temper_Failure>El templado no prendió: {PAWN_labelShort} no alcanzó {1} esta vez (probabilidad {2}). El costo se gastó igual.</CVG_Temper_Failure>
   <CVG_Ritual_NeedBelievers>Necesita al menos {0} {1} más presentes además de los roles (ahora {2}).</CVG_Ritual_NeedBelievers>
   <CVG_Ritual_NeedBelieversDesc>Deben asistir al menos {0} creyentes más.</CVG_Ritual_NeedBelieversDesc>
+  <!-- Misión del Maestro: el inicio de la Convergencia (plan de integración, 2026-10-23) -->
+  <CVG_Setting_ForcedDay>La Convergencia llega sola a los {0} días si nunca se acoge al sabio</CVG_Setting_ForcedDay>
+  <CVG_Setting_ForcedDayTip>La Convergencia empieza cuando aceptás la misión del viejo sabio que pide refugio. Si nunca la aceptás, llega igual pasados estos días (60 = el comienzo del segundo año), como el monolito del vacío.</CVG_Setting_ForcedDayTip>
+  <CVG_MentorQuest_BeforeConvergence>Habla de una grieta a punto de abrirse en el cielo y de un qi que no fluye en este mundo desde hace diez mil años. Si lo acogés, lo que viene va a venir con él.</CVG_MentorQuest_BeforeConvergence>
+  <CVG_MentorQuest_AfterConvergence>Desde que se abrió el cielo, a los de su clase los persiguen de una punta a la otra del mundo. Solo pide un rincón y unos meses; a cambio va a enseñarle a quien tenga raíz espiritual.</CVG_MentorQuest_AfterConvergence>
+  <CVG_Mentor_HuntersLabel>Vinieron por {0}</CVG_Mentor_HuntersLabel>
+  <CVG_Mentor_HuntersText>Los que persiguieron a {PAWN_nameDef} por todo el mundo encontraron la colonia que le dio refugio. {FACTION_name} ataca: quieren al viejo maestro, y a cualquiera que se ponga en el medio.</CVG_Mentor_HuntersText>
+  <!-- Vínculos que nacen jugando (plan de integración, 2026-10-23) -->
+  <CVG_LifeDebt_Message>{PAWN_nameDef} le debe una vida a {OTHER_nameDef}: lo sacó cuando no podía tenerse en pie.</CVG_LifeDebt_Message>
+  <CVG_BloodFeud_Label>Enemistad de sangre: {0}</CVG_BloodFeud_Label>
+  <CVG_BloodFeud_Text>{KILLER_nameDef} mató a {VICTIM_nameDef}. {2} no van a olvidar esa cara: desde hoy {KILLER_nameDef} es un enemigo de sangre.
+
+Si alguna vez vuelve, lo van a reconocer. Y si muere, la sangre estará pagada.</CVG_BloodFeud_Text>
 </LanguageData>

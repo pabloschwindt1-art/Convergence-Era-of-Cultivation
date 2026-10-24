@@ -101,34 +101,6 @@
     </match>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ThingDef[defName="CVG_SpiritSword"]</xpath>
-    <match Class="PatchOperationConditional">
-      <xpath>Defs/ThingDef[defName="CVG_SpiritSword"]/weaponTags</xpath>
-      <match Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="CVG_SpiritSword"]/weaponTags</xpath>
-        <value><li>CVG_Sword</li></value>
-      </match>
-      <nomatch Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="CVG_SpiritSword"]</xpath>
-        <value><weaponTags><li>CVG_Sword</li></weaponTags></value>
-      </nomatch>
-    </match>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ThingDef[defName="CVG_SpiritSabre"]</xpath>
-    <match Class="PatchOperationConditional">
-      <xpath>Defs/ThingDef[defName="CVG_SpiritSabre"]/weaponTags</xpath>
-      <match Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="CVG_SpiritSabre"]/weaponTags</xpath>
-        <value><li>CVG_Sword</li></value>
-      </match>
-      <nomatch Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="CVG_SpiritSabre"]</xpath>
-        <value><weaponTags><li>CVG_Sword</li></weaponTags></value>
-      </nomatch>
-    </match>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
     <xpath>Defs/ThingDef[defName="CVG_Dao"]</xpath>
     <match Class="PatchOperationConditional">
       <xpath>Defs/ThingDef[defName="CVG_Dao"]/weaponTags</xpath>
@@ -279,34 +251,6 @@
       </match>
       <nomatch Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="CVG_Jian"]</xpath>
-        <value><weaponClasses><li>CVG_Sword</li></weaponClasses></value>
-      </nomatch>
-    </match>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ThingDef[defName="CVG_SpiritSword"]</xpath>
-    <match Class="PatchOperationConditional">
-      <xpath>Defs/ThingDef[defName="CVG_SpiritSword"]/weaponClasses</xpath>
-      <match Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="CVG_SpiritSword"]/weaponClasses</xpath>
-        <value><li>CVG_Sword</li></value>
-      </match>
-      <nomatch Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="CVG_SpiritSword"]</xpath>
-        <value><weaponClasses><li>CVG_Sword</li></weaponClasses></value>
-      </nomatch>
-    </match>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ThingDef[defName="CVG_SpiritSabre"]</xpath>
-    <match Class="PatchOperationConditional">
-      <xpath>Defs/ThingDef[defName="CVG_SpiritSabre"]/weaponClasses</xpath>
-      <match Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="CVG_SpiritSabre"]/weaponClasses</xpath>
-        <value><li>CVG_Sword</li></value>
-      </match>
-      <nomatch Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="CVG_SpiritSabre"]</xpath>
         <value><weaponClasses><li>CVG_Sword</li></weaponClasses></value>
       </nomatch>
     </match>

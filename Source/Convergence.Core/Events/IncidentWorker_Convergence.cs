@@ -23,7 +23,7 @@ namespace Convergence
             if (state == null || state.Occurred) return false;
 
             state.MarkOccurred();
-            ConvergenceUtility.WakeMap(map, scheduleMentor: false);
+            ConvergenceUtility.WakeMap(map);
 
             // Espectáculo con herramientas vanilla: aurora y rayos (sin shaders propios, seguro para 1.7).
             var aurora = DefDatabase<GameConditionDef>.GetNamedSilentFail("Aurora");
@@ -64,14 +64,13 @@ namespace Convergence
             SoundCues.OnCamera("CVG_Cue_Convergence");
             SendStandardLetter("CVG_Convergence_LetterLabel".Translate(), text.ToString().TrimEnd(),
                 LetterDefOf.PositiveEvent, parms, awakened.Select(x => x.pawn).ToList());
-            // El Maestro cruza la grieta poco después (M6; se desactiva en los ajustes).
-            GameComponent_Mentor.Instance?.ScheduleArrival();
             return true;
         }
     }
 
     /// <summary>
-    /// Lo que la Convergencia le hace a un mapa: linajes, vetas de piedra y jade espiritual, bestias, vetas de qi y el Maestro.
+    /// Lo que la Convergencia le hace a un mapa: linajes, vetas de piedra y jade espiritual, bestias y vetas de qi (el Maestro
+    /// llega por su misión).
     /// La usan el incidente y los escenarios que empiezan con la Convergencia ya ocurrida (antes solo marcaban la bandera y el
     /// mapa quedaba sin piedras espirituales ni Maestro).
     /// </summary>
@@ -79,7 +78,7 @@ namespace Convergence
     {
         public static int LastBeasts;
 
-        public static void WakeMap(Map map, bool scheduleMentor = true)
+        public static void WakeMap(Map map)
         {
             if (map == null) return;
             // Los linajes de sangre despiertan con el qi: hediff de efectos y capacidades.
@@ -89,17 +88,6 @@ namespace Convergence
             // Los animales pueden despertar como bestias espirituales (M4b).
             LastBeasts = SpiritBeastUtility.AwakenAnimalsOnMap(map);
             QiNetworkUtility.EnsureVeins(map);
-            if (scheduleMentor) GameComponent_Mentor.Instance?.ScheduleArrival();
-        }
-    }
-
-    /// <summary>Al completar el proyecto de investigación, dispara la Convergencia (modo Investigación).</summary>
-    public class ResearchMod_TriggerConvergence : ResearchMod
-    {
-        public override void Apply()
-        {
-            var map = Find.AnyPlayerHomeMap;
-            if (map != null) GameComponent_Convergence.Instance?.TryFire(map);
         }
     }
 

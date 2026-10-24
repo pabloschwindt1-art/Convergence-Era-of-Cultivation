@@ -3,51 +3,6 @@
   <!-- Review of Convergence: Furniture (docs/revision/REVISION_Furniture.md): cultivation places, bedside facility, sleeping mat and the comfortable chair.
        Art provisional (tinted vanilla); final art Things/Building/CVG/Furniture/<Name>. -->
 
-  <!-- ================= Cultivation places: more qi regeneration per sit and more qi in the air (qi concentration speeds cultivation and breakthroughs) ================= -->
-  <ThingDef ParentName="FurnitureBase">
-    <defName>CVG_JadePlatform</defName>
-    <label>jade platform</label>
-    <description>A low square platform of polished green jade with a round mat on top, where a cultivator sits for hours without the cold of the stone reaching them. The qi of the jade rises into the sitter and the sitter's own qi returns twice as fast. Sects hand out a place on one as a reward for ten years of service, and a place on the oldest is inherited.</description>
-    <graphicData>
-      <texPath>Things/Building/CVG/Furniture/JadePlatform</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(2,2)</drawSize>
-    </graphicData>
-    <designationCategory>CVG_Cultivation</designationCategory>
-    <researchPrerequisites><li>CVG_Research_QiBreathing</li></researchPrerequisites>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <pathCost>30</pathCost>
-    <fillPercent>0.15</fillPercent>
-    <size>(2,2)</size>
-    <rotatable>false</rotatable>
-    <statBases>
-      <MaxHitPoints>180</MaxHitPoints>
-      <WorkToBuild>4500</WorkToBuild>
-      <Mass>40</Mass>
-      <Flammability>0</Flammability>
-      <Beauty>4</Beauty>
-      <Comfort>0.55</Comfort>
-    </statBases>
-    <costList>
-      <Jade>25</Jade>
-      <Cloth>10</Cloth>
-    </costList>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <building><isSittable>true</isSittable></building>
-    <uiOrder>2451</uiOrder>
-    <modExtensions>
-      <li Class="Convergence.DefModExtension_CultivationSpot">
-        <qiRegenFactor>8</qiRegenFactor>
-        <sessionTicks>3000</sessionTicks>
-      </li>
-      <li Class="Convergence.DefModExtension_FengShui">
-        <qi>5</qi>
-        <element>CVG_Element_Earth</element>
-      </li>
-    </modExtensions>
-  </ThingDef>
-
   <ThingDef ParentName="FurnitureBase">
     <defName>CVG_SpiritJadeDais</defName>
     <label>spirit jade dais</label>
@@ -83,7 +38,6 @@
     <modExtensions>
       <li Class="Convergence.DefModExtension_CultivationSpot">
         <qiRegenFactor>12</qiRegenFactor>
-        <sessionTicks>3500</sessionTicks>
       </li>
       <li Class="Convergence.DefModExtension_FengShui">
         <qi>9</qi>
@@ -102,7 +56,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <shadowData><volume>(0.3, 0.6, 0.3)</volume></shadowData>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -144,7 +98,7 @@
       <drawSize>(2,2)</drawSize>
     </graphicData>
     <size>(1,2)</size>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <statBases>
       <WorkToBuild>100</WorkToBuild>
       <Comfort>0.45</Comfort>
@@ -168,7 +122,7 @@
       <shadowData><volume>(0.3, 0.33, 0.3)</volume></shadowData>
     </graphicData>
     <uiIconScale>0.9</uiIconScale>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
       <MaxHitPoints>110</MaxHitPoints>

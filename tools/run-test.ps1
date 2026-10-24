@@ -30,6 +30,9 @@ while (Test-Path $pausa) { Write-Host "Pausa del usuario: espero..."; Start-Slee
 
 # -Mods todos: las DLC, VEF y los 15 mods Convergence en orden de carga (sin el Sects viejo, retirado)
 if ($Mods -eq "todos") { $Mods = "brrainz.harmony,ludeon.rimworld,ludeon.rimworld.royalty,ludeon.rimworld.ideology,ludeon.rimworld.biotech,ludeon.rimworld.anomaly,ludeon.rimworld.odyssey,oskarpotocki.vanillafactionsexpanded.core,prospero1088.convergence.core,prospero1088.convergence.traitsdestinies,prospero1088.convergence.resources,prospero1088.convergence.races,prospero1088.convergence.alchemy,prospero1088.convergence.formations,prospero1088.convergence.apparel,prospero1088.convergence.biotechwuxia,prospero1088.convergence.factions,prospero1088.convergence.faunaflora,prospero1088.convergence.stories,prospero1088.convergence.qitech,prospero1088.convergence.grafts,prospero1088.convergence.furniture,prospero1088.convergence.space" }
+# Los autotests y capturas del Core viven en el mod de desarrollo Convergence: DevTools (plan de integración, 2026-10-23):
+# se carga siempre en las pruebas y nunca en el juego normal.
+if ($Mods -notmatch "convergence.devtools") { $Mods = $Mods + ",prospero1088.convergence.devtools" }
 
 $steamDir = "C:\Program Files (x86)\Steam\steamapps\common\RimWorld"
 if (-not $GameDir) {

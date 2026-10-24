@@ -4,7 +4,7 @@
     Celestial calendar (docs/EVENTOS.md §1). Map conditions that only start after the Convergence
     (IncidentWorker_CelestialCondition). Effects in DefModExtension_CelestialCondition: factors/offsets to any stat with
     Convergence.StatPart_CelestialCondition in its parts (cultivation speed, qi regen, technique cost, breakthrough
-    chance, body tempering), Dao comprehension and qi-deviation risk while cultivating.
+    chance, body tempering), Dao comprehension and how easily the inner demon wakes.
     Frequency (docs/ANALISIS_VE.md §1.2): ambient events 0.5-1.2 / ~15 days; stronger ones lower and with longer refire.
   -->
   <GameConditionDef>
@@ -62,9 +62,9 @@
     <defName>CVG_InnerDemonMoon</defName>
     <conditionClass>GameCondition</conditionClass>
     <label>inner demon moon</label>
-    <description>A red moon of Jiuxiao rises. Doubts and desires grow loud in the minds of cultivators: breakthroughs are harder and cultivating may send the qi astray.</description>
+    <description>A red moon of Jiuxiao rises. Doubts and desires grow loud in the minds of cultivators: breakthroughs are harder and the inner demon wakes easily.</description>
     <endMessage>The inner demon moon sets.</endMessage>
-    <letterText>A blood-red moon rises over the colony: the inner demon moon. While it shines, breakthroughs are harder and every hour of cultivation risks a qi deviation. Some cultivators would rather wait.</letterText>
+    <letterText>A blood-red moon rises over the colony: the inner demon moon. While it shines, breakthroughs are harder and the inner demons of the cultivators wake at the slightest doubt; whoever falls to one comes out of it with the qi running backwards. Some cultivators would rather wait.</letterText>
     <letterDef>NegativeEvent</letterDef>
     <canBePermanent>false</canBePermanent>
     <modExtensions>
@@ -75,8 +75,6 @@
         <statOffsets>
           <CVG_BreakthroughChance>-0.15</CVG_BreakthroughChance>
         </statOffsets>
-        <deviationChancePerHour>0.02</deviationChancePerHour>
-        <deviationHediff>CVG_QiDeviation</deviationHediff>
         <innerDemonBreakFactor>5</innerDemonBreakFactor>
       </li>
     </modExtensions>

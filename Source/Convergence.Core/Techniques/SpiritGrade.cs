@@ -9,6 +9,9 @@ namespace Convergence
     /// Grado espiritual de un arma (docs/modulos/DEFENSA.md §1): 0 mortal (vanilla y otros mods), 1 runas, 2 arma
     /// espiritual, 3+ tesoro. Se pone en XML con este comp; <see cref="bonus"/> (guardado) es para mejoras por
     /// instancia (mesa de runas). El stat <c>CVG_SpiritGrade</c> lo muestra en la ficha del arma.
+    /// La contramedida del Core (plan de integración, 2026-10-23): la investigación "armas templadas en qi" pone un piso de 1
+    /// a toda arma y torreta, vanilla incluida, y un material espiritual suma su grado encima. Alchemy (runas, armas wuxia) y
+    /// Qi-Tech escalan más arriba.
     /// </summary>
     public class CompProperties_SpiritGrade : CompProperties
     {
@@ -25,8 +28,8 @@ namespace Convergence
         public int bonus;
 
         public CompProperties_SpiritGrade Props => (CompProperties_SpiritGrade)props;
-        /// <summary>Grado del def + mejoras por instancia, nunca menos que el mínimo del material (ver <see cref="DefModExtension_SpiritGradeMaterial"/>).</summary>
-        public int Grade => System.Math.Max(Props.grade + bonus, MaterialMinGrade(parent.Stuff));
+        /// <summary>Grado del def + mejoras por instancia (con el piso de la investigación) + el grado del material.</summary>
+        public int Grade => System.Math.Max(Props.grade + bonus, SpiritGradeUtility.ResearchFloor) + MaterialMinGrade(parent.Stuff);
 
         public static int MaterialMinGrade(ThingDef stuff) => stuff?.GetModExtension<DefModExtension_SpiritGradeMaterial>()?.minGrade ?? 0;
 
@@ -38,9 +41,8 @@ namespace Convergence
     }
 
     /// <summary>
-    /// En un material (stuff): las armas hechas de él tienen al menos <see cref="minGrade"/> de grado espiritual. Un jian
-    /// mortal de acero espiritual ya hiere a un cultivador de Refinamiento de Qi; el melocotonero, por su lore, también.
-    /// Es un mínimo, no una suma: una espada espiritual (grado 2) de acero espiritual sigue en 2.
+    /// En un material (stuff): las armas hechas de él suman <see cref="minGrade"/> a su grado espiritual. Un jian mortal de
+    /// acero espiritual ya hiere a un cultivador de Refinamiento de Qi; templado en qi (investigación), a uno de Fundación.
     /// </summary>
     public class DefModExtension_SpiritGradeMaterial : DefModExtension
     {
@@ -55,7 +57,7 @@ namespace Convergence
         public override float GetValueUnfinalized(StatRequest req, bool applyPostProcess = true)
         {
             if (req.Thing != null) return SpiritGradeUtility.GradeOf(req.Thing);
-            return req.Def is ThingDef def ? System.Math.Max(SpiritGradeUtility.GradeOf(def), CompSpiritGrade.MaterialMinGrade(req.StuffDef)) : 0f;
+            return req.Def is ThingDef def ? SpiritGradeUtility.GradeOf(def) + CompSpiritGrade.MaterialMinGrade(req.StuffDef) : 0f;
         }
 
         public override string GetExplanationUnfinalized(StatRequest req, ToStringNumberSense numberSense) =>
@@ -104,15 +106,37 @@ namespace Convergence
             }
         }
 
+        private static ResearchProjectDef temperedArms;
+        private static bool temperedArmsResolved;
+
+        /// <summary>Piso de grado de toda arma y torreta: 1 con la investigación "armas templadas en qi", si no 0.</summary>
+        public static int ResearchFloor
+        {
+            get
+            {
+                if (!temperedArmsResolved)
+                {
+                    temperedArmsResolved = true;
+                    temperedArms = DefDatabase<ResearchProjectDef>.GetNamedSilentFail("CVG_Research_QiTemperedArms");
+                }
+                return temperedArms != null && temperedArms.IsFinished ? 1 : 0;
+            }
+        }
+
+        /// <summary>Grado del def (comp en XML), con el piso de la investigación.</summary>
         public static int GradeOf(ThingDef def)
         {
             if (def == null) return 0;
             if (!defGrades.TryGetValue(def, out int grade))
                 defGrades[def] = grade = def.GetCompProperties<CompProperties_SpiritGrade>()?.grade ?? 0;
-            return grade;
+            return Mathf.Max(grade, ResearchFloor);
         }
 
-        public static int GradeOf(Thing thing) => thing is ThingWithComps twc && twc.GetComp<CompSpiritGrade>() is CompSpiritGrade c ? c.Grade : GradeOf(thing?.def);
+        public static int GradeOf(Thing thing)
+        {
+            if (thing is ThingWithComps twc && twc.GetComp<CompSpiritGrade>() is CompSpiritGrade c) return c.Grade;
+            return GradeOf(thing?.def) + CompSpiritGrade.MaterialMinGrade(thing?.Stuff);
+        }
 
         /// <summary>
         /// Nivel de reino de un pawn (0 = mortal): el reino más alto de los caminos que sigue; en animales, el nivel de

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_Tale_DuelWanderer.label>cruzó espadas</CVG_Tale_DuelWanderer.label>
+  <CVG_Tale_DuelWanderer.rulePack.rulesStrings>
+    <li>tale_noun-&gt;[PAWN_nameDef] cruzando espadas con un desconocido del camino</li>
+    <li>tale_noun-&gt;el duelo de [PAWN_nameDef]</li>
+    <li>image-&gt;[PAWN_nameFull] y un espadachín errante congelados en el instante antes del primer corte [circumstance_group]</li>
+    <li>image-&gt;[PAWN_nameFull] haciendo una reverencia a su rival sobre dos espadas cruzadas [circumstance_group]</li>
+    <li>circumstance_phrase-&gt;mientras caen las hojas entre ellos</li>
+    <li>circumstance_phrase-&gt;en un círculo de espectadores en silencio</li>
+    <li>desc_sentence-&gt;Ninguna hoja tocó la piel todavía.</li>
+    <li>desc_sentence-&gt;Una espada rota yace a sus pies.</li>
+  </CVG_Tale_DuelWanderer.rulePack.rulesStrings>
+  <CVG_Tale_TookInStranger.label>acogió a un desconocido</CVG_Tale_TookInStranger.label>
+  <CVG_Tale_TookInStranger.rulePack.rulesStrings>
+    <li>tale_noun-&gt;[PAWN_nameDef] abriéndole el portón a un desconocido</li>
+    <li>tale_noun-&gt;la misericordia de [PAWN_nameDef]</li>
+    <li>image-&gt;[PAWN_nameFull] ofreciendo un cuenco de arroz a un viajero harapiento [circumstance_group]</li>
+    <li>image-&gt;[PAWN_nameFull] ayudando a levantarse a un desconocido en el portón de la colonia [circumstance_group]</li>
+    <li>circumstance_phrase-&gt;bajo la lluvia</li>
+    <li>circumstance_phrase-&gt;mientras cae la noche</li>
+    <li>desc_sentence-&gt;Los ojos del desconocido están húmedos.</li>
+    <li>desc_sentence-&gt;Detrás de ellos, el camino está vacío.</li>
+  </CVG_Tale_TookInStranger.rulePack.rulesStrings>
+  <CVG_Tale_DemonPact.label>hizo un pacto de sangre</CVG_Tale_DemonPact.label>
+  <CVG_Tale_DemonPact.rulePack.rulesStrings>
+    <li>tale_noun-&gt;[PAWN_nameDef] firmando un pacto con sangre</li>
+    <li>tale_noun-&gt;el pacto de sangre de [PAWN_nameDef]</li>
+    <li>image-&gt;[PAWN_nameFull] apretando un pulgar sangrante sobre un pergamino rojo [circumstance_group]</li>
+    <li>image-&gt;[PAWN_nameFull] estrechando la mano de una figura sonriente cuya sombra tiene demasiados brazos [circumstance_group]</li>
+    <li>circumstance_phrase-&gt;bajo una luna roja como la sangre</li>
+    <li>circumstance_phrase-&gt;mientras las velas se apagan alrededor</li>
+    <li>desc_sentence-&gt;El pergamino ya está ardiendo.</li>
+    <li>desc_sentence-&gt;Algo se ríe justo fuera de la vista.</li>
+  </CVG_Tale_DemonPact.rulePack.rulesStrings>
+  <CVG_Tale_SealedBlade.label>selló una espada maldita</CVG_Tale_SealedBlade.label>
+  <CVG_Tale_SealedBlade.rulePack.rulesStrings>
+    <li>tale_noun-&gt;[PAWN_nameDef] sellando la espada que susurra</li>
+    <li>tale_noun-&gt;el exorcismo de [PAWN_nameDef]</li>
+    <li>image-&gt;[PAWN_nameFull] sentado ante una espada encadenada y envuelta en talismanes [circumstance_group]</li>
+    <li>image-&gt;[PAWN_nameFull] sosteniendo quieta con las dos manos una hoja que tiembla [circumstance_group]</li>
+    <li>circumstance_phrase-&gt;durante tres días y tres noches</li>
+    <li>circumstance_phrase-&gt;mientras los talismanes se encienden uno por uno</li>
+    <li>desc_sentence-&gt;La hoja por fin se quedó callada.</li>
+    <li>desc_sentence-&gt;Un humo negro y fino escapa hacia arriba.</li>
+  </CVG_Tale_SealedBlade.rulePack.rulesStrings>
+  <CVG_Tale_HungryGhosts.label>alimentó a los fantasmas hambrientos</CVG_Tale_HungryGhosts.label>
+  <CVG_Tale_HungryGhosts.rulePack.rulesStrings>
+    <li>tale_noun-&gt;[PAWN_nameDef] alimentando a los fantasmas hambrientos</li>
+    <li>tale_noun-&gt;la Noche de los Fantasmas Hambrientos</li>
+    <li>image-&gt;[PAWN_nameFull] dejando cuencos de comida sobre una mesa vacía iluminada por faroles de papel [circumstance_group]</li>
+    <li>image-&gt;[PAWN_nameFull] quemando dinero de papel mientras unas formas pálidas se juntan al borde de la luz [circumstance_group]</li>
+    <li>circumstance_phrase-&gt;en la decimoquinta noche del séptimo mes</li>
+    <li>circumstance_phrase-&gt;mientras los faroles bajan por el río</li>
+    <li>desc_sentence-&gt;Algunos cuencos ya están vacíos.</li>
+    <li>desc_sentence-&gt;Nadie mira por encima del hombro.</li>
+  </CVG_Tale_HungryGhosts.rulePack.rulesStrings>
+</LanguageData>

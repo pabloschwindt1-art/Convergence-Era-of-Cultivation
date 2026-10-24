@@ -47,7 +47,7 @@ namespace Convergence.Formations
                 Directory.CreateDirectory(dir);
                 var center = map.Center;
                 Clear(map, center, 22);
-                var spots = new[] { ("CVG_GuardianStatue", -10), ("CVG_RuneCrossbowTurret", 0), ("CVG_ThunderBallistaTurret", 10) };
+                var spots = new[] { ("CVG_RuneCrossbowTurret", 0), ("CVG_ThunderBallistaTurret", 10) };
                 foreach (var (defName, dx) in spots)
                 {
                     var def = DefDatabase<ThingDef>.GetNamedSilentFail(defName);

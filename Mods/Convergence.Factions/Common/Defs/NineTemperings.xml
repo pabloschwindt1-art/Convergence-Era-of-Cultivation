@@ -225,7 +225,7 @@
   <!-- Trade: beast blood, tempering resources, recovery preparations and armor Good to Masterwork (never Legendary). -->
   <TraderKindDef Abstract="True" Name="CVG_TraderNineTemperingsBase">
     <stockGenerators>
-      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>300~900</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>25~75</countRange></li>
       <li Class="Convergence.StockGenerator_QualityTag">
         <tradeTag>Armor</tradeTag>
         <thingDefCountRange>2~4</thingDefCountRange>

@@ -34,7 +34,7 @@
     </statBases>
     <size>(2,2)</size>
     <rotatable>false</rotatable>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>CVG_Cultivation</designationCategory>
     <uiOrder>2520</uiOrder>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
@@ -144,7 +144,7 @@
     </statBases>
     <size>(2,2)</size>
     <rotatable>false</rotatable>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>CVG_Cultivation</designationCategory>
     <uiOrder>2520</uiOrder>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
@@ -259,7 +259,7 @@
     </statBases>
     <size>(2,2)</size>
     <rotatable>false</rotatable>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>CVG_Cultivation</designationCategory>
     <uiOrder>2520</uiOrder>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
@@ -325,7 +325,7 @@
     </statBases>
     <size>(2,2)</size>
     <rotatable>false</rotatable>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>CVG_Cultivation</designationCategory>
     <uiOrder>2520</uiOrder>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>

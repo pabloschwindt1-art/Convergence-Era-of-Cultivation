@@ -320,7 +320,10 @@ namespace Convergence
                 var w = ThingMaker.MakeThing(waste);
                 w.stackCount = Mathf.Max(1, t.stackCount);
                 if (worker != null && worker.Faction == Faction.OfPlayer)
+                {
                     Messages.Message("CVG_Pill_Failed".Translate(worker.Named("PAWN"), t.def.label), worker, MessageTypeDefOf.NegativeEvent);
+                    CultivationLife.Notify_RuinedPill(worker);
+                }
                 t.Destroy();
                 yield return w;
             }

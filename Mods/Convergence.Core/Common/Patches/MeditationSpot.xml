@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Cultivar es meditar: el punto de meditación vanilla es el lugar de cultivo gratuito (antes CVG_CultivationSpot). -->
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MeditationSpot"]</xpath>
+    <value>
+      <li Class="Convergence.DefModExtension_CultivationSpot">
+        <qiRegenFactor>3</qiRegenFactor>
+      </li>
+    </value>
+  </Operation>
+</Patch>

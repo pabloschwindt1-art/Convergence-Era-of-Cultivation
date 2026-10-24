@@ -140,7 +140,8 @@ def check_load_order():
 
 def main():
     only = sys.argv[1] if len(sys.argv) > 1 else None
-    mods = [m for m in sorted(os.listdir(MODS)) if not only or m.endswith(only)]
+    # Convergence.DevTools: mod de desarrollo (autotests), no se publica.
+    mods = [m for m in sorted(os.listdir(MODS)) if (not only or m.endswith(only)) and m != 'Convergence.DevTools']
     print(f'{"mod":28s} {"packageId":42s} {"MB":>5s} {"desc":>5s} deps')
     for m in mods:
         r = check(m)

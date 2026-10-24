@@ -4,4 +4,11 @@
   <CVG_SwornSibling.label>hermano jurado</CVG_SwornSibling.label>
   <CVG_SwornSibling.labelFemale>hermana jurada</CVG_SwornSibling.labelFemale>
   <CVG_LifelongRival.label>rival de por vida</CVG_LifelongRival.label>
+  <CVG_LifelongRival.modExtensions.1.letterLabel>Rivales: {INITIATOR_nameDef} y {RECIPIENT_nameDef}</CVG_LifelongRival.modExtensions.1.letterLabel>
+  <CVG_LifelongRival.modExtensions.1.letterText>La pelea entre {INITIATOR_nameDef} y {RECIPIENT_nameDef} no terminó con los golpes. Ahora son rivales de por vida: cada uno va a medir cada avance contra el otro.</CVG_LifelongRival.modExtensions.1.letterText>
+  <CVG_Master.label>maestro</CVG_Master.label>
+  <CVG_Disciple.label>discípulo</CVG_Disciple.label>
+  <CVG_FellowDisciple.label>condiscípulo</CVG_FellowDisciple.label>
+  <CVG_Benefactor.label>benefactor</CVG_Benefactor.label>
+  <CVG_BloodFeud.label>enemigo de sangre</CVG_BloodFeud.label>
 </LanguageData>

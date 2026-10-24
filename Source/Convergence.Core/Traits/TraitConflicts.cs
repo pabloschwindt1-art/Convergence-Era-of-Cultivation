@@ -47,12 +47,15 @@ namespace Convergence
         }
 
         /// <summary>¿Puede el pawn recibir este rasgo sin contradecir los que ya tiene?</summary>
-        public static bool CanGain(Pawn pawn, TraitDef def, int degree)
+        public static bool CanGain(Pawn pawn, TraitDef def, int degree) => CanGain(pawn, def, degree, ignore: null);
+
+        /// <summary>Como <see cref="CanGain(Pawn, TraitDef, int)"/>, sin contar <paramref name="ignore"/> (el rasgo que va a subir de grado).</summary>
+        public static bool CanGain(Pawn pawn, TraitDef def, int degree, Trait ignore)
         {
             var traits = pawn?.story?.traits;
             if (traits == null) return false;
             foreach (var t in traits.allTraits)
-                if (Conflicts(def, degree, t.def, t.Degree)) return false;
+                if (t != ignore && Conflicts(def, degree, t.def, t.Degree)) return false;
             return true;
         }
 

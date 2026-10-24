@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CVG_DiscussDao.label>hablar del Dao</CVG_DiscussDao.label>
+  <CVG_DiscussDao.logRulesInitiator.rulesStrings>
+    <li>r_logentry-&gt;[INITIATOR_nameDef] y [RECIPIENT_nameDef] [talkedabout] [daotopic].</li>
+    <li>r_logentry-&gt;[INITIATOR_nameDef] [talkedabout] [daotopic] con [RECIPIENT_nameDef].</li>
+    <li>talkedabout-&gt;discutieron sobre</li>
+    <li>talkedabout-&gt;compararon lo que saben de</li>
+    <li>talkedabout-&gt;se quedaron en silencio y después hablaron de</li>
+    <li>daotopic-&gt;adónde va el qi cuando muere un cultivador</li>
+    <li>daotopic-&gt;si el cielo castiga o solo pesa</li>
+    <li>daotopic-&gt;el cuello de botella que ninguno de los dos puede pasar</li>
+    <li>daotopic-&gt;lo que los viejos maestros no dejaron escrito</li>
+    <li>daotopic-&gt;la respiración que viene antes de la respiración</li>
+    <li>daotopic-&gt;por qué el Dao dejó ir el qi y por qué volvió</li>
+    <li>daotopic-&gt;el demonio interno y cómo enfrentarlo</li>
+  </CVG_DiscussDao.logRulesInitiator.rulesStrings>
+
+  <CVG_SwearBrotherhood.label>jurar hermandad</CVG_SwearBrotherhood.label>
+  <CVG_SwearBrotherhood.logRulesInitiator.rulesStrings>
+    <li>r_logentry-&gt;[INITIATOR_nameDef] y [RECIPIENT_nameDef] se arrodillaron, derramaron el vino en el suelo y juraron el Juramento del Camino: no nacimos el mismo día, pero moriremos el mismo día.</li>
+    <li>r_logentry-&gt;[INITIATOR_nameDef] se cortó la palma y le ofreció el cuchillo a [RECIPIENT_nameDef]; juraron ser hermanos hasta el final.</li>
+  </CVG_SwearBrotherhood.logRulesInitiator.rulesStrings>
+  <CVG_SwearBrotherhood.modExtensions.0.letterLabel>Juramento del Camino: {INITIATOR_nameDef} y {RECIPIENT_nameDef}</CVG_SwearBrotherhood.modExtensions.0.letterLabel>
+  <CVG_SwearBrotherhood.modExtensions.0.letterText>{INITIATOR_nameDef} y {RECIPIENT_nameDef} juraron el Juramento del Camino. No son de la misma sangre, pero desde hoy son hermanos, y el viejo juramento dice que morirán el mismo día.\n\nLos hermanos jurados se alegran de los avances del otro y lloran su muerte como si fueran familia.</CVG_SwearBrotherhood.modExtensions.0.letterText>
+
+  <CVG_ChallengeRival.label>desafío</CVG_ChallengeRival.label>
+  <CVG_ChallengeRival.logRulesInitiator.rulesStrings>
+    <li>r_logentry-&gt;[INITIATOR_nameDef] le dijo a [RECIPIENT_nameDef] que un día lo dejaría muy atrás en el camino al cielo.</li>
+    <li>r_logentry-&gt;[INITIATOR_nameDef] y [RECIPIENT_nameDef] se midieron en silencio; ninguno bajó la mirada primero.</li>
+  </CVG_ChallengeRival.logRulesInitiator.rulesStrings>
+  <CVG_ChallengeRival.modExtensions.0.letterLabel>Rivales: {INITIATOR_nameDef} y {RECIPIENT_nameDef}</CVG_ChallengeRival.modExtensions.0.letterLabel>
+  <CVG_ChallengeRival.modExtensions.0.letterText>{INITIATOR_nameDef} y {RECIPIENT_nameDef} son rivales de por vida. Ninguno va a descansar mientras el otro vaya adelante.\n\nLos rivales cultivan más rápido cuando el otro está cerca, y cada avance de uno es una herida para el otro.</CVG_ChallengeRival.modExtensions.0.letterText>
+
+  <CVG_DaoVow.label>voto del Dao</CVG_DaoVow.label>
+  <CVG_DaoVow.logRulesInitiator.rulesStrings>
+    <li>r_logentry-&gt;[INITIATOR_nameDef] le pidió a [RECIPIENT_nameDef] que caminara el Dao a su lado, respiración con respiración.</li>
+    <li>r_logentry-&gt;[INITIATOR_nameDef] y [RECIPIENT_nameDef] juntaron las palmas y dejaron que su qi fluyera como uno solo.</li>
+  </CVG_DaoVow.logRulesInitiator.rulesStrings>
+  <CVG_DaoVow.modExtensions.0.letterLabel>Pareja Dao: {INITIATOR_nameDef} y {RECIPIENT_nameDef}</CVG_DaoVow.modExtensions.0.letterLabel>
+  <CVG_DaoVow.modExtensions.0.letterText>{INITIATOR_nameDef} y {RECIPIENT_nameDef} hicieron el voto del Dao. Desde hoy su cultivo es uno: cuando cultivan cerca, los dos avanzan más rápido.\n\nLos textos antiguos advierten que, cuando muere uno de los dos, al otro le arrancan la mitad del Dao.</CVG_DaoVow.modExtensions.0.letterText>
+  <CVG_TakeDisciple.label>tomar como discípulo</CVG_TakeDisciple.label>
+  <CVG_TakeDisciple.logRulesInitiator.rulesStrings>
+    <li>r_logentry-&gt;[RECIPIENT_nameDef] se arrodilló y tocó el suelo con la frente tres veces; [INITIATOR_nameDef] lo aceptó como discípulo.</li>
+    <li>r_logentry-&gt;[INITIATOR_nameDef] miró respirar a [RECIPIENT_nameDef] un largo rato y dijo: "Mal. Todo mal. Volvé mañana al amanecer."</li>
+  </CVG_TakeDisciple.logRulesInitiator.rulesStrings>
+  <CVG_TakeDisciple.modExtensions.0.letterLabel>Maestro y discípulo: {INITIATOR_nameDef} y {RECIPIENT_nameDef}</CVG_TakeDisciple.modExtensions.0.letterLabel>
+  <CVG_TakeDisciple.modExtensions.0.letterText>{RECIPIENT_nameDef} se arrodilló tres veces ante {INITIATOR_nameDef} y fue aceptado como discípulo. Desde hoy el maestro responde por el cultivo del discípulo, y el discípulo le debe el respeto que se le debe a un padre.\n\nLos demás discípulos del mismo maestro serán sus condiscípulos.</CVG_TakeDisciple.modExtensions.0.letterText>
+</LanguageData>

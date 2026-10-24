@@ -242,7 +242,7 @@
   <!-- Trade: puppet materials and blueprints; the puppeteer's regalia Good to Masterwork (never Legendary); buys machines. -->
   <TraderKindDef Abstract="True" Name="CVG_TraderInvisibleThreadBase">
     <stockGenerators>
-      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>400~1200</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>33~100</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>80~250</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritThread</thingDef><countRange>30~80</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritWood</thingDef><countRange>60~160</countRange></li>

@@ -4,4 +4,20 @@
   <CVG_Thought_DaoPartnerDied.stages.0.description>Me arrancaron la mitad de mi Dao. Cultivábamos lado a lado, aliento con aliento; ahora respiro sin compañía.</CVG_Thought_DaoPartnerDied.stages.0.description>
   <CVG_Thought_SwornSiblingDied.stages.0.label>murió {0}, con quien juré hermandad</CVG_Thought_SwornSiblingDied.stages.0.label>
   <CVG_Thought_SwornSiblingDied.stages.0.description>Juramos morir el mismo día. Yo sigo acá. El Juramento del Camino no dice qué hacer con la mitad que queda.</CVG_Thought_SwornSiblingDied.stages.0.description>
+  <CVG_Thought_MasterDied.stages.0.label>murió mi maestro {0}</CVG_Thought_MasterDied.stages.0.label>
+  <CVG_Thought_MasterDied.stages.0.description>Un maestro es un padre para esta vida y la siguiente. Todo lo que sé del Dao lo aprendí a sus pies, y ahora no hay nadie que me diga cuándo me equivoco.</CVG_Thought_MasterDied.stages.0.description>
+  <CVG_Thought_DiscipleDied.stages.0.label>murió mi discípulo {0}</CVG_Thought_DiscipleDied.stages.0.label>
+  <CVG_Thought_DiscipleDied.stages.0.description>Le enseñé a respirar, a sentarse, a aguantar el dolor. No le enseñé a vivir lo suficiente. ¿Qué clase de maestro sobrevive a su discípulo?</CVG_Thought_DiscipleDied.stages.0.description>
+  <CVG_Thought_FellowDiscipleDied.stages.0.label>murió mi condiscípulo {0}</CVG_Thought_FellowDiscipleDied.stages.0.label>
+  <CVG_Thought_FellowDiscipleDied.stages.0.description>Nos arrodillamos en el mismo patio y nos retó la misma voz. Un cuenco menos en la mesa del maestro.</CVG_Thought_FellowDiscipleDied.stages.0.description>
+  <CVG_Thought_BenefactorDied.stages.0.label>murió mi benefactor {0}</CVG_Thought_BenefactorDied.stages.0.label>
+  <CVG_Thought_BenefactorDied.stages.0.description>Me sacó cuando no podía tenerme en pie, y nunca le pagué la deuda. Ahora ya no voy a poder. Una deuda de vida no muere con el acreedor.</CVG_Thought_BenefactorDied.stages.0.description>
+  <CVG_Thought_BloodFeudAvenged.stages.0.label>{0} por fin está muerto</CVG_Thought_BloodFeudAvenged.stages.0.label>
+  <CVG_Thought_BloodFeudAvenged.stages.0.description>El que mató a alguien que yo quería está muerto. La sangre está pagada. Pensé que se iba a sentir como algo más.</CVG_Thought_BloodFeudAvenged.stages.0.description>
+  <CVG_Thought_LifeDebt.stages.0.label>{0} me salvó la vida</CVG_Thought_LifeDebt.stages.0.label>
+  <CVG_Thought_LifeDebt.stages.0.description>Estaba en el suelo y el mundo se ponía gris, y alguien me sacó. Le debo una vida. Entre cultivadores, esa deuda se paga o se vuelve un demonio interno.</CVG_Thought_LifeDebt.stages.0.description>
+  <CVG_Thought_TookDisciple.stages.0.label>tomé un discípulo</CVG_Thought_TookDisciple.stages.0.label>
+  <CVG_Thought_TookDisciple.stages.0.description>Alguien va a llevar lo que sé cuando yo ya no esté. Es la única inmortalidad en la que confiaban los viejos maestros.</CVG_Thought_TookDisciple.stages.0.description>
+  <CVG_Thought_BecameDisciple.stages.0.label>me aceptaron como discípulo</CVG_Thought_BecameDisciple.stages.0.label>
+  <CVG_Thought_BecameDisciple.stages.0.description>Un maestro de verdad me aceptó. Por primera vez el camino tiene a alguien que va delante de mí.</CVG_Thought_BecameDisciple.stages.0.description>
 </LanguageData>

@@ -131,15 +131,16 @@ namespace Convergence.Stories
                 case "neutral":
                     return Find.FactionManager.AllFactionsListForReading.Where(x => !x.IsPlayer && !x.Hidden && x.def.humanlikeFaction && !x.HostileTo(Faction.OfPlayer)).RandomElementWithFallback();
                 case "empire": return Find.FactionManager.OfEmpire;
-                case "war:a": return GameComponent_SectWorld.Instance?.CurrentWar?.A;
-                case "war:b": return GameComponent_SectWorld.Instance?.CurrentWar?.B;
-                case "pact:a": return GameComponent_SectWorld.Instance?.LastPair?.A;
-                case "pact:b": return GameComponent_SectWorld.Instance?.LastPair?.B;
             }
             return StoryUtility.FactionByDef(token);
         }
 
-        public string Serialize() => string.Join("|", factions.Select(kv => kv.Key + "=" + kv.Value.def.defName + ":" + kv.Value.loadID));
+        public string Serialize()
+        {
+            string s = string.Join("|", factions.Select(kv => kv.Key + "=" + kv.Value.def.defName + ":" + kv.Value.loadID));
+            var p = RandomColonist;
+            return p == null ? s : s + "|@pawn=" + p.ThingID;
+        }
 
         public static StoryContext Deserialize(Map map, StoryEventDef def, string payload)
         {
@@ -147,6 +148,12 @@ namespace Convergence.Stories
             if (payload.NullOrEmpty()) return ctx;
             foreach (var part in payload.Split('|'))
             {
+                if (part.StartsWith("@pawn="))
+                {
+                    string thingId = part.Substring(6);
+                    ctx.protagonist = map.mapPawns.FreeColonistsSpawned.FirstOrDefault(x => x.ThingID == thingId);
+                    continue;
+                }
                 var kv = part.Split('=');
                 if (kv.Length != 2) continue;
                 var idPart = kv[1].Split(':');
@@ -158,7 +165,11 @@ namespace Convergence.Stories
         }
 
         public List<Pawn> Colonists => map.mapPawns.FreeColonistsSpawned;
-        public Pawn RandomColonist => Colonists.RandomElementWithFallback();
+        private Pawn protagonist;
+
+        /// <summary>El colono que vive el evento: el mismo en el texto, en la decisión y en sus resultados (antes cada
+        /// resultado elegía otro al azar y la carta nombraba a uno mientras la herida le tocaba a otro).</summary>
+        public Pawn RandomColonist => protagonist != null && !protagonist.Dead && protagonist.Spawned ? protagonist : protagonist = Colonists.RandomElementWithFallback();
         public Pawn RandomCultivator => Colonists.Where(p => CompCultivator.For(p)?.IsCultivator ?? false).RandomElementWithFallback();
 
         public NamedArgument[] Args()
@@ -245,6 +256,33 @@ namespace Convergence.Stories
         }
     }
 
+    /// <summary>Queda como relato (arte, esculturas): el protagonista del evento vivió esto.</summary>
+    public class SO_Tale : StoryOutcome
+    {
+        public TaleDef tale;
+        protected override LookTargets Apply(StoryContext ctx)
+        {
+            var p = ctx.RandomColonist;
+            if (tale != null && p != null) TaleRecorder.RecordTale(tale, p);
+            return null;
+        }
+    }
+
+    /// <summary>Favor de secta (Royalty): la contribución que suben los rangos de la secta del protagonista.</summary>
+    public class SO_Favor : StoryOutcome
+    {
+        public string faction = "sect:friendly";
+        public int amount = 2;
+        protected override LookTargets Apply(StoryContext ctx)
+        {
+            var f = ctx.Resolve(faction);
+            var p = ctx.RandomColonist;
+            if (f == null || p?.royalty == null || !ModsConfig.RoyaltyActive || f.def.RoyalTitlesAwardableInSeniorityOrderForReading.NullOrEmpty()) return null;
+            p.royalty.GainFavor(f, amount);
+            return p;
+        }
+    }
+
     /// <summary>Gente que se une a la colonia.</summary>
     public class SO_Join : StoryOutcome
     {
@@ -256,7 +294,8 @@ namespace Convergence.Stories
             int n = count.RandomInRange;
             for (int i = 0; i < n; i++)
             {
-                var p = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind ?? PawnKindDefOf.Villager, null, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: true));
+                // Con la facción del jugador desde el principio (como el vanilla "se une un viajero"): ideología y nombre correctos.
+                var p = PawnGenerator.GeneratePawn(new PawnGenerationRequest(kind ?? PawnKindDefOf.Villager, Faction.OfPlayer, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: true));
                 if (RCellFinder.TryFindRandomPawnEntryCell(out var cell, ctx.map, CellFinder.EdgeRoadChance_Friendly)) GenSpawn.Spawn(p, cell, ctx.map);
                 else GenSpawn.Spawn(p, CellFinder.RandomClosewalkCellNear(ctx.map.Center, ctx.map, 8), ctx.map);
                 p.SetFaction(Faction.OfPlayer);
@@ -576,14 +615,28 @@ namespace Convergence.Stories
             if (res.TryTranslate(out var text)) Messages.Message(text.Formatted(ctx.Args()), MessageTypeDefOf.NeutralEvent, historical: false);
         }
 
-        /// <summary>Un evento programado ("ev:&lt;defName&gt;") o de cadena.</summary>
-        public static void RunScheduled(string defName)
+        private const int ScheduledRetries = 10;
+
+        /// <summary>Un evento programado ("ev:&lt;defName&gt;[#intento]") o de cadena. Si justo no puede ocurrir (hay una amenaza
+        /// en el mapa, huéspedes, falta un cultivador) se aplaza un día en vez de perderse: así las cadenas y las cacerías no se
+        /// cortan en silencio.</summary>
+        public static void RunScheduled(string arg)
         {
+            int hash = arg.IndexOf('#');
+            string defName = hash < 0 ? arg : arg.Substring(0, hash);
+            int attempt = hash < 0 ? 0 : int.TryParse(arg.Substring(hash + 1), out int n) ? n : 0;
             var def = DefDatabase<StoryEventDef>.GetNamedSilentFail(defName);
             var map = StoryUtility.HomeMap;
             if (def == null || map == null) return;
-            if (!Eligible(def, map, ignoreTiming: true)) return;
-            Fire(def, map);
+            if (Eligible(def, map, ignoreTiming: true))
+            {
+                Fire(def, map);
+                return;
+            }
+            if (attempt < ScheduledRetries)
+                GameComponent_Story.Instance?.Schedule("ev:" + defName + "#" + (attempt + 1), GenDate.TicksPerDay);
+            else
+                Log.Warning("[Convergence] Story event " + defName + " could not happen after " + ScheduledRetries + " days; dropped.");
         }
 
         public static bool CanAffordOption(StoryOption o, Map map, out string reason)
@@ -596,12 +649,34 @@ namespace Convergence.Stories
             return false;
         }
 
-        public static void PickAndFire(Map map)
+        public static bool PickAndFire(Map map) => PickAndFire(map, threat: null);
+
+        /// <summary>Elige y dispara un evento elegible (<paramref name="threat"/>: solo amenazas / solo no amenazas / cualquiera).</summary>
+        public static bool PickAndFire(Map map, bool? threat)
         {
-            var pool = All.Where(d => Eligible(d, map)).ToList();
-            if (pool.Count == 0) return;
-            var def = pool.RandomElementByWeight(d => d.weight);
-            Fire(def, map);
+            var pool = All.Where(d => (threat == null || d.isThreat == threat.Value) && Eligible(d, map)).ToList();
+            if (pool.Count == 0) return false;
+            return Fire(pool.RandomElementByWeight(d => d.weight), map);
         }
+
+        public static bool AnyEligible(Map map, bool threat) => All.Any(d => d.isThreat == threat && Eligible(d, map));
+    }
+}
+
+namespace Convergence.Stories
+{
+    /// <summary>
+    /// Los eventos de historia pasan por el narrador vanilla (plan de integración, 2026-10-23): un incidente común y uno de
+    /// amenaza que eligen un <see cref="StoryEventDef"/> elegible. Así Cassandra, Phoebe o Randy deciden cuándo, la dificultad y
+    /// "desactivar incidentes" funcionan, y no hay un reloj aparte.
+    /// </summary>
+    public class IncidentWorker_StoryEvent : IncidentWorker
+    {
+        protected bool Threat => def.category == IncidentCategoryDefOf.ThreatSmall || def.category == IncidentCategoryDefOf.ThreatBig;
+
+        protected override bool CanFireNowSub(IncidentParms parms) =>
+            parms.target is Map map && map.IsPlayerHome && StoryEngine.FrequencyFactor() > 0f && StoryEngine.AnyEligible(map, Threat);
+
+        protected override bool TryExecuteWorker(IncidentParms parms) => StoryEngine.PickAndFire((Map)parms.target, Threat);
     }
 }

@@ -104,7 +104,7 @@
   <PawnKindDef Abstract="True" Name="CVG_HeavenlyCauldronKindBase" ParentName="CVG_Sect2KindBase">
     <defaultFactionDef>CVG_Faction_HeavenlyCauldron</defaultFactionDef>
     <nameMaker>CVG_NamerPerson_HeavenlyCauldron</nameMaker>
-    <weaponTags><li>CVG_SpiritWeapon</li><li>SimpleGun</li></weaponTags>
+    <weaponTags><li>CVG_WuxiaMelee</li><li>SimpleGun</li></weaponTags>
     <apparelTags><li>IndustrialBasic</li><li>Neolithic</li></apparelTags>
     <apparelColor>(0.78,0.32,0.22)</apparelColor>
   </PawnKindDef>
@@ -234,7 +234,7 @@
        buys every technology. -->
   <TraderKindDef Abstract="True" Name="CVG_TraderHeavenlyCauldronBase">
     <stockGenerators>
-      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>500~1500</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>42~125</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>150~400</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritJade</thingDef><countRange>5~25</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_FoundationPill</thingDef><countRange>1~4</countRange></li>
@@ -247,7 +247,7 @@
       <li Class="StockGenerator_SingleDef" MayRequire="prospero1088.convergence.alchemy"><thingDef>CVG_SpiritHerb</thingDef><countRange>5~25</countRange></li>
       <li Class="Convergence.StockGenerator_QualityTag" MayRequire="prospero1088.convergence.alchemy">
         <tradeTag>WeaponMelee</tradeTag>
-        <weaponTags><li>CVG_SpiritWeapon</li></weaponTags>
+        <weaponTags><li>CVG_WuxiaMelee</li></weaponTags>
         <thingDefCountRange>1~3</thingDefCountRange>
         <countRange>1~1</countRange>
         <qualities>
@@ -346,7 +346,7 @@
     <modExtensions>
       <li Class="Convergence.Factions.DefModExtension_SectGift">
         <options>
-          <li MayRequire="prospero1088.convergence.alchemy"><weaponTag>CVG_SpiritWeapon</weaponTag><quality>Masterwork</quality></li>
+          <li MayRequire="prospero1088.convergence.alchemy"><weaponTag>CVG_WuxiaMelee</weaponTag><quality>Masterwork</quality></li>
           <li><thing>CVG_FoundationPill</thing><count>3</count><quality>Masterwork</quality></li>
         </options>
       </li>

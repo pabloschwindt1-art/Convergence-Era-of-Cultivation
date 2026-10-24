@@ -9,7 +9,7 @@
   <ConceptDef ParentName="CVG_ConceptBase">
     <defName>CVG_Concept_Cultivation</defName>
     <label>Cultivation</label>
-    <helpText>Since the Convergence, qi flows again. Colonists with a SPIRIT ROOT can gather it.\n\nSelect a colonist and open the CULTIVATION tab: root, realm, stage, qi and what the realm grants.\n\nBuild a cultivation spot or cushion and enable the CULTIVATE job in the Work tab. Cultivating there fills the realm's progress bar. Stage by stage, the colonist reaches a bottleneck.\n\nColonists without a root can still TEMPER THE BODY: eat spirit-beast meat and train.</helpText>
+    <helpText>Since the Convergence, qi flows again. Colonists with a SPIRIT ROOT can gather it.\n\nSelect a colonist and open the CULTIVATION tab: root, realm, stage, qi and what the realm grants.\n\nTo cultivate is to MEDITATE: give the colonist hours of Meditate in the Schedule tab (or let them meditate for recreation). Every breath taken in meditation gathers qi and fills the realm's progress bar, faster on a meditation spot, cushion or platform and where the qi is thick. Stage by stage, the colonist reaches a bottleneck.\n\nColonists without a root can still TEMPER THE BODY: eat spirit-beast meat and train.</helpText>
   </ConceptDef>
 
   <ConceptDef ParentName="CVG_ConceptBase">

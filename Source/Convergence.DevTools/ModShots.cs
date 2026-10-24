@@ -519,7 +519,7 @@ namespace Convergence
             if (flag != null)
                 foreach (var off in new[] { new IntVec3(-5, 0, -5), new IntVec3(5, 0, -5), new IntVec3(-5, 0, 5), new IntVec3(5, 0, 5), new IntVec3(0, 0, 6), new IntVec3(0, 0, -6), new IntVec3(-6, 0, 0), new IntVec3(6, 0, 0) })
                     Put(flag, center + off, Rot4.North);
-            var statue = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_GuardianStatue");
+            var statue = DefDatabase<ThingDef>.GetNamedSilentFail("CVG_RuneCrossbowTurret");
             if (statue != null) { Put(statue, center + new IntVec3(-3, 0, 2), Rot4.South); Put(statue, center + new IntVec3(3, 0, 2), Rot4.South); }
             Colonist(center + new IntVec3(0, 0, -3));
             Frame(CellRect.CenteredOn(center, 7));

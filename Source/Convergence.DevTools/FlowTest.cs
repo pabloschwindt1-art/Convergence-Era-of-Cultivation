@@ -115,16 +115,24 @@ namespace Convergence
 
         // ---------------------------------------------------------------- el Maestro, como en la partida real
         private int mentorStageStart, lessonsSeen;
+        private Quest quest;
         private MentorLesson handledLesson;
 
         private void MentorStart()
         {
             sb.Append("\n  mentor");
-            var state = GameComponent_Mentor.Instance;
-            var tr = HarmonyLib.Traverse.Create(state);
-            int arrival = tr.Field("arrivalTick").GetValue<int>();
-            Check(arrival >= 0 || state.Mentor != null, $"the Convergence scheduled the mentor (arrival tick {arrival})");
-            tr.Field("arrivalTick").SetValue(Find.TickManager.TicksGame); // como si pasaran los días de espera
+            // El Maestro llega por su misión ("un viejo sabio busca refugio"): ofrecerla y aceptarla como el jugador.
+            var map = Find.CurrentMap;
+            quest = Find.QuestManager.QuestsListForReading.FirstOrDefault(q => q.root == CVG_DefOf.CVG_MentorRefuge);
+            if (quest == null)
+            {
+                var slate = new RimWorld.QuestGen.Slate();
+                slate.Set("map", map);
+                slate.Set("points", StorytellerUtility.DefaultThreatPointsNow(map));
+                quest = QuestUtility.GenerateQuestAndMakeAvailable(CVG_DefOf.CVG_MentorRefuge, slate);
+            }
+            Check(quest != null && quest.State == QuestState.NotYetAccepted, "the sage's quest is offered and waits for the player");
+            quest?.Accept(pawn);
             mentorStageStart = Find.TickManager.TicksGame;
             stage = 3;
         }
@@ -178,6 +186,7 @@ namespace Convergence
                 var def = DefDatabase<MentorDef>.AllDefsListForReading.First(m => m.farewellItem != null);
                 bool jade = map.listerThings.AllThings.Any(x => x.def.defName.StartsWith("CVG_JadeFragment"));
                 Check(jade, "the mentor left and the jade fragment stays (quest chain starts)");
+                Check(quest != null && quest.State == QuestState.EndedSuccess, "the sage's quest ended in success when he left (" + quest?.State + ")");
                 Finish();
             }
         }

@@ -8,17 +8,14 @@ namespace Convergence
     /// <summary>
     /// Efectos de una condición del calendario celestial (docs/EVENTOS.md §1: Marea de Qi, Reflujo del Qi, Luna del
     /// Demonio Interno…), en el <c>GameConditionDef</c>. Genérico: factores y sumas a cualquier stat con
-    /// <see cref="StatPart_CelestialCondition"/> en su lista de partes, multiplicador de la comprensión del Dao y riesgo
-    /// de desviación al cultivar.
+    /// <see cref="StatPart_CelestialCondition"/> en su lista de partes, multiplicador de la comprensión del Dao y de la crisis
+    /// del demonio interno (que deja la desviación de qi: ya no hay tirada por hora de cultivo).
     /// </summary>
     public class DefModExtension_CelestialCondition : DefModExtension
     {
         public List<StatModifier> statFactors;
         public List<StatModifier> statOffsets;
         public float daoComprehensionFactor = 1f;
-        /// <summary>Probabilidad por hora de cultivo de sufrir <see cref="deviationHediff"/>.</summary>
-        public float deviationChancePerHour;
-        public HediffDef deviationHediff;
         /// <summary>Multiplicador de la probabilidad de la crisis "demonio interno" (MentalBreakWorker_InnerDemon).</summary>
         public float innerDemonBreakFactor = 1f;
     }
@@ -81,23 +78,5 @@ namespace Convergence
             return f;
         }
 
-        /// <summary>Riesgo de desviación mientras cultiva (Luna del Demonio Interno).</summary>
-        public static void TickPracticing(Pawn pawn, int ticks)
-        {
-            var map = pawn?.MapHeld;
-            if (map == null) return;
-            float hours = (float)ticks / GenDate.TicksPerHour;
-            foreach (var condition in map.gameConditionManager.ActiveConditions)
-            {
-                var ext = condition.def.GetModExtension<DefModExtension_CelestialCondition>();
-                if (ext?.deviationHediff == null || ext.deviationChancePerHour <= 0f) continue;
-                if (pawn.health.hediffSet.HasHediff(ext.deviationHediff) || !Rand.Chance(ext.deviationChancePerHour * hours)) continue;
-                pawn.health.AddHediff(ext.deviationHediff);
-                if (pawn.Faction?.IsPlayer ?? false)
-                    Messages.Message("CVG_Calendar_Deviation".Translate(pawn.Named("PAWN"), condition.LabelCap), pawn, MessageTypeDefOf.NegativeHealthEvent);
-                pawn.jobs?.EndCurrentJob(Verse.AI.JobCondition.InterruptForced);
-                return;
-            }
-        }
     }
 }

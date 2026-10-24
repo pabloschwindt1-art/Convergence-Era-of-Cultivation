@@ -41,23 +41,6 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseBullet">
-    <defName>CVG_QT_CompressedBolt</defName>
-    <label>compressed qi bolt</label>
-    <graphicData>
-      <texPath>Things/Projectile/CVG/QiTech/CompressedBolt</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.0</drawSize>
-    </graphicData>
-    <projectile>
-      <damageDef>Bullet</damageDef>
-      <damageAmountBase>30</damageAmountBase>
-      <armorPenetrationBase>0.5</armorPenetrationBase>
-      <stoppingPower>2</stoppingPower>
-      <speed>110</speed>
-    </projectile>
-  </ThingDef>
-
   <!-- ================= Induction rifle (grade 1) ================= -->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>CVG_QT_InductionRifle</defName>
@@ -190,6 +173,22 @@
     </comps>
   </ThingDef>
 
+  <ThingDef ParentName="BaseBullet">
+    <defName>CVG_QT_CompressedBolt</defName>
+    <label>compressed qi bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/CVG/QiTech/CompressedBolt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+      <armorPenetrationBase>0.5</armorPenetrationBase>
+      <stoppingPower>2</stoppingPower>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
   <!-- ================= Compression cannon (grade 3) ================= -->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>CVG_QT_CompressionCannon</defName>

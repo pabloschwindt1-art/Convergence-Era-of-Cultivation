@@ -5,18 +5,21 @@
     <label>cultivation</label>
   </ResearchTabDef>
 
-  <!-- Modo "Investigación": completarla dispara la Convergencia. Sin requisitos tecnológicos (sirve en modo clásico). -->
+  <!-- The Core's countermeasure against cultivators (integration plan, 2026-10-23): every weapon and turret, vanilla included,
+       gets spirit grade 1 (Convergence.SpiritGradeUtility.ResearchFloor). A normal research project, for mortal smiths. -->
   <ResearchProjectDef>
-    <defName>CVG_SpiritualAnomalyStudy</defName>
-    <label>spiritual anomaly study</label>
-    <description>Strange lights in the sky, animals restless at night, a stone that hums when touched. Study the anomaly and find out what is coming. Completing this project triggers the Convergence if it has not happened yet.</description>
+    <defName>CVG_Research_QiTemperedArms</defName>
+    <label>qi-tempered arms</label>
+    <description>Since the qi came back, a cultivator can shrug off a rifle round like a mosquito bite. The smiths who survived the first years learned why: a mortal blade has no qi to bite with. Quench the steel in water where spirit stones have soaked, chant the old tempering count, and even a bolt-action rifle remembers how to wound an immortal.
+
+All weapons and turrets reach spirit grade 1. Weapons made of a spirit material add its grade on top.</description>
     <baseCost>1200</baseCost>
-    <techLevel>Neolithic</techLevel>
+    <techLevel>Medieval</techLevel>
     <tab>CVG_Cultivation</tab>
-    <researchViewX>0</researchViewX>
-    <researchViewY>0</researchViewY>
-    <researchMods>
-      <li Class="Convergence.ResearchMod_TriggerConvergence" />
-    </researchMods>
+    <prerequisites>
+      <li>CVG_Research_QiBreathing</li>
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>3</researchViewY>
   </ResearchProjectDef>
 </Defs>

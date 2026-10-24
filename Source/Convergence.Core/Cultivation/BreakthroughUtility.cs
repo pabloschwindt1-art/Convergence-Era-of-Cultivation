@@ -118,7 +118,7 @@ namespace Convergence
         public static Thing FindSpot(Pawn pawn)
         {
             if (pawn.Map == null) return null;
-            return GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, WorkGiver_Cultivate.AllSpots(pawn.Map),
+            return GenClosest.ClosestThing_Global_Reachable(pawn.Position, pawn.Map, MeditationCultivation.AllSpots(pawn.Map),
                 PathEndMode.OnCell, TraverseParms.For(pawn, Danger.Some), 9999f,
                 t => t.Faction == pawn.Faction && !t.IsForbidden(pawn) && !t.IsBurning()
                      && pawn.CanReserveSittableOrSpot(t.Position, t));

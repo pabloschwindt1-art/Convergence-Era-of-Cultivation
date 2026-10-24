@@ -185,11 +185,38 @@ namespace Convergence.Formations
     public class FormationMapComponent : MapComponent
     {
         private readonly List<CompFormationCore> cores = new List<CompFormationCore>();
+        private readonly List<CompFormationCore> protective = new List<CompFormationCore>();
+        private static Map cachedMap;
+        private static FormationMapComponent cachedComp;
 
         public FormationMapComponent(Map map) : base(map) { }
         public List<CompFormationCore> Cores => cores;
-        public void Register(CompFormationCore c) { if (!cores.Contains(c)) cores.Add(c); }
-        public void Unregister(CompFormationCore c) => cores.Remove(c);
+        /// <summary>Solo los núcleos protectores: el parche de proyectiles corre en cada tick de cada proyectil y no recorre el resto.</summary>
+        public List<CompFormationCore> Protective => protective;
+
+        public void Register(CompFormationCore c)
+        {
+            if (!cores.Contains(c)) cores.Add(c);
+            if (c.Worker is FormationWorker_Protective && !protective.Contains(c)) protective.Add(c);
+        }
+
+        public void Unregister(CompFormationCore c)
+        {
+            cores.Remove(c);
+            protective.Remove(c);
+        }
+
+        /// <summary>El componente del mapa, con caché del último mapa (GetComponent recorre la lista en cada llamada).</summary>
+        public static FormationMapComponent For(Map map)
+        {
+            if (map == null) return null;
+            if (map != cachedMap || cachedComp?.map != map)
+            {
+                cachedMap = map;
+                cachedComp = map.GetComponent<FormationMapComponent>();
+            }
+            return cachedComp;
+        }
     }
 
     // ------------------------------------------------------------------ efectos
@@ -206,12 +233,12 @@ namespace Convergence.Formations
         {
             var map = p.Map;
             if (map == null) return false;
-            var comp = map.GetComponent<FormationMapComponent>();
-            if (comp == null || comp.Cores.Count == 0) return false;
+            var comp = FormationMapComponent.For(map);
+            if (comp == null || comp.Protective.Count == 0) return false;
             var cell = p.ExactPosition.ToIntVec3();
-            foreach (var core in comp.Cores)
+            foreach (var core in comp.Protective)
             {
-                if (!(core.Worker is FormationWorker_Protective) || !core.Active || !core.Contains(cell)) continue;
+                if (!core.Active || !core.Contains(cell)) continue;
                 var launcher = p.Launcher;
                 if (launcher == null || launcher.Faction == null || !launcher.Faction.HostileTo(core.parent.Faction)) continue;
                 float cost = p.DamageAmount / Mathf.Max(1f, core.Power);

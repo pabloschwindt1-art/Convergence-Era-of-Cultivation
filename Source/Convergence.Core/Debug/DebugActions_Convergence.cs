@@ -198,13 +198,6 @@ namespace Convergence
             else Messages.Message("No bloodline, or already at the highest purity.", MessageTypeDefOf.RejectInput, false);
         }
 
-        [DebugAction("Convergence", "Convergence: Bloodline self-test", allowedGameStates = AllowedGameStates.PlayingOnMap)]
-        private static void BloodlineSelfTestAction()
-        {
-            BloodlineSelfTest.Run();
-            Messages.Message("Logged to the debug log.", MessageTypeDefOf.NeutralEvent, false);
-        }
-
         [DebugAction("Convergence", "Convergence: Learn manual", allowedGameStates = AllowedGameStates.PlayingOnMap)]
         private static List<DebugActionNode> LearnManual()
         {

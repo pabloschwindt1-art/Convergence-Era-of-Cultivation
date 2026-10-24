@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LanguageData>
-  <CVG_Cultivation.labelShort>cultivar</CVG_Cultivation.labelShort>
-  <CVG_Cultivation.pawnLabel>Cultivador</CVG_Cultivation.pawnLabel>
-  <CVG_Cultivation.gerundLabel>cultivando</CVG_Cultivation.gerundLabel>
-  <CVG_Cultivation.description>Sentarse en un lugar de cultivo para reunir qi y avanzar en el cultivo. Solo pueden hacerlo los colonos con una raíz espiritual despierta.</CVG_Cultivation.description>
-  <CVG_Cultivation.verb>Cultivar</CVG_Cultivation.verb>
-</LanguageData>

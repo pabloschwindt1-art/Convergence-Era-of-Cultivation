@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Story events leave tales (integration plan, 2026-10-23): the protagonist of the event ends up carved in sculptures. -->
+  <TaleDef>
+    <defName>CVG_Tale_DuelWanderer</defName>
+    <label>crossed swords</label>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <type>Volatile</type>
+    <usableForArt>true</usableForArt>
+    <baseInterest>50</baseInterest>
+    <rulePack>
+      <rulesStrings>
+        <li>tale_noun-&gt;[PAWN_nameDef] crossing swords with a stranger of the road</li>
+        <li>tale_noun-&gt;[PAWN_nameDef]'s duel</li>
+        <li>image-&gt;[PAWN_nameFull] and a wandering swordsman frozen in the instant before the first cut [circumstance_group]</li>
+        <li>image-&gt;[PAWN_nameFull] bowing to an opponent over two crossed blades [circumstance_group]</li>
+        <li>circumstance_phrase-&gt;while the leaves fall between them</li>
+        <li>circumstance_phrase-&gt;in a ring of silent onlookers</li>
+        <li>desc_sentence-&gt;Neither blade has touched skin yet.</li>
+        <li>desc_sentence-&gt;A broken sword lies at their feet.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+
+  <TaleDef>
+    <defName>CVG_Tale_TookInStranger</defName>
+    <label>took in a stranger</label>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <type>Volatile</type>
+    <usableForArt>true</usableForArt>
+    <baseInterest>35</baseInterest>
+    <rulePack>
+      <rulesStrings>
+        <li>tale_noun-&gt;[PAWN_nameDef] opening the gate to a stranger</li>
+        <li>tale_noun-&gt;[PAWN_nameDef]'s mercy</li>
+        <li>image-&gt;[PAWN_nameFull] offering a bowl of rice to a ragged traveller [circumstance_group]</li>
+        <li>image-&gt;[PAWN_nameFull] helping a stranger to their feet at the colony gate [circumstance_group]</li>
+        <li>circumstance_phrase-&gt;in the rain</li>
+        <li>circumstance_phrase-&gt;as night falls</li>
+        <li>desc_sentence-&gt;The stranger's eyes are wet.</li>
+        <li>desc_sentence-&gt;Behind them, the road is empty.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+
+  <TaleDef>
+    <defName>CVG_Tale_DemonPact</defName>
+    <label>made a blood pact</label>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <type>Volatile</type>
+    <usableForArt>true</usableForArt>
+    <baseInterest>60</baseInterest>
+    <rulePack>
+      <rulesStrings>
+        <li>tale_noun-&gt;[PAWN_nameDef] signing a pact in blood</li>
+        <li>tale_noun-&gt;[PAWN_nameDef]'s blood pact</li>
+        <li>image-&gt;[PAWN_nameFull] pressing a bleeding thumb to a red scroll [circumstance_group]</li>
+        <li>image-&gt;[PAWN_nameFull] shaking hands with a smiling figure whose shadow has too many arms [circumstance_group]</li>
+        <li>circumstance_phrase-&gt;under a blood-red moon</li>
+        <li>circumstance_phrase-&gt;while candles gutter all around</li>
+        <li>desc_sentence-&gt;The scroll is already burning.</li>
+        <li>desc_sentence-&gt;Something is laughing just out of sight.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+
+  <TaleDef>
+    <defName>CVG_Tale_SealedBlade</defName>
+    <label>sealed a cursed blade</label>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <type>Volatile</type>
+    <usableForArt>true</usableForArt>
+    <baseInterest>55</baseInterest>
+    <rulePack>
+      <rulesStrings>
+        <li>tale_noun-&gt;[PAWN_nameDef] sealing the whispering blade</li>
+        <li>tale_noun-&gt;[PAWN_nameDef]'s exorcism</li>
+        <li>image-&gt;[PAWN_nameFull] sitting before a chained sword wrapped in talismans [circumstance_group]</li>
+        <li>image-&gt;[PAWN_nameFull] holding a trembling blade still with both hands [circumstance_group]</li>
+        <li>circumstance_phrase-&gt;for three days and three nights</li>
+        <li>circumstance_phrase-&gt;as the talismans catch fire one by one</li>
+        <li>desc_sentence-&gt;The blade has finally gone quiet.</li>
+        <li>desc_sentence-&gt;A thin black smoke escapes upward.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+
+  <TaleDef>
+    <defName>CVG_Tale_HungryGhosts</defName>
+    <label>fed the hungry ghosts</label>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <type>Volatile</type>
+    <usableForArt>true</usableForArt>
+    <baseInterest>40</baseInterest>
+    <rulePack>
+      <rulesStrings>
+        <li>tale_noun-&gt;[PAWN_nameDef] feeding the hungry ghosts</li>
+        <li>tale_noun-&gt;the Night of the Hungry Ghosts</li>
+        <li>image-&gt;[PAWN_nameFull] setting bowls of food before an empty table lit by paper lanterns [circumstance_group]</li>
+        <li>image-&gt;[PAWN_nameFull] burning paper money while pale shapes gather at the edge of the light [circumstance_group]</li>
+        <li>circumstance_phrase-&gt;on the fifteenth night of the seventh month</li>
+        <li>circumstance_phrase-&gt;while the lanterns drift down the river</li>
+        <li>desc_sentence-&gt;Some of the bowls are already empty.</li>
+        <li>desc_sentence-&gt;Nobody looks back over their shoulder.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+</Defs>

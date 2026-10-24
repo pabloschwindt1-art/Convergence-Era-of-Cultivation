@@ -98,6 +98,27 @@
     </comps>
   </ThingDef>
 
+  <!-- Story events go through the vanilla storyteller (integration plan, 2026-10-23): these two incidents pick an eligible
+       StoryEventDef of Events.xml. The storyteller decides when; difficulty and "disable incidents" apply. -->
+  <IncidentDef>
+    <defName>CVG_StoryEvent</defName>
+    <label>tale of Jiuxiao</label>
+    <category>Misc</category>
+    <targetTags><li>Map_PlayerHome</li></targetTags>
+    <workerClass>Convergence.Stories.IncidentWorker_StoryEvent</workerClass>
+    <baseChance>2.5</baseChance>
+    <minRefireDays>2</minRefireDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>CVG_StoryThreat</defName>
+    <label>threat of Jiuxiao</label>
+    <category>ThreatSmall</category>
+    <targetTags><li>Map_PlayerHome</li></targetTags>
+    <workerClass>Convergence.Stories.IncidentWorker_StoryEvent</workerClass>
+    <baseChance>1.2</baseChance>
+    <minRefireDays>6</minRefireDays>
+  </IncidentDef>
+
   <!-- Story incidents: only after the Convergence (and a few days later). Revenge is triggered by killing notable sect cultivators. -->
   <IncidentDef>
     <defName>CVG_Story_CultistsFlee</defName>

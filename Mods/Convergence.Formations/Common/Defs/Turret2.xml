@@ -107,7 +107,7 @@
       <CVG_SpiritStone>15</CVG_SpiritStone>
     </costList>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <designationCategory>Security</designationCategory>
+    <designationCategory>CVG_Formations</designationCategory>
     <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <uiOrder>2542</uiOrder>
     <building>

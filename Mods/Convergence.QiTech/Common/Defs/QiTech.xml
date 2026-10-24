@@ -80,7 +80,7 @@
     <rotatable>false</rotatable>
     <tickerType>Normal</tickerType>
     <drawerType>MapMeshAndRealTime</drawerType>
-    <designationCategory>Power</designationCategory>
+    <designationCategory>CVG_QiTech</designationCategory>
     <statBases>
       <MaxHitPoints>220</MaxHitPoints>
       <WorkToBuild>5500</WorkToBuild>
@@ -137,6 +137,7 @@
 
   <ThingDef ParentName="BedWithQualityBase">
     <defName>CVG_StabilizationChamber</defName>
+    <designationCategory>CVG_QiTech</designationCategory>
     <tickerType>Rare</tickerType>
     <label>stabilization chamber</label>
     <description>A hospital bed under a hood of copper rings and jade glass, where a field tuned to the five elements keeps the body in step with the heavens. Anyone who rests in it with a bionic, graft, exoskeleton or any other dissonant implant, a graft or an exoskeleton comes out with less celestial dissonance for a week. It does not heal, only rests the part of you that the sky keeps counting.</description>

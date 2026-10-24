@@ -321,9 +321,9 @@ namespace Convergence.Factions
                 id = "HeavenlyCauldron", bodyTrait = "CVG_Body_PureYang", meme = "CVG_Meme_CauldronWay", role = "CVG_Role_AlchemistMaster", ability = "ProductionCommand",
                 outcome = "CVG_Outcome_CauldronBlessing",
                 kinds = new[] { "CVG_HeavenlyCauldron_Apprentice", "CVG_HeavenlyCauldron_Alchemist", "CVG_HeavenlyCauldron_Master", "CVG_HeavenlyCauldron_Grand" },
-                weaponOk = p => p.equipment?.Primary == null || (p.equipment.Primary.def.weaponTags?.Any(t => t == "CVG_SpiritWeapon" || t == "SimpleGun") ?? false),
+                weaponOk = p => p.equipment?.Primary == null || (p.equipment.Primary.def.weaponTags?.Any(t => t == "CVG_WuxiaMelee" || t == "SimpleGun") ?? false),
                 weaponRule = "spirit weapons or simple guns",
-                specialty = t => t.def.weaponTags?.Contains("CVG_SpiritWeapon") ?? false, specialtyLabel = "spirit weapons", specialtyMod = "prospero1088.convergence.alchemy"
+                specialty = t => t.def.weaponTags?.Contains("CVG_WuxiaMelee") ?? false, specialtyLabel = "wuxia weapons", specialtyMod = "prospero1088.convergence.alchemy"
             };
             yield return new SectSpec
             {

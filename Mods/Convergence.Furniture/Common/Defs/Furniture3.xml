@@ -10,7 +10,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(2,2)</drawSize>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <passability>PassThroughOnly</passability>
     <pathCost>42</pathCost>
     <fillPercent>0.40</fillPercent>
@@ -55,7 +55,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(2,2)</drawSize>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <passability>PassThroughOnly</passability>
     <pathCost>42</pathCost>
     <fillPercent>0.40</fillPercent>
@@ -107,7 +107,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(3,3)</drawSize>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToBuild>3800</WorkToBuild>
@@ -137,7 +137,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(1,1)</drawSize>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -173,7 +173,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(3,3)</drawSize>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <size>(3,1)</size>
     <costStuffCount>30</costStuffCount>
     <stuffCategories Inherit="False"><li>Woody</li></stuffCategories>
@@ -198,7 +198,7 @@
       <texPath>Things/Building/CVG/Furniture/GrainJar</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -252,7 +252,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(1,1)</drawSize>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <size>(1,1)</size>
     <costStuffCount>20</costStuffCount>
     <stuffCategories Inherit="False"><li>Woody</li></stuffCategories>
@@ -410,7 +410,7 @@
     </costList>
     <pathCost>42</pathCost>
     <passability>PassThroughOnly</passability>
-    <designationCategory>Joy</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <canOverlapZones>false</canOverlapZones>
     <modExtensions>
       <li Class="Convergence.DefModExtension_FengShui">
@@ -451,7 +451,7 @@
     </costList>
     <pathCost>42</pathCost>
     <passability>PassThroughOnly</passability>
-    <designationCategory>Joy</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <canOverlapZones>false</canOverlapZones>
     <modExtensions>
       <li Class="Convergence.DefModExtension_FengShui">
@@ -494,7 +494,7 @@
     <pathCost>30</pathCost>
     <passability>PassThroughOnly</passability>
     <placeWorkers><li>PlaceWorker_PreventInteractionSpotOverlap</li></placeWorkers>
-    <designationCategory>Joy</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <comps>
       <li Class="Convergence.CompProperties_DaoStudy">
         <comprehensionPerHour>0.04</comprehensionPerHour>
@@ -579,7 +579,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(2,2)</drawSize>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -615,7 +615,7 @@
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
       <drawSize>(1,1)</drawSize>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>

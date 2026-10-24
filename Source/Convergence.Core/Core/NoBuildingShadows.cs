@@ -16,7 +16,15 @@ namespace Convergence
     {
         public static bool Prefix(Thing thing) => !IsOurs(thing?.def);
 
-        internal static bool IsOurs(ThingDef def) => def != null && def.defName.StartsWith("CVG_");
+        private static readonly System.Collections.Generic.Dictionary<ThingDef, bool> ours = new System.Collections.Generic.Dictionary<ThingDef, bool>();
+
+        /// <summary>¿Es nuestro? Con caché: DrawWorker corre en cada frame por cada sombra dibujada.</summary>
+        internal static bool IsOurs(ThingDef def)
+        {
+            if (def == null) return false;
+            if (!ours.TryGetValue(def, out bool v)) ours[def] = v = def.defName.StartsWith("CVG_");
+            return v;
+        }
     }
 
     [HarmonyPatch(typeof(Graphic_Shadow), nameof(Graphic_Shadow.DrawWorker))]

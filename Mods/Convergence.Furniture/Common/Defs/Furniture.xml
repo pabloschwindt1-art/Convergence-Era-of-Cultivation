@@ -10,7 +10,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(2,2)</drawSize>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>42</pathCost>
@@ -43,7 +43,7 @@
       <texPath>Things/Building/CVG/Furniture/PorcelainVase</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -75,7 +75,7 @@
       <texPath>Things/Building/CVG/Furniture/BronzeCenser</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -118,7 +118,7 @@
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
       <drawSize>(2,2)</drawSize>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>60</pathCost>
@@ -153,7 +153,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawRotated>false</drawRotated>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -219,7 +219,7 @@
       <texPath>Things/Building/CVG/Furniture/SpiritBonsai</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -254,7 +254,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(2,2)</drawSize>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>Standable</passability>
     <pathCost>0</pathCost>
@@ -287,7 +287,7 @@
       <texPath>Things/Building/CVG/Furniture/StatueDragon</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -319,7 +319,7 @@
       <texPath>Things/Building/CVG/Furniture/StatuePhoenix</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -351,7 +351,7 @@
       <texPath>Things/Building/CVG/Furniture/StatueQilin</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -383,7 +383,7 @@
       <texPath>Things/Building/CVG/Furniture/StatueTortoise</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -413,7 +413,7 @@
       <texPath>Things/Building/CVG/Furniture/PaintingScroll</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -455,7 +455,7 @@
       <texPath>Things/Building/CVG/Furniture/SectBanner</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -488,7 +488,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(2,2)</drawSize>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>42</pathCost>
@@ -535,7 +535,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(2,2)</drawSize>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>42</pathCost>
@@ -571,7 +571,7 @@
       <texPath>Things/Building/CVG/Furniture/MeditationStool</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Multi</graphicClass>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -608,7 +608,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(2,2)</drawSize>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>42</pathCost>
@@ -664,7 +664,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(2,2)</drawSize>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>42</pathCost>
@@ -721,7 +721,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(2,2)</drawSize>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>42</pathCost>
@@ -777,7 +777,7 @@
       <texPath>Things/Building/CVG/Furniture/SpiritWineJar</texPath><drawSize>(1,1)</drawSize>
       <graphicClass>Graphic_Single</graphicClass><drawRotated>false</drawRotated>
     </graphicData>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>CVG_Cultivation</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -817,7 +817,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawRotated>false</drawRotated>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -861,7 +861,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawRotated>false</drawRotated>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>
@@ -920,7 +920,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawRotated>false</drawRotated>
     </graphicData>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Furniture</designationCategory>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>30</pathCost>

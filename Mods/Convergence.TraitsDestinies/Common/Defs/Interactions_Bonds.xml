@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Bonds that are born while playing (integration plan, 2026-10-23): vanilla social interactions, like the deep talk, the
+    romance attempt or the marriage proposal. Convergence.InteractionWorker_FormBond (Core) creates the relation of
+    Relations.xml when its DefModExtension_BondInteraction conditions are met.
+  -->
+
+  <!-- Talk about the Dao: the deep talk of two cultivators. Raises opinion, which is what later turns into an oath. -->
+  <InteractionDef>
+    <defName>CVG_DiscussDao</defName>
+    <label>discuss the Dao</label>
+    <workerClass>Convergence.InteractionWorker_Cultivators</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/DeepTalk</symbol>
+    <initiatorThought>CVG_Thought_DiscussedDao</initiatorThought>
+    <recipientThought>CVG_Thought_DiscussedDao</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] [daotopic].</li>
+        <li>r_logentry->[INITIATOR_nameDef] [talkedabout] [daotopic] with [RECIPIENT_nameDef].</li>
+        <li>talkedabout->argued about</li>
+        <li>talkedabout->compared notes on</li>
+        <li>talkedabout->sat in silence and then spoke of</li>
+        <li>daotopic->where the qi goes when a cultivator dies</li>
+        <li>daotopic->whether heaven punishes or only weighs</li>
+        <li>daotopic->the bottleneck neither of them can pass</li>
+        <li>daotopic->what the old masters left unwritten</li>
+        <li>daotopic->the breath that comes before the breath</li>
+        <li>daotopic->why the Dao let the qi go and why it came back</li>
+        <li>daotopic->the inner demon and how to face it</li>
+      </rulesStrings>
+    </logRulesInitiator>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BondInteraction">
+        <weight>0.4</weight>
+      </li>
+    </modExtensions>
+  </InteractionDef>
+
+  <!-- Oath of the Road: two close friends swear brotherhood. -->
+  <InteractionDef>
+    <defName>CVG_SwearBrotherhood</defName>
+    <label>swear brotherhood</label>
+    <workerClass>Convergence.InteractionWorker_FormBond</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/DeepTalk</symbol>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] knelt, poured the wine on the ground and swore the Oath of the Road: not born on the same day, but to die on the same day.</li>
+        <li>r_logentry->[INITIATOR_nameDef] cut [INITIATOR_possessive] palm and offered the blade to [RECIPIENT_nameDef]; they swore to be siblings until the end.</li>
+      </rulesStrings>
+    </logRulesInitiator>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BondInteraction">
+        <relation>CVG_SwornSibling</relation>
+        <weight>0.02</weight>
+        <bothCultivators>false</bothCultivators>
+        <minOpinion>60</minOpinion>
+        <thought>CVG_Thought_SwornOath</thought>
+        <letterLabel>Oath of the Road: {INITIATOR_nameDef} and {RECIPIENT_nameDef}</letterLabel>
+        <letterText>{INITIATOR_nameDef} and {RECIPIENT_nameDef} have sworn the Oath of the Road. They were not born of the same blood, but from today they are siblings, and the old oath says they will die on the same day.\n\nSworn siblings rejoice in each other's breakthroughs and grieve each other's deaths like family.</letterText>
+      </li>
+    </modExtensions>
+  </InteractionDef>
+
+  <!-- A challenge between two cultivators of the same height: the start of a lifelong rivalry. -->
+  <InteractionDef>
+    <defName>CVG_ChallengeRival</defName>
+    <label>challenge</label>
+    <workerClass>Convergence.InteractionWorker_FormBond</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/Insult</symbol>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] told [RECIPIENT_nameDef] that one day [INITIATOR_pronoun] would leave [RECIPIENT_objective] far behind on the road to heaven.</li>
+        <li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] measured each other in silence; neither looked away first.</li>
+      </rulesStrings>
+    </logRulesInitiator>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BondInteraction">
+        <relation>CVG_LifelongRival</relation>
+        <weight>0.015</weight>
+        <maxOpinion>10</maxOpinion>
+        <maxRealmGap>1</maxRealmGap>
+        <acceptChance>0.5</acceptChance>
+        <thought>CVG_Thought_NewRival</thought>
+        <letterLabel>Rivals: {INITIATOR_nameDef} and {RECIPIENT_nameDef}</letterLabel>
+        <letterText>{INITIATOR_nameDef} and {RECIPIENT_nameDef} have become lifelong rivals. Neither will rest while the other is ahead.\n\nRivals cultivate faster when the other is near, and every breakthrough of one is a wound to the other.</letterText>
+      </li>
+    </modExtensions>
+  </InteractionDef>
+
+  <!-- Two cultivators in love vow to walk the Dao together. -->
+  <InteractionDef>
+    <defName>CVG_DaoVow</defName>
+    <label>Dao vow</label>
+    <workerClass>Convergence.InteractionWorker_FormBond</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/MarriageProposal</symbol>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] asked [RECIPIENT_nameDef] to walk the Dao at [INITIATOR_possessive] side, breath for breath.</li>
+        <li>r_logentry->[INITIATOR_nameDef] and [RECIPIENT_nameDef] joined their palms and let their qi flow as one.</li>
+      </rulesStrings>
+    </logRulesInitiator>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BondInteraction">
+        <relation>CVG_DaoPartner</relation>
+        <weight>0.05</weight>
+        <minOpinion>40</minOpinion>
+        <requiresRelations>
+          <li>Lover</li>
+          <li>Fiance</li>
+          <li>Spouse</li>
+        </requiresRelations>
+        <acceptChance>0.7</acceptChance>
+        <thought>CVG_Thought_DaoVow</thought>
+        <letterLabel>Dao partners: {INITIATOR_nameDef} and {RECIPIENT_nameDef}</letterLabel>
+        <letterText>{INITIATOR_nameDef} and {RECIPIENT_nameDef} have made the Dao vow. From today their cultivation is one: when they cultivate near each other, both advance faster.\n\nThe old texts warn that half a Dao is torn away when a partner dies.</letterText>
+      </li>
+    </modExtensions>
+  </InteractionDef>
+
+  <!-- A cultivator well above another takes them as a disciple: the master gets a "disciple", the disciple a "master".
+       The Master of the quest does it with the colony on their own. -->
+  <InteractionDef>
+    <defName>CVG_TakeDisciple</defName>
+    <label>take as disciple</label>
+    <workerClass>Convergence.InteractionWorker_FormBond</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/DeepTalk</symbol>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[RECIPIENT_nameDef] knelt and touched [RECIPIENT_possessive] forehead to the ground three times; [INITIATOR_nameDef] accepted [RECIPIENT_objective] as a disciple.</li>
+        <li>r_logentry->[INITIATOR_nameDef] watched [RECIPIENT_nameDef] breathe for a long while and said: "Wrong. All wrong. Come back tomorrow at dawn."</li>
+      </rulesStrings>
+    </logRulesInitiator>
+    <modExtensions>
+      <li Class="Convergence.DefModExtension_BondInteraction">
+        <relation>CVG_Disciple</relation>
+        <reverseRelation>CVG_Master</reverseRelation>
+        <reverseExclusive>true</reverseExclusive>
+        <weight>0.03</weight>
+        <minRealmLead>2</minRealmLead>
+        <minOpinion>10</minOpinion>
+        <acceptChance>0.6</acceptChance>
+        <thought>CVG_Thought_TookDisciple</thought>
+        <recipientThought>CVG_Thought_BecameDisciple</recipientThought>
+        <letterLabel>Master and disciple: {INITIATOR_nameDef} and {RECIPIENT_nameDef}</letterLabel>
+        <letterText>{RECIPIENT_nameDef} has knelt three times before {INITIATOR_nameDef} and been accepted as a disciple. From today the master answers for the disciple's cultivation, and the disciple owes the master the respect due to a father.\n\nOther disciples of the same master will be fellow disciples.</letterText>
+      </li>
+    </modExtensions>
+  </InteractionDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_TookDisciple</defName>
+    <durationDays>8</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>took a disciple</label>
+        <description>Someone will carry what I know after I am gone. That is the only immortality the old masters ever trusted.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_BecameDisciple</defName>
+    <durationDays>8</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>accepted as a disciple</label>
+        <description>A true master has taken me in. For the first time, the road has someone walking ahead of me.</description>
+        <baseMoodEffect>7</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_DiscussedDao</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>20</durationDays>
+    <stackLimit>300</stackLimit>
+    <stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
+    <stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>discussed the Dao</label>
+        <baseOpinionOffset>12</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_SwornOath</defName>
+    <durationDays>8</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>sworn the Oath of the Road</label>
+        <description>I have a sibling now, chosen and not given. Whatever comes on the road, it comes to both of us.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_NewRival</defName>
+    <durationDays>5</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>found a rival</label>
+        <description>Someone thinks they can leave me behind. Let them try. I have not felt this awake in years.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>CVG_Thought_DaoVow</defName>
+    <durationDays>12</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>made the Dao vow</label>
+        <description>We will walk the road together, breath for breath. Heaven itself will have to strike us both.</description>
+        <baseMoodEffect>12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

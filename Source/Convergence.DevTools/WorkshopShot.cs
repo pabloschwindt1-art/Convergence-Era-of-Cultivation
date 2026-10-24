@@ -240,7 +240,7 @@ namespace Convergence
             hero.Position = center;
             hero.Notify_Teleported();
             var platform = center.GetFirstBuilding(map);
-            if (platform != null) hero.jobs.StartJob(JobMaker.MakeJob(CVG_DefOf.CVG_Cultivate, platform), JobCondition.InterruptForced);
+            if (platform != null) hero.jobs.StartJob(JobMaker.MakeJob(JobDefOf.Meditate, platform), JobCondition.InterruptForced);
             Find.CameraDriver.SetRootPosAndSize(center.ToVector3Shifted(), 6f);
             yield return 10;
             MapComponent_Tribulation.For(map).DebugBegin(hero);
@@ -327,7 +327,7 @@ namespace Convergence
                 p.pather.StopDead();
                 p.Position = spots[i].Position;
                 p.Notify_Teleported();
-                p.jobs.StartJob(JobMaker.MakeJob(CVG_DefOf.CVG_Cultivate, spots[i]), JobCondition.InterruptForced);
+                p.jobs.StartJob(JobMaker.MakeJob(JobDefOf.Meditate, spots[i]), JobCondition.InterruptForced);
             }
 
             // Técnicas del Núcleo Dorado: el camino del fuego abierto y varias técnicas, para la ventana Desarrollo y los botones.

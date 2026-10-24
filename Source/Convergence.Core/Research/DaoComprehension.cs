@@ -46,17 +46,11 @@ namespace Convergence
     [StaticConstructorOnStartup]
     public static class DaoComprehension
     {
-        /// <summary>Puntos de investigación normal por punto de comprensión (sin Anomaly).</summary>
-        public const float ResearchPerKnowledge = 200f;
-        /// <summary>Probabilidad por hora de cultivo de una iluminación súbita.</summary>
-        public const float SuddenEnlightenmentChancePerHour = 0.004f;
-        public const float SuddenEnlightenmentAmount = 3f;
-
         private static KnowledgeCategoryDef category;
 
         public static KnowledgeCategoryDef Category => category ??= DefDatabase<KnowledgeCategoryDef>.GetNamedSilentFail("CVG_DaoComprehension");
 
-        public static bool UsesKnowledge => ModsConfig.AnomalyActive && Category != null;
+        public static bool UsesKnowledge => Category != null;
 
         static DaoComprehension()
         {
@@ -79,51 +73,32 @@ namespace Convergence
         public static bool IsDaoProject(ResearchProjectDef proj) => proj != null && proj.HasModExtension<DefModExtension_DaoResearch>();
 
         /// <summary>
-        /// Suma comprensión: con Anomaly, conocimiento al proyecto del Dao en curso (si no hay, elige el primero
-        /// disponible); sin Anomaly, investigación al proyecto actual si es del Dao. Solo colonos del jugador.
+        /// Suma comprensión: conocimiento (Anomaly) al proyecto del Dao en curso; si no hay, elige el primero disponible.
+        /// Solo colonos del jugador.
         /// </summary>
         public static void Gain(Pawn pawn, float amount, DaoSource source)
         {
             if (amount <= 0f || pawn == null || !(pawn.Faction?.IsPlayer ?? false) || !GameComponent_Convergence.Active) return;
             amount *= CelestialCalendar.DaoFactor(pawn);
+            if (!UsesKnowledge) return;
             var rm = Find.ResearchManager;
-            ResearchProjectDef proj;
-            if (UsesKnowledge)
+            var proj = rm.GetProject(Category);
+            if (proj == null)
             {
-                proj = rm.GetProject(Category);
-                if (proj == null)
-                {
-                    proj = DefDatabase<ResearchProjectDef>.AllDefsListForReading.Where(p => p.knowledgeCategory == Category && p.CanStartNow)
-                        .OrderBy(p => p.researchViewX).FirstOrDefault();
-                    if (proj == null) return;
-                    rm.SetCurrentProject(proj);
-                }
-                GameComponent_Dao.Instance?.Record(proj, pawn, amount, source);
-                rm.ApplyKnowledge(Category, amount);
+                proj = DefDatabase<ResearchProjectDef>.AllDefsListForReading.Where(p => p.knowledgeCategory == Category && p.CanStartNow)
+                    .OrderBy(p => p.researchViewX).FirstOrDefault();
+                if (proj == null) return;
+                rm.SetCurrentProject(proj);
             }
-            else
-            {
-                proj = rm.GetProject();
-                if (!IsDaoProject(proj)) return;
-                GameComponent_Dao.Instance?.Record(proj, pawn, amount, source);
-                // ResearchPerformed multiplica por 0.00825 (trabajo → puntos): se compensa para sumar puntos exactos.
-                rm.ResearchPerformed(amount * ResearchPerKnowledge / 0.00825f, pawn);
-            }
+            GameComponent_Dao.Instance?.Record(proj, pawn, amount, source);
+            rm.ApplyKnowledge(Category, amount);
         }
 
-        /// <summary>Comprensión al cultivar/templar durante <paramref name="ticks"/>, con la tirada de iluminación súbita.</summary>
+        /// <summary>Comprensión al cultivar/templar durante <paramref name="ticks"/>. La iluminación súbita es la inspiración
+        /// vanilla (<see cref="DefModExtension_InspirationDao"/>), no una tirada propia.</summary>
         public static void GainWhilePracticing(Pawn pawn, int ticks, float perHour, DaoSource source)
         {
-            float hours = (float)ticks / GenDate.TicksPerHour;
-            Gain(pawn, perHour * hours, source);
-            if (Rand.Chance(SuddenEnlightenmentChancePerHour * hours) && (pawn.Faction?.IsPlayer ?? false) && GameComponent_Convergence.Active)
-            {
-                Gain(pawn, SuddenEnlightenmentAmount, source);
-                TraitProgression.Add(pawn, "Enlightenment");
-                Find.LetterStack.ReceiveLetter("CVG_Dao_SuddenLabel".Translate(pawn.LabelShortCap),
-                    "CVG_Dao_SuddenText".Translate(pawn.Named("PAWN"), SourceLabel(source)), LetterDefOf.PositiveEvent, pawn);
-                if (pawn.Spawned) FleckMaker.ThrowLightningGlow(pawn.DrawPos, pawn.Map, 2f);
-            }
+            Gain(pawn, perHour * ticks / GenDate.TicksPerHour, source);
         }
 
         public static string SourceLabel(DaoSource source) => ("CVG_Dao_Source_" + source).Translate();
@@ -243,6 +218,29 @@ namespace Convergence
         public static void Postfix(Verse.ResearchProjectDef def, ref bool __result)
         {
             if (__result && DaoComprehension.IsDaoProject(def)) __result = false;
+        }
+    }
+
+    /// <summary>Inspiración que da comprensión del Dao al empezar (la iluminación súbita: "dunwu"). Reemplaza a la tirada
+    /// propia que había al cultivar: ahora llega por el camino vanilla de las inspiraciones (buen ánimo, crisis superadas).</summary>
+    public class DefModExtension_InspirationDao : DefModExtension
+    {
+        public float daoComprehension;
+        /// <summary>Contador de rasgos que suben con el uso (<see cref="TraitProgression"/>), p. ej. "Enlightenment".</summary>
+        public string traitCounter;
+    }
+
+    [HarmonyLib.HarmonyPatch(typeof(InspirationHandler), nameof(InspirationHandler.TryStartInspiration))]
+    public static class Patch_InspirationHandler_Dao
+    {
+        public static void Postfix(bool __result, InspirationDef def, InspirationHandler __instance)
+        {
+            var ext = __result ? def?.GetModExtension<DefModExtension_InspirationDao>() : null;
+            var pawn = __instance.pawn;
+            if (ext == null || pawn == null || !GameComponent_Convergence.Active) return;
+            if (ext.daoComprehension > 0f) DaoComprehension.Gain(pawn, ext.daoComprehension, DaoSource.Cultivating);
+            if (!ext.traitCounter.NullOrEmpty()) TraitProgression.Add(pawn, ext.traitCounter);
+            if (pawn.Spawned) FleckMaker.ThrowLightningGlow(pawn.DrawPos, pawn.Map, 2f);
         }
     }
 }

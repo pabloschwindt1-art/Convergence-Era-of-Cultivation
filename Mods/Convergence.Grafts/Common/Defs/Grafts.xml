@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- Grafts: myth-themed bionics made of beast and jade parts. Installed only with a Dao Grafting Altar on the map (Recipe_InstallGraft). -->
+  <!-- Grafts: myth-themed bionics made of beast and jade parts. Installed only with a Dao Grafting Altar on the map (Recipe_InstallGraft);
+       the patient lies on the altar. Like vanilla bionics they travel the vanilla channels (integration plan, 2026-10-23): sect
+       raiders may carry them (techHediffsTags CVG_Graft, Patches/Grafts_Channels.xml), sect merchants sell them and they can
+       be quest rewards. -->
   <ThingDef Name="CVG_GraftBase" ParentName="BodyPartBase" Abstract="True">
     <techLevel>Medieval</techLevel>
     <thingCategories><li>BodyPartsBionic</li></thingCategories>
@@ -9,7 +12,9 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.80</drawSize>
     </graphicData>
-    <tradeTags><li>TechHediff</li></tradeTags>
+    <tradeTags><li>TechHediff</li><li>CVG_Graft</li></tradeTags>
+    <techHediffsTags><li>CVG_Graft</li></techHediffsTags>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
     <statBases><WorkToMake>16000</WorkToMake></statBases>
     <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -747,7 +752,7 @@
       <Flammability>0</Flammability>
     </statBases>
     <size>(3,1)</size>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>CVG_Cultivation</designationCategory>
     <uiOrder>2420</uiOrder>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
@@ -813,7 +818,7 @@
     <pathCost>42</pathCost>
     <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
     <staticSunShadowHeight>0.17</staticSunShadowHeight>
-    <designationCategory>Furniture</designationCategory>
+    <designationCategory>CVG_Cultivation</designationCategory>
     <researchPrerequisites><li>CVG_Research_DaoGrafting</li></researchPrerequisites>
     <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <techLevel>Medieval</techLevel>

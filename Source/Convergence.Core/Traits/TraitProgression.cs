@@ -99,13 +99,10 @@ namespace Convergence
         {
             var def = trait.def;
             string before = trait.LabelCap;
+            // Respeta los conflictos (p. ej. "prodigio" no convive con "aprende lento"): si choca, se queda como estaba. Se mira
+            // antes de quitar el rasgo, para no sacarlo y volver a ponerlo en cada suma.
+            if (!TraitConflictUtility.CanGain(pawn, def, degree, ignore: trait)) return;
             pawn.story.traits.RemoveTrait(trait);
-            // Respeta los conflictos (p. ej. "prodigio" no convive con "aprende lento"): si choca, se queda como estaba.
-            if (!TraitConflictUtility.CanGain(pawn, def, degree))
-            {
-                pawn.story.traits.GainTrait(new Trait(def, trait.Degree, forced: true));
-                return;
-            }
             var upgraded = new Trait(def, degree, forced: true);
             pawn.story.traits.GainTrait(upgraded);
             if (pawn.Faction?.IsPlayer ?? false)

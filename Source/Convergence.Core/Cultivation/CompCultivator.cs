@@ -103,9 +103,21 @@ namespace Convergence
         public CultivationResource Qi => Realm.Resource;
 
         /// <summary>Trackers de los caminos que el colono sigue ahora, en orden.</summary>
-        public IEnumerable<RealmTracker> ActiveTrackers =>
-            DefDatabase<CultivationPathDef>.AllDefsListForReading.Where(Follows).OrderBy(p => p.order)
-                .Select(p => TrackerFor(p, create: true));
+        private static List<CultivationPathDef> pathsByOrder;
+
+        /// <summary>Caminos ordenados una sola vez (antes se ordenaban con LINQ en cada consulta, cada 250 ticks por humano).</summary>
+        private static List<CultivationPathDef> PathsByOrder =>
+            pathsByOrder ??= DefDatabase<CultivationPathDef>.AllDefsListForReading.OrderBy(p => p.order).ToList();
+
+        public IEnumerable<RealmTracker> ActiveTrackers
+        {
+            get
+            {
+                var all = PathsByOrder;
+                for (int i = 0; i < all.Count; i++)
+                    if (Follows(all[i])) yield return TrackerFor(all[i], create: true);
+            }
+        }
 
         /// <summary>Caminos con cultivo guardado que todavía no puede seguir (cultivo previo antes de la Convergencia).</summary>
         public IEnumerable<RealmTracker> LatentTrackers => paths.Where(t => t.Started && !Follows(t.Path));

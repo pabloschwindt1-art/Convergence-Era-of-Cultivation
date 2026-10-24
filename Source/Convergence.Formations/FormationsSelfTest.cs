@@ -196,7 +196,7 @@ namespace Convergence.Formations
                 case 7: // torretas
                     Note("fixed defenses");
                     Cleanup();
-                    foreach (var n in new[] { "CVG_GuardianStatue", "CVG_RuneCrossbowTurret" })
+                    foreach (var n in new[] { "CVG_RuneCrossbowTurret" })
                     {
                         var t = (Building_TurretGun)ThingMaker.MakeThing(D(n));
                         t.SetFactionDirect(Faction.OfPlayer);

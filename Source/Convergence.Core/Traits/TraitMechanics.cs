@@ -15,15 +15,13 @@ namespace Convergence
 
     /// <summary>
     /// Cultivo dual (Pareja Dao, rival de por vida…) en un <c>PawnRelationDef</c>: si el otro está cerca y también cultiva,
-    /// la velocidad de cultivo se multiplica. Con <see cref="vowFromRelations"/>, dos cultivadores despiertos con esa
-    /// relación (amantes, prometidos, esposos) pueden hacer el voto que crea esta relación (botón del colono).
+    /// la velocidad de cultivo se multiplica. Las relaciones nacen jugando (<see cref="DefModExtension_BondInteraction"/>).
     /// </summary>
     public class DefModExtension_DualCultivation : DefModExtension
     {
         public float factor = 1.25f;
         public float radius = 10f;
         public bool requireBothCultivating = true;
-        public List<PawnRelationDef> vowFromRelations;
     }
 
     /// <summary>Premonición (Regresor): un asalto contra el jugador se retrasa unas horas y llega con aviso.</summary>
@@ -50,7 +48,7 @@ namespace Convergence
             stat.parts.Add(new StatPart_DualCultivation { parentStat = stat });
         }
 
-        public static bool IsCultivating(Pawn p) => p?.CurJobDef == CVG_DefOf.CVG_Cultivate;
+        public static bool IsCultivating(Pawn p) => MeditationCultivation.IsCultivating(p);
 
         /// <summary>Relaciones de cultivo dual del colono con su pareja cercana que cumple las condiciones.</summary>
         public static float DualFactor(Pawn pawn, out Pawn partner)
@@ -116,49 +114,6 @@ namespace Convergence
             if (!(req.Thing is Pawn pawn)) return null;
             float f = TraitMechanics.DualFactor(pawn, out var partner);
             return partner == null ? null : "CVG_DualCultivation".Translate(partner.LabelShort).Resolve() + ": x" + f.ToStringPercent();
-        }
-    }
-
-    /// <summary>Botón "Voto de Pareja Dao" (o el voto de cualquier relación con <c>vowFromRelations</c>).</summary>
-    [HarmonyPatch(typeof(Pawn), nameof(Pawn.GetGizmos))]
-    public static class Patch_Pawn_GetGizmos_DaoVow
-    {
-        public static IEnumerable<Gizmo> Postfix(IEnumerable<Gizmo> gizmos, Pawn __instance)
-        {
-            foreach (var g in gizmos) yield return g;
-            var pawn = __instance;
-            if (!pawn.IsColonistPlayerControlled || pawn.relations == null || !GameComponent_Convergence.Active) yield break;
-            if (CompCultivator.For(pawn)?.IsCultivator != true) yield break;
-            foreach (var def in DefDatabase<PawnRelationDef>.AllDefsListForReading)
-            {
-                var ext = def.GetModExtension<DefModExtension_DualCultivation>();
-                if (ext?.vowFromRelations == null) continue;
-                foreach (var rel in pawn.relations.DirectRelations.ToList())
-                {
-                    var other = rel.otherPawn;
-                    if (!ext.vowFromRelations.Contains(rel.def) || other == null || other.Dead) continue;
-                    if (pawn.relations.DirectRelationExists(def, other) || CompCultivator.For(other)?.IsCultivator != true) continue;
-                    var vowDef = def;
-                    yield return new Command_Action
-                    {
-                        defaultLabel = "CVG_Vow_Label".Translate(def.label, other.LabelShort),
-                        defaultDesc = "CVG_Vow_Desc".Translate(def.label, other.LabelShort, (ext.factor - 1f).ToStringPercent()),
-                        icon = TexCommand.Attack,
-                        action = () => TraitMechanics_Vow.MakeVow(pawn, other, vowDef)
-                    };
-                }
-            }
-        }
-    }
-
-    public static class TraitMechanics_Vow
-    {
-        public static void MakeVow(Pawn a, Pawn b, PawnRelationDef def)
-        {
-            if (a.relations.DirectRelationExists(def, b)) return;
-            a.relations.AddDirectRelation(def, b);
-            Find.LetterStack.ReceiveLetter("CVG_Vow_LetterLabel".Translate(def.label),
-                "CVG_Vow_LetterText".Translate(a.Named("A"), b.Named("B"), def.label), LetterDefOf.PositiveEvent, new LookTargets(a, b));
         }
     }
 

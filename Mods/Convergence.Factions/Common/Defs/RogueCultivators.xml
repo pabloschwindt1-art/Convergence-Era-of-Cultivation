@@ -102,6 +102,10 @@
       </li>
     </pawnGroupMakers>
     <modExtensions>
+      <!-- Sects trade only in spirit stones (integration plan, 2026-10-23). -->
+      <li Class="Convergence.Factions.DefModExtension_SpiritStoneCurrency">
+        <currency>CVG_SpiritStone</currency>
+      </li>
       <li Class="Convergence.Factions.DefModExtension_SectIdeo">
         <icon>CVG_IdeoIcon_WanderingPath</icon>
         <color>CVG_IdeoColor_Natural</color>
@@ -210,7 +214,7 @@
     <defName>CVG_Trader_RogueCultivators</defName>
     <label>rogue cultivators merchant</label>
     <stockGenerators>
-      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>300~900</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>25~75</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>20~80</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_JadeSlip</thingDef><countRange>0~2</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>MedicineHerbal</thingDef><countRange>10~30</countRange></li>
@@ -228,7 +232,7 @@
     <defName>CVG_Trader_RogueWanderer</defName>
     <label>wandering cultivator merchant</label>
     <stockGenerators>
-      <li Class="StockGenerator_SingleDef"><thingDef>Silver</thingDef><countRange>200~600</countRange></li>
+      <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>17~50</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_JadeSlip</thingDef><countRange>1~4</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_SpiritStone</thingDef><countRange>20~100</countRange></li>
       <li Class="StockGenerator_SingleDef"><thingDef>CVG_BeastBlood</thingDef><countRange>0~4</countRange></li>
