@@ -156,7 +156,8 @@ namespace Convergence
 
         private void Snapshot()
         {
-            var sb = new StringBuilder($"[Convergence] playtest snapshot day {(Find.TickManager.TicksGame - startTick) / GenDate.TicksPerDay}:");
+            var sb = new StringBuilder($"[Convergence] playtest snapshot day {(Find.TickManager.TicksGame - startTick) / GenDate.TicksPerDay}" +
+                $" ({GenLocalDate.Season(Find.CurrentMap)}, outdoors {Find.CurrentMap.mapTemperature.OutdoorTemp:0}C):");
             var qiNodes = Find.CurrentMap.listerThings.AllThings.Select(t => t.TryGetComp<CompQiNode>()).Where(n => n?.Net != null).ToList();
             foreach (var net in qiNodes.Select(n => n.Net).Distinct())
                 sb.Append($"\n    qi net: supply {net.SupplyDay:0}, demand {net.DemandDay:0}, stored {net.Stored:0}: " +

@@ -82,6 +82,8 @@ namespace Convergence
             Spawn(map, "TorchLamp", new IntVec3(x0 + 11, 0, z0 + 9), Rot4.North, null);
             Spawn(map, "CVG_CultivationCushion", new IntVec3(x0 + 2, 0, z0 + 7), Rot4.North, null);
             Spawn(map, "HorseshoesPin", new IntVec3(x0 + 3, 0, z0 + 3), Rot4.North, null);
+            // Calefacción: una fogata en la sala (la base caía en invierno sin calor y los colonos morían congelados).
+            Spawn(map, "Campfire", new IntVec3(x0 + 6, 0, z0 + 9), Rot4.North, null);
             Spawn(map, "ChessTable", new IntVec3(x0 + 8, 0, z0 + 9), Rot4.North, wood);
             // Tumbas al oeste: un colono sin enterrar hunde el ánimo de todos.
             for (int k = 0; k < 4; k++) Spawn(map, "Grave", new IntVec3(x0 - 4 + 2 * (k % 2), 0, z0 + 10 + 3 * (k / 2)), Rot4.North, null);

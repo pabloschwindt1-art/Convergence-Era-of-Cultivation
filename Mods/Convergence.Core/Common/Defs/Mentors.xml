@@ -89,6 +89,35 @@
     <deathText>{PAWN_nameDef} has fallen. As his body cools, his soul flees into the jade he always wore; a fragment breaks off and stays with the colony, still warm.</deathText>
   </Convergence.MentorDef>
 
+  <!-- A master who fell through the rift arrives unconscious, his qi spent holding his body together. It wears off in a few
+       days. Replaces DamageUntilDowned, which killed a Golden Core master. -->
+  <HediffDef>
+    <defName>CVG_MentorExhaustion</defName>
+    <label>qi exhaustion</label>
+    <description>His dantian is empty: he spent every drop of qi holding his body together through the rift. He will not wake until some of it comes back.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.8, 1)</defaultLabelColor>
+    <isBad>true</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>60000~120000</disappearsAfterTicks>
+        <showRemainingTime>true</showRemainingTime>
+      </li>
+    </comps>
+  </HediffDef>
+
   <!-- Presence of a Nascent Soul master: very strong, barely eats, never breaks. -->
   <HediffDef>
     <defName>CVG_MentorPresence</defName>
@@ -158,7 +187,6 @@
     <statBases>
       <MarketValue>1000</MarketValue>
       <Mass>0.1</Mass>
-      <MaxHitPoints>200</MaxHitPoints>
       <Flammability>0</Flammability>
     </statBases>
     <thingCategories>
@@ -166,5 +194,7 @@
     </thingCategories>
     <tradeability>None</tradeability>
     <destroyable>false</destroyable>
+    <!-- Indestructible, so it must not take damage either (playtest 2026-10-24: a melee attacker "killed" it 332 times). -->
+    <useHitPoints>false</useHitPoints>
   </ThingDef>
 </Defs>

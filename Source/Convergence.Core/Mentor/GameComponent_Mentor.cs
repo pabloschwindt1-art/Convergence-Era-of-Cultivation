@@ -158,12 +158,17 @@ namespace Convergence
             var parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, map);
             parms.faction = faction;
             parms.forced = true;
+            // Explícito: con pocos puntos algunas facciones no tienen estrategia válida y el juego avisa (playtest 2026-10-24).
+            parms.raidStrategy = RaidStrategyDefOf.ImmediateAttack;
+            parms.raidArrivalMode = PawnsArrivalModeDefOf.EdgeWalkIn;
             parms.customLetterLabel = "CVG_Mentor_HuntersLabel".Translate(mentor.LabelShortCap);
             parms.customLetterText = "CVG_Mentor_HuntersText".Translate(mentor.Named("PAWN"), faction.Named("FACTION"));
             IncidentDefOf.RaidEnemy.Worker.TryExecute(parms);
         }
 
         /// <summary>Genera y trae al Maestro. <paramref name="wounded"/> null = según la probabilidad del Def.</summary>
+        private static HediffDef CVG_MentorExhaustion => DefDatabase<HediffDef>.GetNamedSilentFail("CVG_MentorExhaustion");
+
         public Pawn Arrive(Map map, MentorDef mentorDef, bool? wounded)
         {
             if (mentorDef == null || map == null) return null;
@@ -187,7 +192,13 @@ namespace Convergence
                 // destruía la túnica y el pantalón (el Maestro llegaba desnudo, visto por el usuario).
                 var worn = pawn.apparel?.WornApparel.ToList() ?? new List<Apparel>();
                 foreach (var a in worn) pawn.apparel.Remove(a);
-                HealthUtility.DamageUntilDowned(pawn, allowBleedingWounds: false);
+                // No DamageUntilDowned: un Núcleo Dorado casi no siente dolor y los golpes seguían hasta romperle algo vital
+                // (playtest 2026-10-24: el Maestro murió al llegar). Llega con golpes en los miembros y desmayado por agotar su qi.
+                var limbs = pawn.health.hediffSet.GetNotMissingParts().Where(part => part.def.tags.Contains(BodyPartTagDefOf.MovingLimbCore)
+                    || part.def.tags.Contains(BodyPartTagDefOf.ManipulationLimbCore)).ToList();
+                for (int i = 0; i < 3 && limbs.Count > 0; i++)
+                    pawn.TakeDamage(new DamageInfo(DamageDefOf.Blunt, Rand.Range(5f, 9f), 0f, -1f, null, limbs.RandomElement()));
+                if (CVG_MentorExhaustion != null) pawn.health.AddHediff(CVG_MentorExhaustion);
                 foreach (var a in worn) if (!a.Destroyed) pawn.apparel.Wear(a, dropReplacedApparel: false);
             }
 

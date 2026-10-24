@@ -553,7 +553,8 @@
     <modExtensions>
       <li Class="Convergence.DefModExtension_JiangshiIncident">
         <pawnKind>CVG_Jiangshi</pawnKind>
-        <count>2~14</count>
+        <!-- At least 1, not 2 (playtest 2026-10-24: 2 jiangshi of 55 points each for a 50-point threat). -->
+        <count>1~14</count>
         <fromHour>20</fromHour>
         <toHour>4</toHour>
       </li>
